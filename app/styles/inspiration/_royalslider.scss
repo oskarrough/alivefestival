@@ -1,0 +1,75 @@
+//
+// Royalslider
+//
+
+// Import royalslider default CSS
+// @import url('../scripts/vendor/royalslider/royalslider.css');
+// @import url('../scripts/vendor/royalslider/skins/default/rs-default.css');
+
+// Enable resizing in the royalslider script
+.royalSlider {
+	width: 100%;
+}
+// // Override cursor image
+// .rsOverflow {
+// 	cursor: url(../images/cursor.png) 8 8, move !important;
+// }
+// override bgcolor
+.rsDefault,
+.rsDefault .rsOverflow,
+.rsDefault .rsSlide,
+.rsDefault .rsVideoFrameHolder,
+.rsDefault .rsThumbs {
+	background: none;
+	color: #000;
+}
+.royalSlider {
+	// full width and height
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	img {
+		width: 100% !important;
+		height: auto !important;
+		margin: 0 !important;
+	}
+}
+
+// This element contains the captions
+// and is generated from .rsCaption elements
+.rsGCaption {
+	top: 50%;
+	left: 20%;
+	color: #000;
+	width: 30em;
+	max-width: 90%;
+	
+	// enable gpu-acceleration
+	@include transform(translate3D(0,0,0));
+	
+}
+.rsCaption--left,
+.rsCaption--right {
+	width: 48%;
+	background-color: #fff;
+	padding: em(14);
+	// animate
+	opacity: 0.3;
+	@include scale(0.9);
+	@include transition(all 200ms);
+}
+.rsCaption--left {
+	float: left;
+	// attribute comes from js
+	[data-side="left"] & { opacity: 1; @include scale(1); }
+}
+.rsCaption--right {
+	float: right;
+	// attribute comes from js
+	[data-side="right"] & { opacity: 1; @include scale(1); }
+}

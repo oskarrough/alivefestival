@@ -1,0 +1,102 @@
+//
+// Navigation
+//
+
+.Navigation {
+	margin-top: 0;
+	padding-left: 0;
+	list-style: none;
+	.selected {
+		color: $blue;
+	}
+}
+.Navigation--primary {
+	@include pie-clearfix;
+	border-top: 1px solid #000;
+	margin-bottom: em(63);
+	font-style: italic;
+	
+	li {
+		display: inline;
+	}
+	a {
+		display: inline-block;
+		padding: 10px 12px;
+		color: black;
+		text-decoration: none;
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+//Navigaiton top right corner
+.icons-world-small {
+	text-indent: -9999px;
+	overflow: hidden;
+	display: inline-block;
+	width: 20px;
+	height: 17px;
+	text-align: left;
+}
+
+.Navigation--secondary {
+	position: absolute;
+	top: 0.8em;
+	right: 1em;
+	text-align: right;
+	> li {
+		display: inline-block;
+		position: relative;
+		margin-left: 1em;
+	}
+	a {
+		display: block;
+	}
+	.Dropdown {
+		text-align: right;
+	}
+}
+// this is the dropdown of share and language 
+.Dropdown {
+	position: absolute;
+	top: auto;
+	right: 0;
+	display: none;
+	background-color: #fff;
+	
+	li {
+		padding: 0 0.5em;
+	}
+	a {
+		display: block;
+		padding: em(4) 0;
+	}
+}
+//li:hover > .Dropdown,
+.js-hover > .Dropdown {
+	display: block;
+}
+//target specifically the share button dropdown
+.Navigation--social {
+	//top: -7px;
+	right: -17px;
+	width: 15em;
+}
+
+// Make the header responsive, bring "share" to left and adapt it
+@media screen and (max-width: 38em) {
+	.Navigation--social {
+		left: 1em;
+		li {
+			float: left;
+		}
+	}
+	.Navigation--secondary {
+		left: 1em;
+		> li:first-child {
+			float: left;
+			margin-left: auto;
+		}
+	}
+}

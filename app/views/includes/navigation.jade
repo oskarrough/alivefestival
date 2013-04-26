@@ -1,0 +1,16 @@
+mixin menu-item(url, title)
+	li
+		a(href=url, class=active == title ? 'selected' : '')= title
+
+ul.Navigation.Navigation--primary
+		+menu-item('/', 'Index')
+		+menu-item('/page2.html', 'Page 2')
+		+menu-item('/page3.html', 'Page 3')
+
+ul.Navigation
+	li.DropdownParent
+		a(href="#") <i class="icons-world-small"> Language</i>
+		ul.Navigation.Dropdown
+			li: a(href='/', class=language == 'en' ? 'selected' : '') English
+			li: a(href='/de', class=language == 'de' ? 'selected' : '') Deutsch
+			

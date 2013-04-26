@@ -1,0 +1,31 @@
+block header
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width')
+
+	link(rel='canonical', href='http://domain.com/')
+	| <meta property="og:title" content="" />
+	| <meta property="og:url" content="" />
+	| <meta property="og:image" content="" />
+	
+	if active == 'Index'
+		title Companyname
+	else
+		title #{active} - Companyname
+	
+	meta(name='description', content='#{description}')
+	
+	if dir == 'sub'
+		//- for files in a subdir
+		link(rel='stylesheet', href='../scripts/vendor/royalslider/royalslider.css')
+		link(rel='stylesheet', href='../scripts/vendor/royalslider/skins/default/rs-default.css')
+		link(rel='stylesheet', href='../styles/main.css')
+	else
+		//- for root files (e.g. English version)
+		link(rel='stylesheet', href='scripts/vendor/royalslider/royalslider.css')
+		link(rel='stylesheet', href='scripts/vendor/royalslider/skins/default/rs-default.css')
+		link(rel='stylesheet', href='styles/main.css')
+
+	if dir == 'sub'
+		script(src='../scripts/vendor/modernizr.custom.min.js')
+	else
+		script(src='scripts/vendor/modernizr.custom.min.js')

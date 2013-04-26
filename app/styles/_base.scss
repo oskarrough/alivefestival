@@ -1,0 +1,45 @@
+//
+// Base
+// 
+
+html {
+	line-height: $base-line-height-unitless;
+	font-size: $base-font-size;
+	font-family: $font-body;
+	color: #000;
+}
+
+// Headers
+h1,
+h2,
+h3,
+h4 {
+}
+p {
+	margin-top: auto;
+	margin-bottom: em(14, $m);
+}
+
+// Links
+a {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	color: $blue;
+}
+
+
+// Media
+img {
+	max-width: 100%;
+}
+a img {
+	border: 0;
+}
+figure {
+	margin: 0;
+}
+iframe {
+	max-width: 100%;
+}
