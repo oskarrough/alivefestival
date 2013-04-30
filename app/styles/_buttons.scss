@@ -16,7 +16,7 @@
 
 		&:hover {
 			text-decoration: none;
-			color: #fff;
+			color: $white;
 			@include scale(1.02);
 		}
 	}

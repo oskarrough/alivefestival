@@ -2,7 +2,7 @@
 	z-index: 2;
 }
 .customSelect { 
-	@include background-image(linear-gradient(top, #fff, #f7f7f7));
+	@include background-image(linear-gradient(top, $white, #f7f7f7));
 	border: 1px solid #aaa;
 	border-radius: em(4);
 	color: #000;

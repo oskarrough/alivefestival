@@ -7,42 +7,193 @@
 	padding-left: 0;
 	list-style: none;
 	.selected {
-		color: $blue;
+		color: $red;
 	}
 }
-.Navigation--primary {
-	@include pie-clearfix;
-	
-	@include rem(font-size, 22px);
-	font-family: $font-header;
-	
-	li {
-		display: inline;
-	}
-	a {
-		display: inline-block;
-		padding: 0.5em 1em;
-		color: black;
-		text-decoration: none;
-		&:hover {
-			color: $red;
-		}
-	}
+.DropdownParent {
+	position: relative;
 }
-
-// this is the dropdown of share and language 
 .Dropdown {
 	position: absolute;
 	top: auto;
-	right: 0;
+	left: 0;
 	display: none;
-	background-color: #fff;
-	
-	a {
-		display: block;
-	}
+	border-radius: 0.5em;
+	background: lighten($green, 10%);
+	width: 8em;
+	text-align: center;
 }
 //li:hover > .Dropdown,
 .js-hover > .Dropdown {
 	display: block;
+}
+.js-hover > a {
+	color: #f1f1f1;
+	border-color: #f1f1f1;
+	background-color: rgba($green, 0.9);
+	@include scale(1.15);
+}
+
+
+// Primary navigation 
+// -----------------------------------
+.Navigation--primary {
+	@include pie-clearfix;
+	font-family: $font-header;
+	text-align: center;
+	
+	
+	@media screen and (min-width: em(700)) {
+		font-size: 30px;
+		font-size: 2vw;
+	}
+
+	ul {
+		font-size: $base-font-size+2;
+	}
+	
+	li {
+		display: inline-block;
+	}
+	a {
+		display: inline-block;
+		padding: 0.5em 1em;
+		color: white;
+		text-decoration: none;
+		border: 5px solid transparent;
+		border-radius: 2em;
+		&:hover,
+		&.selected {
+			color: #f1f1f1;
+			border-color: #f1f1f1;
+		}
+		&:hover {
+			background-color: rgba($green, 0.9);
+			@include scale(1.15);
+		}
+		&.selected {
+		}
+	}
+	
+	.PageIndex & {
+		font-size: 5vw;
+		a {
+			padding: 0.1em 0.3em;
+		}
+	}
+}
+.PageIndex .Navigation--primary > li {
+	@include animation-fill-mode(both);
+}
+
+
+@media screen and (min-width: em(700)) {
+	.Navigation--primary {
+		text-align: left;
+	}
+
+	li.LinkIndex {
+		display: none;
+	}
+	.LinkProgram {
+		top: 0.65em;
+		left: 0.2em;
+		
+		.PageIndex & {
+			@include animation(fadeInLeft 2s ease-in);
+		}
+		
+	}
+	.LinkTickets {
+		top: 0.65em;
+		right: 0.2em;
+		
+		.PageIndex & {
+			@include animation(fadeInRight 2s ease-in);
+		}
+	}
+	.LinkInfo {
+		bottom: 0;
+		left: 0;
+		
+		.PageIndex & {
+			@include animation(fadeIn 2s ease-in);
+		}
+		.PageInfo & {
+			display: none;
+		}
+	}
+	.LinkContact {
+		right: 0.25em;
+		bottom: 0.5em;
+
+		.PageIndex & {
+			@include animation(fadeInLeft 2s ease-in);
+		}
+	}
+	.LinkHistory {
+		left: 0.25em;
+		bottom: 0.5em;
+		
+		.PageIndex & {
+			@include animation(fadeInRight 2s ease-in);
+		}
+	}
+	.Navigation--primary > li {
+		position: fixed;
+	}
+	.LinkGallery {}
+	.LinkProgram,
+	.LinkContact { @include transform(rotate(-15deg)); }
+	.LinkHistory,
+	.LinkTickets { @include transform(rotate(15deg)); }
+	.LinkGallery {
+		@include rotate(-90deg);
+		top: 50%;
+		margin-top: (127/2)*-1px;
+		left: -0.2em;
+		text-align: center;	
+	}
+	.LinkInfo {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+@include keyframes(fadeInLeft) {
+	0% {
+		opacity: 0;
+		@include transform(translateY(5px) rotate(-5deg));
+	}
+	100% {
+		opacity: 1;
+		@include transform(translateY(0) rotate(-15deg));
+	}
+}
+@include keyframes(fadeInRight) {
+	0% {
+		opacity: 0;
+		@include transform(translateY(5px) rotate(5deg));
+	}
+	100% {
+		opacity: 1;
+		@include transform(translateY(0) rotate(15deg));
+	}
+}
+
+
+.Navigation--history {
+	top: initial;
+	left: 0;
+	bottom: 0.5em;
+	
+	li,
+	a {
+		display: block;
+	}
 }

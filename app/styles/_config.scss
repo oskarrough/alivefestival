@@ -8,8 +8,8 @@ $legacy-support-for-ie: false; // IE6 & IE7
 $experimental-support-for-opera: false; // Because they've switched to Webkit
 
 // Typography
-$base-font-size: 16px;
-$base-font-size-unitless: 16;
+$base-font-size-unitless: 18;
+$base-font-size: $base-font-size-unitless*1px;
 $base-line-height-unitless: 1.5;
 //$base-line-height: $base-font-size * $base-line-height-unitless;
 
@@ -48,9 +48,10 @@ $font-medium: 'BurbankBigMedium', sans-serif;
 $font-light: 'BurbankBigLight', sans-serif;
 
 $font-header: $font-bold;
-$font-body: $font-light;
+$font-body: $font-medium;
 
 
+$white: #f1f1f1;
 $blue: #48cada;
 $dark: #070206;
 $red: #d43d2c;

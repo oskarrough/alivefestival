@@ -1,6 +1,6 @@
 //- Mixin that takes care of 'selected' class
-mixin menu-item(url, title)
-	li
+mixin menu-item(url, title, classnames)
+	li(class='#{classnames}')
 		a(href=url, class=active == title ? 'selected' : '')= title
 
 //- volunteer fortraders forartists press partners backstage
@@ -8,18 +8,20 @@ mixin menu-item(url, title)
 //- http://www.helmo.fr/ongoing/palais-de-tokyo/
 
 ul.Navigation.Navigation--primary
-		+menu-item('/', 'Index')
-		+menu-item('program.html', 'Program')
-		+menu-item('billetter.html', 'Billetter')
-		+menu-item('info.html', 'Info')
-		li.DropdownParent
-			a(href='historie.html', class=active == 'Historie' ? 'selected' : '') Historie
-			ul.Navigation.Dropdown
-				a(href='historie-2009.html', class=active == '2009' ? 'selected' : '') 2009
-				a(href='historie-2010.html', class=active == '2010' ? 'selected' : '') 2010
-				a(href='historie-2011.html', class=active == '2011' ? 'selected' : '') 2011
-				a(href='historie-2012.html', class=active == '2012' ? 'selected' : '') 2012
-		+menu-item('kontakt.html', 'Kontakt')
+		+menu-item('/', 'Index', 'LinkIndex')
+		+menu-item('program.html', 'Program', 'LinkProgram')
+		+menu-item('billetter.html', 'Billetter', 'LinkTickets')
+		+menu-item('info.html', 'Info', 'LinkInfo')
+		+menu-item('gallery.html', 'Galleri', 'LinkGallery')
+		li.LinkHistory.DropdownParent
+			a(href='#', class=active == 'Historie' ? 'selected' : '') Historie
+			ul.Navigation.Navigation--history.Dropdown
+				li: a(href='/', class=active == 'Index' ? 'selected' : '') 2013
+				li: a(href='2012.html', class=active == '2012' ? 'selected' : '') 2012
+				li: a(href='historie-2011.html', class=active == '2011' ? 'selected' : '') 2011
+				li: a(href='historie-2010.html', class=active == '2010' ? 'selected' : '') 2010
+				li: a(href='historie-2009.html', class=active == '2009' ? 'selected' : '') 2009
+		+menu-item('kontakt.html', 'Kontakt', 'LinkContact')
 
 //-ul.Navigation
 	li.DropdownParent

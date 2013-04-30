@@ -9,9 +9,41 @@
 }
 
 html {
-	background: $blue url(../images/2013/bg.jpg) repeat-y;
+	background: $blue url(../images/2013/alivefestival-2013-bg.jpg) repeat-y;
 	-webkit-background-size: cover;
 	        background-size: cover;
 }
 body {
+	margin: 0;
+	overflow-x: hidden;
+}
+// Override cursor image
+html,
+a {
+	cursor: url(../images/cursor.png), default;
+}
+
+
+.l-Header {
+	margin-top: 8em;
+}
+.l-Main {
+	background: #f2f2f2;
+	color: #111;
+	width: em(600);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 4em;
+	text-align: center;
+
+	a {
+		background-color: $green;
+		color: $white;
+		padding: 0 0.5em;
+		&:hover {
+			background-color: $yellow;
+			border: 1px solid $white;	
+			border-radius: 0.25em;
+		}
+	}
 }

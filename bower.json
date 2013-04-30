@@ -2,7 +2,8 @@
   "name": "alive-festival-2013",
   "version": "0.1",
   "dependencies": {
-    "jquery": "~1.9.1"
+    "jquery": "~1.9.1",
+    "qtip2": "~2.0.1"
   },
   "devDependencies": {}
 }

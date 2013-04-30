@@ -7,7 +7,9 @@ html {
 	font-size: $base-font-size;
 	font-family: $font-body;
 	background-color: $blue;
-	color: #000;
+	color: #f1f1f1;
+	height: 100%;
+	border: 1em solid #dadada;
 }
 
 // Headers
@@ -18,10 +20,26 @@ h4 {
 	margin-top: auto;
 	margin-bottom: 1em;
 }
+h3 {
+	font-weight: 400;
+	font-size: 22px;
+	font-family: $font-bold;
+	margin-bottom: 0;
+}
+.PageTitle {
+	font-size: 5vw;
+	background: $yellow url(../images/2013/texture.jpg);
+}
+
 p {
 	margin-top: auto;
 	margin-bottom: 1em;
 }
+strong {
+	font-weight: 400;
+	font-family: $font-bold;
+}
+
 
 // Links
 a {
