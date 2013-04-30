@@ -22,3 +22,13 @@ $icons-spacing: 40px; // "incons" is the name of the folder
 // -----------------------------------
 // assign the icon's width and height to the <i> ellement
 //.icons-download { height: icons-sprite-height(download); width: icons-sprite-width(download);}
+
+//Navigaiton top right corner
+.icons-world-small {
+	text-indent: -9999px;
+	overflow: hidden;
+	display: inline-block;
+	width: 20px;
+	height: 17px;
+	text-align: left;
+}

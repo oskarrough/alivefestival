@@ -6,6 +6,7 @@ html {
 	line-height: $base-line-height-unitless;
 	font-size: $base-font-size;
 	font-family: $font-body;
+	background-color: $blue;
 	color: #000;
 }
 
@@ -14,10 +15,12 @@ h1,
 h2,
 h3,
 h4 {
+	margin-top: auto;
+	margin-bottom: 1em;
 }
 p {
 	margin-top: auto;
-	margin-bottom: em(14, $m);
+	margin-bottom: 1em;
 }
 
 // Links
@@ -26,7 +29,7 @@ a {
 	color: #000;
 }
 a:hover {
-	color: $blue;
+	color: $green;
 }
 
 

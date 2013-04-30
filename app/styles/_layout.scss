@@ -7,3 +7,11 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
+
+html {
+	background: $blue url(../images/2013/bg.jpg) repeat-y;
+	-webkit-background-size: cover;
+	        background-size: cover;
+}
+body {
+}

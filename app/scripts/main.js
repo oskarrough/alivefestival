@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	// Custom selects
 	// -------------------------------
-	$('select').customSelect();
+	//$('select').customSelect();
 
 
 	// Recipes

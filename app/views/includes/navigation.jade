@@ -1,16 +1,37 @@
+//- Mixin that takes care of 'selected' class
 mixin menu-item(url, title)
 	li
 		a(href=url, class=active == title ? 'selected' : '')= title
 
+//- volunteer fortraders forartists press partners backstage
+//- news music arts camping practical ticket tv shop forum about
+//- http://www.helmo.fr/ongoing/palais-de-tokyo/
+
 ul.Navigation.Navigation--primary
 		+menu-item('/', 'Index')
-		+menu-item('/page2.html', 'Page 2')
-		+menu-item('/page3.html', 'Page 3')
+		+menu-item('program.html', 'Program')
+		+menu-item('billetter.html', 'Billetter')
+		+menu-item('info.html', 'Info')
+		li.DropdownParent
+			a(href='historie.html', class=active == 'Historie' ? 'selected' : '') Historie
+			ul.Navigation.Dropdown
+				a(href='historie-2009.html', class=active == '2009' ? 'selected' : '') 2009
+				a(href='historie-2010.html', class=active == '2010' ? 'selected' : '') 2010
+				a(href='historie-2011.html', class=active == '2011' ? 'selected' : '') 2011
+				a(href='historie-2012.html', class=active == '2012' ? 'selected' : '') 2012
+		+menu-item('kontakt.html', 'Kontakt')
 
-ul.Navigation
+//-ul.Navigation
 	li.DropdownParent
 		a(href="#") <i class="icons-world-small"> Language</i>
 		ul.Navigation.Dropdown
-			li: a(href='/', class=language == 'en' ? 'selected' : '') English
-			li: a(href='/de', class=language == 'de' ? 'selected' : '') Deutsch
+			li: a(href='/', class=language == 'da' ? 'selected' : '') Danish
+			li: a(href='/en', class=language == 'en' ? 'selected' : '') English
 			
+
+			Praktisk info
+			Galleri
+			Bandbeskrivelser (må gerne være nemt at hoppe rundt mellem dem) senere + spilleplan
+			Galleri
+			Spotify og evt. wimp-playlister + Youtube-playlister
+			Bliv frivillig

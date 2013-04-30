@@ -13,6 +13,9 @@
 .Navigation--primary {
 	@include pie-clearfix;
 	
+	@include rem(font-size, 22px);
+	font-family: $font-header;
+	
 	li {
 		display: inline;
 	}
@@ -22,7 +25,7 @@
 		color: black;
 		text-decoration: none;
 		&:hover {
-			color: $blue;
+			color: $red;
 		}
 	}
 }
@@ -35,12 +38,8 @@
 	display: none;
 	background-color: #fff;
 	
-	li {
-		padding: 0 0.5em;
-	}
 	a {
 		display: block;
-		padding: em(4) 0;
 	}
 }
 //li:hover > .Dropdown,
