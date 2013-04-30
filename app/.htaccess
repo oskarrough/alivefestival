@@ -3,9 +3,6 @@
 #AuthUserFile /.htpasswd
 #Require valid-user
 
-ErrorDocument 401 /401.html
-ErrorDocument 404 /404.html
-
 # Apache configuration file
 # httpd.apache.org/docs/2.2/mod/quickreference.html
 
