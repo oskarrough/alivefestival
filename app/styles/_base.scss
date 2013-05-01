@@ -8,8 +8,8 @@ html {
 	font-family: $font-body;
 	background-color: $blue;
 	color: #f1f1f1;
-	height: 100%;
-	border: 1em solid #dadada;
+	// height: 100%;
+	// border: 1em solid #dadada;
 }
 
 // Headers
@@ -54,6 +54,7 @@ a:hover {
 // Media
 img {
 	max-width: 100%;
+	vertical-align: bottom;
 }
 a img {
 	border: 0;

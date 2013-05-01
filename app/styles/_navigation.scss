@@ -150,7 +150,7 @@
 	.LinkGallery {
 		@include rotate(-90deg);
 		top: 50%;
-		margin-top: (127/2)*-1px;
+		margin-top: -39px;
 		left: -0.2em;
 		text-align: center;	
 	}
@@ -190,7 +190,11 @@
 .Navigation--history {
 	top: initial;
 	left: 0;
-	bottom: 0.5em;
+	bottom: 3.5em;
+	.PageIndex & {
+		left: 21%;
+		bottom: 6.5em;
+	}
 	
 	li,
 	a {

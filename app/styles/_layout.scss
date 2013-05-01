@@ -9,9 +9,7 @@
 }
 
 html {
-	background: $blue url(../images/2013/alivefestival-2013-bg.jpg) repeat-y;
-	-webkit-background-size: cover;
-	        background-size: cover;
+	background: $blue;
 }
 body {
 	margin: 0;
@@ -26,14 +24,21 @@ a {
 
 .l-Header {
 	margin-top: 8em;
+	background: url(../images/2013/alivefestival-2013-bg.jpg) repeat-y fixed;
+	-webkit-background-size: cover;
+	        background-size: cover;
 }
 .l-Main {
-	background: #f2f2f2;
-	color: #111;
+	position: relative;
+	z-index: 1;
+	
 	width: em(600);
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 4em;
+	
+	// background: #f2f2f2;
+	// color: #111;
 	text-align: center;
 
 	a {
@@ -46,4 +51,38 @@ a {
 			border-radius: 0.25em;
 		}
 	}
+}
+
+.denengelske,
+.urt,
+.heltborg,
+.tican {
+	position: fixed;
+	width: 100%;
+	height: 1px;
+	//border-radius: 3em;
+	top: 50%;
+	left: 0;
+}
+.denengelske {
+	background-color: darken($white, 2);
+	@include rotate(90deg);
+}
+.urt {
+	background-color: darken($white, 4);
+	//@include rotate(-30deg);
+}
+.heltborg {
+	background-color: lighten($green, 10);
+	height: 2em;
+	left: -1em;
+	//margin-right: 3em;
+	@include rotate(-38deg);
+}
+.tican {
+	background-color: darken($white, 8);
+	height: 2em;
+	left: 1em;
+	background-color: $yellow;
+	@include rotate(38deg);
 }
