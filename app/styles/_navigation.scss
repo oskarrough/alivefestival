@@ -18,6 +18,7 @@
 	top: auto;
 	left: 0;
 	display: none;
+	z-index: 20;
 	border-radius: 0.5em;
 	background: lighten($green, 10%);
 	width: 8em;
@@ -72,6 +73,7 @@
 			@include scale(1.15);
 		}
 		&.selected {
+			background-color: rgba($green, 0.9);
 		}
 	}
 	
@@ -141,6 +143,7 @@
 	}
 	.Navigation--primary > li {
 		position: fixed;
+		z-index: 20;
 	}
 	.LinkGallery {}
 	.LinkProgram,

@@ -4,8 +4,9 @@
 
 .SiteLogo {
 	position: absolute;
-	top: 0;
-	margin: 1.5em auto 0;
+	top: 1em;
+	z-index: 1;
+	margin: 0 auto;
 	width: 100%;
 	text-align: center;
 	img { max-width: em(200); }
@@ -31,4 +32,35 @@ div.fb_iframe_widget {
 	left: 50%;
 	margin-left: -150px;
 	display: none;
+}
+
+
+.PageTitle {
+	font-size: 5vw;
+	min-height: 1.5em;
+	//background: $yellow url(../images/2013/texture.jpg);
+	line-height: 1;
+	//border-bottom: 2px solid rgb(255, 95, 95);
+	overflow: hidden;
+  	text-align: center;
+	span {
+		display: inline-block;
+		position: relative;  
+	}
+	span:before,
+	span:after {
+		content: "";
+		position: absolute;
+		border-top: 4px solid $red2;
+		top: 0.4em;
+		width: 600px;
+	}
+	span:before {
+		right: 100%;
+		margin-right: 15px;
+	}
+	span:after {
+		left: 100%;
+		margin-left: 15px;
+	}
 }

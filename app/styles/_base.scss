@@ -19,21 +19,24 @@ h3,
 h4 {
 	margin-top: auto;
 	margin-bottom: 1em;
+	font-family: $font-bold;
 }
 h3 {
 	font-weight: 400;
 	font-size: 22px;
-	font-family: $font-bold;
 	margin-bottom: 0;
 }
-.PageTitle {
-	font-size: 5vw;
-	background: $yellow url(../images/2013/texture.jpg);
-}
-
 p {
 	margin-top: auto;
 	margin-bottom: 1em;
+	
+	a {
+		color: $red;
+		text-decoration: underline;
+	}
+}
+.small {
+	font-size: 80%;
 }
 strong {
 	font-weight: 400;
@@ -64,4 +67,24 @@ figure {
 }
 iframe {
 	max-width: 100%;
+}
+
+.Button {
+	display: inline-block;
+	background-color: $red;
+	color: #fff;
+	padding: 1em 3em;
+	box-shadow: 4px 4px 0 0 darken($red, 20);
+	font-family: $font-bold;
+	font-size: 1.5rem;
+	&:hover {
+		background-color: lighten($red, 2);
+		color: #fff;
+		box-shadow: 2px 2px 0 0 darken($red, 20);
+	}
+	small {
+		display: block;
+		font-size: 60%;
+		font-family: $font-light;
+	}
 }

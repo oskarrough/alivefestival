@@ -18,13 +18,13 @@ body {
 // Override cursor image
 html,
 a {
-	cursor: url(../images/cursor.png), default;
+	cursor: url(../images/cursor.png) -20 -40, default;
 }
 
 
 .l-Header {
 	margin-top: 8em;
-	background: url(../images/2013/alivefestival-2013-bg.jpg) repeat-y fixed;
+	//background: url(../images/2013/alivefestival-2013-bg.jpg) repeat-y fixed;
 	-webkit-background-size: cover;
 	        background-size: cover;
 }
@@ -37,20 +37,21 @@ a {
 	margin-right: auto;
 	margin-bottom: 4em;
 	
-	// background: #f2f2f2;
-	// color: #111;
+	background-color: rgb(240, 238, 234);
+	padding: 1em;
+	color: #222;
 	text-align: center;
 
-	a {
-		background-color: $green;
-		color: $white;
-		padding: 0 0.5em;
-		&:hover {
-			background-color: $yellow;
-			border: 1px solid $white;	
-			border-radius: 0.25em;
-		}
-	}
+	// a {
+	// 	background-color: $green;
+	// 	color: $white;
+	// 	padding: 0 0.5em;
+	// 	&:hover {
+	// 		background-color: $yellow;
+	// 		border: 1px solid $white;	
+	// 		border-radius: 0.25em;
+	// 	}
+	// }
 }
 
 .denengelske,
