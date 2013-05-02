@@ -41,6 +41,9 @@ strong {
 	font-weight: 400;
 	font-family: $font-bold;
 }
+.l-Main > p:first-of-type strong {
+	font-size: 1.25rem;
+}
 
 
 // Links
