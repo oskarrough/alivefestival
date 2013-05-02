@@ -1,64 +1,92 @@
 //
 // Lines
 //
-.denengelske,
-.urt,
-.heltborg,
-.tican {
+
+.Line {
+	width: 0.5em;
+	height: 20%;
 	position: fixed;
-	width: 100%;
-	height: 1px;
-	top: 50%;
-	left: 0;
+	bottom: -10%;
+	left: 50%;
 }
-.denengelske {
-	background-color: $darkeryellow;
-	@include animation(rotateDenEngelske 200s infinite linear);
+$degrees: 20deg;
+$exponential-spacing: 0.3;
+.Line {
+	@include transform-origin(bottom);
+	//background-color: $red;
+	// position
+	@include translate3d(0,1em,0);
+	&:nth-child(2n) { @include translateY(2em); }
+	&:nth-child(3n) { @include translateY(4em); }
+	// amimate
+	@include animation-duration(1s);
+	@include animation-iteration-count(infinite);
+	@include animation-direction(alternate);
 }
-	@include keyframes(rotateDenEngelske) {
-		0% { @include rotate(90deg); }
-		100% { @include rotate(450deg); }
+
+@for $i from 1 through 20 {
+	.Line:nth-of-type(#{$i}) {
+		left: 2% * $i * ($i * $exponential-spacing);
+		@include animation-name(r#{$i});
+		@include animation-delay(1*$i*50ms);
+		background-color: lighten($red,4%*$i);
 	}
-
-.urt {
-	background-color: darken($white, 4);
-	@include animation(rotateURT 100s infinite linear);
-}
-	@include keyframes(rotateURT) {
-		0% { @include rotate(0); }
-		100% { @include rotate(-360deg); }
+	@include keyframes(r#{$i}) {
+		0% { @include rotate(($degrees/2)*-1); }
+		100% { @include rotate(($degrees/2)*1); }
 	}
-
-
-.heltborg {
-	background-color: lighten($green, 10);
-	height: 1em;
-	left: -0.5em;
-	border-radius: 50%;
-	@include animation(rotateCounterClockwise 200s infinite linear);
-	@include animation-fill-mode(both);
 }
-	@include keyframes(rotateCounterClockwise) {
-		0% { @include rotate(-38deg); }
-		100% { @include rotate(322deg); }
-	}
 
-.tican {
-	background-color: darken($white, 8);
-	height: 1em;
-	left: -0.5em;
-	border-radius: 50%;
-	background-color: $yellow;
-	@include animation(rotateClockwise 400s infinite linear);
-	@include animation-fill-mode(both);
-}
-	@include keyframes(rotateClockwise) {
-		0% { @include rotate(38deg); }
-		100% { @include rotate(398deg); }
-	}
 
-// speedy class added with js
-.speedy .tican,
-.speedy .heltborg {
-	@include animation-duration(5s);
-}
+
+// .denengelske {
+// 	background-color: $darkeryellow;
+// 	@include animation(rotateDenEngelske 200s infinite linear);
+// }
+// 	@include keyframes(rotateDenEngelske) {
+// 		0% { @include rotate(90deg); }
+// 		100% { @include rotate(450deg); }
+// 	}
+
+// .urt {
+// 	background-color: darken($white, 4);
+// 	@include animation(rotateURT 100s infinite linear);
+// }
+// 	@include keyframes(rotateURT) {
+// 		0% { @include rotate(0); }
+// 		100% { @include rotate(-360deg); }
+// 	}
+
+
+// .heltborg {
+// 	background-color: lighten($green, 10);
+// 	height: 1em;
+// 	left: -0.5em;
+// 	border-radius: 50%;
+// 	@include animation(rotateCounterClockwise 200s infinite linear);
+// 	@include animation-fill-mode(both);
+// }
+// 	@include keyframes(rotateCounterClockwise) {
+// 		0% { @include rotate(-38deg); }
+// 		100% { @include rotate(322deg); }
+// 	}
+
+// .tican {
+// 	background-color: darken($white, 8);
+// 	height: 1em;
+// 	left: -0.5em;
+// 	border-radius: 50%;
+// 	background-color: $yellow;
+// 	@include animation(rotateClockwise 400s infinite linear);
+// 	@include animation-fill-mode(both);
+// }
+// 	@include keyframes(rotateClockwise) {
+// 		0% { @include rotate(38deg); }
+// 		100% { @include rotate(398deg); }
+// 	}
+
+// // speedy class added with js
+// .speedy .tican,
+// .speedy .heltborg {
+// 	@include animation-duration(5s);
+// }

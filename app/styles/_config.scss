@@ -6,6 +6,7 @@
 $support-for-original-webkit-gradients: false;
 $legacy-support-for-ie: false; // IE6 & IE7
 $experimental-support-for-opera: false; // Because they've switched to Webkit
+$experimental-support-for-mozilla: false; // Because they've switched to Webkit
 
 // Typography
 $base-font-size-unitless: 18;
