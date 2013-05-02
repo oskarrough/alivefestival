@@ -8,6 +8,12 @@ $(document).ready(function() {
 		$(this).parent().toggleClass('js-hover');
 	});
 
+	var primaryLink = $('.Navigation--primary').children('li').hover( function() {
+		$('body').addClass('speedy');
+	}, function() {
+		$('body').removeClass('speedy');
+	});
+
 
 	// Custom selects
 	// -------------------------------

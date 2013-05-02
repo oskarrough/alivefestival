@@ -1,0 +1,52 @@
+.Artists {
+	list-style: none;
+	padding-left: 0;
+}
+.Artist {
+	@extend .grid-sizer;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	> a {
+		display: block;
+	}
+	&:hover {
+		img {
+			@include filter(blur(2px));
+		}
+	}
+}
+
+.stamp {
+	position: absolute;
+	top: 20%;
+	left: 10%;
+}
+.Artist-title {
+	position: absolute;
+	left: -3px;
+	bottom: 0.5em;
+	padding: 0.2em 0.3em;
+	background-color: #000;
+	color: $white;
+	box-shadow: 3px 3px 0 0 rgba(0,0,0,0.5);
+}
+
+
+
+// Grid layout
+$gutter: 2%;
+$cols: 2;
+.gutter-sizer {
+	width: $gutter;
+}
+.grid-sizer {
+	width: (100 - ($gutter*$cols)) /$cols;
+	@media screen and (min-width: em(1200)) {
+		$cols: 4;
+		width: (100 - ($gutter*$cols)) /$cols;
+	}
+}
+
+
+//.item.w2 { width: 38.8%; background: #9C0; }

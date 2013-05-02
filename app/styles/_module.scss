@@ -18,13 +18,14 @@
 		img { max-width: none; }
 	}
 }
-
 @include keyframes(fadeIn) {
 	0% { opacity: 0; @include translateY(5px); }
 	100% { opacity: 1; @include translateY(0); }
 }
 
 
+// Social
+// -----------------------------------
 div.fb_iframe_widget {
 	background-color: $white;
 	position: fixed;
@@ -35,13 +36,13 @@ div.fb_iframe_widget {
 }
 
 
+// Page titles
+// -----------------------------------
 .PageTitle {
-	font-size: 5vw;
+	font-size: 40px;
 	min-height: 1.5em;
-	//background: $yellow url(../images/2013/texture.jpg);
 	line-height: 1;
-	//border-bottom: 2px solid rgb(255, 95, 95);
-	overflow: hidden;
+	//overflow: hidden;
   	text-align: center;
 	span {
 		display: inline-block;
@@ -51,7 +52,7 @@ div.fb_iframe_widget {
 	span:after {
 		content: "";
 		position: absolute;
-		border-top: 4px solid $red2;
+		border-top: 4px solid darken(rgb(240, 238, 234),10);
 		top: 0.4em;
 		width: 600px;
 	}
@@ -62,5 +63,46 @@ div.fb_iframe_widget {
 	span:after {
 		left: 100%;
 		margin-left: 15px;
+	}
+}
+
+
+// Gallery
+// -----------------------------------
+.PageGallery {
+	height: 100%;
+	.l-Main {
+		max-width: none;
+		padding: 0;
+		margin-bottom: auto;
+		background-color: transparent;
+	}
+	.Line {
+		display: none;
+	}
+}
+.Image {
+	//height: em(700);
+	height: 95vh;
+	//min-height: 100%;
+}
+.Image-description {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 0.5em;
+	position: relative;
+}
+.Image-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	@media screen and (min-width: 70em) {
+		background-attachment: fixed;
+		background-size: cover;
 	}
 }

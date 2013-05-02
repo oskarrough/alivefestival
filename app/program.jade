@@ -8,18 +8,87 @@ extends views/includes/layout
 block content
 	h1.PageTitle
 		span Program 2013
-	p yes it is.
-	p <img src="http://alivefestival.dk/sites/default/files/cover%20uden%20navne-1.jpg">
 
-	img(src='images/2013/artists/christianhjelm.jpg', alt='')
-	img(src='images/2013/artists/densorteskole.jpg', alt='')
-	img(src='images/2013/artists/dråpe.jpg', alt='')
-	img(src='images/2013/artists/fallulah1.jpg', alt='')
-	img(src='images/2013/artists/fallulah2.jpg', alt='')
-	img(src='images/2013/artists/larsandthehandsoflight.jpg', alt='')
-	img(src='images/2013/artists/lategreat.jpg', alt='')
-	img(src='images/2013/artists/mø.jpg', alt='')
-	img(src='images/2013/artists/rave3.jpg', alt='')
-	img(src='images/2013/artists/schultz-and-forever.jpg', alt='Schultz and Forever')
-	img(src='images/2013/artists/veto.jpg', alt='Veto')
-	img(src='images/2013/artists/workers.jpg', alt='Workers')
+	ul#js-packery.Artists
+		.gutter-sizer
+		.grid-sizer
+		li.Artist
+			a(href='#')
+				h2.Artist-title the Raveonettes
+				figure.Artist-image
+					img(src='images/2013/artists/rave3.jpg', alt='')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Veto
+				figure.Artist-image
+					img(src='images/2013/artists/veto.jpg', alt='Veto')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Fallulah
+				figure.Artist-image
+					img(src='images/2013/artists/fallulah2.jpg', alt='')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Mø
+				figure.Artist-image
+					img(src='images/2013/artists/mø.jpg', alt='')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Den Sorte Skole
+				figure.Artist-image
+					img(src='images/2013/artists/densorteskole.jpg', alt='')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Christian hjelm
+				figure.Artist-image
+					img(src='images/2013/artists/christianhjelm.jpg', alt='')
+		li.Artist
+			a(href='#')
+				h2.Artist-title The Late Great Fitzcarraldos
+				figure.Artist-image
+					img(src='images/2013/artists/lategreat.jpg', alt='The Late Great Fitzcarraldos')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Dråpe (N0)
+				figure.Artist-image
+					img(src='images/2013/artists/dråpe.jpg', alt='Dråpe')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Lars and the hands of light
+				figure.Artist-image
+					img(src='images/2013/artists/larsandthehandsoflight.jpg', alt='Lars and the hands of light')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Folkeklubben
+				figure.Artist-image
+					img(src='images/2013/artists/densorteskole.jpg', alt='')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Mont Oliver
+				figure.Artist-image
+					img(src='http://placekitten.com/300/200')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Schultz and Forever
+				figure.Artist-image
+					img(src='images/2013/artists/schultz-and-forever.jpg', alt='Schultz and Forever')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Bottled in England
+				figure.Artist-image
+					img(src='http://placekitten.com/300/200')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Santiago  
+				figure.Artist-image
+					img(src='http://placekitten.com/300/200')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Workers in Songs
+				figure.Artist-image
+					img(src='images/2013/artists/workers.jpg', alt='Workers')
+		li.Artist
+			a(href='#')
+				h2.Artist-title Tales of murder and dust
+				figure.Artist-image
+					img(src='http://placekitten.com/300/200')

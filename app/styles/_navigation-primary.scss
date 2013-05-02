@@ -1,0 +1,126 @@
+// Primary navigation 
+// -----------------------------------
+.Navigation--primary {
+	@include pie-clearfix;
+	font-family: $font-header;
+	text-align: center;
+	
+	
+	@media screen and (min-width: em(700)) {
+		font-size: 30px;
+		font-size: 2.5vw;
+	}
+
+	ul {
+		font-size: $base-font-size+2;
+	}
+	
+	li {
+		display: inline-block;
+	}
+	a {
+		display: inline-block;
+		padding: 0.5em 1em;
+		color: white;
+		text-decoration: none;
+		border: 5px solid transparent;
+		border-radius: 2em;
+		&:hover,
+		&.selected {
+			color: #f1f1f1;
+			border-color: #f1f1f1;
+		}
+		&:hover {
+			background-color: rgba($green, 0.9);
+			@include scale(1.15);
+		}
+		&.selected {
+			background-color: rgba($green, 0.9);
+		}
+	}
+	
+	.PageIndex & {
+		font-size: 5vw;
+		a {
+			padding: 0.1em 0.3em;
+		}
+	}
+}
+.PageIndex .Navigation--primary > li {
+	@include animation-fill-mode(both);
+}
+
+
+@media screen and (min-width: em(700)) {
+	.Navigation--primary {
+		text-align: left;
+	}
+
+	li.LinkIndex {
+		display: none;
+	}
+	.LinkProgram {
+		top: 0.65em;
+		left: 0.2em;
+		
+		.PageIndex & {
+			@include animation(fadeInLeft 2s ease-in);
+		}
+		
+	}
+	.LinkTickets {
+		top: 0.65em;
+		right: 0.2em;
+		
+		.PageIndex & {
+			@include animation(fadeInRight 2s ease-in);
+		}
+	}
+	.LinkInfo {
+		bottom: 0;
+		left: 0;
+		
+		.PageIndex & {
+			@include animation(fadeIn 2s ease-in);
+		}
+		.PageInfo & {
+			display: none;
+		}
+	}
+	.LinkContact {
+		right: 0.25em;
+		bottom: 0.5em;
+
+		.PageIndex & {
+			@include animation(fadeInLeft 2s ease-in);
+		}
+	}
+	.LinkHistory {
+		left: 0.25em;
+		bottom: 0.5em;
+		
+		.PageIndex & {
+			@include animation(fadeInRight 2s ease-in);
+		}
+	}
+	.Navigation--primary > li {
+		position: fixed;
+		z-index: 20;
+	}
+	.LinkGallery {}
+	.LinkProgram,
+	.LinkContact { @include transform(rotate(-15deg)); }
+	.LinkHistory,
+	.LinkTickets { @include transform(rotate(15deg)); }
+	.LinkGallery {
+		@include rotate(-90deg);
+		top: 50%;
+		margin-top: -39px;
+		left: -0.2em;
+		text-align: center;	
+	}
+	.LinkInfo {
+		width: 100%;
+		text-align: center;
+	}
+}

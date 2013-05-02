@@ -8,8 +8,6 @@ html {
 	font-family: $font-body;
 	background-color: $blue;
 	color: #f1f1f1;
-	// height: 100%;
-	// border: 1em solid #dadada;
 }
 
 // Headers
@@ -19,6 +17,7 @@ h3,
 h4 {
 	margin-top: auto;
 	margin-bottom: 1em;
+	line-height: 1.1;
 	font-family: $font-bold;
 }
 h3 {
