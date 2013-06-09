@@ -87,6 +87,9 @@ div.fb_iframe_widget {
 
 .PageHistory {
 	background-image: none;
+	.l-Main {
+		max-width: em(700);
+	}
 }
 .Page2009 {
 	@include aliveBorder(50);

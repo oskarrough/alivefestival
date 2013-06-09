@@ -7,6 +7,9 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
+html {
+	height: 100%;
+}
 body {
 	margin: 0;
 	background-color: $dark;
@@ -17,13 +20,13 @@ body {
 	background-image: url(../images/bg-faded.jpg);
 	//background-attachment: scroll;
 }
-// .PageIndex {
-// 	background-image: url(../images/alivecollage-nologo.jpg);
-// 	.l-Main {
-// 		padding: 0;
-// 	}
-// }
-$border-color: #19d4ff;
+.PageIndex {
+	background-image: url(../images/alivecollage-nologo.jpg);
+	height: 100%;
+}
+
+//$border-color: #19d4ff;
+
 body {
 	padding: 23px;
 	overflow-x: hidden; /* For Opera */

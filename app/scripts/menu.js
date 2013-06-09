@@ -1,10 +1,10 @@
 $('.Navigation--primary').find('a').each(function() {
-		
+
 	$(this).css({ position: 'relative' }).mousemove(function(e) {
 
 		// what is this?
 		var baseExp = 3; // 2 ^ 4 == 16
-		
+
 		// element proportions
 		var w = this.offsetWidth;
 		var h = this.offsetHeight;
@@ -38,10 +38,10 @@ $('.Navigation--primary').find('a').each(function() {
 	});
 
 	// over
-	$(this).hover(function(e) {
+	$(this).hover(function() {
 		$(this).addClass('hover');
 		$(this).css('z-index', 9999);
-	}, function(e) { // out
+	}, function() { // out
 		$(this).removeClass('hover');
 
 		var pos = {
