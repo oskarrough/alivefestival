@@ -24,8 +24,8 @@
 }
 @include keyframes(fadeDown) {
 	0% {
-		//opacity: 0.75;
-		@include translateY(-100%);
+		//opacity: 0.5;
+		@include translateY(-20px);
 	}
 	100% {
 		//opacity: 1;
@@ -33,13 +33,26 @@
 	}
 }
 
-// Fade in background-image (used on index pages)
-.fullbg {
-	@include animation(fadeIn 3s);
-}
-// Fade in header, but only for home
-.page-home .l-Header {
-	@include animation(fadeDown 1s ease-in);
-	@include animation-delay(1s);
+// // Fade in background-image (used on index pages)
+// .fullbg {
+// 	@include animation(fadeIn 3s);
+// }
+// // Fade in header, but only for home
+// .page-home .l-Header {
+// 	@include animation(fadeDown 1s ease-in);
+// 	@include animation-delay(1s);
+// 	@include animation-fill-mode(both);
+// }
+
+
+[class^='Layer'] {
+	@include animation(fadeIn 1200ms linear);
 	@include animation-fill-mode(both);
 }
+
+
+.Layer1 { @include animation-delay(1200ms); } // volunteer
+.Layer2 { @include animation-delay(1600ms); } // newsletter
+.Layer3 { @include animation-delay(800ms); } // program
+.Layer4 { @include animation-delay(2000ms); } 
+.Layer-logo { @include animation-delay(300ms); }

@@ -5,19 +5,39 @@ block vars
 
 extends views/includes/layout
 
+block content-header
+	#zlayer
+		.Layer1
+			.Box.Box--volunteer
+				br
+				a(href='frivillig.html').Button &nbsp;&nbsp;&nbsp;&rarr; Bliv frivllig&nbsp;&nbsp;&nbsp;
+		.Layer2
+			.Box.Newsletter.
+				<h2>Nyhedsbrev</h2>
+				<div id="mc_embed_signup">
+				<form action="http://alivefestival.us1.list-manage.com/subscribe/post?u=3a2e1bf24336c9a6bf87f2fc7&amp;id=e29c6f4325" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<label for="mce-EMAIL">Få vores nyhedsbrev</label>
+					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+					<input type="submit" value="Tilmeld" name="subscribe" id="mc-embedded-subscribe" class="button">
+				</form>
+				</div>
+		.Layer3
+			.Box.Box--program
+				h2 Raveonettes kommer!
+				a(href='program.html').Button &rarr; Lineup 2013
+		.Layer4.Layer-social
+			.Box
+				p: a(href='http://facebook.com/alivefestival', target='_blank') Alive Festival på Facebook
+				| <div class="fb-like" data-href="http://facebook.com/alivefestival" data-send="true" data-width="400" data-show-faces="true"></div>
+		.Layer5.Layer-logo
+			h1.SiteLogo
+				a(href="/")
+					img(src='images/2013/header.png', alt='')
+
 block content
 	//-
 		p The Raveonettes, VETO, Fallulah, MØ, Christian Hjelm og mange flere!
 		p <b>Sidste nyt:</b> Den Sorte Skole, Dråpe (N), The Late Great Fitzcarraldos, Schultz and Forever, Lars and the Hands of Lights og Workers in Songs er klar til Alive!
 
 
-		.newsletter.
-			<!-- Begin MailChimp Signup Form -->
-			<div id="mc_embed_signup">
-			<form action="http://alivefestival.us1.list-manage.com/subscribe/post?u=3a2e1bf24336c9a6bf87f2fc7&amp;id=e29c6f4325" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-				<label for="mce-EMAIL">Få vores nyhedsbrev</label>
-				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-				<div class="clear"><input type="submit" value="Ja tak" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-			</form>
-			</div>
-			<!--End mc_embed_signup-->
+		

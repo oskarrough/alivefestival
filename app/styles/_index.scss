@@ -1,0 +1,59 @@
+//
+// Homepage
+//
+
+.PageIndex {
+	// background-image: none;
+	// background-color: hsl(149, 38%, 28%);
+	height: 100%;
+	.l-Main {
+		margin-bottom: 0;
+	}
+}
+.Newsletter {
+	padding: 13px 14px 50px;
+	h2 { margin-bottom: em(5); }
+	label { display: none; }
+	input { display: inline-block; float: left; font-size: (16/18)*1rem;}
+	.email { width: 140px;}
+	.button { padding: em(10) em(15); margin: -2px 0 0 -2px; }
+}
+
+
+
+#zlayer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+[class^='Layer'] {
+	position: absolute;
+}
+.Layer1 { margin-top: 3em; margin-left: 40em;}
+.Layer2 { margin-top: 27em; margin-left: 60em;}
+.Layer3 { margin-top: 5em; margin-left: 15em;}
+.Layer-social { margin-top: 17em; margin-left: 8em;}
+.Layer-logo { width: 400px; margin-top: 26em; margin-left: 30em; z-index: 5;}
+.Layer-social .Box { padding-top: 1em; padding-bottom: 1em;}
+.PageIndex .l-Header .SiteLogo { display: none;}
+.PageIndex .SiteLogo { position: static;}
+.Box--program,
+.Box--volunteer {
+	> h2 {
+		color: #fff;
+	}
+}
+.Box--program {
+	background-image: url(../images/2013/artists/rave3.jpg);
+	background-size: cover;
+}
+.Box--volunteer {
+	background-image: url(../images/gallery/278815_10150999577681714_644388252_o.jpg);
+	background-size: contain;
+}
+
+.Layer1 {} // volunteer
+.Layer2 {} // newsletter
+.Layer3 {} // program
+.Layer-social {} 
+.Layer-logo {}

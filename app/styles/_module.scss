@@ -7,7 +7,7 @@
 	top: 54px;
 	left: 1em;
 	right: 1em;
-	z-index: 1;
+	z-index: 20;
 	margin: 0 auto;
 	text-align: center;
 	img {
@@ -17,27 +17,21 @@
 		display: block;
 	}
 }
-.PageIndex .SiteLogo {
-	top: 50%;
-	margin-top: (115/2)*-1px;
-	@include animation(fadeIn 2s ease-in);
-	img { max-width: none; }
-}
-@include keyframes(fadeIn) {
-	0% { opacity: 0; @include translateY(5px); }
-	100% { opacity: 1; @include translateY(0); }
-}
+// .PageIndex .SiteLogo {
+// 	top: 50%;
+// 	margin-top: (115/2)*-1px;
+// 	@include animation(fadeIn 2s ease-in);
+// 	img { max-width: none; }
+// }
+// @include keyframes(fadeIn) {
+// 	0% { opacity: 0; @include translateY(5px); }
+// 	100% { opacity: 1; @include translateY(0); }
+// }
 
 
 // Social
 // -----------------------------------
 div.fb_iframe_widget {
-	background-color: $white;
-	position: fixed;
-	top: 0;
-	left: 50%;
-	margin-left: -150px;
-	display: none;
 }
 
 
@@ -48,26 +42,26 @@ div.fb_iframe_widget {
 	min-height: 1.5em;
 	line-height: 1;
   	text-align: center;
-	span {
-		display: inline-block;
-		position: relative;  
-	}
-	span:before,
-	span:after {
-		content: "";
-		position: absolute;
-		border-top: 4px solid darken(rgb(240, 238, 234),10);
-		top: 0.4em;
-		width: 600px;
-	}
-	span:before {
-		right: 100%;
-		margin-right: 15px;
-	}
-	span:after {
-		left: 100%;
-		margin-left: 15px;
-	}
+	// span {
+	// 	display: inline-block;
+	// 	position: relative;  
+	// }
+	// span:before,
+	// span:after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	border-top: 4px solid darken(rgb(240, 238, 234),10);
+	// 	top: 0.4em;
+	// 	width: 600px;
+	// }
+	// span:before {
+	// 	right: 100%;
+	// 	margin-right: 15px;
+	// }
+	// span:after {
+	// 	left: 100%;
+	// 	margin-left: 15px;
+	// }
 }
 
 
@@ -108,3 +102,6 @@ div.fb_iframe_widget {
 	@include aliveBorder(360);
 	background-image: url(../images/2012/alivefestival-2012-bg.jpg);
 }
+
+
+

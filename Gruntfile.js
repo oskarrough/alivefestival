@@ -253,7 +253,8 @@ module.exports = function (grunt) {
                         '*.html',
                         'images/**/*.{webp,gif,zip,pdf}',
                         'styles/fonts/*',
-                        'scripts/vendor/**/*'
+                        'scripts/vendor/**/*',
+                        'components/fancybox/**/*'
                     ]
                 }]
             }

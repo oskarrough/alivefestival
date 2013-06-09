@@ -1,7 +1,12 @@
-.Button,
-input[type="submit"] {
-	border: 0;
+input[type='text'],
+input[type='email'],
+textarea {
 	outline: 0;
-	background-color: #222;
-	color: $white;	
+	border: 0;
+	padding: 0.5em 1em 0.4em;
+	font-size: 1rem;
+}
+input[type="submit"] {
+	@extend .Button;
+	outline: 0;
 }

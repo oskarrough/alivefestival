@@ -24,14 +24,15 @@
 		color: white;
 		text-decoration: none;
 		border: 5px solid transparent;
-		border-radius: 2em;
+		border-radius: 1.5em;
 		&:hover,
 		&.selected {
 			color: #f1f1f1;
-			border-color: #f1f1f1;
+			border-color: rgba(#fff, 0.5);
 		}
 		&:hover {
-			background-color: rgba($green, 0.9);
+			@include background(linear-gradient(to bottom, $green, darken($green, 5%)));
+			//background-color: rgba($green, 0.8);
 			@include scale(1.15);
 		}
 		&.selected {
@@ -40,9 +41,9 @@
 	}
 	
 	.PageIndex & {
-		font-size: 5vw;
+		font-size: 4.7vw;
 		a {
-			padding: 0.1em 0.3em;
+			padding: 0 0.3em;
 		}
 	}
 	&.is-hidden {

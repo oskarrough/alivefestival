@@ -21,12 +21,16 @@
 // Project styles
 @import "_base.scss";
 @import "_buttons.scss";
+@import "_forms.scss";
+
+@import "_layout.scss";
 
 @import "_module.scss";
 @import "_navigation.scss";
 @import "_navigation-primary.scss";
 @import "_program.scss";
 @import "_gallery.scss";
-//@import "_lines.scss";
+@import "_index.scss";
+@import "_animation.scss";
 
-@import "_layout.scss";
+//@import "_lines.scss";

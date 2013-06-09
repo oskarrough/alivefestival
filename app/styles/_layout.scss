@@ -20,17 +20,12 @@ body {
 	background-image: url(../images/bg-faded.jpg);
 	//background-attachment: scroll;
 }
-.PageIndex {
-	background-image: url(../images/alivecollage-nologo.jpg);
-	height: 100%;
-}
-
 //$border-color: #19d4ff;
 
 body {
 	padding: 23px;
 	overflow-x: hidden; /* For Opera */
-	@include aliveBorder(15);
+	//@include aliveBorder(15);
 }
 
 // Override cursor image
@@ -44,7 +39,6 @@ body {
 }
 .l-Main {
 	@include pie-clearfix;
-	overflow-x: hidden; // for .PageTitle
 	
 	position: relative;
 	z-index: 1;
