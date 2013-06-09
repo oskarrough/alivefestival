@@ -1,0 +1,67 @@
+//
+// Gallery
+//
+
+.PageGallery {
+	background-image: none;
+
+	.l-Main {
+		max-width: none;
+	}
+	.LinkGallery {
+		display: none;
+	}
+}
+.Image {
+	//height: em(700);
+	//min-height: 100%;
+	position: relative;
+	height: 90vh;
+
+	&:last-of-type {
+		margin-bottom: em(129);
+	}
+}
+.Image-description {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	padding: em(3,15) em(5,15) em(2,15);
+	background-color: $dark;
+	font-size: (15/18)*1rem;
+	
+	// normal:
+	//padding-bottom: em(15,15);
+
+	// fixed:
+	text-align: center;
+}
+.Image-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	// parallax like:
+	background-attachment: fixed;
+	background-size: cover;
+
+	// parallax normal:
+	//background-size: contain;
+
+	@media screen and (min-width: 70em) {}
+}
+
+.GalleryNav {
+	position: fixed;
+	top: -0.5em;
+	left: 20%;
+	background-color: hsl(15, 100%, 55%);
+	z-index: 30;
+	padding: 2px 10px 8px;
+	border: 0.5em solid hsl(6, 66%, 50%);
+	box-shadow: 0px 0px 3px 2px hsla(0, 0%, 0%, 0.38);
+}

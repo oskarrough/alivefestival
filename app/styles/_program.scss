@@ -10,10 +10,24 @@
 	> a {
 		display: block;
 	}
-	&:hover {
-		img {
-			@include filter(blur(2px));
-		}
+	// &:hover {
+	// 	img {
+	// 		@include filter(blur(2px));
+	// 	}
+	// }
+	> a:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		@include transition(all 250ms cubic-bezier(0.19, 1, 0.22, 1));
+		border: 0px solid #000;
+	}
+	> a:hover:after {
+		border-width: 5px;
 	}
 }
 .stamp {

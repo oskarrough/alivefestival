@@ -6,9 +6,11 @@ block vars
 extends views/includes/layout
 
 block content
-	h1.PageTitle
-		span Galleri
-	p Her er nogle udvalgte billeder fra Alive Festival siden tidernes morgen, 2009.
+	.Callout
+		h1 Galleri
+		p Her er nogle udvalgte billeder fra Alive Festival siden tidernes morgen, 2009.
+		p <a href="https://www.facebook.com/alivefestival/photos_albums" target="_blank" class="Button Button--small">&rarr; Se flere billeder på vores Facebook</a>
+	
 	.GalleryNav
 		button.js-scrollToTop Rewind
 		button.js-scrollToBottom Play
@@ -79,7 +81,6 @@ block content
 		.Image-bg(style='background-image: url(images/gallery/461458_10150999581271714_956765275_o.jpg)')
 	figure.Image
 		.Image-description Alive Festival 2011 - Image description here
-	figure.Image
-		.Image-description Alive Festival 2011 - Image description here
 		.Image-bg(style='background-image: url(images/gallery/468477_10150999572281714_330902884_o.jpg)')
 
+	p.align-center <a href="https://www.facebook.com/alivefestival/photos_albums" target="_blank" class="Button">&rarr; Se flere billeder på vores facebook</a>

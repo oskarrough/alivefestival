@@ -2,6 +2,18 @@
 // Base
 // 
 
+@mixin aliveBorder($hue) {
+	box-shadow:
+		inset hsl($hue, 100%, 55%) 0 0 0 5px,
+		inset hsl($hue, 93%, 53%) 0 0 0 1px,
+		inset hsl($hue, 100%, 66%) 0 0 0 10px,
+		inset hsl($hue, 91%, 64%) 0 0 0 11px,
+		inset hsl($hue, 100%, 77%) 0 0 0 16px,
+		inset hsl($hue, 87%, 75%) 0 0 0 17px,
+		inset hsl($hue, 100%, 89%) 0 0 0 22px,
+		inset hsl($hue, 78%, 86%) 0 0 0 23px;
+}
+
 html {
 	line-height: $base-line-height-unitless;
 	font-size: $base-font-size;
@@ -19,6 +31,9 @@ h4 {
 	margin-bottom: 1em;
 	line-height: 1.1;
 	font-family: $font-bold;
+}
+h1 {
+	text-align: center;
 }
 h3 {
 	font-weight: 400;
@@ -70,23 +85,6 @@ figure {
 iframe {
 	max-width: 100%;
 }
-
-.Button {
-	display: inline-block;
-	background-color: $red;
-	color: #fff;
-	padding: 1em 3em;
-	box-shadow: 4px 4px 0 0 darken($red, 20);
-	font-family: $font-bold;
-	font-size: 1.5rem;
-	&:hover {
-		background-color: lighten($red, 2);
-		color: #fff;
-		box-shadow: 2px 2px 0 0 darken($red, 20);
-	}
-	small {
-		display: block;
-		font-size: 60%;
-		font-family: $font-light;
-	}
+.align-center {
+	text-align: center;
 }

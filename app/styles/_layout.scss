@@ -9,12 +9,13 @@
 }
 body {
 	margin: 0;
+	background-color: $dark;
 	background-repeat: no-repeat;
 	//background-image: url(../images/2013/alivefestival-2013-bg2.jpg);
 	//background-image: url(../images/P7_1.gif);
 	//@include background-size(cover);
 	background-image: url(../images/bg-faded.jpg);
-	background-attachment: scroll;
+	//background-attachment: scroll;
 }
 // .PageIndex {
 // 	background-image: url(../images/alivecollage-nologo.jpg);
@@ -24,17 +25,9 @@ body {
 // }
 $border-color: #19d4ff;
 body {
-	padding: 40px;
+	padding: 23px;
 	overflow-x: hidden; /* For Opera */
-	box-shadow:
-		inset hsl(15, 100%, 55%) 0 0 0 5px,
-		inset hsl(15, 93%, 53%) 0 0 0 1px,
-		inset hsl(15, 100%, 66%) 0 0 0 10px,
-		inset hsl(15, 91%, 64%) 0 0 0 11px,
-		inset hsl(15, 100%, 77%) 0 0 0 16px,
-		inset hsl(15, 87%, 75%) 0 0 0 17px,
-		inset hsl(15, 100%, 89%) 0 0 0 22px,
-		inset hsl(15, 78%, 86%) 0 0 0 23px;
+	@include aliveBorder(15);
 }
 
 // Override cursor image
@@ -47,22 +40,33 @@ body {
 	padding-top: 8em;
 }
 .l-Main {
+	@include pie-clearfix;
+	overflow-x: hidden; // for .PageTitle
+	
 	position: relative;
 	z-index: 1;
-	max-width: em(700);
-	margin: 0 auto 4em;
-	border-radius: 8px;
 
+	max-width: em(700);
+	margin: 0 0.5em 4em;
+	@media (min-width: em(740)) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 75%;
+	}
 	p {
 		max-width: em(600);
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+	> img {
+		margin-bottom: 1em;
+	}
+}
+.Box {
 	background-color: rgb(240, 238, 234);
-	box-shadow: 5px 5px 0 0 rgba(0,0,0,0.5);
 	padding: 2em 1em;
-	overflow: hidden;
-	text-align: center;
+	border-radius: 8px;
+	box-shadow: 5px 5px 0 0 rgba(0,0,0,0.5);
 	color: #222;
+	text-align: center;
 }

@@ -1,5 +1,4 @@
 var $container = $('#js-packery');
-
 imagesLoaded( $container, function() {
 	$container.packery({
 		itemSelector: '.Artist',

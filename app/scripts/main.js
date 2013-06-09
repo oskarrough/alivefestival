@@ -1,5 +1,21 @@
+function hideMenuOnScroll() {
+	$primaryNav = $('.Navigation--primary');
+
+	$(window).scroll(function(){
+		$primaryNav.addClass('is-hidden');
+
+		clearTimeout($.data(this, "scrollTimer"));
+		$.data(this, "scrollTimer", setTimeout(function() {
+			$primaryNav.removeClass('is-hidden');
+		}, 750));
+	});
+}
+
 $(document).ready(function() {
 
+	if ($('.PageGallery').length > 0) {
+		hideMenuOnScroll();
+	}
 
 	// $('#zlayer').zlayer([
 	// 	{

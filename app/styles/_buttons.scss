@@ -1,29 +1,35 @@
-.Button {
-	@include rem(font-size, $font-size-l);
-	border-radius: 0.2em;
-	background: url(../img/bg-2012.jpg) 400px -1400px;
-	line-height: 1;
-	text-align: center;
-	margin-bottom: 0.3em;
-	
-	a {
-		@include transition(all 200ms);
-		display: block;
-		padding: 0.25em;
-		color: #f4e5cb;
-		text-decoration: none;
-		cursor: pointer;
+//
+// Buttons
+//
 
-		&:hover {
-			text-decoration: none;
-			color: $white;
-			@include scale(1.02);
-		}
+a.Button {
+	text-decoration: none;
+}
+.Button {
+	display: inline-block;
+	background-color: $red;
+	color: #fff;
+	padding: 0.5em 1em 0.4em;
+	box-shadow: 3px 3px 0 0 darken($red, 20);
+	font-family: $font-bold;
+	letter-spacing: 1px;
+
+	&:hover {
+		background-color: lighten($red, 2);
+		color: #fff;
+		box-shadow: 2px 2px 0 0 darken($red, 20);
 	}
-	&:last-child {
-		margin-bottom: 0;
+	small {
+		display: block;
+		font-size: 60%;
+		font-family: $font-light;
 	}
 }
+.Button--small {
+	font-size: 0.75rem;
+	//padding: 1em 3em 0.9em;	
+}
 .Button--big {
-	@include rem(font-size, $font-size-xl);
+	font-size: 1.5rem;
+	padding: 1em 3em 0.9em;	
 }
