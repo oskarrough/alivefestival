@@ -7,24 +7,34 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-
-html,
-body {
-	height: 100%;
-}
 body {
 	margin: 0;
-	overflow-x: hidden;
 	background-repeat: no-repeat;
-	background-position: fixed;
-	background-image: url(../images/2013/alivefestival-2013-bg2.jpg);
-	@include background-size(cover);
+	//background-image: url(../images/2013/alivefestival-2013-bg2.jpg);
+	//background-image: url(../images/P7_1.gif);
+	//@include background-size(cover);
+	background-image: url(../images/bg-faded.jpg);
+	background-attachment: scroll;
 }
-.PageIndex {
-	background-image: url(../images/alivecollage-nologo.jpg);
-	.l-Main {
-		padding: 0;
-	}
+// .PageIndex {
+// 	background-image: url(../images/alivecollage-nologo.jpg);
+// 	.l-Main {
+// 		padding: 0;
+// 	}
+// }
+$border-color: #19d4ff;
+body {
+	padding: 40px;
+	overflow-x: hidden; /* For Opera */
+	box-shadow:
+		inset hsl(15, 100%, 55%) 0 0 0 5px,
+		inset hsl(15, 93%, 53%) 0 0 0 1px,
+		inset hsl(15, 100%, 66%) 0 0 0 10px,
+		inset hsl(15, 91%, 64%) 0 0 0 11px,
+		inset hsl(15, 100%, 77%) 0 0 0 16px,
+		inset hsl(15, 87%, 75%) 0 0 0 17px,
+		inset hsl(15, 100%, 89%) 0 0 0 22px,
+		inset hsl(15, 78%, 86%) 0 0 0 23px;
 }
 
 // Override cursor image
@@ -33,30 +43,26 @@ body {
 // 	cursor: url(../images/cursor.png) -20 -40, default;
 // }
 
-
 .l-Header {
 	padding-top: 8em;
 }
 .l-Main {
 	position: relative;
 	z-index: 1;
-	
+	max-width: em(700);
+	margin: 0 auto 4em;
+	border-radius: 8px;
+
 	p {
 		max-width: em(600);
 		margin-left: auto;
 		margin-right: auto;
 	}
-	margin-left: 10em;
-	margin-right: 10em;
-	margin-bottom: 4em;
 	
 	background-color: rgb(240, 238, 234);
 	box-shadow: 5px 5px 0 0 rgba(0,0,0,0.5);
 	padding: 2em 1em;
 	overflow: hidden;
-	color: #222;
 	text-align: center;
-	.roundmain & {
-		border-radius: 50%;
-	}
+	color: #222;
 }

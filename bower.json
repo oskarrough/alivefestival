@@ -2,8 +2,13 @@
   "name": "alive-festival-2013",
   "version": "0.1",
   "dependencies": {
-    "jquery": "~1.9.1",
-    "qtip2": "~2.0.1"
+    "qtip2": "latest",
+    "imagesloaded": "latest",
+    "jquery-waypoints": "latest",
+    "jquery.customSelect": "latest",
+    "fancybox": "latest",
+    "jquery.lazyload": "~1.8.4",
+    "jquery": "~1.10.1"
   },
   "devDependencies": {}
 }

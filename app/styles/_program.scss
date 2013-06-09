@@ -16,7 +16,6 @@
 		}
 	}
 }
-
 .stamp {
 	position: absolute;
 	top: 20%;
@@ -42,6 +41,7 @@ $cols: 2;
 }
 .grid-sizer {
 	width: (100 - ($gutter*$cols)) /$cols;
+	margin-bottom: em(20);
 	@media screen and (min-width: em(1200)) {
 		$cols: 4;
 		width: (100 - ($gutter*$cols)) /$cols;

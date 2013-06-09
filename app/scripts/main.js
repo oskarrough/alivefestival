@@ -1,6 +1,26 @@
 $(document).ready(function() {
 
 
+	// $('#zlayer').zlayer([
+	// 	{
+	// 		layer:'.background',
+	// 		mass:15,
+	// 		confine:'y'
+	// 	},
+	// 	{
+	// 		layer:'.guy',
+	// 		mass:8,
+	// 		force:'push'
+	// 	},
+	// 	{
+	// 		layer:'.guys',
+	// 		mass:10,
+	// 		force:'pull'
+	// 	}
+	// ], {
+	// 	repositionTransition:'all 2.5s ease-in'
+	// });
+
 	// Clickable dropdowns (touch4evah)
 	// -------------------------------
 	$('.DropdownParent').children('a').click(function(event) {
