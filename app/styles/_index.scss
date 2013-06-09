@@ -32,8 +32,16 @@
 .Layer1 { margin-top: 3em; margin-left: 40em;}
 .Layer2 { margin-top: 27em; margin-left: 60em;}
 .Layer3 { margin-top: 5em; margin-left: 15em;}
-.Layer-social { margin-top: 17em; margin-left: 8em;}
-.Layer-logo { width: 400px; margin-top: 26em; margin-left: 30em; z-index: 5;}
+.Layer-social { top: initial !important; bottom: 2em !important; margin-left: 17em;}
+.Layer-logo {
+	max-width: 500px;
+	top: 50% !important;
+	left: 50% !important;
+	margin-top: -57px;
+	margin-left: -250px;
+	z-index: 5;
+	img { max-width: none;}
+}
 .Layer-social .Box { padding-top: 1em; padding-bottom: 1em;}
 .PageIndex .l-Header .SiteLogo { display: none;}
 .PageIndex .SiteLogo { position: static;}

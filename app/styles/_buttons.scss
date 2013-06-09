@@ -11,7 +11,7 @@ a.Button {
 	@include background(linear-gradient(to bottom, $red, darken($red, 6%)));
 	color: #fff;
 	padding: 0.5em 1em 0.4em;
-	box-shadow: 3px 3px 0 0 darken($red, 20);
+	box-shadow: 2px 2px 0 0 darken($red, 20);
 	font-family: $font-bold;
 	letter-spacing: 1px;
 	border: 0;
@@ -21,7 +21,7 @@ a.Button {
 		//background-color: lighten($red, 2);
 		@include background(linear-gradient(to bottom, $red, darken($red, 10%)));
 		color: #fff;
-		box-shadow: 2px 2px 0 0 darken($red, 20);
+		box-shadow: 1px 1px 0 0 darken($red, 20);
 	}
 	small {
 		display: block;
