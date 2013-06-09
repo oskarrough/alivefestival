@@ -42,6 +42,13 @@ div.fb_iframe_widget {
 	min-height: 1.5em;
 	line-height: 1;
   	text-align: center;
+
+  	padding-top: em(10,40);
+  	background: transparent url(../images/pensel1.png) no-repeat center center;
+  	background-size: cover;
+  	color: #222;
+
+
 	// span {
 	// 	display: inline-block;
 	// 	position: relative;  

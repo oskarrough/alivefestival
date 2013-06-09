@@ -51,8 +51,8 @@
 }
 
 
-.Layer1 { @include animation-delay(1200ms); } // volunteer
-.Layer2 { @include animation-delay(1600ms); } // newsletter
-.Layer3 { @include animation-delay(800ms); } // program
-.Layer4 { @include animation-delay(2000ms); } 
-.Layer-logo { @include animation-delay(300ms); }
+.Layer1 { @include animation-delay(1400ms); } // volunteer
+.Layer2 { @include animation-delay(1800ms); } // newsletter
+.Layer3 { @include animation-delay(1000ms); } // program
+.Layer4 { @include animation-delay(2200ms); } 
+.Layer-logo { @include animation-delay(400ms); }

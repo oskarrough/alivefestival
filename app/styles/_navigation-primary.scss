@@ -23,25 +23,19 @@
 		padding: 0.5em 1em;
 		color: white;
 		text-decoration: none;
-		border: 5px solid transparent;
-		border-radius: 1.5em;
 		&:hover,
 		&.selected {
-			color: #f1f1f1;
-			border-color: rgba(#fff, 0.5);
+			background: transparent url(../images/pensel1.png) no-repeat center center;
+			background-size: contain;
+			color: #222;
 		}
 		&:hover {
-			@include background(linear-gradient(to bottom, $green, darken($green, 5%)));
-			//background-color: rgba($green, 0.8);
 			@include scale(1.15);
-		}
-		&.selected {
-			background-color: rgba($green, 0.9);
 		}
 	}
 	
 	.PageIndex & {
-		font-size: 4.7vw;
+		font-size: 3.5vw;
 		a {
 			padding: 0 0.3em;
 		}
