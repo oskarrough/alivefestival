@@ -11,9 +11,15 @@
 //
 // Teaser modifier
 //
-.Article--teaser {
+.Article--teaser,
+.Artists .Artist {
+	border-radius: 0.4em;
+
 	// Make sure the link contains everything
 	> a {
+		display: block;
+	}
+	img {
 		display: block;
 	}
 }
@@ -49,28 +55,30 @@
 		bottom: 0;
 		left: 0;
 		@include transition(all 250ms cubic-bezier(0.19, 1, 0.22, 1));
-		border: 0px solid #000;
+		border: 0px solid rgba(#000,0.5);
 	}
 	> a:hover:after {
 		border-width: 5px;
 	}
 }
-.Artist:nth-child(1) > a:after { border-color: #1abc9c; }
-.Artist:nth-child(2) > a:after { border-color: #2ecc71; }
-.Artist:nth-child(3) > a:after { border-color: #3498db; }
-.Artist:nth-child(4) > a:after { border-color: #9b59b6; }
-.Artist:nth-child(5) > a:after { border-color: #34495e; }
-.Artist:nth-child(6) > a:after { border-color: #8e44ad; }
-.Artist:nth-child(7) > a:after { border-color: #27ae60; }
-.Artist:nth-child(8) > a:after { border-color: #e67e22; }
-.Artist:nth-child(9) > a:after { border-color: #f1c40f; }
-.Artist:nth-child(10) > a:after { border-color: #f39c12; }
-.Artist:nth-child(11) > a:after { border-color: #c0392b; }
-.Artist:nth-child(12) > a:after { border-color: #bdc3c7; }
+
+// .Artist:nth-child(1) > a:after { border-color: #1abc9c; }
+// .Artist:nth-child(2) > a:after { border-color: #2ecc71; }
+// .Artist:nth-child(3) > a:after { border-color: #3498db; }
+// .Artist:nth-child(4) > a:after { border-color: #9b59b6; }
+// .Artist:nth-child(5) > a:after { border-color: #34495e; }
+// .Artist:nth-child(6) > a:after { border-color: #8e44ad; }
+// .Artist:nth-child(7) > a:after { border-color: #27ae60; }
+// .Artist:nth-child(8) > a:after { border-color: #e67e22; }
+// .Artist:nth-child(9) > a:after { border-color: #f1c40f; }
+// .Artist:nth-child(10) > a:after { border-color: #f39c12; }
+// .Artist:nth-child(11) > a:after { border-color: #c0392b; }
+// .Artist:nth-child(12) > a:after { border-color: #bdc3c7; }
 .Artist-title {
 	position: absolute;
 	left: -3px;
-	bottom: 0.5em;
+	bottom: 20px;
+	margin-bottom: 0;
 	padding: 0.2em 0.3em;
 	background-color: #000;
 	color: $white;

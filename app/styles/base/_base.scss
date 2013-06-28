@@ -20,6 +20,7 @@ h5,
 h6 {
 	font-family: $font-bold;
 	font-weight: 400;
+	line-height: 1;
 	//text-transform: uppercase;
 }
 
@@ -70,14 +71,6 @@ a:hover {
 iframe,
 img {
 	max-width: 100%;
-}
-// remove border in old ie
-a img {
-	border: 0;
-}
-// remove default margin
-figure {
-	margin: 0;
 }
 
 //

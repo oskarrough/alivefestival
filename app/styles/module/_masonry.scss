@@ -1,9 +1,9 @@
 //
 // Masonry
-// Fluid widths are hard and it is easier not to use Susy here.
+// Fluid widths are hard and it is easiter not to use Susy here.
 //
 
-/*
+
 // Small version
 $small-columns: 2;
 $small-gutter: 2%;
@@ -12,13 +12,13 @@ $small-from: 400px;
 // Medium version
 $medium-columns: 4;
 $medium-gutter: 2%;
-$medium-from: 700px;
+$medium-from: 1200px;
 
 // Large version
 $large-columns: 6;
 $large-gutter: 2%;
-$large-from: 1000px;
-*/
+$large-from: 1650px;
+
 
 
 
@@ -29,22 +29,25 @@ $large-from: 1000px;
 
 .grid-sizer {
 	//@include calcWidth($small-columns, $small-gutter);
-	width: columns(1,4);
-	margin-right: gutter();
-	@include span-columns(1,4);
+	
+	//width: columns(1,4);
+	//margin-right: gutter();
+	width: columns(1,2);
 
 	//@media (min-width: em($small-from)) {
 		//@include nth-omega(4n);
 	//}
-	/*@media (min-width: em($medium-from)) {
-		@include calcWidth($medium-columns, $medium-gutter);
+	@media (min-width: em($medium-from)) {
+		//@include calcWidth($medium-columns, $medium-gutter);
+		width: columns(1,4);
 	}
 	@media (min-width: em($large-from)) {
-		@include calcWidth($large-columns, $large-gutter);
-	}*/
+		//@include calcWidth($large-columns, $large-gutter);
+		width: columns(1,5) - 0.5;
+	}
 }
 .gutter-sizer {
-	width: gutter(4);
+	width: gutter();
 }
 /*
 .grid-sizer--double {

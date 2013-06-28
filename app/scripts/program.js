@@ -3,7 +3,7 @@ function onLayout() {
 }
 
 // initialize Packery
-var container = document.querySelector('#js-packery');
+var container = document.querySelector('#js-masonry');
 
 if ($(container).length > 0) {
 

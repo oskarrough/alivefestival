@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+	// $('.Navigation--primary a').click(function(event){
+	// 	event.preventDefault();
+	// 	var url = $(this).attr('href');
+	// 	console.log(url);
+
+	// 	$('.l-Main').html('loading…').load(url, function(){
+	// 		console.log('loaded?');
+	// 	});
+	// });
+
 	$zcanvas = $('#zlayer');
 	if ($zcanvas.length > 0) {
 		$zcanvas.zlayer([
