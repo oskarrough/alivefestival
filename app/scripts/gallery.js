@@ -38,7 +38,7 @@ function hideMenuOnScroll() {
 
 $(document).ready(function() {
 
-	if ( $('.PageGallery').length > 0 ) {
+	if ( $('.page-Gallery').length > 0 ) {
 		hideMenuOnScroll();
 	}
 
