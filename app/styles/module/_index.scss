@@ -2,10 +2,10 @@
 // Homepage
 //
 
-.PageIndex {
-	// background-image: none;
-	// background-color: hsl(149, 38%, 28%);
+.page-Index {
+	overflow: hidden;
 	height: 100%;
+	padding: 0;
 	.l-Main {
 		margin-bottom: 0;
 	}
@@ -43,8 +43,8 @@
 	img { max-width: none;}
 }
 .Layer-social .Box { padding-top: 1em; padding-bottom: 1em;}
-.PageIndex .l-Header .SiteLogo { display: none;}
-.PageIndex .SiteLogo { position: static;}
+.page-Index .l-Header .Logo { display: none;}
+.page-Index .Logo { position: static;}
 .Box--program,
 .Box--volunteer {
 	> h2 {

@@ -1,39 +1,32 @@
-// Iterative delay
-// ============================================================================
-/*
-Enables you to run effects iterative through an array of elements. Takes three arguments: $selector, $count and $delay. $count is the number of elements (nth-childs) to run through.
-*/
+//
+// Artist
+//
 
-// @mixin iterative-delay($selector: unquote('.item'), $count: 2, $delay: 0.07s) {
-// 	@for $i from 1 through $count {
-// 		#{$selector}:nth-child(#{$i}) {
-// 			@include transition-delay($delay * $i);
-// 		}
-// 	}
-// }
-// .Artist {
-// 	@include transition(opacity 1000ms);
-// 	opacity: 0.2;
-// 	.packery-done & {
-// 		opacity: 1;
-// 	}
-// }
-// @include iterative-delay('.Artist', 16, 0.20s);
+//
+// Default for all articles
+//
+.Article {}
 
 
-#js-packery {
-	// @include transition(opacity 400ms);
-	// opacity: 0;
-	// &.packery-done {
-	// 	opacity: 1;
-	// }
-	//opacity: 0.5;
+//
+// Teaser modifier
+//
+.Article--teaser {
+	// Make sure the link contains everything
+	> a {
+		display: block;
+	}
 }
 
-.Artists {
-	list-style: none;
-	padding-left: 0;
-}
+
+//
+// Detail modifier
+//
+.Article--detail {}
+
+
+
+
 .Artist {
 	@extend .grid-sizer;
 	float: left;
@@ -62,7 +55,6 @@ Enables you to run effects iterative through an array of elements. Takes three a
 		border-width: 5px;
 	}
 }
-
 .Artist:nth-child(1) > a:after { border-color: #1abc9c; }
 .Artist:nth-child(2) > a:after { border-color: #2ecc71; }
 .Artist:nth-child(3) > a:after { border-color: #3498db; }
@@ -75,12 +67,6 @@ Enables you to run effects iterative through an array of elements. Takes three a
 .Artist:nth-child(10) > a:after { border-color: #f39c12; }
 .Artist:nth-child(11) > a:after { border-color: #c0392b; }
 .Artist:nth-child(12) > a:after { border-color: #bdc3c7; }
-
-.stamp {
-	position: absolute;
-	top: 20%;
-	left: 10%;
-}
 .Artist-title {
 	position: absolute;
 	left: -3px;
@@ -90,22 +76,3 @@ Enables you to run effects iterative through an array of elements. Takes three a
 	color: $white;
 	box-shadow: 3px 3px 0 0 rgba(0,0,0,0.5);
 }
-
-
-
-// Grid layout
-$gutter: 2%;
-$cols: 2;
-.gutter-sizer {
-	width: $gutter;
-}
-.grid-sizer {
-	width: (100 - ($gutter*$cols)) /$cols;
-	@media screen and (min-width: em(1200)) {
-		$cols: 4;
-		width: (100 - ($gutter*$cols)) /$cols;
-	}
-}
-
-
-//.item.w2 { width: 38.8%; background: #9C0; }

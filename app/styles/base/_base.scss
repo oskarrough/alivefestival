@@ -1,0 +1,100 @@
+//
+// Base
+// 
+
+html {
+	//text-rendering: optimizeLegibility;
+	//-webkit-font-smoothing: antialiased;
+	font-size: $base-font-size;
+	font-family: $font-body;
+	line-height: $base-line-height-unitless;
+	color: #f1f1f1;
+}
+
+// Headers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-bold;
+	font-weight: 400;
+	//text-transform: uppercase;
+}
+
+// Make sure (many) elements have the same margin
+blockquote,
+ol,
+ul
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+fieldset {
+    margin: 0 0 rem($space);
+}
+fieldset {
+    border: 0;
+    padding: 0;
+}
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+}
+strong {
+	font-weight: 400;
+	font-family: $font-bold;
+}
+.l-Main > p:first-of-type strong {
+	font-size: 1.25rem;
+}
+
+// Links
+a {
+	text-decoration: none;
+	color: $blue;
+}
+a:hover {
+	color: $green;
+}
+
+// responsive
+iframe,
+img {
+	max-width: 100%;
+}
+// remove border in old ie
+a img {
+	border: 0;
+}
+// remove default margin
+figure {
+	margin: 0;
+}
+
+//
+// Alignment helpers
+//
+.align-left {
+	float: left;
+	margin-right: rem($space);
+	margin-bottom: rem($space);
+}
+.align-right {
+	float: right;
+	margin-left: rem($space);
+	margin-bottom: rem($space);
+}
+.align-center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}

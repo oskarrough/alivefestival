@@ -1,0 +1,29 @@
+//
+// Logo
+//
+
+.Logo {
+	position: absolute;
+	top: 54px;
+	left: 1em;
+	right: 1em;
+	z-index: 20;
+	margin: 0 auto;
+	text-align: center;
+	img {
+		max-width: em(200);
+	}
+	> a {
+		display: block;
+	}
+}
+// .page-Index .Logo {
+// 	top: 50%;
+// 	margin-top: (115/2)*-1px;
+// 	@include animation(fadeIn 2s ease-in);
+// 	img { max-width: none; }
+// }
+// @include keyframes(fadeIn) {
+// 	0% { opacity: 0; @include translateY(5px); }
+// 	100% { opacity: 1; @include translateY(0); }
+// }

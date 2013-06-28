@@ -2,30 +2,20 @@
 // Layout
 //
 
-// http://paulirish.com/2012/box-sizing-border-box-ftw/
-* {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
 html {
 	height: 100%;
 }
 body {
-	margin: 0;
 	background-color: $dark;
 	background-repeat: no-repeat;
-	//background-image: url(../images/2013/alivefestival-2013-bg2.jpg);
-	//background-image: url(../images/P7_1.gif);
+	background-image: url(../images/2013/bg-poster.jpg);
+	background-position: bottom center;
 	//@include background-size(cover);
-	background-image: url(../images/bg-faded.jpg);
-	//background-attachment: scroll;
+	background-attachment: fixed;
 }
-//$border-color: #19d4ff;
-
 body {
 	padding: 23px;
 	overflow-x: hidden; /* For Opera */
-	//@include aliveBorder(15);
 }
 
 // Override cursor image

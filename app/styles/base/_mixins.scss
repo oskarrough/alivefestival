@@ -1,0 +1,52 @@
+//
+// EM function
+//
+
+@function em($target, $context: $base-font-size-unitless, $desired-unit: 1em) {
+	// Make sure units are unitless
+	@if not unitless($target) {
+		//@warn "Target isn't unitless -> #{$target}";
+		$target: $target / 1px;
+	}
+	@if not unitless($context) {
+		//@warn "Context isn't unitless -> #{$context}";
+		$context: $context / 1px;
+		//@warn "Context isn't unitless -> #{$context}";
+	}
+
+	@return ($target / $context) * $desired-unit;
+}
+
+
+//
+// REM function
+//
+
+@function rem($target, $context: $base-font-size-unitless, $desired-unit: 1rem) {
+	// Make sure units are unitless
+	@if not unitless($target) {
+		//@warn "Target isn't unitless -> #{$target}";
+		$target: $target / 1px;
+	}
+	@if not unitless($context) {
+		//@warn "Context isn't unitless -> #{$context}";
+		$context: $context / 1px;
+		//@warn "Context isn't unitless -> #{$context}";
+	}
+
+	@return ($target / $context) * $desired-unit;
+}
+
+
+
+@mixin aliveBorder($hue) {
+	box-shadow:
+		inset hsl($hue, 100%, 55%) 0 0 0 5px,
+		inset hsl($hue, 93%, 53%) 0 0 0 1px,
+		inset hsl($hue, 100%, 66%) 0 0 0 10px,
+		inset hsl($hue, 91%, 64%) 0 0 0 11px,
+		inset hsl($hue, 100%, 77%) 0 0 0 16px,
+		inset hsl($hue, 87%, 75%) 0 0 0 17px,
+		inset hsl($hue, 100%, 89%) 0 0 0 22px,
+		inset hsl($hue, 78%, 86%) 0 0 0 23px;
+}

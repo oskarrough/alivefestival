@@ -1,10 +1,11 @@
+//
 // Primary navigation 
-// -----------------------------------
+//
+
 .Navigation--primary {
 	@include pie-clearfix;
 	font-family: $font-header;
-	text-align: center;
-	
+	text-align: center;	
 	
 	@media screen and (min-width: em(700)) {
 		font-size: 30px;
@@ -34,7 +35,7 @@
 		}
 	}
 	
-	.PageIndex & {
+	.page-Index & {
 		font-size: 3.5vw;
 		a {
 			padding: 0 0.3em;
@@ -66,7 +67,7 @@
 		}
 	}
 }
-.PageIndex .Navigation--primary > li {
+.page-Index .Navigation--primary > li {
 	@include animation-fill-mode(both);
 }
 
@@ -83,7 +84,7 @@
 		top: 0.65em;
 		left: 0.2em;
 		
-		.PageIndex & {
+		.page-Index & {
 			@include animation(fadeInLeft 2s ease-in);
 		}
 		
@@ -92,7 +93,7 @@
 		top: 0.65em;
 		right: 0.2em;
 		
-		.PageIndex & {
+		.page-Index & {
 			@include animation(fadeInRight 2s ease-in);
 		}
 	}
@@ -100,7 +101,7 @@
 		right: 0.25em;
 		bottom: 0.5em;
 
-		.PageIndex & {
+		.page-Index & {
 			@include animation(fadeInLeft 2s ease-in);
 		}
 	}
@@ -108,7 +109,7 @@
 		left: 0.25em;
 		bottom: 0.5em;
 		
-		.PageIndex & {
+		.page-Index & {
 			@include animation(fadeInRight 2s ease-in);
 		}
 	}
