@@ -10,26 +10,25 @@
 
 
 
-
+//
 // Social
-// -----------------------------------
+//
 div.fb_iframe_widget {
 }
 
 
+//
 // Page titles
-// -----------------------------------
+//
 .PageTitle {
 	font-size: 40px;
 	min-height: 1.5em;
 	line-height: 1;
   	text-align: center;
-
   	padding-top: em(10,40);
   	background: transparent url(../images/pensel1.png) no-repeat center center;
   	background-size: cover;
   	color: #222;
-
 
 	// span {
 	// 	display: inline-block;
@@ -51,43 +50,4 @@ div.fb_iframe_widget {
 	// 	left: 100%;
 	// 	margin-left: 15px;
 	// }
-}
-
-
-.Callout {
-	text-align: center;
-	background-color: lighten($dark, 5%);
-	background-color: rgba(#fff,0.05);
-	background-color: hsl(117, 51%, 34%);
-	padding-top: 1em;
-	padding-bottom: 1em;
-	margin-bottom: 2em;
-
-	> h1 {
-		margin-bottom: 0;
-	}
-}
-
-.PageHistory {
-	background-image: none;
-	.l-Main {
-		max-width: em(700);
-	}
-}
-.Page2009 {
-	@include aliveBorder(50);
-	background-image: url(../images/2009/alivefestival-2009-bg.jpg);
-}
-.Page2010 {
-	@include aliveBorder(56);
-	background-image: url(../images/2010/alivefestival-2010-bg.jpg);
-}
-.Page2011 {
-	@include aliveBorder(250);
-	background-color: hsl(198, 61%, 12%);
-	background-image: url(../images/2011/alivefestival-2011-bg.jpg);
-}
-.Page2012 {
-	@include aliveBorder(360);
-	background-image: url(../images/2012/alivefestival-2012-bg.jpg);
 }

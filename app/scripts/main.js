@@ -7,11 +7,14 @@ $(document).ready(function() {
 	if ($main.find('img').length > 0) {
 		$main.imagesLoaded( function() {
 		  $('html').addClass('loaded');
+		  console.log('images loaded');
 		});
 	} else {
 		$('html').addClass('loaded');
 	}
 
+	// Open history dropdown on the history page
+	$('.page-History').find('.LinkHistory').addClass('js-hover');
 
 	// $('.Navigation--primary a').click(function(event){
 	// 	event.preventDefault();
@@ -63,11 +66,11 @@ $(document).ready(function() {
 		$(this).parent().toggleClass('js-hover');
 	});
 
-	var primaryLink = $('.Navigation--primary').children('li').hover( function() {
-		$('body').addClass('speedy');
-	}, function() {
-		$('body').removeClass('speedy');
-	});
+	// var primaryLink = $('.Navigation--primary').children('li').hover( function() {
+	// 	$('body').addClass('speedy');
+	// }, function() {
+	// 	$('body').removeClass('speedy');
+	// });
 
 
 	// Custom selects

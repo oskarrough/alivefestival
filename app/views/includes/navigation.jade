@@ -1,34 +1,31 @@
-//- Mixin that takes care of 'selected' class
+//- Mixin that takes care of 'is-active' class
 mixin menu-item(url, title, classnames)
 	li(class='#{classnames}')
-		a(href=url, class=active == title ? 'selected' : '')= title
+		a(href=url, class=active == title ? 'is-active' : '')= title
 
-//- volunteer fortraders forartists press partners backstage
-//- news music arts camping practical ticket tv shop forum about
-//- http://www.helmo.fr/ongoing/palais-de-tokyo/
-
-ul.Navigation.Navigation--primary.is-hidden
-		+menu-item('/', 'Index', 'LinkIndex')
-		+menu-item('program.html', 'Program', 'LinkProgram')
-		+menu-item('billetter.html', 'Billetter', 'LinkTickets')
-		+menu-item('info.html', 'Info', 'LinkInfo')
-		+menu-item('gallery.html', 'Galleri', 'LinkGallery')
-		li.LinkHistory.DropdownParent
-			a(href='#', class=active == 'Historie' ? 'selected' : '') Historie
-			ul.Navigation.Navigation--history.Dropdown
-				li: a(href='/', class=active == 'Index' ? 'selected' : '') 2013
-				li: a(href='2012.html', class=active == '2012' ? 'selected' : '') 2012
-				li: a(href='2011.html', class=active == '2011' ? 'selected' : '') 2011
-				li: a(href='2010.html', class=active == '2010' ? 'selected' : '') 2010
-				li: a(href='2009.html', class=active == '2009' ? 'selected' : '') 2009
-		//-+menu-item('kontakt.html', 'Kontakt', 'LinkContact')
+ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
+	+menu-item('/', 'Index', 'LinkIndex')
+	+menu-item('program.html', 'Program', 'LinkProgram')
+	+menu-item('billetter.html', 'Billetter', 'LinkTickets')
+	+menu-item('info.html', 'Info', 'LinkInfo')
+	+menu-item('gallery.html', 'Galleri', 'LinkGallery')
+	li.LinkHistory
+		a(href='historie.html', class=active == 'Historie' ? 'is-active' : '') Historie
+		ul.Navigation.Navigation--history.Dropdown
+		//-	ul.Navigation.Navigation--history.Dropdown
+			li: a(href='/', class=active == 'Index' ? 'is-active' : '') 2013
+			li: a(href='historie.html#2012', class=active == '2012' ? 'is-active' : '') 2012
+			li: a(href='historie.html#2011', class=active == '2011' ? 'is-active' : '') 2011
+			li: a(href='historie.html#2010', class=active == '2010' ? 'is-active' : '') 2010
+			li: a(href='historie.html#2009', class=active == '2009' ? 'is-active' : '') 2009
+	//-+menu-item('kontakt.html', 'Kontakt', 'LinkContact')
 
 //-ul.Navigation
 	li.DropdownParent
 		a(href="#") <i class="icons-world-small"> Language</i>
 		ul.Navigation.Dropdown
-			li: a(href='/', class=language == 'da' ? 'selected' : '') Danish
-			li: a(href='/en', class=language == 'en' ? 'selected' : '') English
+			li: a(href='/', class=language == 'da' ? 'is-active' : '') Danish
+			li: a(href='/en', class=language == 'en' ? 'is-active' : '') English
 			
 
 			Praktisk info
@@ -37,3 +34,16 @@ ul.Navigation.Navigation--primary.is-hidden
 			Galleri
 			Spotify og evt. wimp-playlister + Youtube-playlister
 			Bliv frivillig
+			Front
+			Spilleplan
+			Musik/Program/lineup/kunstnere
+			camping
+			about alive
+			Billetter
+			Nyheder
+			Info
+			countdown
+			travel
+			http://northside.dk/faq/
+			presse
+			kontakt

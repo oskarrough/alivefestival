@@ -1,0 +1,50 @@
+//
+// History
+//
+
+.page-History {
+	background-image: none;
+	padding: 0;
+	.l-Header {
+		padding-top: 0;
+	}
+	.History:first-child {
+		padding-top: 11em;
+	}
+	.l-Main {
+		max-width: none;
+	}
+}
+
+.History {
+	background-size: cover;
+	padding: 2em 0;
+	> .Box {
+		margin-bottom: 0;
+	}
+}
+.History-2009 {
+	//@include aliveBorder(50);
+	background-image: url(../images/2009/alivefestival-2009-bg.jpg);
+	background-image: url(../images/gallery/6294_128098056713_67301461713_2937457_6965060_n.jpg);
+}
+.History-2010 {
+	//@include aliveBorder(56);
+	background-image: url(../images/2010/alivefestival-2010-bg.jpg);
+	background-image: url(../images/gallery/alive2010-tbv.jpg);
+}
+.History-2011 {
+	//@include aliveBorder(250);
+	background-color: hsl(198, 61%, 12%);
+	background-image: url(../images/2011/alivefestival-2011-bg.jpg);
+	background-image: url(../images/gallery/alive2011-pervers.jpg);
+}
+.History-2012 {
+	//@include aliveBorder(360);
+	background-image: url(../images/2012/alivefestival-2012-bg.jpg);
+	background-image: url(../images/gallery/185191_10151004513541714_1702935780_n.jpg);
+}
+.History-2013 {
+	//@include aliveBorder(360);
+	background-image: url(../images/2013/alivefestival-collage2.jpg);
+}

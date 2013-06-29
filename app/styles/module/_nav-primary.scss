@@ -7,9 +7,8 @@
 	font-family: $font-header;
 	text-align: center;	
 	
-	@media screen and (min-width: em(700)) {
-		font-size: 30px;
-		font-size: 2.5vw;
+	@media (min-width: em(700)) {
+		font-size: 26px;
 	}
 
 	ul {
@@ -25,20 +24,14 @@
 		color: white;
 		text-decoration: none;
 		&:hover,
-		&.selected {
+		&.is-active,
+		.js-hover > a {
 			background: transparent url(../images/pensel1.png) no-repeat center center;
 			background-size: contain;
 			color: #222;
 		}
 		&:hover {
 			@include scale(1.15);
-		}
-	}
-	
-	.page-Index & {
-		//font-size: 3.5vw;
-		a {
-			//padding: 0 0.3em;
 		}
 	}
 	&.is-hidden {
@@ -72,27 +65,23 @@
 }
 
 
-@media screen and (min-width: em(700)) {
+@media (min-width: em(700)) {
 	.Navigation--primary {
 		text-align: left;
 	}
-
 	li.LinkIndex {
 		display: none;
 	}
 	.LinkProgram {
 		top: 0.65em;
 		left: 0.2em;
-		
 		.page-Index & {
 			@include animation(fadeInLeft 2s ease-in);
 		}
-		
 	}
 	.LinkTickets {
 		top: 0.65em;
 		right: 0.2em;
-		
 		.page-Index & {
 			@include animation(fadeInRight 2s ease-in);
 		}
@@ -100,7 +89,6 @@
 	.LinkInfo {
 		right: 0.25em;
 		bottom: 0.5em;
-
 		.page-Index & {
 			@include animation(fadeInLeft 2s ease-in);
 		}
@@ -108,7 +96,6 @@
 	.LinkHistory {
 		left: 0.25em;
 		bottom: 0.5em;
-		
 		.page-Index & {
 			@include animation(fadeInRight 2s ease-in);
 		}
@@ -128,5 +115,27 @@
 		margin-top: -39px;
 		left: -0.2em;
 		text-align: center;	
+	}
+}
+
+.Navigation--history {
+	top: initial;
+	left: 50%;
+	margin-left: -4em;
+	bottom: 1em;
+	@media (min-width: em(700)) {
+		bottom: 3em;
+	}
+
+	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
+	@include transition(all 300ms);
+	@include translateY(150%);
+	.js-hover > & {
+		@include translateY(0);
+	}
+	
+	li,
+	a {
+		display: block;
 	}
 }

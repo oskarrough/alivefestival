@@ -37,3 +37,6 @@ a.Button {
 	font-size: 1.5rem;
 	padding: 1em 3em 0.9em;	
 }
+.Button + .Button {
+	margin-left: em(5);
+}
