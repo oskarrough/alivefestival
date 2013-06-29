@@ -10,7 +10,8 @@
     "fancybox": "latest",
     "jquery.lazyload": "~1.8.4",
     "rough-navtoggle": "~0.3.0",
-    "jquery": "~1.10.1"
+    "jquery": "~1.10.1",
+    "masonry": "~3.0.1"
   },
   "devDependencies": {}
 }

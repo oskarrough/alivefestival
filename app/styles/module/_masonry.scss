@@ -77,9 +77,10 @@ $large-from: 1650px;
 }
 // Apply the grid-sizer to the item in the grid.
 // The .Article selector is just an example.
-.Article {
+.Artist {
 	@extend .grid-sizer;
 	float: left;
+	margin-bottom: 2%;
 	img {
 		max-width: 100%;
 	}

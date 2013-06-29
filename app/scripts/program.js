@@ -1,52 +1,33 @@
-function onLayout() {
-	console.log('layout done');
-}
+//
+// Dynamic grid with Masonry
+//
 
-// initialize Packery
-var container = document.querySelector('#js-masonry');
+$(function () {
+	
+	var $main = $('.l-Main');
+	if ($main.find('img').length > 0) {
+		$main.imagesLoaded( function() {
+		  $('html').addClass('loaded');
+		  console.log('images loaded');
+		  goGrid();
+		});
+	} else {
+		$('html').addClass('loaded');
+	}
 
-if ($(container).length > 0) {
-
-	var pckry = new Packery( container, {
-		// options
-		itemSelector: '.Artist',
-		gutter: '.gutter-sizer',
-		columnWidth: '.grid-sizer'
-	});
-	// layout Packery after all images have loaded
-	imagesLoaded( container, function() {
-		pckry.layout();
-	});
-
-
-	// bind event listener
-	pckry.on( 'layoutComplete', onLayout );
-	// un-bind event listener
-	pckry.off( 'layoutComplete', onLayout );
-
-	// return true to trigger an event listener just once
-	pckry.on( 'layoutComplete', function() {
-		$(container).addClass('packery-done');
-		return true;
-	});
-
-//var $container = $('#js-packery');
-//var pckry = Packery.data( $container );
-/*
-imagesLoaded( $container, function() {
-
-	$container.packery({
-		itemSelector: '.Artist',
-		gutter: '.gutter-sizer',
-		columnWidth: '.grid-sizer'
-	}).addClass('packery-done');
-
-	$container.packery( 'on', 'layoutComplete', function() {
-		console.log('test1');
-	});
 
 });
 
+function goGrid() {
+	var $container = $('#js-masonry');
+	if ($container.length > 0) {
+		console.log('gogrid');
 
-*/
+		$container.prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
+		$container.masonry({
+			columnWidth: '.grid-sizer',
+			gutter: '.gutter-sizer',
+			itemSelector: '.Artist'
+		});
+	}
 }
