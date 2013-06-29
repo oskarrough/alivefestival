@@ -9,8 +9,8 @@ block content
 	h1.PageTitle
 		span Program 2013
 
-	mixin artist(title, url, img, desc)
-		li.Artist: a(href=url)
+	mixin artist(title, url, img, desc, myClass)
+		li.Artist(class=img): a(href=url)
 			h2.Artist-title #{title}
 			figure.Artist-image
 				img(src='images/2013/artists/#{img}.jpg', alt='#{title')
@@ -40,6 +40,6 @@ block content
 		+artist('Workers in Songs', '#', 'workers-in-songs')
 		+artist('Bestie Respond', '#', 'beastie-respond')
 		+artist('Tales of murder and dust', '#', 'tales-of-murder-and-dust')
-		+artist('Den våde vaffel', '#', 'vaade-vaffel')
+		+artist('Den våde vaffel', '#', 'den-vaade-vaffel')
 		+artist('Rupture Plains', '#', 'rupture-plains')
 		+artist('This is you', '#', 'this-is-you')

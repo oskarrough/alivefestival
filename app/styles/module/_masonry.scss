@@ -28,43 +28,48 @@ $large-from: 1650px;
 }
 
 .grid-sizer {
-	//@include calcWidth($small-columns, $small-gutter);
-	
-	//width: columns(1,4);
-	//margin-right: gutter();
 	width: columns(1,2);
-
-	//@media (min-width: em($small-from)) {
-		//@include nth-omega(4n);
-	//}
 	@media (min-width: em($medium-from)) {
-		//@include calcWidth($medium-columns, $medium-gutter);
 		width: columns(1,4);
 	}
 	@media (min-width: em($large-from)) {
-		//@include calcWidth($large-columns, $large-gutter);
 		width: columns(1,5) - 0.5;
 	}
 }
+
+.Artist.raveonettes,
+.Artist.veto,
+.Artist.ebo-taylor {
+	width: columns(2,2);
+	@media (min-width: em($medium-from)) {
+		width: columns(2,4);
+	}
+	@media (min-width: em($large-from)) {
+		width: columns(3,5) - 0.5;
+	}
+}
+.Artist.den-sorte-skole {
+	@media (min-width: em($medium-from)) {
+		width: columns(2,4);
+	}
+	@media (min-width: em($large-from)) {
+		width: columns(2,5) - 0.5;
+	}
+}
+.Artist.workers-in-songs {
+	@media (min-width: em($medium-from)) {
+		width: columns(2,4);
+	}
+	@media (min-width: em($large-from)) {
+		width: columns(2,5) - 0.5;
+	}
+}
+
+
+
 .gutter-sizer {
 	width: gutter();
 }
-/*
-.grid-sizer--double {
-	@media (min-width: em($small-from)) {
-		@include calcWidth($small-columns, $small-gutter);
-	}
-	@media (min-width: em($medium-from)) {
-		@include calcWidth($medium-columns, $medium-gutter);
-	}
-	@media (min-width: em($large-from)) {
-		@include calcWidth($large-columns, $large-gutter);
-	}
-}
-*/
-
-
-
 
 .js-masonry {
 	@include pie-clearfix;
