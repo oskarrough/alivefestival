@@ -33,8 +33,6 @@
 	@include animation(fadeIn 1200ms linear);
 	@include animation-fill-mode(both);
 }
-
-
 .Layer1 { @include animation-delay(1400ms); } // volunteer
 .Layer2 { @include animation-delay(1800ms); } // newsletter
 .Layer3 { @include animation-delay(1000ms); } // program
@@ -65,3 +63,13 @@ Enables you to run effects iterative through an array of elements. Takes three a
 // 	}
 // }
 // @include iterative-delay('.Artist', 16, 0.20s);
+
+
+.page-Billetter .l-Main {
+	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
+	@include transition(all 1s);
+	//@include translateY(100%);
+	.loaded & {
+		@include translateY(0);
+	}
+}

@@ -17,16 +17,18 @@
 	position: absolute;
 	top: auto;
 	left: 0;
-	display: none;
+	visibility: hidden;
 	z-index: 20;
 	border-radius: 0.5em;
 	background: lighten($green, 10%);
 	width: 8em;
 	text-align: center;
+	opacity: 0;
 }
 //li:hover > .Dropdown,
 .js-hover > .Dropdown {
-	display: block;
+	visibility: visible;
+	opacity: 1;
 }
 .js-hover > a {
 	color: #f1f1f1;
@@ -40,12 +42,15 @@
 	top: initial;
 	left: 50%;
 	margin-left: -4em;
-	bottom: 4.5em;
-	.page-Index & {
-		//left: 21%;
-		bottom: 6.5em;
+	bottom: 1.3em;
+
+	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
+	@include transition(all 300ms);
+	@include translateY(100%);
+	.js-hover > & {
+		@include translateY(0);
 	}
-	
+
 	li,
 	a {
 		display: block;
@@ -53,27 +58,23 @@
 }
 
 
-
-
-@include keyframes(fadeInLeft) {
-	0% {
-		opacity: 0;
-		@include transform(translateY(5px) rotate(-5deg));
-	}
-	100% {
-		opacity: 1;
-		@include transform(translateY(0) rotate(-15deg));
-	}
-}
-@include keyframes(fadeInRight) {
-	0% {
-		opacity: 0;
-		@include transform(translateY(5px) rotate(5deg));
-	}
-	100% {
-		opacity: 1;
-		@include transform(translateY(0) rotate(15deg));
-	}
-}
-
-
+// @include keyframes(fadeInLeft) {
+// 	0% {
+// 		opacity: 0;
+// 		@include transform(translateY(5px) rotate(-5deg));
+// 	}
+// 	100% {
+// 		opacity: 1;
+// 		@include transform(translateY(0) rotate(-15deg));
+// 	}
+// }
+// @include keyframes(fadeInRight) {
+// 	0% {
+// 		opacity: 0;
+// 		@include transform(translateY(5px) rotate(5deg));
+// 	}
+// 	100% {
+// 		opacity: 1;
+// 		@include transform(translateY(0) rotate(15deg));
+// 	}
+// }

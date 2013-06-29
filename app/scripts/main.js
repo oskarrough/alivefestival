@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+	var $nav = $('.Navigation--primary');
+	$('.page-Index').find($nav).removeClass('is-hidden');
+
+	var $main = $('.l-Main');
+	if ($main.find('img').length > 0) {
+		$main.imagesLoaded( function() {
+		  $('html').addClass('loaded');
+		});
+	} else {
+		$('html').addClass('loaded');
+	}
+
+
 	// $('.Navigation--primary a').click(function(event){
 	// 	event.preventDefault();
 	// 	var url = $(this).attr('href');

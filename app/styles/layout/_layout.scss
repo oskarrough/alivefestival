@@ -9,7 +9,7 @@ body {
 	background-color: $dark;
 	background-repeat: no-repeat;
 	background-image: url(../images/2013/bg-poster.jpg);
-	background-position: bottom center;
+	background-position: 50% 100%;
 	//@include background-size(cover);
 	background-attachment: fixed;
 }
@@ -60,4 +60,8 @@ body {
 	max-width: em(650);
 	margin-left: auto;
 	margin-right: auto;
+
+	> h2:last-child {
+		margin-bottom: 0;
+	}
 }

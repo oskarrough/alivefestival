@@ -9,6 +9,14 @@
 	.l-Main {
 		margin-bottom: 0;
 	}
+	
+	// animate bg on load
+	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
+	@include transition(background 1s);
+	background-position: 50% 90%;
+	.loaded & {
+		background-position: 50% 100%;
+	}
 }
 .Newsletter {
 	padding: 13px 14px 50px;
@@ -29,9 +37,9 @@
 [class^='Layer'] {
 	position: absolute;
 }
-.Layer1 { margin-top: 3em; margin-left: 40em;}
+.Layer1 { margin-top: 2em; margin-left: 41em;}
 .Layer2 { margin-top: 27em; margin-left: 60em;}
-.Layer3 { margin-top: 5em; margin-left: 15em;}
+.Layer3 { margin-top: 6em; margin-left: 4em;}
 .Layer-social { top: initial !important; bottom: 2em !important; margin-left: 17em;}
 .Layer-logo {
 	max-width: 500px;
@@ -42,6 +50,7 @@
 	z-index: 5;
 	img { max-width: none;}
 }
+.Layer6 { margin-top: 10em; margin-left: 60em;}
 .Layer-social .Box { padding-top: 1em; padding-bottom: 1em;}
 .page-Index .l-Header .Logo { display: none;}
 .page-Index .Logo { position: static;}
