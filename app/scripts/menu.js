@@ -53,19 +53,19 @@ $('.Navigation--primary').find('a').each(function() {
 		$(this).animate({
 			top: pos.y * -1,
 			left: pos.x * -1
-		}, 50, 'swing').animate({
+		}, 75, 'swing').animate({
 			top: pos.y * 0.75,
 			left: pos.x * 0.75
-		}, 75, 'swing').animate({
+		}, 100, 'swing').animate({
 			top: pos.y * -0.5,
 			left: pos.x * -0.5
-		}, 50, 'swing').animate({
+		}, 75, 'swing').animate({
 			top: pos.y * 0.25,
 			left: pos.x * 0.25
-		}, 100, 'swing').animate({
+		}, 125, 'swing').animate({
 			top: 0,
 			left: 0
-		}, 100, 'swing', function() {
+		}, 125, 'swing', function() {
 			$(this).css('z-index', 0);
 		});
 

@@ -9,8 +9,8 @@ body {
 	background-color: $dark;
 	background-repeat: no-repeat;
 	background-position: 50% 100%;
-	//background-image: url(../images/2013/bg-poster.jpg);
-	//@include background-size(cover);
+	background-image: url(../images/2013/bg-poster.jpg);
+	@include background-size(cover);
 	background-attachment: fixed;
 }
 body {
@@ -26,24 +26,22 @@ body {
 
 .l-Main {
 	@include pie-clearfix;
-	
 	position: relative;
 	z-index: 1;
+	max-width: 40em;
+	margin: 2em 0.5em 4em;
 
-	max-width: em(700);
-	margin: 0 0.5em 4em;
 	@media (min-width: em(740)) {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 75%;
 	}
 	p {
-		max-width: em(600);
-		margin-left: auto;
-		margin-right: auto;
+		letter-spacing: 1px;
+		//font-family: "acta-display-1","acta-display-2";
 	}
 	> img {
-		margin-bottom: 1em;
+		margin-bottom: em($space);
 	}
 }
 .Box {
@@ -54,8 +52,7 @@ body {
 	//box-shadow: 5px 5px 0 0 rgba(0,0,0,0.5);
 	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.3);
 	color: #222;
-	text-align: center;
-	max-width: em(650);
+	max-width: 40em;
 	margin-left: auto;
 	margin-right: auto;
 
