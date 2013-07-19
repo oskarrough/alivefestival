@@ -41,11 +41,14 @@ pre,
 fieldset {
     margin: 0 0 rem($space);
 }
+h3,
+h4 {
+	font-size: rem(20);
+	margin-bottom: 0.25em;
+}
 h4 {
 	font-size: rem(20);
 	padding-top: 1.5em;
-	margin-bottom: 0.25em;
-	text-transform: uppercase;
 }
 fieldset {
     border: 0;

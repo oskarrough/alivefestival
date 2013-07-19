@@ -30,8 +30,8 @@ body {
 	z-index: 1;
 	margin: 2em 0.5em 4em;
 	max-width: 50em;
-	p {
-		max-width: 40em;
+	h2,h3,h4,p {
+		max-width: 600px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -63,7 +63,7 @@ body {
 	> h2:last-child {
 		margin-bottom: 0;
 	}
-	
+
 }
 .Box--center {
 	text-align: center;

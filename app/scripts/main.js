@@ -7,7 +7,7 @@ $(document).ready(function() {
 	if ($main.find('img').length > 0) {
 		$main.imagesLoaded( function() {
 		  $('html').addClass('loaded');
-		  console.log('images loaded');
+		  //console.log('images loaded');
 		});
 	} else {
 		$('html').addClass('loaded');

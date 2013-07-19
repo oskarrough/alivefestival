@@ -1,21 +1,21 @@
 $(function() {
 
 	// Element that marks a section
-	$waypoint = $('.History');
+	var $waypoint = $('.History');
 	
 	// Wrapper for the generated menu
-	$waypointNav = $('.Navigation--history');
+	var $waypointNav = $('.Navigation--history');
 
 
 	//
 	// Generate a menu from the content on the page
 	//
 	$waypointNav.html('');
-	$waypoint.each(function(element){
-		myID = $(this).attr('id');
+	$waypoint.each( function() {
+		var myID = this.id;
 
 		if (myID) {
-			$waypointNav.append('<li><a href="#'+myID+'"> '+myID+' </a></li>');
+			$waypointNav.append('<li><a href="#' + myID + '">' + myID + '</a></li>');
 		}
 	});
 
@@ -25,11 +25,10 @@ $(function() {
 	//
 	$waypoint
 	.waypoint(function(direction) {
-		var $links = $waypointNav.find('a[href="#' + this.id + '"]');
+		var $links = $('a[href="#' + this.id + '"]');
 		$links.toggleClass('is-active', direction === 'down');
-
 	}, {
-		offset: '90%'
+		offset: '100%'
 	})
 	.waypoint(function(direction) {
 		var $links = $('a[href="#' + this.id + '"]');
@@ -39,8 +38,9 @@ $(function() {
 			return -$(this).height();
 		}
 	});
-  	// make sure waypoints are correct
-  	$.waypoints('refresh');
+
+	// make sure waypoints are correct
+	//$.waypoints('refresh');
 
 
 	//
@@ -55,5 +55,4 @@ $(function() {
 		}, 300, function() {
 		});
 	}
-
 });

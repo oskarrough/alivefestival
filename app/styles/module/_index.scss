@@ -10,6 +10,9 @@
 	.l-Main {
 		margin-bottom: 0;
 	}
+	.Box {
+		padding-bottom: 0;
+	}
 	
 	// animate bg on load
 	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
