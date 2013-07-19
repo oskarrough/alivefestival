@@ -1,15 +1,14 @@
-//
+	//
 // History
 //
 
 .page-History {
 	background-image: none;
 	padding: 0;
+
 	.l-Header {
-		padding-top: 0;
-	}
-	.History:first-child {
-		padding-top: 11em;
+		position: relative;
+		z-index: 5;
 	}
 	.l-Main {
 		max-width: none;
@@ -21,6 +20,11 @@
 	padding: 2em 0;
 	> .Box {
 		margin-bottom: 0;
+	}
+	// make the bg-image all way to the top
+	&:first-child {
+		margin-top: em(-200);
+		padding-top: em(200);
 	}
 }
 .History-2009 {

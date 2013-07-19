@@ -13,19 +13,6 @@ $(document).ready(function() {
 		$('html').addClass('loaded');
 	}
 
-	// Open history dropdown on the history page
-	$('.page-History').find('.LinkHistory').addClass('js-hover');
-
-	// $('.Navigation--primary a').click(function(event){
-	// 	event.preventDefault();
-	// 	var url = $(this).attr('href');
-	// 	console.log(url);
-
-	// 	$('.l-Main').html('loading…').load(url, function(){
-	// 		console.log('loaded?');
-	// 	});
-	// });
-
 	$zcanvas = $('#zlayer');
 	if ($zcanvas.length > 0) {
 		$zcanvas.zlayer([
@@ -65,16 +52,5 @@ $(document).ready(function() {
 		event.preventDefault();
 		$(this).parent().toggleClass('js-hover');
 	});
-
-	// var primaryLink = $('.Navigation--primary').children('li').hover( function() {
-	// 	$('body').addClass('speedy');
-	// }, function() {
-	// 	$('body').removeClass('speedy');
-	// });
-
-
-	// Custom selects
-	// -------------------------------
-	//$('select').customSelect();
 
 });

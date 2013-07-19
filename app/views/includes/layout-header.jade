@@ -14,10 +14,12 @@ block header
 		title #{active} - Alive Festival
 	
 	meta(name='description', content='#{description}')
-	
-	link(rel='stylesheet', href='scripts/vendor/royalslider/royalslider.css')
-	link(rel='stylesheet', href='scripts/vendor/royalslider/skins/default/rs-default.css')
-	link(rel='stylesheet', href='styles/main.css')
+
+	<!-- build:css({.tmp,app}) styles/main.css -->
+	<link rel="stylesheet" href="/scripts/vendor/royalslider/royalslider.css">
+	<link rel="stylesheet" href="/scripts/vendor/royalslider/skins/default/rs-default.css">
+	<link rel="stylesheet" href="/styles/main.css">
+	<!-- endbuild -->
 
 	script(src='scripts/vendor/modernizr.custom.min.js')
 	//-| <script src="//use.typekit.net/wpt0izv.js"></script>

@@ -1,28 +1,12 @@
 $(function() {
 
 	// Element that marks a section
-	$waypoint = $('.History');
-	
+	$waypoint = $('.page-Practical .l-Main h4');
+
 	// Wrapper for the generated menu
-	$waypointNav = $('.Navigation--history');
+	$waypointNav = $('.Navigation--practical');
 
-
-	//
-	// Generate a menu from the content on the page
-	//
-	$waypointNav.html('');
-	$waypoint.each(function(element){
-		myID = $(this).attr('id');
-
-		if (myID) {
-			$waypointNav.append('<li><a href="#'+myID+'"> '+myID+' </a></li>');
-		}
-	});
-
-
-	//
 	// Nav highlighting
-	//
 	$waypoint
 	.waypoint(function(direction) {
 		var $links = $waypointNav.find('a[href="#' + this.id + '"]');
@@ -43,9 +27,17 @@ $(function() {
   	$.waypoints('refresh');
 
 
-	//
+	// Generate a menu from the content on the page
+	$waypointNav.html('');
+	$waypoint.each(function(element){
+		myID = $(this).attr('id');
+
+		if (myID) {
+			$waypointNav.append('<li><a href="#'+myID+'"> '+myID+' </a></li>');
+		}
+	});
+
 	// Smooth scrolling instead of jumping
-	//
 	$waypointNav.find('a').on('click', jump);
 	function jump(event) {
 		var $active = $(event.currentTarget);

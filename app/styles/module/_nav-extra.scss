@@ -1,0 +1,38 @@
+//
+// Navigation extras
+//
+
+.Navigation--practical,
+.Navigation--history {
+	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
+	@include transition(all 600ms ease-out);
+	@include transform(translateX(-100%) scale(0.25) rotate(-20deg));
+	position: fixed;
+	top: 6.5em;
+	left: 0;
+	padding-top: em(7);
+	padding-bottom: em(7);
+	padding-left: 0.5em;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	@media (min-width: 1100px) {
+		@include transform(translateX(-0.25em) scale(1) rotate(2deg));
+	}
+	a {	
+		font-size: rem(16);
+		letter-spacing: 1px;
+	}
+}
+.Navigation--history {
+	li {
+		display: block;
+	}
+	a {
+		font-size: rem(22);
+	}
+}
+.page-Practical .Navigation--practical,
+.page-History .Navigation--history {
+	opacity: 1;
+	visibility: visible;
+}

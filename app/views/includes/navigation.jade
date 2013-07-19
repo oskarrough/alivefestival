@@ -10,9 +10,12 @@ ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
 	+menu-item('billetter.html', 'Billetter', 'link-Tickets')
 	+menu-item('frivillig.html', 'Frivillig', 'link-Volunteer')
 	//+menu-item('gallery.html', 'Galleri', 'link-Gallery')
-	+menu-item('praktisk.html', 'Praktisk', 'link-Practical')
+	//+menu-item('praktisk.html', 'Praktisk', 'link-Practical')
+	li.link-Practical
+		a(href='praktisk.html', class=active == 'Praktisk' ? 'is-active' : '') Praktisk
+		ul.Navigation.Navigation--practical.Dropdown
 	+menu-item('om-alive.html', 'Om Alive', 'link-About')
-	//li.LinkHistory
+	li.LinkHistory
 		a(href='historie.html', class=active == 'Historie' ? 'is-active' : '') Historie
 		ul.Navigation.Navigation--history.Dropdown
 		//-	ul.Navigation.Navigation--history.Dropdown

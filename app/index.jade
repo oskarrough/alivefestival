@@ -43,8 +43,21 @@ block content-header
 				a(href='info.html').Button &rarr; Mere om Alive…
 
 block content
-	.Box.fancy
-		h1.PageTitle
-			span Forsiden
+	.Box
+		mixin slide(title, url, img, desc, myClass)
+			.rsContent
+				a(href=url)
+					img.rsImg(src='images/2013/artists/#{img}.jpg', alt=title)
+					//-.rsTmb
+						h4 #{title}
+					.rsABlock(data-move-offset='5', data-delay='0', data-move-effect='left')
+						h3 #{title}
+						p #{desc}
 
-		p yo
+		.royalSlider.rsDefault.Slideshow
+			+slide('The Raveonettes', '#', 'raveonettes', 'rock rock rock')
+			+slide('Veto', '#', 'veto')
+			+slide('Ebo Taylor', '#', 'ebo-taylor')
+			+slide('Fallulah', '#', 'fallulah2')
+			+slide('Den Sorte Skole', '#', 'den-sorte-skole')
+			+slide('Christian Hjelm', '#', 'christian-hjelm')

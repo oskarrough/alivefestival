@@ -6,7 +6,8 @@
 	@include pie-clearfix;
 	font-family: $font-header;
 	text-align: center;	
-	
+
+	font-size: rem(20);
 	@media (min-width: em(700)) {
 		font-size: rem(26);
 	}
@@ -16,6 +17,8 @@
 		@include transition(transform 1000ms);
 	}
 	a {
+		@include transition(background 200ms);
+		background-size: 1%;
 		display: inline-block;
 		padding: 0.25em 0.5em;
 		color: white;
@@ -35,18 +38,4 @@
 }
 .page-Index .Navigation--primary > li {
 	//@include animation-fill-mode(both);
-}
-
-.Navigation--history {
-	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
-	@include transition(all 300ms);
-	@include translateY(150%);
-	.js-hover > & {
-		@include translateY(0);
-	}
-	
-	li,
-	a {
-		display: block;
-	}
 }

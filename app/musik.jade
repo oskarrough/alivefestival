@@ -9,16 +9,16 @@ block content
 	h1.PageTitle
 		span Musik 2013
 
-	mixin artist(title, url, img, desc, myClass)
-		li.Artist(class=img): a(href=url)
-			h2.Artist-title #{title}
-			figure.Artist-image
-				img(src='images/2013/artists/#{img}.jpg', alt='#{title')
-
 	ul#js-masonry.Artists
 		.gutter-sizer
 		.grid-sizer
 		
+		mixin artist(title, url, img, desc, myClass)
+			li.Artist(class=img): a(href=url)
+				h2.Artist-title #{title}
+				figure.Artist-image
+					img(src='images/2013/artists/#{img}.jpg', alt='#{title')
+
 		+artist('The Raveonettes', '#', 'raveonettes')
 		+artist('Veto', '#', 'veto')
 		+artist('Ebo Taylor', '#', 'ebo-taylor')

@@ -12,16 +12,132 @@
 // Enable resizing in the royalslider script
 .royalSlider {
 	width: 100%;
+	height: auto;
+	margin-bottom: em($space);
 }
 
+
 // Stretched to fullscreen
-.royalSlider--fullscreen {
+// .royalSlider--fullscreen {
+// 	position: absolute;
+// 	left: 0;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	height: auto;
+// 	width: auto;
+// 	overflow: hidden;
+// }
+
+//
+// Slideshow with vertical tabs to the left/right
+//
+/*
+.Slideshow--tabs {
+	.rsOverflow {
+		float: right;
+	}
+	.Article--visual {
+		padding-bottom: (455/975) * 100%;
+	}
+}
+.rsThumbsVer {
 	position: absolute;
-	left: 0;
 	top: 0;
-	right: 0;
-	bottom: 0;
-	height: auto;
-	width: auto;
+	left: 0;
+	height: 100%;
+	width: columns(1,4) + gutter(4);
 	overflow: hidden;
+
+	.rsThumb {
+		
+		width: 100%;
+		padding: em(10,25) em(10,25) em(6,25);
+		color: #707070;
+		border-bottom: 1px solid #707070;
+		line-height: 1.1;
+		
+		&:hover,
+		&.rsNavSelected {
+			@include transition(background-color 200ms);
+			background-color: #000;
+			color: #fff;
+			border-color: #000;
+		}
+
+		@media (min-width: 60em) { font-size: rem(18); }
+		@media (min-width: 70em) { font-size: rem(22); }
+		@media (min-width: 80em) { font-size: rem(25); }
+	}
+}
+*/
+
+.rsABlock {
+	background-color: $green;
+	background-color: rgba($green, 0.5);
+	color: #fff;
+	font-family: $font-medium;
+	letter-spacing: 1px;
+	top: initial;
+	bottom: 0;
+	max-width: 75%;
+	padding: em(5) em(10);
+}
+.Slideshow {
+	.rsABlock {
+		font-size: rem(30);
+	}
+}
+.Slideshow--tabs {
+	background-color: #222;
+	
+	.rsTmb {
+		padding: 20px;
+		h4 {
+			margin-bottom: 0;
+			padding-top: 0;
+		}
+	}
+	.rsThumbs {
+		width: 220px;
+		padding: 0;
+	}
+	.rsThumb {
+		width: 220px;
+		height: 80px;
+		border-bottom: 1px solid #2E2E2E;
+		color: #dadada;
+		&:hover {
+			background: #000;
+			color: #fff;
+		}
+		&.rsNavSelected {
+			background-color: $green;
+			border-bottom:-color #02874A;
+			color: #fff;
+		}
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+	.Slideshow--tabs {
+		.rsTmb {
+			padding: 6px 8px;
+		}
+		.rsTmb h4 {}
+		.rsThumbs.rsThumbsVer {
+			width: 100px;
+			padding: 0;
+		}
+		.rsThumbs .rsThumb {
+			width: 100px;
+			height: 47px;
+		}
+		.rsTmb span {
+			display: none;
+		}
+	}
+	.Slideshow--tabs .rsOverflow,
+	.royalSlider.Slideshow--tabs {
+		height: 300px !important;
+	}
 }
