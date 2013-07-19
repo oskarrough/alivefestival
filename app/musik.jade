@@ -1,13 +1,13 @@
 block vars
-	- var active = 'Program'
-	- var bodyClass = ''
+	- var active = 'Musik'
+	- var bodyClass = 'page-Music'
 	- var description = ""
 
 extends views/includes/layout
 
 block content
 	h1.PageTitle
-		span Program 2013
+		span Musik 2013
 
 	mixin artist(title, url, img, desc, myClass)
 		li.Artist(class=img): a(href=url)

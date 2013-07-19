@@ -6,6 +6,7 @@
 	overflow: hidden;
 	height: 100%;
 	padding: 0;
+	
 	.l-Main {
 		margin-bottom: 0;
 	}
@@ -14,6 +15,7 @@
 	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
 	@include transition(background 1s);
 	background-position: 50% 90%;
+	
 	.loaded & {
 		background-position: 50% 100%;
 	}
@@ -52,7 +54,7 @@
 }
 .Layer6 { margin-top: 10em; margin-left: 60em;}
 .Layer-social .Box { padding-top: 1em; padding-bottom: 1em;}
-.page-Index .l-Header .Logo { display: none;}
+//.page-Index .l-Header .Logo { display: none;}
 .page-Index .Logo { position: static;}
 .Box--program,
 .Box--volunteer {

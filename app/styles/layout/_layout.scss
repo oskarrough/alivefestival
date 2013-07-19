@@ -8,8 +8,8 @@ html {
 body {
 	background-color: $dark;
 	background-repeat: no-repeat;
-	background-image: url(../images/2013/bg-poster.jpg);
 	background-position: 50% 100%;
+	//background-image: url(../images/2013/bg-poster.jpg);
 	//@include background-size(cover);
 	background-attachment: fixed;
 }
@@ -24,9 +24,6 @@ body {
 // 	cursor: url(../images/cursor.png) -20 -40, default;
 // }
 
-.l-Header {
-	padding-top: 8em;
-}
 .l-Main {
 	@include pie-clearfix;
 	

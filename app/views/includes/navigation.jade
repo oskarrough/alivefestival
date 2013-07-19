@@ -4,11 +4,14 @@ mixin menu-item(url, title, classnames)
 		a(href=url, class=active == title ? 'is-active' : '')= title
 
 ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
-	+menu-item('/', 'Index', 'LinkIndex')
-	+menu-item('program.html', 'Program', 'LinkProgram')
-	+menu-item('billetter.html', 'Billetter', 'LinkTickets')
-	+menu-item('info.html', 'Info', 'LinkInfo')
-	+menu-item('gallery.html', 'Galleri', 'LinkGallery')
+	//+menu-item('/', 'Forside', 'link-Index')
+	+menu-item('nyheder.html', 'Nyheder', 'link-News')
+	+menu-item('musik.html', 'Musik', 'link-Music')
+	+menu-item('billetter.html', 'Billetter', 'link-Tickets')
+	+menu-item('frivillig.html', 'Frivillig', 'link-Volunteer')
+	+menu-item('gallery.html', 'Galleri', 'link-Gallery')
+	+menu-item('praktisk.html', 'Praktisk', 'link-Practical')
+	+menu-item('om-alive.html', 'Om Alive', 'link-About')
 	li.LinkHistory
 		a(href='historie.html', class=active == 'Historie' ? 'is-active' : '') Historie
 		ul.Navigation.Navigation--history.Dropdown
@@ -18,32 +21,5 @@ ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
 			li: a(href='historie.html#2011', class=active == '2011' ? 'is-active' : '') 2011
 			li: a(href='historie.html#2010', class=active == '2010' ? 'is-active' : '') 2010
 			li: a(href='historie.html#2009', class=active == '2009' ? 'is-active' : '') 2009
-	//-+menu-item('kontakt.html', 'Kontakt', 'LinkContact')
-
-//-ul.Navigation
-	li.DropdownParent
-		a(href="#") <i class="icons-world-small"> Language</i>
-		ul.Navigation.Dropdown
-			li: a(href='/', class=language == 'da' ? 'is-active' : '') Danish
-			li: a(href='/en', class=language == 'en' ? 'is-active' : '') English
-			
-
-			Praktisk info
-			Galleri
-			Bandbeskrivelser (må gerne være nemt at hoppe rundt mellem dem) senere + spilleplan
-			Galleri
-			Spotify og evt. wimp-playlister + Youtube-playlister
-			Bliv frivillig
-			Front
-			Spilleplan
-			Musik/Program/lineup/kunstnere
-			camping
-			about alive
-			Billetter
-			Nyheder
-			Info
-			countdown
-			travel
-			http://northside.dk/faq/
-			presse
-			kontakt
+	
+	+menu-item('kontakt.html', 'Kontakt', 'link-Contact')

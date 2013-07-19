@@ -8,19 +8,16 @@
 	text-align: center;	
 	
 	@media (min-width: em(700)) {
-		font-size: 26px;
+		font-size: rem(26);
 	}
 
-	ul {
-		font-size: $base-font-size+2;
-	}
 	li {
 		display: inline-block;
 		@include transition(transform 1000ms);
 	}
 	a {
 		display: inline-block;
-		padding: 0.5em 1em;
+		padding: 0.25em 0.5em;
 		color: white;
 		text-decoration: none;
 		&:hover,
@@ -34,99 +31,13 @@
 			@include scale(1.15);
 		}
 	}
-	&.is-hidden {
-		.LinkProgram {
-			// top: 0.65em;
-			// left: 0.2em;
-			@include translate(-5em, -5em);
-		}
-		.LinkTickets {
-			// top: 0.65em;
-			// right: 0.2em;
-			@include translate(5em, -5em);
-		}
-		.LinkInfo {
-			// right: 0.25em;
-			// bottom: 0.5em;
-			@include translate(5em, 5em);
-		}
-		.LinkHistory {
-			// left: 0.25em;
-			// bottom: 0.5em;
-			@include translate(-5em, 5em);
-		}
-		.LinkGallery {
-			@include translateX(-5em);
-		}
-	}
+	&.is-hidden {}
 }
 .page-Index .Navigation--primary > li {
-	@include animation-fill-mode(both);
-}
-
-
-@media (min-width: em(700)) {
-	.Navigation--primary {
-		text-align: left;
-	}
-	li.LinkIndex {
-		display: none;
-	}
-	.LinkProgram {
-		top: 0.65em;
-		left: 0.2em;
-		.page-Index & {
-			@include animation(fadeInLeft 2s ease-in);
-		}
-	}
-	.LinkTickets {
-		top: 0.65em;
-		right: 0.2em;
-		.page-Index & {
-			@include animation(fadeInRight 2s ease-in);
-		}
-	}
-	.LinkInfo {
-		right: 0.25em;
-		bottom: 0.5em;
-		.page-Index & {
-			@include animation(fadeInLeft 2s ease-in);
-		}
-	}
-	.LinkHistory {
-		left: 0.25em;
-		bottom: 0.5em;
-		.page-Index & {
-			@include animation(fadeInRight 2s ease-in);
-		}
-	}
-	.Navigation--primary > li {
-		position: fixed;
-		z-index: 20;
-	}
-	.LinkGallery {}
-	.LinkProgram,
-	.LinkInfo { @include transform(rotate(-15deg)); }
-	.LinkHistory,
-	.LinkTickets { @include transform(rotate(15deg)); }
-	.LinkGallery {
-		@include rotate(-90deg);
-		top: 50%;
-		margin-top: -39px;
-		left: -0.2em;
-		text-align: center;	
-	}
+	//@include animation-fill-mode(both);
 }
 
 .Navigation--history {
-	top: initial;
-	left: 50%;
-	margin-left: -4em;
-	bottom: 1em;
-	@media (min-width: em(700)) {
-		bottom: 3em;
-	}
-
 	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
 	@include transition(all 300ms);
 	@include translateY(150%);
