@@ -6,40 +6,59 @@ block vars
 extends views/includes/layout
 
 block content
-	h1.PageTitle
-		span Musik 2013
+	ul.tabList#tabs(role="tablist")
+		li(role="presentation").
+			<a id="tab1" href="#panel1" onclick="showTab(1);return false;" role="tab" aria-controls="panel1" aria-selected="false">Musik</a></li>
+		li(role="presentation").
+			<a id="tab2" href="#panel2" onclick="showTab(2);return false;" role="tab" aria-controls="panel2" aria-selected="false">Program</a></li>
 
-	ul#js-masonry.Artists
-		.gutter-sizer
-		.grid-sizer
+	.tabPanels
+		#panel1(role="tabpanel", aria-labelledby="tab1")
+			h1.PageTitle
+				span Musik 2013
+
+			ul#js-masonry.Artists
+				.gutter-sizer
+				.grid-sizer
+				
+				mixin artist(title, url, img, desc, myClass)
+					li.Artist(class=img): a(href=url)
+						h2.Artist-title #{title}
+						figure.Artist-image
+							img(src='images/2013/artists/#{img}.jpg', alt='#{title')
+
+				+artist('The Raveonettes', '#', 'raveonettes')
+				+artist('Veto', '#', 'veto')
+				+artist('Ebo Taylor', '#', 'ebo-taylor')
+				+artist('Fallulah', '#', 'fallulah2')
+				+artist('Den Sorte Skole', '#', 'den-sorte-skole')
+				+artist('Christian Hjelm', '#', 'christian-hjelm')
+				+artist('Mø', '#', 'moe')
+				+artist('Dråpe', '#', 'draape')
+				+artist('Synd og skam', '#', 'synd-og-skam')
+				+artist('Baby in vain', '#', 'baby-in-vain')
+				+artist('The Late Great Fitzcarraldos', '#', 'lategreat')
+				+artist('Lars and the hands of light', '#', 'larsandthehandsoflight')
+				+artist('Folkeklubben', '#', 'folkeklubben')
+				+artist('Mont Oliver', '#', 'mont-oliver')
+				+artist('Schultz and Forever', '#', 'schultz-and-forever')
+				+artist('Bottled in England', '#', 'bottled-in-england')
+				+artist('Fitness Figures', '#', 'fitness-figures')
+				+artist('Santiago', '#', 'santiago')
+				+artist('Workers in Songs', '#', 'workers-in-songs')
+				+artist('Bestie Respond', '#', 'beastie-respond')
+				+artist('Tales of murder and dust', '#', 'tales-of-murder-and-dust')
+				+artist('Den våde vaffel', '#', 'den-vaade-vaffel')
+				+artist('Rupture Plains', '#', 'rupture-plains')
+				+artist('This is you', '#', 'this-is-you')
 		
-		mixin artist(title, url, img, desc, myClass)
-			li.Artist(class=img): a(href=url)
-				h2.Artist-title #{title}
-				figure.Artist-image
-					img(src='images/2013/artists/#{img}.jpg', alt='#{title')
+		#panel2(role="tabpanel", aria-labelledby="tab2")
+			h1.PageTitle
+				span Program 2013
 
-		+artist('The Raveonettes', '#', 'raveonettes')
-		+artist('Veto', '#', 'veto')
-		+artist('Ebo Taylor', '#', 'ebo-taylor')
-		+artist('Fallulah', '#', 'fallulah2')
-		+artist('Den Sorte Skole', '#', 'den-sorte-skole')
-		+artist('Christian Hjelm', '#', 'christian-hjelm')
-		+artist('Mø', '#', 'moe')
-		+artist('Dråpe', '#', 'draape')
-		+artist('Synd og skam', '#', 'synd-og-skam')
-		+artist('Baby in vain', '#', 'baby-in-vain')
-		+artist('The Late Great Fitzcarraldos', '#', 'lategreat')
-		+artist('Lars and the hands of light', '#', 'larsandthehandsoflight')
-		+artist('Folkeklubben', '#', 'folkeklubben')
-		+artist('Mont Oliver', '#', 'mont-oliver')
-		+artist('Schultz and Forever', '#', 'schultz-and-forever')
-		+artist('Bottled in England', '#', 'bottled-in-england')
-		+artist('Fitness Figures', '#', 'fitness-figures')
-		+artist('Santiago', '#', 'santiago')
-		+artist('Workers in Songs', '#', 'workers-in-songs')
-		+artist('Bestie Respond', '#', 'beastie-respond')
-		+artist('Tales of murder and dust', '#', 'tales-of-murder-and-dust')
-		+artist('Den våde vaffel', '#', 'den-vaade-vaffel')
-		+artist('Rupture Plains', '#', 'rupture-plains')
-		+artist('This is you', '#', 'this-is-you')
+
+
+		.html.
+			<script>
+			showTab(1);
+			</script>
