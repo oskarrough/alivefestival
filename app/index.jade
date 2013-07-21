@@ -5,13 +5,14 @@ block vars
 
 extends views/includes/layout
 
-block content-header
-	//-#zlayer
-		.Layer1
+block content-footer
+	#zlayer
+		.Layer1.Layer--volunteer
 			.Box.Box--volunteer
 				br
 				a(href='frivillig.html').Button &nbsp;&nbsp;&nbsp;&rarr; Bliv frivllig&nbsp;&nbsp;&nbsp;
-		.Layer2
+		
+		.Layer2.Layer--newsletter
 			.Box.Newsletter.
 				<h2>Nyhedsbrev</h2>
 				<div id="mc_embed_signup">
@@ -21,43 +22,41 @@ block content-header
 					<input type="submit" value="Tilmeld" name="subscribe" id="mc-embedded-subscribe" class="button">
 				</form>
 				</div>
-		.Layer3.Layer-program
+
+		.Layer3.Layer--program
 			.Box.Box--program
-				h2 Raveonettes kommer!
-				a(href='program.html').Button &rarr; Lineup 2013
-		.Layer4.Layer-social
+				//-h2 Raveonettes kommer!
+				//-a(href='program.html').Button &rarr; Lineup 2013
+				mixin slide(title, url, img, desc, myClass)
+					.rsContent
+						a(href=url)
+							img.rsImg(src='images/2013/artists/#{img}.jpg', alt=title)
+							//-.rsTmb
+								h4 #{title}
+							.rsABlock(data-move-offset='5', data-delay='0', data-move-effect='left')
+								h3 #{title}
+								p #{desc}
+
+				.royalSlider.rsDefault.Slideshow
+					+slide('The Raveonettes', 'program.html', 'raveonettes', 'rock rock rock')
+					+slide('Veto', 'program.html', 'veto', 'veto lol')
+					+slide('Ebo Taylor', 'program.html', 'ebo-taylor', 'Ghanesisk afrofunk legende')
+					+slide('Fallulah', 'program.html', 'fallulah2', 'Pop')
+					+slide('Den Sorte Skole', 'program.html', 'den-sorte-skole', 'ok syge djs')
+					+slide('Christian Hjelm', 'program.html', 'christian-hjelm', 'flot billede, flot mand')
+
+		.Layer4.Layer--social
 			.Box
-				p: a(href='http://facebook.com/alivefestival', target='_blank') Alive Festival på Facebook
+				a(href="http://facebook.com/alivefestival", target="_blank")
+					img(src="images/handycons/facebook_32.png", alt="")
 				| <div class="fb-like" data-href="http://facebook.com/alivefestival" data-send="true" data-width="400" data-show-faces="true"></div>
-		.Layer5.Layer-logo
-			h1.Logo
-				a(href="/")
-					img(src='images/alivefestival.png', alt='')
-		.Layer6.Layer-tickets
-			.Box
+
+		.Layer5.Layer--tickets
+			.Box.Box--tickets
 				h2: a(href="billetter.html").Button Billetter!
-					
-		//-.Layer6
-			.Box.Box--program
-				h2 Kom til Thy! Porse Guld på fad.
-				a(href='info.html').Button &rarr; Mere om Alive…
+
 
 block content
-	.Box
-		mixin slide(title, url, img, desc, myClass)
-			.rsContent
-				a(href=url)
-					img.rsImg(src='images/2013/artists/#{img}.jpg', alt=title)
-					//-.rsTmb
-						h4 #{title}
-					.rsABlock(data-move-offset='5', data-delay='0', data-move-effect='left')
-						h3 #{title}
-						p #{desc}
+	//-.Box
+		p yo
 
-		.royalSlider.rsDefault.Slideshow
-			+slide('The Raveonettes', '#', 'raveonettes', 'rock rock rock')
-			+slide('Veto', '#', 'veto', 'veto lol')
-			+slide('Ebo Taylor', '#', 'ebo-taylor', 'Ghanesisk afrofunk legende')
-			+slide('Fallulah', '#', 'fallulah2', 'Pop')
-			+slide('Den Sorte Skole', '#', 'den-sorte-skole', 'ok syge djs')
-			+slide('Christian Hjelm', '#', 'christian-hjelm', 'flot billede, flot mand')

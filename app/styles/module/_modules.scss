@@ -11,9 +11,19 @@
 
 
 //
-// Social
+// Newsletter
 //
-div.fb_iframe_widget {
+#mc_embed_signup {
+	overflow: auto;
+	padding-bottom: 1em;
+}
+.Newsletter {
+	padding: 13px 14px 50px;
+	h2 { margin-bottom: em(5); }
+	label { display: none; }
+	input { display: inline-block; float: left; font-size: (16/18)*1rem;}
+	.email { width: 140px;}
+	.button { padding: em(10) em(15); margin: -2px 0 0 -2px; }
 }
 
 
@@ -24,11 +34,11 @@ div.fb_iframe_widget {
 	font-size: 40px;
 	min-height: 1.5em;
 	line-height: 1;
-  	text-align: center;
-  	padding-top: em(10,40);
-  	background: transparent url(../images/pensel1.png) no-repeat center center;
-  	background-size: cover;
-  	color: #222;
+	text-align: center;
+	padding-top: em(10,40);
+	background: transparent url(../images/pensel1.png) no-repeat center center;
+	background-size: cover;
+	color: #222;
 
 	// span {
 	// 	display: inline-block;
