@@ -6,14 +6,14 @@ $(document).ready(function() {
 	var $main = $('.l-Main');
 	if ($main.find('img').length > 0) {
 		$main.imagesLoaded( function() {
-		  $('html').addClass('loaded');
-		  //console.log('images loaded');
+			$('html').addClass('loaded');
+			//console.log('images loaded');
 		});
 	} else {
 		$('html').addClass('loaded');
 	}
 
-	$zcanvas = $('#zlayer');
+	var $zcanvas = $('#zlayer');
 	if ($zcanvas.length > 0) {
 		$zcanvas.zlayer([
 			{
@@ -37,7 +37,7 @@ $(document).ready(function() {
 				force: 'push'
 			},
 			{
-				layer: '.Layer-logo',
+				layer: '.Layer5',
 				mass: 60
 			}
 		], {

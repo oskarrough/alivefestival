@@ -46,7 +46,6 @@ $(function() {
 	//
 	// Smooth scrolling instead of jumping
 	//
-	$waypointNav.find('a').on('click', jump);
 	function jump(event) {
 		var $active = $(event.currentTarget);
 		var offset = $( $active.attr('href') ).offset().top;
@@ -55,4 +54,5 @@ $(function() {
 		}, 300, function() {
 		});
 	}
+	$waypointNav.find('a').on('click', jump);
 });

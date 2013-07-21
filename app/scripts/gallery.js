@@ -3,7 +3,7 @@ function scrollToTop(speed) {
 
 	$('html, body').animate({
 		scrollTop: 0
-	}, 'slow', function(){
+	}, 600, function(){
 		$('.js-scrollToTop').text('Rewind');
 	});
 

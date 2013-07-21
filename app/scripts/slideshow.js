@@ -51,12 +51,11 @@ $('.Slideshow--tabs').royalSlider({
     loop: false,
     loopRewind: true,
     numImagesToPreload: 3,
-    autoScaleSlider: true, 
-    autoScaleSliderWidth: 960,     
+    autoScaleSlider: true,
+    autoScaleSliderWidth: 960,
     autoScaleSliderHeight: 450,
 
     /* size of all images http://help.dimsemenov.com/kb/royalslider-jquery-plugin-faq/adding-width-and-height-properties-to-images */
     //imgWidth: 640,
     //imgHeight: 360
-
-  });
+});

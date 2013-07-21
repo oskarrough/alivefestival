@@ -2,22 +2,6 @@
 // Dynamic grid with Masonry
 //
 
-$(function () {
-	
-	var $main = $('.l-Main');
-	if ($main.find('img').length > 0) {
-		$main.imagesLoaded( function() {
-		  $('html').addClass('loaded');
-		  console.log('images loaded');
-		  goGrid();
-		});
-	} else {
-		$('html').addClass('loaded');
-	}
-
-
-});
-
 function goGrid() {
 	var $container = $('#js-masonry');
 	if ($container.length > 0) {
@@ -31,3 +15,19 @@ function goGrid() {
 		});
 	}
 }
+
+$(function () {
+
+	var $main = $('.l-Main');
+	if ($main.find('img').length > 0) {
+		$main.imagesLoaded( function() {
+			$('html').addClass('loaded');
+			console.log('images loaded');
+			goGrid();
+		});
+	} else {
+		$('html').addClass('loaded');
+	}
+
+
+});
