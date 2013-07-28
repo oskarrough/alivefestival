@@ -38,26 +38,11 @@
 	padding-top: em(10,40);
 	background: transparent url(../images/pensel1.png) no-repeat center center;
 	background-size: cover;
-	color: #222;
 
-	// span {
-	// 	display: inline-block;
-	// 	position: relative;  
-	// }
-	// span:before,
-	// span:after {
-	// 	content: "";
-	// 	position: absolute;
-	// 	border-top: 4px solid darken(rgb(240, 238, 234),10);
-	// 	top: 0.4em;
-	// 	width: 600px;
-	// }
-	// span:before {
-	// 	right: 100%;
-	// 	margin-right: 15px;
-	// }
-	// span:after {
-	// 	left: 100%;
-	// 	margin-left: 15px;
-	// }
+	.TabsNav & {
+		font-size: rem(20);
+		padding-left: 0.25em;
+		padding-right: 0.25em;
+		margin-bottom: 0;
+	}
 }

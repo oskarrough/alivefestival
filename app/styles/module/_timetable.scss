@@ -1,0 +1,21 @@
+//
+// Timetable
+//
+
+.Timetable {
+	@include pie-clearfix;
+}
+.Timetable-day {
+	float: left;
+	width: 50%;
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+.Timetable-day--friday {
+	border-right: 1px solid;
+	padding-right: gutter();
+}
+.Timetable-day--saturday {
+	padding-left: gutter();
+}

@@ -24,6 +24,7 @@
 // Base styles
 // ------------------------------------
 @import "../bower_components/normalize.scss/_normalize.scss";
+@import "module/_magnificPopup.scss";
 @import "base/_fonts.scss";
 @import "base/_base.scss";
 @import "base/_forms.scss";
@@ -56,3 +57,4 @@
 @import "module/_history.scss";
 @import "module/_animation.scss";
 @import "module/_tabs.scss";
+@import "module/_timetable.scss";

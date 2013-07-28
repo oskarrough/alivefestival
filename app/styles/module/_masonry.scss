@@ -6,38 +6,31 @@
 
 // Small version
 $small-columns: 2;
-$small-gutter: 2%;
 $small-from: 400px;
+
+// Small/Medium version
+$sm-columns: 3;
+$sm-from: 600px;
 
 // Medium version
 $medium-columns: 4;
-$medium-gutter: 2%;
-$medium-from: 1200px;
+$medium-from: 830px;
+
+// Medium/Large version
+$ml-columns: 5;
+$ml-from: 1200px;
 
 // Large version
 $large-columns: 6;
-$large-gutter: 2%;
-$large-from: 1650px;
-
-
-
+$large-from: 1500px;
 
 // Mixin to calculate the width
 @mixin calcWidth($columns, $gutter: $gutter) {
 	width: (100% - ($gutter * ($columns - 1))) / $columns;
 }
 
-.grid-sizer {
-	width: columns(1,2);
-	@media (min-width: em($medium-from)) {
-		width: columns(1,4);
-	}
-	@media (min-width: em($large-from)) {
-		width: columns(1,5) - 0.5;
-	}
-}
 
-.Artist.raveonettes,
+/*.Artist.raveonettes,
 .Artist.veto,
 .Artist.ebo-taylor {
 	width: columns(2,2);
@@ -63,25 +56,54 @@ $large-from: 1650px;
 	@media (min-width: em($large-from)) {
 		width: columns(2,5) - 0.5;
 	}
+}*/
+
+
+.grid-sizer,
+.Masonry > .Artist {
+	@media (min-width: em($small-from)) {
+		width: columns(1,$small-columns);
+	}
+	@media (min-width: em($sm-from)) {
+		width: columns(1,$sm-columns);
+	}
+	@media (min-width: em($medium-from)) {
+		width: columns(1,$medium-columns);
+	}
+	@media (min-width: em($ml-from)) {
+		width: columns(1,$ml-columns);
+	}
+	@media (min-width: em($large-from)) {
+		width: columns(1,$large-columns) - 0.5;
+	}
 }
-
-
-
 .gutter-sizer {
-	width: gutter();
+	@media (min-width: em($small-from)) {
+		width: gutter($small-columns);
+	}
+	@media (min-width: em($sm-from)) {
+		width: gutter($sm-columns);
+	}
+	@media (min-width: em($medium-from)) {
+		width: gutter($medium-columns);
+	}
+	@media (min-width: em($ml-from)) {
+		width: gutter($ml-columns);
+	}
+	@media (min-width: em($large-from)) {
+		width: gutter($large-columns);
+	}
 }
-
-.js-masonry {
-	@include pie-clearfix;
-	background-color: teal;
-}
-// Apply the grid-sizer to the item in the grid.
-// The .Article selector is just an example.
-.Artist {
-	@extend .grid-sizer;
-	float: left;
+.Masonry > .Artist {
 	margin-bottom: 2%;
-	img {
-		max-width: 100%;
+	.Artist-title {
+		position: absolute;
+		left: -3px;
+		bottom: 20px;
+		margin-bottom: 0;
+		padding: 0.2em 0.3em;
+		background-color: #000;
+		color: $white;
+		box-shadow: 3px 3px 0 0 rgba(0,0,0,0.5);
 	}
 }

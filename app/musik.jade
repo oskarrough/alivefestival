@@ -6,59 +6,123 @@ block vars
 extends views/includes/layout
 
 block content
-	ul.tabList#tabs(role="tablist")
-		li(role="presentation").
-			<a id="tab1" href="#panel1" onclick="showTab(1);return false;" role="tab" aria-controls="panel1" aria-selected="false">Musik</a></li>
-		li(role="presentation").
-			<a id="tab2" href="#panel2" onclick="showTab(2);return false;" role="tab" aria-controls="panel2" aria-selected="false">Program</a></li>
+	ul#tabs.TabsNav(role="tablist")
+		li: a#tab1(href="#panel1", onclick="showTab(1);return false;", role="tab", aria-controls="panel1", aria-selected="false")
+				h1.PageTitle
+					span Musik
+			
+		li: a#tab2(href="#panel2", onclick="showTab(2);return false;", role="tab", aria-controls="panel2", aria-selected="false")
+				h1.PageTitle
+					span Program
+			
 
-	.tabPanels
-		#panel1(role="tabpanel", aria-labelledby="tab1")
-			h1.PageTitle
+	.Tabs
+		#panel1.Tabs-panel(role="tabpanel", aria-labelledby="tab1")
+			//-h1.PageTitle
 				span Musik 2013
 
-			ul#js-masonry.Artists
-				.gutter-sizer
-				.grid-sizer
-				
+			ul#Masonry.Masonry.Artists
 				mixin artist(title, url, img, desc, myClass)
-					li.Artist(class=img): a(href=url)
+					li.Artist(class=img): a(href='##{img}')
 						h2.Artist-title #{title}
-						figure.Artist-image
-							img(src='images/2013/artists/#{img}.jpg', alt='#{title')
+						figure.Artist-media
+							img(src='images/2013/artists/#{img}.jpg', alt='#{title}')
+						div(id='#{img}').Artist-popup.mfp-hide
+							figure.Artist-media
+								img(src='images/2013/artists/#{img}.jpg', alt='#{title}')
+							.Artist-info
+								h2.Artist-title #{title}
+								p.date Fredag kl. 66:66 @ <em>Haven</em>
+								p= desc
 
-				+artist('The Raveonettes', '#', 'raveonettes')
-				+artist('Veto', '#', 'veto')
-				+artist('Ebo Taylor', '#', 'ebo-taylor')
-				+artist('Fallulah', '#', 'fallulah2')
-				+artist('Den Sorte Skole', '#', 'den-sorte-skole')
-				+artist('Christian Hjelm', '#', 'christian-hjelm')
-				+artist('Mø', '#', 'moe')
-				+artist('Dråpe', '#', 'draape')
-				+artist('Synd og skam', '#', 'synd-og-skam')
-				+artist('Baby in vain', '#', 'baby-in-vain')
-				+artist('The Late Great Fitzcarraldos', '#', 'lategreat')
-				+artist('Lars and the hands of light', '#', 'larsandthehandsoflight')
-				+artist('Folkeklubben', '#', 'folkeklubben')
-				+artist('Mont Oliver', '#', 'mont-oliver')
-				+artist('Schultz and Forever', '#', 'schultz-and-forever')
-				+artist('Bottled in England', '#', 'bottled-in-england')
-				+artist('Fitness Figures', '#', 'fitness-figures')
-				+artist('Santiago', '#', 'santiago')
-				+artist('Workers in Songs', '#', 'workers-in-songs')
-				+artist('Bestie Respond', '#', 'beastie-respond')
-				+artist('Tales of murder and dust', '#', 'tales-of-murder-and-dust')
-				+artist('Den våde vaffel', '#', 'den-vaade-vaffel')
-				+artist('Rupture Plains', '#', 'rupture-plains')
-				+artist('This is you', '#', 'this-is-you')
+				
+				+artist('The Raveonettes', 'artist-raveonettes.html', 'raveonettes', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Veto', '#', 'veto', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Ebo Taylor', '#', 'ebo-taylor', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Fallulah', '#', 'fallulah2', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Den Sorte Skole', '#', 'den-sorte-skole', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Christian Hjelm', '#', 'christian-hjelm', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Mø', '#', 'moe', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Dråpe', '#', 'draape', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Eloq', '#', 'draape', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Synd og skam', '#', 'synd-og-skam', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Baby in vain', '#', 'baby-in-vain', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('The Late Great Fitzcarraldos', '#', 'lategreat', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Lars and the hands of light', '#', 'larsandthehandsoflight', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Folkeklubben', '#', 'folkeklubben', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Mont Oliver', '#', 'mont-oliver', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Schultz and Forever', '#', 'schultz-and-forever', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Bottled in England', '#', 'bottled-in-england', 'Den energiske drum’n’bass-duo Bottled in England serverer en kombination af håndspillet techno, dubstep og cyberpunk på et massivt sølvfad. Efter kun et halvt års eksistens slog duoen igennem i 2011 med koncerter på SPOT, Distortion, og Roskilde Festival, mens udgivelsen af ep’en Believe The Hype banede vejen for international opmærksomhed. Det seneste udspil, Architect EP, huser i sit stilsikre og meget bastante lydbillede blandt andre Lydmor og Troels Abrahamsens velkendte vokaler. Ep’ens fire numre har allerede ført til turnéer i Europa og Asien og slår fast, at August Dyrborg og Daniel Vognstrups højspændte energifelt af teknisk ekvilibrisme og punk-vildskab blot er begyndelsen på et lovende eventyr.', 'http://www.youtube.com/watch?v=DphfqSnyFN8')
+				
+				+artist('Fitness Figures', '#', 'fitness-figures', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Santiago', '#', 'santiago', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Workers in Songs', '#', 'workers-in-songs', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Bestie Respond', '#', 'beastie-respond', 'En elektronisk bølge ruller ind over Thy, når Tobias Pedersen aka. Beastie Respond spiller op  med sine ulmende rytmer i en vidtomspændende kombination af electro, techno, dubstep og drum’n’bass. Den succesfulde 24-årige DJ og producer kalder selv sin musik for ”eclectic new wave”, hvori han blander et væld af basgenrer med 80er-referencer hentet i pop, funk og rock.  Beastie Respond har siden sidste års optræden på Roskilde Festival udgivet debutalbummet  Fictitious Nostalgia, der inden for konceptets rammer bliver kaldt en “ubetinget succes” af  Soundvenue. Tyngden i de stemningsfulde elektroniske toner vil utvivlsomt fyre op under en  forrygende klubfest efter mørkets frembrud.', 'http://www.youtube.com/watch?v=xjGJ5aXyC5Q')
+				
+				+artist('Tales of murder and dust', '#', 'tales-of-murder-and-dust', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Den våde vaffel', '#', 'den-vaade-vaffel', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('Rupture Plains', '#', 'rupture-plains', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
+				
+				+artist('This is you', '#', 'this-is-you', 'En oplevelsesrig tur på skolebænken og en lektion i alverdens musik står øverst på festivalskemaet med Den Sorte Skole som læremestre. Skolen har i år udgivet Lektion #3, der konceptuelt samler et verdensomspændende sammensurium af samples i en stilfuld og fængende lydkollage, der både rytmisk og tonalt er gennemarbejdet ned til mindste detalje. Siden startskuddet i 2002 har sample-kongerne blandt andet høstet prisen som “Årets Danske DJ’s” ved Danish Hiphop Awards, nydt international anerkendelse og spillet gentagende gange på Roskilde Festival. Med Den Sorte Skole bag pulten krydsbestøves genrer på tværs af tid og rum, og du inviteres til et uforglemmeligt skolebal i en hyperglobaliseret musikalsk verden.')
 		
-		#panel2(role="tabpanel", aria-labelledby="tab2")
-			h1.PageTitle
+		#panel2.Tabs-panel(role="tabpanel", aria-labelledby="tab2")
+			//-h1.PageTitle
 				span Program 2013
 
+			mixin artist(title, url, img, desc, myClass)
+				li.Artist(class=img): a(href=url)
+					.Artist-title #{title}
 
-
-		.html.
-			<script>
-			showTab(1);
-			</script>
+			.Timetable
+				p: img(src='https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-ash4/263317_10151500107901714_1432329238_n.jpg', alt='Spilleplan for Alive Festival 2013')
+				ul.Timetable-day.Timetable-day--friday
+					li: h3 Fredag
+					+artist('Veto', '#', 'veto')
+					+artist('Fallulah', '#', 'fallulah2')
+					+artist('Den Sorte Skole', '#', 'den-sorte-skole')
+					+artist('Baby in vain', '#', 'baby-in-vain')
+					+artist('Eloq', '#', 'draape')
+					+artist('Lars and the hands of light', '#', 'larsandthehandsoflight')
+					+artist('Mont Oliver', '#', 'mont-oliver')
+					+artist('Bottled in England', '#', 'bottled-in-england')
+					+artist('Workers in Songs', '#', 'workers-in-songs')
+					+artist('Bestie Respond', '#', 'beastie-respond')
+					+artist('Rupture Plains', '#', 'rupture-plains')
+				
+				ul.Timetable-day.Timetable-day--saturday
+					li: h3 Loerdag
+					+artist('The Raveonettes', '#', 'raveonettes')
+					+artist('Ebo Taylor', '#', 'ebo-taylor')
+					+artist('Christian Hjelm', '#', 'christian-hjelm')
+					+artist('Mø', '#', 'moe')
+					+artist('Folkeklubben', '#', 'folkeklubben')
+					+artist('The Late Great Fitzcarraldos', '#', 'lategreat')
+					+artist('Dråpe', '#', 'draape')
+					+artist('Synd og skam', '#', 'synd-og-skam')
+					+artist('Schultz and Forever', '#', 'schultz-and-forever')
+					+artist('Fitness Figures', '#', 'fitness-figures')
+					+artist('Santiago', '#', 'santiago')
+					+artist('Tales of murder and dust', '#', 'tales-of-murder-and-dust')
+					+artist('Den våde vaffel', '#', 'den-vaade-vaffel')
+					+artist('This is you', '#', 'this-is-you')

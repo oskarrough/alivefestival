@@ -15,6 +15,21 @@
 .Artists .Artist {
 	border-radius: 0.4em;
 
+	> a:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		@include transition(all 250ms cubic-bezier(0.19, 1, 0.22, 1));
+		border: 0px solid rgba(#000,0.5);
+	}
+	> a:hover:after {
+		border-width: 5px;
+	}
+
 	// Make sure the link contains everything
 	> a {
 		display: block;
@@ -34,8 +49,6 @@
 
 
 .Artist {
-	@extend .grid-sizer;
-	float: left;
 	position: relative;
 	overflow: hidden;
 	> a {
@@ -46,19 +59,9 @@
 	// 		@include filter(blur(2px));
 	// 	}
 	// }
-	> a:after {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		@include transition(all 250ms cubic-bezier(0.19, 1, 0.22, 1));
-		border: 0px solid rgba(#000,0.5);
-	}
-	> a:hover:after {
-		border-width: 5px;
+
+	img {
+		max-width: 100%;
 	}
 }
 
@@ -74,13 +77,3 @@
 // .Artist:nth-child(10) > a:after { border-color: #f39c12; }
 // .Artist:nth-child(11) > a:after { border-color: #c0392b; }
 // .Artist:nth-child(12) > a:after { border-color: #bdc3c7; }
-.Artist-title {
-	position: absolute;
-	left: -3px;
-	bottom: 20px;
-	margin-bottom: 0;
-	padding: 0.2em 0.3em;
-	background-color: #000;
-	color: $white;
-	box-shadow: 3px 3px 0 0 rgba(0,0,0,0.5);
-}

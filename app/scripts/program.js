@@ -3,7 +3,7 @@
 //
 
 function goGrid() {
-	var $container = $('#js-masonry');
+	var $container = $('#Masonry');
 	if ($container.length > 0) {
 		console.log('gogrid');
 
@@ -17,7 +17,6 @@ function goGrid() {
 }
 
 $(function () {
-
 	var $main = $('.l-Main');
 	if ($main.find('img').length > 0) {
 		$main.imagesLoaded( function() {
@@ -28,6 +27,4 @@ $(function () {
 	} else {
 		$('html').addClass('loaded');
 	}
-
-
 });
