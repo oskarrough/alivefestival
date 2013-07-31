@@ -1,6 +1,7 @@
 $(function() {
 
 	// Element that marks a section
+	$('.link-Practical').append('<ul class="Navigation Navigation--practical Dropdown"></ul>');
 	var $waypoint = $('.page-Practical .l-Main h4');
 
 	// Wrapper for the generated menu

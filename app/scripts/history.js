@@ -1,6 +1,7 @@
 $(function() {
 
 	// Element that marks a section
+	$('.LinkHistory').append('<ul class="Navigation Navigation--history Dropdown"></ul>');
 	var $waypoint = $('.History');
 
 	// Wrapper for the generated menu

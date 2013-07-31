@@ -25,22 +25,16 @@ html.no-js
 	body(class="#{bodyClass}")
 		block content-header
 
-		header.l-Header
+		header#l-Header.l-Header
 			h1.Logo
 				a(href="/")
 					img(src='images/alivefestival.png', alt='')
 
-			nav.l-Navigation
+			nav#l-Navigation.l-Navigation
 				include navigation
 
-		.l-Main
+		#l-Main.l-Main
 			block content
 
-		block content-footer
-		
-		//-.Lines
-			- for (var i = 0; i < 20; ++i) {
-				.Line
-			- }
-			
+		block content-footer			
 		include layout-footer

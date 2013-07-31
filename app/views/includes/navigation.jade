@@ -10,19 +10,7 @@ ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
 	+menu-item('billetter.html', 'Billetter', 'link-Tickets')
 	+menu-item('frivillig.html', 'Frivillig', 'link-Volunteer')
 	+menu-item('gallery.html', 'Galleri', 'link-Gallery')
-	//+menu-item('praktisk.html', 'Praktisk', 'link-Practical')
-	li.link-Practical
-		a(href='praktisk.html', class=active == 'Praktisk' ? 'is-active' : '') Praktisk
-		ul.Navigation.Navigation--practical.Dropdown
+	+menu-item('praktisk.html', 'Praktisk', 'link-Practical')
 	+menu-item('om-alive.html', 'Om Alive', 'link-About')
-	li.LinkHistory
-		a(href='historie.html', class=active == 'Historie' ? 'is-active' : '') Historie
-		ul.Navigation.Navigation--history.Dropdown
-		//-	ul.Navigation.Navigation--history.Dropdown
-			li: a(href='/', class=active == 'Index' ? 'is-active' : '') 2013
-			li: a(href='historie.html#2012', class=active == '2012' ? 'is-active' : '') 2012
-			li: a(href='historie.html#2011', class=active == '2011' ? 'is-active' : '') 2011
-			li: a(href='historie.html#2010', class=active == '2010' ? 'is-active' : '') 2010
-			li: a(href='historie.html#2009', class=active == '2009' ? 'is-active' : '') 2009
-	
+	+menu-item('historie.html', 'Historie', 'link-History')
 	+menu-item('kontakt.html', 'Kontakt', 'link-Contact')
