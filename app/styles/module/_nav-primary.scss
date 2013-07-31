@@ -2,7 +2,8 @@
 // Primary navigation 
 //
 
-.Navigation--primary {
+.Navigation--primary,
+.block--system-main-menu > ul { //drupal selector
 	@include pie-clearfix;
 	font-family: $font-header;
 	text-align: center;	
@@ -25,6 +26,7 @@
 		text-decoration: none;
 		&:hover,
 		&.is-active,
+		&.active, // drupal selector
 		.js-hover > a {
 			background: transparent url(../images/pensel1.png) no-repeat center center;
 			background-size: contain;
@@ -35,7 +37,4 @@
 		}
 	}
 	&.is-hidden {}
-}
-.page-Index .Navigation--primary > li {
-	//@include animation-fill-mode(both);
 }
