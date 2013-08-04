@@ -15,11 +15,11 @@ block header
 	
 	meta(name='description', content='#{description}')
 
-	<!-- build:css({.tmp,app}) styles/main.css -->
-	<link rel="stylesheet" href="/scripts/vendor/royalslider/royalslider.css">
-	<link rel="stylesheet" href="/scripts/vendor/royalslider/skins/default/rs-default.css">
-	<link rel="stylesheet" href="/styles/main.css">
-	<!-- endbuild -->
+	// build:css({.tmp,app}) styles/main.css
+	link(href='scripts/vendor/royalslider/royalslider.css', rel='stylesheet')
+	link(href='scripts/vendor/royalslider/skins/default/rs-default.css', rel='stylesheet')
+	link(href='styles/main.css', rel='stylesheet')
+	// endbuild
 
 	script(src='scripts/vendor/modernizr.custom.min.js')
 	//-| <script src="//use.typekit.net/wpt0izv.js"></script>
