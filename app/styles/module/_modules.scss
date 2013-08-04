@@ -59,7 +59,7 @@
 /* overlay animate in */
 .mfp-fade.mfp-bg.mfp-ready {
   //opacity: 0.95;
-  
+
 }
 /* overlay animate out */
 .mfp-fade.mfp-bg.mfp-removing {
@@ -86,4 +86,13 @@
   .Artist-media { opacity: 0; }
   opacity: 0.5;
   //@include translateY(7px);
+}
+
+
+
+
+.Social {
+	position: absolute;
+	top: 1em;
+	right: 1em;
 }

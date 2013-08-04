@@ -1,3 +1,5 @@
+/*jshint -W065 */ // avoid jslint radix errors
+
 $('.Navigation--primary').find('a').each(function() {
 
 	$(this).css({ position: 'relative' }).mousemove(function(e) {

@@ -2,32 +2,32 @@
 // Homepage
 //
 
-.page-Index {
-	//overflow: hidden;
-	height: 100%;
-	
-	.l-Header {
-		position: absolute;
-		z-index: 5;
-		width: 100%;
-	}
-	.l-Main {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-	.Box {
-		padding-bottom: 0;
-	}
-	
-	// animate bg on load
-	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
-	@include transition(background 1s);
-	background-position: 50% 90%;
-	
-	.loaded & {
-		background-position: 50% 100%;
-	}
-}
+// .page-Index {
+// 	//overflow: hidden;
+// 	height: 100%;
+
+// 	.l-Header {
+// 		position: absolute;
+// 		z-index: 5;
+// 		width: 100%;
+// 	}
+// 	.l-Main {
+// 		margin-top: 0;
+// 		margin-bottom: 0;
+// 	}
+// 	.Box {
+// 		padding-bottom: 0;
+// 	}
+
+// 	// animate bg on load
+// 	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
+// 	@include transition(background 1s);
+// 	background-position: 50% 90%;
+
+// 	.loaded & {
+// 		background-position: 50% 100%;
+// 	}
+// }
 
 
 
@@ -65,9 +65,9 @@
 }
 //social
 .Layer4 {
-	top: initial !important; bottom: 2em !important; margin-left: 2em; 
+	top: initial !important; bottom: 2em !important; margin-left: 2em;
 	@media (min-width: 740px) {
-		bottom: 2em !important; margin-left: 6em; 
+		bottom: 2em !important; margin-left: 6em;
 	}
 }
 //tickets
@@ -110,7 +110,7 @@
 		padding-top: 1em;
 		padding-bottom: 1em;
 	}
-} 
+}
 
 .page-Index .Box--tickets {
 	padding: 1em;

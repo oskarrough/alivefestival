@@ -50,13 +50,13 @@
 	overflow: hidden;
 
 	.rsThumb {
-		
+
 		width: 100%;
 		padding: em(10,25) em(10,25) em(6,25);
 		color: #707070;
 		border-bottom: 1px solid #707070;
 		line-height: 1.1;
-		
+
 		&:hover,
 		&.rsNavSelected {
 			@include transition(background-color 200ms);
@@ -102,21 +102,22 @@
 }
 .Slideshow--tabs {
 	background-color: #222;
-	
+
 	.rsTmb {
-		padding: 20px;
+		//padding: 20px;
 		h4 {
+			color: #fff;
 			margin-bottom: 0;
 			padding-top: 0;
 		}
 	}
 	.rsThumbs {
-		width: 220px;
+		width: 100px;
 		padding: 0;
 	}
 	.rsThumb {
-		width: 220px;
-		height: 80px;
+		width: 100px;
+		height: 60px;
 		border-bottom: 1px solid #2E2E2E;
 		color: #dadada;
 		&:hover {

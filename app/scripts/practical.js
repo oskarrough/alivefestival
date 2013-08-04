@@ -1,7 +1,7 @@
 $(function() {
 
 	// Element that marks a section
-	$('.link-Practical').append('<ul class="Navigation Navigation--practical Dropdown"></ul>');
+	$('.Link--practical').append('<ul class="Navigation Navigation--practical Dropdown"></ul>');
 	var $waypoint = $('.page-Practical .l-Main h4');
 
 	// Wrapper for the generated menu
@@ -25,7 +25,7 @@ $(function() {
 	// Nav highlighting
 	//
 	$waypoint
-	.waypoint( function(direction) {
+	.waypoint(function(direction) {
 		var $links = $waypointNav.find('a[href="#' + this.id + '"]');
 		$links.toggleClass('is-active', direction === 'down');
 

@@ -4,7 +4,7 @@
 - var description = ''
 
 //- local vars
-block vars	
+block vars
 	- var bodyClass = ''
 	- var active = active || ''
 
@@ -18,10 +18,10 @@ doctype
 // [if gt IE 8] <!
 html.no-js
 	// <![endif]
-	
+
 	head
 		include layout-header
-		
+
 	body(class="#{bodyClass}")
 		block content-header
 
@@ -33,8 +33,12 @@ html.no-js
 			nav#l-Navigation.l-Navigation
 				include navigation
 
+			.Social
+				a(href="http://facebook.com/alivefestival")
+					img(src='images/icon/social-facebook.png', alt='')
+
 		#l-Main.l-Main
 			block content
 
-		block content-footer			
+		block content-footer
 		include layout-footer
