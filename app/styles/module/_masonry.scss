@@ -30,35 +30,6 @@ $large-from: 1500px;
 }
 
 
-/*.Artist.raveonettes,
-.Artist.veto,
-.Artist.ebo-taylor {
-	width: columns(2,2);
-	@media (min-width: em($medium-from)) {
-		width: columns(2,4);
-	}
-	@media (min-width: em($large-from)) {
-		width: columns(3,5) - 0.5;
-	}
-}
-.Artist.den-sorte-skole {
-	@media (min-width: em($medium-from)) {
-		width: columns(2,4);
-	}
-	@media (min-width: em($large-from)) {
-		width: columns(2,5) - 0.5;
-	}
-}
-.Artist.workers-in-songs {
-	@media (min-width: em($medium-from)) {
-		width: columns(2,4);
-	}
-	@media (min-width: em($large-from)) {
-		width: columns(2,5) - 0.5;
-	}
-}*/
-
-
 .grid-sizer,
 .Masonry > .Artist {
 	@media (min-width: em($small-from)) {

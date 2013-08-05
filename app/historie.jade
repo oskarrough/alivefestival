@@ -1,6 +1,6 @@
 block vars
 	- var active = 'Historie'
-	- var bodyClass = 'page-History'
+	- var bodyClass = 'Page--historie'
 	- var description = ''
 
 extends views/includes/layout
@@ -10,27 +10,18 @@ block content
 		.Box
 			h1.PageTitle
 				span Alive Festival 2013
-
 			p: strong Anden udgave af festivalen 13. &amp; 14. august 2013.
-			p No sir, not a chance. Mr. Jones does not even pretend to know what's happening in America Right now, and neither does anyone else.
-			p
-				a(href='billetter.html').Button Køb billet!
-			p
-				img(src="images/2013/alivefestival-2013-web.jpg", alt='Plakat fra 2013')
+			p: a(href='billetter.html').Button Køb billet!
+			p: img(src="images/2013/alivefestival-2013-web.jpg", alt='Plakat for 2013')
 
 	#2012.History.History-2012
 		.Box
 			h1.PageTitle
 				span Alive Festival 2012
 			p: strong Fjerde udgave. Stor success. 19. &amp; 20. august 2011.
-			p No sir, not a chance. Mr. Jones does not even pretend to know what's happening in America Right now, and neither does anyone else.
-			p Autumn is always a time of Fear and Greed and Hoarding for the winter coming on. Debt collectors are active on old people and fleece the weak and helpless. They want to lay in enough cash to weather the known horrors of January and February. There is always a rash of kidnapping and abductions of schoolchildren in the football months. Preteens of both sexes are traditionally seized and grabbed off the streets by gangs of organized perverts who traditionally give them as Christmas gifts to each other to be personal sex slaves and playthings.
-
-			p
-				a(href='https://www.facebook.com/media/set/?set=a.10150979910716714.412569.67301461713&type=1&l=261da2ac22', target='_blank').Button Billeder fra 2012
-
-			p
-				img(src="images/2012/alivefestival-2012-web.jpg", alt='Alive Festival 2012 plakat')
+			//-p Soundvenue var forbi. <a href="https://www.facebook.com/alivefestival/posts/235922273196425" target-"_blank">Laes deres anmeldelser</a>.
+			p: a(href='https://www.facebook.com/media/set/?set=a.10150979910716714.412569.67301461713&type=1&l=261da2ac22', target='_blank').Button Billeder fra 2012
+			p: img(src="images/2012/alivefestival-2012-web.jpg", alt='Alive Festival 2012 plakat')
 
 	#2011.History.History-2011
 		.Box

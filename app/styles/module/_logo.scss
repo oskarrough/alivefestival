@@ -10,13 +10,16 @@
 	// z-index: 20;
 	margin: 1em auto 0.25em;
 	text-align: center;
-	img {
-		@media (min-width: 600px) {
-			max-width: em(250);
-		}
-	}
+
 	> a {
 		display: block;
+	}
+	img {
+		width: 400px;
+		
+		// @media (min-width: 600px) {
+		// 	max-width: em(250);
+		// }
 	}
 }
 // .page-Index .Logo {

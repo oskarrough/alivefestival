@@ -4,11 +4,6 @@
 
 // Try not to write anything in here. Create a new .scss file instead.
 
-//
-// Modules
-//
-
-
 
 //
 // Newsletter
@@ -48,9 +43,9 @@
 }
 
 
-
-
-
+//
+// Popups/modals
+//
 .mfp-fade.mfp-bg {
   background-color: rgb(0, 42, 131);
   opacity: 0.95;
@@ -86,13 +81,4 @@
   .Artist-media { opacity: 0; }
   opacity: 0.5;
   //@include translateY(7px);
-}
-
-
-
-
-.Social {
-	position: absolute;
-	top: 1em;
-	right: 1em;
 }
