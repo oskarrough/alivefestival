@@ -18,7 +18,7 @@
 	@media (min-width: 1100px) {
 		@include transform(translateX(-0.25em) scale(1) rotate(2deg));
 	}
-	a {	
+	a {
 		font-size: rem(16);
 		letter-spacing: 1px;
 	}
@@ -31,8 +31,9 @@
 		font-size: rem(30);
 	}
 }
-.Page--praktisk .Navigation--practical,
-.Page--historie .Navigation--history {
+
+.Page--Praktisk .Navigation--practical,
+.Page--Historie .Navigation--history {
 	opacity: 1;
 	visibility: visible;
 }

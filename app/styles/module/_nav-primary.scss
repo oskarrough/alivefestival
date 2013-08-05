@@ -1,12 +1,12 @@
 //
-// Primary navigation 
+// Primary navigation
 //
 
 .Navigation--primary,
 .block--system-main-menu > ul { //drupal selector
 	@include pie-clearfix;
 	font-family: $font-header;
-	text-align: center;	
+	text-align: center;
 
 	font-size: rem(20);
 	@media (min-width: em(700)) {
@@ -24,17 +24,17 @@
 		padding: 0.25em 0.5em;
 		color: white;
 		text-decoration: none;
-		&:hover,
-		&.is-active,
-		&.active, // drupal selector
-		.js-hover > a {
-			background: transparent url(../images/pensel1.png) no-repeat center center;
-			background-size: contain;
-			color: #222;
-		}
 		&:hover {
 			@include scale(1.15);
 		}
 	}
-	&.is-hidden {}
+	a:hover,
+	.is-active > a, // perch selector
+	a.is-active, // praktisk/history
+	a.active, // drupal selector
+	.js-hover > a {
+		background: transparent url(../images/pensel1.png) no-repeat center center;
+		background-size: contain;
+		color: #222;
+	}
 }

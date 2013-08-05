@@ -24,12 +24,6 @@ $ml-from: 1200px;
 $large-columns: 6;
 $large-from: 1500px;
 
-// Mixin to calculate the width
-@mixin calcWidth($columns, $gutter: $gutter) {
-	width: (100% - ($gutter * ($columns - 1))) / $columns;
-}
-
-
 .grid-sizer,
 .Masonry > .Artist {
 	@media (min-width: em($small-from)) {

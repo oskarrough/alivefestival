@@ -1,8 +1,13 @@
 $(function() {
 
+	// only continue if we're on the right page
+	if( $('.Page--Praktisk').length === 0) {
+		return;
+	}
+
 	// Element that marks a section
-	$('.Link--practical').append('<ul class="Navigation Navigation--practical Dropdown"></ul>');
-	var $waypoint = $('.page-Practical .l-Main h4');
+	$('.Link--Praktisk').append('<ul class="Navigation Navigation--practical Dropdown"></ul>');
+	var $waypoint = $('.Page--Praktisk .l-Main h4');
 
 	// Wrapper for the generated menu
 	var $waypointNav = $('.Navigation--practical');
@@ -16,7 +21,7 @@ $(function() {
 		var myID = this.id;
 
 		if (myID) {
-			$waypointNav.append('<li><a href="#'+myID+'">'+myID+'</a></li>');
+			$waypointNav.append('<li><a href="#' + myID + '">' + myID + '</a></li>');
 		}
 	});
 
@@ -28,7 +33,6 @@ $(function() {
 	.waypoint(function(direction) {
 		var $links = $waypointNav.find('a[href="#' + this.id + '"]');
 		$links.toggleClass('is-active', direction === 'down');
-
 	}, {
 		offset: '90%'
 	})
@@ -40,6 +44,7 @@ $(function() {
 			return -$(this).height();
 		}
 	});
+
 	// make sure waypoints are correct
 	$.waypoints('refresh');
 

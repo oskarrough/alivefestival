@@ -1,7 +1,12 @@
 $(function() {
 
+	// only continue if we're on the right page
+	if( $('.Page--Historie').length === 0 ) {
+		return;
+	}
+
 	// Element that marks a section
-	$('.Link--history').append('<ul class="Navigation Navigation--history Dropdown"></ul>');
+	$('.Link--Historie').append('<ul class="Navigation Navigation--history Dropdown"></ul>');
 	var $waypoint = $('.History');
 
 	// Wrapper for the generated menu
@@ -26,13 +31,13 @@ $(function() {
 	//
 	$waypoint
 	.waypoint(function(direction) {
-		var $links = $('a[href="#' + this.id + '"]');
+		var $links = $waypointNav.find('a[href="#' + this.id + '"]');
 		$links.toggleClass('is-active', direction === 'down');
 	}, {
 		offset: '100%'
 	})
 	.waypoint(function(direction) {
-		var $links = $('a[href="#' + this.id + '"]');
+		var $links = $waypointNav.find('a[href="#' + this.id + '"]');
 		$links.toggleClass('is-active', direction === 'up');
 	}, {
 		offset: function() {
