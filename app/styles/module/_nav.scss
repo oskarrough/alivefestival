@@ -2,32 +2,36 @@
 // Navigation
 //
 
-.Navigation,
-.menu { // drupal
+.Navigation {
 	margin: 0;
 	padding-left: 0;
 	list-style: none;
 	line-height: 1.25;
 }
-.DropdownParent {
+
+
+//
+// Dropdowns
+//
+
+.has-dropdown {
 	position: relative;
 }
 .Dropdown {
 	position: absolute;
 	top: auto;
 	left: 0;
-	visibility: hidden;
 	z-index: 20;
 	border-radius: 0.5em;
 	background: lighten($green, 10%);
 	width: 8em;
 	text-align: center;
-	opacity: 0;
+	// hide it
+	visibility: hidden;
 }
-//li:hover > .Dropdown,
-.js-hover > .Dropdown {
+.has-dropdown:hover > .Dropdown {
+//.js-hover > .Dropdown {
 	visibility: visible;
-	opacity: 1;
 }
 .js-hover {
 	background-color: rgba($green, 0.9);

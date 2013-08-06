@@ -6,7 +6,7 @@
 .Navigation--history {
 	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
 	@include transition(all 600ms ease-out);
-	@include transform(translateX(-100%) scale(0.25) rotate(-20deg));
+	@include transform(translateX(-100%) scale(0.25) rotate(-20deg));	
 	position: fixed;
 	top: 7.5em;
 	left: 0;

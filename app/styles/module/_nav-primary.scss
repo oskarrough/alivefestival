@@ -2,8 +2,7 @@
 // Primary navigation
 //
 
-.Navigation--primary,
-.block--system-main-menu > ul { //drupal selector
+.Navigation--primary {
 	@include pie-clearfix;
 	font-family: $font-header;
 	text-align: center;
@@ -36,5 +35,10 @@
 		background: transparent url(../images/pensel1.png) no-repeat center center;
 		background-size: contain;
 		color: #222;
+	}
+
+	// Dropdowns
+	ul {
+		
 	}
 }
