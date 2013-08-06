@@ -12,8 +12,8 @@ function showTab(num) {
 		}
 		var TabID = document.getElementById('tab'+num);
 		var PanelID = document.getElementById('panel'+num);
-		TabID.className = 'selected';
-		PanelID.className = 'selected';
+		TabID.className = 'is-active';
+		PanelID.className = 'is-active';
 		TabID.setAttribute('aria-selected', true);
 		PanelID.setAttribute('aria-hidden', false);
 		OpenTab = num;
