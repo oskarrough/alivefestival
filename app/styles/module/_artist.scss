@@ -5,7 +5,17 @@
 //
 // Default for all articles
 //
-.Article {}
+.Artist {
+	position: relative;
+	overflow: hidden;
+	> a {
+		display: block;
+	}
+
+	img {
+		max-width: 100%;
+	}
+}
 
 
 //
@@ -44,36 +54,3 @@
 // Detail modifier
 //
 .Article--detail {}
-
-
-
-
-.Artist {
-	position: relative;
-	overflow: hidden;
-	> a {
-		display: block;
-	}
-	// &:hover {
-	// 	img {
-	// 		@include filter(blur(2px));
-	// 	}
-	// }
-
-	img {
-		max-width: 100%;
-	}
-}
-
-// .Artist:nth-child(1) > a:after { border-color: #1abc9c; }
-// .Artist:nth-child(2) > a:after { border-color: #2ecc71; }
-// .Artist:nth-child(3) > a:after { border-color: #3498db; }
-// .Artist:nth-child(4) > a:after { border-color: #9b59b6; }
-// .Artist:nth-child(5) > a:after { border-color: #34495e; }
-// .Artist:nth-child(6) > a:after { border-color: #8e44ad; }
-// .Artist:nth-child(7) > a:after { border-color: #27ae60; }
-// .Artist:nth-child(8) > a:after { border-color: #e67e22; }
-// .Artist:nth-child(9) > a:after { border-color: #f1c40f; }
-// .Artist:nth-child(10) > a:after { border-color: #f39c12; }
-// .Artist:nth-child(11) > a:after { border-color: #c0392b; }
-// .Artist:nth-child(12) > a:after { border-color: #bdc3c7; }

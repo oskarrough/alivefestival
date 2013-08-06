@@ -28,7 +28,6 @@
 // 	@include animation-fill-mode(both);
 // }
 
-
 [class^='Layer'] {
 	@include animation(fadeIn 1200ms linear);
 	@include animation-fill-mode(both);
@@ -38,38 +37,3 @@
 .Layer3 { @include animation-delay(1000ms); } // program
 .Layer4 { @include animation-delay(2200ms); } 
 .Layer-logo { @include animation-delay(400ms); }
-
-
-//
-// Iterative delay
-//
-
-/*
-Enables you to run effects iterative through an array of elements. Takes three arguments: $selector, $count and $delay. $count is the number of elements (nth-childs) to run through.
-*/
-
-// @mixin iterative-delay($selector: unquote('.item'), $count: 2, $delay: 0.07s) {
-// 	@for $i from 1 through $count {
-// 		#{$selector}:nth-child(#{$i}) {
-// 			@include transition-delay($delay * $i);
-// 		}
-// 	}
-// }
-// .Artist {
-// 	@include transition(opacity 1000ms);
-// 	opacity: 0.2;
-// 	.packery-done & {
-// 		opacity: 1;
-// 	}
-// }
-// @include iterative-delay('.Artist', 16, 0.20s);
-
-
-.page-Billetter .l-Main {
-	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
-	@include transition(all 1s);
-	//@include translateY(100%);
-	.loaded & {
-		@include translateY(0);
-	}
-}

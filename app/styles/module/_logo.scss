@@ -3,11 +3,6 @@
 //
 
 .Logo {
-	// position: absolute;
-	// top: 54px;
-	// left: 1em;
-	// right: 1em;
-	// z-index: 20;
 	margin: 1em auto 0.25em;
 	text-align: center;
 
@@ -16,19 +11,5 @@
 	}
 	img {
 		width: 400px;
-		
-		// @media (min-width: 600px) {
-		// 	max-width: em(250);
-		// }
 	}
 }
-// .page-Index .Logo {
-// 	top: 50%;
-// 	margin-top: (115/2)*-1px;
-// 	@include animation(fadeIn 2s ease-in);
-// 	img { max-width: none; }
-// }
-// @include keyframes(fadeIn) {
-// 	0% { opacity: 0; @include translateY(5px); }
-// 	100% { opacity: 1; @include translateY(0); }
-// }
