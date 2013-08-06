@@ -33,10 +33,22 @@ $('.Slideshow').royalSlider({
 // Slideshow with titles as tabs
 //
 $('.Slideshow--tabs').royalSlider({
-    arrowsNav: false,
     fadeinLoadedSlide: true,
-    controlNavigationSpacing: 0,
+    
+    arrowsNav: false,
+    keyboardNavEnabled: true,
+    
     controlNavigation: 'thumbnails',
+    controlNavigationSpacing: 0,
+    
+    // imageScaleMode: 'fill',
+    // imageAlignCenter: true,
+    slidesSpacing: 0,
+    
+    autoScaleSlider: true,
+    // autoScaleSliderWidth: 960,
+    // autoScaleSliderHeight: 450,
+
     thumbs: {
 		autoCenter: false,
 		fitInViewport: true,
@@ -44,18 +56,9 @@ $('.Slideshow--tabs').royalSlider({
 		spacing: 0,
 		paddingBottom: 0
     },
-    keyboardNavEnabled: true,
-    imageScaleMode: 'fill',
-    imageAlignCenter:true,
-    slidesSpacing: 0,
-    loop: false,
-    loopRewind: true,
-    numImagesToPreload: 3,
-    autoScaleSlider: true,
-    autoScaleSliderWidth: 960,
-    autoScaleSliderHeight: 450,
-
-    /* size of all images http://help.dimsemenov.com/kb/royalslider-jquery-plugin-faq/adding-width-and-height-properties-to-images */
-    //imgWidth: 640,
-    //imgHeight: 360
+	
+	autoPlay: {
+		enabled: true,
+		pauseOnHover: true
+	}
 });
