@@ -20,10 +20,12 @@
 @import "compass/css3"; // CSS3 mixins
 
 
-
 // Base styles
 // ------------------------------------
-@import "../bower_components/normalize.scss/_normalize.scss";
+@import "CSS:../bower_components/normalize-css/normalize";
+@import "CSS:../scripts/vendor/royalslider/royalslider";
+@import "CSS:../scripts/vendor/royalslider/skins/default/rs-default";
+
 @import "module/_magnificPopup.scss";
 @import "base/_fonts.scss";
 @import "base/_base.scss";

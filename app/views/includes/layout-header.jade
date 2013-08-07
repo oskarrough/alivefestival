@@ -7,17 +7,15 @@ block header
 	| <meta property="og:title" content="Alive Festival" />
 	| <meta property="og:url" content="http://facebook.om/alivefestival" />
 	| <meta property="og:image" content="" />
-	
+
 	if active == 'Index'
 		title Alive Festival
 	else
 		title #{active} - Alive Festival
-	
+
 	meta(name='description', content='#{description}')
 
 	// build:css({.tmp,app}) styles/main.css
-	link(href='scripts/vendor/royalslider/royalslider.css', rel='stylesheet')
-	link(href='scripts/vendor/royalslider/skins/default/rs-default.css', rel='stylesheet')
 	link(href='styles/main.css', rel='stylesheet')
 	// endbuild
 

@@ -2,19 +2,13 @@
   "name": "alive-festival-2013",
   "version": "0.1",
   "dependencies": {
-    "normalize.scss": "latest",
+    "normalize-css": "~2.1.2",
     "qtip2": "latest",
     "imagesloaded": "latest",
     "jquery-waypoints": "latest",
-    "jquery.customSelect": "latest",
-    "fancybox": "latest",
     "jquery.lazyload": "~1.8.4",
-    "rough-navtoggle": "~0.3.0",
     "jquery": "~1.10.1",
-    "masonry": "~3.0.1"
+    "masonry": "~3.1.1"
   },
-  "devDependencies": {},
-  "resolutions": {
-    "jquery": "~1.10.1"
-  }
+  "devDependencies": {}
 }
