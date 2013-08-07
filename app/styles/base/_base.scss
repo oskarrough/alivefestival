@@ -76,13 +76,15 @@ blockquote {
 }
 
 // Links
-a {
-	text-decoration: none;
-	color: $green;
-}
-a:hover {
-	color: $green;
-	background-color: $yellow;
+.l-Main {
+	a {
+		text-decoration: none;
+		color: $green;
+	}
+	a:hover {
+		color: $black;
+		background-color: $yellow;
+	}
 }
 
 // responsive
