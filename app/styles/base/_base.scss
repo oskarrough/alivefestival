@@ -1,6 +1,6 @@
 //
 // Base
-// 
+//
 
 html {
 	//text-rendering: optimizeLegibility;
@@ -78,10 +78,11 @@ blockquote {
 // Links
 a {
 	text-decoration: none;
-	color: $blue;
+	color: $green;
 }
 a:hover {
 	color: $green;
+	background-color: $yellow;
 }
 
 // responsive
