@@ -54,3 +54,41 @@
 // Detail modifier
 //
 .Article--detail {}
+
+
+
+.Artist-popup {
+	max-width: 900px;
+	margin: 0 auto;
+	position: relative;
+
+	.Artist-media {
+		img {
+			width: 100%;
+		}
+	}
+	.Artist-info {
+		@extend %Box;
+		overflow-y: scroll;
+		padding: em($space * 2) em($space * 1.5);
+	}
+	.mfp-close {
+		//top: -0.5em;
+	}
+	@include at-breakpoint(37.5em) {
+		.Artist-media {
+			margin-right: em(350);
+		}
+		.Artist-info {
+			width: em(350);
+			position: absolute;
+			top: em($space * -1);
+			right: 0;
+			bottom: em($space * -1);
+			padding: em($space * 2);
+		}
+		.mfp-close {
+			top: -0.5em;
+		}
+	}
+}

@@ -154,3 +154,15 @@
 		height: 300px !important;
 	}
 }
+
+
+.rsGCaption {
+	width: 300px;
+	bottom: 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	padding: 3px 7px 1px;
+	background-color: $green;
+	background-color: rgba($green, 0.68);
+	color: #fff;
+}

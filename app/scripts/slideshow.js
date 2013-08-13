@@ -34,17 +34,19 @@ $('.Slideshow').royalSlider({
 //
 $('.Slideshow--tabs').royalSlider({
     fadeinLoadedSlide: true,
-    
+
     arrowsNav: false,
     keyboardNavEnabled: true,
-    
+
     controlNavigation: 'thumbnails',
     controlNavigationSpacing: 0,
-    
-    // imageScaleMode: 'fill',
+
+    //globalCaption: true,
+
+    //imageScaleMode: 'fill',
     // imageAlignCenter: true,
     slidesSpacing: 0,
-    
+
     autoScaleSlider: true,
     // autoScaleSliderWidth: 960,
     // autoScaleSliderHeight: 450,
@@ -53,12 +55,12 @@ $('.Slideshow--tabs').royalSlider({
 		autoCenter: false,
 		fitInViewport: true,
 		orientation: 'vertical',
-		spacing: 0,
+		spacing: 3,
 		paddingBottom: 0
     },
-	
+
 	autoPlay: {
-		enabled: true,
+		enabled: false,
 		pauseOnHover: true
 	}
 });

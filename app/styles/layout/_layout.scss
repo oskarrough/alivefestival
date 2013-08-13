@@ -32,14 +32,15 @@ body {
 	z-index: 1;
 	margin: 2em 0.5em 4em;
 	max-width: 50em;
-	
+
 	@media (min-width: em(740)) {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+
 	.Constrained,
-	h1,h2,h3,h4,p,table,iframe {
+	h1,h2,h3,h4,p,table,iframe
+	{
 		max-width: 600px;
 		margin-left: auto;
 		margin-right: auto;
@@ -51,65 +52,6 @@ body {
 	}
 	> img {
 		margin-bottom: em($space);
-	}
-}
-
-%Box {
-	background-color: rgb(240, 238, 234);
-	border-radius: 8px;
-	color: #111;
-}
-
-.Box {
-	@extend %Box;
-	padding: em($space * 2) 0;
-	margin-bottom: em($space);
-	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.3);
-
-	> h2:last-child {
-		margin-bottom: 0;
-	}
-}
-.Box--center {
-	text-align: center;
-}
-.Box--clean {
-	background-color: transparent;
-}
-
-.Artist-popup {
-	max-width: 900px;
-	margin: 0 auto;
-	position: relative;
-
-	.Artist-media {
-		img {
-			width: 100%;
-		}
-	}
-	.Artist-info {
-		@extend %Box;
-		overflow-y: scroll;
-		padding: em($space * 2) em($space * 1.5);
-	}
-	.mfp-close {
-		//top: -0.5em;
-	}
-	@include at-breakpoint(37.5em) {
-		.Artist-media {
-			margin-right: em(350);
-		}
-		.Artist-info {
-			width: em(350);
-			position: absolute;
-			top: em($space * -1);
-			right: 0;
-			bottom: em($space * -1);
-			padding: em($space * 2);
-		}
-		.mfp-close {
-			top: -0.5em;
-		}
 	}
 }
 
