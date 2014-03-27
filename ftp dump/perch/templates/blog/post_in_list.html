@@ -1,0 +1,19 @@
+<perch:before>
+<section class="List">
+</perch:before>
+
+	<article class="List-item">
+		<h3 class="Article-title Title">
+			<a href="<perch:blog id="postURL" />">
+				<perch:blog id="postTitle" />
+			</a>
+			<small class="Muted">(<perch:blog id="postDateTime" format="%d %B %Y" />)</small>
+		</h3>
+		<div class="Article-body Summary">
+			<perch:blog id="excerpt" type="textarea" textile="true" />
+		</div>
+	</article>
+
+<perch:after>
+	</section>
+</perch:after>

@@ -1,0 +1,22 @@
+<article class="Article">
+
+    <p><a href="/blog">&larr; Blog</a></p>
+    <h1 class="PageTitle"><span>
+        <perch:blog id="postTitle" type="text" required="true" size="xl" />
+    </span></h1>
+
+	<p class="entry-published date"><perch:blog id="postDateTime" format="%d %B %Y" />
+		<perch:if exists="authorGivenName">by <perch:blog id="authorGivenName" /> <perch:blog id="authorFamilyName" /></perch:if>
+	</p>
+    <perch:if exists="image">
+        <div><img src="<perch:blog id="image" type="image" width="320" height="240" crop="true" label="Image" />" alt="<perch:blog id="postTitle" />" /></div>
+    </perch:if>
+
+    <div class="description entry-content">
+    	<perch:blog id="postDescHTML" type="textarea" encode="false" editor="markitup" textile="true" size="xxl" required="true" />
+    </div>
+
+</article>
+
+<perch:blog id="excerpt" type="textarea" label="Excerpt" textile="true" order="1" suppress="true" size="s" />
+<perch:blog id="image" type="image" width="50" height="50" crop="true" suppress="true" />

@@ -1,0 +1,40 @@
+<perch:before>
+  <ul id="Masonry" class="Masonry Artists">
+</perch:before>
+
+<li class="Artist">
+
+  <!-- teaser view -->
+  <a href="#<perch:content id="slug" type="slug" for="heading" />" class="js-Popup--artist" data-effect="mfp-3d-unfold">
+    <h2 class="Artist-title">
+      <perch:content id="heading" type="text" label="Artist name" required="true" title="true" />
+    </h2>
+    <figure class="Artist-media">
+      <img src="<perch:content type="image" id="image" label="Image" />" alt="<perch:content id="heading" type="text" label="Artist name" required="true" title="true" />" />
+    </figure>
+  </a>
+
+  <!-- popup view -->
+  <div id="<perch:content id="slug" type="slug" for="heading" />" class="Artist-popup mfp-hide">
+    <figure class="Artist-media">
+      <img src="<perch:content type="image" id="image" label="Image" />" alt="<perch:content id="heading" type="text" label="Artist name" required="true" title="true" />" />
+    </figure>
+
+    <div class="Artist-info">
+      <h2 class="Artist-title">
+        <perch:content id="heading" type="text" label="Artist name" required="true" title="true" />
+      </h2>
+      <p class="date">
+
+        <!-- <perch:content id="date" type="date" label="Date" format="%d %B %Y" native="true" required="true" /> -->
+		<perch:content id="day" type="select" label="Day" options="Fredag, Loerdag, TBA" default="TBA" required="true" /> <perch:content id="time" type="text" label="Time" default="20:00" required="true" /> @ <em><perch:content id="stage" type="select" label="Stage" options="Gårdhaven, Teltet, Salen, TBA" allowempty="false" required="true" /></em></p>
+
+      <p><a href="<perch:content id="video" type="youtube" label="YouTube video URL" />" target="_blank" class="Button">Lyt</a></p>
+
+      <perch:content id="body" type="textarea" label="Body" markdown="true" editor="markitup" required="true" />
+    </div>
+</li>
+
+<perch:after>
+  </ul>
+</perch:after>
