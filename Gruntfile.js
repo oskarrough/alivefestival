@@ -140,6 +140,8 @@ module.exports = function (grunt) {
 
         compass: {
             options: {
+                // Makes use of the local Gemfile
+                bundleExec: true,
                 require: ['susy', 'sass-css-importer'],
                 sassDir: '<%= yeoman.app %>/styles',
                 cssDir: '.tmp/styles',
