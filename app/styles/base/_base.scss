@@ -67,9 +67,14 @@ strong {
 	font-size: 1.25rem;
 }
 blockquote {
-	font-family: $font-bold;
+	// font-family: $font-bold;
 	font-size: rem(22);
 	margin-left: 1em;
+	font-style: italic;
+
+	p {
+		letter-spacing: 0;
+	}
 }
 .Muted {
 	font-family: $font-body;
@@ -78,7 +83,7 @@ blockquote {
 // Links
 .l-Main {
 	a {
-		text-decoration: none;
+		// text-decoration: none;
 		color: $green;
 	}
 	a:hover {

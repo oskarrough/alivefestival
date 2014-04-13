@@ -17,61 +17,6 @@
 }
 
 
-// Stretched to fullscreen
-// .royalSlider--fullscreen {
-// 	position: absolute;
-// 	left: 0;
-// 	top: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	height: auto;
-// 	width: auto;
-// 	overflow: hidden;
-// }
-
-//
-// Slideshow with vertical tabs to the left/right
-//
-/*
-.Slideshow--tabs {
-	.rsOverflow {
-		float: right;
-	}
-	.Article--visual {
-		padding-bottom: (455/975) * 100%;
-	}
-}
-.rsThumbsVer {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: columns(1,4) + gutter(4);
-	overflow: hidden;
-
-	.rsThumb {
-
-		width: 100%;
-		padding: em(10,25) em(10,25) em(6,25);
-		color: #707070;
-		border-bottom: 1px solid #707070;
-		line-height: 1.1;
-
-		&:hover,
-		&.rsNavSelected {
-			@include transition(background-color 200ms);
-			background-color: #000;
-			color: #fff;
-			border-color: #000;
-		}
-
-		@media (min-width: 60em) { font-size: rem(18); }
-		@media (min-width: 70em) { font-size: rem(22); }
-		@media (min-width: 80em) { font-size: rem(25); }
-	}
-}
-*/
-
 .rsABlock {
 	background-color: $green;
 	background-color: rgba($green, 0.65);

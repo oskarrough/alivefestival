@@ -75,7 +75,8 @@
 	.mfp-close {
 		//top: -0.5em;
 	}
-	@include at-breakpoint(37.5em) {
+
+	@media (min-width: 37.5em) {
 		.Artist-media {
 			margin-right: em(350);
 		}

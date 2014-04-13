@@ -24,7 +24,8 @@
 	z-index: 20;
 	border-radius: 0.5em;
 	background: lighten($green, 10%);
-	width: 8em;
+	width: 10em;
+	padding: 0.4em 0;
 	text-align: center;
 	// hide it
 	visibility: hidden;
@@ -38,7 +39,7 @@
 	border-radius: 0.5em;
 	> a {
 		color: #f1f1f1;
-		border-color: #f1f1f1;	
+		border-color: #f1f1f1;
 		@include scale(1.15);
 	}
 }

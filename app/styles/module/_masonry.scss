@@ -24,22 +24,29 @@ $ml-from: 1300px;
 $large-columns: 6;
 $large-from: 1500px;
 
+.l-Main .Masonry {
+	padding-left: 0;
+	padding-right: 0;
+	max-width: none;
+	list-style: none;
+}
+
 .grid-sizer,
 .Masonry > .Artist {
 	@media (min-width: em($small-from)) {
-		width: columns(1,$small-columns);
+		width: span(1 of $small-columns);
 	}
 	@media (min-width: em($sm-from)) {
-		width: columns(1,$sm-columns);
+		width: span(1 of $sm-columns);
 	}
 	@media (min-width: em($medium-from)) {
-		width: columns(1,$medium-columns);
+		width: span(1 of $medium-columns);
 	}
 	@media (min-width: em($ml-from)) {
-		width: columns(1,$ml-columns);
+		width: span(1 of $ml-columns);
 	}
 	@media (min-width: em($large-from)) {
-		width: columns(1,$large-columns) - 0.5;
+		width: span(1 of $large-columns) - 0.5;
 	}
 
 	//
@@ -55,7 +62,7 @@ $large-from: 1500px;
 	@for $i from 1 through 30 {
 		&:nth-child(#{$i}){
 			$delay: 1s * $i * 0.08;
-			@include transition-delay($delay);
+			transition-delay: $delay;
 		}
 	}
 }
