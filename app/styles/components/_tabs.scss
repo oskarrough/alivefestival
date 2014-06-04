@@ -3,7 +3,7 @@
 //
 
 .TabsNav {
-	@include pie-clearfix;
+	@include clearfix;
 	list-style-type: none;
 	padding: 0;
 	margin: 0 auto rem($space);
@@ -17,45 +17,20 @@
 		color: #000;
 		margin: 0 rem($space);
 	}
-	a {
-		// float: left;
-		// border: 1px solid #000;
-		// padding: 0.25em 2em;
-		// margin: 0 0 -1px 0.25em;
-		// border-radius: 0.5em 0.5em 0 0;
-		// background-color: #aaa;
-		// &:link,
-		// &:visited,
-		// &:hover,
-		// &:focus,
-		// &:active {
-		// 	text-decoration: none;
-		// 	color: #000;
-		// }
-		// &:hover,
-		// &:focus {
-		// 	background-color: #ccc;
-		// }
-		// &.selected {
-		// 	background-color: rgb(240, 238, 234);
-		// 	border-bottom: 1px solid rgb(240, 238, 234);
-		// }
-	}
 	.PageTitle {
 		font-size: rem(30);
 		padding-left: em(10,30);
 		padding-right: em(10,30);
 		margin-bottom: 0;
-		
 		// hide bg
 		background-image: none;
 	}
 
-	@include transition(transform 300ms east-out);
-	@include transform(scale(0.8));
+	transition: transform 300ms east-out;
+	transform: scale(0.8);
 	.is-active {
-		@include transform(scale(1.2));
-		
+		transform: scale(1.2);
+
 		// show bg again
 		> .PageTitle {
 			background-image: url(../images/pensel1.png);
@@ -64,14 +39,14 @@
 }
 .Tabs > div {
 	// clear: left;
-	// margin: 0 auto;	
+	// margin: 0 auto;
 	// padding: 2em 1em;
 	// margin-bottom: 1em;
 	// border-radius: 8px;
 	// box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.3);
 	// background-color: rgb(240, 238, 234);
 	margin: 0 rem($space);
-	
+
 	display: none;
 	&.selected,
 	&[aria-hidden=false] {

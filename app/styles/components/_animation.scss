@@ -1,0 +1,39 @@
+//
+// Animation design
+//
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes fadeDown {
+	0% {
+		//opacity: 0.5;
+		transform: translateY(-20px);
+	}
+	100% {
+		//opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+// // Fade in background-image (used on index pages)
+// .fullbg {
+// 	@include animation(fadeIn 3s);
+// }
+// // Fade in header, but only for home
+// .page-home .l-Header {
+// 	@include animation(fadeDown 1s ease-in);
+// 	@include animation-delay(1s);
+// 	@include animation-fill-mode(both);
+// }
+
+[class^='Layer'] {
+	animation: fadeIn 1200ms linear;
+	animation-fill-mode: both;
+}
+.Layer1 { animation-delay: 1400ms; } // volunteer
+.Layer2 { animation-delay: 1800ms; } // newsletter
+.Layer3 { animation-delay: 1000ms; } // program
+.Layer4 { animation-delay: 2200ms; }
+.Layer-logo { animation-delay: 400ms; }

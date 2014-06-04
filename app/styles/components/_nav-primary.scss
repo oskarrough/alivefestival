@@ -3,7 +3,7 @@
 //
 
 .Navigation--primary {
-	@include pie-clearfix;
+	@include clearfix;
 	font-family: $font-header;
 	text-align: center;
 
@@ -16,17 +16,17 @@
 
 	li {
 		display: inline-block;
-		@include transition(transform 1000ms);
+		transition: transform 1000ms;
 	}
 	a {
-		@include transition(background 200ms);
+		transition: background 200ms;
 		background-size: 1%;
 		display: inline-block;
 		padding: 0.25em 0.5em;
 		color: white;
 		text-decoration: none;
 		&:hover {
-			@include scale(1.15);
+			transform: scale(1.15);
 		}
 	}
 	a:hover,
@@ -40,7 +40,5 @@
 	}
 
 	// Dropdowns
-	ul {
-
-	}
+	ul {}
 }

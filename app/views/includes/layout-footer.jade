@@ -1,10 +1,21 @@
-.scripts
+.Scripts
 	// build:js(app) scripts/main.js
-	script(src='bower_components/jquery/jquery.js')
-	script(src='bower_components/jquery/jquery-migrate.min.js')
+	script(src='bower_components/jquery/dist/jquery.js')
 
-	script(src='scripts/vendor/imagesloaded.pkgd.js')
-	script(src='scripts/vendor/masonry.pkgd.min.js')
+	//- imagesLoaded
+	script(src="bower_components/eventEmitter/EventEmitter.js")
+	script(src="bower_components/eventie/eventie.js")
+	script(src='bower_components/imagesloaded/imagesloaded.js')
+
+	//- Masonry
+	script(src="bower_components/get-style-property/get-style-property.js")
+	script(src="bower_components/get-size/get-size.js")
+	script(src="bower_components/outlayer/item.js")
+	script(src="bower_components/doc-ready/doc-ready.js")
+	script(src="bower_components/jquery-bridget/jquery.bridget.js")
+	script(src="bower_components/matches-selector/matches-selector.js")
+	script(src="bower_components/outlayer/outlayer.js")
+	script(src='bower_components/masonry/masonry.js')
 
 	//-script(src='scripts/vendor/jquery.zlayer.full.js')
 	script(src='bower_components/jquery-waypoints/waypoints.js')
@@ -22,7 +33,7 @@
 	script(src='scripts/main.js')
 	// endbuild
 
-	.fb.
+	.Facebook.
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
@@ -32,15 +43,10 @@
 		fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 
-	.gag.
-		<script>
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-3906535-9']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-		</script>
+	script.
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='https://www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-3906535-9');ga('send','pageview');

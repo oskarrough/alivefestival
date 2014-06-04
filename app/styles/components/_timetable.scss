@@ -3,7 +3,7 @@
 //
 
 .Timetable {
-	@include pie-clearfix;
+	@include clearfix;
 }
 .Timetable-day {
 	float: left;

@@ -1,64 +1,63 @@
-//
-// Boilerplate
-// by: Oskar Rough Mosumgaard
-//
+/*!
+	ALIVE FESTIVAL 2009-2014
+	by Oskar Rough Mosumgaard
+	oskarrough.com
+*/
 
+@import "base/_config";
+@import "base/_mixins";
 
-// Config
-@import "base/_config.scss";
-
-// Custom mixins
-@import "base/_mixins.scss";
-
-// Susy (for robust layout math)
-// also applies * { box-sizing: border-box; }
 @import "susy";
-@include border-box-sizing;
 
-// Compass (we need the 0.13 alpha - because of rem mixins and other goodies)
-@import "compass/typography"; // REM fallback
-@import "compass/css3"; // CSS3 mixins
+/**
+ * Utilities (abstract patterns to be reused in components)
+ */
 
-
-// Base styles
-// ------------------------------------
-@import "CSS:../bower_components/normalize-css/normalize";
-@import "CSS:../scripts/vendor/royalslider/royalslider";
-@import "CSS:../scripts/vendor/royalslider/skins/default/rs-default";
-
-@import "module/_magnificPopup.scss";
-@import "base/_fonts.scss";
-@import "base/_base.scss";
-@import "base/_forms.scss";
-@import "base/_icons.scss";
-@import "base/_buttons.scss";
-
-// Layout styles
-// ------------------------------------
-@import "layout/_layout.scss";
+// @import "utilities/_align";
+@import "utilities/_clearfix";
+// @import "utilities/_mediablock";
+// @import "utilities/_tabs";
+// @import "utilities/_truncate";
 
 
-// Plugin styles
-// ------------------------------------
-//@import "../bower_components/rough-navtoggle/rough-navtoggle.scss";
+// @import "CSS:../scripts/vendor/royalslider/royalslider";
+// @import "CSS:royalslider/skins/default/rs-default";
 
+// @import "CSS:../bower_components/magnific-popup/magnific-popup";
+@import 'components/magnific-popup';
+// @import "module/magnificPopup";
 
-// Module styles
-// ------------------------------------
-@import "module/_modules.scss";
-@import "module/_box.scss";
-@import "module/_artist.scss";
-@import "module/_gallery.scss";
-@import "module/_index.scss";
-@import "module/_logo.scss";
-@import "module/_masonry.scss";
-@import "module/_mediablock.scss";
-@import "module/_nav.scss";
-@import "module/_nav-primary.scss";
-@import "module/_nav-extra.scss";
-@import "module/_royalslider.scss";
-@import "module/_history.scss";
-@import "module/_animation.scss";
-@import "module/_tabs.scss";
-@import "module/_timetable.scss";
-@import "module/_social.scss";
+/**
+ * Base
+ */
+
+@import "base/normalize-custom";
+@import "base/fonts";
+@import "base/base";
+@import "base/forms";
+// @import "base/icons";
+@import "base/buttons";
+
+/**
+ * Components
+ */
+
+@import "components/components";
+@import "components/box";
+@import "components/artist";
+@import "components/gallery";
+@import "components/index";
+@import "components/logo";
+@import "components/masonry";
+@import "components/mediablock";
+@import "components/nav";
+@import "components/nav-primary";
+@import "components/nav-extra";
+@import "components/royalslider";
+@import "components/history";
+@import "components/animation";
+@import "components/tabs";
+@import "components/timetable";
+@import "components/social";
+
+@import "layout/layout";

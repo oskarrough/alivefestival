@@ -9,18 +9,30 @@ block vars
 	- var active = active || ''
 
 doctype
-//if lt IE 7
-	html.no-js.lt-ie9.lt-ie8.lt-ie7
-//if IE 7
-	html.no-js.lt-ie9.lt-ie8
-//if IE 8
-	html.no-js.lt-ie9
-// [if gt IE 8] <!
 html.no-js
-	// <![endif]
-
 	head
-		include layout-header
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width')
+		meta(name='description', content='#{description}')
+
+		if active == 'Index'
+			title Alive Festival
+		else
+			title #{active} - Alive Festival
+
+		// build:css styles/main.css
+		link(rel='stylesheet', href='styles/main.css')
+		// endbuild
+
+		script(src='scripts/vendor/modernizr.custom.min.js')
+		//-| <script src="//use.typekit.net/wpt0izv.js"></script>
+		//-| <script>try{Typekit.load();}catch(e){}</script>
+
+		link(rel='canonical', href='http://alivefestival.dk/')
+		| <meta property="fb:app_id" content="114798911889232" />
+		| <meta property="og:title" content="Alive Festival" />
+		| <meta property="og:url" content="http://facebook.om/alivefestival" />
+		| <meta property="og:image" content="" />
 
 	body(class="#{bodyClass}")
 		block content-header

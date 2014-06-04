@@ -1,14 +1,14 @@
 {
-  "name": "alive-festival-2013",
-  "version": "0.1",
+  "name": "alive-festival",
+  "version": "2014",
+  "private": true,
   "dependencies": {
-    "normalize-css": "~2.1.2",
-    "qtip2": "latest",
-    "imagesloaded": "latest",
-    "jquery-waypoints": "latest",
-    "jquery.lazyload": "~1.8.4",
-    "jquery": "~1.10.1",
-    "masonry": "~3.1.1"
+    "masonry": "~3.1.5",
+    "imagesloaded": "~3.1.5",
+    "jquery-waypoints": "~2.0.5",
+    "jquery": "~2.1.1",
+    "qtip2": "~2.2.0",
+    "magnific-popup": "~0.9.9"
   },
   "devDependencies": {}
 }

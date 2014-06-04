@@ -1,6 +1,14 @@
-//
-// Layout
-//
+/**
+ * Layout
+ */
+
+// More sensible box-model
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
 
 html {
 	height: 100%;
@@ -11,7 +19,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: 50% 100%;
 	background-image: url(../images/2013/bg-poster.jpg);
-	@include background-size(cover);
+	background-size: cover;
 	background-attachment: fixed;
 }
 body {
@@ -27,7 +35,7 @@ body {
 // }
 
 .l-Main {
-	@include pie-clearfix;
+	@include clearfix;
 	position: relative;
 	z-index: 1;
 	margin: 2em 0.5em 4em;

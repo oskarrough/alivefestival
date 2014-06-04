@@ -4,9 +4,9 @@
 
 .Navigation--practical,
 .Navigation--history {
-	@include transition-timing-function(cubic-bezier(1,.01,.3,1));
-	@include transition(all 600ms ease-out);
-	@include transform(translateX(-100%) scale(0.25) rotate(-20deg));	
+	transition-timing-function: cubic-bezier(1,.01,.3,1);
+	transition:all 600ms ease-out;
+	transform: translateX(-100%) scale(0.25) rotate(-20deg);
 	position: fixed;
 	top: 7.5em;
 	left: 0;
@@ -16,7 +16,7 @@
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	@media (min-width: 1100px) {
-		@include transform(translateX(-0.25em) scale(1) rotate(2deg));
+		transform: translateX(-0.25em) scale(1) rotate(2deg);
 	}
 	a {
 		font-size: rem(16);
