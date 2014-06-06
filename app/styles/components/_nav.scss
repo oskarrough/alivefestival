@@ -23,12 +23,16 @@
 	left: 0;
 	z-index: 20;
 	border-radius: 0.5em;
-	background: lighten($green, 10%);
-	width: 10em;
-	padding: 0.4em 0;
+	background: $green;
+	// width: 10em;
+	// padding: 0.4em 0;
 	text-align: center;
 	// hide it
 	visibility: hidden;
+
+	a {
+		color: $bleached;
+	}
 }
 .has-dropdown:hover > .Dropdown {
 //.js-hover > .Dropdown {

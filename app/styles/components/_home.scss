@@ -1,0 +1,52 @@
+.Home-introbox {
+	position: relative;
+	padding-bottom: 190px;
+	margin-bottom: 170px;
+	text-align: center;
+
+	.PageTitle {
+		padding-top: 1rem;
+		font-size: 70px;
+	}
+	.Manchet {
+		font-size: 30px;
+		line-height: 1.2;
+		padding-top: 1.25rem;
+	}
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 4.5rem;
+	}
+	.Asset--plant {
+		position: absolute;
+		bottom: -1px;
+		right: -54px;
+		transform-origin: bottom center;
+		// transition: transform 300ms ease;
+		animation: plant 800ms ease infinite alternate;
+
+		&:nth-of-type(1) { right: 100px; animation-delay: 100ms; }
+		&:nth-of-type(2) { right: 200px; animation-delay: 400ms; }
+	}
+	.Frame {
+		width: 400px;
+		position: absolute;
+		bottom: -180px;
+		left: -1rem;
+		-webkit-transform: rotate(-7deg);
+	}
+}
+
+.Home-frame {
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	@media (min-width: 1400px) {
+		// position: absolute;
+		// top: 14rem;
+		// left: 54rem;
+		// width: 29rem;
+		// z-index: 2;
+	}
+}

@@ -1,0 +1,44 @@
+.Asset {
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.Asset--guitar {
+	// font-size: 673px;
+	font-size: 500px;
+	width: 1em;
+	height: em(425,673);
+	margin: 3rem auto 0;
+	background-image: url(../images/2014/guitar.png);
+}
+.Asset--dawg {
+	float: left;
+	// font-size: 556px;
+	font-size: 300px;
+	width: 1em;
+	height: em(239, 556);
+	background-image: url(../images/2014/dawg-reverse.png);
+	position: relative;
+	z-index: 2;
+	margin-bottom: -1rem;
+	left: -1rem;
+
+	transition: transform 1s ease;
+	transform: translateX(-500%);
+	.is-loaded & {
+		transform: translateX(35rem);
+	}
+}
+.Asset--plant {
+	font-size: 115px;
+	width: 1em;
+	height: em(153,115);
+	background-image: url(../images/2014/plant.png);
+}
+@keyframes plant {
+	0% {
+		transform: rotate(15deg);
+	}
+	100% {
+		transform: rotate(-15deg);
+	}
+}

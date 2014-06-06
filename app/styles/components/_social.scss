@@ -1,28 +1,23 @@
-//
-// Social stuff
-//
-
-
-//
 // Social media links
-//
 .Social {
 	position: absolute;
-	top: rem($space);
-	right: rem($space);
+	top: 5px;
+	right: 5px;
+	@media (min-width: $layout-s) {
+		top: rem($space);
+		right: rem($space);
+	}
 }
-.Social-facebook {
-	img { width: 32px; height: 32px; }
+.Social-facebook img {
+	width: 32px;
+	height: 32px;
 }
 
-//
 // Facebook box
-//
 .fb_edge_widget_with_comment {
 	background: #fff;
 	padding: 10px 5px 4px 9px;
 	border-radius: 5px;
-
 	.Box & {
 		margin: 0 1em rem($space);
 	}

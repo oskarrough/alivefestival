@@ -15,13 +15,11 @@
 	height: auto;
 	margin-bottom: em($space);
 }
-
-
 .rsABlock {
+	@extend %burbank-medium;
 	background-color: $green;
 	background-color: rgba($green, 0.65);
 	color: #fff;
-	font-family: $font-medium;
 	letter-spacing: 1px;
 	top: initial;
 	bottom: 0;

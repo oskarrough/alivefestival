@@ -1,8 +1,8 @@
 /******************************
 *
-*  RoyalSlider Default Skin 
+*  RoyalSlider Default Skin
 *
-*    1. Arrows 
+*    1. Arrows
 *    2. Bullets
 *    3. Thumbnails
 *    4. Tabs
@@ -10,11 +10,11 @@
 *    6. Play/close video button
 *    7. Preloader
 *    8. Caption
-*    
+*
 *  Sprite: 'rs-default.png'
 *  Feel free to edit anything
 *  If you don't some part - just delete it
-* 
+*
 ******************************/
 
 
@@ -46,7 +46,7 @@
 .rsDefault.rsVer .rsArrow {
 	width: 100%;
 	height: 44px;
-	
+
 }
 .rsDefault.rsVer .rsArrowLeft { top: 0; left: 0; }
 .rsDefault.rsVer .rsArrowRight { bottom: 0;  left: 0; }
@@ -54,30 +54,27 @@
 .rsDefault.rsHor .rsArrowLeft { left: 0; top: 0; }
 .rsDefault.rsHor .rsArrowRight { right: 0; top:0; }
 
-.rsDefault .rsArrowIcn {		
-	width: 32px;
-	height: 32px;
+.rsDefault .rsArrowIcn {
+	width: 44px;
+	height: 44px;
 	top: 50%;
 	left: 50%;
-	margin-top:-16px;	
-	margin-left: -16px;
+	margin-top:-22px;
+	margin-left: -22px;
 
-	position: absolute;	
-	cursor: pointer;	
-	background: url('rs-default.png');
+	position: absolute;
+	cursor: pointer;
+	background: url('../scripts/vendor/royalslider/skins/default/rs-default.png');
 
-	background-color: #000;
-	background-color: rgba(0,0,0,0.75);
-	*background-color: #000;
-	
-	border-radius: 2px;
+	background-color: $green;
+	border-radius: 50%;
 }
 .rsDefault .rsArrowIcn:hover {
 	background-color: rgba(0,0,0,0.9);
 }
 
-.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
-.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
+.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: -60px -26px; }
+.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: -58px -59px; }
 
 .rsDefault.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
 .rsDefault.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
@@ -95,10 +92,10 @@
 	position: absolute;
 	z-index: 35;
 	left: 0;
-	bottom: 0;
+	bottom: 5.5em;
 	width: 100%;
 	height: auto;
-	margin: 0 auto; 
+	margin: 0 auto;
 
 	background: #000;
 	background: rgba(0,0,0,0.75);
@@ -111,7 +108,7 @@
 	width: 8px;
 	height: 8px;
 	display: inline-block;
-	*display:inline; 
+	*display:inline;
 	*zoom:1;
 	padding: 6px 5px 6px;
 }
@@ -201,8 +198,8 @@
 	width: 20px;
 	position: absolute;
 	display: block;
-	cursor: pointer;	
-	z-index: 21;	
+	cursor: pointer;
+	z-index: 21;
 	background: #000;
 	background: rgba(0,0,0,0.75);
 }
@@ -219,16 +216,16 @@
 .rsDefault.rsWithThumbsHor .rsThumbsArrowLeft { left: 0; top: 0; }
 .rsDefault.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
 
-.rsDefault .rsThumbsArrowIcn {		
+.rsDefault .rsThumbsArrowIcn {
 	width: 16px;
 	height: 16px;
 	top: 50%;
 	left: 50%;
-	margin-top:-8px;	
+	margin-top:-8px;
 	margin-left: -8px;
-	position: absolute;	
-	cursor: pointer;	
-	background: url('rs-default.png');
+	position: absolute;
+	cursor: pointer;
+	background: url('../scripts/vendor/royalslider/skins/default/rs-default.png');
 }
 
 .rsDefault.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
@@ -283,14 +280,14 @@
 	text-decoration: none;
 
 	background-color: #FFF;
-	background-image: -webkit-linear-gradient(top, #fefefe, #f4f4f4); 
+	background-image: -webkit-linear-gradient(top, #fefefe, #f4f4f4);
 	background-image:    -moz-linear-gradient(top, #fefefe, #f4f4f4);
 	background-image:         linear-gradient(to bottom, #fefefe, #f4f4f4);
 
 	-webkit-box-shadow: inset 1px 0 0 #fff;
 	box-shadow: inset 1px 0 0 #fff;
 
-	*display:inline; 
+	*display:inline;
 	*zoom:1;
 }
 .rsDefault .rsTab:first-child {
@@ -299,7 +296,7 @@
 	-webkit-border-bottom-left-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
-.rsDefault .rsTab:last-child { 
+.rsDefault .rsTab:last-child {
 	-webkit-border-top-right-radius: 4px;
 	border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
@@ -307,12 +304,12 @@
 
 	border-right:  1px solid #cfcfcf;
 }
-.rsDefault .rsTab:active { 
-	border: 1px solid #D9D9DD;   
+.rsDefault .rsTab:active {
+	border: 1px solid #D9D9DD;
 	background-color: #f4f4f4;
 	box-shadow:  0 1px 4px rgba(0, 0, 0, 0.2) inset;
 }
-.rsDefault .rsTab.rsNavSelected { 
+.rsDefault .rsTab.rsNavSelected {
 	color: #FFF;
 	border: 1px solid #999;
 	text-shadow: 1px 1px #838383;
@@ -342,7 +339,7 @@
 	display: block;
 	position: absolute;
 	cursor: pointer;
-	
+
 }
 .rsDefault .rsFullscreenIcn {
 	display: block;
@@ -350,7 +347,7 @@
 	width: 32px;
 	height: 32px;
 
-	background: url('rs-default.png') 0 0;
+	background: url('../scripts/vendor/royalslider/skins/default/rs-default.png') 0 0;
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
 	*background-color: #000;
@@ -388,7 +385,7 @@
 	height:64px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
-	
+
 	-webkit-transition: .3s;
 	-moz-transition: .3s;
 	transition: .3s;
@@ -416,7 +413,7 @@
 	cursor: pointer;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: translateZ(0);
-	
+
 }
 .rsDefault .rsCloseVideoBtn.rsiOSBtn {
 	top: -38px;
@@ -427,7 +424,7 @@
 	margin: 6px;
 	width: 32px;
 	height: 32px;
-	background: url('rs-default.png') -64px 0;
+	background: url('../scripts/vendor/royalslider/skins/default/rs-default.png') -64px 0;
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
 	*background-color: #000;
@@ -447,12 +444,12 @@
 .rsDefault .rsPreloader {
 	width:20px;
 	height:20px;
-	background-image:url(../preloaders/preloader-white.gif);
+	background-image:url(../scripts/vendor/royalslider/skins/preloaders/preloader-white.gif);
 
 	left:50%;
 	top:50%;
 	margin-left:-10px;
-	margin-top:-10px;	
+	margin-top:-10px;
 }
 
 

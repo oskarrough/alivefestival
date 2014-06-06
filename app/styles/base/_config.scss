@@ -2,69 +2,32 @@
 // Config
 //
 
-
-//
-// Typography
-//
 $base-font-size-unitless: 16;
 $base-font-size: $base-font-size-unitless * 1px;
 $base-line-height-unitless: 1.4;
 
-
-@font-face {
-    font-family: 'BurbankBigBold';
-    src: url('../styles/fonts/burbankbigregular-bold-webfont.eot');
-    src: url('../styles/fonts/burbankbigregular-bold-webfont.eot?#iefix') format('eot'),
-         url('../styles/fonts/burbankbigregular-bold-webfont.woff') format('woff'),
-         url('../styles/fonts/burbankbigregular-bold-webfont.ttf') format('truetype'),
-         url('../styles/fonts/burbankbigregular-bold-webfont.svg#webfontjtJXFGGC') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'BurbankBigMedium';
-    src: url('../styles/fonts/burbankbigregular-medium-webfont.eot');
-    src: url('../styles/fonts/burbankbigregular-medium-webfont.eot?#iefix') format('eot'),
-         url('../styles/fonts/burbankbigregular-medium-webfont.woff') format('woff'),
-         url('../styles/fonts/burbankbigregular-medium-webfont.ttf') format('truetype'),
-         url('../styles/fonts/burbankbigregular-medium-webfont.svg#webfontWyqpcFyE') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'BurbankBigLight';
-    src: url('../styles/fonts/burbankbigregular-light-webfont.eot');
-    src: url('../styles/fonts/burbankbigregular-light-webfont.eot?#iefix') format('eot'),
-         url('../styles/fonts/burbankbigregular-light-webfont.woff') format('woff'),
-         url('../styles/fonts/burbankbigregular-light-webfont.ttf') format('truetype'),
-         url('../styles/fonts/burbankbigregular-light-webfont.svg#webfont5HQfnhlG') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-$font-bold: 'BurbankBigBold', serif;
-$font-medium: 'BurbankBigMedium', sans-serif;
-$font-light: 'BurbankBigLight', sans-serif;
-$font-header: $font-bold;
-$font-body: $font-medium;
-
-
-//
 // Colors
-//
-$white: #f1f1f1;
-$blue: #48cada;
-$red: #d43d2c;
-$red2: rgb(255, 95, 95);
-$yellow: #fef485;
-$darkeryellow: #989e5e;
-$green: #51AA35; //#35B82D
-$dark: #2d2f2e;
-$black: #222;
+$white:         hsl(0, 0%, 95%);
+$blue:          hsl(187, 66%, 57%);
+// $red:           hsl(6, 66%, 50%);
+// $red2:          hsl(0, 100%, 69%);
+// $yellow:        hsl(55, 98%, 76%);
+$darkeryellow:  hsl(66, 25%, 49%);
+// $green:         hsl(106, 52%, 44%);
+$dark:          hsl(150, 2%, 18%);
+$black:         hsl(0, 0%, 13%);
+$orange:        hsl(14, 100%, 48%);
+$bleached:      hsl(58, 100%, 95%);
+$tandpasta:     hsl(106, 35%, 90%);
+$pink:          hsl(2, 82%, 80%);
+$red:           hsl(8, 80%, 61%);
+$yellow:        hsl(45, 100%, 68%);
+$brown:         hsl(21, 19%, 20%);
+$green:         hsl(105, 46%, 48%);
 
-//
+
 // Layout
-//
-$space: 20px;
+$space: 24px;
 
 // Susy
 $total-columns: 4;
@@ -72,13 +35,7 @@ $column-width: 15em;
 $gutter-width: 1.25em;
 $grid-padding: 1.25em;
 
-
-//
 // Breakpoints
-//
-$breakpoint-small: 580;
-$breakpoint-medium: 720;
-$breakpoint-large: 1000;
-$l-small: em($breakpoint-small);
-$l-medium: em($breakpoint-medium) lt-ie9;
-$l-large: em($breakpoint-large) lt-ie9;
+$layout-s: 580px;
+$layout-m: 720px;
+$layout-l: 1023px;

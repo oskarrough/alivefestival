@@ -1,9 +1,5 @@
-//
-// Logo
-//
-
 .Logo {
-	margin: 1em auto 0.25em;
+	margin: 0 auto 1rem;
 	text-align: center;
 
 	> a {
@@ -11,5 +7,10 @@
 	}
 	img {
 		width: 400px;
+	}
+
+	@media (min-width: $layout-m) {
+		float: left;
+		width: 300px;
 	}
 }

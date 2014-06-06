@@ -11,21 +11,28 @@
 
 
 html {
-	height: 100%;
+	// height: 100%;
+	border: 0.5rem solid $tandpasta;
+	@media (min-width: $layout-s) {
+		border-width: 1rem;
+	}
 }
 body {
-	background-color: $dark;
 	color: $dark;
-	background-repeat: no-repeat;
-	background-position: 50% 100%;
-	background-image: url(../images/2013/bg-poster.jpg);
-	background-size: cover;
-	background-attachment: fixed;
+	background-color: $yellow;
+	// background-image: url(../images/2014/bg.jpg);
+	// background-size: cover;
+	// background-repeat: repeat;
+	// background-position: 50% 100%;
+	// background-attachment: fixed;
 }
 body {
-	padding: 23px;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	padding: 1rem;
+	@media (min-width: $layout-s) {
+		padding: 2rem;
+	}
 }
 
 // Override cursor image
@@ -34,44 +41,15 @@ body {
 // 	cursor: url(../images/cursor.png) -20 -40, default;
 // }
 
-.l-Main {
+.Main {
 	@include clearfix;
 	position: relative;
 	z-index: 1;
-	margin: 2em 0.5em 4em;
-	max-width: 50em;
-
-	@media (min-width: em(740)) {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.Constrained,
-	h1,h2,h3,h4,p,ul,table,iframe {
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: rem($space);
-		padding-right: rem($space);
-	}
-	p {
-		letter-spacing: 1px;
-	}
-	> img {
-		margin-bottom: em($space);
-	}
-	ul {
-		list-style: inherit;
-		padding-left: rem($space*2);
-		p {
-			padding-left: 0;
-		}
-	}
 }
 
 // Wider music page
 .Page--Musik {
-	.l-Main {
+	.Main {
 		min-width: 95%;
 	}
 }

@@ -27,6 +27,17 @@ html.no-js
 		script(src='scripts/vendor/modernizr.custom.min.js')
 		//-| <script src="//use.typekit.net/wpt0izv.js"></script>
 		//-| <script>try{Typekit.load();}catch(e){}</script>
+		script.
+			WebFontConfig = { fontdeck: { id: '46228' } };
+			(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+			})();
 
 		link(rel='canonical', href='http://alivefestival.dk/')
 		| <meta property="fb:app_id" content="114798911889232" />
@@ -35,14 +46,14 @@ html.no-js
 		| <meta property="og:image" content="" />
 
 	body(class="#{bodyClass}")
-		block content-header
 
-		header#l-Header.l-Header
+		header#Header.Header
 			h1.Logo
 				a(href="/")
-					img(src='images/alivefestival.png', alt='')
+					//- img(src='images/2014/alivefestival-2014-logo.png', alt='Alive Festival')
+					img(src='images/2014/alive-header.jpg', alt='Alive Festival')
 
-			nav#l-Navigation.l-Navigation
+			nav#SiteNav.SiteNav
 				include navigation
 
 			.Social
@@ -50,8 +61,13 @@ html.no-js
 					img(src="images/handycons/facebook_32.png", alt="")
 					//img(src='images/icon/social-facebook.png', alt='')
 
-		#l-Main.l-Main
+		#Main.Main
 			block content
 
-		block content-footer
+		.Loader
+			ul.Loader-object
+				li
+				li
+				li
+
 		include layout-footer

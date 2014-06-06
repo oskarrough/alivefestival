@@ -54,7 +54,7 @@ $(document).ready(function() {
 		}
 	});
 
-	var $main = $('.l-Main');
+	var $main = $('.Main');
 	$main.imagesLoaded( function() {
 		$('html').addClass('is-loaded');
 	});

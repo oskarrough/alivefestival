@@ -5,10 +5,11 @@
 html {
 	//text-rendering: optimizeLegibility;
 	//-webkit-font-smoothing: antialiased;
+	// font-family: $font-body;
+	@extend %patron-light;
+	// @extend %brezel-regular;
 	font-size: $base-font-size;
-	font-family: $font-body;
 	line-height: $base-line-height-unitless;
-	color: #f1f1f1;
 }
 
 // Headers
@@ -18,11 +19,32 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-bold;
-	font-weight: 400;
+	@extend %burbank-bold;
+	// @extend %brezel-bold;
 	line-height: 1;
+	color: $brown;
 	//text-transform: uppercase;
 }
+.PageTitle {
+	font-size: 40px;
+	text-align: center;
+	margin: 3rem auto 1rem;
+
+	// padding-top: em(10,40);
+	// background: transparent url(../images/pensel1.png) no-repeat center center;
+	// background-size: cover;
+	// min-height: 1.5em;
+
+	// background: hsl(125, 81%, 40%);
+	// background-image: linear-gradient(hsla(0, 100%, 100%, 0.25), hsla(0, 0%, 0%, 0.02));
+	// color: hsl(0, 0%, 98%);
+	// border-bottom: 5px solid hsl(0, 100%, 100%);
+	// border-radius: 5px;
+	// border-bottom-left-radius: 0;
+	// border-bottom-right-radius: 0;
+	// padding: 0.6em 0.5em 0.5em;
+}
+
 
 // Make sure (many) elements have the same margin
 blockquote,
@@ -45,10 +67,12 @@ h3,
 h4 {
 	font-size: rem(20);
 	margin-bottom: 0.25em;
+	letter-spacing: 0.05em;
+	color: hsl(17, 100%, 47%);
 }
 h4 {
-	font-size: rem(20);
-	padding-top: 1.5em;
+	margin-top: rem($space*2);
+	letter-spacing: 0.05em;
 }
 fieldset {
     border: 0;
@@ -60,14 +84,14 @@ ul {
     padding: 0;
 }
 strong {
-	font-weight: 400;
-	font-family: $font-bold;
+	font-weight: bold;
+	// @extend %burbank-bold;
 }
-.l-Main > p:first-of-type strong {
+.Main > p:first-of-type strong {
 	font-size: 1.25rem;
 }
 blockquote {
-	// font-family: $font-bold;
+	// @extend %burbank-bold;
 	font-size: rem(22);
 	margin-left: 1em;
 	font-style: italic;
@@ -77,11 +101,11 @@ blockquote {
 	}
 }
 .Muted {
-	font-family: $font-body;
+	@extend %burbank-light;
 }
 
 // Links
-.l-Main {
+.Main {
 	a {
 		// text-decoration: none;
 		color: $green;

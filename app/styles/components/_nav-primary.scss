@@ -4,14 +4,14 @@
 
 .Navigation--primary {
 	@include clearfix;
-	font-family: $font-header;
+	@extend %burbank-bold;
+	font-size: rem(30);
 	text-align: center;
+	margin-bottom: 1rem;
 
-	font-size: rem(20);
-	@media (min-width: em(700)) {
-		> li > a {
-			font-size: rem(26);
-		}
+	@media (min-width: $layout-m) {
+		padding-top: 6rem;
+		max-width: 57rem;
 	}
 
 	li {
@@ -19,14 +19,14 @@
 		transition: transform 1000ms;
 	}
 	a {
-		transition: background 200ms;
+		transition: background 200ms, transform 200ms ease;
 		background-size: 1%;
 		display: inline-block;
 		padding: 0.25em 0.5em;
-		color: white;
+		color: $brown;
 		text-decoration: none;
 		&:hover {
-			transform: scale(1.15);
+			transform: scale(1.1);
 		}
 	}
 	a:hover,
@@ -41,4 +41,30 @@
 
 	// Dropdowns
 	ul {}
+}
+
+
+
+
+
+
+
+
+@mixin iterative-delay($count: 2, $delay: 0.07s) {
+	@for $i from 1 through $count {
+		&:nth-child(#{$i}) {
+			transition-delay: $delay * $i;
+		}
+	}
+}
+
+.Navigation--primary li {
+	@include iterative-delay(10);
+	transition: opacity 250ms ease-in-out;
+	opacity: 0;
+	// show them when they are loaded or if we dont have js
+	.is-loaded &,
+	.no-js & {
+		opacity: 1;
+	}
 }

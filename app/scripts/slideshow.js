@@ -3,29 +3,41 @@
 //
 
 $('.Slideshow').royalSlider({
-	arrowsNav: true,
-	loop: true,
-	keyboardNavEnabled: true,
-	arrowsNavAutoHide: true,
-	autoScaleSlider: true,
-	autoScaleSliderWidth: 600,
-	autoScaleSliderHeight: 400,
-	thumbsFitInViewport: true,
-	navigateByClick: true,
-	startSlideId: 0,
-	autoPlay: true,
-	transitionType:'move',
-	globalCaption: false,
+
 	imageScalePadding: 0,
+	autoScaleSlider: true,
+	autoScaleSliderWidth: 428,
+	autoScaleSliderHeight: 315,
+
+	transitionType: 'move',
+	transitionSpeed: 600,
+	randomizeSlides: true,
+	globalCaption: false,
+	loop: true,
+	// navigateByClick: true,
+
+	keyboardNavEnabled: false,
+	arrowsNav: true,
+	arrowsNavAutoHide: true,
 	controlNavigation: 'none',
-	thumbs: {
-		// drag: false,
-		// touch: false,
-		// arrows: false,
-		//autoCenter: false,
-		orientation: 'horizontal',
-		//spacing: 0
-	}
+
+	// thumbsFitInViewport: true,
+	// startSlideId: 0,
+
+	autoPlay: {
+		enabled: true,
+		delay: 3000
+	},
+
+	// controlNavigation: 'none',
+	// thumbs: {
+	// 	// drag: false,
+	// 	// touch: false,
+	// 	// arrows: false,
+	// 	//autoCenter: false,
+	// 	orientation: 'horizontal',
+	// 	//spacing: 0
+	// }
 });
 //$('.Slideshow').data('royalSlider').updateSliderSize(true);
 

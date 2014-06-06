@@ -19,18 +19,13 @@
 // @import "utilities/_tabs";
 // @import "utilities/_truncate";
 
+@import 'components/royalslider-vendor';
+@import "../scripts/vendor/royalslider/skins/default/rs-default";
 
-// @import "CSS:../scripts/vendor/royalslider/royalslider";
-// @import "CSS:royalslider/skins/default/rs-default";
-
-// @import "CSS:../bower_components/magnific-popup/magnific-popup";
 @import 'components/magnific-popup';
-// @import "module/magnificPopup";
 
-/**
- * Base
- */
 
+// Base
 @import "base/normalize-custom";
 @import "base/fonts";
 @import "base/base";
@@ -38,15 +33,17 @@
 // @import "base/icons";
 @import "base/buttons";
 
-/**
- * Components
- */
+// Layout
+@import "layout/layout";
 
-@import "components/components";
+// Components
+@import "components/assets";
 @import "components/box";
 @import "components/artist";
 @import "components/gallery";
 @import "components/index";
+@import "components/frame";
+@import "components/loader";
 @import "components/logo";
 @import "components/masonry";
 @import "components/mediablock";
@@ -59,5 +56,5 @@
 @import "components/tabs";
 @import "components/timetable";
 @import "components/social";
-
-@import "layout/layout";
+@import "components/home";
+@import "components/components";

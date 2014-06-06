@@ -16,7 +16,7 @@ function goGrid() {
 	}
 }
 
-var $main = $('#l-Main');
+var $main = $('#Main');
 if ($main.find('img').length > 0) {
 
 	$(function () {
