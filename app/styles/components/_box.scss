@@ -1,5 +1,6 @@
 %Box {
 	@include clearfix;
+	position: relative;
 	max-width: 50rem;
 	background-color: rgb(240, 238, 234);
 	border-radius: 8px;
@@ -16,10 +17,15 @@
 		margin-bottom: 0;
 	}
 	p {
-		font-size: 20px;
+		@media (min-width: $layout-s) {
+			font-size: 18px;
+		}
+		@media (min-width: $layout-l) {
+			font-size: 20px;
+		}
 	}
 	figure {
-		margin: 2rem 0;
+		margin: 2rem 1rem;
 	}
 	.Constrained,
 	h2,h3,h4,p,ul,table,iframe {

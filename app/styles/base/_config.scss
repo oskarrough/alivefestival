@@ -29,11 +29,18 @@ $green:         hsl(105, 46%, 48%);
 // Layout
 $space: 24px;
 
-// Susy
-$total-columns: 4;
-$column-width: 15em;
-$gutter-width: 1.25em;
-$grid-padding: 1.25em;
+// gutters are defined in a ratio to the column width
+$susy: (
+	box-sizing: border-box,
+	columns: 4,
+	gutters: 20/200
+);
+
+// Good looking easings for animation
+$easing: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easing2: cubic-bezier(0.770, 0, 0.175, 1);
+$easing3: cubic-bezier(0.165,.84,.44,1);
+$easing4: cubic-bezier(1,.01,.3,1);
 
 // Breakpoints
 $layout-s: 580px;

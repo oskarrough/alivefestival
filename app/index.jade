@@ -6,25 +6,54 @@ block vars
 extends views/includes/layout
 
 block content
-	.html.
+	.Box.Home-introbox.
+		<h1 class="PageTitle"><span>Velkommen til Alive Festival 2014</span></h1>
+		<p class="Manchet">I en skjult oase mellem hav og fjord i hjertet af Thy løber Alive Festival i år af stablen for sjette gang i træk. Kom!</p>
+		<p>Fireogtyve koncerter paa tre dage, camping, surf, thy øl på fad og dejlige mennesker!</p>
+		<p><a href="/billetter" class="Button Button--big">Få din billet nu!</a></p>
 
 		<div class="Asset Asset--dawg"></div>
+		<div class="Asset Asset--plant"></div>
+		<div class="Asset Asset--plant"></div>
+		<div class="Asset Asset--plant"></div>
 
-		<div class="Box Home-introbox">
-			<h1 class="PageTitle"><span>Velkommen til Alive Festival 2014</span></h1>
-			<p class="Manchet">I en skjult oase mellem hav og fjord i hjertet af Thy løber Alive Festival i år af stablen for sjette gang i træk. Vi ses til Danmarks mest levende festival!</p>
-			<p><a href="/billetter" class="Button Button--big">Få din billet nu!</a></p>
-
-			<div class="Asset Asset--plant"></div>
-			<div class="Asset Asset--plant"></div>
-			<div class="Asset Asset--plant"></div>
-
+		<div class="Home-mood">
 			<figure class="Frame">
-				<img src="images/P7_1.gif">
+				<img src="images/moods/P7_1.gif">
 			</figure>
 		</div>
 
-		<figure class="Home-frame Frame">
+	.Artists
+		h2.Title 24 koncerter. Torsdag til søndag. Tre dages musik &amp; fest med glade mennesker.
+		h3: a(href="#") The Raveonettes
+		h3: a(href="#") Veto
+		h3: a(href="#") Ebo Taylor
+		h3: a(href="#") Fallulah
+		h3: a(href="#") Den Sorte Skole
+		h3: a(href="#") Christian Hjelm
+		h3: a(href="#") Mø
+		h3: a(href="#") Dråpe
+		h3: a(href="#") Eloq
+		h3: a(href="#") Synd og skam
+		h3: a(href="#") Baby in vain
+		h3: a(href="#") The Late Great Fitzgeraldos
+		h3: a(href="#") Lars and the hands of light
+		h3: a(href="#") Folkeklubben
+		h3: a(href="#") Mont Oliver
+		h3: a(href="#") Schultz and Forever
+		h3: a(href="#") Bottled in England
+		h3: a(href="#") Fitness Figures
+		h3: a(href="#") Santiago
+		h3: a(href="#") Workers in work
+		h3: a(href="#") Beastie Respond
+		h3: a(href="#") Tales of dust
+		h3: a(href="#") Den våde vaffel
+		h3: a(href="#") Rupture Plains
+
+	.Asset.Asset--guitar
+
+	.Home-gallery.
+		<figure class="Frame">
 			<div class="Slideshow royalSlider rsDefault">
 				<img class="rsImg" src="/images/gallery2/publikum5.jpg" data-rsTmb='/images/gallery2/publikum5.jpg'>
 				<img class="rsImg" src="/images/gallery2/koncert3.jpg" data-rsTmb='/images/gallery2/koncert3.jpg'>
@@ -33,8 +62,5 @@ block content
 			</div>
 		</figure>
 
-		<div class="Asset Asset--guitar"></div>
-
-		<div class="Box">
-			<p><a href="https://www.facebook.com/alivefestival/photos_albums" target="_blank" class="Button Button">&rarr; Se flere billeder på vores Facebook</a></p>
-		</div>
+	.Box.
+		<p><a href="https://www.facebook.com/alivefestival/photos_albums" target="_blank" class="Button Button">&rarr; Se flere billeder på vores Facebook</a></p>

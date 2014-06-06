@@ -6,19 +6,21 @@ block vars
 extends views/includes/layout
 
 block content
-	.Box
-		ul#tabs.TabsNav(role="tablist")
+	include views/modules/artists-masonry.jade
+
+	.Whatever
+		//-ul#tabs.TabsNav(role="tablist")
 			li: a#tab1(href="#panel1", onclick="showTab(1);return false;", role="tab", aria-controls="panel1", aria-selected="false")
 					h1.PageTitle
 						span Musik
-				
+
 			li: a#tab2(href="#panel2", onclick="showTab(2);return false;", role="tab", aria-controls="panel2", aria-selected="false")
 					h1.PageTitle
 						span Program
-				
-		.Tabs
+
+		//-.Tabs
 			#panel1.Tabs-panel(role="tabpanel", aria-labelledby="tab1")
 				include views/modules/artists-masonry.jade
-			
+
 			#panel2.Tabs-panel(role="tabpanel", aria-labelledby="tab2")
 				include views/modules/timetable.jade

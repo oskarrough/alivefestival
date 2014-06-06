@@ -1,12 +1,18 @@
 .Home-introbox {
 	position: relative;
-	padding-bottom: 190px;
+	max-width: 40rem;
+	padding-bottom: 14rem;
 	margin-bottom: 170px;
 	text-align: center;
 
+	@media (min-width: $layout-l) {
+		float: right;
+		margin-left: -100% !important;
+	}
+
 	.PageTitle {
 		padding-top: 1rem;
-		font-size: 70px;
+		font-size: 60px;
 	}
 	.Manchet {
 		font-size: 30px;
@@ -17,6 +23,10 @@
 		margin-left: auto;
 		margin-right: auto;
 		padding-right: 4.5rem;
+	}
+	.Asset--dawg {
+		position: absolute;
+		top: -96px;
 	}
 	.Asset--plant {
 		position: absolute;
@@ -29,24 +39,33 @@
 		&:nth-of-type(1) { right: 100px; animation-delay: 100ms; }
 		&:nth-of-type(2) { right: 200px; animation-delay: 400ms; }
 	}
-	.Frame {
-		width: 400px;
-		position: absolute;
-		bottom: -180px;
-		left: -1rem;
-		-webkit-transform: rotate(-7deg);
-	}
+}
+.Home-mood {
+	width: 400px;
+	position: absolute;
+	bottom: -180px;
+	left: -3rem;
+	transform: rotate(-4deg);
 }
 
-.Home-frame {
-	max-width: 90%;
+.Home-gallery {
+	max-width: 95%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 5rem;
 	@media (min-width: 1400px) {
 		// position: absolute;
 		// top: 14rem;
 		// left: 54rem;
 		// width: 29rem;
 		// z-index: 2;
+	}
+}
+
+
+.Page--frivillig .Box .Frame {
+	transform: rotate(2deg);
+	@media (min-width: $layout-l) {
+		left: -7rem;
 	}
 }

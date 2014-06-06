@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	// $(".Artists h3").fitText(1);
+
 	$('.js-Popup--artist').magnificPopup({
 		type: 'inline',
 		mainClass: 'mfp-fade',
@@ -57,6 +59,13 @@ $(document).ready(function() {
 	var $main = $('.Main');
 	$main.imagesLoaded( function() {
 		$('html').addClass('is-loaded');
+	});
+
+	var $artists = $('.Masonry').find('.Artist');
+	$artists.each(function(index, el){
+		$(this).imagesLoaded( function() {
+			$(el).addClass('is-loaded');
+		});
 	});
 
 

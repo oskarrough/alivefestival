@@ -26,8 +26,8 @@ $('.Slideshow').royalSlider({
 
 	autoPlay: {
 		enabled: true,
-		delay: 3000
-	},
+		delay: 2000
+	}
 
 	// controlNavigation: 'none',
 	// thumbs: {

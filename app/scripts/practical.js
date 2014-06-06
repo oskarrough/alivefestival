@@ -7,37 +7,42 @@ $(function() {
 
 	// Element that marks a section
 	$('.Link--Praktisk').append('<ul class="Navigation Dropdown Navigation--practical"></ul>');
-	var $waypoint = $('.Page--Praktisk .Main h4');
+	var $title = $('.Page--Praktisk .Main h4');
 
 	// Wrapper for the generated menu
-	var $waypointNav = $('.Navigation--practical');
+	var $nav = $('.Navigation--practical');
 
 
 	//
 	// Generate a menu from the content on the page
 	//
-	$waypointNav.html('');
-	$waypoint.each( function() {
+	$nav.html('');
+	$title.each( function() {
 		var myID = this.id;
 
 		if (myID) {
-			$waypointNav.append('<li><a href="#' + myID + '">' + myID + '</a></li>');
+			$nav.append('<li><a href="#' + myID + '">' + myID + '</a></li>');
 		}
 	});
 
+	$nav.waypoint(function(){
+		$nav.toggleClass('is-sticky');
+	}, {
+		offset: '170px'
+	});
 
 	//
 	// Nav highlighting
 	//
-	$waypoint
+	$title
 	.waypoint(function(direction) {
-		var $links = $waypointNav.find('a[href="#' + this.id + '"]');
+		var $links = $nav.find('a[href="#' + this.id + '"]');
 		$links.toggleClass('is-active', direction === 'down');
 	}, {
 		offset: '90%'
 	})
 	.waypoint(function(direction) {
-		var $links = $waypointNav.find('a[href="#' + this.id + '"]');
+		var $links = $nav.find('a[href="#' + this.id + '"]');
 		$links.toggleClass('is-active', direction === 'up');
 	}, {
 		offset: function() {
@@ -60,5 +65,5 @@ $(function() {
 		}, 300, function() {
 		});
 	}
-	$waypointNav.find('a').on('click', jump);
+	$nav.find('a').on('click', jump);
 });

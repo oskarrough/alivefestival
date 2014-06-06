@@ -10,19 +10,19 @@ $small-from: 400px;
 
 // Small/Medium version
 $sm-columns: 3;
-$sm-from: 600px;
+$sm-from: 900px;
 
 // Medium version
 $medium-columns: 4;
-$medium-from: 900px;
+$medium-from: 1300px;
 
 // Medium/Large version
 $ml-columns: 5;
-$ml-from: 1300px;
+$ml-from: 1700px;
 
 // Large version
-$large-columns: 6;
-$large-from: 1500px;
+// $large-columns: 6;
+// $large-from: 1500px;
 
 .Main .Masonry {
 	padding-left: 0;
@@ -45,26 +45,9 @@ $large-from: 1500px;
 	@media (min-width: em($ml-from)) {
 		width: span(1 of $ml-columns);
 	}
-	@media (min-width: em($large-from)) {
-		width: span(1 of $large-columns) - 0.5;
-	}
-
-	//
-	// Animate in
-	//
-	transition: opacity 1s ease-out;
-	opacity: 0;
-	//@include translateY(-2px);
-	.loaded & {
-		opacity: 1;
-		//@include translateY(0);
-	}
-	@for $i from 1 through 30 {
-		&:nth-child(#{$i}){
-			$delay: 1s * $i * 0.08;
-			transition-delay: $delay;
-		}
-	}
+	// @media (min-width: em($large-from)) {
+	// 	width: span(1 of $large-columns) - 0.5;
+	// }
 }
 .gutter-sizer {
 	@media (min-width: em($small-from)) {
@@ -79,20 +62,50 @@ $large-from: 1500px;
 	@media (min-width: em($ml-from)) {
 		width: gutter($ml-columns);
 	}
-	@media (min-width: em($large-from)) {
-		width: gutter($large-columns);
-	}
+	// @media (min-width: em($large-from)) {
+	// 	width: gutter($large-columns);
+	// }
 }
 .Masonry > .Artist {
-	margin-bottom: 2%;
+	margin-bottom: 1rem;
+
 	.Artist-title {
+		font-size: 30px;
 		position: absolute;
 		left: -3px;
 		bottom: 20px;
 		margin-bottom: 0;
-		padding: 0.2em 0.3em;
+		padding: 0.3em 0.5em 0.2em;
 		background-color: #000;
-		color: $white;
+		background-color: $green;
+		color: $bleached;
 		box-shadow: 3px 3px 0 0 rgba(0,0,0,0.5);
+	}
+
+	&:nth-child(2n) .Artist-title {
+		background-color: $red;
+	}
+	&:nth-child(3n) .Artist-title {
+		background-color: $blue;
+	}
+	&:nth-child(4n) .Artist-title {
+		background-color: $brown;
+	}
+
+	// animate in
+
+	transition: opacity 1s ease-out;
+	opacity: 0;
+	//@include translateY(-2px);
+	&.is-loaded {
+		opacity: 1;
+		//@include translateY(0);
+	}
+
+	@for $i from 1 through 30 {
+		&:nth-child(#{$i}){
+			$delay: 1s * $i * 0.08;
+			transition-delay: $delay;
+		}
 	}
 }

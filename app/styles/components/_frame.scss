@@ -1,8 +1,11 @@
 .Frame {
 	position: relative;
+
 	// hide image
 	overflow: hidden;
+	height: 0;
 	padding: 0.5em 0.5em 1em;
+	padding-bottom: 73.598130841%;
 
 	// the frame
 	&:before {
@@ -20,9 +23,22 @@
 	// frame content
 	img {
 		vertical-align: top;
+		width: 100%;
 	}
 
 	.royalSlider {
 		margin-bottom: 0;
+	}
+}
+.Frame--square {
+	padding-bottom: 0.664583333%;
+}
+
+.Frames {
+	.Frame {
+		float: left;
+		// width: 30%;
+		// margin-left: 1%;
+		margin-right: 1rem;
 	}
 }

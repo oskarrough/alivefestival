@@ -64,9 +64,9 @@
 
 	position: absolute;
 	cursor: pointer;
-	background: url('../scripts/vendor/royalslider/skins/default/rs-default.png');
-
+	// background: url('../scripts/vendor/royalslider/skins/default/rs-default.png');
 	background-color: $green;
+	background-image: url('../images/handycons/heart_128.png');
 	border-radius: 50%;
 }
 .rsDefault .rsArrowIcn:hover {

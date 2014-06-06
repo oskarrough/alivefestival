@@ -3,11 +3,12 @@
 //
 
 html {
-	//text-rendering: optimizeLegibility;
-	//-webkit-font-smoothing: antialiased;
-	// font-family: $font-body;
-	@extend %patron-light;
+	text-rendering: optimizeLegibility;
+	// -webkit-font-smoothing: antialiased;
+	// @extend %patron-light;
 	// @extend %brezel-regular;
+	// @extend %burbank-light;
+	font-family: 'apercu';
 	font-size: $base-font-size;
 	line-height: $base-line-height-unitless;
 }
@@ -28,7 +29,7 @@ h6 {
 .PageTitle {
 	font-size: 40px;
 	text-align: center;
-	margin: 3rem auto 1rem;
+	margin: 3rem auto 2rem;
 
 	// padding-top: em(10,40);
 	// background: transparent url(../images/pensel1.png) no-repeat center center;
@@ -45,6 +46,12 @@ h6 {
 	// padding: 0.6em 0.5em 0.5em;
 }
 
+.Title {
+	font-size: 60px;
+	transform: rotate(-2deg);
+	margin-bottom: 3rem;
+	max-width: 90%;
+}
 
 // Make sure (many) elements have the same margin
 blockquote,
