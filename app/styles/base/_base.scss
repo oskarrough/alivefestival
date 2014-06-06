@@ -6,9 +6,9 @@ html {
 	text-rendering: optimizeLegibility;
 	// -webkit-font-smoothing: antialiased;
 	// @extend %patron-light;
-	// @extend %brezel-regular;
+	@extend %brezel-regular;
 	// @extend %burbank-light;
-	font-family: 'apercu';
+	// font-family: 'apercu';
 	font-size: $base-font-size;
 	line-height: $base-line-height-unitless;
 }
@@ -21,7 +21,7 @@ h4,
 h5,
 h6 {
 	@extend %burbank-bold;
-	// @extend %brezel-bold;
+	@extend %brezel-bold;
 	line-height: 1;
 	color: $brown;
 	//text-transform: uppercase;
