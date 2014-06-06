@@ -10,7 +10,7 @@ block content
 		<h1 class="PageTitle"><span>Velkommen til Alive Festival 2014</span></h1>
 		<p class="Manchet">I en skjult oase mellem hav og fjord i hjertet af Thy løber Alive Festival i år af stablen for sjette gang i træk. Kom!</p>
 		<p>Fireogtyve koncerter paa tre dage, camping, surf, thy øl på fad og dejlige mennesker!</p>
-		<p><a href="/billetter" class="Button Button--big">Få din billet nu!</a></p>
+		<p><a href="billetter.html" class="Button Button--big">Få din billet nu!</a></p>
 
 		<div class="Asset Asset--dawg"></div>
 		<div class="Asset Asset--plant"></div>
@@ -19,48 +19,188 @@ block content
 
 		<div class="Home-mood">
 			<figure class="Frame">
-				<img src="images/moods/P7_1.gif">
+				<a href="https://www.youtube.com/watch?v=xHyDHIuHtNg" class="js-Popup--video">
+					<div class="Slideshow royalSlider rsDefault">
+						<img class="rsImg" src="/images/gallery/p-6223.jpg">
+						<img class="rsImg" src="images/gallery/p-6422.jpg">
+					</div>
+				</a>
+				<!-- <img src="images/moods/P7_1.gif"> -->
 			</figure>
 		</div>
 
-	.Artists
+	.Alist
 		h2.Title 24 koncerter. Torsdag til søndag. Tre dages musik &amp; fest med glade mennesker.
-		h3: a(href="#") The Raveonettes
-		h3: a(href="#") Veto
-		h3: a(href="#") Ebo Taylor
-		h3: a(href="#") Fallulah
-		h3: a(href="#") Den Sorte Skole
-		h3: a(href="#") Christian Hjelm
-		h3: a(href="#") Mø
-		h3: a(href="#") Dråpe
-		h3: a(href="#") Eloq
-		h3: a(href="#") Synd og skam
-		h3: a(href="#") Baby in vain
-		h3: a(href="#") The Late Great Fitzgeraldos
-		h3: a(href="#") Lars and the hands of light
-		h3: a(href="#") Folkeklubben
-		h3: a(href="#") Mont Oliver
-		h3: a(href="#") Schultz and Forever
-		h3: a(href="#") Bottled in England
-		h3: a(href="#") Fitness Figures
-		h3: a(href="#") Santiago
-		h3: a(href="#") Workers in work
-		h3: a(href="#") Beastie Respond
-		h3: a(href="#") Tales of dust
-		h3: a(href="#") Den våde vaffel
-		h3: a(href="#") Rupture Plains
-
-	.Asset.Asset--guitar
+		h3: a(href="/musik.html") The Raveonettes
+		h3: a(href="/musik.html") Veto
+		h3: a(href="/musik.html") Ebo Taylor
+		h3: a(href="/musik.html") Fallulah
+		h3: a(href="/musik.html") Den Sorte Skole
+		h3: a(href="/musik.html") Christian Hjelm
+		h3: a(href="/musik.html") Mø
+		h3: a(href="/musik.html") Dråpe
+		h3: a(href="/musik.html") Eloq
+		h3: a(href="/musik.html") Synd og skam
+		h3: a(href="/musik.html") Baby in vain
+		h3: a(href="/musik.html") The Late Great Fitzgeraldos
+		h3: a(href="/musik.html") Lars and the hands of light
+		h3: a(href="/musik.html") Folkeklubben
+		h3: a(href="/musik.html") Mont Oliver
+		h3: a(href="/musik.html") Schultz and Forever
+		h3: a(href="/musik.html") Bottled in England
+		h3: a(href="/musik.html") Fitness Figures
+		h3: a(href="/musik.html") Santiago
+		h3: a(href="/musik.html") Workers in work
+		h3: a(href="/musik.html") Beastie Respond
+		h3: a(href="/musik.html") Tales of dust
+		h3: a(href="/musik.html") Den våde vaffel
+		h3: a(href="/musik.html") Rupture Plains
 
 	.Home-gallery.
 		<figure class="Frame">
 			<div class="Slideshow royalSlider rsDefault">
-				<img class="rsImg" src="/images/gallery2/publikum5.jpg" data-rsTmb='/images/gallery2/publikum5.jpg'>
-				<img class="rsImg" src="/images/gallery2/koncert3.jpg" data-rsTmb='/images/gallery2/koncert3.jpg'>
-				<img class="rsImg" src="/images/gallery2/publikum.jpg" data-rsTmb='/images/gallery2/publikum.jpg'>
-				<img class="rsImg" src="/images/gallery2/koncert2.jpg" data-rsTmb='/images/gallery2/koncert2.jpg'>
+				<a class="rsImg" href="/images/gallery2/publikum5.jpg">publikum5</a>
+				<a class="rsImg" href="/images/gallery/p-6146.jpg">6146</a>
+				<a class="rsImg" href="/images/gallery/p-6154.jpg">6154</a>
+				<a class="rsImg" href="/images/gallery/p-6223.jpg">6223</a>
+				<a class="rsImg" href="/images/gallery/p-6337.jpg">6337</a>
+				<a class="rsImg" href="/images/gallery/p-6425.jpg">6425</a>
+				<a class="rsImg" href="/images/gallery/p-6647.jpg">6647</a>
+				<a class="rsImg" href="/images/gallery/p-6812.jpg">6812</a>
+				<a class="rsImg" href="/images/gallery/p-7439.jpg">7439</a>
+				<a class="rsImg" href="/images/gallery2/koncert3.jpg">koncert3</a>
+				<a class="rsImg" href="/images/gallery2/publikum.jpg">publikum</a>
+				<a class="rsImg" href="/images/gallery2/koncert2.jpg">koncert2</a>
 			</div>
 		</figure>
 
-	.Box.
+	.Asset.Asset--guitar
+
+	//-.Box.
 		<p><a href="https://www.facebook.com/alivefestival/photos_albums" target="_blank" class="Button Button">&rarr; Se flere billeder på vores Facebook</a></p>
+
+	.Box
+		h2.Box-title Vi starter med en Thy-øl på Thisted Bryghus!
+
+		p.Manchet Start din festival med en kølig Thy Pilsner frisk fra fad torsdag d. 14. august kl 16-19.
+		p I år starter Alive på Thisted Bryghus med ølhygge, sol og dj's. Når du har fået dit armbånd på, giver Thisted Bryghus den første fadøl, og der er også mulighed for en rundvisning på det gamle bryggeri fra 1902.
+		p Bryghuset ligger lige ved stationen, og derfra er det kun 5 min. gågang til festivalpladsen, der åbner kl. 19.
+
+	.Asset.Asset--guitar
+
+	.Box
+		h2.Box-title Spring i bølgen: Surfskole og Mont Oliver koncert i Cold Hawaii!
+		p.Manchet Oplev Cold Hawaii på nærmeste hold!
+		p Fredag d. 15. kl 11-15 flytter Alive Festival til Klitmøller, hvor vi i samarbejde med West Wind giver mulighed for at tage på surfskole til kun 150kr. Vil du hellere blive på land, så kan du nyde de lækre toner fra Mont Oliver og vores resident DJ-smed en kold fadøl i hånden.
+
+	.Box.
+		<div class="Box-child">
+			<h2>Seneste nyt</h2>
+			<section class="List">
+
+				<article class="List-item">
+					<h3 class="Article-title Title">
+						<a href="/blog/2013-12-08-workers-in-songs-sejler-til-thy">
+							Workers in Songs sejler til Thy
+						</a>
+						<small class="Muted">(12 August 2013)</small>
+					</h3>
+					<div class="Article-body Summary">
+
+					</div>
+				</article>
+
+				<article class="List-item">
+					<h3 class="Article-title Title">
+						<a href="/blog/2013-09-08-thyalive-p-instagram">
+							#ThyAlive på Instagram
+						</a>
+						<small class="Muted">(09 August 2013)</small>
+					</h3>
+					<div class="Article-body Summary">
+
+					</div>
+				</article>
+
+
+
+
+				<article class="List-item">
+					<h3 class="Article-title Title">
+						<a href="/blog/2013-09-08-this-is-you-udgiver-frste-single">
+							This Is You udgiver første single
+						</a>
+						<small class="Muted">(09 August 2013)</small>
+					</h3>
+					<div class="Article-body Summary">
+
+					</div>
+				</article>
+
+
+
+
+				<article class="List-item">
+					<h3 class="Article-title Title">
+						<a href="/blog/2013-07-08-spilleplanen-er-klar">
+							Spilleplanen er klar
+						</a>
+						<small class="Muted">(07 August 2013)</small>
+					</h3>
+					<div class="Article-body Summary">
+
+					</div>
+				</article>
+
+
+
+
+				<article class="List-item">
+					<h3 class="Article-title Title">
+						<a href="/blog/2013-05-08-alive-festival-mangler-frivillige">
+							Alive Festival mangler frivillige
+						</a>
+						<small class="Muted">(05 August 2013)</small>
+					</h3>
+					<div class="Article-body Summary">
+
+					</div>
+				</article>
+
+
+				</section>
+
+
+			<p><a href="/blog">&rarr; Se alle nyheder</a></p>
+
+			<h2>Nyhedsbrev</h2>
+			<div class="Constrained">
+				<!-- Newsletter  -->
+				<div class="Newsletter">
+					<div id="mc_embed_signup">
+						<form action="http://alivefestival.us1.list-manage.com/subscribe/post?u=3a2e1bf24336c9a6bf87f2fc7&amp;id=e29c6f4325" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+							<label for="mce-EMAIL">Få vores nyhedsbrev</label>
+							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+							<input type="submit" value="Tilmeld" name="subscribe" id="mc-embedded-subscribe" class="button">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="Box-child">
+			<h2>#ThyAlive på Instagram</h2>
+			<p>Festivalens officielle hashtag er <a href="http://www.gramfeed.com/instagram/tags#thyalive" target="_blank">#ThyAlive</a>. Tag dine billeder og vær med!</p>
+			<div class="Constrained">
+				<!-- SnapWidget -->
+				<iframe src="http://snapwidget.com/in/?h=dGh5YWxpdmV8aW58ODB8NHwzfHx5ZXN8NXxub25lfG9uU3RhcnQ=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height: 285px; padding: 0;" ></iframe>
+			</div>
+		</div>
+
+		<br>
+		<hr>
+		<br>
+		<!-- Facebook -->
+		<div class="fb-like" data-href="http://facebook.com/alivefestival" data-send="true" data-width="400" data-show-faces="true"></div>
+
+

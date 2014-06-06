@@ -1,4 +1,5 @@
 .Asset {
+	max-width: 100%;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -22,12 +23,7 @@
 	z-index: 2;
 	margin-bottom: -1rem;
 	left: -1rem;
-
 	transition: transform 1s ease;
-	transform: translateX(-500%);
-	.is-loaded & {
-		transform: translateX(35rem);
-	}
 }
 .Asset--plant {
 	font-size: 115px;

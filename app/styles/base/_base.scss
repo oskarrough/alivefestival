@@ -21,7 +21,7 @@ h4,
 h5,
 h6 {
 	@extend %burbank-bold;
-	@extend %brezel-bold;
+	// @extend %brezel-bold;
 	line-height: 1;
 	color: $brown;
 	//text-transform: uppercase;
@@ -47,10 +47,13 @@ h6 {
 }
 
 .Title {
-	font-size: 60px;
 	transform: rotate(-2deg);
 	margin-bottom: 3rem;
 	max-width: 90%;
+
+	@media (min-width: $layout-s) {
+		font-size: 60px;
+	}
 }
 
 // Make sure (many) elements have the same margin
@@ -69,6 +72,9 @@ p,
 pre,
 fieldset {
     margin: 0 0 rem($space);
+}
+h2 {
+	font-size: rem(30);
 }
 h3,
 h4 {
@@ -124,6 +130,9 @@ blockquote {
 }
 
 // responsive
+img {
+	vertical-align: top;
+}
 iframe,
 img {
 	max-width: 100%;

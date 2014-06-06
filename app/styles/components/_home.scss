@@ -6,13 +6,25 @@
 	text-align: center;
 
 	@media (min-width: $layout-l) {
-		float: right;
-		margin-left: -100% !important;
+		float: left;
+		margin-right: -100%;
+	}
+	// extra specificity
+	.Main &.Box {
+		@media (min-width: $layout-l) {
+			margin-left: 19rem;
+		}
+		@media (min-width: 1300px) {
+			margin-left: 31rem;
+			top: -7rem;
+		}
 	}
 
 	.PageTitle {
 		padding-top: 1rem;
-		font-size: 60px;
+		@media (min-width: $layout-s) {
+			font-size: 60px;
+		}
 	}
 	.Manchet {
 		font-size: 30px;
@@ -27,6 +39,10 @@
 	.Asset--dawg {
 		position: absolute;
 		top: -96px;
+		transform: translateX(-500%);
+		.is-loaded & {
+			transform: translateX(25rem);
+		}
 	}
 	.Asset--plant {
 		position: absolute;
@@ -35,9 +51,8 @@
 		transform-origin: bottom center;
 		// transition: transform 300ms ease;
 		animation: plant 800ms ease infinite alternate;
-
-		&:nth-of-type(1) { right: 100px; animation-delay: 100ms; }
-		&:nth-of-type(2) { right: 200px; animation-delay: 400ms; }
+		&:nth-of-type(2) { right: 100px; animation-delay: 100ms; }
+		&:nth-of-type(3) { right: 200px; animation-delay: 400ms; }
 	}
 }
 .Home-mood {

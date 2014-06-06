@@ -1,10 +1,11 @@
 .Frame {
 	position: relative;
-
+	width: 100%;
 	// hide image
 	overflow: hidden;
 	height: 0;
-	padding: 0.5em 0.5em 1em;
+	padding-top: 0.5em;
+	padding-left: 0.5em;
 	padding-bottom: 73.598130841%;
 
 	// the frame
@@ -22,8 +23,10 @@
 
 	// frame content
 	img {
-		vertical-align: top;
-		width: 100%;
+		// position: absolute;
+		// top: 5%;
+		// left: 5%;
+		width: 90%;
 	}
 
 	.royalSlider {
@@ -31,7 +34,7 @@
 	}
 }
 .Frame--square {
-	padding-bottom: 0.664583333%;
+	padding-bottom: 66.4583333%;
 }
 
 .Frames {

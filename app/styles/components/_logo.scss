@@ -1,16 +1,19 @@
 .Logo {
 	margin: 0 auto 1rem;
 	text-align: center;
+	max-width: 260px;
 
 	> a {
 		display: block;
 	}
-	img {
-		width: 400px;
+	@media (min-width: $layout-s) {
+		max-width: 400px;
 	}
-
 	@media (min-width: $layout-m) {
 		float: left;
-		width: 300px;
+
+	}
+	@media (min-width: $layout-l) {
+		width: 360px;
 	}
 }

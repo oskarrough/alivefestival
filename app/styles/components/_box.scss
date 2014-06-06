@@ -6,7 +6,9 @@
 	border-radius: 8px;
 	color: $dark;
 }
-
+.Box-title {
+	margin-top: 2rem;
+}
 .Box {
 	@extend %Box;
 	clear: both;
@@ -15,6 +17,14 @@
 
 	> h2:last-child {
 		margin-bottom: 0;
+	}
+	.Manchet {
+		@media (min-width: $layout-s) {
+			font-size: 22px;
+		}
+		@media (min-width: $layout-l) {
+			font-size: 24px;
+		}
 	}
 	p {
 		@media (min-width: $layout-s) {
