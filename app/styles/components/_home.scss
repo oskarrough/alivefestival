@@ -2,7 +2,7 @@
 	position: relative;
 	max-width: 40rem;
 	padding-bottom: 14rem;
-	margin-bottom: 170px;
+	margin-bottom: 12rem;
 	text-align: center;
 
 	@media (min-width: $layout-l) {
@@ -49,10 +49,8 @@
 		bottom: -1px;
 		right: -54px;
 		transform-origin: bottom center;
-		// transition: transform 300ms ease;
 		animation: plant 800ms ease infinite alternate;
 		&:nth-of-type(2) { right: 100px; animation-delay: 100ms; }
-		&:nth-of-type(3) { right: 200px; animation-delay: 400ms; }
 	}
 }
 .Home-mood {
@@ -62,9 +60,10 @@
 	left: -3rem;
 	transform: rotate(-4deg);
 }
-
 .Home-gallery {
-	max-width: 95%;
+	clear: both;
+	width: 85%;
+	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 5rem;

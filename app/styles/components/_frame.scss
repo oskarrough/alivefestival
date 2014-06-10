@@ -29,8 +29,16 @@
 		width: 90%;
 	}
 
-	.royalSlider {
-		margin-bottom: 0;
+	.Slideshow {
+		width: 85%;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+		}
 	}
 }
 .Frame--square {

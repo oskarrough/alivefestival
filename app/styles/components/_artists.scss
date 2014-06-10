@@ -11,13 +11,9 @@
 		.Title {
 			font-size: 40px;
 		}
-
-		// &:before {
-		// 	content: '';
-		// 	float: right;
-		// 	width: 44rem;
-		// 	height: 51rem;
-		// }
+	}
+	@media (min-width: 1300px) {
+		width: 27rem;
 	}
 
 	h3 {
