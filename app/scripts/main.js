@@ -29,14 +29,6 @@ $(document).ready(function() {
 		$('html').addClass('is-loaded');
 	});
 
-	var $artists = $('.Masonry').find('.Artist');
-	$artists.each(function(index, el){
-		$(this).imagesLoaded( function() {
-			$(el).addClass('is-loaded');
-		});
-	});
-
-
 	//
 	// Clickable dropdowns (touch4evah)
 	//

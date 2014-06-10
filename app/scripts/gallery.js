@@ -9,6 +9,7 @@ function scrollToTop(speed) {
 
 	return false;
 }
+
 function scrollToBottom(speed) {
 	$('.js-scrollToBottom').text('Playing');
 
@@ -18,11 +19,13 @@ function scrollToBottom(speed) {
 
 	return false;
 }
+
 function scrollStop() {
 	$('html, body').stop();
 	$('.js-scrollToBottom').text('Play');
 	return false;
 }
+
 function hideMenuOnScroll() {
 	var $primaryNav = $('.Navigation--primary');
 
@@ -37,11 +40,9 @@ function hideMenuOnScroll() {
 }
 
 $(document).ready(function() {
-
 	if ( $('.page-Gallery').length > 0 ) {
 		hideMenuOnScroll();
 	}
-
 	$('.js-scrollToTop').click(function(event){
 		scrollToTop();
 	});
@@ -51,5 +52,4 @@ $(document).ready(function() {
 	$('.js-stop').click(function(event){
 		scrollStop();
 	});
-
 });

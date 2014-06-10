@@ -1,12 +1,10 @@
-//
-// Dynamic grid with Masonry
-//
+/**
+ * Dynamic grid with Masonry
+ */
 
 function goGrid() {
 	var $container = $('#Masonry');
 	if ($container.length > 0) {
-		console.log('gogrid');
-
 		$container.prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
 		$container.masonry({
 			columnWidth: '.grid-sizer',
@@ -16,18 +14,17 @@ function goGrid() {
 	}
 }
 
-var $main = $('#Main');
-if ($main.find('img').length > 0) {
+$(function () {
 
-	$(function () {
-		if ($main.find('img').length > 0) {
-			$main.imagesLoaded( function() {
-				$('html').addClass('loaded');
-				console.log('images loaded');
-				goGrid();
-			});
-		} else {
-			$('html').addClass('loaded');
-		}
+	var $container = $('#Masonry');
+	if ($container.length > 0) {
+		goGrid();
+	}
+
+	var $artists = $('.Masonry').find('.Artist');
+	$artists.each(function(index, el){
+		$(this).imagesLoaded( function() {
+			$(el).addClass('is-loaded');
+		});
 	});
-}
+});
