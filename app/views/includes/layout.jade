@@ -14,6 +14,11 @@ html.no-js
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width')
 		meta(name='description', content='#{description}')
+		link(rel='canonical', href='http://alivefestival.dk/')
+		| <meta property="fb:app_id" content="114798911889232" />
+		| <meta property="og:title" content="Alive Festival" />
+		| <meta property="og:url" content="http://facebook.om/alivefestival" />
+		| <meta property="og:image" content="" />
 
 		if active == 'Index'
 			title Alive Festival
@@ -25,25 +30,37 @@ html.no-js
 		// endbuild
 
 		script(src='scripts/vendor/modernizr.custom.min.js')
-		//-| <script src="//use.typekit.net/wpt0izv.js"></script>
-		//-| <script>try{Typekit.load();}catch(e){}</script>
+
 		script.
+			//- WebFontConfig = { fontdeck: { id: '46228' } };
+			//- (function() {
+			//- var wf = document.createElement('script');
+			//- wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			//- '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			//- wf.type = 'text/javascript';
+			//- wf.async = 'true';
+			//- var s = document.getElementsByTagName('script')[0];
+			//- s.parentNode.insertBefore(wf, s);
+			//- })();
+
+
+			var html = document.getElementsByTagName('html')[0];
+			html.className += '  wf-loading';
+			setTimeout(function() {
+			html.className = html.className.replace(' wf-loading', '');
+			}, 5000);
+
 			WebFontConfig = { fontdeck: { id: '46228' } };
+
 			(function() {
 			var wf = document.createElement('script');
-			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.src = 'http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
 			wf.type = 'text/javascript';
 			wf.async = 'true';
 			var s = document.getElementsByTagName('script')[0];
 			s.parentNode.insertBefore(wf, s);
 			})();
 
-		link(rel='canonical', href='http://alivefestival.dk/')
-		| <meta property="fb:app_id" content="114798911889232" />
-		| <meta property="og:title" content="Alive Festival" />
-		| <meta property="og:url" content="http://facebook.om/alivefestival" />
-		| <meta property="og:image" content="" />
 
 	body(class="#{bodyClass}")
 

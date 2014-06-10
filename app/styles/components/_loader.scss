@@ -1,6 +1,11 @@
 /**
  * Loader
  */
+
+.wf-loading body {
+	// visibility: hidden;
+}
+
 .Loader {
 	display: none;
 	position: fixed;

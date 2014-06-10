@@ -30,8 +30,8 @@
 }
 
 // only show on these pages
-.Page--Praktisk .Navigation--practical,
-.Page--Historie .Navigation--history {
+.page-Practical .Navigation--practical,
+.page-History .Navigation--history {
 	opacity: 1;
 	visibility: visible;
 }

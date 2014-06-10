@@ -1,3 +1,35 @@
+/**
+ * Wrapper for .Frame as we can not give it a width
+ */
+.FrameWrap {
+	width: 550px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	.Frame {
+		margin-top: 0;
+	}
+}
+.FrameWrap--left {
+	float: left;
+	margin-left: -2rem;
+	margin-right: 2rem;
+	@media (min-width: $layout-m) {
+		max-width: 45%;
+	}
+}
+.FrameWrap--right {
+	float: right;
+	@media (min-width: $layout-m) {
+		max-width: 45%;
+	}
+}
+
+
+/**
+ * Frame
+ */
 .Frame {
 	position: relative;
 	width: 100%;
@@ -7,6 +39,7 @@
 	padding-top: 0.5em;
 	padding-left: 0.5em;
 	padding-bottom: 73.598130841%;
+	text-align: center;
 
 	// the frame
 	&:before {
@@ -21,14 +54,19 @@
 		pointer-events: none;
 	}
 
-	// frame content
+	// Single (linked) images inside (no slideshow)
+	> a,
+	> img {
+		display: block;
+		position: relative;
+		top: 45%;
+		transform: translateY(-50%);
+	}
 	img {
-		// position: absolute;
-		// top: 5%;
-		// left: 5%;
 		width: 90%;
 	}
 
+	// Slideshows inside
 	.Slideshow {
 		width: 85%;
 		position: relative;
@@ -38,18 +76,17 @@
 
 		img {
 			width: 100%;
+			position: static;
+			transform: none;
 		}
 	}
 }
 .Frame--square {
 	padding-bottom: 66.4583333%;
 }
-
 .Frames {
 	.Frame {
 		float: left;
-		// width: 30%;
-		// margin-left: 1%;
 		margin-right: 1rem;
 	}
 }

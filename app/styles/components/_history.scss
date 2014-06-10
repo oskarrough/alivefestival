@@ -1,52 +1,45 @@
-//
-// History
-//
+/**
+ * History
+ */
 
-.Page--Historie {
-	background-image: none;
-	padding: 0;
-
-	.Header {
-		position: relative;
-		z-index: 5;
-	}
-	.Main {
-		max-width: none;
-	}
+.page-History {
+	// background-image: none;
 }
 
 .History {
+	@include clearfix;
 	background-size: cover;
 	padding: 2em 0;
-	> .Box {
-		margin-bottom: 0;
-		max-width: 50em;
-		margin-left: auto;
-		margin-right: auto;
-		p {
-			max-width: 40em;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
+
+	// > .Box {
+	// 	margin-bottom: 0;
+	// 	max-width: 50em;
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// 	p {
+	// 		max-width: 40em;
+	// 		margin-left: auto;
+	// 		margin-right: auto;
+	// 	}
+	// }
 }
-.History-2009 {
-	background-image: url(../images/2009/alivefestival-2009-bg.jpg);
-	background-image: url(../images/gallery/6294_128098056713_67301461713_2937457_6965060_n.jpg);
+.History--2009 {
+	background-image: url(images/2009/alivefestival-2009-bg.jpg);
+	background-image: url(images/gallery/6294_128098056713_67301461713_2937457_6965060_n.jpg);
 }
-.History-2010 {
-	background-image: url(../images/2010/alivefestival-2010-bg.jpg);
-	background-image: url(../images/gallery/alive2010-tbv.jpg);
+.History--2010 {
+	background-image: url(images/2010/alivefestival-2010-bg.jpg);
+	background-image: url(images/gallery/alive2010-tbv.jpg);
 }
-.History-2011 {
+.History--2011 {
 	background-color: hsl(198, 61%, 12%);
-	background-image: url(../images/2011/alivefestival-2011-bg.jpg);
-	background-image: url(../images/gallery/alive2011-pervers.jpg);
+	background-image: url(images/2011/alivefestival-2011-bg.jpg);
+	background-image: url(images/gallery/alive2011-pervers.jpg);
 }
-.History-2012 {
-	background-image: url(../images/2012/alivefestival-2012-bg.jpg);
-	background-image: url(../images/gallery/185191_10151004513541714_1702935780_n.jpg);
+.History--2012 {
+	background-image: url(images/2012/alivefestival-2012-bg.jpg);
+	background-image: url(images/gallery/185191_10151004513541714_1702935780_n.jpg);
 }
-.History-2013 {
-	background-image: url(../images/2013/alivefestival-collage2.jpg);
+.History--2013 {
+	background-image: url(images/2013/alivefestival-collage2.jpg);
 }

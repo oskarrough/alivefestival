@@ -14,7 +14,7 @@
 		@media (min-width: $layout-l) {
 			margin-left: 19rem;
 		}
-		@media (min-width: 1300px) {
+		@media (min-width: 1200px) {
 			margin-left: 31rem;
 			top: -7rem;
 		}
@@ -39,8 +39,8 @@
 	.Asset--dawg {
 		position: absolute;
 		top: -96px;
-		transform: translateX(-500%);
-		.is-loaded & {
+		transform: translateX(-400%);
+		.is-loaded.wf-active & {
 			transform: translateX(25rem);
 		}
 	}
@@ -77,7 +77,7 @@
 }
 
 
-.Page--frivillig .Box .Frame {
+.page-Volunteer .Box .Frame {
 	transform: rotate(2deg);
 	@media (min-width: $layout-l) {
 		left: -7rem;

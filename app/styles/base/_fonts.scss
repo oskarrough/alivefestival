@@ -8,16 +8,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
-@font-face {
-	font-family: 'BurbankBigMedium';
-	src: url('../styles/fonts/burbankbigregular-medium-webfont.eot');
-	src: url('../styles/fonts/burbankbigregular-medium-webfont.eot?#iefix') format('eot'),
-		 url('../styles/fonts/burbankbigregular-medium-webfont.woff') format('woff'),
-		 url('../styles/fonts/burbankbigregular-medium-webfont.ttf') format('truetype'),
-		 url('../styles/fonts/burbankbigregular-medium-webfont.svg#webfontWyqpcFyE') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: 'BurbankBigMedium';
+// 	src: url('../styles/fonts/burbankbigregular-medium-webfont.eot');
+// 	src: url('../styles/fonts/burbankbigregular-medium-webfont.eot?#iefix') format('eot'),
+// 		 url('../styles/fonts/burbankbigregular-medium-webfont.woff') format('woff'),
+// 		 url('../styles/fonts/burbankbigregular-medium-webfont.ttf') format('truetype'),
+// 		 url('../styles/fonts/burbankbigregular-medium-webfont.svg#webfontWyqpcFyE') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
 @font-face {
 	font-family: 'BurbankBigBold';
 	src: url('../styles/fonts/burbankbigregular-bold-webfont.eot');
@@ -29,17 +29,16 @@
 	font-style: normal;
 }
 
-
 %burbank-light {
 	font-family: "BurbankBigLight", sans-serif;
 	font-weight: normal;
 	font-style: normal;
 }
-%burbank-medium {
-	font-family: "BurbankBigMedium", sans-serif;
-	font-weight: normal;
-	font-style: normal;
-}
+// %burbank-medium {
+// 	font-family: "BurbankBigMedium", sans-serif;
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
 %burbank-bold {
 	font-family: "BurbankBigBold", sans-serif;
 	font-weight: normal;
@@ -47,15 +46,15 @@
 }
 
 %patron-light {
-	font-family:"Patron Light", sans-serif;
-	font-weight:300;
-	font-style:normal;
+	font-family: "Patron Light", monospace, sans-serif;
+	font-weight: 300;
+	font-style: normal;
 }
-%brezel-regular {
-	font-family:"Brezel Grotesk Regular", Arial, sans-serif;
-	font-weight:normal; font-style:normal;
-}
-%brezel-bold {
-	font-family:"Brezel Grotesk Bold", Arial, sans-serif;
-	font-weight:bold; font-style:normal;
-}
+// %brezel-regular {
+// 	font-family:"Brezel Grotesk Regular", Arial, sans-serif;
+// 	font-weight:normal; font-style:normal;
+// }
+// %brezel-bold {
+// 	font-family:"Brezel Grotesk Bold", Arial, sans-serif;
+// 	font-weight:bold; font-style:normal;
+// }

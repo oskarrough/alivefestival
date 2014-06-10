@@ -18,7 +18,7 @@ html {
 body {
 	color: $dark;
 	background-color: $yellow;
-	background-image: url(../images/2014/alive-festival-bg-pattern4.jpg);
+	background-image: url(../images/2014/alive-festival-bg-pattern7.jpg);
 	background-repeat: repeat;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -61,22 +61,39 @@ body {
 	z-index: 1;
 
 	.Box:nth-of-type(1) {
+
 		@media (min-width: $layout-l) {
 			margin-left: 9rem;
 		}
 		@media (min-width: 1100px) {
 			margin-left: 14rem;
+			// pull next element up
+			float: left;
+			margin-right: -100%;
 		}
-		@media (min-width: 1300px) {
+		@media (min-width: 1200px) {
 			margin-left: 26rem;
-			top: -6rem;
+			top: -7rem;
 		}
 	}
 }
 
 // Wider music page
-.Page--Musik {
+.page-Music {
 	.Main {
 		min-width: 95%;
 	}
+}
+
+
+.Aside {
+	clear: both;
+	@media (min-width: 1200px) {
+		clear: none;
+		float: left;
+		width: 24rem;
+	}
+	// @media (min-width: 1200px) {
+	// 	width: 27rem;
+	// }
 }
