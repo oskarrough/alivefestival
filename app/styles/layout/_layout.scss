@@ -9,10 +9,8 @@
 	box-sizing: border-box;
 }
 html {
-	// height: 100%;
-	border: 0.5rem solid $tandpasta;
 	@media (min-width: $layout-s) {
-		border-width: 1rem;
+		border: 1rem solid $tandpasta;
 	}
 }
 body {
@@ -34,6 +32,9 @@ body {
 }
 .Header {
 	margin-top: 1rem;
+	@media (min-width: $layout-s) {
+		margin-top: 2rem;
+	}
 }
 
 .page-Index {
@@ -42,11 +43,9 @@ body {
 	// background-repeat: no-repeat;
 	// background-position: -2em -2em;
 	// background-attachment: fixed;
-
-	.Logo {
-		width: 400px;
-		// display: none;
-	}
+	// .Logo {
+	// 	width: 400px;
+	// }
 }
 
 // Override cursor image
@@ -57,11 +56,10 @@ body {
 
 .Main {
 	@include clearfix;
-	position: relative;
-	z-index: 1;
+	// position: relative;
+	// z-index: 1;
 
 	.Box:nth-of-type(1) {
-
 		@media (min-width: $layout-l) {
 			margin-left: 9rem;
 		}
@@ -72,8 +70,8 @@ body {
 			margin-right: -100%;
 		}
 		@media (min-width: 1200px) {
-			margin-left: 26rem;
-			top: -7rem;
+			margin-left: 21rem;
+			top: -2rem;
 		}
 	}
 }
@@ -96,4 +94,16 @@ body {
 	// @media (min-width: 1200px) {
 	// 	width: 27rem;
 	// }
+}
+
+
+.page-Tickets {
+	.Mood1 { max-width: 600px; }
+	.Mood3 { max-width: 700px; }
+	.Mood2 { max-width: 960px; }
+}
+
+
+.u-clear {
+	clear: both;
 }

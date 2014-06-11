@@ -9,16 +9,15 @@
 // Newsletter
 //
 #mc_embed_signup {
-	overflow: auto;
+	@include clearfix;
 	padding-bottom: 1em;
 }
 .Newsletter {
-	padding: 13px 14px 50px;
 	h2 { margin-bottom: em(5); }
 	label { display: none; }
-	input { display: inline-block; float: left; font-size: (16/18)*1rem;}
+	input { display: inline-block; float: left; margin-right: -2px; border-color: $red; }
 	.email { width: 140px;}
-	.button { padding: em(10) em(15); margin: -2px 0 0 -2px; }
+	.button { padding: 0.55em em(15);}
 }
 
 //

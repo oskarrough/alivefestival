@@ -21,15 +21,17 @@ h4,
 h5,
 h6 {
 	@extend %burbank-bold;
-	// @extend %brezel-bold;
-	line-height: 1;
+	line-height: 1.1;
 	color: $brown;
-	//text-transform: uppercase;
 }
 .PageTitle {
 	font-size: 40px;
-	text-align: center;
-	margin: 3rem auto 2rem;
+	margin: 5rem 2rem 2rem;
+
+	@media (min-width: $layout-l) {
+		margin-left: 4rem;
+		font-size: 50px;
+	}
 
 	// padding-top: em(10,40);
 	// background: transparent url(../images/pensel1.png) no-repeat center center;
@@ -66,10 +68,10 @@ fieldset {
 .Title {
 	transform: rotate(-2deg);
 	margin-bottom: 3rem;
-	max-width: 90%;
 
 	@media (min-width: $layout-s) {
 		font-size: 60px;
+		max-width: 90%;
 	}
 }
 h2 {

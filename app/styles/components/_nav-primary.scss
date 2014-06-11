@@ -1,16 +1,16 @@
 .Navigation--primary {
 	@include clearfix;
 	@extend %burbank-bold;
-	// @extend %brezel-bold;
 	font-size: rem(30);
-	text-align: center;
 	margin-bottom: 1rem;
+	// text-align: center;
 
-	@media (min-width: $layout-m) {
-		padding-top: 6rem;
-		max-width: 57rem;
+	@media (min-width: $layout-l) {
+		float: left;
+		margin-left: 1rem;
+		padding-top: 4rem;
+		max-width: 31rem;
 	}
-
 	li {
 		display: inline-block;
 		transition: transform 1000ms;
@@ -42,23 +42,21 @@
 	}
 }
 
+// @mixin iterative-delay($count: 2, $delay: 0.07s) {
+// 	@for $i from 1 through $count {
+// 		&:nth-child(#{$i}) {
+// 			transition-delay: $delay * $i;
+// 		}
+// 	}
+// }
 
-
-@mixin iterative-delay($count: 2, $delay: 0.07s) {
-	@for $i from 1 through $count {
-		&:nth-child(#{$i}) {
-			transition-delay: $delay * $i;
-		}
-	}
-}
-
-.page-Index .Navigation--primary li {
-	@include iterative-delay(10);
-	transition: opacity 250ms ease-in-out;
-	opacity: 0;
-	// show them when they are loaded or if we dont have js
-	.is-loaded &,
-	.no-js & {
-		opacity: 1;
-	}
-}
+// .page-Index .Navigation--primary li {
+// 	@include iterative-delay(10);
+// 	transition: opacity 250ms ease-in-out;
+// 	opacity: 0;
+// 	// show them when they are loaded or if we dont have js
+// 	.is-loaded &,
+// 	.no-js & {
+// 		opacity: 1;
+// 	}
+// }

@@ -6,25 +6,18 @@ block vars
 extends views/includes/layout
 
 block content
-	.Box.Home-introbox.
-		<h1 class="PageTitle"><span>Velkommen til Alive Festival 2014</span></h1>
-		<p class="Manchet">I en skjult oase mellem hav og fjord i hjertet af Thy løber Alive Festival i år af stablen for sjette gang i træk. Kom!</p>
-		<p>Fireogtyve koncerter paa tre dage, camping, surf, thy øl på fad og dejlige mennesker!</p>
-		<p><a href="billetter.html" class="Button Button--big">Få din billet nu!</a></p>
+	.Box.Box--dark.Home-introbox
+		h1.PageTitle: span I en skjult oase mellem hav og fjord i hjertet af Thy løber Alive Festival i år af stablen for sjette gang i træk. Kom!
+		p <a href="billetter.html" class="Button Button--big">Få din billet nu!</a></p>
+		p.Manchet Fireogtyve koncerter paa tre dage, camping, surf, thy øl på fad og dejlige mennesker!
 
-		<div class="Asset Asset--dawg"></div>
-		<div class="Asset Asset--plant"></div>
-		<div class="Asset Asset--plant"></div>
+		//- .Asset.Asset--dawg
+		//- .Asset.Asset--plant
+		.Asset.Asset--plant
 
-		<div class="Home-mood">
-			<figure class="Frame">
-					<a href="https://www.youtube.com/watch?v=xHyDHIuHtNg" class="js-Popup--video">
-						<img class="rsImg" src="images/2014/video-thumb.jpg">
-					</a>
-					<!--<div class="Slideshow royalSlider rsDefault"></div>
-					<img class="rsImg" src="images/gallery/p-6422.jpg"> -->
-			</figure>
-		</div>
+	.Home-mood: figure.Frame
+		a.js-Popup--video(href="https://www.youtube.com/watch?v=xHyDHIuHtNg")
+			img(src="images/2014/video-thumb.jpg")
 
 	.Alist
 		h2.Title 24 koncerter. Torsdag til søndag. Tre dages musik &amp; fest med glade mennesker.
@@ -56,8 +49,8 @@ block content
 	.Home-gallery.
 		<figure class="Frame">
 			<div class="Slideshow royalSlider rsDefault">
-				<a class="rsImg" href="images/gallery/publikum5.jpg">publikum5</a>
-				<a class="rsImg" href="images/gallery/p-6146.jpg">6146</a>
+				<img class="rsImg" src="images/gallery/publikum5.jpg" alt="">
+				<img class="rsImg" src="images/gallery/p-6146.jpg" alt="">
 				<a class="rsImg" href="images/gallery/p-6154.jpg">6154</a>
 				<a class="rsImg" href="images/gallery/p-6223.jpg">6223</a>
 				<a class="rsImg" href="images/gallery/p-6337.jpg">6337</a>
@@ -74,7 +67,7 @@ block content
 	//-.Box.
 		<p><a href="https://www.facebook.com/alivefestival/photos_albums" target="_blank" class="Button Button">&rarr; Se flere billeder på vores Facebook</a></p>
 
-	.Box
+	.Box.Home-bryghus
 		h2.Box-title Vi starter med en Thy-øl på Thisted Bryghus!
 		p.Manchet Start din festival med en kølig Thy Pilsner frisk fra fad torsdag d. 14. august kl 16-19.
 		.FrameWrap.FrameWrap--left
@@ -85,7 +78,7 @@ block content
 
 	.Asset.Asset--guitar
 
-	.Box
+	.Box.Home-surf
 		h2.Box-title Spring i bølgen: Surfskole og Mont Oliver koncert i Cold Hawaii!
 		.FrameWrap.FrameWrap--right
 			figure.Frame
@@ -93,7 +86,7 @@ block content
 		p.Manchet Oplev Cold Hawaii på nærmeste hold!
 		p Fredag d. 15. kl 11-15 flytter Alive Festival til Klitmøller, hvor vi i samarbejde med West Wind giver mulighed for at tage på surfskole til kun 150kr. Vil du hellere blive på land, så kan du nyde de lækre toner fra Mont Oliver og vores resident DJ-smed en kold fadøl i hånden.
 
-	.Box.
+	.Box.Home-social.
 		<div class="Box-child">
 			<h2>Seneste nyt</h2>
 			<section class="List">

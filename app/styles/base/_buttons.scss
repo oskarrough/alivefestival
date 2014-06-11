@@ -14,18 +14,21 @@ a.Button {
 	display: inline-block;
 	//background-color: $red;
 	background-image: linear-gradient(to bottom, $red, darken($red, 6%));
-	color: #fff;
+	color: $bleached;
 	padding: 0.5em 1em 0.4em;
 	box-shadow: 2px 2px 0 0 darken($red, 20);
-	letter-spacing: 1px;
-	border: 0;
-	border-radius: 3px;
+	letter-spacing: 0.1em;
+	// border: 0;
+	// border-radius: 3px;
 
 	&:hover {
 		//background-color: lighten($red, 2);
 		background-image: linear-gradient(to bottom, $red, darken($red, 10%));
 		color: #fff;
 		box-shadow: 1px 1px 0 0 darken($red, 20);
+	}
+	&:active {
+		background-image: linear-gradient(to bottom, darken($red, 10%), darken($red, 15%));
 	}
 	small {
 		@extend %burbank-light;
