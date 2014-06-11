@@ -9,15 +9,16 @@
 	box-sizing: border-box;
 }
 html {
+	background-color: $yellow;
+	background-image: url(../images/2014/alive-festival-bg-pattern7.jpg);
+	background-repeat: repeat;
+	color: $dark;
+
 	@media (min-width: $layout-s) {
 		border: 1rem solid $tandpasta;
 	}
 }
 body {
-	color: $dark;
-	background-color: $yellow;
-	background-image: url(../images/2014/alive-festival-bg-pattern7.jpg);
-	background-repeat: repeat;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
