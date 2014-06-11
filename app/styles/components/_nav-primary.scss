@@ -3,14 +3,20 @@
 	@extend %burbank-bold;
 	font-size: rem(30);
 	margin-bottom: 1rem;
-	// text-align: center;
+	text-align: center;
 
-	@media (min-width: $layout-l) {
+	@media (min-width: $layout-m) {
 		float: left;
-		margin-left: 1rem;
-		padding-top: 4rem;
-		max-width: 31rem;
+		margin-left: rem(260) + 1rem;
+		padding-top: 1rem;
+		text-align: left;
+		max-width: 20em;
 	}
+	@media (min-width: $layout-l) {
+		padding-top: 4rem;
+	}
+
+
 	li {
 		display: inline-block;
 		transition: transform 1000ms;

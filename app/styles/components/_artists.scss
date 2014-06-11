@@ -1,11 +1,11 @@
 .Alist {
-	margin: 0 0 2rem;
+	margin-bottom: 2rem;
 	@media (min-width: $layout-l) {
-		float: left;
-		width: 20rem;
-
+		clear: both;
 	}
 	@media (min-width: 1200px) {
+		clear: none;
+		float: left;
 		width: 27rem;
 	}
 

@@ -17,7 +17,6 @@
 
 	.Title {
 		margin-top: 2rem;
-
 	}
 	> h2:last-child {
 		margin-bottom: 0;
@@ -34,9 +33,9 @@
 		@media (min-width: $layout-s) {
 			font-size: 17px;
 		}
-		@media (min-width: $layout-l) {
-			font-size: 19px;
-		}
+		// @media (min-width: $layout-l) {
+		// 	font-size: 19px;
+		// }
 	}
 	figure {
 		margin: 2rem 1rem;

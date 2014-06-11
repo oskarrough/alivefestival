@@ -1,7 +1,7 @@
 .Home-introbox {
 	position: relative;
-	max-width: 40rem;
-	padding-bottom: 6rem;
+	max-width: 35rem;
+	padding-bottom: 1rem;
 	margin-bottom: 2rem;
 	text-align: center;
 
@@ -13,11 +13,11 @@
 	// extra specificity
 	.Main &.Box {
 		@media (min-width: $layout-l) {
-			margin-left: 17rem;
+			margin-left: 19rem;
+			top: -2rem;
 		}
 		@media (min-width: 1200px) {
 			margin-left: 27rem;
-			top: -2rem;
 		}
 	}
 	.PageTitle {
@@ -60,23 +60,23 @@
 .Home-mood {
 	width: 400px;
 	position: relative;
-	z-index: -1;
 	transform: rotate(2deg);
 	margin-bottom: 4rem;
 	@media (min-width: $layout-l) {
 		transform: rotate(2deg);
 		width: 340px;
 		top: 1rem;
-		left: -4rem;
+		left: 1rem;
 	}
-	@media (min-width: 1400px) {
+	@media (min-width: 1200px) {
 		position: absolute;
 		left: initial;
-		top: 2rem; right: 2rem;
+		top: 3rem; right: 3rem;
 
 	}
 }
 .Home-gallery {
+	position: relative;
 	clear: both;
 	width: 85%;
 	max-width: 1200px;
@@ -91,7 +91,13 @@
 		// z-index: 2;
 	}
 }
-
+.Home-galleryLink {
+	position: absolute;
+	z-index: 2;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
 
 .page-Volunteer .Box .Frame {
 	transform: rotate(2deg);
@@ -103,12 +109,15 @@
 
 .Home-bryghus {
 	@media (min-width: $layout-l) {
-		margin-left: 4rem;
+		float: left;
+		width: 48%;
 	}
 }
 .Home-surf {
 	@media (min-width: $layout-l) {
-		margin-left: 8rem;
+		clear: none;
+		float: right;
+		width: 48%;
 	}
 }
 .Home-social {
