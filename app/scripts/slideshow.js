@@ -1,10 +1,11 @@
-//
-// Slideshows
-//
+/**
+ * Slideshows with royalslider
+ */
 
 $('.Slideshow').royalSlider({
 
 	imageScalePadding: 0,
+	imageScaleMode: 'fill', // fit-if-smaller, fill
 	autoScaleSlider: true,
 	autoScaleSliderWidth: 428,
 	autoScaleSliderHeight: 315,
@@ -12,8 +13,10 @@ $('.Slideshow').royalSlider({
 	transitionType: 'move',
 	transitionSpeed: 600,
 	randomizeSlides: true,
-	globalCaption: false,
 	loop: true,
+
+	globalCaption: true,
+
 	// navigateByClick: true,
 
 	keyboardNavEnabled: false,
@@ -26,7 +29,8 @@ $('.Slideshow').royalSlider({
 
 	autoPlay: {
 		enabled: true,
-		delay: 2000
+		delay: 2000,
+		stopAtAction: false
 	}
 
 	// controlNavigation: 'none',
@@ -39,7 +43,7 @@ $('.Slideshow').royalSlider({
 	// 	//spacing: 0
 	// }
 });
-//$('.Slideshow').data('royalSlider').updateSliderSize(true);
+
 
 //
 // Slideshow with titles as tabs

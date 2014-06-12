@@ -48,10 +48,10 @@
 		// 	padding-left: 4rem;
 		// 	padding-right: 4rem;
 		// }
-		@media (min-width: $layout-l) {
-			padding-left: 4rem;
-			padding-right: 8rem;
-		}
+		// @media (min-width: $layout-l) {
+		// 	padding-left: 4rem;
+		// 	padding-right: 8rem;
+		// }
 	}
 	ul {
 		list-style: inherit;
@@ -72,7 +72,7 @@
 	background: none;
 }
 .Box--dark {
-	background-image: url(../images/2014/stardust2.jpg);
+	background-image: url(../images/2014/stardust.jpg);
 	// background-image: url(../images/2014/tree-bark.png);
 	background-repeat: repeat;
 	color: $bleached;
@@ -84,7 +84,6 @@
 /**
  * Box children
  */
-
 .Box-title {
 	margin-top: 2rem;
 }

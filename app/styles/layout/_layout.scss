@@ -10,7 +10,7 @@
 }
 html {
 	background-color: $yellow;
-	background-image: url(../images/2014/alive-festival-bg-pattern7.jpg);
+	background-image: url(../images/2014/alive-festival-bg-pattern.jpg);
 	background-repeat: repeat;
 	color: $dark;
 
@@ -24,11 +24,9 @@ body {
 }
 .Header,
 .Main {
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 1rem; padding-right: 1rem;
 	@media (min-width: $layout-s) {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding-left: 2rem; padding-right: 2rem;
 	}
 }
 .Header {
@@ -38,31 +36,10 @@ body {
 	}
 }
 .Main {
-	clear: both;
-}
-
-.page-Index {
-	// background-image: url(../images/2014/alive-header.jpg);
-	// background-size: 100%;
-	// background-repeat: no-repeat;
-	// background-position: -2em -2em;
-	// background-attachment: fixed;
-	// .Logo {
-	// 	width: 400px;
-	// }
-}
-
-// Override cursor image
-// html,
-// a {
-// 	cursor: url(../images/cursor.png) -20 -40, default;
-// }
-
-.Main {
 	@include clearfix;
-	// position: relative;
-	// z-index: 1;
+	clear: both;
 
+	// The first box
 	.Box:nth-of-type(1) {
 		@media (min-width: $layout-l) {
 			margin-left: 9rem;
@@ -87,7 +64,7 @@ body {
 	}
 }
 
-
+// Sidebar
 .Aside {
 	clear: both;
 	@media (min-width: 1200px) {
@@ -95,19 +72,22 @@ body {
 		float: left;
 		width: 24rem;
 	}
-	// @media (min-width: 1200px) {
-	// 	width: 27rem;
-	// }
 }
 
-
+// Ticket page
 .page-Tickets {
 	.Mood1 { max-width: 600px; }
 	.Mood3 { max-width: 700px; }
 	.Mood2 { max-width: 960px; }
 }
 
-
+// Utility
 .u-clear {
 	clear: both;
 }
+
+// Override cursor image
+// html,
+// a {
+// 	cursor: url(../images/cursor.png) -20 -40, default;
+// }
