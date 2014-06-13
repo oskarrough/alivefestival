@@ -32,7 +32,7 @@ body {
 .Header {
 	margin-top: 1rem;
 	@media (min-width: $layout-s) {
-		margin-top: 2rem;
+		padding-left: 1rem;
 	}
 }
 .Main {
@@ -42,7 +42,10 @@ body {
 	// The first box
 	.Box:nth-of-type(1) {
 		@media (min-width: $layout-l) {
-			margin-left: 9rem;
+			float: left;
+			width: 70%;
+			margin-right: 2%;
+			// margin-left: 9rem;
 		}
 		@media (min-width: 1100px) {
 			margin-left: 14rem;
@@ -51,26 +54,39 @@ body {
 			margin-right: -100%;
 		}
 		@media (min-width: 1200px) {
-			margin-left: 21rem;
-			top: -2rem;
+			margin-left: 19rem;
+			top: -4rem;
 		}
-	}
-}
-
-// Wider music page
-.page-Music {
-	.Main {
-		min-width: 95%;
+		@media (min-width: 1400px) {
+			margin-left: 22rem;
+		}
 	}
 }
 
 // Sidebar
 .Aside {
 	clear: both;
+	@media (min-width: $layout-l) {
+		clear: none;
+		float: left;
+		width: 28%;
+	}
 	@media (min-width: 1200px) {
 		clear: none;
 		float: left;
+		width: 22rem;
+	}
+	@media (min-width: 1200px) {
 		width: 24rem;
+	}
+}
+
+
+
+// Wider music page
+.page-Music {
+	.Main {
+		min-width: 95%;
 	}
 }
 
@@ -91,3 +107,10 @@ body {
 // a {
 // 	cursor: url(../images/cursor.png) -20 -40, default;
 // }
+
+
+.Border {
+	clear: both;
+	border: 1rem solid $tandpasta;
+	border-radius: 8px;
+}
