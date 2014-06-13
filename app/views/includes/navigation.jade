@@ -5,9 +5,9 @@ mixin menu-item(url, title, classnames)
 
 ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
 	//-+menu-item('/', 'Forside', 'link-index')
-	//-+menu-item('nyheder.html', 'Nyheder', 'link--news')
 	+menu-item('musik.html', 'Musik', 'Link--Music')
 	+menu-item('billetter.html', 'Billetter', 'Link--Tickets')
+	+menu-item('nyheder.html', 'Nyheder', 'Link--news')
 	+menu-item('frivillig.html', 'Frivillig', 'Link--Volunteer')
 	+menu-item('gallery.html', 'Galleri', 'Link--Gallery')
 	+menu-item('praktisk.html', 'Praktisk', 'Link--Praktisk')

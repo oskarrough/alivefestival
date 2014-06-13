@@ -34,38 +34,22 @@ $ml-from: 1700px;
 
 .grid-sizer,
 .Masonry > .Artist {
-	@media (min-width: em($small-from)) {
-		width: span(1 of $small-columns);
-	}
-	@media (min-width: em($sm-from)) {
-		width: span(1 of $sm-columns);
-	}
-	@media (min-width: em($medium-from)) {
-		width: span(1 of $medium-columns);
-	}
-	@media (min-width: em($ml-from)) {
-		width: span(1 of $ml-columns);
-	}
-	// @media (min-width: em($large-from)) {
-	// 	width: span(1 of $large-columns) - 0.5;
-	// }
+	@media (min-width: em($small-from)) { width: span(1 of $small-columns); }
+	@media (min-width: em($sm-from)) { width: span(1 of $sm-columns); }
+	@media (min-width: em($medium-from)) { width: span(1 of $medium-columns); }
+	@media (min-width: em($ml-from)) { width: span(1 of $ml-columns); }
+}
+.Masonry > .Artist--big {
+	@media (min-width: em($small-from)) { width: span(2 of $small-columns); }
+	@media (min-width: em($sm-from)) { width: span(2 of $sm-columns); }
+	@media (min-width: em($medium-from)) { width: span(2 of $medium-columns); }
+	@media (min-width: em($ml-from)) { width: span(2 of $ml-columns); }
 }
 .gutter-sizer {
-	@media (min-width: em($small-from)) {
-		width: gutter($small-columns);
-	}
-	@media (min-width: em($sm-from)) {
-		width: gutter($sm-columns);
-	}
-	@media (min-width: em($medium-from)) {
-		width: gutter($medium-columns);
-	}
-	@media (min-width: em($ml-from)) {
-		width: gutter($ml-columns);
-	}
-	// @media (min-width: em($large-from)) {
-	// 	width: gutter($large-columns);
-	// }
+	@media (min-width: em($small-from)) { width: gutter($small-columns); }
+	@media (min-width: em($sm-from)) { width: gutter($sm-columns); }
+	@media (min-width: em($medium-from)) { width: gutter($medium-columns); }
+	@media (min-width: em($ml-from)) { width: gutter($ml-columns); }
 }
 .Masonry > .Artist {
 	margin-bottom: 1rem;

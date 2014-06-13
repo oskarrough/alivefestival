@@ -14,11 +14,17 @@ html.no-js
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width')
 		meta(name='description', content='#{description}')
+
 		link(rel='canonical', href='http://alivefestival.dk/')
 		| <meta property="fb:app_id" content="114798911889232" />
-		| <meta property="og:title" content="Alive Festival" />
+		| <meta property="og:site_name" content="Alive Festival" />
 		| <meta property="og:url" content="http://facebook.om/alivefestival" />
-		| <meta property="og:image" content="" />
+		| <meta property="og:image" content="/images/2014/alive-header-trans.png" />
+		| <meta property="og:title" content="Alive Festival" />
+		if active == 'Index'
+			title Alive Festival
+		else
+			title #{active} - Alive Festival
 
 		link(rel='apple-touch-icon', sizes='57x57', href='/apple-touch-icon-57x57.png')
 		link(rel='apple-touch-icon', sizes='114x114', href='/apple-touch-icon-114x114.png')
@@ -36,18 +42,11 @@ html.no-js
 		meta(name='msapplication-TileColor', content='#da532c')
 		meta(name='msapplication-TileImage', content='/mstile-144x144.png')
 
-
-		if active == 'Index'
-			title Alive Festival
-		else
-			title #{active} - Alive Festival
-
 		// build:css styles/main.css
 		link(rel='stylesheet', href='styles/main.css')
 		// endbuild
 
 		script(src='scripts/vendor/modernizr.custom.min.js')
-
 		script.
 			//- WebFontConfig = { fontdeck: { id: '46228' } };
 			//- (function() {
@@ -59,8 +58,6 @@ html.no-js
 			//- var s = document.getElementsByTagName('script')[0];
 			//- s.parentNode.insertBefore(wf, s);
 			//- })();
-
-
 			var html = document.getElementsByTagName('html')[0];
 			html.className += '  wf-loading';
 			setTimeout(function() {
@@ -77,7 +74,6 @@ html.no-js
 			var s = document.getElementsByTagName('script')[0];
 			s.parentNode.insertBefore(wf, s);
 			})();
-
 
 	body(class="#{bodyClass}")
 
