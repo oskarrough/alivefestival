@@ -57,7 +57,7 @@ body {
 			margin-left: 19rem;
 			top: -4rem;
 		}
-		@media (min-width: 1400px) {
+		@media (min-width: $layout-xl) {
 			margin-left: 22rem;
 		}
 	}
@@ -76,7 +76,7 @@ body {
 		float: left;
 		width: 22rem;
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $layout-xl) {
 		width: 24rem;
 	}
 }
@@ -113,4 +113,24 @@ body {
 	clear: both;
 	border: 1rem solid $tandpasta;
 	border-radius: 8px;
+}
+
+
+// Grid
+.Grid {
+	@include clearfix;
+	clear: both;
+
+	> .Grid-u {
+		float: left;
+	}
+}
+// Two column grid
+.Grid--2 {
+	.Grid-u {
+		width: 48%;
+		&:first-child {
+			margin-right: 2%;
+		}
+	}
 }
