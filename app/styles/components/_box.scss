@@ -15,27 +15,22 @@
 	margin-bottom: em($space);
 	box-shadow: 2px 3px 5px 1px hsla(0, 0%, 0%, 0.4);
 
+	> h2:first-child,
+	> p:first-child {
+		margin-top: 1rem;
+	}
 	.Title {
 		margin-top: 2rem;
-	}
-	> h2:last-child {
-		margin-bottom: 0;
 	}
 	.Manchet {
 		@media (min-width: $layout-s) {
 			font-size: 22px;
 		}
-		// @media (min-width: $layout-l) {
-		// 	font-size: 24px;
-		// }
 	}
 	p {
 		@media (min-width: $layout-xl) {
 			font-size: 17px;
 		}
-		// @media (min-width: $layout-l) {
-		// 	font-size: 19px;
-		// }
 	}
 	figure {
 		margin: 2rem 1rem;
