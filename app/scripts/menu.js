@@ -42,7 +42,7 @@ $('.Navigation--primary, .Artists').find('a').each(function() {
 	// over
 	$(this).hover(function() {
 		$(this).addClass('hover');
-		$(this).css('z-index', 9999);
+		$(this).css('z-index', 500);
 	}, function() { // out
 		$(this).removeClass('hover');
 
