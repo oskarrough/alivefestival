@@ -1,13 +1,13 @@
 $(function() {
 
 	// only continue if we're on the right page
-	if( $('.page-Practical').length === 0) {
+	if( $('.page-Praktisk').length === 0) {
 		return;
 	}
 
 	// Element that marks a section
 	$('.Link--Praktisk').append('<ul class="Navigation Dropdown Navigation--practical"></ul>');
-	var $title = $('.page-Practical').find('.Main h4');
+	var $title = $('.page-Praktisk').find('.Main h4');
 
 	// Wrapper for the generated menu
 	var $nav = $('.Navigation--practical');

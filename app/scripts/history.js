@@ -1,7 +1,7 @@
 $(function() {
 
 	// only continue if we're on the right page
-	if( $('.page-History').length === 0 ) {
+	if( $('.page-Historie').length === 0 ) {
 		return;
 	}
 
