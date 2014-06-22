@@ -2,53 +2,52 @@
  * Slideshows with royalslider
  */
 
-$('.Slideshow').royalSlider({
+$('.js-Slideshow--visibleNearby').royalSlider({
+	autoPlay: {
+		enabled: true,
+		delay: 2000,
+		stopAtAction: false
+	},
+	visibleNearby: {
+		enabled: true,
+		centerArea: 0.5,
+		center: true,
+		breakpoint: 650,
+		breakpointCenterArea: 0.64,
+		navigateByCenterClick: true
+	}
+});
 
+$('.js-Slideshow').royalSlider({
 	imageScalePadding: 0,
 	imageScaleMode: 'fill', // fit-if-smaller, fill
 	autoScaleSlider: true,
 	autoScaleSliderWidth: 428,
 	autoScaleSliderHeight: 315,
-
 	transitionType: 'move',
 	transitionSpeed: 600,
 	randomizeSlides: true,
 	loop: true,
-
 	globalCaption: true,
-
 	// navigateByClick: true,
-
 	keyboardNavEnabled: false,
 	arrowsNav: true,
 	arrowsNavAutoHide: true,
 	controlNavigation: 'none',
-
 	// thumbsFitInViewport: true,
 	// startSlideId: 0,
-
 	autoPlay: {
 		enabled: true,
 		delay: 2000,
 		stopAtAction: false
 	}
-
-	// controlNavigation: 'none',
-	// thumbs: {
-	// 	// drag: false,
-	// 	// touch: false,
-	// 	// arrows: false,
-	// 	//autoCenter: false,
-	// 	orientation: 'horizontal',
-	// 	//spacing: 0
-	// }
 });
 
 
 //
 // Slideshow with titles as tabs
 //
-$('.Slideshow--tabs').royalSlider({
+$('.js-Slideshow--tabs').royalSlider({
     fadeinLoadedSlide: true,
 
     arrowsNav: false,

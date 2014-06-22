@@ -1,3 +1,17 @@
+.Home-video {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	right: 1rem;
+	z-index: 1;
+	// height: 0;
+	padding-bottom: (480/853*100%);
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+}
+
 .Home-introbox {
 	position: relative;
 	z-index: 2;
@@ -56,7 +70,8 @@
 	position: relative;
 	transform: rotate(2deg);
 	margin-bottom: 4rem;
-	z-index: 1;
+	z-index: 2;
+
 	@media (min-width: $layout-l) {
 		transform: rotate(2deg);
 		width: 340px;
@@ -72,6 +87,7 @@
 }
 .Home-gallery {
 	position: relative;
+	z-index: 2;
 	clear: both;
 	width: 85%;
 	max-width: 1200px;
