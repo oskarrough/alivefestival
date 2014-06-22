@@ -14,6 +14,10 @@
 	clear: both;
 	margin-bottom: em($space);
 	box-shadow: 2px 3px 5px 1px hsla(0, 0%, 0%, 0.4);
+	// performance
+	.touch & {
+		box-shadow: none;
+	}
 
 	> h2:first-child,
 	> p:first-child {

@@ -1,3 +1,10 @@
+.page-Alive .Navigation--primary {
+
+	@media (min-width: $layout-l) {
+		// room for video
+		margin-right: 340px;
+	}
+}
 .Home-video {
 	position: absolute;
 	top: 1rem;
@@ -22,10 +29,9 @@
 
 	.Main &.Box { // extra specificity
 		@media (min-width: $layout-l) {
-			float: left;
 			margin-right: -100%;
-			margin-left: 19rem;
-			top: -1rem;
+			// margin-left: 19rem;
+			// top: -1rem;
 		}
 		@media (min-width: 1200px) {
 			// float: right;
@@ -72,16 +78,19 @@
 	margin-bottom: 4rem;
 	z-index: 2;
 
+	// left
 	@media (min-width: $layout-l) {
+		position: absolute;
 		transform: rotate(2deg);
 		width: 340px;
-		top: 1rem;
-		left: 1rem;
-	}
-	@media (min-width: 1200px) {
-		position: absolute;
+		// top: 17rem;
+		// left: 1rem;
 		left: initial;
 		top: 3rem; right: 3rem;
+	}
+	// top right
+	@media (min-width: 1200px) {
+
 
 	}
 }
@@ -100,13 +109,16 @@
 		border-radius: 1rem;
 		margin-bottom: 2rem;
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $layout-l) {
 		clear: none;
 		float: left;
 		width: 100%;
 		max-width: none;
-		margin-top: -4rem;
+		margin-top: 4rem;
 		padding-left: 37rem; // main box width
+	}
+	@media (min-width: 1200px) {
+
 	}
 	@media (min-width: $layout-xl) {
 		// position: absolute;
@@ -130,8 +142,6 @@
 		left: -7rem;
 	}
 }
-
-
 .Home-bryghus {
 	@media (min-width: $layout-l) {
 		float: left;
