@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
-	// $(".Artists h3").fitText(1);
+	var bLazy = new Blazy({
+		selector: '.js-ll',
+		offset: 200
+	});
 
 	$('.js-Popup--artist').magnificPopup({
 		type: 'inline',
