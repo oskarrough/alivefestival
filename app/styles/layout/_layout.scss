@@ -13,9 +13,15 @@ html {
 	background-image: url(../images/2014/alive-festival-bg-pattern.jpg);
 	background-repeat: repeat;
 	color: $dark;
+	padding: 1rem;
 
 	@media (min-width: $layout-s) {
-		border: 1rem solid $tandpasta;
+		// border: 1rem solid $tandpasta;
+		// box-shadow: inset 0px 0px 20px 10px hsla(0, 0%, 0%, 0.2);
+		padding: 2rem;
+	}
+	@media (min-width: $layout-l) {
+		padding: 3rem;
 	}
 }
 body {

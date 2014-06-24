@@ -21,7 +21,7 @@
 
 .Home-introbox {
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 	max-width: 35rem;
 	padding-bottom: 1rem;
 	margin-bottom: 2rem;
@@ -109,6 +109,10 @@
 		border-radius: 1rem;
 		margin-bottom: 2rem;
 	}
+	@media (max-width: $layout-s) {
+		// hide for smaller screens
+		display: none;
+	}
 	@media (min-width: $layout-l) {
 		clear: none;
 		float: left;
@@ -158,5 +162,16 @@
 .Home-social {
 	@media (min-width: $layout-l) {
 		margin-left: 4rem;
+	}
+}
+
+// Hide things for smaller screens
+.Home-map,
+.Home-bryghus,
+.Home-surf,
+.Home-introbox .Asset--plant {
+	@media (max-width: $layout-s) {
+		// hide for smaller screens
+		display: none;
 	}
 }
