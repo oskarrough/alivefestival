@@ -43,9 +43,12 @@ h6 {
 	color: $brown;
 }
 .PageTitle {
-	font-size: 40px;
-	margin: 3rem 2rem 1rem;
-
+	font-size: 30px;
+	margin: 1rem;
+	@media (min-width: $layout-s) {
+		font-size: 40px;
+		margin: 3rem 2rem 1rem;
+	}
 	@media (min-width: $layout-l) {
 		// font-size: 50px;
 	}
@@ -63,7 +66,10 @@ h6 {
 	}
 }
 h2 {
-	font-size: rem(30);
+	font-size: rem(25);
+	@media (min-width: $layout-s) {
+		font-size: rem(30);
+	}
 }
 h3,
 h4 {

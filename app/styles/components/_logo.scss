@@ -3,10 +3,13 @@
 	z-index: 3;
 	margin: 0 auto 1rem;
 	text-align: center;
-	max-width: 220px;
+	max-width: 140px;
 
 	> a {
 		display: block;
+	}
+	@media (min-width: $layout-s) {
+		max-width: 220px;
 	}
 	@media (min-width: $layout-m) {
 		float: left;
@@ -15,10 +18,10 @@
 		left: -0.5rem;
 	}
 
-	// Smaller Logo on the homepage for small screens
-	.page-Alive & {
-		@media (max-width: $layout-s) {
-			max-width: 160px;
-		}
-	}
+	// // Smaller Logo on the homepage for small screens
+	// .page-Alive & {
+	// 	@media (max-width: $layout-s) {
+	// 		max-width: 160px;
+	// 	}
+	// }
 }

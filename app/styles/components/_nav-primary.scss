@@ -1,11 +1,12 @@
 .Navigation--primary {
 	@include clearfix;
 	@extend %burbank-bold;
-	font-size: rem(30);
+	font-size: rem(25);
 	margin-bottom: 1rem;
 	text-align: center;
 
 	@media (min-width: $layout-m) {
+		font-size: rem(30);
 		float: left;
 		margin-left: rem(220) + 1rem;
 		padding-top: 1rem;
