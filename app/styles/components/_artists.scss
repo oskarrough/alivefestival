@@ -1,19 +1,13 @@
 .Alist {
 	margin-bottom: 2rem;
-	@media (min-width: $layout-l) {
-		clear: both;
-	}
 
 	@media (min-width: 1200px) {
-		// clear: none;
-		// float: left;
-		// width: 27rem;
 		max-width: 70rem;
 		margin-left: auto;
 		margin-right: auto;
 	}
-
 	.Title {
+		clear: both;
 		font-size: 40px;
 	}
 	h3 {
