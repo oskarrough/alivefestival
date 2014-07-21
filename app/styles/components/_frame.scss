@@ -58,9 +58,12 @@
 	> a,
 	> img {
 		display: block;
-		position: relative;
-		top: 45%;
+		position: absolute;
+		top: 48%;
 		transform: translateY(-50%);
+	}
+	> a {
+		height: 90%; // firefox fix
 	}
 	img {
 		width: 90%;
