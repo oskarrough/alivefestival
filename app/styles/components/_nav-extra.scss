@@ -21,7 +21,9 @@
 		letter-spacing: 1px;
 		color: $bleached;
 	}
-	@media (min-width: $layout-l) {
+	display: none;
+	@media (min-width: 880px) {
+		display: block;
 		transform: translateX(0.25em) scale(1) rotate(-2deg);
 	}
 	&.is-sticky {

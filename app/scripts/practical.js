@@ -7,20 +7,22 @@ $(function() {
 
 	// Element that marks a section
 	$('.Link--Praktisk').append('<ul class="Navigation Dropdown Navigation--practical"></ul>');
-	var $title = $('.page-Praktisk').find('.Main h4');
+	var $title = $('.page-Praktisk').find('.Main').find('h3');
+
+	console.log($title.length);
 
 	// Wrapper for the generated menu
 	var $nav = $('.Navigation--practical');
-
 
 	//
 	// Generate a menu from the content on the page
 	//
 	$nav.html('');
-	$title.each( function() {
+	$title.each(function() {
 		var myID = this.id;
 
 		if (myID) {
+			console.log(myID);
 			$nav.append('<li><a href="#' + myID + '">' + myID + '</a></li>');
 		}
 	});
@@ -52,7 +54,6 @@ $(function() {
 
 	// make sure waypoints are correct
 	$.waypoints('refresh');
-
 
 	//
 	// Smooth scrolling instead of jumping
