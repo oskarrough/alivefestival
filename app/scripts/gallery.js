@@ -48,11 +48,6 @@ $(function(){
 	var $container = $('.Gallery');
 	if ($container.length > 0) {
 
-		// Lazy loaded images
-		var bLazy = new Blazy({
-			selector: '.Gallery img'
-		});
-
 		// Masonry gallery
 		$container.prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
 		$container.masonry({
