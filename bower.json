@@ -3,14 +3,10 @@
   "version": "2014",
   "private": true,
   "dependencies": {
-    "masonry": "~3.1.5",
-    "imagesloaded": "~3.1.5",
-    "jquery-waypoints": "~2.0.5",
     "jquery": "~2.1.1",
-    "qtip2": "~2.2.0",
+    "jquery-waypoints": "~2.0.5",
     "magnific-popup": "~0.9.9",
     "fittext": "*",
-    "blazy": "*"
-  },
-  "devDependencies": {}
+    "lazysizes": "~0.5.0"
+  }
 }

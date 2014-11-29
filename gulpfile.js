@@ -1,3 +1,4 @@
+/* jshint node:true */
 'use strict';
 
 var gulp = require('gulp');
@@ -8,21 +9,23 @@ gulp.task('styles', function () {
 		.pipe($.plumber())
 		.pipe($.rubySass({
 			style: 'expanded',
-			precision: 5,
+			precision: 10,
 			require: 'susy',
 			bundleExec: true
 		}))
-		.pipe($.autoprefixer('last 1 version'))
+		.pipe($.autoprefixer({browsers: ['last 1 version']}))
 		.pipe(gulp.dest('.tmp/styles'));
 });
 
+// Lint all scripts except those inside scripts/vendor
 gulp.task('jshint', function () {
 	return gulp.src(['app/scripts/**/*.js', '!app/scripts/vendor/**/*.js'])
 		.pipe($.jshint())
-		.pipe($.jshint.reporter('jshint-stylish'));
-		// .pipe($.jshint.reporter('fail'));
+		.pipe($.jshint.reporter('jshint-stylish'))
+		.pipe($.jshint.reporter('fail'));
 });
 
+// Compile jade into HMTL
 gulp.task('jade', function () {
 	return gulp.src(['app/*.jade'])
 		.pipe($.jade({pretty: true}))
@@ -32,7 +35,6 @@ gulp.task('jade', function () {
 gulp.task('html', ['jade', 'styles'], function () {
 	var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
-	// return gulp.src('app/*.html')
 	return gulp.src('.tmp/*.html')
 		.pipe(assets)
 		.pipe($.if('*.js', $.uglify()))
@@ -42,24 +44,12 @@ gulp.task('html', ['jade', 'styles'], function () {
 		.pipe(gulp.dest('dist'));
 });
 
-gulp.task('html2', function () {
-	return gulp.src('.tmp/*.html')
-
-		.pipe($.useref.assets())
-		.pipe($.if('*.js', $.uglify()))
-		.pipe($.if('*.css', $.csso()))
-		.pipe($.useref.restore())
-
-		.pipe($.useref())
-		.pipe(gulp.dest('dist'));
-});
-
 gulp.task('images', function () {
 	return gulp.src('app/images/**/*')
-		// .pipe($.cache($.imagemin({
-		// 	progressive: true,
-		// 	interlaced: true
-		// })))
+		.pipe($.cache($.imagemin({
+			progressive: true,
+			interlaced: true
+		})))
 		.pipe(gulp.dest('dist/images'));
 });
 
@@ -71,13 +61,24 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('extras', function () {
-	return gulp.src(['app/*.*', '!app/*.html', '!app/**/*.jade'], { dot: true })
-		.pipe(gulp.dest('dist'));
+	return gulp.src([
+		'app/*.*',
+		'!app/*.html',
+		'!app/**/*.jade'
+	], {
+		dot: true
+	}).pipe(gulp.dest('dist'));
+});
+
+// Copy the grunticon-generated 'icons' folder to dist
+gulp.task('icons', function () {
+	return gulp.src(['.tmp/images/icons/**/*'])
+		.pipe(gulp.dest('dist/images/icons'));
 });
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('connect', function () {
+gulp.task('connect', ['styles'], function () {
 	var serveStatic = require('serve-static');
 	var serveIndex = require('serve-index');
 	var app = require('connect')()
@@ -96,14 +97,14 @@ gulp.task('connect', function () {
 		});
 });
 
-gulp.task('serve', ['connect', 'jade', 'styles'], function () {
+gulp.task('serve', ['html', 'connect', 'watch'], function () {
 	require('opn')('http://0.0.0.0:9000');
 });
 
-gulp.task('watch', ['connect', 'serve'], function () {
+gulp.task('watch', ['connect'], function () {
 	$.livereload.listen();
 
-	// watch for changes
+	// Notify livereload when these files change
 	gulp.watch([
 		'app/*.html',
 		'.tmp/*.html',
@@ -113,14 +114,15 @@ gulp.task('watch', ['connect', 'serve'], function () {
 		'app/images/**/*'
 	]).on('change', $.livereload.changed);
 
+	// Run these tasks when these files change
 	gulp.watch('app/*.jade', ['jade']);
 	gulp.watch('app/styles/**/*.scss', ['styles']);
 });
 
-gulp.task('build', ['jshint', 'html', 'images', 'extras'], function () {
+gulp.task('build', ['jshint', 'html', 'images', 'extras', 'icons'], function () {
 	return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
 gulp.task('default', ['clean'], function () {
-		gulp.start('build');
+	gulp.start('build');
 });

@@ -3,10 +3,10 @@ block vars
 	- var bodyClass = 'page-Music'
 	- var description = ""
 
-extends views/includes/layout
+extends templates/includes/layout
 
 block content
-	include views/modules/artists-masonry.jade
+	include templates/modules/artists-masonry.jade
 
 	.Whatever
 		//-ul#tabs.TabsNav(role="tablist")
@@ -20,10 +20,10 @@ block content
 
 		//-.Tabs
 			#panel1.Tabs-panel(role="tabpanel", aria-labelledby="tab1")
-				include views/modules/artists-masonry.jade
+				include templates/modules/artists-masonry.jade
 
 			#panel2.Tabs-panel(role="tabpanel", aria-labelledby="tab2")
-				include views/modules/timetable.jade
+				include templates/modules/timetable.jade
 
 	//-p <iframe width="560" height="315" src="//www.youtube.com/embed/videoseries?list=PLo682vyue18ghgHMOEXVniKLfUx3sGwNx" frameborder="0" allowfullscreen></iframe>
 	//-p <iframe src="https://embed.spotify.com/?uri=https://play.spotify.com/user/1133931389/playlist/06qyZkEWCOU16E4URII5Qg" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>

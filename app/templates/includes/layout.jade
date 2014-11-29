@@ -1,0 +1,145 @@
+//- global vars
+- var language = 'da'
+- var dir = 'root'
+- var description = ''
+
+//- local vars
+block vars
+	- var bodyClass = ''
+	- var active = active || ''
+
+doctype
+html.no-js
+	head
+		meta(charset='utf-8')
+		//-meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+		meta(name='description', content='#{description}')
+
+		link(rel='canonical', href='http://alivefestival.dk/')
+		| <meta property="fb:app_id" content="114798911889232" />
+		| <meta property="og:site_name" content="Alive Festival" />
+		| <meta property="og:url" content="http://facebook.om/alivefestival" />
+		| <meta property="og:image" content="/images/2014/alive-header-trans.png" />
+		| <meta property="og:title" content="Alive Festival" />
+		if active == 'Index'
+			title Alive Festival
+		else
+			title #{active} - Alive Festival
+
+		link(rel='apple-touch-icon', sizes='57x57', href='images/favicons/apple-touch-icon-57x57.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='images/favicons/apple-touch-icon-114x114.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='images/favicons/apple-touch-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='144x144', href='images/favicons/apple-touch-icon-144x144.png')
+		link(rel='apple-touch-icon', sizes='60x60', href='images/favicons/apple-touch-icon-60x60.png')
+		link(rel='apple-touch-icon', sizes='120x120', href='images/favicons/apple-touch-icon-120x120.png')
+		link(rel='apple-touch-icon', sizes='76x76', href='images/favicons/apple-touch-icon-76x76.png')
+		link(rel='apple-touch-icon', sizes='152x152', href='images/favicons/apple-touch-icon-152x152.png')
+		link(rel='icon', type='image/png', href='images/favicons/favicon-196x196.png', sizes='196x196')
+		link(rel='icon', type='image/png', href='images/favicons/favicon-160x160.png', sizes='160x160')
+		link(rel='icon', type='image/png', href='images/favicons/favicon-96x96.png', sizes='96x96')
+		link(rel='icon', type='image/png', href='images/favicons/favicon-16x16.png', sizes='16x16')
+		link(rel='icon', type='image/png', href='images/favicons/favicon-32x32.png', sizes='32x32')
+		meta(name='msapplication-TileColor', content='#da532c')
+		meta(name='msapplication-TileImage', content='images/favicons/mstile-144x144.png')
+
+		// build:css styles/main.css
+		link(rel='stylesheet', href='styles/main.css')
+		// endbuild
+
+		script(src='scripts/vendor/modernizr.custom.min.js')
+		script.
+			//- WebFontConfig = { fontdeck: { id: '46228' } };
+			//- (function() {
+			//- var wf = document.createElement('script');
+			//- wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			//- '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			//- wf.type = 'text/javascript';
+			//- wf.async = 'true';
+			//- var s = document.getElementsByTagName('script')[0];
+			//- s.parentNode.insertBefore(wf, s);
+			//- })();
+			var html = document.getElementsByTagName('html')[0];
+			html.className += '  wf-loading';
+			setTimeout(function() {
+			html.className = html.className.replace(' wf-loading', '');
+			}, 5000);
+
+			WebFontConfig = { fontdeck: { id: '46228' } };
+
+			(function() {
+			var wf = document.createElement('script');
+			wf.src = 'http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+			})();
+
+	body(class="#{bodyClass}")
+
+		header#Header.Header
+			h1.Logo
+				a(href="/")
+					//- img(src='images/2014/alivefestival-2014-logo.png', alt='Alive Festival')
+					//- img(src='images/2014/alive-header.jpg', alt='Alive Festival')
+					img(src='images/2014/alive-header-trans.png', alt='Alive Festival')
+
+			nav#SiteNav.SiteNav
+				include navigation
+
+			.Social
+				a.Social-facebook(href="http://facebook.com/alivefestival")
+					img(src="images/handycons/facebook_32.png", alt="")
+					//img(src='images/icon/social-facebook.png', alt='')
+
+		main#Main.Main
+			block content
+
+		.Loader
+			ul.Loader-object
+				li
+				li
+				li
+
+		.Scripts
+			// build:js(app) scripts/main.js
+			script(src='bower_components/jquery/dist/jquery.js')
+
+			//- this and that
+			script(src='bower_components/lazysizes/lazysizes.js')
+			script(src='bower_components/jquery-waypoints/waypoints.js')
+			script(src='bower_components/magnific-popup/dist/jquery.magnific-popup.js')
+			script(src='scripts/vendor/royalslider/jquery.royalslider.custom.min.js')
+			script(src='bower_components/imagesloaded/imagesloaded.pkgd.js')
+			script(src="bower_components/masonry/dist/masonry.pkgd.js")
+
+			//- own scripts
+			script(src='scripts/menu.js')
+			script(src='scripts/history.js')
+			script(src='scripts/practical.js')
+			script(src='scripts/gallery.js')
+			script(src='scripts/program.js')
+			//- script(src='scripts/tabs.js')
+			script(src='scripts/slideshow.js')
+			script(src='scripts/main.js')
+			// endbuild
+
+			.Facebook.
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=114798911889232&version=v2.0";
+				fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+			script.
+				(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+				function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+				e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+				e.src='https://www.google-analytics.com/analytics.js';
+				r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+				ga('create','UA-3906535-9');ga('send','pageview');
+

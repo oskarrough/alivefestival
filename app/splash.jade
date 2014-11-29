@@ -1,0 +1,52 @@
+block vars
+	- var active = 'Index'
+	- var bodyClass = 'page-Alive'
+	- var description = ""
+
+extends templates/includes/layout
+
+block content
+	.Box.Box--dark.Home-introbox
+		h1.PageTitle: span I en skjult oase mellem hav og fjord i hjertet af Thy løber Alive Festival i år af stablen for sjette gang i træk. Kom!
+		p <a href="billetter.html" class="Button Button--big">Få din billet nu!</a>
+		p.Manchet Fireogtyve koncerter paa tre dage, camping, surf, thy øl på fad og dejlige mennesker!
+
+	//-.Home-video.
+		<iframe width="853" height="480" src="//www.youtube.com/embed/2H-UO3X1nLk?modestbranding=0&;rel=0&;showinfo=0;autohide=1" frameborder="0" allowfullscreen></iframe>
+
+	.Home-mood: figure.Frame
+		a.js-Popup--video(href="https://www.youtube.com/watch?v=jYIxoxmtdnw")
+			img(src="images/2014/video-thumb.jpg")
+
+	.Home-gallery
+		//- figure.Frame
+		.Slideshow.js-Slideshow.royalSlider.rsDefault
+			a.rsImg(href="images/gallery/p-6767.jpg")
+			a.rsImg(href="images/gallery/p-7010-s.jpg")
+			a.rsImg(href="images/gallery/p-6812-s.jpg")
+			a.rsImg(href="images/gallery/p-6543-s.jpg")
+			a.rsImg(href="images/gallery/p-6425-s.jpg")
+			a.rsImg(href="images/gallery/DSC_0180-28-s.jpg")
+		.Facebook.
+			<div class="fb-like" data-href="https://facebook.com/alivefestival" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+
+	.Home-map.FrameWrap(style='max-width: 700px;')
+		p.Frame
+			a(href='https://www.google.com/maps/dir//Plantagevej+18,+7700+Thisted,+Denmark/@56.9793827,8.6558878,11z/data=!4m13!1m4!3m3!1s0x464998f2bb58c43f:0x715208302522c70f!2sPlantagevej+18!3b1!4m7!1m0!1m5!1m1!1s0x464998f2bb58c43f:0x715208302522c70f!2m2!1d8.690752!2d56.956506')
+				img.lazyload(data-src='images/2014/map.jpg', alt='')
+
+	.Asset.Asset--guitar
+
+	.Box.Home-bryghus.
+		<h2 class="Box-title">Seneste nyt</h2>
+
+
+		<p><br><a href="/blog">&rarr; Se alle nyheder</a></p>
+
+	.Box.Home-surf
+		h2.Box-title #ThyAlive på Instagram
+		p Festivalens officielle hashtag er <a href="http://www.gramfeed.com/instagram/tags#thyalive" target="_blank">#ThyAlive</a>. Tag dine billeder og vær med!
+		.Constrained.
+			<!-- SnapWidget -->
+			<iframe src="http://snapwidget.com/in/?h=dGh5YWxpdmV8aW58ODB8NHwzfHx5ZXN8NXxub25lfG9uU3RhcnQ=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height: 285px; padding: 0;" ></iframe>
