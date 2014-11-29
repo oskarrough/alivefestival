@@ -9,11 +9,12 @@
 	box-sizing: border-box;
 }
 html {
+	height: 100%;
+	padding: 1rem;
 	background-color: $yellow;
 	background-image: url(../images/2014/alive-festival-bg-pattern.jpg);
 	background-repeat: repeat;
 	color: $dark;
-	padding: 1rem;
 
 	@media (min-width: $layout-s) {
 		// border: 1rem solid $tandpasta;

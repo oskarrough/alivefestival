@@ -1,0 +1,109 @@
+html {
+	// background-color: #fff;
+	padding: 0;
+	// background-image: url(../images/2015/event-bg.jpg);
+	background-image: none;
+	background-color: #000;
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: 50% 50%;
+}
+
+
+.Splash {
+	height: 100%;
+
+	.Header {
+		display: none;
+	}
+	.Home-mood {
+		margin: auto;
+	}
+
+}
+.Splash-intro h1,
+.Splash-intro h2,
+.Splash-callouts {
+	color: $white;
+	// transition: color 400ms;
+	// .Splash--onVideo & {
+	// 	color: $white;
+	// }
+}
+.Splash-intro {
+	position: relative;
+	max-width: 44rem;
+	margin: 4rem auto -2rem;
+	text-align: center;
+	padding-top: 4rem	;
+	animation-name: move-up;
+	animation-duration: 0.7s;
+	animation-delay: 1s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	-webkit-backface-visibility: hidden;
+
+	h1,
+	h2 {
+		animation-name: fade-in;
+		animation-duration: 0.5s;
+		animation-delay: 0.3s;
+		animation-fill-mode: both;
+		-webkit-backface-visibility: hidden;
+	}
+	h1 {
+		margin-bottom: 0;
+		@media (min-width: $layout-m) {
+			font-size: 5rem;
+		}
+
+		background-image: url(../images/2014/alive-festival-bg-pattern.jpg);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+	}
+	h2 {
+		@extend %burbank-light;
+		@media (min-width: $layout-m) {
+			font-size: 3rem;
+		}
+	}
+}
+
+
+$callout-start: 1.8s;
+.Splash-callouts {
+	width: 90%;
+	max-width: 1000px;
+	font-size: 18px;
+	margin: 0 auto 1.5rem;
+	list-style: none;
+	text-align: center;
+
+	li {
+		float: left;
+		width: 25%;
+		padding: 0 1rem;
+
+		// fade in
+		opacity: 0;
+		animation-name: fade-in;
+		animation-duration: 0.8s;
+		animation-fill-mode: both;
+		-webkit-backface-visibility: hidden;
+		&:nth-child(1) { animation-delay: $callout-start; }
+		&:nth-child(2) { animation-delay: $callout-start + 100ms; width: 50%;}
+		&:nth-child(3) { animation-delay: $callout-start + 200ms; }
+		&:nth-child(4) { clear: left; animation-delay: $callout-start + 120ms; }
+		&:nth-child(5) { animation-delay: $callout-start + 220ms; width: 50%;}
+		&:nth-child(6) { animation-delay: $callout-start + 320ms; }
+	}
+}
+
+@keyframes move-up {
+	from { transform: translate(0, 0) scale(1); }
+	to { transform: translate(0, -80px) scale(0.9); }
+}
+@keyframes fade-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}

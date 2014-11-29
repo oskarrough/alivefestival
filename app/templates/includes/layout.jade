@@ -23,9 +23,9 @@ html.no-js
 		| <meta property="og:image" content="/images/2014/alive-header-trans.png" />
 		| <meta property="og:title" content="Alive Festival" />
 		if active == 'Index'
-			title Alive Festival
+			title Alive Festival Thy
 		else
-			title #{active} - Alive Festival
+			title #{active} - Alive Festival Thy
 
 		link(rel='apple-touch-icon', sizes='57x57', href='images/favicons/apple-touch-icon-57x57.png')
 		link(rel='apple-touch-icon', sizes='114x114', href='images/favicons/apple-touch-icon-114x114.png')
@@ -81,8 +81,6 @@ html.no-js
 		header#Header.Header
 			h1.Logo
 				a(href="/")
-					//- img(src='images/2014/alivefestival-2014-logo.png', alt='Alive Festival')
-					//- img(src='images/2014/alive-header.jpg', alt='Alive Festival')
 					img(src='images/2014/alive-header-trans.png', alt='Alive Festival')
 
 			nav#SiteNav.SiteNav
@@ -104,15 +102,15 @@ html.no-js
 
 		.Scripts
 			// build:js(app) scripts/main.js
-			script(src='bower_components/jquery/dist/jquery.js')
-
-			//- this and that
-			script(src='bower_components/lazysizes/lazysizes.js')
-			script(src='bower_components/jquery-waypoints/waypoints.js')
-			script(src='bower_components/magnific-popup/dist/jquery.magnific-popup.js')
+			script(src='../bower_components/jquery/dist/jquery.js')
+			script(src='../bower_components/lazysizes/lazysizes.js')
+			script(src='../bower_components/jquery-waypoints/waypoints.js')
+			script(src='../bower_components/imagesloaded/imagesloaded.pkgd.js')
+			//- script(src='../bower_components/masonry/dist/masonry.pkgd.js')
+			script(src='../bower_components/video.js/dist/video-js/video.js')
+			script(src='../bower_components/bigvideo.js/lib/bigvideo.js')
+			script(src='../bower_components/magnific-popup/dist/jquery.magnific-popup.js')
 			script(src='scripts/vendor/royalslider/jquery.royalslider.custom.min.js')
-			script(src='bower_components/imagesloaded/imagesloaded.pkgd.js')
-			script(src="bower_components/masonry/dist/masonry.pkgd.js")
 
 			//- own scripts
 			script(src='scripts/menu.js')
@@ -122,10 +120,10 @@ html.no-js
 			script(src='scripts/program.js')
 			//- script(src='scripts/tabs.js')
 			script(src='scripts/slideshow.js')
-			script(src='scripts/main.js')
+			script(src='scripts/app.js')
 			// endbuild
 
-			.Facebook.
+			//- .Facebook.
 				<div id="fb-root"></div>
 				<script>(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];

@@ -1,7 +1,7 @@
 $(function() {
 
 	// only continue if we're on the right page
-	if( $('.page-Praktisk').length === 0) {
+	if(!$('.page-Praktisk').length) {
 		return;
 	}
 

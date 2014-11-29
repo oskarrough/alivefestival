@@ -1,11 +1,11 @@
 /*!
-	ALIVE FESTIVAL 2009-2014
+	ALIVE FESTIVAL 2009-2015
 	by Oskar Rough Mosumgaard
 	oskarrough.com
 */
 
-@import "base/_config";
-@import "base/_mixins";
+@import "base/config";
+@import "base/mixins";
 
 @import "susy";
 
@@ -13,11 +13,11 @@
  * Utilities (abstract patterns to be reused in components)
  */
 
-// @import "utilities/_align";
-@import "utilities/_clearfix";
-// @import "utilities/_mediablock";
-// @import "utilities/_tabs";
-// @import "utilities/_truncate";
+// @import "utilities/align";
+@import "utilities/clearfix";
+// @import "utilities/mediablock";
+// @import "utilities/tabs";
+// @import "utilities/truncate";
 
 @import 'components/royalslider-vendor';
 @import "../scripts/vendor/royalslider/skins/default/rs-default";
@@ -38,6 +38,7 @@
 
 // Components
 @import "components/assets";
+@import "components/big-video";
 @import "components/blog";
 @import "components/box";
 @import "components/artists";
@@ -60,3 +61,5 @@
 @import "components/social";
 @import "components/home";
 @import "components/components";
+
+@import "layout/splash";

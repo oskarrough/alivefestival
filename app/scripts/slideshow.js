@@ -44,9 +44,7 @@ $('.js-Slideshow').royalSlider({
 });
 
 
-//
 // Slideshow with titles as tabs
-//
 $('.js-Slideshow--tabs').royalSlider({
     fadeinLoadedSlide: true,
 
