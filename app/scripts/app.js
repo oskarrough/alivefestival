@@ -30,24 +30,27 @@ $(document).ready(function() {
 	// 	$(this).parent().toggleClass('js-hover');
 	// });
 
-	// initializes BigVideo
-	var BV = new $.BigVideo({
-		controls: false,
-		doLoop: true
-	});
-	BV.init();
+	if ($('.Splash').length) {
+		console.log('splashy');
+		// initializes BigVideo
+		var BV = new $.BigVideo({
+			controls: false,
+			doLoop: true
+		});
+		BV.init();
 
-	// if (!Modernizr.touch) {}
-	BV.show([
-		// { type: "video/mp4",  src: "images/2015/alive-bg.mp4" },
-		{ type: "video/webm", src: "images/2015/alive-bg.webm" },
-		{ type: "video/ogg",  src: "images/2015/alive-bg.ogv" }
-	]);
+		// if (!Modernizr.touch) {}
+		BV.show([
+			// { type: 'video/mp4',  src: 'images/2015/alive-bg.mp4' },
+			{ type: 'video/webm', src: 'images/2015/alive-bg.webm' },
+			{ type: 'video/ogg',  src: 'images/2015/alive-bg.ogv' }
+		]);
 
-	BV.getPlayer().one('loadeddata', function() {
-		$('#big-video-wrap').addClass('is-loaded');
-		setTimeout(function(){
-			$('.Splash').addClass('Splash--onVideo');
-		}, 2000);
-	});
+		BV.getPlayer().one('loadeddata', function() {
+			$('#big-video-wrap').addClass('is-loaded');
+			setTimeout(function(){
+				$('.Splash').addClass('Splash--onVideo');
+			}, 2000);
+		});
+	}
 });
