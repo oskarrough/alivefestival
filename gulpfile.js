@@ -21,8 +21,8 @@ gulp.task('styles', function () {
 gulp.task('jshint', function () {
 	return gulp.src(['app/scripts/**/*.js', '!app/scripts/vendor/**/*.js'])
 		.pipe($.jshint())
-		.pipe($.jshint.reporter('jshint-stylish'))
-		.pipe($.jshint.reporter('fail'));
+		.pipe($.jshint.reporter('jshint-stylish'));
+		// .pipe($.jshint.reporter('fail'));
 });
 
 // Compile jade into HMTL
@@ -46,10 +46,11 @@ gulp.task('html', ['jade', 'styles'], function () {
 
 gulp.task('images', function () {
 	return gulp.src('app/images/**/*')
-		.pipe($.cache($.imagemin({
-			progressive: true,
-			interlaced: true
-		})))
+		.pipe($.filter('*.{jpg,jpeg,svg,gif,png}'))
+		// .pipe($.cache($.imagemin({
+		// 	progressive: true,
+		// 	interlaced: true
+		// })))
 		.pipe(gulp.dest('dist/images'));
 });
 

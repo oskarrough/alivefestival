@@ -10,36 +10,26 @@
 }
 html {
 	height: 100%;
-	padding: 1rem;
 	background-color: $yellow;
 	background-image: url(../images/2014/alive-festival-bg-pattern.jpg);
 	background-repeat: repeat;
 	color: $dark;
-
+}
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 1rem;
 	@media (min-width: $layout-s) {
-		// border: 1rem solid $tandpasta;
-		// box-shadow: inset 0px 0px 20px 10px hsla(0, 0%, 0%, 0.2);
 		padding: 2rem;
 	}
 	@media (min-width: $layout-l) {
 		padding: 3rem;
 	}
 }
-body {
-	overflow-x: hidden;
-	overflow-y: scroll;
-}
-.Header,
-.Main {
-	// padding-left: 1rem; padding-right: 1rem;
-	@media (min-width: $layout-s) {
-		// padding-left: 2rem; padding-right: 2rem;
-	}
-}
+
 .Header {
 	@media (min-width: $layout-s) {
 		margin-top: 1rem;
-		// padding-left: 1rem;
 	}
 }
 .Main {

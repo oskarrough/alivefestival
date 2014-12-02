@@ -48,9 +48,6 @@ $(document).ready(function() {
 
 		BV.getPlayer().one('loadeddata', function() {
 			$('#big-video-wrap').addClass('is-loaded');
-			setTimeout(function(){
-				$('.Splash').addClass('Splash--onVideo');
-			}, 2000);
 		});
 	}
 });
