@@ -86,5 +86,3 @@ class PerchBlog_Cache
         }
     }
 }
-
-?>

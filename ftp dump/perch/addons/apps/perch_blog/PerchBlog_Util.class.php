@@ -14,7 +14,7 @@ class PerchBlog_Util extends PerchAPI_Factory
 		return PerchUtil::get_dir_contents(PerchUtil::file_path(PERCH_PATH.'/addons/apps/'.$this->api->app_id.'/import_data/'), true);
 	}
 
-	public function import_from_posterous($folder, $format='html', $bucket='default')
+	public function import_from_posterous($folder, $format='html', $bucket='default', $sectionID=1)
 	{
 		$folder_path = PerchUtil::file_path(PERCH_PATH.'/addons/apps/'.$this->api->app_id.'/import_data/'.$folder);
 		$this->import_folder = $folder_path;
@@ -25,7 +25,7 @@ class PerchBlog_Util extends PerchAPI_Factory
 
 				$this->resource_bucket = $bucket;
 
-				return $this->import_from_wp($wordpress_file, 'html', array($this, 'posterous_process_images'));
+				return $this->import_from_wp($wordpress_file, 'html', array($this, 'posterous_process_images'), $sectionID);
 			}
 		}else{
 
@@ -136,7 +136,7 @@ class PerchBlog_Util extends PerchAPI_Factory
 
 
 
-	public function import_from_wp($wordpress_file, $format="textile", $callback=false)
+	public function import_from_wp($wordpress_file, $format="textile", $callback=false, $sectionID=1)
 	{
 		$out = array();
 
@@ -323,7 +323,10 @@ class PerchBlog_Util extends PerchAPI_Factory
 	        	$post = call_user_func($callback, $post, $Template);
 	        }
 	        
-	        	                
+	        	               
+	        // Section
+	        $post['sectionID'] = $sectionID;
+
 	        // Create the post
 	        $Post = $Posts->create($post, $Template);
 	        
@@ -337,7 +340,7 @@ class PerchBlog_Util extends PerchAPI_Factory
 
 	            
 	            // CATEGORIES AND TAGS
-	            $Categories = new PerchBlog_Categories($this->api);
+	            $Categories = new PerchCategories_Categories();
 	            $Tags = new PerchBlog_Tags($this->api);
 
 	            $postTags = array();
@@ -365,7 +368,8 @@ class PerchBlog_Util extends PerchAPI_Factory
 	                        break;
 	                        
 	                    case 'category':
-	                        $Category = $Categories->find_or_create($slug, $label);
+	                    	PerchUtil::debug("Find or create $slug", 'notice');
+	                        $Category = $Categories->find_or_create('blog/'.$slug.'/', $label);
 	                        if (is_object($Category)) {
 	                            $cat_ids[] = $Category->id();
 
@@ -384,11 +388,13 @@ class PerchBlog_Util extends PerchAPI_Factory
 	            }
 
 	            if (PerchUtil::count($cat_ids)) {
-	            	$post['cat_ids'] = $cat_ids;
+	            	$fields['categories'] = $cat_ids;
+	            	$post['postDynamicFields'] = PerchUtil::json_safe_encode($fields);
 	            }
 
 	            $Post->Template = $Template;
 	            $Post->update($post);
+	            $Post->index($Template);
 	            
 	            
 	            // COMMENTS
@@ -405,13 +411,15 @@ class PerchBlog_Util extends PerchAPI_Factory
 	                    $html = PerchUtil::text_to_html((string)$tag->comment_content);
 	                    
 	                    $comment = array();
-	                    $comment['postID']            = $Post->id();
-	                    $comment['commentName']       = (string) $tag->comment_author;
-	                    $comment['commentEmail']      = (string) $tag->comment_author_email;
-	                    $comment['commentURL']        = (string) $tag->comment_author_url;
-	                    $comment['commentIP']         = ip2long((string) $tag->comment_author_IP);
-	                    $comment['commentDateTime']   = date('Y-m-d H:i:s', strtotime((string) $tag->comment_date_gmt));
-	                    $comment['commentHTML']       = $html;
+						$comment['postID']               = $Post->id();
+						$comment['commentName']          = (string) $tag->comment_author;
+						$comment['commentEmail']         = (string) $tag->comment_author_email;
+						$comment['commentURL']           = (string) $tag->comment_author_url;
+						$comment['commentIP']            = ip2long((string) $tag->comment_author_IP);
+						$comment['commentDateTime']      = date('Y-m-d H:i:s', strtotime((string) $tag->comment_date_gmt));
+						$comment['commentHTML']          = $html;
+						$comment['commentSpamData']      = '';
+						$comment['commentDynamicFields'] = '';
 
 	                    if ((string)$tag->comment_approved == '1') {
 	                        $comment['commentStatus'] = 'LIVE';                        
@@ -445,4 +453,3 @@ class PerchBlog_Util extends PerchAPI_Factory
 }
 
 
-?>

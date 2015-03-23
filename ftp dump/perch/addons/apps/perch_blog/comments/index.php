@@ -8,8 +8,8 @@
     # include your class files
     include('../PerchBlog_Posts.class.php');
     include('../PerchBlog_Post.class.php');
-	include('../PerchBlog_Categories.class.php');
-    include('../PerchBlog_Category.class.php');
+	include('../PerchBlog_Sections.class.php');
+    include('../PerchBlog_Section.class.php');
     include('../PerchBlog_Comments.class.php');
     include('../PerchBlog_Comment.class.php');
     include('../PerchBlog_Authors.class.php');
@@ -21,6 +21,7 @@
     $Perch->page_title = $Lang->get('Blog Comments');
 
     $Perch->add_css($API->app_path().'/assets/css/blog.css');
+    $Perch->add_javascript($API->app_path().'/assets/js/blog.js');
 
     # Do anything you want to do before output is started
     include('../modes/comment.list.pre.php');

@@ -22,23 +22,18 @@
     
         echo $Form->form_start('content-edit', 'magnetic-save-bar');
     
-            //echo $Form->text_field('commentName', 'Name', isset($details['commentName'])?$details['commentName']:false);
-            //echo $Form->text_field('commentEmail', 'Email', isset($details['commentEmail'])?$details['commentEmail']:false);
-            //echo $Form->text_field('commentURL', 'URL', isset($details['commentURL'])?$details['commentURL']:false);
-
-    		//echo $Form->date_field('commentDateTime', 'Date', isset($details['commentDateTime'])?$details['commentDateTime']:false, true);
-
-    		//echo $Form->textarea_field('commentHTML', 'Comment', isset($details['commentHTML'])?$details['commentHTML']:false);
-		      PerchUtil::debug($details);
-
             echo $Form->fields_from_template($Template, $details);
-		
+
+            if ($Comment->commentIP()) {
+                echo '<div class="field "><label class="label">IP Address</label><span class="input">'.long2ip($Comment->commentIP()).'</span></div>';
+		    }
+
     		$opts = array();
     		$opts[] = array('label'=>'', 'value'=>'');
-    		$opts[] = array('label'=>'Live', 'value'=>'LIVE');
-    		$opts[] = array('label'=>'Spam', 'value'=>'SPAM');
-    		$opts[] = array('label'=>'Rejected', 'value'=>'REJECTED');
-    		$opts[] = array('label'=>'Pending', 'value'=>'PENDING');
+    		$opts[] = array('label'=>$Lang->get('Live'), 'value'=>'LIVE');
+    		$opts[] = array('label'=>$Lang->get('Spam'), 'value'=>'SPAM');
+    		$opts[] = array('label'=>$Lang->get('Rejected'), 'value'=>'REJECTED');
+    		$opts[] = array('label'=>$Lang->get('Pending'), 'value'=>'PENDING');
     		    		
     		echo $Form->select_field('commentStatus', 'Status', $opts, isset($details['commentStatus'])?$details['commentStatus']:false);
 		

@@ -1,7 +1,7 @@
 <?php
     
-    $Blog = new PerchBlog_Posts($API);
-    $Categories = new PerchBlog_Categories($API);
+    $Blog       = new PerchBlog_Posts($API);
+    $Authors    = new PerchBlog_Authors($API);
 
     $HTML = $API->get('HTML');
     $Form = $API->get('Form');
@@ -25,7 +25,8 @@
     if ($Form->submitted()) {
     	if (is_object($Post)) {
     	    $Post->delete();
-            $Categories->update_post_counts();
+            $Blog->update_category_counts();
+            $Authors->update_post_counts();
     	    
     	    if ($Form->submitted_via_ajax) {
     	        echo $API->app_path().'/';

@@ -10,8 +10,8 @@
     }
 
     # include your class files
-    include('../../PerchBlog_Categories.class.php');
-    include('../../PerchBlog_Category.class.php');
+    include('../../PerchBlog_Sections.class.php');
+    include('../../PerchBlog_Section.class.php');
     include('../../PerchBlog_Cache.class.php');
     include('../../PerchBlog_Comments.class.php');
     include('../../PerchBlog_Comment.class.php');

@@ -52,10 +52,19 @@ class PerchBlog_Comment extends PerchAPI_Base
     }
 
 
-    public function to_array()
+    public function to_array($template_ids=false)
     {
         $out = parent::to_array();
                
+        if (PerchUtil::count($template_ids) && in_array('postURL', $template_ids)) {
+            $API = new PerchAPI(1.0, 'perch_blog');
+            $Posts = new PerchBlog_Posts($API);
+            $Post = $Posts->find($this->postID());
+            if (is_object($Post)) {
+                $out['postURL'] = $Post->postURL();
+            }
+        }
+
         if ($out['commentDynamicFields'] != '') {
             $dynamic_fields = PerchUtil::json_safe_decode($out['commentDynamicFields'], true);
             if (PerchUtil::count($dynamic_fields)) {
@@ -69,5 +78,3 @@ class PerchBlog_Comment extends PerchAPI_Base
         return $out;
     }
 }
-
-?>

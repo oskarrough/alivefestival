@@ -1,6 +1,6 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/perch/runtime.php'); ?>
 
-<?php perch_layout('global.top'); ?>
+<?php perch_layout('global.header'); ?>
 
 <!-- <div class="Box"> -->
   <h1><span><?php perch_content('Main heading'); ?></span></h1>

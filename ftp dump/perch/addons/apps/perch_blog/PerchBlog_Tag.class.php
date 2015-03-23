@@ -13,4 +13,3 @@ class PerchBlog_Tag  extends PerchAPI_Base
     }
 }
 
-?>

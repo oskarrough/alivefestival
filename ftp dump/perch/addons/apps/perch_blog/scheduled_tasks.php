@@ -27,4 +27,3 @@
 				'message'=>$count.' old spam '.$comments.' deleted.'
 			);
 	}
-?>

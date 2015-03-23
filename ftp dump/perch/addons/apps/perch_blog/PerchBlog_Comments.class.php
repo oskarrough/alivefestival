@@ -452,10 +452,8 @@ class PerchBlog_Comments extends PerchAPI_Factory
 	            $data['commentIP'] = ip2long($_SERVER['REMOTE_ADDR']);
 
 		        
-		        if ($akismetAPIKey) {
-		            $spam = $this->_check_for_spam($antispam, $environment, $akismetAPIKey);
-		        }
-
+		        $spam = $this->_check_for_spam($antispam, $environment, $akismetAPIKey);
+		        
 		        if ($spam) {
 		        	$data['commentStatus'] = 'SPAM';
 		        }else{
@@ -478,8 +476,26 @@ class PerchBlog_Comments extends PerchAPI_Factory
 					switch($key) {
 
 						case 'commentHTML':
-							$Textile = new Textile;
-							$val = $Textile->TextileRestricted($val);
+					        if (!class_exists('\\Netcarver\\Textile\\Parser', false) && class_exists('Textile', true)) { 
+					            // sneaky autoloading hack 
+					        }
+					        
+					        if (PERCH_HTML5) {
+					            $Textile = new \Netcarver\Textile\Parser('html5');
+					        }else{
+					            $Textile = new \Netcarver\Textile\Parser;
+					        }
+					        
+
+					        if (PERCH_RWD) {
+					            $val  =  $Textile->setDimensionlessImages(true)->textileRestricted($val);
+					        }else{
+					            $val  =  $Textile->textileRestricted($val);
+					        }
+					        
+					        if (defined('PERCH_XHTML_MARKUP') && PERCH_XHTML_MARKUP==false) {
+							    $val = str_replace(' />', '>', $val);
+							}
 							break;
 
 						case 'commentURL':
@@ -576,41 +592,27 @@ class PerchBlog_Comments extends PerchAPI_Factory
 
 	}
 
-	private function _check_for_spam($fields, $environment, $akismetAPIKey)
+	private function _check_for_spam($fields, $environment, $akismetAPIKey=false)
     {
     	if (isset($fields['honeypot']) && trim($fields['honeypot'])!='') {
     		PerchUtil::debug('Honeypot field completed: message is spam');
             return true;
     	}
 
-    	if (!class_exists('PerchBlog_Akismet')) {
-    		include_once('PerchBlog_Akismet.class.php');
-    	}
-        if (PerchBlog_Akismet::check_message_is_spam($akismetAPIKey, $fields, $environment)) {
-            PerchUtil::debug('Message is spam');
-            return true;
-        }else{
-            PerchUtil::debug('Message is not spam');
-        }
+    	if ($akismetAPIKey) {
+	    	if (!class_exists('PerchBlog_Akismet')) {
+	    		include_once('PerchBlog_Akismet.class.php');
+	    	}
+	        if (PerchBlog_Akismet::check_message_is_spam($akismetAPIKey, $fields, $environment)) {
+	            PerchUtil::debug('Message is spam');
+	            return true;
+	        }else{
+	            PerchUtil::debug('Message is not spam');
+	        }
+	    }
         return false;
     }
 
 		
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>

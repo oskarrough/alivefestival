@@ -9,21 +9,12 @@
       `authorGivenName` varchar(255) NOT NULL DEFAULT '',
       `authorFamilyName` varchar(255) NOT NULL DEFAULT '',
       `authorEmail` varchar(255) NOT NULL DEFAULT '',
+      `authorPostCount` int(10) unsigned NOT NULL DEFAULT '0',
       `authorSlug` varchar(255) NOT NULL DEFAULT '',
       `authorImportRef` varchar(64) DEFAULT NULL,
       `authorDynamicFields` text,
       PRIMARY KEY (`authorID`)
     ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-    CREATE TABLE IF NOT EXISTS `__PREFIX__blog_categories` (
-      `categoryID` int(11) NOT NULL AUTO_INCREMENT,
-      `categoryTitle` varchar(255) NOT NULL DEFAULT '',
-      `categorySlug` varchar(255) NOT NULL DEFAULT '',
-      `categoryPostCount` int(10) unsigned NOT NULL DEFAULT '0',
-      `categoryDynamicFields` text,
-      PRIMARY KEY (`categoryID`),
-      KEY `idx_slug` (`categorySlug`)
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
     CREATE TABLE IF NOT EXISTS `__PREFIX__blog_comments` (
       `commentID` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -51,6 +42,7 @@
       `postTags` varchar(255) NOT NULL DEFAULT '',
       `postStatus` enum('Published','Draft') NOT NULL DEFAULT 'Published',
       `authorID` int(10) unsigned NOT NULL DEFAULT '0',
+      `sectionID` int(10) unsigned NOT NULL DEFAULT '1',
       `postCommentCount` int(10) unsigned NOT NULL DEFAULT '0',
       `postImportID` varchar(64) DEFAULT NULL,
       `postLegacyURL` varchar(255) DEFAULT NULL,
@@ -61,11 +53,6 @@
       FULLTEXT KEY `idx_search` (`postTitle`,`postDescRaw`,`postTags`)
     ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
-    CREATE TABLE IF NOT EXISTS `__PREFIX__blog_posts_to_categories` (
-      `postID` int(11) NOT NULL DEFAULT '0',
-      `categoryID` int(11) NOT NULL DEFAULT '0',
-      PRIMARY KEY (`postID`,`categoryID`)
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED;
 
     CREATE TABLE IF NOT EXISTS `__PREFIX__blog_posts_to_tags` (
       `postID` int(11) NOT NULL DEFAULT '0',
@@ -82,6 +69,31 @@
 
     INSERT INTO `__PREFIX__settings` (`settingID`, `userID`, `settingValue`)
       VALUES ('perch_blog_post_url', 0, '/blog/post.php?s={postSlug}');
+    
+
+    CREATE TABLE IF NOT EXISTS `__PREFIX__blog_sections` (
+      `sectionID` int(11) NOT NULL AUTO_INCREMENT,
+      `sectionTitle` varchar(255) NOT NULL DEFAULT '',
+      `sectionSlug` varchar(255) NOT NULL DEFAULT '',
+      `sectionPostCount` int(10) unsigned NOT NULL DEFAULT '0',
+      `sectionDynamicFields` text,
+      PRIMARY KEY (`sectionID`),
+      KEY `idx_slug` (`sectionSlug`)
+    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+    CREATE TABLE IF NOT EXISTS `__PREFIX__blog_index` (
+      `indexID` int(10) NOT NULL AUTO_INCREMENT,
+      `itemKey` char(64) NOT NULL DEFAULT '-',
+      `itemID` int(10) NOT NULL DEFAULT '0',
+      `indexKey` char(64) NOT NULL DEFAULT '-',
+      `indexValue` char(255) NOT NULL DEFAULT '',
+      PRIMARY KEY (`indexID`),
+      KEY `idx_fk` (`itemKey`,`itemID`),
+      KEY `idx_key` (`indexKey`),
+      KEY `idx_key_val` (`indexKey`,`indexValue`),
+      KEY `idx_keys` (`itemKey`,`indexKey`)
+    ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
     ";
     
     $sql = str_replace('__PREFIX__', PERCH_DB_PREFIX, $sql);
@@ -101,11 +113,25 @@
     $UserPrivileges->create_privilege('perch_blog.post.publish', 'Publish posts');
     $UserPrivileges->create_privilege('perch_blog.comments.moderate', 'Moderate comments');
     $UserPrivileges->create_privilege('perch_blog.comments.enable', 'Enable comments on a post');
-    $UserPrivileges->create_privilege('perch_blog.categories.manage', 'Manage categories');
     $UserPrivileges->create_privilege('perch_blog.import', 'Import data');
     $UserPrivileges->create_privilege('perch_blog.authors.manage', 'Manage authors');
     
-        
+    $sql = "INSERT INTO `".PERCH_DB_PREFIX."blog_sections` (sectionID, sectionTitle, sectionSlug, sectionPostCount, sectionDynamicFields) VALUES ('1', 'Posts', 'posts', 0, '')";
+        $this->db->execute($sql);
+
+    $Core_CategorySets = new PerchCategories_Sets();
+    $Core_Categories   = new PerchCategories_Categories();
+    $Set = $Core_CategorySets->get_by('setSlug', 'blog');
+    if (!$Set) {
+        $Set = $Core_CategorySets->create(array(
+                'setTitle'         => PerchLang::get('Blog'),
+                'setSlug'          => 'blog',
+                'setTemplate'      => '~/perch_blog/templates/blog/category_set.html',
+                'setCatTemplate'   => '~/perch_blog/templates/blog/category.html',
+                'setDynamicFields' => '[]'
+            ));
+    }
+
     $sql = 'SHOW TABLES LIKE "'.$this->table.'"';
     $result = $this->db->get_value($sql);
     
