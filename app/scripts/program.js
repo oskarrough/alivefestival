@@ -2,20 +2,7 @@
  * Dynamic grid with Masonry
  */
 
-$(function () {
-
-	// check for masonry and start
-	var $container = $('#Masonry');
-	if (!$container.length) {
-		return false;
-	}
-
-	runMasonry();
-
-});
-
 function runMasonry() {
-
 	// do masonry
 	var $container = $('#Masonry');
 	$container.prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>');
@@ -38,3 +25,13 @@ function runMasonry() {
 		});
 	});
 }
+
+$(function() {
+	// check for masonry and start
+	var $container = $('#Masonry');
+	if (!$container.length) {
+		return false;
+	}
+
+	runMasonry();
+});
