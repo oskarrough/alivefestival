@@ -32,28 +32,6 @@ gulp.task('styles', function () {
 		.pipe(reload({stream: true}));
 });
 
-// Styles with Ruby Sass (on its way out)
-gulp.task('styles-ruby', function() {
-	return $.rubySass('app/styles/main.scss', {
-			sourcemap: true,
-			precision: 10,
-			require: 'susy',
-			bundleExec: true
-		})
-		.on('error', function(err) {
-			console.error('Error', err.message);
-		})
-		.pipe($.postcss([
-			require('autoprefixer-core')({ browsers: [
-				'last 2 version', 'android 4', 'ios 7', 'ie 10'
-			]})
-		]))
-		.pipe($.sourcemaps.write('.'))
-		.pipe(gulp.dest('.tmp/styles'))
-		.pipe($.filter('**/*.css')) // Filtering stream to only css files. Needed for browser-sync css injection
-		.pipe(reload({stream: true}));
-});
-
 // Lint all scripts except those inside scripts/vendor
 gulp.task('jshint', function () {
 	return gulp.src(['app/scripts/**/*.js', '!app/scripts/vendor/**/*.js'])
@@ -80,10 +58,8 @@ gulp.task('html', ['views', 'styles'], function () {
 		.pipe(assets)
 		.pipe($.if('*.js', $.uglify()))
 		.pipe($.if('*.css', $.csso()))
-		.pipe($.rev())
 		.pipe(assets.restore())
 		.pipe($.useref())
-		.pipe($.revReplace())
 		.pipe(gulp.dest('dist'));
 });
 
