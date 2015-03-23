@@ -1,129 +1,169 @@
-/* jshint node:true */
+/*global -$ */
 'use strict';
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var exec = require('child_process').exec;
+var autoprefixer = require('autoprefixer-core');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+var compression = require('compression');
 
+// Styles with Libsass (on its way in)
 gulp.task('styles', function () {
 	return gulp.src('app/styles/main.scss')
-		.pipe($.plumber())
-		.pipe($.rubySass({
-			style: 'expanded',
+		.pipe($.sourcemaps.init())
+		.pipe($.sass({
+			outputStyle: 'nested',
+			precision: 10,
+			includePaths: ['.'],
+			require: 'susy',
+			onError: console.error.bind(console, 'Sass error:')
+			// onError: function(err) {
+			// 	$.notify().write(err);
+			// }
+		}))
+		.pipe($.postcss([
+			autoprefixer({ browsers: ['last 2 version', 'android 4', 'ios 7', 'ie 10']})
+		]))
+		.pipe($.sourcemaps.write('.'))
+		.pipe(gulp.dest('.tmp/styles'))
+		.pipe($.filter('**/*.css')) // Filtering stream to only css files. Needed for browser-sync css injection
+		.pipe(reload({stream: true}));
+});
+
+// Styles with Ruby Sass (on its way out)
+gulp.task('styles-ruby', function() {
+	return $.rubySass('app/styles/main.scss', {
+			sourcemap: true,
 			precision: 10,
 			require: 'susy',
 			bundleExec: true
-		}))
-		.pipe($.autoprefixer({browsers: ['last 1 version']}))
-		.pipe(gulp.dest('.tmp/styles'));
+		})
+		.on('error', function(err) {
+			console.error('Error', err.message);
+		})
+		.pipe($.postcss([
+			require('autoprefixer-core')({ browsers: [
+				'last 2 version', 'android 4', 'ios 7', 'ie 10'
+			]})
+		]))
+		.pipe($.sourcemaps.write('.'))
+		.pipe(gulp.dest('.tmp/styles'))
+		.pipe($.filter('**/*.css')) // Filtering stream to only css files. Needed for browser-sync css injection
+		.pipe(reload({stream: true}));
 });
 
 // Lint all scripts except those inside scripts/vendor
 gulp.task('jshint', function () {
 	return gulp.src(['app/scripts/**/*.js', '!app/scripts/vendor/**/*.js'])
+		.pipe(reload({stream: true, once: true}))
 		.pipe($.jshint())
-		.pipe($.jshint.reporter('jshint-stylish'));
-		// .pipe($.jshint.reporter('fail'));
+		.pipe($.jshint.reporter('jshint-stylish'))
+		.pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
-// Compile jade into HMTL
-gulp.task('jade', function () {
-	return gulp.src(['app/*.jade'])
+// Compile .jade into .html in the .tmp dir
+gulp.task('views', function () {
+	return gulp.src('app/*.jade')
 		.pipe($.jade({pretty: true}))
+		.on('error', $.notify.onError(function (error) {
+			return 'An error occurred while compiling jade.\nLook in the console for details.\n' + error;
+		}))
 		.pipe(gulp.dest('.tmp'));
 });
 
-gulp.task('html', ['jade', 'styles'], function () {
-	var assets = $.useref.assets({searchPath: '{.tmp,app}'});
+gulp.task('html', ['views', 'styles'], function () {
+	var assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-	return gulp.src('.tmp/*.html')
+	return gulp.src(['.tmp/*.html'])
 		.pipe(assets)
 		.pipe($.if('*.js', $.uglify()))
 		.pipe($.if('*.css', $.csso()))
+		.pipe($.rev())
 		.pipe(assets.restore())
 		.pipe($.useref())
+		.pipe($.revReplace())
 		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('images', function () {
 	return gulp.src('app/images/**/*')
-		.pipe($.filter('*.{jpg,jpeg,svg,gif,png}'))
-		// .pipe($.cache($.imagemin({
-		// 	progressive: true,
-		// 	interlaced: true
-		// })))
+		.pipe($.cache($.imagemin({
+			progressive: true,
+			interlaced: true,
+			// don't remove IDs from SVGs, they are often used
+			// as hooks for embedding and styling
+			svgoPlugins: [{cleanupIDs: false}]
+		})))
 		.pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('fonts', function () {
-	return gulp.src(require('main-bower-files')().concat('app/fonts/**/*'))
-		.pipe($.filter('**/*.{eot,svg,ttf,woff}'))
-		.pipe($.flatten())
+	return gulp.src(require('main-bower-files')({
+		filter: '**/*.{eot,svg,ttf,woff,woff2}'
+	}).concat('app/fonts/**/*'))
+		.pipe(gulp.dest('.tmp/fonts'))
 		.pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('extras', function () {
+gulp.task('extras', ['move-icons'], function () {
 	return gulp.src([
 		'app/*.*',
 		'!app/*.html',
-		'!app/**/*.jade'
+		'!app/*.jade'
 	], {
 		dot: true
 	}).pipe(gulp.dest('dist'));
 });
 
-// Copy the grunticon-generated 'icons' folder to dist
-gulp.task('icons', function () {
+gulp.task('move-icons', function () {
 	return gulp.src(['.tmp/images/icons/**/*'])
 		.pipe(gulp.dest('dist/images/icons'));
 });
 
+// Runs grunticon directly from grunt
+gulp.task('icons', function (cb) {
+	exec('grunt grunticon', function (err, stdout, stderr) {
+		console.log(stdout);
+		console.log(stderr);
+		cb(err);
+	});
+});
+
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
+gulp.task('s', ['serve']);
+gulp.task('serve', ['views', 'styles', 'fonts', 'icons'], function () {
+	browserSync({
+		notify: false,
+		port: 9000,
+		server: {
+			baseDir: ['.tmp', 'app'],
+			routes: {
+				'/bower_components': 'bower_components'
+			},
+			middleware: compression()
+		}
+	});
 
-gulp.task('connect', ['styles'], function () {
-	var serveStatic = require('serve-static');
-	var serveIndex = require('serve-index');
-	var app = require('connect')()
-		.use(require('connect-livereload')({port: 35729}))
-		.use(serveStatic('app'))
-		.use(serveStatic('.tmp'))
-		// paths to bower_components should be relative to the current file
-		// e.g. in app/index.html you should use ../bower_components
-		.use('/bower_components', serveStatic('bower_components'))
-		.use(serveIndex('app'));
-
-	require('http').createServer(app)
-		.listen(9000)
-		.on('listening', function () {
-			console.log('Started connect web server on http://0.0.0.0:9000');
-		});
-});
-
-gulp.task('serve', ['html', 'connect', 'watch'], function () {
-	require('opn')('http://0.0.0.0:9000');
-});
-
-gulp.task('watch', ['connect'], function () {
-	$.livereload.listen();
-
-	// Notify livereload when these files change
+	// watch for changes
 	gulp.watch([
-		'app/*.html',
-		'.tmp/*.html',
-		'app/templates/*.jade',
-		'.tmp/styles/**/*.css',
+		// 'app/*.html',
 		'app/scripts/**/*.js',
-		'app/images/**/*'
-	]).on('change', $.livereload.changed);
+		'app/images/**/*',
+		'.tmp/fonts/**/*'
+	]).on('change', reload);
 
-	// Run these tasks when these files change
-	gulp.watch('app/*.jade', ['jade']);
+	gulp.watch('app/**/*.jade', ['views', reload]);
 	gulp.watch('app/styles/**/*.scss', ['styles']);
+	gulp.watch('app/images/icons/*.{svg,png}', ['icons', reload]);
+	gulp.watch('app/fonts/**/*', ['fonts']);
 });
 
-gulp.task('build', ['jshint', 'html', 'images', 'extras', 'icons'], function () {
+gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () {
 	return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('default', ['clean'], function () {
+gulp.task('default', ['clean', 'icons'], function () {
 	gulp.start('build');
 });

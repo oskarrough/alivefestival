@@ -1,16 +1,9 @@
-//
-// Config
-//
 
 $base-font-size-unitless: 16;
 $base-font-size: $base-font-size-unitless * 1px;
 $base-line-height-unitless: 1.4;
 
 // Colors
-// $red:           hsl(6, 66%, 50%);
-// $red2:          hsl(0, 100%, 69%);
-// $yellow:        hsl(55, 98%, 76%);
-// $green:         hsl(106, 52%, 44%);
 $white:         hsl(0, 0%, 95%);
 $blue:          hsl(187, 66%, 57%);
 $darkeryellow:  hsl(66, 25%, 49%);
@@ -25,7 +18,6 @@ $yellow:        hsl(45, 100%, 68%);
 $brown:         hsl(21, 19%, 20%);
 $green:         hsl(105, 46%, 48%);
 
-
 // Layout
 $space: 24px;
 
@@ -33,14 +25,14 @@ $space: 24px;
 $susy: (
 	box-sizing: border-box,
 	columns: 4,
-	gutters: 20/200
+	gutters: (20/200)
 );
 
 // Good looking easings for animation
-$easing: cubic-bezier(0.165, 0.84, 0.44, 1);
-$easing2: cubic-bezier(0.770, 0, 0.175, 1);
-$easing3: cubic-bezier(0.165,.84,.44,1);
-$easing4: cubic-bezier(1,.01,.3,1);
+$easing:  cubic-bezier(0.165, 0.840, 0.400, 1.000);
+$easing2: cubic-bezier(0.300, 0.000, 0.000, 1.300);
+$easing3: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$easing4: cubic-bezier(0.250, 1.400, 0.180, 1.000); // try with 200ms
 
 // Breakpoints
 $layout-s: 580px;

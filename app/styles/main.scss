@@ -7,7 +7,7 @@
 @import "base/config";
 @import "base/mixins";
 
-@import "susy";
+@import '../../bower_components/susy/sass/susy';
 
 /**
  * Utilities (abstract patterns to be reused in components)
@@ -15,9 +15,6 @@
 
 // @import "utilities/align";
 @import "utilities/clearfix";
-// @import "utilities/mediablock";
-// @import "utilities/tabs";
-// @import "utilities/truncate";
 
 @import 'components/royalslider-vendor';
 @import "../scripts/vendor/royalslider/skins/default/rs-default";
