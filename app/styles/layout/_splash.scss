@@ -1,13 +1,3 @@
-html {
-	// background-color: #fff;
-	// background-image: url(../images/2015/event-bg.jpg);
-	// background-repeat: no-repeat;
-	// background-size: cover;
-	// background-position: 50% 50%;
-	// background-image: none;
-}
-
-
 .Splash {
 	height: 100%;
 	background-color: #000;
@@ -18,13 +8,15 @@ html {
 	.Home-mood {
 		margin: auto;
 	}
-
 }
+
 .Splash-intro h1,
 .Splash-intro h2,
-.Splash-callouts {
+.Splash-callouts,
+.Splash-body {
 	color: $white;
 }
+
 .Splash-intro {
 	position: relative;
 	max-width: 44rem;
@@ -64,18 +56,20 @@ html {
 	}
 }
 
-
-$callout-start: 1.8s;
-.Splash-callouts {
+.Splash-callouts,
+.Splash-body {
 	width: 90%;
 	max-width: 1000px;
 	font-size: 18px;
 	margin: 0 auto 1.5rem;
-	list-style: none;
 	text-align: center;
+}
+
+$callout-start: 1800ms;
+.Splash-callouts {
 	position: relative;
 	z-index: 1;
-
+	list-style: none;
 	li {
 		padding: 0 1rem;
 
@@ -95,7 +89,7 @@ $callout-start: 1.8s;
 		// layout
 		@media (min-width: $layout-s) {
 			float: left;
-			width: 25%;
+			width: 30%;
 			&:nth-child(3) {
 				display: block;
 			}
@@ -104,9 +98,29 @@ $callout-start: 1.8s;
 			}
 			&:nth-child(2),
 			&:nth-child(5) {
-				width: 50%;
+				width: 40%;
 			}
 		}
 	}
 }
 
+.Splash-body {
+	clear: both;
+	padding-top: 3rem;
+	max-width: 36em;
+
+	// fade in
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 0.8s;
+	animation-delay: 2100ms;
+	animation-fill-mode: both;
+	-webkit-backface-visibility: hidden;
+
+	a {
+		background: $yellow;
+		color: black;
+		text-decoration: none;
+		padding: 2px 2px 0;
+	}
+}
