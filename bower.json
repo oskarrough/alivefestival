@@ -10,6 +10,7 @@
     "lazysizes": "~1.1.2",
     "video.js": "~4.12.5",
     "bigvideo.js": "~1.1.5",
-    "susy": "~2.2.2"
+    "susy": "~2.2.2",
+    "masonry": "~3.3.0"
   }
 }

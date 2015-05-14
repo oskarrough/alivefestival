@@ -4,7 +4,7 @@ mixin menu-item(url, title, classnames)
 		a(href=url, class=active == title ? 'is-active' : '')= title
 
 ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
-	//-+menu-item('/', 'Forside', 'link-index')
+	+menu-item('/', 'ALIVE', 'link-index')
 	+menu-item('musik.html', 'Musik', 'Link--Music')
 	+menu-item('billetter.html', 'Billetter', 'Link--Tickets')
 	//- +menu-item('nyheder.html', 'Nyheder', 'Link--news')

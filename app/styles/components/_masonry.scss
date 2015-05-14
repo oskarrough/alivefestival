@@ -63,7 +63,7 @@ $ml-from: 1700px;
 		margin-bottom: 0;
 		padding: 0.3em 0.5em 0.2em;
 		background-color: #000;
-		background-color: $green;
+		background-color: $teal;
 		color: $bleached;
 		box-shadow: 3px 3px 0 0 rgba(0,0,0,0.5);
 	}
@@ -71,9 +71,9 @@ $ml-from: 1700px;
 	&:nth-child(2n) .Artist-title {
 		background-color: $red;
 	}
-	&:nth-child(3n) .Artist-title {
-		background-color: $blue;
-	}
+	// &:nth-child(3n) .Artist-title {
+	// 	background-color: $teal;
+	// }
 	&:nth-child(4n) .Artist-title {
 		background-color: $brown;
 	}
