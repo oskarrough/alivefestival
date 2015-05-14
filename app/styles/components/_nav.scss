@@ -23,12 +23,9 @@
 	left: 0;
 	z-index: 20;
 	border-radius: 0.5em;
-	background: $green;
-	// width: 10em;
-	// padding: 0.4em 0;
+	background: $teal;
 	text-align: center;
-	// hide it
-	visibility: hidden;
+	visibility: hidden; // hide it
 
 	a {
 		color: $bleached;

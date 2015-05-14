@@ -47,13 +47,7 @@ h6 {
 	margin: 1rem;
 	@media (min-width: $layout-s) {
 		font-size: 40px;
-		margin: 3rem 2rem 1rem;
-	}
-	@media (min-width: $layout-l) {
-		// font-size: 50px;
-	}
-	@media (min-width: $layout-xl) {
-		// font-size: 50px;
+		margin: 3rem 2rem 2rem;
 	}
 }
 .Title {
@@ -76,7 +70,7 @@ h4 {
 	font-size: rem(20);
 	margin-bottom: 0.25em;
 	letter-spacing: 0.05em;
-	color: hsl(17, 100%, 47%);
+	color: $green;
 }
 h4 {}
 fieldset {
@@ -106,7 +100,7 @@ blockquote {
 // Links
 .Main {
 	a {
-		color: $green;
+		color: $blue;
 	}
 	a:hover {
 		color: $black;

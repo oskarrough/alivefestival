@@ -1,42 +1,44 @@
 .Navigation--primary {
-	@include clearfix;
-	@extend %burbank-bold;
-	font-size: rem(25);
-	margin-bottom: 1rem;
 	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $teal;
+	box-shadow: 0px 1px 8px hsla(0, 0%, 0%, 0.53);
+	z-index: 100;
 
-	@media (min-width: $layout-m) {
-		font-size: rem(30);
-		float: left;
-		margin-left: rem(220) + 1rem;
-		padding-top: 1rem;
-		text-align: left;
-		max-width: 20em;
+	@media (min-width: $layout-s) {
+		transform: rotate(0.4deg);
+		top: -0.5rem;
 	}
-	@media (min-width: $layout-l) {
-		padding-top: 4rem;
-	}
-
 
 	li {
 		display: inline-block;
 		transition: transform 1000ms;
 	}
+
 	a {
+		@extend %burbank-bold;
+		font-size: rem(25);
+		letter-spacing: 0.02em;
 		transition: background 200ms, transform 200ms ease;
 		background-size: 1%;
 		display: inline-block;
-		padding: 0.25em 0.5em;
-		color: $brown;
+		padding: 0.6em 0.5em;
+		color: $bleached;
 		text-decoration: none;
-		&:hover {
+		.no-touchevents &:hover {
 			transform: scale(1.1);
+		}
+
+		@media (min-width: $layout-s) {
+			padding: 1.1em 0.5em 0.7em;
 		}
 	}
 	a:hover,
 	.is-active > a, // perch selector
 	a.is-active, // praktisk/history
-	a.active, // drupal selector
 	.js-hover > a {
 		background: transparent url(../images/pensel1.png) no-repeat center center;
 		background-size: contain;
@@ -48,22 +50,3 @@
 		color: $bleached;
 	}
 }
-
-// @mixin iterative-delay($count: 2, $delay: 0.07s) {
-// 	@for $i from 1 through $count {
-// 		&:nth-child(#{$i}) {
-// 			transition-delay: $delay * $i;
-// 		}
-// 	}
-// }
-
-// .page-Alive .Navigation--primary li {
-// 	@include iterative-delay(10);
-// 	transition: opacity 250ms ease-in-out;
-// 	opacity: 0;
-// 	// show them when they are loaded or if we dont have js
-// 	.is-loaded &,
-// 	.no-js & {
-// 		opacity: 1;
-// 	}
-// }
