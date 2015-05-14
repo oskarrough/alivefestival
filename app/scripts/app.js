@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	// loading
 	var $main = $('.Main');
-	$main.imagesLoaded( function() {
+	$main.imagesLoaded(function() {
 		$('html').addClass('is-loaded');
 	});
 

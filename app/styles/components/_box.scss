@@ -13,9 +13,10 @@
 	@extend %Box;
 	clear: both;
 	margin-bottom: em($space);
-	box-shadow: 2px 3px 5px 1px hsla(0, 0%, 0%, 0.4);
+	box-shadow: 2px 3px 5px 1px hsla(0, 0%, 0%, 0.2);
+
 	// performance
-	.touch & {
+	.touchevents & {
 		box-shadow: none;
 	}
 

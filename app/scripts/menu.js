@@ -3,7 +3,6 @@
 $('.Navigation--primary, .Artists').find('a').each(function() {
 
 	$(this).css({ position: 'relative' }).mousemove(function(e) {
-
 		// what is this?
 		var baseExp = 3; // 2 ^ 4 == 16
 
@@ -36,7 +35,6 @@ $('.Navigation--primary, .Artists').find('a').each(function() {
 
 		$(this).css('left', nx + 'px');
 		$(this).css('top', ny + 'px');
-
 	});
 
 	// over

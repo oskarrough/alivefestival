@@ -12,12 +12,12 @@ doctype
 html.no-js
 	head
 		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
 
 		if active == 'Index'
 			title Alive Festival Thy
 		else
-			title #{active} - Alive Festival Thy
+			title #{active} — Alive Festival Thy
 		meta(name='description', content='#{description}')
 
 		link(rel='canonical', href='http://alivefestival.dk/')
@@ -49,7 +49,11 @@ html.no-js
 
 		// build:js scripts/vendor-header.js
 		script(src='scripts/vendor/modernizr.custom.min.js')
+		//- script(src='/images/icons/grunticon.loader.js')
 		// endbuild
+
+		//- script.
+			grunticon(['images/icons/icons.data.svg.css', 'images/icons/icons.data.png.css', 'images/icons/icons.fallback.css'], grunticon.svgLoadedCallback );
 
 		script.
 			var html = document.getElementsByTagName('html')[0];
@@ -133,4 +137,3 @@ html.no-js
 				e.src='https://www.google-analytics.com/analytics.js';
 				r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 				ga('create','UA-3906535-9');ga('send','pageview');
-
