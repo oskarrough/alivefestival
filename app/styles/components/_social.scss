@@ -1,12 +1,8 @@
 // Social media links
 .Social {
 	position: absolute;
-	top: 5px;
-	right: 5px;
-	@media (min-width: $layout-s) {
-		top: rem($space);
-		right: rem($space);
-	}
+	top: 0.75rem;
+	right: 0.7rem;
 }
 .Social-facebook img {
 	width: 32px;

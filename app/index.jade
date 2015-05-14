@@ -1,21 +1,18 @@
 block vars
 	- var active = 'Index'
-	- var bodyClass = 'page-Alive'
 	- var description = ""
 
 extends templates/includes/layout
 
 block content
-	.Box.Box--dark.Home-introbox
-		h1.PageTitle: span I en skjult oase mellem hav og fjord i hjertet af Thy løber Alive Festival i år af stablen for sjette gang i træk. Kom!
+	.Home-introbox
+		h1.PageTitle: span ALIVE 2015
+		p.Manchet 13.-14.-15. august i en skjult oase mellem hav og fjord i hjertet af Thy
 		p <a href="billetter.html" class="Button Button--big">Få din billet nu!</a>
 		p.Manchet Fireogtyve koncerter paa tre dage, camping, surf, thy øl på fad og dejlige mennesker!
+		p <a href="https://www.facebook.com/alivefestival" target="_blank">Tjek vores Facebook</a>
 
-		//- .Asset.Asset--dawg
-		//- .Asset.Asset--plant
-		.Asset.Asset--plant
-
-	//-.Home-video.
+	//- .Home-video.
 		<iframe width="853" height="480" src="//www.youtube.com/embed/2H-UO3X1nLk?modestbranding=0&;rel=0&;showinfo=0;autohide=1" frameborder="0" allowfullscreen></iframe>
 
 	.Home-mood: figure.Frame
@@ -49,36 +46,26 @@ block content
 		.Facebook.
 			<div class="fb-like" data-href="https://facebook.com/alivefestival" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
-	.Alist
+	//- .Alist
 		h2.Title 24 koncerter. Torsdag til søndag. Tre dages musik &amp; fest med glade mennesker.
-		h3: a(href="musik.html") The Raveonettes
-		h3: a(href="musik.html") Veto
-		h3: a(href="musik.html") Ebo Taylor
-		h3: a(href="musik.html") Fallulah
-		h3: a(href="musik.html") Den Sorte Skole
-		h3: a(href="musik.html") Christian Hjelm
-		h3: a(href="musik.html") Mø
-		h3: a(href="musik.html") Dråpe
-		h3: a(href="musik.html") Eloq
-		h3: a(href="musik.html") Synd og skam
-		h3: a(href="musik.html") Baby in vain
-		h3: a(href="musik.html") The Late Great Fitzgeraldos
-		h3: a(href="musik.html") Lars and the hands of light
-		h3: a(href="musik.html") Folkeklubben
+		h3: a(href="musik.html") Anya
+		h3: a(href="musik.html") Av Av Av
+		h3: a(href="musik.html") Kentaur
+		h3: a(href="musik.html") Lord Siva
+		h3: a(href="musik.html") Magnolia Shoals
 		h3: a(href="musik.html") Mont Oliver
-		h3: a(href="musik.html") Schultz and Forever
-		h3: a(href="musik.html") Bottled in England
-		h3: a(href="musik.html") Fitness Figures
-		h3: a(href="musik.html") Santiago
-		h3: a(href="musik.html") Workers in work
-		h3: a(href="musik.html") Beastie Respond
-		h3: a(href="musik.html") Tales of dust
-		h3: a(href="musik.html") Den våde vaffel
-		h3: a(href="musik.html") Rupture Plains
+		h3: a(href="musik.html") Rangleklods
+		h3: a(href="musik.html") Taragana Pyjarama
+		h3: a(href="musik.html") The Attic Sleepers
+		h3: a(href="musik.html") The Entrepreneurs
+		h3: a(href="musik.html") This Is You
+		h3: a(href="musik.html") Tomas Barfod
+		h3: a(href="musik.html") Ukendt Kunstner
+		h3: a(href="musik.html") Vinne Who
 		br
 		p: a(href="musik.html") Se hele programmet
 
-	.Box.Home-bryghus
+	//- .Box.Home-bryghus
 		h2.Box-title Start din festival med en frisk Thy Pilsner på Thisted Bryghus!
 		p.Manchet Frisk fra fad torsdag d. 14. august kl. 16-19.
 		.FrameWrap.FrameWrap--left
@@ -87,7 +74,7 @@ block content
 		p I år starter Alive på Thisted Bryghus med ølhygge, sol og dj's. Når du har fået dit armbånd på, giver Thisted Bryghus den første fadøl, og der er også mulighed for en rundvisning på det gamle bryggeri fra 1902.
 		p Bryghuset ligger lige ved stationen, og derfra er det kun 5 min. gågang til festivalpladsen, der åbner kl. 19.
 
-	.Box.Home-surf
+	//- .Box.Home-surf
 		h2.Box-title Spring i bølgen: Surfskole og Mont Oliver koncert i Cold Hawaii!
 		.FrameWrap.FrameWrap--right
 			figure.Frame
@@ -99,8 +86,6 @@ block content
 		p.Frame
 			a(href='https://www.google.com/maps/dir//Plantagevej+18,+7700+Thisted,+Denmark/@56.9793827,8.6558878,11z/data=!4m13!1m4!3m3!1s0x464998f2bb58c43f:0x715208302522c70f!2sPlantagevej+18!3b1!4m7!1m0!1m5!1m1!1s0x464998f2bb58c43f:0x715208302522c70f!2m2!1d8.690752!2d56.956506')
 				img.lazyload(data-src='images/2014/map.jpg', alt='')
-
-	.Asset.Asset--guitar
 
 	.Box.Home-bryghus.
 		<h2 class="Box-title">Seneste nyt</h2>
@@ -147,7 +132,11 @@ block content
 			</article>
 			</section>
 
-		<p><br><a href="/blog">&rarr; Se alle nyheder</a></p>
+		<br>
+		<p>
+			<a href="/blog">&rarr; Se alle nyheder</a><br>
+			<a href="https://www.facebook.com/alivefestival" target="_blank">&rarr; Tjek vores Facebook</a>
+		</p>
 
 	.Box.Home-surf
 		h2.Box-title #ThyAlive på Instagram
@@ -155,3 +144,8 @@ block content
 		.Constrained.
 			<!-- SnapWidget -->
 			<iframe src="http://snapwidget.com/in/?h=dGh5YWxpdmV8aW58ODB8NHwzfHx5ZXN8NXxub25lfG9uU3RhcnQ=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height: 285px; padding: 0;" ></iframe>
+
+	.Asset.Asset--guitar
+	//- .Asset.Asset--dawg
+	//- .Asset.Asset--plant
+	//- .Asset.Asset--plant

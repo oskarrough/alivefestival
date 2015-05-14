@@ -1,16 +1,9 @@
-.page-Alive .Navigation--primary {
-
-	@media (min-width: $layout-l) {
-		// room for video
-		margin-right: 340px;
-	}
-}
 .Home-video {
-	position: absolute;
-	top: 1rem;
-	left: 1rem;
-	right: 1rem;
-	z-index: 1;
+	// position: absolute;
+	// top: 1rem;
+	// left: 1rem;
+	// right: 1rem;
+	// z-index: 1;
 	// height: 0;
 	padding-bottom: (480/853*100%);
 	iframe {
@@ -22,26 +15,14 @@
 	position: relative;
 	z-index: 3;
 	max-width: 35rem;
-	padding-bottom: 1rem;
-	margin-bottom: 2rem;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 
-	.Main &.Box { // extra specificity
-		@media (min-width: $layout-l) {
-			margin-right: -100%;
-			// margin-left: 19rem;
-			// top: -1rem;
-		}
-		@media (min-width: 1200px) {
-			// float: right;
-			top: 1rem;
-			margin-left: 0;
-			// margin-right: 0;
-		}
-	}
 	.PageTitle {
+		color: $bleached;
 		@media (min-width: $layout-s) {
-			font-size: 40px;
+			font-size: 80px;
 		}
 	}
 	.Manchet {
@@ -78,20 +59,13 @@
 	z-index: 2;
 
 	// left
-	@media (min-width: $layout-l) {
-		position: absolute;
-		transform: rotate(2deg);
-		width: 340px;
-		// top: 17rem;
-		// left: 1rem;
-		left: initial;
-		top: 3rem; right: 3rem;
-	}
-	// top right
-	@media (min-width: 1200px) {
-
-
-	}
+	// @media (min-width: $layout-l) {
+	// 	position: absolute;
+	// 	transform: rotate(2deg);
+	// 	width: 340px;
+	// 	left: initial;
+	// 	top: 3rem; right: 3rem;
+	// }
 }
 .Home-gallery {
 	position: relative;

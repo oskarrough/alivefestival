@@ -9,21 +9,24 @@
 	box-sizing: border-box;
 }
 html {
-	height: 100%;
-	background-color: $yellow;
-	background-image: url(../images/2014/alive-festival-bg-pattern.jpg);
-	background-repeat: repeat;
+	background-color: $skyblue;
+	background-size: cover;
+	background-image: url(../images/2015/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 56px; // below menu
+	background-attachment: fixed;
 	color: $dark;
 }
 body {
 	overflow-x: hidden;
 	overflow-y: scroll;
-	padding: 1rem;
-	@media (min-width: $layout-s) {
-		padding: 2rem;
+	padding: 5rem 1rem;
+	@media (min-width: $layout-m) {
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 	@media (min-width: $layout-l) {
-		padding: 3rem;
+		padding-top: 7rem;
 	}
 }
 
