@@ -142,3 +142,17 @@ body {
 .FacebookScript {
 	display: none;
 }
+
+
+.Bregner {
+	position: fixed;
+	z-index: -1;
+	bottom: -11%;
+	left: 0;
+	right: 0;
+	text-align: center;
+
+	img {
+		width: 100%;
+	}
+}
