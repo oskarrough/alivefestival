@@ -13,9 +13,13 @@ html {
 	background-size: cover;
 	background-image: url(../images/2015/bg.jpg);
 	background-repeat: no-repeat;
-	background-position: 0 56px; // below menu
 	background-attachment: fixed;
 	color: $dark;
+
+	// below menu when nav is in one line
+	@media (min-width: rem(670)) {
+		background-position: 0 56px;
+	}
 }
 body {
 	overflow-x: hidden;

@@ -10,12 +10,11 @@ ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
 	//- +menu-item('nyheder.html', 'Nyheder', 'Link--news')
 	+menu-item('frivillig.html', 'Frivillig', 'Link--Volunteer')
 	+menu-item('praktisk.html', 'Praktisk', 'Link--Praktisk')
-	+menu-item('gallery.html', 'Galleri', 'Link--Gallery')
+	//- +menu-item('gallery.html', 'Galleri', 'Link--Gallery')
 	//-+menu-item('om-alive.html', 'Om Alive', 'Link--About')
 	li(class='Link--Om Alive has-dropdown')
 		a(href='om-alive.html') Om Alive
 		ul.Navigation.Dropdown
-			li(class='Link--Historie')
-				a(href='historie.html') Historie
-	//-+menu-item('historie.html', 'Historie', 'Link--Historie')
-	+menu-item('kontakt.html', 'Kontakt', 'Link--Contact')
+			li(class='Link--Historie'): a(href='historie.html') Historie
+			li: a(href='kontakt.html') Kontakt
+	//- +menu-item('kontakt.html', 'Kontakt', 'Link--Contact')
