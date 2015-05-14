@@ -1,7 +1,7 @@
 //- Mixin that takes care of 'is-active' class
 mixin menu-item(url, title, classnames)
 	li(class='#{classnames}')
-		a(href=url, class=active == title ? 'is-active' : '')= title
+		a.pjax(href=url, class=active == title ? 'is-active' : '')= title
 
 ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
 	+menu-item('/', 'ALIVE', 'link-index')
@@ -13,8 +13,8 @@ ul(class=active == 'Index' ? 'is-hidden' : '').Navigation.Navigation--primary
 	//- +menu-item('gallery.html', 'Galleri', 'Link--Gallery')
 	//-+menu-item('om-alive.html', 'Om Alive', 'Link--About')
 	li(class='Link--Om Alive has-dropdown')
-		a(href='om-alive.html') Om Alive
+		a.pjax(href='om-alive.html') Om Alive
 		ul.Navigation.Dropdown
-			li(class='Link--Historie'): a(href='historie.html') Historie
-			li: a(href='kontakt.html') Kontakt
+			li(class='Link--Historie'): a.pjax(href='historie.html') Historie
+			li: a.pjax(href='kontakt.html') Kontakt
 	//- +menu-item('kontakt.html', 'Kontakt', 'Link--Contact')
