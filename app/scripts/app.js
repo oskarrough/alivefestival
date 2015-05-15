@@ -17,6 +17,8 @@ $(document).ready(function() {
 		artistMasonry();
 	}
 
+	runSlideshows();
+
 	// Clickable dropdowns (touch4evah)
 	// $('.has-dropdown').children('a').click(function(event) {
 	// 	event.preventDefault();

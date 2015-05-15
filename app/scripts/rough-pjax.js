@@ -92,10 +92,13 @@ RoughPjax.prototype = {
 		if (this.debug) { console.log('didAnimateIn'); }
 		// functions loaded again after pjax ends go here
 
+		runSlideshows();
+
 		// check for masonry and start
 		var $masonry = $('#Masonry');
 		if ($masonry.length > 0) {
 			artistMasonry();
 		}
+
 	}
 };
