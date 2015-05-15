@@ -18,18 +18,29 @@
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	min-height: 70vh;
 
 	.PageTitle {
 		color: $bleached;
 		@media (min-width: $layout-s) {
+			font-size: 60px;
+		}
+		@media (min-width: $layout-xl) {
 			font-size: 80px;
 		}
 	}
 	.Manchet {
-		font-size: 30px;
+		font-size: 26px;
 		line-height: 1.2;
-		margin-top: 2.5rem;
 		margin-bottom: 2rem;
+		@media (min-width: $layout-xl) {
+			font-size: 30px;
+		}
+	}
+	.Button {
+		font-size: 19px;
+		padding-left: 2em;
+		padding-right: 2em;
 	}
 	.Asset--dawg {
 		position: absolute;

@@ -10,17 +10,32 @@
 }
 html {
 	background-color: $skyblue;
-	background-size: cover;
-	background-image: url(../images/2015/bg.jpg);
-	background-repeat: no-repeat;
 	background-attachment: fixed;
 	color: $dark;
 
-	// below menu when nav is in one line
-	@media (min-width: rem(670)) {
-		background-position: 0 56px;
+	// background-image: url(../images/2015/bg-skies.jpg);
+	// background-repeat: repeat-x;
+
+	background-image: url(../images/2015/bg5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 120% 120%;
+	background-position: 50% -50%;
+
+	@media (min-width: $layout-l) {
+		background-position: 50% -20%;
 	}
+
+	@media (min-width: $layout-xxl) {
+		background-position: 50% 50%;
+	}
+
+	// below menu when nav is in one line
+	// @media (min-width: rem(670)) {
+	// 	background-position: 0 56px;
+	// }
 }
+
 body {
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -148,7 +163,7 @@ body {
 }
 
 
-.Bregner {
+.BgBottom {
 	position: fixed;
 	z-index: -1;
 	bottom: -11%;
@@ -156,7 +171,33 @@ body {
 	right: 0;
 	text-align: center;
 
+	@media (min-width: $layout-l) {
+		bottom: -15%;
+	}
+
 	img {
 		width: 100%;
 	}
+}
+
+.BgTopLeft {
+	position: fixed;
+	width: 50%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	// background-image: url(..images/2015/bg-topleft.png);
+	// background-repeat: no-repeat;
+	// background-size: ;
+}
+.BgTopRight {
+	position: fixed;
+	width: 50%;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	text-align: right;
+	// background-image: url(..images/2015/bg-topleft.png);
+	// background-repeat: no-repeat;
+	// background-size: ;
 }
