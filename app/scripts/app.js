@@ -1,4 +1,4 @@
-/*global RoughPjax, artistMasonry */
+/*global RoughPjax, runSlideshows, artistMasonry */
 
 $(document).ready(function() {
 

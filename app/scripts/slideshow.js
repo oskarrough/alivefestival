@@ -78,4 +78,4 @@ var runSlideshows = function() {
 			pauseOnHover: true
 		}
 	});
-}
+};

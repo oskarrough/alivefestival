@@ -1,4 +1,4 @@
-/*global artistMasonry */
+/*global artistMasonry, runSlideshows */
 
 var RoughPjax = function() {
 	if ($.support.pjax) {
