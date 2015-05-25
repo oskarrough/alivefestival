@@ -16,7 +16,7 @@ html {
 	// background-image: url(../images/2015/bg-skies.jpg);
 	// background-repeat: repeat-x;
 
-	background-image: url(../images/2015/bg5.jpg);
+	background-image: url(../images/2015/bg6.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-size: 120% 120%;
@@ -166,13 +166,15 @@ body {
 .BgBottom {
 	position: fixed;
 	z-index: -1;
-	bottom: -11%;
+	bottom: -12%;
 	left: 0;
 	right: 0;
 	text-align: center;
-
+	@media (min-width: $layout-m) {
+		bottom: -10%;
+	}
 	@media (min-width: $layout-l) {
-		bottom: -15%;
+		bottom: -17%;
 	}
 
 	img {
@@ -180,22 +182,21 @@ body {
 	}
 }
 
-.BgTopLeft {
+.BgTopLeft,
+.BgTopRight {
 	position: fixed;
 	width: 50%;
 	top: 0;
-	left: 0;
 	z-index: -1;
+}
+.BgTopLeft {
+	left: 0;
 	// background-image: url(..images/2015/bg-topleft.png);
 	// background-repeat: no-repeat;
 	// background-size: ;
 }
 .BgTopRight {
-	position: fixed;
-	width: 50%;
-	top: 0;
 	right: 0;
-	z-index: -1;
 	text-align: right;
 	// background-image: url(..images/2015/bg-topleft.png);
 	// background-repeat: no-repeat;

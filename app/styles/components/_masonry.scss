@@ -90,7 +90,7 @@ $ml-from: 1700px;
 
 	@for $i from 1 through 30 {
 		&:nth-child(#{$i}){
-			$delay: 1s * $i * 0.08;
+			$delay: 1s * $i * 0.05;
 			transition-delay: $delay;
 		}
 	}
