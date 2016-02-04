@@ -1,0 +1,11 @@
+<button class="Button Button--text" {{action 'changeCity'}}>
+	Stadt ändern
+</button>
+{{#link-to 'city.index' class="Button Button--overview"}}
+	<i class="icon-overview"></i>
+{{/link-to}}
+{{#link-to 'city.map' class="Button Button--map"}}
+	<i class="icon-map"></i>
+{{/link-to}}
+
+{{yield}}

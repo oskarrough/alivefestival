@@ -1,204 +1,56 @@
-/**
- * Layout
- */
-
-// More sensible box-model
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-html {
-	background-color: $skyblue;
-	background-attachment: fixed;
-	color: $dark;
-
-	// background-image: url(../images/2015/bg-skies.jpg);
-	// background-repeat: repeat-x;
-
-	background-image: url(../images/2015/bg6.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-size: 120% 120%;
-	background-position: 50% -50%;
-
-	@media (min-width: $layout-l) {
-		background-position: 50% -20%;
-	}
-
-	@media (min-width: $layout-xxl) {
-		background-position: 50% 50%;
-	}
-
-	// below menu when nav is in one line
-	// @media (min-width: rem(670)) {
-	// 	background-position: 0 56px;
-	// }
-}
-
 body {
-	overflow-x: hidden;
-	overflow-y: scroll;
-	padding: 5rem 1rem;
-	@media (min-width: $layout-m) {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-	@media (min-width: $layout-l) {
-		padding-top: 7rem;
-	}
+	overflow: hidden;
+	// cursor: url('images/cursor-default.png'),auto;
+	// cursor: url('images/cursor-pointer.png'),pointer;
 }
-
-.Header {
-	@media (min-width: $layout-s) {
-		margin-top: 1rem;
-	}
-}
-.Main {
-	@include clearfix;
-	clear: both;
-
-	// The first box
-	> .Box:nth-of-type(1) {
-		@media (min-width: $layout-l) {
-			float: left;
-			width: 70%;
-			margin-right: 2%;
-			// margin-left: 9rem;
-		}
-		@media (min-width: 1100px) {
-			// margin-left: 14rem;
-			// pull next element up
-			// float: left;
-			// margin-right: -100%;
-		}
-		@media (min-width: 1200px) {
-			// position: static;
-			// margin-left: 19rem;
-			// top: -4rem;
-		}
-		@media (min-width: $layout-xl) {
-			// position: static;
-			// margin-left: 22rem;
-		}
-	}
-}
-
-// Sidebar
-.Aside {
-	clear: both;
-	@media (min-width: $layout-l) {
-		clear: none;
-		float: left;
-		width: 28%;
-	}
-	@media (min-width: 1200px) {
-		position: static;
-		// clear: none;
-		// float: left;
-		// width: 22rem;
-	}
-	@media (min-width: $layout-xl) {
-		position: static;
-		// width: 24rem;
-	}
-}
-
-
-
-// Wider music page
-.page-Music {
-	.Main {
-		min-width: 95%;
-	}
-}
-
-// Ticket page
-.page-Tickets {
-	.Mood1 { max-width: 600px; }
-	.Mood3 { max-width: 700px; }
-	.Mood2 { max-width: 960px; }
-}
-
-// Utility
-.u-clear {
-	clear: both;
-}
-
-// Override cursor image
-// html,
-// a {
-// 	cursor: url(../images/cursor.png) -20 -40, default;
+// .App {
+// 	overflow: hidden;
 // }
-
-
-.Border {
-	clear: both;
-	border: 1rem solid $tandpasta;
-	border-radius: 8px;
+.App-main {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.Section {
+	position: absolute;
+	// top: $header-bar-height;
+	top: 0;
+	left: $aside-width - 2rem;
+	right: 0;
+	bottom: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	background-color: $bg-color;
 }
 
-
-// Grid
-.Grid {
-	@include clearfix;
-	clear: both;
-
-	> .Grid-u {
-		float: left;
-	}
+// Custom Scrollbar
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: rgba($white, .2);
 }
-// Two column grid
-.Grid--2 {
-	.Grid-u {
-		width: 48%;
-		&:first-child {
-			margin-right: 2%;
-		}
-	}
+::-webkit-scrollbar-thumb {
+	background-color: $white;
 }
-
-.FacebookScript {
+::-webkit-scrollbar-corner {
 	display: none;
 }
 
-
-.BgBottom {
-	position: fixed;
-	z-index: -1;
-	bottom: -12%;
-	left: 0;
-	right: 0;
-	text-align: center;
-	@media (min-width: $layout-m) {
-		bottom: -10%;
-	}
-	@media (min-width: $layout-l) {
-		bottom: -17%;
-	}
-
-	img {
-		width: 100%;
-	}
+.Manchet {
+	padding-top: 3rem;
+	padding-left: 2rem;
+	padding-right: 1rem;
+	padding-bottom: 3rem;
+	max-width: $max-width;
+	background-color: purple;
 }
 
-.BgTopLeft,
-.BgTopRight {
-	position: fixed;
-	width: 50%;
-	top: 0;
-	z-index: -1;
-}
-.BgTopLeft {
-	left: 0;
-	// background-image: url(..images/2015/bg-topleft.png);
-	// background-repeat: no-repeat;
-	// background-size: ;
-}
-.BgTopRight {
-	right: 0;
-	text-align: right;
-	// background-image: url(..images/2015/bg-topleft.png);
-	// background-repeat: no-repeat;
-	// background-size: ;
+.Manchet p,
+.Page-body p:first-of-type {
+	@extend %font-bold;
+	font-size: $font-20;
+	// text-transform: uppercase;
+	// letter-spacing: 0.01em;
 }

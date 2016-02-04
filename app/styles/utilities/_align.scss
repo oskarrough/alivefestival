@@ -1,24 +1,3 @@
-/**
- * Vertical align elements with an unknown height
- * works in IE9+
- */
-
-.u-alignMiddle {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+.u-center {
+	text-align: center;
 }
-
-// For reference here is the original way of doing it:
-
-/*
-.u-alignMiddle {
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-
-	> .u-alignMiddle-child {
-		display: table-cell;
-	}
-}
-*/

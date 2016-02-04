@@ -1,0 +1,136 @@
+.HeaderBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 2px solid $white;
+	height: $header-bar-height;
+	background-color: $black;
+	z-index: 2;
+	transition: all 600ms $easing;
+
+	.Button--text {
+		width: rem(55);
+	}
+	a:hover {
+		color: white;
+	}
+}
+.HeaderBar-title {
+	display: none;
+	@media (min-width: $layout-m) {
+		font-size: $font-30;
+		display: block;
+		position: absolute;
+		left: 10rem;
+		right: 10rem;
+		margin: auto;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		color: $white;
+	}
+	@media (min-width: $layout-ml) {
+		font-size: $font-40;
+	}
+	@media (min-width: $layout-l) {
+		font-size: $font-50;
+	}
+
+	.liquid-container,
+	.liquid-child {
+		overflow: visible;
+	}
+}
+
+// All in row.
+.HeaderBar--row {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	.NavWrap {
+		position: relative;
+		width: 100%;
+		z-index: 0;
+
+		a:hover i {
+			opacity: 0.6;
+		}
+
+		.Button--text {
+			right: 114px;
+			@media (min-width: $layout-s) {
+				right: 84px;
+			}
+			&:hover {
+				color: $grey;
+			}
+		}
+		.Button--overview {
+			right: 61px;
+			@media (min-width: $layout-s) {
+				right: 46px;
+			}
+		}
+		.Button--map {
+			right: 12px;
+		}
+		.NavWrap-arrowLeft,
+		.NavWrap-arrowRight {
+			padding: 20px 0;
+		}
+		.NavWrap-arrowLeft {
+			right: rem(123);
+		}
+		.NavWrap-arrowRight {
+			right: rem(66);
+		}
+		.NavWrap-close {
+			cursor: pointer;
+			padding: rem(30) 0;
+			padding-left: rem(30);
+		}
+
+		@media (min-width: $layout-s) {
+			.Button--text {
+				right: rem(99);
+			}
+			.Button--overview {
+				right: rem(57);
+			}
+			.Button--map {
+				right: rem(18);
+			}
+		}
+
+		> * {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+// Hide header-bar when on the index page.
+.HeaderBar--hidden {
+	transform: translate3d(0, -100%, 0);
+}
+
+// City state inside header-bar.
+.HeaderBar--city {
+}
+
+// Bar state inside header-bar.
+.HeaderBar--bar {}
+
+// Only fo IE9
+.no-csstransforms3d {
+	.HeaderBar--row {
+		.NavWrap {
+			> * {
+				transform: translateY(10%)
+			}
+		}
+	}
+}

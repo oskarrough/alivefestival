@@ -1,0 +1,50 @@
+/*!
+	ALIVE FESTIVAL
+	by Oskar Rough
+*/
+
+/**
+ * Third party
+ If is only *.css available rename it to *.scss
+ */
+// @import '../../node_modules/flickity/css/flickity';
+
+@import 'base/mixins';
+@import 'base/config';
+
+// Utilities (abstract patterns to be reused in components)
+@import 'utilities/clearfix';
+@import 'utilities/negative-text';
+@import 'utilities/align';
+@import 'utilities/ratio';
+// @import 'utilities/custom-select';
+// @import 'utilities/animation-delay';
+
+// Base
+@import 'base/fonts';
+@import 'base/normalize-custom';
+@import 'base/base';
+@import 'base/icons';
+
+// Components
+@import 'components/animation';
+@import 'components/index';
+@import 'components/buttons';
+@import 'components/artist';
+@import 'components/container';
+// @import 'components/loader';
+@import 'components/logo';
+@import 'components/liquid';
+// @import 'components/map-sidebar';
+// @import 'components/nav-btn';
+@import 'components/nav';
+@import 'components/ratio';
+@import 'components/teaser';
+@import 'components/page';
+@import 'components/flickity-gallery'; // dont edit this, it's imported
+@import 'components/gallery';
+// @import 'components/header-bar';
+// @import 'components/city-chooser';
+
+@import 'layout/layout';
+@import 'layout/grid';

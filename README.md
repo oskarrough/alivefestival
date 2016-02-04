@@ -1,81 +1,60 @@
-# Rough boilerplate
+# Alive
 
-Opinionated structure for new projects. Closely follows the Yeoman generator-webapp which builds on Grunt.
+This README outlines the details of collaborating on this Ember application.
+A short introduction of this app could easily go here.
 
-Base
-- sass
-- grids (susy)
-- breakpoints
-- autoprefixer
-- compass (why?)
-- normalize
+## Prerequisites
 
-Styled base
-Components/modules/patterns
+You will need the following things properly installed on your computer.
 
-The purpose of this HTML is to help determine what default settings are with Bitters and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.
+* [Git](http://git-scm.com/)
+* [Node.js](http://nodejs.org/) (with NPM)
+* [Bower](http://bower.io/)
+* [Ember CLI](http://www.ember-cli.com/)
+* [PhantomJS](http://phantomjs.org/)
 
-## Getting started
+## Installation
 
-1. Clone the project
+* `git clone <repository-url>` this repository
+* change into the new directory
+* `npm install`
+* `bower install`
 
-`git clone https://github.com/oskarrough/rough.git`
+## Running / Development
 
-2. Remove the git history to start fresh
+* `ember server`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
 
-`rm -rf .git`
-`git init`
+### Code Generators
 
-3. Install dependencies:
+Make use of the many generators for code, try `ember help generate` for more details
 
-**First install these as they are used to install the rest.**
+### Running Tests
 
-- Node --> `brew install node` (for node/js packages)
-- Grunt --> `npm install -g grunt-cli` (for development)
-- Bower --> `npm install -g bower` (for front-end packages)
-- Bundler --> `sudo gem install bundler` (for ruby/gem packages)
+* `ember test`
+* `ember test --server`
 
-In one command: `brew install node && sudo gem install bundler && npm install -g bower grunt-cli`
+### Building
 
-**Install the rest of the dependencies using the tools you just installed**
+* `ember build` (development)
+* `ember build --environment production` (production)
 
-- `bundle install` --> installs everything from Gemfile
-- `npm install` -->  installs everything from package.json
-- `bower install` --> installs everything from bower.json
+### Deploying
 
-In one command: `bundle install && npm install && bower install`
+Specify what it takes to deploy your app.
 
-## Compiling HTML with Jade
+## Further Reading / Useful Links
 
-@todo: explain why and how
+* [ember.js](http://emberjs.com/)
+* [ember-cli](http://www.ember-cli.com/)
+* Development Browser Extensions
+  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
-## Compiling CSS with Sass
 
-This project uses Sass and includes three different methods of compiling:
-
-- grunt-contrib-sass: the default method, just sass
-- grunt-compass: can generate sprites
-- grunt-sass: much faster using node-sass (which uses libsass) but less features
-
-## Features
-
-- Everything from generator-webapp (server, testing, build etc)
-- Navigation toggles
-- jQuery waypoints integration
-- Scroll nav
-- Manual styleguide
-- Responsive and fluid Masonry setup
-- Jade templating (including 'active' navigation and pages)
-
-## Structure
-
-- app/bower_components
-- app/images
-- app/scripts (own scripts go here)
-- app/scripts/vendor (third party scripts that are not available through a package manager (e.g. bower) go here)
-- app/styles
-
-## Naming convention
-
-https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
-
+320
+768
+1024
+1600
+1920
+2560

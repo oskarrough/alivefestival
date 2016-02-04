@@ -1,0 +1,11 @@
+.Page {
+	img {
+		width: 100%;
+	}
+}
+.Page-body {
+	max-width: 46rem;
+	border-right: 1rem solid rgba(#000, 0.1);
+	padding: rem($space*2) rem($space*2) rem($space) rem($space*3);
+	background-color: $purple;
+}

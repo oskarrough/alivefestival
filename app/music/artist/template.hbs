@@ -1,0 +1,32 @@
+{{#liquid-bind model class="BarAnimation" as |model|}}
+	<article class="Bar">
+
+		<div class="Bar-gallery">
+			{{!-- {{gallery-counter selected=gallerySelected total=galleryTotal}}
+			{{#flickity-gallery images=model.acf.slide_images
+				settle=(action 'updateGalleryCounter') as |item|}}
+				<img class="lazyload" src="{{item.sizes.medium}}" alt="{{item.title}}" data-sizes="auto" data-srcset="{{item.sizes.medium}} 640w, {{item.sizes.xlarge}} 1200w" />
+			{{/flickity-gallery}} --}}
+			<img src="{{model.better_featured_image.media_details.sizes.medium.source_url}}"
+				alt="{{model.better_featured_image.alt_text}}">
+		</div>
+
+		<div class="Bar-body">
+			<div class="Bar-text">
+				<h1 class="Bar-title">{{model.title}}</h1>
+				<h3 class="Bar-subtitle">Beskrivelse</h3>
+				<div class="Bar-excerpt">{{{model.content}}}</div>
+			</div>
+			<div class="Bar-links">
+				<a class="Bar-meta Bar-meta--single Bar-meta--website" href="{{model.acf.url}}" target="_blank">
+					<i class="icon icon-website"></i>
+					Website
+				</a>
+				<a class="Bar-meta Bar-meta--single Bar-meta--map" href="http://maps.google.com/?q={{model.acf.location.address}}" target="_blank">
+					<i class="icon icon-map"></i>
+					Route
+				</a>
+			</div>
+		</div>
+	</article>
+{{/liquid-bind}}

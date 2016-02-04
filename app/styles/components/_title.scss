@@ -1,0 +1,18 @@
+ /**
+ * Title
+ */
+
+.Title {
+	font-size: $font-20;
+	@media (min-width: $layout-sm) {
+		font-size: $font-30;
+	}
+}
+.Title--small {
+	@extend %font-bold;
+	font-size: 1em;
+}
+.Title--big {
+	@extend %font-bold;
+	text-transform: uppercase;
+}

@@ -1,0 +1,55 @@
+/**
+ * Teaser
+ **/
+
+.Teaser {
+	a:hover &,
+	a:active & {
+		.Teaser-title,
+		.Teaser-subtitle {
+			color: $white;
+		}
+		img {
+			filter: saturate(70%) brightness(120%);
+		}
+	}
+}
+.Teaser-wrap {
+	text-align: center;
+	text-decoration: none;
+	background-color: $blue;
+	box-sizing: border-box;
+
+	@media (max-width: 550px) {
+		border-bottom: 2px solid;
+	}
+}
+.Teaser-media {
+	position: relative;
+	height: 0;
+	padding-bottom: (1 / 1) * 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 0;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		transition: -webkit-filter 150ms $easing, transform 2000ms $easing;
+
+		// without default values, the image will jump 1px in chrome on hover
+		filter: saturate(100%) brightness(1.01);
+		backface-visibility: hidden;
+		transform: translate3d(0,0,0);
+	}
+}
+.Teaser-title {
+	@include h3;
+	margin-top: 1rem;
+	padding-bottom: 1rem;
+}
+.Teaser-subtitle {
+	font-size: $font-14;
+	margin-bottom: rem(26);
+}

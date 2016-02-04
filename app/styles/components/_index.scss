@@ -1,83 +1,66 @@
-//
-// Homepage
-//
+#big-video-wrap {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 
-#zlayer {
+	img {
+		object-fit: cover;
+		height: 100% !important;
+	}
+	.vjs-loading-spinner {
+		display: none !important;
+	}
+}
+.Index {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	padding-left: $aside-width - 2rem;
 }
-[class^='Layer'] {
+.Index-title {
 	position: absolute;
+	right: 2rem;
+	top: 2rem;
+	z-index: 5;
 }
-// volunteer
-.Layer1 {
-	margin-top: 13em; margin-left: 41em;
-	display: none;
-	@media (min-width: 740px) {
-		display: block;
-		margin-top: 13em; margin-left: 41em;
+.Index-body {
+	@include h3;
+	position: fixed;
+	bottom: 1rem;
+	left: $aside-width + 1rem;
+	z-index: 5;
+	// max-width: 20rem;
+}
+.Index-gallery {
+	.flickity-viewport {
+		@include ratio(16,9);
+		// > img {
+		// 	@include ratio-inner;
+		// }
 	}
 }
-// newsletter
-.Layer2 {
-	margin-top: 22em; margin-left: 39em;
-	@media (min-width: 740px) {
-		margin-top: 22em; margin-left: 39em;
-	}
-}
-// program
-.Layer3 {
-	margin-top: 14em; margin-left: 3em;
-	@media (min-width: 740px) {
-		margin-top: 13em; margin-left: 3em;
-	}
-}
-//social
-.Layer4 {
-	top: initial !important; bottom: 2em !important; margin-left: 2em;
-	@media (min-width: 740px) {
-		bottom: 2em !important; margin-left: 6em;
-	}
-}
-//tickets
-.Layer5 {
-	display: none;
-	margin-top: 15em; margin-left: 54em;
-	@media (min-width: 740px) {
-		display: block;
-		//
-	}
+.Index-artists {
+	display: block;
+	padding: 0.2em;
+	background: $purple;
+	// color: #000;
 }
 
-.Box--program,
-.Box--volunteer {
-	> h2 {
-		color: #fff;
+.Bar-galleryCounter {
+	position: absolute;
+	top: 0;
+	left: $aside-width;
+}
+
+.Index-boxes {
+	background-color: #08092D;
+	.Grid-item {
+		display: flex;
+		padding: 1rem;
+		min-height: 4em;
 	}
-}
-
-.Layer--volunteer {} // volunteer
-.Box--volunteer {
-	background-image: url(../images/gallery/278815_10150999577681714_644388252_o.jpg);
-	background-size: contain;
-}
-
-.Layer--newsletter {} // newsletter
-
-.Layer--program {} // program
-.Box--program {
-	background-image: url(../images/2013/artists/raveonettes.jpg);
-	background-image: url(../images/2013/program.jpg);
-	background-size: cover;
-	width: 450px;
-	max-width: 100%;
-	padding-top: 0;
-}
-
-.Layer--social {
-	.Box {
-		padding-top: 1em;
-		padding-bottom: 1em;
+	h3 {
+		margin: auto;
 	}
 }

@@ -1,0 +1,17 @@
+<div class="Teaser-wrap">
+	<figure class="Teaser-media">
+		{{!-- <img class="lazyload"
+			src="{{item.better_featured_image.media_details.sizes.medium}}"
+			data-sizes="auto"
+			data-srcset="{{item.better_featured_image.media_details.sizes.medium_large}} 768w,
+			{{item.better_featured_image.media_details.sizes.large}} 1024w" /> --}}
+			<img class="lazyload"
+				src="{{item.better_featured_image.media_details.sizes.medium.source_url}}"
+				alt="{{item.better_featured_image.alt_text}}"/>
+	</figure>
+
+	<h2 class="Teaser-title"><span>{{item.title}}</span></h2>
+	<h3 class="Teaser-subtitle">{{item.acf.subtitle}}</h3>
+</div>
+
+{{yield}}

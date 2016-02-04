@@ -37,16 +37,3 @@
 @function ptrem($target) {
 	@return rem(ptpx($target));
 }
-
-
-@mixin aliveBorder($hue) {
-	box-shadow:
-		inset hsl($hue, 100%, 55%) 0 0 0 5px,
-		inset hsl($hue, 93%, 53%) 0 0 0 1px,
-		inset hsl($hue, 100%, 66%) 0 0 0 10px,
-		inset hsl($hue, 91%, 64%) 0 0 0 11px,
-		inset hsl($hue, 100%, 77%) 0 0 0 16px,
-		inset hsl($hue, 87%, 75%) 0 0 0 17px,
-		inset hsl($hue, 100%, 89%) 0 0 0 22px,
-		inset hsl($hue, 78%, 86%) 0 0 0 23px;
-}

@@ -1,46 +1,46 @@
 /**
- * General navigation
- */
+ * Navigation
+ **/
 
-.Navigation {
-	margin: 0;
-	padding-left: 0;
-	list-style: none;
-	line-height: 1.1;
-}
-
-
-/**
- * Dropdowns
- */
-
-.has-dropdown {
-	position: relative;
-}
-.Dropdown {
-	position: absolute;
-	top: auto;
-	left: 0;
-	z-index: 20;
-	border-radius: 0.5em;
-	background: $teal;
+.Aside {
+	position: fixed;
+	top: -5%;
+	left: -1rem;
+	height: 110%;
+	z-index: 5;
+	transform: rotate(1deg);
+	background: $green;
+	box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.50);
+	width: $aside-width;
+	display: flex;
+	flex-flow: column nowrap;
 	text-align: center;
-	visibility: hidden; // hide it
+	// justify-content: center;
+	// cursor: url(images/close.svg),pointer;
+}
+.Aside-inner {
+	transform: rotate(-1deg);
+}
+.App-nav {
+	display: flex;
+	flex-flow: column nowrap;
+}
+.App-nav a {
+	@extend %font-heavy;
+	font-size: 19px;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	color: #FFFFFF;
+	@media (min-width: $layout-m) {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
 
-	a {
-		color: $bleached;
+	&.is-active {
+		// border-right: 3px dotted $red;
+		background-image: linear-gradient(to right, red, #FFFFFF);
 	}
 }
-.has-dropdown:hover > .Dropdown {
-//.js-hover > .Dropdown {
-	visibility: visible;
-}
-.js-hover {
-	background-color: rgba($green, 0.9);
-	border-radius: 0.5em;
-	> a {
-		color: #f1f1f1;
-		border-color: #f1f1f1;
-		transform: scale(1.15);
-	}
+.App-nav--secondary {
+	margin-top: rem($space);
 }

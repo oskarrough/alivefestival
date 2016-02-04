@@ -1,0 +1,14 @@
+<div class="Section">
+	<h1>Lykkehjulet!</h1>
+
+	<button class="Button" {{action 'refreshModel'}}>Next!</button>
+
+	<article>
+		<h3>{{model.title}}</h3>
+		{{{model.content}}}
+	</article>
+
+	{{letter-box}}
+
+	{{outlet}}
+</div>

@@ -1,38 +1,74 @@
-//
-// Icons
-//
+/**
+ * Icons
+ */
 
-// "icon" is the name of the folder where the images are and is used to prefix all Compass variables related to this sprite.
+$icon-size: 20px;
 
-// space between each icon in the sprite 
-$icon-spacing: 30px; 
+// targets all classes that include "icon-"
+[class^="icon-"],
+[class*=" icon-"] {
 
-// include dimensions for each sprite
-$icon-sprite-dimensions: true;
-
-// if an icon should be right aligned with 100%, include these to move the sprite to the right in the compiled image
-//$icon-iconname-position: 100%;
-
-// import the compass function that handles the sprites
-@import "compass/utilities/sprites";
-
-// locate the folders with the icons in
-@import "icon/*.png";
-
-// compass, make icons plizz
-@include all-icon-sprites;
-
-// assign the icon's width and height to the <i> element
-// .icon-name { height: icons-sprite-height(name); width: icons-sprite-width(name);}
-
-//
-// Markup examples:
-//
-/*
-	<i class="Icon icon-arrow"></i>
-	<button><i class="Icon icon-arrow"></i> Button text</button>
-*/
-
-[class^="icon-"] {
+	// give the icons a dimension
 	display: inline-block;
+	font-size: $icon-size;
+	height: 1em;
+	width: 1em;
+
+	// scale the background svg/png to fit
+	background-size: 100%;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	// inherit any colors
+	fill: currentColor;
+
+	// transition
+	transition: opacity 150ms;
+}
+
+.Icon {
+	display: inline-block;
+	margin-right: rem(13);
+	margin-left: rem(13);
+	margin-bottom: rem(25);
+}
+.icon--arrow {
+	max-width: rem(15);
+}
+.icon-arrow-left,
+.icon-arrow-right {
+	display: inline-block;
+	vertical-align: middle;
+	width: rem(34);
+	height: rem(18);
+}
+.icon-marker {
+	background-image: url('../images/icons/marker-blue.svg');
+}
+.icon-overview {
+	background-size: contain;
+	margin-top: rem(5);
+	width: 24px;
+	height: 24px;
+}
+.NavWrap-close {
+	padding: 20px 0;
+	right: rem(16);
+
+	.icon-cross {
+		vertical-align: middle;
+	}
+
+	@media (min-width: $layout-s) {
+		right: rem(20)
+	}
+}
+.NavWrap .icon-map {
+	background-size: contain;
+	margin-top: rem(5);
+	height: 28px;
+}
+.icon-map,
+.icon-website {
+	background-size: contain;
 }

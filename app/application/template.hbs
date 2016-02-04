@@ -1,0 +1,31 @@
+{{!-- <header class="App-header">
+	{{header-bar}}
+</header> --}}
+
+<aside class="Aside">
+	<div class="Aside-inner">
+		<h1 class="Logo">
+			{{#link-to 'application'}}
+				<span>Thy</span> <span>Alive</span> <span>Festival</span>
+			{{/link-to}}
+		</h1>
+		<nav class="App-nav">
+			{{link-to 'Musik' 'music'}}
+			{{link-to 'Nyheder' 'news'}}
+			{{link-to 'Eventyr' 'adventure'}}
+			{{link-to 'Billetter' 'tickets'}}
+			{{link-to 'Guide' 'guide'}}
+			{{link-to 'Om Alive' 'about'}}
+		</nav>
+		<div class="App-nav App-nav--secondary">
+			{{link-to 'English' 'english'}}
+			{{link-to 'Kontakt' 'about.contact'}}
+		</div>
+	</div>
+</aside>
+
+<main class="App-main">
+	{{!-- {{city-chooser cities=model}} --}}
+	{{!-- don't move the outlet without changing liquid.scss --}}
+	{{liquid-outlet}}
+</main>
