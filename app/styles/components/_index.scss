@@ -27,7 +27,7 @@
 .Index-body {
 	@include h3;
 	position: fixed;
-	bottom: 1rem;
+	bottom: 40%;
 	left: $aside-width + 1rem;
 	z-index: 5;
 	// max-width: 20rem;
@@ -41,9 +41,13 @@
 	}
 }
 .Index-artists {
+	@extend %font-heavy;
 	display: block;
-	padding: 0.2em;
+	padding: 0.75em 0;
+	font-size: $font-20;
 	background: $purple;
+	// background: $red;
+	color: $white;
 	// color: #000;
 }
 
@@ -55,12 +59,19 @@
 
 .Index-boxes {
 	background-color: #08092D;
+	background-image: url(images/moods/bluego.gif);
+	background-repeat: repeat;
+
 	.Grid-item {
 		display: flex;
-		padding: 1rem;
-		min-height: 4em;
+		// padding: 1rem;
+		// min-height: 4em;
 	}
-	h3 {
+	a {
+		@include h3;
+		display: block;
 		margin: auto;
+		padding: 0.75em;
+		// min-height: 2.5em;
 	}
 }

@@ -9,7 +9,8 @@
 	height: 110%;
 	z-index: 5;
 	transform: rotate(1deg);
-	background: $green;
+	background-color: $green;
+	background-color: #B3B0AA;
 	box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.50);
 	width: $aside-width;
 	display: flex;
@@ -27,7 +28,7 @@
 }
 .App-nav a {
 	@extend %font-heavy;
-	font-size: 19px;
+	font-size: $font-20;
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
 	color: #FFFFFF;
@@ -43,4 +44,7 @@
 }
 .App-nav--secondary {
 	margin-top: rem($space);
+	a {
+		font-size: $font-16;
+	}
 }

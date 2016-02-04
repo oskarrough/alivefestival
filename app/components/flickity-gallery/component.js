@@ -12,7 +12,7 @@ export default Component.extend({
 		prevNextButtons: false,
 		pageDots: true,
 		wrapAround: true,
-		autoplay: 4000
+		autopPay: 4000
 	},
 
 	enableFlickity: on('didInsertElement', function () {
