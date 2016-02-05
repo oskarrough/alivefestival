@@ -2,13 +2,17 @@
 	{{header-bar}}
 </header> --}}
 
+<a href="#" class="Burger" {{action 'toggleAside'}}>Menu</a>
+
 <aside class="Aside">
 	<div class="Aside-inner">
 		<h1 class="Logo">
 			{{#link-to 'application'}}
 				{{!--  --}}
 				{{!-- <span>Thy</span> <span>Alive</span> <span>Festival</span> --}}
-				<img src="assets/images/icons/logo.svg" alt="Thy Alive Festival 11-13. august 2016">
+				{{!-- <img src="assets/images/logo-man.png" alt="">
+				<img src="assets/images/icons/logo.svg" alt="Thy Alive Festival 11-13. august 2016"> --}}
+				<img src="assets/images/logo-2016.png" alt="">
 			{{/link-to}}
 		</h1>
 		<nav class="App-nav">
@@ -27,7 +31,7 @@
 </aside>
 
 <main class="App-main">
-	{{!-- {{city-chooser cities=model}} --}}
+	{{!-- {{city-chooser cities=model}}
 	{{!-- don't move the outlet without changing liquid.scss --}}
 	{{liquid-outlet}}
 </main>

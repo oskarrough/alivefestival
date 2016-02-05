@@ -8,8 +8,9 @@
 	left: -1rem;
 	height: 110%;
 	z-index: 5;
-	transform: rotate(1deg);
+	// transform: rotate(1deg);
 	background-color: $yellow;
+	// background-color: $logoblue;
 	// background-color: #B3B0AA;
 	// box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.50);
 	width: $aside-width;
@@ -18,26 +19,27 @@
 	// text-align: center;
 	// justify-content: center;
 	// cursor: url(images/close.svg),pointer;
-	overflow-y: auto;
 
 	// Custom border.
 	&::after {
-		content: '';
+		// content: '';
 		display: block;
 		position: absolute;
 		top: 0;
 		right: -50px;
 		height: 100%;
-		background: url(images/nav-border2.png) no-repeat top right;
+		background: url(images/nav-border3.png) no-repeat top right;
 		z-index: 1;
 		width: 100px;
 	}
 }
 .Aside-inner {
-	transform: rotate(-1deg);
+	// transform: rotate(-1deg);
 	// Above border.
 	position: relative;
 	z-index: 2;
+	height: 100%;
+	overflow-y: auto;
 
 }
 .App-nav {
@@ -51,6 +53,7 @@
 	padding-left: rem($space*2.5);
 	padding-bottom: 0.25em;
 	color: $black;
+	// color: $white;
 	transition: color 250ms, padding 250ms 100ms $easing;
 	@media (min-width: $layout-m) {
 		padding-top: 0.5em;

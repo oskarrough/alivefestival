@@ -15,6 +15,7 @@ html {
 	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
 	background-repeat: repeat;
 	color: $text-color;
+	// color: $black;
 
 	// Enable kerning and ligatures everywhere
 	// to use open-type features, bower install normalize-opentype
@@ -52,7 +53,8 @@ time {
 h1 {
 	@include h1;
 	margin-bottom: rem($space*2);
-	color: $verygreen;
+	// color: $verygreen;
+	color: wheat;
 }
 h2 {
 	@include h2;

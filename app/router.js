@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('english');
   this.route('memory', {path: 'lykkehjulet'});
   this.route('tickets', {path: 'billetter'});
+  this.route('history');
 });
 
 export default Router;
