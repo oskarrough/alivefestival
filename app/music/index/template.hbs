@@ -3,14 +3,16 @@
 	{{{model.page.content}}}
 </div>
 
-{{#liquid-bind model.artists class="CityIndexAnimation"}}
-	<div class="Grid">
-		{{#each model.artists as |artist|}}
-			<div class="Grid-item">
-				{{#link-to 'music.artist' artist}}
-					{{teaser-item item=artist}}
-				{{/link-to}}
-			</div>
-		{{/each}}
-	</div>
-{{/liquid-bind}}
+<div class="Artists">
+	{{#liquid-bind model.artists class="CityIndexAnimation"}}
+		<div class="Grid">
+			{{#each model.artists as |artist|}}
+				<div class="Grid-item">
+					{{#link-to 'music.artist' artist}}
+						{{teaser-item item=artist}}
+					{{/link-to}}
+				</div>
+			{{/each}}
+		</div>
+	{{/liquid-bind}}
+</div>

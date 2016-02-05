@@ -1,12 +1,7 @@
 {{#liquid-bind model class="BarAnimation" as |model|}}
-	<article class="Bar Manchet">
-
-		<div class="Bar-gallery">
-			{{!-- {{gallery-counter selected=gallerySelected total=galleryTotal}}
-			{{#flickity-gallery images=model.acf.slide_images
-				settle=(action 'updateGalleryCounter') as |item|}}
-				<img class="lazyload" src="{{item.sizes.medium}}" alt="{{item.title}}" data-sizes="auto" data-srcset="{{item.sizes.medium}} 640w, {{item.sizes.xlarge}} 1200w" />
-			{{/flickity-gallery}} --}}
+	<article class="Artist Manchet">
+		<p class="BackLink">{{#link-to 'music.index'}}&larr; tilbage{{/link-to}}</p>
+		<div class="Artist-media">
 			<img src="{{model.better_featured_image.media_details.sizes.medium.source_url}}"
 				alt="{{model.better_featured_image.alt_text}}">
 		</div>

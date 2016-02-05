@@ -34,6 +34,7 @@
 	// max-width: 46rem;
 	padding: rem($space*5) rem($space*2) rem($space) rem($space*3);
 }
+.Manchet h1 + p,
 .Page-body h1 + p {
 // .Page-body p:first-of-type:not(:last-of-type) {
 	@extend %font-bold;
