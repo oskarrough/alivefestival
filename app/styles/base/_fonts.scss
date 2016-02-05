@@ -17,60 +17,74 @@ $font-50: rem(50);
 
 @font-face {
 	font-family: 'GT Haptik';
-	src: url('fonts/gt-haptik-light-webfont.eot');
-	src: url('fonts/gt-haptik-light-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('fonts/gt-haptik-light-webfont.woff') format('woff'),
-		 url('fonts/gt-haptik-light-webfont.ttf') format('truetype'),
-		 url('fonts/gt-haptik-light-webfont.svg') format('svg');
+	src: url('fonts/gt-haptik/gt-haptik-light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'GT Haptik';
-	src: url('fonts/gt-haptik-medium-webfont.eot');
-	src: url('fonts/gt-haptik-medium-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('fonts/gt-haptik-medium-webfont.woff') format('woff'),
-		 url('fonts/gt-haptik-medium-webfont.ttf') format('truetype'),
-		 url('fonts/gt-haptik-medium-webfont.svg') format('svg');
+	src: url('fonts/gt-haptik/gt-haptik-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'GT Haptik';
+	src: url('fonts/gt-haptik/gt-haptik-medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'GT Haptik';
-	src: url('fonts/gt-haptik-bold-webfont.eot');
-	src: url('fonts/gt-haptik-bold-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('fonts/gt-haptik-bold-webfont.woff') format('woff'),
-		 url('fonts/gt-haptik-bold-webfont.ttf') format('truetype'),
-		 url('fonts/gt-haptik-bold-webfont.svg') format('svg');
+	src: url('fonts/gt-haptik/gt-haptik-bold.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'GT Haptik';
+	src: url('fonts/gt-haptik/gt-haptik-black.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'GT Haptik Rotalic';
+	src: url('fonts/gt-haptik/gt-haptik-bold-rotalic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
-%font-regular {
+
+%font-light {
 	font-family: 'GT Haptik', sans-serif; font-weight: 300;
 }
-%font-bold {
+%font-regular {
+	font-family: 'GT Haptik', sans-serif; font-weight: 400;
+}
+%font-medium {
 	font-family: 'GT Haptik', sans-serif; font-weight: 500;
 }
-%font-heavy {
+%font-bold {
 	font-family: 'GT Haptik', sans-serif; font-weight: 600;
+}
+%font-black {
+	font-family: 'GT Haptik', sans-serif; font-weight: 700;
+}
+%font-black-rotalic {
+	font-family: 'GT Haptik Rotalic', sans-serif;
 }
 
 // Headers
 @mixin h1 {
-	@extend %font-heavy;
+	@extend %font-black-rotalic;
 	font-size: $font-40;
 	line-height: 1.1;
-	// letter-spacing: 0.2em;
+	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	@media (min-width: $layout-m) {
 		font-size: $font-50;
 	}
 }
 @mixin h2 {
-	@extend %font-heavy;
+	@extend %font-black;
 	font-size: $font-30;
 	line-height: 1.1;
 	// letter-spacing: 0.2em;
@@ -80,7 +94,7 @@ $font-50: rem(50);
 	}
 }
 @mixin h3 {
-	@extend %font-heavy;
+	@extend %font-black;
 	font-size: $font-20;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;

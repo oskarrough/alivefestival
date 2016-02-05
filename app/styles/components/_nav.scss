@@ -27,7 +27,7 @@
 	flex-flow: column nowrap;
 }
 .App-nav a {
-	@extend %font-heavy;
+	@extend %font-bold;
 	font-size: $font-20;
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;

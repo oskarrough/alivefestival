@@ -1,14 +1,6 @@
 <div class="Section">
-	<div class="Page">
-		{{#if model.better_featured_image}}
-			<img src="{{model.better_featured_image.source_url}}" alt="{{model.title}}">
-		{{/if}}
-		<div class="Page-body">
-			<h1>{{model.title}}</h1>
-			{{{model.content}}}
-		</div>
-	</div>
-
+	{{page-item page=model}}
+	<br><br>
 	<p>{{#link-to 'memory'}}Prøv lykken!{{/link-to}}</p>
 </div>
 

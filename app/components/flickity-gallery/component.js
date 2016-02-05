@@ -12,7 +12,7 @@ export default Component.extend({
 		prevNextButtons: false,
 		pageDots: false,
 		wrapAround: true,
-		autopPlay: 3000,
+		autoPlay: 3000,
 		pauseAutoPlayOnHover: false
 	},
 

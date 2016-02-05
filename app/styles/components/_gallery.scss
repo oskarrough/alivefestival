@@ -42,57 +42,57 @@
 }
 
 // Dots
-.flickity-page-dots {
-	bottom: rem(15);
-}
-.flickity-page-dots .dot {
-	// width: 6px;
-	// height: 6px;
-	// margin: 0 5px;
-	// background-color: #fff;
+// .flickity-page-dots {
+// 	bottom: rem(15);
+// }
+// .flickity-page-dots .dot {
+// 	// width: 6px;
+// 	// height: 6px;
+// 	// margin: 0 5px;
+// 	// background-color: #fff;
 
-	opacity: 1;
-	// SO! We move the (dot) styles from the .dot
-	// to a pseudo-element in order to create a bigger tap area.
-	margin: 0;
-	padding: 0 rem(8);
-	width: auto;
-	height: auto;
-	border: 0;
-	background-color: transparent;
-	&::after {
-		content: '';
-		display: inline-block;
-		height: rem(12);
-		width: rem(12);
-		background: transparent;
-		border: 2px solid rgba(123, 123, 123, 0.38);
-		border-radius: 50%;
-	}
-	&.is-selected::after {
-		background: $white;
-		border: 2px solid $black;
-		transition: border 1s $easing2;
-	}
-}
+// 	opacity: 1;
+// 	// SO! We move the (dot) styles from the .dot
+// 	// to a pseudo-element in order to create a bigger tap area.
+// 	margin: 0;
+// 	padding: 0 rem(8);
+// 	width: auto;
+// 	height: auto;
+// 	border: 0;
+// 	background-color: transparent;
+// 	&::after {
+// 		content: '';
+// 		display: inline-block;
+// 		height: rem(12);
+// 		width: rem(12);
+// 		background: transparent;
+// 		border: 2px solid rgba(123, 123, 123, 0.38);
+// 		border-radius: 50%;
+// 	}
+// 	&.is-selected::after {
+// 		background: $white;
+// 		border: 2px solid $black;
+// 		transition: border 1s $easing2;
+// 	}
+// }
 
-// Buttons
-.FlickityGallery:hover .flickity-prev-next-button {
-	opacity: 1;
-}
-.flickity-prev-next-button {
-	// C's optical alignment, yo
-	top: 47%;
-	opacity: 0;
-	transition: all 300ms;
-	&:active {}
-	&.previous {
-		left: rem($space);
-	}
-	&.next {
-		right: rem($space);
-	}
-}
+// // Buttons
+// .FlickityGallery:hover .flickity-prev-next-button {
+// 	opacity: 1;
+// }
+// .flickity-prev-next-button {
+// 	// C's optical alignment, yo
+// 	top: 47%;
+// 	opacity: 0;
+// 	transition: all 300ms;
+// 	&:active {}
+// 	&.previous {
+// 		left: rem($space);
+// 	}
+// 	&.next {
+// 		right: rem($space);
+// 	}
+// }
 
 // Shows a "1/5" counter
 .Bar-galleryCounter {
@@ -105,6 +105,7 @@
 	z-index: 1;
 	width: rem(35);
 	height: rem(35);
+	color: $white;
 	// position: absolute;
 	// left: $space;
 	// bottom: $space;

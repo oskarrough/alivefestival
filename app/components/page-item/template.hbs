@@ -1,0 +1,12 @@
+<div class="Page">
+	{{#if page.better_featured_image}}
+		<figure class="Page-banner">
+			<img src="{{page.better_featured_image.source_url}}" alt="{{page.title}}">
+		</figure>
+	{{/if}}
+	<div class="Page-body">
+		<h1>{{page.title}}</h1>
+		{{{page.content}}}
+		{{yield}}
+	</div>
+</div>

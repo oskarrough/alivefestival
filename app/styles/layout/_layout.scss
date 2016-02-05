@@ -12,6 +12,10 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	// background-color: $bg-color;
+	// background-image: url('images/moods/bg-poster-crop.jpg');
+	// background-repeat: no-repeat;
+	// background-size: cover;
 }
 .Section {
 	position: absolute;
@@ -23,34 +27,20 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	// background-color: $bg-color;
+}
+.BackLink {
+	font-weight: 300 !important;
+	margin-top: -2rem;
+	margin-bottom: 3rem;
+	a {
+		text-decoration: none;
+	}
 }
 
-// Custom Scrollbar
-::-webkit-scrollbar {
-	width: 12px;
-	background-color: rgba($white, .2);
-}
-::-webkit-scrollbar-thumb {
-	background-color: $white;
-}
-::-webkit-scrollbar-corner {
-	display: none;
-}
 
-.Manchet {
-	padding-top: 3rem;
-	padding-left: 2rem;
-	padding-right: 1rem;
-	padding-bottom: 3rem;
-	max-width: $max-width;
-	background-color: $purple;
-}
-
-.Manchet p,
-.Page-body p:first-of-type {
-	@extend %font-bold;
-	font-size: $font-20;
-	// text-transform: uppercase;
-	// letter-spacing: 0.01em;
+.List {
+	a {
+		// @include h3;
+		// text-decoration: none;
+	}
 }
