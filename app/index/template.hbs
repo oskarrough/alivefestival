@@ -14,7 +14,7 @@
 				{{!-- <img class="lazyload" src="{{item.sizes.medium}}" alt="{{item.title}}" data-sizes="auto" data-srcset="{{item.sizes.medium}} 640w, {{item.sizes.xlarge}} 1200w" /> --}}
 		{{/flickity-gallery}}
 	</div>
-	<marquee class="Index-artists" behavior="" direction="alternate">
+	<marquee class="Index-artists" behavior="" scrollamount="10" direction="alternate">
 		Lineup 2016 &rarr;
 		{{#each model.artists as |artist|}}
 			{{#link-to 'music.artist' artist}}{{artist.title}}{{/link-to}} <span class="Separator">0</span>

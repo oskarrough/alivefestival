@@ -3,6 +3,8 @@
  **/
 
 .Teaser {
+	position: relative;
+
 	a:hover &,
 	a:active & {
 		.Teaser-title,
@@ -41,9 +43,14 @@
 	}
 }
 .Teaser-title {
-	@include h3;
+	@extend %font-bold;
+	font-size: rem(30);
 	margin-top: 1rem;
-	padding-bottom: 1rem;
+	padding: 0.2em 0.4em 0.3em;
+	position: absolute;
+	left: 0;
+	bottom: 1rem;
+	background-color: $purple;
 }
 .Teaser-subtitle {
 	font-size: $font-14;

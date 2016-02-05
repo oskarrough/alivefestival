@@ -1,7 +1,12 @@
 <p class="BackLink">{{#link-to 'news.index'}}&larr; tilbage{{/link-to}}</p>
 
-<h1>{{model.title}}</h1>
-{{{model.content}}}
-{{#if model.better_featured_image}}
-	<img src="{{model.better_featured_image.source_url}}" alt="{{model.title}}">
-{{/if}}
+<article class="Post">
+	<h1>{{model.title}}</h1>
+	<time>{{moment-from-now model.date}}</time>
+	<div class="Post-body">
+		{{{model.content}}}
+	</div>
+	{{#if model.better_featured_image}}
+		<img src="{{model.better_featured_image.source_url}}" alt="{{model.title}}">
+	{{/if}}
+</article>

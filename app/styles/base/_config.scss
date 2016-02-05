@@ -4,32 +4,32 @@ $base-font-size-unitless: 17;
 $base-line-height-unitless: (26/17);
 
 // Colors
-$blue: #233e6c;
+$purple: hsl(240, 26%, 25%);
+$blue: hsl(218, 51%, 28%);
+$gold: hsl(43, 92%, 62%);
+$orange: hsl(21, 100%, 45%);
+$green: hsl(91, 71%, 35%);
+$verygreen: hsl(156, 100%, 50%);
+$yellow: hsl(49, 100%, 50%);
+$teal: hsl(159, 60%, 23%);
+$red: hsl(0, 100%, 50%);
+
 $black: hsl(0, 0%, 5%);
 $white: hsl(0, 0%, 98%);
-$gold: #f7c443;
-$orange: #e65200;
-$green: #579A1A;
-$verygreen: #00FF99;
-$yellow: #FFBF00;
-// $sand: #e8d5bf;
-$teal: #175D44;
-$red: #f00;
-$purple: hsl(240, 30%, 20%);
 
 // Color definitions
 $primary-color: $blue;
 $bg-color: $teal;
-$grey: #9e9e9e;//#D5D5D5;
-$darkgrey: rgb(76, 76, 76);
-$text-color: #fff;
+$grey: hsl(0, 0%, 62%);//hsl(0, 0%, 84%);
+$darkgrey: hsl(0, 0%, 30%);
+$text-color: hsl(0, 0%, 100%);
 
 // Layout
 $space: 20px;
 $border-width: 2px;
 $header-bar-height: 84px;//93px;
-$aside-width: 13rem;
-$max-width: 700px;
+$aside-width: 11rem;
+$max-width: 46rem;
 
 // Susy
 // gutters are defined in a ratio to the column width

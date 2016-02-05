@@ -28,38 +28,53 @@ body {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
-.BackLink {
-	font-weight: 300 !important;
-	margin-top: -2rem;
-	margin-bottom: 3rem;
-	a {
-		text-decoration: none;
-	}
-}
-
-
-.List {
-	list-style: none;
-	a {
-		// @include h3;
-		// text-decoration: none;
-	}
-	time {
-		display: inline-block;
-		font-size: small;
-		// padding: 1em;
-		// background-color: #fafafa;
-	}
-}
-
 .Manchet {
-	margin-top: rem($space*2);
-	margin-left: rem($space*2);
-	p {
-		max-width: 80%;
-	}
+	max-width: $max-width;
+	padding: rem($space*5) rem($space*2) rem($space) rem($space*3);
 }
+
 .Artists {
 	margin-left: rem($space*2);
 }
 
+.BackLink {
+	font-weight: 300 !important;
+	margin-bottom: rem($space*2);
+	a {
+		text-decoration: none;
+	}
+}
+.YoLink {
+	font-size: rem(100);
+	text-decoration: none;
+	.Page & {
+		text-decoration: none;
+	}
+}
+
+.Post h1 {
+	margin-bottom: 0;
+	+ time {
+		display: block;
+		margin-bottom: rem($space*2);
+	}
+}
+
+.List {
+	list-style: none;
+	time {
+		display: block;
+		font-size: small;
+		margin-bottom: 0;
+	}
+	a.MediaBlock {
+		display: block;
+		text-decoration: none;
+		h3 {
+			text-decoration: underline;
+		}
+	}
+	.MediaBlock-media {
+		width: 100px;
+	}
+}

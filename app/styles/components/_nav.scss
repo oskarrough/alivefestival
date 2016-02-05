@@ -18,9 +18,27 @@
 	// text-align: center;
 	// justify-content: center;
 	// cursor: url(images/close.svg),pointer;
+	overflow-y: auto;
+
+	// Custom border.
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: -50px;
+		height: 100%;
+		background: url(images/nav-border2.png) no-repeat top right;
+		z-index: 1;
+		width: 100px;
+	}
 }
 .Aside-inner {
 	transform: rotate(-1deg);
+	// Above border.
+	position: relative;
+	z-index: 2;
+
 }
 .App-nav {
 	display: flex;

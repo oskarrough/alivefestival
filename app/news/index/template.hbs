@@ -6,15 +6,22 @@
 <ul class="List">
 	{{#each model.posts as |post|}}
 		<li>
-			<time>{{moment-from-now post.date interval=1000}}</time>
-			{{#link-to 'news.post' post}}{{post.title}}{{/link-to}}
+			{{#link-to 'news.post' post class="MediaBlock"}}
+				<figure class="MediaBlock-media">
+					<img src="{{post.better_featured_image.source_url}}" alt="{{post.better_featured_image.alt}}">
+				</figure>
+				<div class="MediaBlock-body">
+					<time>{{moment-from-now post.date interval=1000}}</time>
+					<h3>{{post.title}}</h3>
+				</div>
+			{{/link-to}}
 		</li>
 	{{/each}}
 </ul>
 
-<p>
+{{!-- <p>
 	<img src="{{model.page.better_featured_image.source_url}}" alt="Sjov med halm">
-</p>
+</p> --}}
 
 <p>Tjek <a href="http://facebook.com/alivefestival" target="_blank">Alive Festival på Facebook</a> for mere.</p>
 

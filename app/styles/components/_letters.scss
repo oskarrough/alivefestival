@@ -1,0 +1,19 @@
+.LetterBox {
+	display: flex;
+}
+.Letter {
+	@extend %font-black-rotalic;
+	margin-right: 0.1em;
+	margin-bottom: 0.1em;
+	font-size: $font-50;
+	display: inline-flex;
+	padding-left: 0.1em;
+	padding-right: 0.1em;
+	border-radius: 3px;
+	background-color: aliceblue;
+	color: $black;
+	&:hover {
+		background-color: $blue;
+		color: $white;
+	}
+}

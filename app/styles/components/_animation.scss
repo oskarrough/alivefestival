@@ -1,25 +1,4 @@
-.LetterBox {
-	display: flex;
-}
-.Letter {
-	@extend %font-black-rotalic;
-	font-size: 100px;
-	display: inline-flex;
-	padding-left: 0.1em;
-	padding-right: 0.1em;
-	border-radius: 3px;
-	background-color: aliceblue;
-	color: $black;
-	margin-bottom: 0.1em;
-	&:hover {
-		background-color: $blue;
-		color: $white;
-	}
-}
-
-.shake{display:inline-block;
-
-transform-origin:center center}
+.shake{display:inline-block;transform-origin:center center}
 
 .shake:hover{
 animation-name:shake-base;

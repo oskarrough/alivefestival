@@ -1,24 +1,24 @@
 .Page {
 	position: relative;
-	max-width: 46rem;
+	max-width: $max-width;
 	min-height: 100vh;
 	margin-top: -1rem;
 	min-height: calc(100vh + 1rem);
 	border-right: 1rem solid rgba(#000, 0.1);
 	background-color: $purple;
 	transform: rotate(-0.5deg);
-	&::after {
-		content: '';
-		display: block;
-		background-color: $yellow;
-		// margin-top: 2rem;
-		position: absolute;
-		bottom: -2rem;
-		height: 2rem;
-		// margin-bottom: -1rem;
-		left: 0;
-		right: -1rem;
-	}
+	// &::after {
+	// 	content: '';
+	// 	display: block;
+	// 	background-color: $yellow;
+	// 	// margin-top: 2rem;
+	// 	position: absolute;
+	// 	bottom: -2rem;
+	// 	height: 2rem;
+	// 	// margin-bottom: -1rem;
+	// 	left: 0;
+	// 	right: -1rem;
+	// }
 }
 .Page-banner {
 	// max-width: 90%;
@@ -32,7 +32,7 @@
 .Page-body {
 	transform: rotate(0.5deg);
 	// max-width: 46rem;
-	padding: rem($space*5) rem($space*2) rem($space) rem($space*3);
+	padding: rem($space*3) rem($space*2) rem($space) rem($space*3);
 }
 .Manchet h1 + p,
 .Page-body h1 + p {

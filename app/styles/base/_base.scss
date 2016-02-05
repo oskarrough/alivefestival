@@ -7,6 +7,13 @@ html {
 	@include negative-text;
 	line-height: $base-line-height-unitless;
 	background-color: $bg-color;
+	// background-image: url(images/moods/wildtexture.jpg);
+	// background-image: url(images/moods/masai-swirl.jpg);
+	// background-image: url(images/moods/bg-poster-crop.jpg);
+	// background-image: url(images/moods/texture.jpg);
+	// background-size: cover;
+	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
+	background-repeat: repeat;
 	color: $text-color;
 
 	// Enable kerning and ligatures everywhere
@@ -79,8 +86,9 @@ a:visited {
 .big {
 	@extend %font-bold;
 }
-.muted {
-	font-size: $font-16;
+time,
+.Muted {
+	font-size: $font-14;
 }
 hr {
 	background: rgba(255, 255, 255, 0.11);
