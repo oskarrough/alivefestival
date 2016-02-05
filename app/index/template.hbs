@@ -5,7 +5,7 @@
 
 <div class="Index">
 	<h1 class="Index-title">{{model.page.title}}</h1>
-	<div class="Index-body">{{{model.page.content}}}</div>
+	{{!-- <div class="Index-body">{{{model.page.content}}}</div> --}}
 
 	<div class="Index-gallery">
 		{{gallery-counter selected=gallerySelected total=galleryTotal}}
@@ -15,7 +15,10 @@
 		{{/flickity-gallery}}
 	</div>
 	<marquee class="Index-artists" behavior="" direction="">
-		Lineup 2016 &rarr; {{#each model.artists as |artist|}}{{artist.title}} —{{/each}}
+		Lineup 2016 &rarr;
+		{{#each model.artists as |artist|}}
+			{{#link-to 'music.artist' artist}}{{artist.title}}{{/link-to}} <span class="Separator">0</span>
+		{{/each}}
 	</marquee>
 
 	<section class="Index-boxes">

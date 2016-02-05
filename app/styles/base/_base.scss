@@ -92,3 +92,12 @@ a:visited {
 		height: 7px;
 	}
 }
+
+.Separator {
+	opacity: 0.5;
+	position: relative;
+	top: -0.1em;
+	font-size: $font-14;
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+}

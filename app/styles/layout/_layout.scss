@@ -23,7 +23,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	background-color: $bg-color;
+	// background-color: $bg-color;
 }
 
 // Custom Scrollbar
@@ -44,7 +44,7 @@ body {
 	padding-right: 1rem;
 	padding-bottom: 3rem;
 	max-width: $max-width;
-	background-color: purple;
+	background-color: $purple;
 }
 
 .Manchet p,

@@ -9,8 +9,8 @@ export default Route.extend({
 	model(params) {
 		return this.store.query('artist', {
 			filter: {
-				name: params.artist_slug,
-				tag: '2016'
+				name: params.artist_slug
+				// ,tag: '2016'
 			}
 		}).then(models => models.get('firstObject'));
 	},

@@ -46,10 +46,34 @@
 	bottom: rem(15);
 }
 .flickity-page-dots .dot {
-	width: 6px;
-	height: 6px;
-	margin: 0 5px;
-	background-color: #fff;
+	// width: 6px;
+	// height: 6px;
+	// margin: 0 5px;
+	// background-color: #fff;
+
+	opacity: 1;
+	// SO! We move the (dot) styles from the .dot
+	// to a pseudo-element in order to create a bigger tap area.
+	margin: 0;
+	padding: 0 rem(8);
+	width: auto;
+	height: auto;
+	border: 0;
+	background-color: transparent;
+	&::after {
+		content: '';
+		display: inline-block;
+		height: rem(12);
+		width: rem(12);
+		background: transparent;
+		border: 2px solid rgba(123, 123, 123, 0.38);
+		border-radius: 50%;
+	}
+	&.is-selected::after {
+		background: $white;
+		border: 2px solid $black;
+		transition: border 1s $easing2;
+	}
 }
 
 // Buttons
@@ -67,5 +91,41 @@
 	}
 	&.next {
 		right: rem($space);
+	}
+}
+
+// Shows a "1/5" counter
+.Bar-galleryCounter {
+	display: none;
+	@media (min-width: $layout-sm) {
+		display: block;
+	}
+
+	user-select: none;
+	z-index: 1;
+	width: rem(35);
+	height: rem(35);
+	// position: absolute;
+	// left: $space;
+	// bottom: $space;
+
+	// @extend %font-bold;
+	span {
+	 position: absolute;
+	}
+	span:first-child {
+		top: rem(-6);
+		left: 0;
+	}
+	span:nth-child(2) {
+		top: rem(20);
+		left: rem(-8);
+		border-bottom: 2px solid rgba(white, 0.25);
+		transform: rotate(135deg);
+		width: rem(45);
+	}
+	span:last-child {
+		bottom: rem(-6);
+		right: 0;
 	}
 }

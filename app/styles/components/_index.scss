@@ -33,6 +33,7 @@
 	// max-width: 20rem;
 }
 .Index-gallery {
+	position: relative;
 	.flickity-viewport {
 		@include ratio(16,9);
 		// > img {
@@ -53,8 +54,8 @@
 
 .Bar-galleryCounter {
 	position: absolute;
-	top: 0;
-	left: $aside-width;
+	left: rem($space*2);
+	bottom: rem($space);
 }
 
 .Index-boxes {

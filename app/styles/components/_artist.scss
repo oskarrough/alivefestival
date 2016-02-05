@@ -149,37 +149,3 @@
 // 		height: 100%
 // 	}
 // }
-
-// Shows a "1/5" counter
-.Bar-galleryCounter {
-	display: none;
-	@media (min-width: $layout-sm) {
-		display: block;
-	}
-
-	z-index: 1;
-	width: rem(40);
-	height: rem(40);
-	// position: absolute;
-	// left: $space;
-	// bottom: $space;
-
-	span {
-	 position: absolute;
-	}
-	span:first-child {
-		top: rem(-6);
-		left: 0;
-	}
-	span:nth-child(2) {
-		top: rem(20);
-		left: rem(-8);
-		border-bottom: 1px solid white;
-		transform: rotate(135deg);
-		width: 55px;
-	}
-	span:last-child {
-		bottom: rem(-6);
-		right: 0;
-	}
-}

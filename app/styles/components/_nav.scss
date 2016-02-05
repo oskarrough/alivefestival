@@ -10,8 +10,8 @@
 	z-index: 5;
 	transform: rotate(1deg);
 	background-color: $green;
-	background-color: #B3B0AA;
-	box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.50);
+	// background-color: #B3B0AA;
+	// box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.50);
 	width: $aside-width;
 	display: flex;
 	flex-flow: column nowrap;
@@ -39,7 +39,8 @@
 
 	&.is-active {
 		// border-right: 3px dotted $red;
-		background-image: linear-gradient(to right, red, #FFFFFF);
+		// background-image: linear-gradient(to right, red, #FFFFFF);
+		background-image: linear-gradient(to right, #093C2A, #2C2D46);
 	}
 }
 .App-nav--secondary {

@@ -10,9 +10,10 @@ export default Component.extend({
 	flickityOptions: {
 		setGallerySize: false,
 		prevNextButtons: false,
-		pageDots: true,
+		pageDots: false,
 		wrapAround: true,
-		autopPay: 4000
+		autopPlay: 3000,
+		pauseAutoPlayOnHover: false
 	},
 
 	enableFlickity: on('didInsertElement', function () {
