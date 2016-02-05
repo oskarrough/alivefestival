@@ -5,15 +5,17 @@ $base-line-height-unitless: (26/17);
 
 // Colors
 $blue: #233e6c;
-$black: hsl(0, 0%, 0%);
+$black: hsl(0, 0%, 5%);
 $white: hsl(0, 0%, 100%);
 $gold: #f7c443;
 $orange: #e65200;
 $green: #579A1A;
+$verygreen: #00FF99;
+$yellow: #FFBF00;
 // $sand: #e8d5bf;
 $teal: #175D44;
 $red: #f00;
-$purple: rgb(44, 45, 70);
+$purple: hsl(240, 30%, 20%);
 
 // Color definitions
 $primary-color: $blue;

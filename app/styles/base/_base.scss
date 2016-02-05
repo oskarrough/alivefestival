@@ -44,6 +44,8 @@ time {
 
 h1 {
 	@include h1;
+	margin-bottom: rem($space*2);
+	color: $verygreen;
 }
 h2 {
 	@include h2;
@@ -80,17 +82,10 @@ a:visited {
 .muted {
 	font-size: $font-16;
 }
-.Hr {
-	width: 155px;
-	height: 4px;
-	margin: 2.3rem auto 2.5rem;
-	background: transparent url('../assets/images/hr.png') center no-repeat;
-	background-size: contain;
-	border: 0;
-	@media (min-width: $layout-sm) {
-		width: 255px;
-		height: 7px;
-	}
+hr {
+	background: rgba(255, 255, 255, 0.11);
+	height: 2px;
+	margin: 2rem 0;
 }
 
 .Separator {
@@ -101,3 +96,4 @@ a:visited {
 	margin-right: 0.5em;
 	margin-left: 0.5em;
 }
+

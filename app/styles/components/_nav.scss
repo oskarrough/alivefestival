@@ -9,13 +9,13 @@
 	height: 110%;
 	z-index: 5;
 	transform: rotate(1deg);
-	background-color: $green;
+	background-color: $yellow;
 	// background-color: #B3B0AA;
 	// box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.50);
 	width: $aside-width;
 	display: flex;
 	flex-flow: column nowrap;
-	text-align: center;
+	// text-align: center;
 	// justify-content: center;
 	// cursor: url(images/close.svg),pointer;
 }
@@ -30,8 +30,10 @@
 	@extend %font-bold;
 	font-size: $font-20;
 	padding-top: 0.25em;
+	padding-left: rem($space*2.5);
 	padding-bottom: 0.25em;
-	color: #FFFFFF;
+	color: $black;
+	transition: color 250ms, padding 250ms 100ms $easing;
 	@media (min-width: $layout-m) {
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
@@ -40,7 +42,9 @@
 	&.is-active {
 		// border-right: 3px dotted $red;
 		// background-image: linear-gradient(to right, red, #FFFFFF);
-		background-image: linear-gradient(to right, #093C2A, #2C2D46);
+		// background-image: linear-gradient(to right, #093C2A, #2C2D46);
+		color: #fff;
+		padding-left: rem($space*3);
 	}
 }
 .App-nav--secondary {

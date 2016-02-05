@@ -94,8 +94,10 @@ $font-50: rem(50);
 	}
 }
 @mixin h3 {
-	@extend %font-black;
-	font-size: $font-20;
-	letter-spacing: 0.1em;
+	@extend %font-bold;
+	font-size: 1rem;
+	margin-bottom: 0;
+	// font-size: $font-20;
+	// letter-spacing: 0.1em;
 	text-transform: uppercase;
 }

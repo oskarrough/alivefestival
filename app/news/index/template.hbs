@@ -1,13 +1,20 @@
-<h1>Nyheder</h1>
+<h1>{{model.page.title}}</h1>
+{{#if model.page.content}}
+	{{{model.page.content}}}
+{{/if}}
+
 <ul class="List">
-	{{#each model as |post|}}
+	{{#each model.posts as |post|}}
 		<li>
-			{{#link-to 'news.post' post}}
-				{{post.title}}
-			{{/link-to}}
+			<time>{{moment-from-now post.date interval=1000}}</time>
+			{{#link-to 'news.post' post}}{{post.title}}{{/link-to}}
 		</li>
 	{{/each}}
 </ul>
+
+<p>
+	<img src="{{model.page.better_featured_image.source_url}}" alt="Sjov med halm">
+</p>
 
 <p>Tjek <a href="http://facebook.com/alivefestival" target="_blank">Alive Festival på Facebook</a> for mere.</p>
 

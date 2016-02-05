@@ -39,8 +39,23 @@ body {
 
 
 .List {
+	list-style: none;
 	a {
 		// @include h3;
 		// text-decoration: none;
+	}
+	time {
+		display: inline-block;
+		font-size: small;
+		// padding: 1em;
+		// background-color: #fafafa;
+	}
+}
+
+.Manchet {
+	margin-top: rem($space*2);
+	margin-left: rem($space*2);
+	p {
+		max-width: 80%;
 	}
 }
