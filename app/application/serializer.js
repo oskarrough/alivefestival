@@ -31,6 +31,9 @@ export default DS.RESTSerializer.extend({
 		if (resourceHash.title.rendered) {
 			resourceHash.title = resourceHash.title.rendered;
 		}
+		if (resourceHash.excerpt) {
+			resourceHash.excerpt = resourceHash.excerpt.rendered;
+		}
 		return this._super(modelClass, resourceHash, prop);
 	}
 });

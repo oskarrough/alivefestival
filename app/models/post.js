@@ -5,6 +5,7 @@ const {attr} = DS;
 export default DS.Model.extend({
 	title: attr('string'),
 	content: attr('string'),
+	excerpt: attr('string'),
 	slug: attr('string'),
 	date: attr('date'),
 	featured_media: attr('number'),
