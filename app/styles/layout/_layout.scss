@@ -28,6 +28,10 @@ body {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
+.Manchet,
+.Page-body {
+	padding-top: rem($space*3);
+}
 .Manchet {
 	max-width: $max-width;
 	padding: rem($space*5) rem($space*2) rem($space) rem($space*3);

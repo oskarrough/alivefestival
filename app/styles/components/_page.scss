@@ -5,9 +5,8 @@
 	margin-top: -1rem;
 	min-height: calc(100vh + 1rem);
 	border-right: 1rem solid rgba(#000, 0.1);
-	background-color: $purple;
-	// background-color: #fafafa;
-	// color: $black;
+	background-color: $gray;
+	color: $black;
 	transform: rotate(-0.5deg);
 }
 .Page-banner {
@@ -21,8 +20,9 @@
 }
 .Page-body {
 	transform: rotate(0.5deg);
-	// max-width: 46rem;
-	padding: rem($space*3) rem($space*2) rem($space) rem($space*3);
+	padding-left: rem($space*3);
+	padding-right: rem($space);
+	padding-bottom: rem($space*3);
 }
 .Manchet h1 + p,
 .Page-body h1 + p {

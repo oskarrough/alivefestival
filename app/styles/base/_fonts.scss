@@ -12,7 +12,7 @@ $font-30: rem($space);
 $font-35: rem(35);
 $font-40: rem(40);
 $font-50: rem(50);
-//$font-55: rem(55);
+$font-70: rem(70);
 
 
 @font-face {
@@ -74,6 +74,7 @@ $font-50: rem(50);
 
 // Headers
 @mixin h1 {
+	// @extend %font-black;
 	@extend %font-black-rotalic;
 	font-size: $font-40;
 	line-height: 1.1;
@@ -81,6 +82,9 @@ $font-50: rem(50);
 	text-transform: uppercase;
 	@media (min-width: $layout-m) {
 		font-size: $font-50;
+	}
+	@media (min-width: $layout-l) {
+		font-size: $font-70;
 	}
 }
 @mixin h2 {
