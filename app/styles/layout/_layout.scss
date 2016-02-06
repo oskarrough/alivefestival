@@ -97,3 +97,9 @@ body {
 		height: rem(30);
 	}
 }
+.SectionBox-body {
+	// display: block;
+}
+.SectionBox.body-is-hidden .SectionBox-body {
+	display: none;
+}
