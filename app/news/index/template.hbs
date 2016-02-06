@@ -3,26 +3,9 @@
 	{{{model.page.content}}}
 {{/if}}
 
-<ul class="List">
-	{{#each model.posts as |post|}}
-		<li>
-			{{#link-to 'news.post' post class="MediaBlock"}}
-				<figure class="MediaBlock-media">
-					<img src="{{post.better_featured_image.source_url}}" alt="{{post.better_featured_image.alt}}">
-				</figure>
-				<div class="MediaBlock-body">
-					<time>{{moment-from-now post.date interval=1000}}</time>
-					<h3>{{post.title}}</h3>
-				</div>
-			{{/link-to}}
-		</li>
-	{{/each}}
-</ul>
+{{news-list items=model.posts}}
 
-{{!-- <p>
-	<img src="{{model.page.better_featured_image.source_url}}" alt="Sjov med halm">
-</p> --}}
-
+<br><br>
 <p>Tjek <a href="http://facebook.com/alivefestival" target="_blank">Alive Festival på Facebook</a> for mere.</p>
 
 {{outlet}}

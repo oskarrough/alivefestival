@@ -1,19 +1,18 @@
-{{!-- <div class="Index">
-	{{big-video src=model.acf.video srcwebm=model.acf.videowebm srcogg=model.acf.videoogg}}
-	<img src="assets/images/logo.svg" alt="World Class Guide">
-</div> --}}
-
 <div class="Index">
 	<h1 class="Index-title">{{model.page.title}}</h1>
-	{{!-- <div class="Index-body">{{{model.page.content}}}</div> --}}
 
 	<div class="Index-gallery">
 		{{gallery-counter selected=gallerySelected total=galleryTotal}}
-		{{#flickity-gallery images=model.page.acf.gallery settle=(action 'updateGalleryCounter') as |item|}}
-				<img class="lazyload" src="{{item.url}}" alt="{{item.alt}}">
-				{{!-- <img class="lazyload" src="{{item.sizes.medium}}" alt="{{item.title}}" data-sizes="auto" data-srcset="{{item.sizes.medium}} 640w, {{item.sizes.xlarge}} 1200w" /> --}}
+		{{#flickity-gallery images=model.page.acf.gallery settle=(action 'updateGalleryCounter') as |image|}}
+			<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{image.alt}}" data-sizes="auto" data-srcset="
+				{{image.sizes.s}} 320w,
+				{{image.sizes.m}} 768w,
+				{{image.sizes.l}} 1024w,
+				{{image.sizes.xl}} 1600w,
+				{{image.sizes.xxl}} 1920w"/>
 		{{/flickity-gallery}}
 	</div>
+
 	<marquee class="Index-artists" behavior="" scrollamount="8" direction="alternate">
 		Lineup 2016 &rarr;
 		{{#each model.artists as |artist|}}
@@ -21,17 +20,21 @@
 		{{/each}}
 	</marquee>
 
-	<section class="Index-boxes">
-		<div class="Grid Grid--full">
-			{{!-- <div class="Grid-item">
-				<h3>{{link-to 'Bliv frivillig' 'about'}}</h3>
-			</div> --}}
-			<div class="Grid-item">
-				{{link-to 'Køb billet' 'tickets'}}
-			</div>
-			{{!-- <div class="Grid-item">
-				<h3>{{link-to 'Transport' 'about'}}</h3>
-			</div> --}}
-		</div>
-	</section>
+	<div class="TeaserBox TeaserBox--alive">
+		{{link-to 'Køb billet' 'tickets'}}
+	</div>
+	<div class="LatestNews">
+		<h3>Seneste nyt fra Alive… {{#link-to 'news'}}&rarr;{{/link-to}}</h3>
+		{{news-list items=model.news grid=true}}
+	</div>
+	{{!-- <div class="TeaserBox">
+		{{link-to 'Eventyr' 'adventure'}}
+	</div>
+	<div class="TeaserBox">
+		<a href="https://facebook.com/alivefestival/videos">Levende billeder fra Alive</a>
+	</div> --}}
+
+	{{!-- {{big-video src=model.acf.video srcwebm=model.acf.videowebm srcogg=model.acf.videoogg}}
+	<img src="assets/images/logo.svg" alt="World Class Guide"> --}}
+	{{!-- <div class="Index-body">{{{model.page.content}}}</div> --}}
 </div>

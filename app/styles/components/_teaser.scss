@@ -2,6 +2,27 @@
  * Teaser
  **/
 
+$masonry-gutter: 1.5rem;
+
+.masonry-item {
+	width: 100%;
+	width: calc(100% - $masonry-gutter);
+	margin-right: $masonry-gutter;
+	margin-bottom: $masonry-gutter;
+	@media (min-width: $layout-s) {
+		width: 48%;
+		width: calc(50% - $masonry-gutter);
+	}
+	@media (min-width: $layout-m) {
+		width: 30%;
+		width: calc(33% - $masonry-gutter);
+	}
+	@media (min-width: $layout-l) {
+		width: 20%;
+		width: calc(25% - $masonry-gutter);
+	}
+}
+
 .Teaser {
 	position: relative;
 
@@ -17,23 +38,16 @@
 	}
 }
 .Teaser-wrap {
-	text-align: center;
 	text-decoration: none;
 	background-color: $blue;
-	box-sizing: border-box;
 }
 .Teaser-media {
-	position: relative;
-	// height: 0;
-	// padding-bottom: (1 / 1) * 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	@include ratio(400,360);
 	margin-bottom: 0;
 	overflow: hidden;
 
 	img {
-		width: 100%;
+		@include ratio-inner;
 		transition: -webkit-filter 150ms $easing, transform 2000ms $easing;
 
 		// without default values, the image will jump 1px in chrome on hover
@@ -44,13 +58,20 @@
 }
 .Teaser-title {
 	@extend %font-bold;
-	font-size: rem(30);
+	font-size: rem(20);
+	@media (min-width: $layout-sm) {
+		font-size: rem(24);
+	}
+	@media (min-width: $layout-ml) {
+		// font-size: rem(30);
+	}
 	margin-top: 1rem;
 	padding: 0.2em 0.4em 0.3em;
 	position: absolute;
 	left: 0;
 	bottom: 1rem;
-	background-color: $purple;
+	// background-color: rgba($gray, 0.5);
+	background-color: $teal;
 }
 .Teaser-subtitle {
 	font-size: $font-14;

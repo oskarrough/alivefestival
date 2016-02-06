@@ -8,7 +8,9 @@
     "ember-qunit-notifications": "0.1.0",
     "jquery": "1.11.3",
     "loader.js": "^3.5.0",
-    "BigVideo": "bigvideo.js#^1.1.5"
+    "BigVideo": "bigvideo.js#^1.1.5",
+    "masonry": "^4.0.0",
+    "imagesloaded": "^4.1.0"
   },
   "resolutions": {
     "ember": "2.2.0"

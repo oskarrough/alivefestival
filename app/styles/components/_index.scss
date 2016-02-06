@@ -16,9 +16,16 @@
 }
 .Index {
 	position: relative;
-	padding-left: $aside-width - 2rem;
 }
 .Index-title {
+	display: none;
+	@media (min-width: $layout-s) {
+		font-size: rem(20);
+	}
+	@media (min-width: $layout-m) {
+		font-size: 2vw;
+	}
+	opacity: 0.8;
 	position: absolute;
 	right: 2rem;
 	top: 2rem;
@@ -35,7 +42,7 @@
 .Index-gallery {
 	position: relative;
 	.flickity-viewport {
-		@include ratio(16,9);
+		// @include ratio(16,9);
 		// > img {
 		// 	@include ratio-inner;
 		// }
@@ -47,31 +54,41 @@
 	line-height: 1;
 	padding: 0.75em 0;
 	font-size: $font-20;
-	background: $purple;
+	background: $teal;
 	color: $white;
 }
-
-.Bar-galleryCounter {
+.Index .GalleryCounter {
 	position: absolute;
 	right: rem($space);
 	bottom: rem($space);
+	opacity: 0.8;
 }
+.TeaserBox {
+	text-align: center;
+	a {
+		font-size: $font-20;
+		@extend %font-bold;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		display: block;
+		padding: 0.7em 1em 0.95em;
+		line-height: 1;
+	}
 
-.Index-boxes {
+	// + .TeaserBox {
+	// 	background-image: url(images/moods/bg-poster-crop.jpg);
+
+	// 	+ .TeaserBox {
+	// 		background-image: url(images/moods/texture.jpg);
+	// 		background-size: cover;
+	// 	}
+	// }
+}
+.TeaserBox--alive {
 	background-color: #08092D;
 	background-image: url(images/moods/bluego.gif);
 	background-repeat: repeat;
+}
+.LatestNews {
 
-	.Grid-item {
-		display: flex;
-		// padding: 1rem;
-		// min-height: 4em;
-	}
-	a {
-		@include h3;
-		display: block;
-		margin: auto;
-		padding: 0.75em;
-		// min-height: 2.5em;
-	}
 }

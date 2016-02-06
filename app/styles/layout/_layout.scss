@@ -12,21 +12,31 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	transition: transform 350ms $easing, margin 350ms $easing, padding 350ms $easing;
+	@media (min-width: $layout-m) {
+		// transform: translate3d($aside-width - 1rem, 0, 0);
+		padding-left: $aside-width - 1rem;
+	}
+	.show-aside & {
+		// transform: translate3d($aside-width - 1rem, 0, 0);
+		padding-left: $aside-width - 1rem;
+	}
+
 	// background-color: $bg-color;
 	// background-image: url('images/moods/bg-poster-crop.jpg');
 	// background-repeat: no-repeat;
 	// background-size: cover;
 }
 .Section {
-	position: absolute;
-	// top: $header-bar-height;
-	top: 0;
-	left: $aside-width - 2rem;
-	right: 0;
-	bottom: 0;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
+	// position: absolute;
+	// // top: $header-bar-height;
+	// top: 0;
+	// left: $aside-width - 2rem;
+	// right: 0;
+	// bottom: 0;
 }
 .Manchet,
 .Page-body {
@@ -64,21 +74,26 @@ body {
 	}
 }
 
-.List {
-	list-style: none;
-	time {
-		display: block;
-		font-size: small;
-		margin-bottom: 0;
+.LatestNews {
+	padding: rem($space);
+	@media (min-width: $layout-m) {
+		padding: rem($space*2);
 	}
-	a.MediaBlock {
-		display: block;
-		text-decoration: none;
-		h3 {
-			text-decoration: underline;
-		}
+	h3 {
+		margin-bottom: 1rem;
 	}
-	.MediaBlock-media {
-		width: 100px;
+}
+
+
+.Social {
+	margin-top: rem($space*2);
+	text-align: left;
+	padding-left: rem($space*2);
+	@media (min-width: $layout-m) {
+		// padding-left: rem($space*3);
+	}
+	img {
+		width: rem(30);
+		height: rem(30);
 	}
 }

@@ -1,37 +1,8 @@
-{{!-- <header class="App-header">
-	{{header-bar}}
-</header> --}}
+{{#x-root}}
+	{{x-aside}}
 
-<a href="#" class="Burger" {{action 'toggleAside'}}>Menu</a>
-
-<aside class="Aside">
-	<div class="Aside-inner">
-		<h1 class="Logo">
-			{{#link-to 'application'}}
-				{{!--  --}}
-				{{!-- <span>Thy</span> <span>Alive</span> <span>Festival</span> --}}
-				{{!-- <img src="assets/images/logo-man.png" alt="">
-				<img src="assets/images/icons/logo.svg" alt="Thy Alive Festival 11-13. august 2016"> --}}
-				<img src="assets/images/logo-2016.png" alt="">
-			{{/link-to}}
-		</h1>
-		<nav class="App-nav">
-			{{link-to 'Musik' 'music'}}
-			{{link-to 'Nyheder' 'news'}}
-			{{link-to 'Eventyr' 'adventure'}}
-			{{link-to 'Billetter' 'tickets'}}
-			{{link-to 'Guide' 'guide'}}
-			{{link-to 'Om Alive' 'about'}}
-		</nav>
-		<div class="App-nav App-nav--secondary">
-			{{link-to 'English' 'english'}}
-			{{link-to 'Kontakt' 'about.contact'}}
-		</div>
-	</div>
-</aside>
-
-<main class="App-main">
-	{{!-- {{city-chooser cities=model}}
-	{{!-- don't move the outlet without changing liquid.scss --}}
-	{{liquid-outlet}}
-</main>
+	<main class="App-main">
+		{{!-- don't move the outlet without changing liquid.scss --}}
+		{{liquid-outlet}}
+	</main>
+{{/x-root}}

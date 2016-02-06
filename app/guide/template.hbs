@@ -5,7 +5,12 @@
 		{{/if}}
 		<div class="Page-body">
 			<h1>{{model.title}}</h1>
-			{{{model.content}}}
+			<section class="SectionBox">
+				{{#each model.acf.sections as |section|}}
+					<h2 class="SectionBox-title">{{{section.title}}}</h2>
+					<div class="SectionBox-body">{{{section.body}}}</div>
+				{{/each}}
+			</section>
 		</div>
 	</div>
 </div>

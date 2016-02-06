@@ -36,18 +36,17 @@
 @import 'components/frame';
 // @import 'components/loader';
 @import 'components/logo';
-@import 'components/liquid';
-// @import 'components/map-sidebar';
-// @import 'components/nav-btn';
-@import 'components/nav';
+
+@import 'components/aside';
+@import 'components/burger';
 @import 'components/ratio';
 @import 'components/teaser';
 @import 'components/page';
 @import 'components/flickity-gallery'; // dont edit this, it's imported
 @import 'components/gallery';
 @import 'components/letters';
+@import 'components/list';
 // @import 'components/header-bar';
-// @import 'components/city-chooser';
 
 @import 'layout/layout';
 @import 'layout/grid';

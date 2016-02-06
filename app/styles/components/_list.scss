@@ -1,0 +1,28 @@
+.List {
+	padding-left: 0;
+	list-style: none;
+	time {
+		display: block;
+		font-size: small;
+		margin-bottom: 0;
+	}
+	a.MediaBlock {
+		display: block;
+		text-decoration: none;
+		h3 {
+			text-decoration: underline;
+			word-break: break-word;
+		}
+	}
+	.MediaBlock-media {
+		width: 100px;
+	}
+}
+
+.List--grid {
+	display: flex;
+	flex-flow: row wrap;
+	> li {
+		flex: rem(300);
+	}
+}

@@ -67,7 +67,7 @@ h3 {
 
 strong,
 b {
-	@extend %font-bold;
+	@extend %font-medium;
 }
 
 // Links
@@ -83,18 +83,6 @@ a:visited {
 	// 	color: $grey;
 	// }
 }
-
-.centered {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
-.uppercase {
-	text-transform: uppercase;
-}
-.big {
-	@extend %font-bold;
-}
 time,
 .Muted {
 	font-size: $font-14;
@@ -104,7 +92,6 @@ hr {
 	height: 2px;
 	margin: 2rem 0;
 }
-
 .Separator {
 	opacity: 0.5;
 	position: relative;
@@ -113,4 +100,3 @@ hr {
 	margin-right: 0.5em;
 	margin-left: 0.5em;
 }
-

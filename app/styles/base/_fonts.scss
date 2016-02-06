@@ -2,7 +2,6 @@
  * Fonts
  */
 
-// font-sizes
 $font-14: rem(14);
 $font-16: rem(16);
 $font-17: rem(17);
@@ -13,7 +12,6 @@ $font-35: rem(35);
 $font-40: rem(40);
 $font-50: rem(50);
 $font-70: rem(70);
-
 
 @font-face {
 	font-family: 'GT Haptik';
@@ -52,7 +50,6 @@ $font-70: rem(70);
 	font-style: normal;
 }
 
-
 %font-light {
 	font-family: 'GT Haptik', sans-serif; font-weight: 300;
 }
@@ -76,10 +73,13 @@ $font-70: rem(70);
 @mixin h1 {
 	// @extend %font-black;
 	@extend %font-black-rotalic;
-	font-size: $font-40;
 	line-height: 1.1;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
+	font-size: $font-35;
+	@media (min-width: $layout-s) {
+		font-size: $font-40;
+	}
 	@media (min-width: $layout-m) {
 		font-size: $font-50;
 	}

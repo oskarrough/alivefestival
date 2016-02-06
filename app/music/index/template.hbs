@@ -4,7 +4,12 @@
 </div>
 
 <div class="Artists">
-	{{#liquid-bind model.artists class="CityIndexAnimation"}}
+	{{#masonry-grid items=model.artists as |item|}}
+		{{#link-to 'music.artist' item}}
+			{{teaser-item item=item}}
+		{{/link-to}}
+	{{/masonry-grid}}
+	{{!-- {{#liquid-bind model.artists class="CityIndexAnimation"}}
 		<div class="Grid">
 			{{#each model.artists as |artist|}}
 				<div class="Grid-item">
@@ -14,5 +19,5 @@
 				</div>
 			{{/each}}
 		</div>
-	{{/liquid-bind}}
+	{{/liquid-bind}} --}}
 </div>

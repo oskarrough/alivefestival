@@ -9,4 +9,7 @@
 		{{{page.content}}}
 		{{yield}}
 	</div>
+	{{#if page.acf.background_image.sizes.bg-portrait-xl}}
+		<img class="Page-backgroundImage" src="{{page.acf.background_image.sizes.bg-portrait-xl}}" alt="">
+	{{/if}}
 </div>
