@@ -70,8 +70,11 @@ $masonry-gutter: 1.5rem;
 	position: absolute;
 	left: 0;
 	bottom: 1rem;
+	z-index: 1;
 	// background-color: rgba($gray, 0.5);
 	background-color: $teal;
+	background-color: #08092D;
+	// background-image: url(images/moods/bluego.gif);
 }
 .Teaser-subtitle {
 	font-size: $font-14;

@@ -52,7 +52,6 @@ body {
 }
 
 .BackLink {
-	font-weight: 300 !important;
 	margin-bottom: rem($space*2);
 	a {
 		text-decoration: none;
@@ -84,7 +83,6 @@ body {
 	}
 }
 
-
 .Social {
 	margin-top: rem($space*2);
 	text-align: left;
@@ -97,6 +95,19 @@ body {
 		height: rem(30);
 	}
 }
+
+img.alignleft {
+	float: left;
+	margin-right: 1rem;
+	margin-bottom: 0.5rem;
+}
+img.alignright {
+	float: right;
+	margin-left: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+
 .SectionBox-body {
 	// display: block;
 }

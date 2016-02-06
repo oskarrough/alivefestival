@@ -1,8 +1,9 @@
 {{#liquid-bind model class="BarAnimation" as |model|}}
 	<article class="Artist Manchet">
-		<p class="BackLink">{{#link-to 'music.index'}}&larr; tilbage{{/link-to}}</p>
+		<p class="BackLink">{{#link-to 'music.index'}}↖ tilbage{{/link-to}}</p>
+
 		<div class="Artist-media">
-			<img src="{{model.better_featured_image.media_details.sizes.medium.source_url}}"
+			<img src="{{model.better_featured_image.media_details.sizes.mini-double.source_url}}"
 				alt="{{model.better_featured_image.alt_text}}">
 		</div>
 
@@ -12,7 +13,7 @@
 				<h3 class="Bar-subtitle">Beskrivelse</h3>
 				<div class="Bar-excerpt">{{{model.content}}}</div>
 			</div>
-			<div class="Bar-links">
+			{{!-- <div class="Bar-links">
 				<a class="Bar-meta Bar-meta--single Bar-meta--website" href="{{model.acf.url}}" target="_blank">
 					<i class="icon icon-website"></i>
 					Website
@@ -21,7 +22,7 @@
 					<i class="icon icon-map"></i>
 					Route
 				</a>
-			</div>
+			</div> --}}
 		</div>
 	</article>
 {{/liquid-bind}}

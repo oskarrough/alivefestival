@@ -10,12 +10,18 @@
 		display: block;
 		text-decoration: none;
 		h3 {
-			text-decoration: underline;
+			@include h2;
 			word-break: break-word;
 		}
 	}
 	.MediaBlock-media {
 		width: 100px;
+		img {
+			width: 100%;
+		}
+		@media (min-width: $layout-m) {
+			width: 200px;
+		}
 	}
 }
 
@@ -25,4 +31,15 @@
 	> li {
 		flex: rem(300);
 	}
+}
+
+.List img {
+	transition: -webkit-filter 150ms $easing, transform 2000ms $easing;
+	// without default values, the image will jump 1px in chrome on hover
+	filter: saturate(100%) brightness(1.01);
+	backface-visibility: hidden;
+	transform: translate3d(0,0,0);
+}
+.List a:hover img {
+	filter: saturate(70%) brightness(120%);
 }
