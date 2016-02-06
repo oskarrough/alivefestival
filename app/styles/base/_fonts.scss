@@ -89,12 +89,11 @@ $font-70: rem(70);
 }
 @mixin h2 {
 	@extend %font-black;
-	font-size: $font-30;
+	font-size: $font-25;
 	line-height: 1.1;
-	// letter-spacing: 0.2em;
 	text-transform: uppercase;
 	@media (min-width: $layout-m) {
-		font-size: $font-40;
+		font-size: rem(26);
 	}
 }
 @mixin h3 {

@@ -6,28 +6,32 @@ $masonry-gutter: 1.5rem;
 
 .masonry-item {
 	width: 100%;
-	width: calc(100% - $masonry-gutter);
+	width: calc(100% - #{$masonry-gutter});
 	margin-right: $masonry-gutter;
 	margin-bottom: $masonry-gutter;
 	@media (min-width: $layout-s) {
 		width: 48%;
-		width: calc(50% - $masonry-gutter);
+		width: calc(50% - #{$masonry-gutter});
 	}
 	@media (min-width: $layout-m) {
 		width: 30%;
-		width: calc(33% - $masonry-gutter);
+		width: calc(33% - #{$masonry-gutter});
 	}
-	@media (min-width: $layout-l) {
+	@media (min-width: $layout-xl) {
 		width: 20%;
-		width: calc(25% - $masonry-gutter);
+		width: calc(25% - #{$masonry-gutter});
 	}
 }
 
 .Teaser {
 	position: relative;
 
+	a {
+		transition: box-shadow 300ms $easing;
+	}
 	a:hover &,
 	a:active & {
+		box-shadow: 0px 0px 2rem 1rem rgba(255, 255, 255, 0.1);
 		.Teaser-title,
 		.Teaser-subtitle {
 			color: $white;
@@ -48,6 +52,7 @@ $masonry-gutter: 1.5rem;
 
 	img {
 		@include ratio-inner;
+		border-radius: 3px;
 		transition: -webkit-filter 150ms $easing, transform 2000ms $easing;
 
 		// without default values, the image will jump 1px in chrome on hover

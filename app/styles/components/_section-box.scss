@@ -1,0 +1,36 @@
+.SectionBox-title {
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 2rem 1rem;
+	margin-bottom: 1rem;
+	color: $white;
+	cursor: pointer;
+	transition: padding 300ms $easing, background-position 300ms $easing;
+	border-radius: 3px;
+	&:hover {
+		// padding-left: 1.2rem;
+		background-position: 10% 10%;
+	}
+}
+.SectionBox-body {
+	display: none;
+	// transition: max-height 350ms $easing;
+	// max-height: 0;
+	// overflow: hidden;
+	margin-left: 1.8rem;
+}
+.SectionBox-arrow {
+	display: inline-block;
+	position: relative;
+	top: -0.1em;
+	transition: transform 250ms $easing;
+}
+.SectionBox.is-open {
+	.SectionBox-arrow {
+		transform: rotate(90deg);
+	}
+	.SectionBox-body {
+		display: block;
+		// max-height: 9999rem;
+	}
+}

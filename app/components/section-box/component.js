@@ -3,12 +3,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 	tagName: 'section',
 	classNames: ['SectionBox'],
-	classNameBindings: ['bodyIsHidden'],
-	bodyIsHidden: true,
+	classNameBindings: ['isOpen'],
+	isOpen: false,
 
 	actions: {
 		toggleBody() {
-			this.toggleProperty('bodyIsHidden');
+			this.toggleProperty('isOpen');
 		}
 	}
 });

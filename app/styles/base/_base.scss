@@ -8,13 +8,16 @@ html {
 	line-height: $base-line-height-unitless;
 	background-color: $bg-color;
 	background-color: $logoblue;
+
+	background-image: url(images/bg-noise.jpg);
 	// background-image: url(images/moods/wildtexture.jpg);
 	// background-image: url(images/moods/masai-swirl.jpg);
 	// background-image: url(images/moods/bg-poster-crop.jpg);
 	// background-image: url(images/moods/texture.jpg);
 	// background-size: cover;
 	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
-	background-repeat: repeat;
+	background-repeat: no-repeat;
+	background-size: cover;
 	// color: $text-color;
 	color: $white;
 	// color: $black;
