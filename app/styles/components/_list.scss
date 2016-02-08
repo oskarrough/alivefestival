@@ -5,22 +5,22 @@
 		display: block;
 		font-size: small;
 		margin-bottom: 0;
+		opacity: 0.5;
 	}
 	a.MediaBlock {
 		display: block;
 		text-decoration: none;
 		h3 {
 			@include h2;
+			margin-bottom: 0.5rem;
 			word-break: break-word;
 		}
 	}
 	.MediaBlock-media {
-		width: 100px;
+		width: 40%;
+		max-width: 200px;
 		img {
 			width: 100%;
-		}
-		@media (min-width: $layout-m) {
-			width: 200px;
 		}
 	}
 }
@@ -28,8 +28,11 @@
 .List--grid {
 	display: flex;
 	flex-flow: row wrap;
+	// justify-content: space-between;
+	// justify-content: center;
 	> li {
 		flex: rem(300);
+		margin-right: rem($space);
 	}
 }
 
