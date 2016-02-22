@@ -28,10 +28,14 @@
 .Page-body {
 	// transform: rotate(0.5deg);
 	padding-left: rem($space*1.5);
-	padding-bottom: rem($space*3);
+	padding-bottom: rem($space*1);
 	@media (min-width: $layout-m) {
 		padding-left: rem($space*3);
 		padding-right: rem($space);
+	}
+
+	img {
+		height: auto !important;
 	}
 }
 .Manchet h1 + p,

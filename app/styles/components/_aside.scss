@@ -76,7 +76,17 @@
 		// background-image: linear-gradient(to right, red, #FFFFFF);
 		// background-image: linear-gradient(to right, #093C2A, #2C2D46);
 		color: #fff;
-		padding-left: rem($space*3);
+		padding-left: rem($space*2.75);
+	}
+}
+.App-nav small {
+	margin-top: -0.5rem;
+	margin-left: 1rem;
+	a {
+		@extend %font-regular;
+		font-size: 1rem;
+		padding-top: 0;
+		padding-bottom: 0.1em;
 	}
 }
 .App-nav--secondary {
