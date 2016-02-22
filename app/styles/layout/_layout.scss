@@ -29,6 +29,11 @@ body {
 	// background-image: url('images/moods/bg-poster-crop.jpg');
 	// background-repeat: no-repeat;
 	// background-size: cover;
+
+	> .liquid-container,
+	> .liquid-container > .liquid-child {
+		min-height: 100%;
+	}
 }
 .Section {
 	// position: absolute;
@@ -105,4 +110,64 @@ img.alignright {
 	float: right;
 	margin-left: 1rem;
 	margin-bottom: 0.5rem;
+}
+
+
+
+
+
+.BgBottom {
+	position: fixed;
+	z-index: -1;
+	bottom: -12%;
+	left: 0;
+	right: 0;
+
+
+}
+.BgTopLeft,
+.BgTopRight,
+.BgBottomLeft,
+.BgBottomRight {
+	position: fixed;
+	width: 50%;
+	z-index: 5;
+	background-repeat: no-repeat;
+	background-size: contain;
+	pointer-events: none;
+	user-select: none;
+}
+.BgTopLeft {
+	top: 0;
+	width: 776px;
+	height: 487px;
+	background-image: url('../assets/images/bg-topleft.png');
+	background-position: top left;
+	left: 0;
+}
+.BgBottomLeft {
+	bottom: 0;
+	// width: 776px;
+	// height: 487px;
+	width: 30px;
+	@media (min-width: $layout-sm) {
+		width: 400px;
+	}
+	height: 210px;
+	background-image: url('../assets/images/bg-bottomleft.png');
+	background-position: bottom left;
+	left: 0;
+}
+.BgTopRight {
+	// top: 0;
+	// width: 771px;
+	height: 553px;
+	top: -1rem;
+	width: 100px;
+	@media (min-width: $layout-sm) {
+		width: 200px;
+	}
+	background-image: url('../assets/images/bg-topright.png');
+	background-position: top right;
+	right: 0;
 }
