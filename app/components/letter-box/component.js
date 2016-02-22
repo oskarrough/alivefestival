@@ -1,10 +1,12 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const {Component, $} = Ember;
+
+export default Component.extend({
 	didInsertElement() {
-		this.$('.Letter').on('mouseenter', function() {
+		this.$('.Letter').on('mouseenter', function () {
 			$(this).addClass('shake2 shake-constant2');
-			$(this).delay(4000).queue(function() {
+			$(this).delay(4000).queue(function () {
 				$(this).removeClass('shake2 shake-constant2').clearQueue();
 			});
 		});

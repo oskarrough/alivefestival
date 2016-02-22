@@ -7,7 +7,9 @@
  * Third party
  If is only *.css available rename it to *.scss
  */
-// @import '../../node_modules/flickity/css/flickity';
+// @import 'node_modules/flickity/css/flickity';
+@import 'node_modules/normalize.css/normalize';
+@import 'node_modules/suitcss-base/lib/base';
 
 @import 'base/mixins';
 @import 'base/config';
@@ -22,7 +24,6 @@
 
 // Base
 @import 'base/fonts';
-@import 'base/normalize-custom';
 @import 'base/base';
 @import 'base/icons';
 
