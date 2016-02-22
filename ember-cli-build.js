@@ -13,7 +13,7 @@ module.exports = function(defaults) {
 
     // Don't fingerprint favicons as browsers expect standard names.
     fingerprint: {
-      exclude: ['apple-touch-icon', 'favicon', 'mstile']
+      exclude: ['images/', 'apple-touch-icon', 'favicon', 'mstile', '.png']
     },
 
     // Very verbose but this adds autoprefixer and atImport.
