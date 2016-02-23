@@ -29,6 +29,9 @@ html {
 	@media (min-width: $layout-m) {
 		font-size: $base-font-size;
 	}
+	@media (min-width: $layout-xl) {
+		font-size: $base-font-size + 2;
+	}
 }
 
 // Set a consistent margin between elements
