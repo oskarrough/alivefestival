@@ -29,20 +29,17 @@
 	</div>
 	<div class="Container Container--large">
 		<div class="LatestNews u-center">
-			{{!-- <h3>Se hvor øllet kommer fra</h3>
-			<h3>Vind i håret ved havet</h3>
-			<h3>Rid med på bølgen</h3> --}}
-			<h2 class="LatestNews-title">Kysten de kalder Cold Hawaii — se hvor øllet kommer fra</h2>
-			<p>{{#link-to  'adventure'}}→ Kom på eventyr og alt det andet{{/link-to}}</p>
+			<h2 class="LatestNews-title">{{model.page.acf.eventyr_teaser_title}}</h2>
+			<p>{{#link-to  'adventure'}}→ {{model.page.acf.eventyr_teaser_text}}{{/link-to}}</p>
+			{{#before-after}}
+				<img src="assets/images/eventyr/noerre-vorupoer.jpg" alt="">
+				<img src="assets/images/eventyr/thisted-oel.jpg" alt="">
+			{{/before-after}}
 			{{!-- {{#before-after}}
 				<img src="http://2016.alivefestival.dk/wp/wp-content/uploads/natur2.jpg" alt="">
 				<img src="http://2016.alivefestival.dk/wp/wp-content/uploads/volleyball.jpg" alt="">
 				<img src="http://2016.alivefestival.dk/wp/wp-content/uploads/natur1.jpg" alt="">
 			{{/before-after}} --}}
-			{{#before-after}}
-				<img src="assets/images/eventyr/noerre-vorupoer.jpg" alt="">
-				<img src="assets/images/eventyr/thisted-oel.jpg" alt="">
-			{{/before-after}}
 			{{!-- <br> --}}
 			{{!-- {{#before-after}}
 				<img src="assets/images/eventyr/volley.jpg" alt="">
@@ -58,6 +55,8 @@
 	<div class="TeaserBox">
 		<a href="https://facebook.com/alivefestival/videos">Levende billeder fra Alive</a>
 	</div> --}}
+
+	{{!-- http://res.cloudinary.com/demo/video/upload/vc_auto/dog.mp4 --}}
 
 	{{!-- {{big-video src=model.acf.video srcwebm=model.acf.videowebm srcogg=model.acf.videoogg}}
 	<img src="assets/images/logo.svg" alt="World Class Guide"> --}}
