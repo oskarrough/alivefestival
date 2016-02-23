@@ -13,12 +13,18 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    pace: {
+      theme: 'minimal',
+      color: 'white'
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
   };
+
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -41,7 +47,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.googleAnalytics = {
+      webPropertyId: 'UA-3906535-9'
+    };
   }
 
   return ENV;
