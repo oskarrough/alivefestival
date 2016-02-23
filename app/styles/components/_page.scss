@@ -9,6 +9,11 @@
 	// border-right: 1rem solid rgba(#000, 0.1);
 	// transform: rotate(-0.5deg);
 
+	// @media (min-width: ($max-width + 10rem)) {
+	// 	max-width: 70%;
+	// 	padding-right: 10%;
+	// }
+
 	// Custom border.
 	&::after {
 		content: '';
@@ -34,9 +39,9 @@
 		padding-right: rem($space);
 	}
 
-	// img {
-	// 	height: auto !important;
-	// }
+}
+.Page-body img.alignnone {
+	height: auto !important;
 }
 .Manchet h1 + p,
 .Page-body h1 + p {

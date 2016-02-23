@@ -64,9 +64,9 @@ body {
 }
 .YoLink {
 	font-size: rem(100);
-	text-decoration: none;
+	text-decoration: none !important;
 	.Page & {
-		text-decoration: none;
+		text-decoration: none !important;
 	}
 }
 
