@@ -1,0 +1,9 @@
+<h2 class="SectionBox-title" {{action 'toggleBody'}}>
+	{{!-- {{if isOpen '↓' '↑'}} --}}
+	<span class="SectionBox-arrow">→</span> <span>{{{section.title}}}</span>
+	<img class="SectionBox-bg" src="{{section.image.sizes.wide}}" alt="">
+</h2>
+{{!-- <figure>
+	<img src="{{section.image.sizes.mini}}" alt="">
+</figure> --}}
+<div class="SectionBox-body">{{{section.body}}}</div>

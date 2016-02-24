@@ -1,60 +1,106 @@
-@font-face {
-	font-family: 'BurbankBigLight';
-	src: url('../fonts/burbankbigregular-light-webfont.eot');
-	src: url('../fonts/burbankbigregular-light-webfont.eot?#iefix') format('eot'),
-		 url('../fonts/burbankbigregular-light-webfont.woff') format('woff'),
-		 url('../fonts/burbankbigregular-light-webfont.ttf') format('truetype'),
-		 url('../fonts/burbankbigregular-light-webfont.svg#webfont5HQfnhlG') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-// @font-face {
-// 	font-family: 'BurbankBigMedium';
-// 	src: url('../fonts/burbankbigregular-medium-webfont.eot');
-// 	src: url('../fonts/burbankbigregular-medium-webfont.eot?#iefix') format('eot'),
-// 		 url('../fonts/burbankbigregular-medium-webfont.woff') format('woff'),
-// 		 url('../fonts/burbankbigregular-medium-webfont.ttf') format('truetype'),
-// 		 url('../fonts/burbankbigregular-medium-webfont.svg#webfontWyqpcFyE') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-@font-face {
-	font-family: 'BurbankBigBold';
-	src: url('../fonts/burbankbigregular-bold-webfont.eot');
-	src: url('../fonts/burbankbigregular-bold-webfont.eot?#iefix') format('eot'),
-		 url('../fonts/burbankbigregular-bold-webfont.woff') format('woff'),
-		 url('../fonts/burbankbigregular-bold-webfont.ttf') format('truetype'),
-		 url('../fonts/burbankbigregular-bold-webfont.svg#webfontjtJXFGGC') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+/**
+ * Fonts
+ */
 
-%burbank-light {
-	font-family: "BurbankBigLight", sans-serif;
-	font-weight: normal;
-	font-style: normal;
-}
-// %burbank-medium {
-// 	font-family: "BurbankBigMedium", sans-serif;
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-%burbank-bold {
-	font-family: "BurbankBigBold", sans-serif;
-	font-weight: normal;
-	font-style: normal;
-}
+$font-14: rem(14);
+$font-16: rem(16);
+$font-17: rem(17);
+$font-20: rem(20);
+$font-25: rem(25);
+$font-30: rem($space);
+$font-35: rem(35);
+$font-40: rem(40);
+$font-50: rem(50);
+$font-70: rem(70);
 
-%patron-light {
-	font-family: "Patron Light", sans-serif;
+@font-face {
+	font-family: 'GT Haptik';
+	src: url('fonts/gt-haptik/gt-haptik-light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
 }
-// %brezel-regular {
-// 	font-family:"Brezel Grotesk Regular", Arial, sans-serif;
-// 	font-weight:normal; font-style:normal;
-// }
-// %brezel-bold {
-// 	font-family:"Brezel Grotesk Bold", Arial, sans-serif;
-// 	font-weight:bold; font-style:normal;
-// }
+@font-face {
+	font-family: 'GT Haptik';
+	src: url('fonts/gt-haptik/gt-haptik-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'GT Haptik';
+	src: url('fonts/gt-haptik/gt-haptik-medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'GT Haptik';
+	src: url('fonts/gt-haptik/gt-haptik-bold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'GT Haptik';
+	src: url('fonts/gt-haptik/gt-haptik-black.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'GT Haptik Rotalic';
+	src: url('fonts/gt-haptik/gt-haptik-bold-rotalic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+%font-light {
+	font-family: 'GT Haptik', sans-serif; font-weight: 300;
+}
+%font-regular {
+	font-family: 'GT Haptik', sans-serif; font-weight: 400;
+}
+%font-medium {
+	font-family: 'GT Haptik', sans-serif; font-weight: 500;
+}
+%font-bold {
+	font-family: 'GT Haptik', sans-serif; font-weight: 600;
+}
+%font-black {
+	font-family: 'GT Haptik', sans-serif; font-weight: 700;
+}
+%font-black-rotalic {
+	font-family: 'GT Haptik Rotalic', sans-serif;
+}
+
+// Headers
+@mixin h1 {
+	// @extend %font-black;
+	@extend %font-black-rotalic;
+	line-height: 1.1;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	font-size: $font-35;
+	@media (min-width: $layout-s) {
+		font-size: $font-40;
+	}
+	@media (min-width: $layout-m) {
+		font-size: $font-50;
+	}
+	@media (min-width: $layout-l) {
+		font-size: $font-70;
+	}
+}
+@mixin h2 {
+	@extend %font-black;
+	font-size: $font-25;
+	line-height: 1.1;
+	text-transform: uppercase;
+	@media (min-width: $layout-m) {
+		font-size: rem(26);
+	}
+}
+@mixin h3 {
+	@extend %font-bold;
+	font-size: 1rem;
+	margin-bottom: 0;
+	// font-size: $font-20;
+	// letter-spacing: 0.1em;
+	text-transform: uppercase;
+}

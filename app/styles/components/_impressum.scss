@@ -1,0 +1,25 @@
+.Impressum {
+	background-color: $orange;
+	line-height: (90/55);
+	p {
+		margin-bottom: rem(41);
+	}
+	p:last-of-type {
+		margin: 0;
+		padding-bottom: rem(96);
+	}
+	h4 {
+		margin-bottom: rem(41);
+	}
+}
+
+.Impressum-body {
+	text-transform: uppercase;
+	text-align: center;
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	h4:first-of-type {
+		padding-top: rem(53);
+	}
+}

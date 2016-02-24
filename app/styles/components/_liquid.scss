@@ -1,0 +1,24 @@
+ /**
+ * Liquid Fire custom styles
+ */
+
+// This is pretty insane but unless we give a height, the liquid fire containers
+// will collapse which doesn't work with layout as everything is fixed.
+
+// .App-main {
+// 	> .liquid-container,
+// 	> .liquid-child > .liquid-container {
+// 		position: absolute;
+// 		top: 0;
+// 		bottom: 0;
+// 		right: 0;
+// 		left: 0;
+// 	}
+// 	> .liquid-container > .liquid-child,
+// 	> .liquid-container > .liquid-child > .liquid-container,
+// 	> .liquid-container > .liquid-child > .liquid-container > .liquid-child,
+// 	> .liquid-container > .liquid-child > .liquid-container > .liquid-child > .liquid-container,
+// 	> .liquid-container > .liquid-child > .liquid-container > .liquid-child > .liquid-container > .liquid-child {
+// 		height: 100%;
+// 	}
+// }

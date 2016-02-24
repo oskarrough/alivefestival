@@ -1,12 +1,37 @@
+ /**
+ * Base
+ */
+
 html {
-	// -webkit-font-smoothing: antialiased;
-	// @extend %brezel-regular;
-	// @extend %burbank-light;
-	// font-family: 'apercu';
-	@extend %patron-light;
-	text-rendering: optimizeLegibility;
-	font-size: $base-font-size;
+	@extend %font-regular;
+	@include negative-text;
 	line-height: $base-line-height-unitless;
+	background-color: $bg-color;
+	background-color: $logoblue;
+
+	background-image: url(images/bg-noise.jpg);
+	// background-image: url(images/moods/wildtexture.jpg);
+	// background-image: url(images/moods/masai-swirl.jpg);
+	// background-image: url(images/moods/bg-poster-crop.jpg);
+	// background-image: url(images/moods/texture.jpg);
+	// background-size: cover;
+	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	// color: $text-color;
+	color: $white;
+	// color: $black;
+
+	// Enable kerning and ligatures everywhere
+	// to use open-type features, bower install normalize-opentype
+	text-rendering: optimizeLegibility;
+	font-size: 15px;
+	@media (min-width: $layout-m) {
+		font-size: $base-font-size;
+	}
+	@media (min-width: $layout-xl) {
+		font-size: $base-font-size + 2;
+	}
 }
 
 // Set a consistent margin between elements
@@ -27,112 +52,62 @@ fieldset,
 input,
 table,
 address,
-textarea {
-    margin: 0 0 rem($space);
+textarea,
+figure,
+time {
+	margin: 0 0 rem($space);
 }
 
-// Headers
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	@extend %burbank-bold;
-	line-height: 1.1;
-	color: $brown;
-}
-.PageTitle {
-	font-size: 30px;
-	margin: 1rem;
-	@media (min-width: $layout-s) {
-		font-size: 40px;
-		margin: 3rem 2rem 2rem;
-	}
-}
-.Title {
-	transform: rotate(-1deg);
-	margin-bottom: 3rem;
-
-	@media (min-width: $layout-s) {
-		font-size: 60px;
-		max-width: 90%;
-	}
+h1 {
+	@include h1;
+	margin-bottom: rem($space*2);
+	// color: $verygreen;
+	color: $white;
 }
 h2 {
-	font-size: rem(25);
-	@media (min-width: $layout-s) {
-		font-size: rem(30);
-	}
+	@include h2;
 }
-h3,
-h4 {
-	font-size: rem(20);
-	margin-bottom: 0.25em;
-	letter-spacing: 0.05em;
-	color: $green;
+h3 {
+	@include h3;
 }
-h4 {}
-fieldset {
-    border: 0;
-    padding: 0;
-}
-ol,
-ul {
-    list-style: none;
-    padding: 0;
-}
-strong {
-	@extend %burbank-bold;
-}
-blockquote {
-	font-size: rem(22);
-	margin-left: 1em;
-	font-style: italic;
 
-	p {
-		letter-spacing: 0;
-	}
+strong,
+b {
+	@extend %font-medium;
 }
-.Muted {
-	@extend %burbank-light;
-}
+
 // Links
-.Main {
-	a {
-		color: $blue;
-	}
-	a:hover {
-		color: $black;
-		background-color: $yellow;
+a,
+a:visited {
+	color: $silk;
+	text-decoration: none;
+	transition: color 150ms;
+
+	&:hover,
+	&:active,
+	&.is-active {
+		color: $white;
 	}
 }
-img {
-	vertical-align: top;
+time,
+.Muted {
+	font-size: $font-14;
+}
+hr {
+	height: 1px;
+	border: 1px dotted rgba(255, 255, 255, 0.3);
+	margin: 2rem 0;
+}
+.Separator {
+	opacity: 0.5;
+	position: relative;
+	top: -0.1em;
+	font-size: $font-14;
+	margin-right: 0.5em;
+	margin-left: 0.5em;
 }
 
-// Responsive media
 iframe,
-img,
-canvas,
-video,
-embed {
+img {
 	max-width: 100%;
-}
-
-// Alignment helpers
-.align-left {
-	float: left;
-	margin-right: rem($space);
-	margin-bottom: rem($space);
-}
-.align-right {
-	float: right;
-	margin-left: rem($space);
-	margin-bottom: rem($space);
-}
-.align-center {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
 }

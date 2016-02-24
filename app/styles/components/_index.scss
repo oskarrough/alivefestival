@@ -1,83 +1,105 @@
-//
-// Homepage
-//
+#big-video-wrap {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 
-#zlayer {
+	img {
+		object-fit: cover;
+		height: 100% !important;
+	}
+	.vjs-loading-spinner {
+		display: none !important;
+	}
+}
+.Index {
 	position: relative;
-	width: 100%;
-	height: 100%;
 }
-[class^='Layer'] {
+.Index-title {
+	display: none;
+	@media (min-width: $layout-s) {
+		font-size: rem(20);
+	}
+	@media (min-width: $layout-m) {
+		font-size: 2vw;
+	}
+	opacity: 0.8;
 	position: absolute;
+	right: 2rem;
+	top: 2rem;
+	z-index: 5;
 }
-// volunteer
-.Layer1 {
-	margin-top: 13em; margin-left: 41em;
-	display: none;
-	@media (min-width: 740px) {
+.Index-body {
+	@include h3;
+	position: fixed;
+	bottom: 40%;
+	left: $aside-width + 1rem;
+	z-index: 5;
+	// max-width: 20rem;
+}
+.Index-gallery {
+	position: relative;
+	.flickity-viewport {
+		// @include ratio(16,9);
+		// > img {
+		// 	@include ratio-inner;
+		// }
+	}
+}
+.Index-artists {
+	@extend %font-bold;
+	display: block;
+	line-height: 1;
+	padding: 0.75em 0;
+	font-size: $font-20;
+	background: $teal;
+	color: $white;
+}
+.Index .GalleryCounter {
+	position: absolute;
+	right: rem($space);
+	bottom: rem($space);
+	opacity: 0.8;
+}
+.TeaserBox {
+	text-align: center;
+	a {
+		font-size: $font-20;
+		@extend %font-bold;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
 		display: block;
-		margin-top: 13em; margin-left: 41em;
+		padding: 0.7em 1em 0.95em;
+		line-height: 1;
 	}
-}
-// newsletter
-.Layer2 {
-	margin-top: 22em; margin-left: 39em;
-	@media (min-width: 740px) {
-		margin-top: 22em; margin-left: 39em;
-	}
-}
-// program
-.Layer3 {
-	margin-top: 14em; margin-left: 3em;
-	@media (min-width: 740px) {
-		margin-top: 13em; margin-left: 3em;
-	}
-}
-//social
-.Layer4 {
-	top: initial !important; bottom: 2em !important; margin-left: 2em;
-	@media (min-width: 740px) {
-		bottom: 2em !important; margin-left: 6em;
-	}
-}
-//tickets
-.Layer5 {
-	display: none;
-	margin-top: 15em; margin-left: 54em;
-	@media (min-width: 740px) {
-		display: block;
-		//
-	}
-}
 
-.Box--program,
-.Box--volunteer {
-	> h2 {
-		color: #fff;
+	// + .TeaserBox {
+	// 	background-image: url(images/moods/bg-poster-crop.jpg);
+
+	// 	+ .TeaserBox {
+	// 		background-image: url(images/moods/texture.jpg);
+	// 		background-size: cover;
+	// 	}
+	// }
+}
+.TeaserBox--alive {
+	background-color: #08092D;
+	background-image: url(images/moods/bluego.gif);
+	background-repeat: repeat;
+}
+.LatestNews {
+	padding: rem($space);
+	@media (min-width: $layout-m) {
+		padding: rem($space*2);
+	}
+	h3 {
+		margin-bottom: 1rem;
 	}
 }
-
-.Layer--volunteer {} // volunteer
-.Box--volunteer {
-	background-image: url(../images/gallery/278815_10150999577681714_644388252_o.jpg);
-	background-size: contain;
-}
-
-.Layer--newsletter {} // newsletter
-
-.Layer--program {} // program
-.Box--program {
-	background-image: url(../images/2013/artists/raveonettes.jpg);
-	background-image: url(../images/2013/program.jpg);
-	background-size: cover;
-	width: 450px;
-	max-width: 100%;
-	padding-top: 0;
-}
-
-.Layer--social {
-	.Box {
-		padding-top: 1em;
-		padding-bottom: 1em;
-	}
+.LatestNews-title {
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }

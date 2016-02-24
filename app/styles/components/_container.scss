@@ -1,0 +1,14 @@
+ /**
+ * Containers
+ */
+
+.Container {
+	max-width: rem(740);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: rem($space);
+	padding-right: rem($space);
+}
+.Container--large {
+	max-width: rem(1240);
+}

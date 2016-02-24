@@ -1,0 +1,9 @@
+{{#if hasBlock}}
+	{{#if images.length}}
+		{{#each images as |item|}}
+			<div class="FlickityGallery-item">
+				{{yield item}}
+			</div>
+		{{/each}}
+	{{/if}}
+{{/if}}

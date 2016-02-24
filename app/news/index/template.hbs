@@ -1,0 +1,11 @@
+<h1>{{model.page.title}}</h1>
+{{#if model.page.content}}
+	{{{model.page.content}}}
+{{/if}}
+
+{{news-list items=model.posts}}
+
+<br><br>
+<p>Tjek <a href="http://facebook.com/alivefestival" target="_blank">Alive Festival på Facebook</a> for mere.</p>
+
+{{outlet}}

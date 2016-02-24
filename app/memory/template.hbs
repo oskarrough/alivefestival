@@ -1,0 +1,16 @@
+<div class="Section">
+	<div class="Page">
+		<div class="Page-body">
+			<p>Velkommen til det hemmelige…</p>
+			<h1>Alive-lykkehjul!</h1>
+
+			{{#wheel-of-fortune onSpin=(action 'refreshModel') as |item|}}
+				{{{item.content}}}
+				{{#if item.better_featured_image}}
+					<img src="{{item.better_featured_image.source_url}}" alt="{{item.title}}" width="400">
+				{{/if}}
+			{{/wheel-of-fortune}}
+			{{outlet}}
+		</div>
+	</div>
+</div>

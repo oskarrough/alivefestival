@@ -1,0 +1,27 @@
+<div class="Manchet">
+	<h1 class="Title">{{model.page.title}}</h1>
+	{{{model.page.content}}}
+</div>
+
+<div class="Artists">
+	{{#masonry-grid items=model.artists as |item|}}
+		{{#link-to 'music.artist' item}}
+			{{teaser-item item=item}}
+		{{/link-to}}
+	{{/masonry-grid}}
+	{{!-- {{#liquid-bind model.artists class="CityIndexAnimation"}}
+		<div class="Grid">
+			{{#each model.artists as |artist|}}
+				<div class="Grid-item">
+					{{#link-to 'music.artist' artist}}
+						{{teaser-item item=artist}}
+					{{/link-to}}
+				</div>
+			{{/each}}
+		</div>
+	{{/liquid-bind}} --}}
+</div>
+
+{{!-- <div class="html"><iframe src="https://embed.spotify.com/?uri=https://play.spotify.com/user/1133931389/playlist/06qyZkEWCOU16E4URII5Qg" width="300" height="380" frameborder="0" allowtransparency="true"></iframe></div>
+
+<div class="html"><iframe width="560" height="315" src="//www.youtube.com/embed/videoseries?list=PLo682vyue18ghgHMOEXVniKLfUx3sGwNx" frameborder="0" allowfullscreen></iframe></div> --}}

@@ -1,0 +1,75 @@
+.Page {
+	position: relative;
+	max-width: $max-width;
+	min-height: 100vh;
+	margin-right: 2rem;
+	min-height: 100vh;
+	background-color: $gray;
+	color: $black;
+	// border-right: 1rem solid rgba(#000, 0.1);
+	// transform: rotate(-0.5deg);
+
+	// @media (min-width: ($max-width + 10rem)) {
+	// 	max-width: 70%;
+	// 	padding-right: 10%;
+	// }
+
+	// Custom border.
+	&::after {
+		content: '';
+		display: block;
+		width: 40px;
+		height: 100%;
+		background: url(images/page-border.png) repeat-y top right;
+		position: absolute;
+		top: 0;
+		right: -40px;
+		z-index: 1;
+	}
+}
+.Page-banner {
+	margin-bottom: 0;
+}
+.Page-body {
+	// transform: rotate(0.5deg);
+	padding-left: rem($space*1.5);
+	padding-bottom: rem($space*1);
+	@media (min-width: $layout-m) {
+		padding-left: rem($space*3);
+		padding-right: rem($space);
+	}
+
+}
+.Page-body img.alignnone {
+	height: auto !important;
+}
+.Manchet h1 + p,
+.Page-body h1 + p {
+	@extend %font-medium;
+	font-size: $font-20;
+	@media (min-width: $layout-s) {
+		max-width: 80%;
+	}
+}
+.Page a:not(.Button) {
+	text-decoration: underline;
+}
+.History {
+	margin-bottom: rem($space*4)
+}
+.Page-backgroundImage {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	max-width: 60%;
+	height: 100%;
+	object-fit: cover;
+}
+.Page-backgroundImage--full {
+	width: 100%;
+	max-width: none;
+}
+.Page + .Page {
+	margin-top: rem($space*2);
+}

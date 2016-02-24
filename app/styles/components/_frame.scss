@@ -1,95 +1,24 @@
-/**
- * Wrapper for .Frame as we can not give it a width
- */
-.FrameWrap {
-	width: 550px;
-	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-
-	.Frame {
-		margin-top: 0;
-	}
-}
-.FrameWrap--left {
-	float: left;
-	margin-left: -2rem;
-	margin-right: 2rem;
-	@media (min-width: $layout-m) {
-		max-width: 45%;
-	}
-}
-.FrameWrap--right {
-	float: right;
-	@media (min-width: $layout-m) {
-		max-width: 45%;
-	}
-}
-
-
-/**
- * Frame
- */
 .Frame {
 	position: relative;
 	width: 100%;
-	// hide image
 	overflow: hidden;
 	height: 0;
 	padding-top: 0.5em;
 	padding-left: 0.5em;
 	padding-bottom: 73.598130841%;
 	text-align: center;
-
-	// the frame
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 0;left: 0;right: 0;bottom: 0;
-		z-index: 1;
-		background-image: url(../images/2014/frame.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		pointer-events: none;
-	}
-
-	// Single (linked) images inside (no slideshow)
-	> a,
-	> img {
-		display: block;
-		position: absolute;
-		top: 48%;
-		transform: translateY(-50%);
-	}
-	> a {
-		height: 90%; // firefox fix
-	}
-	img {
-		width: 90%;
-	}
-
-	// Slideshows inside
-	.Slideshow {
-		width: 85%;
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-		margin: 0 auto;
-
-		img {
-			width: 100%;
-			position: static;
-			transform: none;
-		}
-	}
 }
-.Frame--square {
-	padding-bottom: 66.4583333%;
-}
-.Frames {
-	.Frame {
-		float: left;
-		margin-right: 1rem;
-	}
+.Frame:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background-image: url(images/moods/frame.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	pointer-events: none;
 }

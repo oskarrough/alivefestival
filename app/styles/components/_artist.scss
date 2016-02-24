@@ -1,93 +1,162 @@
-//
-// Artist
-//
-
-//
-// Default for all articles
-//
 .Artist {
-	position: relative;
-	overflow: hidden;
-	> a {
-		display: block;
-	}
-
-	img {
-		max-width: 100%;
-	}
+	padding-top: rem($space);
+	margin-bottom: rem($space*2);
 }
-
-
-//
-// Teaser modifier
-//
-.Article--teaser,
-.Artists .Artist {
-	border-radius: 0.4em;
-
-	> a:after {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		transition: all 250ms cubic-bezier(0.19, 1, 0.22, 1);
-		//border: 0px solid rgba($yellow,1);
-	}
-	> a:hover:after {
-		border-width: 5px;
-	}
-
-	// Make sure the link contains everything
-	> a {
-		display: block;
-	}
-	img {
-		display: block;
-	}
+.Artist-media {
+	margin-bottom: rem($space);
 }
-
-
-//
-// Detail modifier
-//
-.Article--detail {}
-
-.Artist-popup {
-	max-width: 900px;
-	margin: 0 auto;
-	position: relative;
-
-	.Artist-media {
-		img {
-			width: 100%;
-		}
-	}
-	.Artist-info {
-		@extend %Box;
-		overflow-y: scroll;
-		padding: em($space * 2) em($space * 1.5);
-	}
-	.mfp-close {
-		//top: -0.5em;
-	}
-
-	@media (min-width: 37.5em) {
-		.Artist-media {
-			margin-right: em(350);
-		}
-		.Artist-info {
-			width: em(350);
-			position: absolute;
-			top: em($space * -1);
-			right: 0;
-			bottom: em($space * -1);
-			padding: em($space * 2);
-		}
-		.mfp-close {
-			top: -0.5em;
-		}
-	}
+.Bar-body iframe {
+	margin-top: rem($space);
+	margin-bottom: rem($space);
 }
+// /**
+//  * Artist
+//  **/
+
+// .Bar {
+// 	position: absolute;
+// 	top: $header-bar-height;
+// 	left: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	@media (max-width: $layout-mm) {
+// 		overflow: auto;
+// 	}
+// }
+
+// /**
+//  * Body
+//  */
+
+// .Bar-body {
+// 	border-top: $border-width solid $white;
+// 	text-align: center;
+// 	@media (min-width: $layout-mm) {
+// 		text-align: left;
+// 		border-top: 0;
+// 		position: absolute;
+// 		right: 0;
+// 		height: 100%;
+// 		width: 32%;
+// 		border-left: $border-width solid $white;
+// 		overflow-y: auto;
+// 		overflow-x: hidden;
+// 		-webkit-overflow-scrolling: touch;
+// 	}
+// }
+
+// .Bar-text {
+// 	padding: rem($space) rem($space) 0;
+// 	z-index: 0;
+
+// 	padding: rem(30);
+
+// 	p {
+// 		max-width: 40rem;
+// 		margin-left: auto;
+// 		margin-right: auto;
+// 	}
+
+// 	@media (min-width: $layout-mm) {
+// 		padding-bottom: rem(72); // it's link with height of Bar-links
+// 		// left aligned
+// 		margin-left: 0;
+// 	}
+// }
+// .Bar-title {
+// 	font-size: $font-25;
+// 	margin: 0 0 rem(15);
+// 	// hide when title is shown in .HeaderBar
+// 	@media (min-width: $layout-m) {
+// 		display: none;
+// 	}
+// }
+// .Bar-subtitle {
+// 	font-size: $font-16;
+// }
+// .Bar-links {
+// 	z-index: 1;
+// 	border-top: $border-width solid $white;
+// 	background: $black;
+// 	padding-top: rem(22);
+
+// 	padding-left: rem(7); // optical icon alignment
+
+// 	padding-bottom: rem(26);
+
+// 	@media (min-width: $layout-mm) {
+// 		position: fixed;
+// 		right: 0;
+// 		left: 68%;
+// 		bottom: 0;
+// 		height: rem(72); // it's link with padding bottom of Bar-text
+// 		padding-top: rem(22);
+// 		border-left: $border-width solid $white;
+// 	}
+// }
+// .Bar-links a {
+// 	@extend %font-bold;
+// 	letter-spacing: 0.1em;
+// 	text-transform: uppercase;
+// 	font-size: rem(15);
+// 	margin-right: rem(6);
+// 	margin-left: rem(25);
+
+// 	&:hover i {
+// 		opacity: 0.6;
+// 	}
+// 	&:first-of-type {
+// 		margin-left: 0;
+// 		@media (min-width: $layout-mm) {
+// 		margin-left: rem(25);
+// 		}
+// 	}
+
+// 	@media (min-width: 1210px) {
+// 		font-size: $font-16;
+// 	}
+// 	i {
+// 		margin-right: rem(6);
+// 	}
+// 	.icon-map,
+// 	.icon-website {
+// 		background-size: contain;
+// 		vertical-align: middle;
+
+// 		.Bar-meta--map & {
+// 			font-style: 15px;
+// 		}
+// 	}
+// 	.icon-website {
+// 		width: rem(16);
+// 		height: rem(14);
+// 		top: -1px;
+// 	}
+// 	.icon-map {
+// 		width: rem(10);
+// 		height: rem(16);
+// 		top: -2px;
+// 	}
+// }
+
+// /**
+//  * Gallery
+//  */
+// .Bar-gallery {
+// 	position: relative;
+// 	overflow: hidden; // hide flickity overlap
+// 	height: 220px;
+// 	@media (min-width: $layout-s) {
+// 		height: 300px;
+// 	}
+// 	@media (min-width: $layout-m) {
+// 		height: 400px;
+// 	}
+// 	@media (min-width: $layout-mm) {
+// 		position: absolute;
+// 		left: 0;
+// 		bottom: 0;
+// 		width: 68%;
+// 		height: 100%
+// 	}
+// }

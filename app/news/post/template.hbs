@@ -1,0 +1,14 @@
+<p class="BackLink">{{#link-to 'news.index'}}↖ alle nyheder{{/link-to}}</p>
+
+<article class="Post">
+	<h1>{{model.title}}</h1>
+	<time>{{moment-from-now model.date}}</time>
+	<div class="Post-body">
+		{{{model.content}}}
+	</div>
+	{{#if model.better_featured_image}}
+		<img src="{{model.better_featured_image.source_url}}" alt="{{model.title}}">
+	{{/if}}
+	<br><br>
+	<p class="BackLink">{{#link-to 'news.index'}}↖ alle nyheder{{/link-to}}</p>
+</article>
