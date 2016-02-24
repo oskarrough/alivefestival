@@ -6,13 +6,6 @@
 	min-height: 100vh;
 	background-color: $gray;
 	color: $black;
-	// border-right: 1rem solid rgba(#000, 0.1);
-	// transform: rotate(-0.5deg);
-
-	// @media (min-width: ($max-width + 10rem)) {
-	// 	max-width: 70%;
-	// 	padding-right: 10%;
-	// }
 
 	// Custom border.
 	&::after {
@@ -38,7 +31,6 @@
 		padding-left: rem($space*3);
 		padding-right: rem($space);
 	}
-
 }
 .Page-body img.alignnone {
 	height: auto !important;
@@ -62,7 +54,7 @@
 	z-index: -1;
 	top: 0;
 	right: 0;
-	max-width: 60%;
+	min-width: 54%;
 	height: 100%;
 	object-fit: cover;
 }
