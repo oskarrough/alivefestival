@@ -1,10 +1,13 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
-	classNameBindings: ['showAside'],
+const {Component, inject} = Ember;
+
+export default Component.extend({
+	layout: inject.service(),
+	classNameBindings: ['layout.showAside'],
 	actions: {
 		toggleAside() {
-			this.toggleProperty('showAside');
+			this.toggleProperty('layout.showAside');
 		}
 	}
 });
