@@ -40,8 +40,10 @@
 	height: auto !important;
 }
 .Manchet h1 + p,
-.Page-body h1 + p {
-	@extend %font-medium;
+.Page-body h1 + p,
+.Post-body > p:first-child {
+	@extend %font-bold;
+	strong { @extend %font-bold; }
 	font-size: $font-20;
 	@media (min-width: $layout-s) {
 		max-width: 80%;
