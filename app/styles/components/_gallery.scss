@@ -1,19 +1,12 @@
 // Scale to the right format.
 // Responsive images are adjusted to the same.
 .Index-gallery {
-	@include ratio(16, 9);
-	@media (orientation: portrait) {
-		@include ratio(9, 16);
-	}
 
-	.FlickityGallery {
-		@include ratio-inner;
-	}
 }
 
 // Set a max height when object-fit is supported
-/*.object-fit */.Index-gallery {
-	// min-height: 300px;
+.object-fit .Index-gallery {
+	min-height: 300px;
 	max-height: 75vh;
 	overflow: hidden;
 	.FlickityGallery .FlickityGallery-item {
@@ -27,7 +20,15 @@
 	}
 }
 
-.FlickityGallery {}
+.FlickityGallery {
+	@include ratio(16, 9);
+	@media (orientation: portrait) {
+		@include ratio(9, 16);
+	}
+	> * {
+		@include ratio-inner;
+	}
+}
 .FlickityGallery-item {
 	width: 100%;
 }

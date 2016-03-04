@@ -1,12 +1,16 @@
 .Button {
 	display: inline-block;
 	background-image: linear-gradient(to bottom,#eb614c,#e84930);
-	color: #fffee5;
-	padding: .5em 1em .4em;
+	color: $silk;
+	padding: .4em 1em .4em;
 	box-shadow: 2px 2px 0 0 #bc2b15;
 	letter-spacing: .1em;
 	border-radius: 3px;
 	text-decoration: none;
+}
+a.Button,
+.Page a.Button {
+	color: $silk;
 }
 .NonBtn {
 	background-color: transparent;

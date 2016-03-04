@@ -1,6 +1,17 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const {Component, inject} = Ember;
+
+export default Component.extend({
+	layout: inject.service(),
+
+	click(event) {
+		const clickedElementHasAnHref = event.target.href;
+		console.log(clickedElementHasAnHref);
+		if (clickedElementHasAnHref && this.get('layout.showAside')) {
+			this.get('layout').perhapsCloseAside();
+		}
+	}
 	// currentBarIndex: computed('currentBar', function () {
 	// 	var currentBar = this.get('currentBar');
 	// 	var index = this.get('bars').indexOf(currentBar);
