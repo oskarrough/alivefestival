@@ -7,6 +7,10 @@
 	background-color: $gray;
 	color: $black;
 
+	a {
+		color: $logoblue;
+	}
+
 	// Custom border.
 	&::after {
 		content: '';
