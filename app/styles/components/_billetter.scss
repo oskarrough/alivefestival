@@ -1,0 +1,35 @@
+/**
+ * Billeter
+ */
+
+.Page.billetter {
+	background: none;
+	width: 100%;
+	max-width: 100%;
+}
+.Page.billetter::after {
+	display: none;
+}
+.Page.billetter {
+	.Page-banner {
+		position: relative;
+		margin-bottom: 5em;
+		h1 {
+			padding: 2em 3em 0;
+		}
+		img {
+			position: absolute;
+			transform: rotate(-3deg);
+			max-width: 130%;
+		}
+	}
+	.Page-body {
+		background-color: rgba(225, 240, 224, 0.8);
+		h1 {
+			display: none;
+		}
+	}
+	.Page-backgroundImage {
+		opacity: 0.75;
+	}
+}
