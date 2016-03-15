@@ -3,11 +3,22 @@
 		<img src="{{page.better_featured_image.source_url}}" alt="{{page.title}}">
 	</figure>
 {{/if}}
+
+{{#if layout.billetter}}
+	<div class="Page-banner">
+		<h1>{{page.title}}</h1>
+		<img src="assets/images/wristband.png" alt="">
+	</div>
+{{/if}}
+
 <div class="Page-body">
 	{{#if page.title}}<h1>{{page.title}}</h1>{{/if}}
 	{{{page.content}}}
 	{{yield}}
 </div>
-{{#if page.acf.background_image.sizes.bg-portrait-xl}}
+
+{{#if layout.billetter}}
+	<img class="Page-backgroundImage" src="assets/images/bg-moving.gif" alt="">
+{{else if page.acf.background_image.sizes.bg-portrait-xl}}
 	<img class="Page-backgroundImage" src="{{page.acf.background_image.sizes.bg-portrait-xl}}" alt="">
 {{/if}}
