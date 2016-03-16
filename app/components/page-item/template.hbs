@@ -7,18 +7,21 @@
 {{#if layout.billetter}}
 	<div class="Page-banner">
 		<h1>{{page.title}}</h1>
-		<img src="assets/images/wristband.png" alt="">
+		<img src="assets/images/wristband-oskar.png" alt="">
 	</div>
 {{/if}}
 
 <div class="Page-body">
+	{{#if layout.billetter}}
+			<img src="assets/images/alive-billetter.svg" alt="">
+	{{/if}}
 	{{#if page.title}}<h1>{{page.title}}</h1>{{/if}}
 	{{{page.content}}}
 	{{yield}}
 </div>
 
 {{#if layout.billetter}}
-	<img class="Page-backgroundImage" src="assets/images/bg-moving.gif" alt="">
+	<div class="Page-backgroundImage"></div>
 {{else if page.acf.background_image.sizes.bg-portrait-xl}}
 	<img class="Page-backgroundImage" src="{{page.acf.background_image.sizes.bg-portrait-xl}}" alt="">
 {{/if}}

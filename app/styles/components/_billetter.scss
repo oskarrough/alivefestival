@@ -13,23 +13,30 @@
 .Page.billetter {
 	.Page-banner {
 		position: relative;
-		margin-bottom: 5em;
+		margin-bottom: 3.5em;
 		h1 {
-			padding: 2em 3em 0;
+			padding-top: rem(35);
+			font-size: rem(100);
+			padding-left: 0.4em;
+			margin-bottom: 0;
+			// padding: 2em 3em 0;
 		}
 		img {
 			position: absolute;
 			transform: rotate(-3deg);
 			max-width: 130%;
+			margin-top: 1em;
 		}
 	}
 	.Page-body {
-		background-color: rgba(225, 240, 224, 0.8);
+		background-color: $white;//rgba(225, 240, 224, 0.8);
 		h1 {
 			display: none;
 		}
 	}
 	.Page-backgroundImage {
 		opacity: 0.75;
+		width: 100%;
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXxvZSoAAAAAElFTkSuQmCC);
 	}
 }
