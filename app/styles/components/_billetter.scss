@@ -13,11 +13,11 @@
 .Page.billetter {
 	.Page-banner {
 		position: relative;
-		margin-bottom: 3.5em;
+		// margin-bottom: 3.5em;
 		h1 {
 			padding-top: rem(35);
-			font-size: rem(100);
-			padding-left: 0.4em;
+			font-size: rem(150);
+			padding-left: 0.3em;
 			margin-bottom: 0;
 			// padding: 2em 3em 0;
 		}
@@ -29,14 +29,26 @@
 		}
 	}
 	.Page-body {
-		background-color: $white;//rgba(225, 240, 224, 0.8);
+		height: 100vh;
+		text-align: center;
+		padding-top: rem(170);
+		// background-color: $white;//rgba(225, 240, 224, 0.8);
+		background-image: url(/assets/images/white-wave.svg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		// margin-top: 5em;
+
 		h1 {
 			display: none;
 		}
+		img {
+			transform: rotateZ(-1deg);
+		}
 	}
 	.Page-backgroundImage {
+		background-position: 0px 0px;
 		opacity: 0.75;
 		width: 100%;
-		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXxvZSoAAAAAElFTkSuQmCC);
+		background: url(/assets/images/square.gif);
 	}
 }

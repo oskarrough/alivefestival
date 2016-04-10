@@ -12,6 +12,14 @@
 
 .icon-cross { background-image: url('png/cross.png'); background-repeat: no-repeat; }
 
+.icon-facebook-circle { background-image: url('png/facebook-circle.png'); background-repeat: no-repeat; }
+
+.icon-facebook { background-image: url('png/facebook.png'); background-repeat: no-repeat; }
+
+.icon-instagram-circle { background-image: url('png/instagram-circle.png'); background-repeat: no-repeat; }
+
+.icon-instagram { background-image: url('png/instagram.png'); background-repeat: no-repeat; }
+
 .icon-logo { background-image: url('png/logo.png'); background-repeat: no-repeat; }
 
 .icon-map-hover { background-image: url('png/map-hover.png'); background-repeat: no-repeat; }
