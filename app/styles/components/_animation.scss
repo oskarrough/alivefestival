@@ -653,10 +653,23 @@ animation-play-state:running;
 }
 
 .shake2.shake-constant2{
-animation-name:shake-base;
-animation-duration:100ms;
-animation-iteration-count:infinite;
-animation-timing-function:ease-in-out;
-animation-delay:0s;
-animation-play-state:running;
+	animation-name:shake-base;
+	animation-duration:100ms;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease-in-out;
+	animation-delay:0s;
+	animation-play-state:running;
+}
+@keyframes discoFun {
+	0%{text-shadow:-6px 4px 0px #eb644d;}
+	10% {text-shadow:4px -6px 0px #54ba52;}
+	20% {text-shadow:-9px 4px 0px #25aae1;}
+	30% {text-shadow:4px -6px 0px #e1f0e0;}
+	40% {text-shadow:-8px 4px 0px #fcd266;}
+	50% {text-shadow:4px 5px 0px #55454a;}
+	60% {text-shadow:-6px 4px 0px darkred;}
+	70% {text-shadow:4px 7px 0px pink;}
+	80% {text-shadow:-9px -4px 0px aquamarine;}
+	90% {text-shadow:4px -6px 0px $teal;}
+	100% {text-shadow:-9px 4px 0px $yellow;}
 }

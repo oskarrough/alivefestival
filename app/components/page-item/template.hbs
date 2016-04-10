@@ -8,12 +8,34 @@
 	<div class="Page-banner">
 		<h1>{{page.title}}</h1>
 		{{!-- <img src="assets/images/wristband-oskar.png" alt=""> --}}
+		{{!-- <button {{action 'partyOn'}}>party on</button> --}}
 	</div>
 {{/if}}
 
 <div class="Page-body">
 	{{#if layout.billetter}}
-			<img src="assets/images/alive-billetter.gif" alt="">
+		<div class="BilletterBody">
+			<a href="BilletterBody-link">
+				<img src="assets/images/billetter-animation.gif" alt="">
+			</a>
+		</div>
+		<div class="BilletterBody BilletterBody--mobile">
+			<h2 class="BilletterBody-title">Alive Festival 2016</h2>
+			<div class="BilletterBody-wrap">
+				<h3>11 - 13 August 2016</h3>
+				<h3>PARTOUTBILLET</h3>
+				<p>Adgang til tre dages musik og oplevelser</p>
+				<span class="icon-camping"></span>
+				<p>Inklusiv mulighed for camping</p>
+			</div>
+			<div class="BilletterBody-wrap">
+				<h2>495 KR.</h2>
+				<h3>PARTOUTBILLET</h3>
+				<p>BILLETTER KØBES IGENNEM BILLETLUGEN</p>
+				<p>prisen stiger den 2. maj</p>
+			</div>
+			<a class="BilletterBody-button Button" href="#">KOB!</a>
+		</div>
 	{{else}}
 		{{#if page.title}}<h1>{{page.title}}</h1>{{/if}}
 		{{{page.content}}}

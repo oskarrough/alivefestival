@@ -13,13 +13,18 @@
 .Page.billetter {
 	.Page-banner {
 		position: relative;
-		// margin-bottom: 3.5em;
 		h1 {
 			padding-top: rem(35);
-			font-size: rem(150);
+			font-size: 12vw;//rem(150);
 			padding-left: 0.3em;
 			margin-bottom: 0;
-			// padding: 2em 3em 0;
+
+			//todo add secret Party On button
+			&.party-on {
+				animation: discoFun 3s;
+				animation-timing-function: linear;
+				animation-iteration-count:infinite;
+			}
 		}
 		img {
 			position: absolute;
@@ -29,26 +34,77 @@
 		}
 	}
 	.Page-body {
-		height: 100vh;
 		text-align: center;
-		padding-top: rem(170);
+		padding-top: rem(100);
+		padding-right: rem($space*1.5);
 		// background-color: $white;//rgba(225, 240, 224, 0.8);
 		background-image: url(/assets/images/white-wave.svg);
 		background-repeat: no-repeat;
-		background-size: 100%;
-		// margin-top: 5em;
+		background-size: 103%;
+		min-height: 15em;
 
 		h1 {
 			display: none;
-		}
-		img {
-			transform: rotateZ(-1deg);
 		}
 	}
 	.Page-backgroundImage {
 		background-position: 0px 0px;
 		opacity: 0.75;
 		width: 100%;
+		height: 50vh;
+		background-color: white;
 		background: url(/assets/images/square.gif);
 	}
+}
+
+.BilletterBody {
+	display: none;
+	&.BilletterBody--mobile {
+		display: flex;
+		padding-top: rem($space*2.5);
+		flex-flow: column;
+		@media (min-width: $layout-s) {
+			flex-flow: row wrap;
+		}
+	}
+	@media (min-width: $layout-ml) {
+		display: block;
+		&.BilletterBody--mobile {
+			display: none;
+		}
+	}
+}
+.BilletterBody-title {
+	flex: 1 100%;
+	margin-bottom: rem($space*2.5);
+}
+.BilletterBody-link img {
+	transform: rotateZ(1deg);
+	margin: 0 auto;
+}
+.BilletterBody-wrap {
+	flex: 2;
+	text-align: left;
+	margin-top: rem($space*1.5);
+	@media (min-width: $layout-s) {
+		&:nth-of-type(2n) {
+			text-align: right;
+		}
+	}
+	h2 {
+		margin-bottom: 0;
+	}
+	span + p {
+		display: inline;
+		padding-left: rem(5);
+		vertical-align: super;
+	}
+}
+.BilletterBody-button {
+	flex: 1 100%;
+	margin: rem($space*1.5) auto rem($space*4.5);;
+	font-size: $font-35;
+	background-color: $yellow;
+	border: 3px solid $yellow;
+	color: $white;
 }
