@@ -36,6 +36,10 @@
 
 .icon-overview { background-image: url('png/overview.png'); background-repeat: no-repeat; }
 
+.icon-party-switch-off { background-image: url('png/party-switch-off.png'); background-repeat: no-repeat; }
+
+.icon-party-switch-on { background-image: url('png/party-switch-on.png'); background-repeat: no-repeat; }
+
 .icon-slide-arrow-left { background-image: url('png/slide-arrow-left.png'); background-repeat: no-repeat; }
 
 .icon-slide-arrow-right { background-image: url('png/slide-arrow-right.png'); background-repeat: no-repeat; }
