@@ -13,7 +13,7 @@ Router.map(function () {
   this.route('music', {path: 'musik'}, function () {
     this.route('artist', {path: ':artist_slug'});
   });
-  this.route('adventure', {path: 'eventyr'});
+  this.route('adventure', {path: 'sideprogram'});
   this.route('guide');
   this.route('about', {path: 'om-alive'}, function () {
     this.route('contact', {path: 'kontakt'});
@@ -21,6 +21,8 @@ Router.map(function () {
   });
   this.route('memory', {path: 'lykkehjulet'});
   this.route('tickets', {path: 'billetter'});
+  this.route('volunteer', {path: 'frivillig'});
+  this.route('partners', {path: 'partnere'});
   this.route('english');
   this.route('404', {path: '/*wildcard'});
 });

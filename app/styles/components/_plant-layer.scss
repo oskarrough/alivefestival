@@ -1,0 +1,42 @@
+// Fixed plant layer backgrounds (the green plants)
+.PlantLayer {
+	position: fixed;
+	z-index: -1;
+	bottom: -12%;
+	width: 50%;
+	z-index: 5;
+	background-repeat: no-repeat;
+	background-size: contain;
+	pointer-events: none;
+	user-select: none;
+}
+.PlantLayer--topLeft {
+	top: 0;
+	left: 0;
+	width: 776px;
+	height: 487px;
+	background-image: url('../assets/images/bg-topleft.png');
+	background-position: top left;
+}
+.PlantLayer--bottomLeft {
+	bottom: 0;
+	left: 0;
+	height: 210px;
+	width: 30px;
+	@media (min-width: $layout-sm) {
+		width: 400px;
+	}
+	background-image: url('../assets/images/bg-bottomleft.png');
+	background-position: bottom left;
+}
+.PlantLayer--topRight {
+	top: -1rem;
+	right: 0;
+	height: 553px;
+	width: 100px;
+	@media (min-width: $layout-sm) {
+		width: 200px;
+	}
+	background-image: url('../assets/images/bg-topright.png');
+	background-position: top right;
+}

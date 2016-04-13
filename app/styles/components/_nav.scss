@@ -1,0 +1,48 @@
+.Nav {
+	display: flex;
+	flex-flow: column nowrap;
+}
+.Nav a {
+	@extend %font-bold;
+	font-size: $font-20;
+	padding-top: 0.25em;
+	padding-left: rem($space*2.5);
+	padding-bottom: 0.25em;
+	color: $black;
+	transition: color 250ms, padding 250ms 100ms $easing;
+	@media (min-height: 800px) {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
+
+	&.is-active {
+		color: #fff;
+		padding-left: rem($space*2.75);
+	}
+}
+.Nav small {
+	margin-left: 0.6rem;
+	a {
+		@extend %font-regular;
+		font-size: 1rem;
+		padding-top: 0;
+		padding-bottom: 0.1em;
+	}
+}
+.Nav--secondary {
+	margin-top: rem($space);
+	a {
+		font-size: $font-16;
+	}
+}
+
+// The social nav
+.Social {
+	margin-top: rem($space*2);
+	padding-left: rem($space*2);
+	text-align: left;
+	img {
+		width: rem(30);
+		height: rem(30);
+	}
+}

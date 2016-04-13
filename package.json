@@ -1,5 +1,5 @@
 {
-  "name": "alive",
+  "name": "alivefestival",
   "version": "0.1.2",
   "description": "Small description for alive goes here",
   "private": true,
@@ -11,7 +11,8 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "ember build --environment=production; mv dist/index.html dist/200.html; surge dist alive.surge.sh"
+    "deploy": "ember build --environment=production",
+    "deploy-dev": "ember build --environment=production; mv dist/index.html dist/200.html; surge dist alive.surge.sh"
   },
   "repository": "",
   "engines": {
@@ -57,9 +58,9 @@
     "imagesloaded": "^4.1.0",
     "lazysizes": "^1.4.0",
     "liquid-fire": "0.23.0",
-    "moment": "2.11.2",
-    "moment-timezone": "0.5.0",
+    "moment": "^2.12.0",
+    "moment-timezone": "^0.5.3",
     "postcss-import": "^8.0.2",
-    "suitcss-base": "^1.0.1"
+    "suitcss-base": "^2.0.0"
   }
 }
