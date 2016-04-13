@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const {Component} = Ember;
+const {Component, $} = Ember;
 
 export default Component.extend({
 	classNames: ['BeforeAfter'],
@@ -82,4 +82,4 @@ export default Component.extend({
 			cur.find('.BeforeAfter-resize img').css('width', width);
 		});
 	};
-}(jQuery));
+}($));

@@ -21,6 +21,8 @@ Router.map(function () {
   });
   this.route('memory', {path: 'lykkehjulet'});
   this.route('tickets', {path: 'billetter'});
+  this.route('volunteer', {path: 'frivillig'});
+  this.route('partners', {path: 'partnere'});
   this.route('english');
   this.route('404', {path: '/*wildcard'});
 });
