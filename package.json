@@ -1,5 +1,5 @@
 {
-  "name": "alive",
+  "name": "alivefestival",
   "version": "0.1.1",
   "description": "Small description for alive goes here",
   "private": true,
@@ -11,7 +11,8 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "ember build --environment=production; mv dist/index.html dist/200.html; surge dist alive.surge.sh"
+    "deploy": "ember build --environment=production",
+    "deploy-dev": "ember build --environment=production; mv dist/index.html dist/200.html; surge dist alive.surge.sh"
   },
   "repository": "",
   "engines": {
