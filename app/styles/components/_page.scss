@@ -46,9 +46,6 @@
 	@extend %font-bold;
 	strong { @extend %font-bold; }
 	font-size: $font-20;
-	@media (min-width: $layout-s) {
-		max-width: 80%;
-	}
 }
 .Page a:not(.Button) {
 	text-decoration: underline;

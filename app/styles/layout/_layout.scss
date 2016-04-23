@@ -1,3 +1,6 @@
+html {
+	min-height: 100%;
+}
 body {
 	overflow: hidden;
 	// cursor: url('images/cursor-default.png'),auto;
@@ -38,21 +41,16 @@ body {
 .App-main--white {
 	background-color: $whitewhite;
 }
-.Section {
-	// position: absolute;
-	// // top: $header-bar-height;
-	// top: 0;
-	// left: $aside-width - 2rem;
-	// right: 0;
-	// bottom: 0;
+.Section {}
+.Manchet {
+	max-width: $max-width;
+	padding-left: rem($space*3);
+	padding-right: rem($space*2);
+	padding-bottom: rem($space);
 }
 .Manchet,
 .Page-body {
 	padding-top: rem($space*3);
-}
-.Manchet {
-	max-width: $max-width;
-	padding: rem($space*5) rem($space*2) rem($space) rem($space*3);
 }
 
 .Artists {

@@ -11,7 +11,7 @@ $font-30: rem($space);
 $font-35: rem(35);
 $font-40: rem(40);
 $font-50: rem(50);
-$font-70: rem(70);
+$font-70: rem(60);
 
 @font-face {
 	font-family: 'GT Haptik';
@@ -88,7 +88,7 @@ $font-70: rem(70);
 	}
 }
 @mixin h2 {
-	@extend %font-black;
+	@extend %font-bold;
 	font-size: $font-25;
 	line-height: 1.1;
 	text-transform: uppercase;
