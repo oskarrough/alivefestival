@@ -673,3 +673,8 @@ animation-play-state:running;
 	90% {text-shadow:4px -6px 0px $teal;}
 	100% {text-shadow:-9px 4px 0px $yellow;}
 }
+@keyframes tinyShake {
+    0%{transform: rotate(-2deg);}
+    50%{transform: rotate(0deg);}
+    100%{transform: rotate(-2deg);}
+}
