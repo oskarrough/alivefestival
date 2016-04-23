@@ -17,42 +17,12 @@
 {{/if}}
 
 <div class="Page-body">
-	{{#if layout.billetter}}
-		<div class="BilletterBody">
-			<h2>Tre dage i august med musik og natur i Thy!<br>Billetter købes igennem Billetlugen.</h2>
-			<br>
-			<p><a href="https://www.billetlugen.dk/da/event/alive-festival-2016/billetter" target='_blank'>
-				<img class="BilletterBody-image" src="assets/images/billetter-animation.gif" alt="">
-			</a></p>
-			<div class="BilletterBody-content">
-				<p><a class="BilletterBody-button Button Button--blue" target='_blank' href="https://www.billetlugen.dk/da/event/alive-festival-2016/billetter">KØB!</a></p>
-				<p>PARTOUTBILLET (ALLE DAGE): 495 kr. (+gebyr) – prisen stiger den 4. maj. Adgang til tre dages musik og oplevelser. Inklusiv mulighed for camping.</p>
-				<p>Fra d. 4. maj til og med 1. august er prisen 545 kr. for partoutbillet, fra d. 2. august 595 kr.</p>
-				<p>Endagsbilletter og tilkøbsmuligheder kommer i salg i starten af maj.</p>
-			</div>
-		</div>
-		{{!-- mobile version below --}}
-		<div class="BilletterBody BilletterBody--mobile">
-			<h2 class="BilletterBody-title">Alive Festival 2016</h2>
-			<div class="BilletterBody-wrap">
-				<h3>11 - 13 August 2016</h3>
-				<h3>PARTOUTBILLET</h3>
-				<p>Adgang til tre dages musik og oplevelser</p>
-				<span class="icon-camping"></span>
-				<p>Mulighed for camping</p>
-			</div>
-			<div class="BilletterBody-wrap">
-				<h2>495 KR.</h2>
-				<h3>PARTOUTBILLET</h3>
-				<p>BILLETTER KØBES IGENNEM BILLETLUGEN</p>
-				<p>prisen stiger den 2. maj</p>
-			</div>
-			<a class="BilletterBody-button Button Button--blue" target='_blank' href="https://www.billetlugen.dk/da/event/alive-festival-2016/billetter">KØB!</a>
-		</div>
-	{{else}}
+	{{#unless hideContent}}
 		{{#if page.title}}<h1>{{page.title}}</h1>{{/if}}
-		{{{page.content}}}
-	{{/if}}
+		<div class="Page-content">
+			{{{page.content}}}
+		</div>
+	{{/unless}}
 	{{yield}}
 </div>
 
