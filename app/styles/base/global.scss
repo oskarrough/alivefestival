@@ -9,7 +9,7 @@ html {
 	background-color: $bg-color;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(images/bg-noise2.jpg);
+	background-image: url(images/bg-noise3.jpg);
 	// background-image: url(images/moods/wildtexture.jpg);
 	// background-image: url(images/moods/masai-swirl.jpg);
 	// background-image: url(images/moods/bg-poster-crop.jpg);
@@ -70,7 +70,7 @@ h3 {
 
 strong,
 b {
-	@extend %font-medium;
+	@extend %font-bold;
 }
 
 // Links
