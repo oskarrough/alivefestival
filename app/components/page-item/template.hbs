@@ -7,7 +7,6 @@
 {{#if layout.billetter}}
 	<div class="Page-banner">
 		<h1>{{page.title}}</h1>
-
 		{{!-- <img src="assets/images/wristband-oskar.png" alt=""> --}}
 		<button class="DiscoFun NonBtn" {{action 'partyOn'}}>
 			<img src="assets/images/icons/party-switch-off.svg" alt="">
@@ -20,18 +19,19 @@
 <div class="Page-body">
 	{{#if layout.billetter}}
 		<div class="BilletterBody">
-			<a href="https://www.billetlugen.dk/da/event/alive-festival-2016/billetter" target='_blank'>
+			<h2>Tre dage i august med musik og natur i Thy!<br>Billetter købes igennem Billetlugen.</h2>
+			<br>
+			<p><a href="https://www.billetlugen.dk/da/event/alive-festival-2016/billetter" target='_blank'>
 				<img class="BilletterBody-image" src="assets/images/billetter-animation.gif" alt="">
-			</a>
+			</a></p>
 			<div class="BilletterBody-content">
-				<p>Tre dage i august med musik og natur i Thy!<br>Billetter købes igennem Billetlugen.</p>
-				<p>PARTOUTBILLET (ALLE DAGE): 495 kr. (+gebyr) – prisen stiger den 4. maj
-	Adgang til tre dages musik og oplevelser. Inklusiv mulighed for camping.</p>
+				<p><a class="BilletterBody-button Button Button--blue" target='_blank' href="https://www.billetlugen.dk/da/event/alive-festival-2016/billetter">KØB!</a></p>
+				<p>PARTOUTBILLET (ALLE DAGE): 495 kr. (+gebyr) – prisen stiger den 4. maj. Adgang til tre dages musik og oplevelser. Inklusiv mulighed for camping.</p>
 				<p>Fra d. 4. maj til og med 1. august er prisen 545 kr. for partoutbillet, fra d. 2. august 595 kr.</p>
 				<p>Endagsbilletter og tilkøbsmuligheder kommer i salg i starten af maj.</p>
-				<a class="BilletterBody-button Button Button--yellow" target='_blank' href="https://www.billetlugen.dk/da/event/alive-festival-2016/billetter">KOB!</a>
 			</div>
 		</div>
+		{{!-- mobile version below --}}
 		<div class="BilletterBody BilletterBody--mobile">
 			<h2 class="BilletterBody-title">Alive Festival 2016</h2>
 			<div class="BilletterBody-wrap">
@@ -39,7 +39,7 @@
 				<h3>PARTOUTBILLET</h3>
 				<p>Adgang til tre dages musik og oplevelser</p>
 				<span class="icon-camping"></span>
-				<p>Inklusiv mulighed for camping</p>
+				<p>Mulighed for camping</p>
 			</div>
 			<div class="BilletterBody-wrap">
 				<h2>495 KR.</h2>
@@ -47,7 +47,7 @@
 				<p>BILLETTER KØBES IGENNEM BILLETLUGEN</p>
 				<p>prisen stiger den 2. maj</p>
 			</div>
-			<a class="BilletterBody-button Button Button--yellow" target='_blank' href="https://www.billetlugen.dk/da/event/alive-festival-2016/billetter">KOB!</a>
+			<a class="BilletterBody-button Button Button--blue" target='_blank' href="https://www.billetlugen.dk/da/event/alive-festival-2016/billetter">KØB!</a>
 		</div>
 	{{else}}
 		{{#if page.title}}<h1>{{page.title}}</h1>{{/if}}
