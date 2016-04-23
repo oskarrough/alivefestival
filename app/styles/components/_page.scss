@@ -24,11 +24,11 @@
 	}
 	a.MediaBlock h3 {
 		color: $teal;
-		transition: color 200ms;
+		transition: color 150ms;
 	}
 	a {
 		color: $teal;
-		transition: color 200ms;
+		transition: color 150ms;
 		&:hover {
 			color: darken($teal, 10%);
 		}

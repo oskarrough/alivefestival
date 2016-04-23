@@ -9,7 +9,7 @@
 	padding-top: 0.25em;
 	padding-left: rem($space*2.5);
 	padding-bottom: 0.25em;
-	transition: color 250ms, padding 250ms 100ms $easing;
+	transition: color 150ms, padding 250ms 100ms $easing;
 	@media (min-height: 800px) {
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
