@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'alive',
+    modulePrefix: 'alivefestival',
     // podModulePrefix: 'alive/pods',
     environment: environment,
     baseURL: '/',
@@ -23,8 +23,6 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
-
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
