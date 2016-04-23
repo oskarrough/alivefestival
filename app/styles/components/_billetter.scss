@@ -45,8 +45,7 @@
 			padding-top: rem(35);
 			// font-size: 12vw;//rem(150);
 			margin-bottom: 0;
-			color: #323232;
-			text-shadow: 5px 5px 0 $yellow;
+			text-shadow: 5px 5px 0 $sand;
 
 			@media (max-width: $layout-sm) {
 				left: 0;
@@ -110,8 +109,8 @@
 	max-width: 45em;
 	padding: 3em 2em;
 	margin: auto;
-	border: 3px solid $yellow;
-	box-shadow: 8px 8px 0 0 $yellow;
+	border: 3px solid $blue;
+	box-shadow: 8px 8px 0 0 $blue;
 	margin-bottom: 0;
 
 	&.BilletterBody--mobile {

@@ -7,17 +7,15 @@ html {
 	@include negative-text;
 	line-height: $base-line-height-unitless;
 	background-color: $bg-color;
-	background-color: $logoblue;
-
-	background-image: url(images/bg-noise.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(images/bg-noise2.jpg);
 	// background-image: url(images/moods/wildtexture.jpg);
 	// background-image: url(images/moods/masai-swirl.jpg);
 	// background-image: url(images/moods/bg-poster-crop.jpg);
 	// background-image: url(images/moods/texture.jpg);
 	// background-size: cover;
 	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
 	// color: $text-color;
 	color: $white;
 	// color: $black;
@@ -61,8 +59,7 @@ time {
 h1 {
 	@include h1;
 	margin-bottom: rem($space*2);
-	// color: $verygreen;
-	color: $white;
+	color: $silk;
 }
 h2 {
 	@include h2;

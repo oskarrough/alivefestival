@@ -4,12 +4,34 @@
 	min-height: 100vh;
 	margin-right: 2rem;
 	min-height: 100vh;
-	background-color: $gray;
-	background-image: linear-gradient(to right, hsl(16, 6%, 79%) 70%, hsl(0, 6%, 72%));
+	// background-color: $gray;
+	// background-image: linear-gradient(to right, hsl(16, 6%, 79%) 70%, hsl(0, 6%, 72%));
+	background-color: $sand2;
+	// background-image: linear-gradient(to right, $sand 70%, darken($sand, 5%));
 	color: $black;
 
+	h1 {
+		color: $blue;
+	}
+	a.MediaBlock {
+		color: $black;
+		&:hover {
+			color: $black;
+		}
+		&:hover h3 {
+			color: darken($teal, 10%);
+		}
+	}
+	a.MediaBlock h3 {
+		color: $teal;
+		transition: color 200ms;
+	}
 	a {
-		color: $logoblue;
+		color: $teal;
+		transition: color 200ms;
+		&:hover {
+			color: darken($teal, 10%);
+		}
 	}
 
 	// Custom border.
@@ -18,7 +40,8 @@
 		display: block;
 		width: 40px;
 		height: 100%;
-		background: url(images/page-border.png) repeat-y top right;
+		// background: url(images/border-page.png) repeat-y top right;
+		background: url(images/border-page2.png) repeat-y top right;
 		position: absolute;
 		top: 0;
 		right: -40px;

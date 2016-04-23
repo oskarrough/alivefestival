@@ -1,5 +1,14 @@
 .Aside {
-	// Animation.
+	width: $aside-width;
+	display: flex;
+	flex-flow: column nowrap;
+	// position
+	position: fixed;
+	top: -5%;
+	left: -1rem;
+	height: 110%;
+	z-index: 5;
+	// animation
 	transition: transform 350ms $easing;
 	@media (max-width: $layout-m) {
 		transform: translate3d(-100%, 0, 0);
@@ -9,24 +18,17 @@
 			text-align: center;
 		}
 	}
-
-	position: fixed;
-	top: -5%;
-	left: -1rem;
-	height: 110%;
-	z-index: 5;
+	// color
 	background-color: $yellow;
+	// background-color: $blue;
+	&::after {
+		background: url(images/border-aside.png) no-repeat top right;
+		// background: url(images/border-aside2.png) no-repeat top right;
+	}
 	// transform: rotate(1deg);
-	// background-color: $logoblue;
 	// background-color: #B3B0AA;
 	// box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.50);
-	width: $aside-width;
-	display: flex;
-	flex-flow: column nowrap;
-	// text-align: center;
-	// justify-content: center;
 	// cursor: url(images/close.svg),pointer;
-
 	// Custom border.
 	&::after {
 		content: '';
@@ -38,10 +40,8 @@
 			right: -58px;
 		}
 		height: 100%;
-		background: url(images/aside-border.png) no-repeat top right;
 		z-index: 1;
 		width: 100px;
-		// height: 2000px
 	}
 }
 .Aside-inner {
