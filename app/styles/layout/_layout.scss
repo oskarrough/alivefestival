@@ -43,7 +43,8 @@ body {
 }
 .Section {}
 .Manchet {
-	max-width: $max-width;
+	box-sizing: content-box;
+	max-width: $max-width-small;
 	padding-left: rem($space*3);
 	padding-right: rem($space*2);
 	padding-bottom: rem($space);

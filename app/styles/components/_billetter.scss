@@ -104,9 +104,8 @@
 
 .BilletterBody {
 	display: none;
-
 	background-color: $white;
-	max-width: 45em;
+	max-width: $max-width;
 	padding: 3em 2em;
 	margin: auto;
 	border: 3px solid $blue;
@@ -142,6 +141,7 @@
 		margin-bottom: rem($space*2.5);
 	}
 }
+
 .BilletterBody-image {
 	margin-bottom: $space;
 	transform: rotateZ(1deg);
@@ -150,12 +150,11 @@
 /* Content */
 
 .BilletterBody-content {
-	max-width: rem(650);
 	margin: 0 auto;
 	padding: rem(5) rem(45);
 	text-align: left;
-
 }
+
 .BilletterBody-wrap {
 	flex: 2;
 	text-align: left;
