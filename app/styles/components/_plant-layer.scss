@@ -22,12 +22,16 @@
 	bottom: 0;
 	left: 0;
 	height: 210px;
-	width: 30px;
-	@media (min-width: $layout-sm) {
-		width: 400px;
-	}
+	width: 50px;
 	background-image: url('../assets/images/bg-bottomleft.png');
 	background-position: bottom left;
+
+	@media (min-width: $layout-sm) {
+		width: 100px;
+	}
+	@media (min-width: $layout-sm) and (min-height: 900px) {
+		width: 200px;
+	}
 }
 .PlantLayer--topRight {
 	top: -1rem;

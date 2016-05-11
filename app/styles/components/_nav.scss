@@ -6,13 +6,13 @@
 	@extend %font-bold;
 	color: $black;
 	font-size: $font-20;
-	padding-top: 0.25em;
 	padding-left: rem($space*2.5);
+	padding-top: 0.25em;
 	padding-bottom: 0.25em;
 	transition: color 150ms, padding 250ms 100ms $easing;
 	@media (min-height: 800px) {
-		padding-top: 0.5em;
-		padding-bottom: 0.5em;
+		padding-top: 0.3em;
+		padding-bottom: 0.3em;
 	}
 	&.is-active {
 		padding-left: rem($space*2.75);
@@ -40,7 +40,9 @@
 .Social {
 	margin-top: rem($space*2);
 	padding-left: rem($space*2);
-	text-align: left;
+	@media (min-width: $layout-sm) {
+		text-align: left;
+	}
 	img {
 		width: rem(30);
 		height: rem(30);
