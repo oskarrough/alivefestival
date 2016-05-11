@@ -6,19 +6,6 @@ html {
 	@extend %font-regular;
 	@include negative-text;
 	line-height: $base-line-height-unitless;
-	background-color: $bg-color;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url(images/bg-noise3.jpg);
-	// background-image: url(images/moods/wildtexture.jpg);
-	// background-image: url(images/moods/masai-swirl.jpg);
-	// background-image: url(images/moods/bg-poster-crop.jpg);
-	// background-image: url(images/moods/texture.jpg);
-	// background-size: cover;
-	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
-	// color: $text-color;
-	color: $white;
-	// color: $black;
 
 	// Enable kerning and ligatures everywhere
 	// to use open-type features, bower install normalize-opentype

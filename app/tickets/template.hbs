@@ -1,12 +1,13 @@
 {{#page-item page=model hideContent=true}}
+	{{!-- desktop version --}}
 	<div class="BilletterBody">
 		<h2>Tre dage i august med musik og natur i Thy!</h2>
 		<br>
-		<p><a href="{{model.ticket_link}}" target='_blank'>
+		<p><a href="{{model.acf.ticket_link}}" target='_blank'>
 			<img class="BilletterBody-image" src="assets/images/billetter-animation-bg.gif" alt="">
 		</a></p>
 		<div class="BilletterBody-content">
-			<p><a class="BilletterBody-button Button Button--blue" target='_blank' href="{{model.ticket_link}}">KØB!</a></p>
+			<p><a class="BilletterBody-button Button Button--blue" target='_blank' href="{{model.acf.ticket_link}}">KØB!</a></p>
 			<div class="Page-content">
 				{{{model.content}}}
 			</div>
@@ -26,7 +27,7 @@
 			<p>Billetter købes igennem Billetlugen</p>
 			<br><br><br><br>
 		</div>
-		<a class="BilletterBody-button Button Button--blue" target='_blank' href="{{model.ticket_link}}">KØB!</a>
+		<a class="BilletterBody-button Button Button--blue" target='_blank' href="{{model.acf.ticket_link}}">KØB!</a>
 		<p><small>Fra d. 4. maj til og med 1. august er prisen 545 kr. for partoutbillet, fra d. 2. august 595 kr.</small></p>
 		<div class="Page-content">
 			{{{model.content}}}

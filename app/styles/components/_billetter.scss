@@ -45,7 +45,8 @@
 			padding-top: rem(35);
 			// font-size: 12vw;//rem(150);
 			margin-bottom: 0;
-			text-shadow: 5px 5px 0 $sand;
+			color: $yellow;
+			text-shadow: 5px 5px 0 $blue;
 
 			@media (max-width: $layout-sm) {
 				left: 0;

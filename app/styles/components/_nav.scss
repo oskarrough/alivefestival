@@ -4,7 +4,6 @@
 }
 .Nav a {
 	@extend %font-bold;
-	color: $black;
 	font-size: $font-20;
 	padding-left: rem($space*2.5);
 	padding-top: 0.25em;
@@ -16,8 +15,7 @@
 	}
 	&.is-active {
 		padding-left: rem($space*2.75);
-		color: $whitewhite;
-		// color: $yellow;
+		color: $yellow;
 	}
 }
 .Nav small {

@@ -12,6 +12,8 @@
 
 	h1 {
 		color: $blue;
+		// color: $teal;
+		// color: $yellow;
 	}
 	a.MediaBlock {
 		color: $black;
@@ -22,11 +24,8 @@
 			color: darken($teal, 10%);
 		}
 	}
-	a.MediaBlock h3 {
-		color: $teal;
-		transition: color 150ms;
-	}
-	a {
+	a,
+	a.MediaBlock h3, {
 		color: $teal;
 		transition: color 150ms;
 		&:hover {
