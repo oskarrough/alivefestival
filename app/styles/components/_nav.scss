@@ -38,7 +38,7 @@
 .Social {
 	margin-top: rem($space*2);
 	padding-left: rem($space*2);
-	@media (min-width: $layout-sm) {
+	@media (min-width: $layout-m) {
 		text-align: left;
 	}
 	img {
