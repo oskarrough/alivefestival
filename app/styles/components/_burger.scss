@@ -17,6 +17,9 @@
 	font-size: $font-14;
 	letter-spacing: 0.1em;
 
+	&:hover {
+		cursor: pointer;
+	}
 	&:focus,
 	&:active {
 		outline: none;

@@ -29,23 +29,19 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: scroll; // avoid jumps
 	-webkit-overflow-scrolling: touch;
 	transition: transform 350ms $easing, margin 350ms $easing, padding 350ms $easing;
+
 	@media (min-width: $layout-m) {
-		// transform: translate3d($aside-width - 1rem, 0, 0);
 		padding-left: $aside-width - 1rem;
-	}
-	.show-aside & {
-		// transform: translate3d($aside-width - 1rem, 0, 0);
-		padding-left: $aside-width - 1rem;
+		.show-aside & {
+			padding-left: $aside-width;
+		}
 	}
 
-	// background-color: $bg-color;
-	// background-image: url('images/moods/bg-poster-crop.jpg');
-	// background-repeat: no-repeat;
-	// background-size: cover;
 
+	// Try to improve page transitions with liquid-fire.
 	> .liquid-container,
 	> .liquid-container > .liquid-child {
 		min-height: 100%;

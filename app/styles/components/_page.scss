@@ -29,6 +29,7 @@
 		z-index: 1;
 	}
 }
+
 .Page + .Page {
 	margin-top: rem($space*2);
 }
@@ -64,15 +65,17 @@
 }
 .Page-body {
 	padding-left: rem($space*1.5);
-	padding-bottom: rem($space*1);
+	padding-right: rem($space);
+	padding-bottom: rem($space);
 	@media (min-width: $layout-m) {
 		padding-left: rem($space*3);
-		padding-right: rem($space);
 	}
 }
+
 .Page-body img.alignnone {
 	height: auto !important;
 }
+
 .Manchet h1 + p,
 .Page-body h1 + p,
 .Post-body > p:first-child {
@@ -80,9 +83,11 @@
 	strong { @extend %font-bold; }
 	font-size: $font-20;
 }
+
 .Page a:not(.Button) {
 	text-decoration: underline;
 }
+
 .History {
 	margin-bottom: rem($space*4)
 }
