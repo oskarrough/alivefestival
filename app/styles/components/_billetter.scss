@@ -29,13 +29,18 @@
 	}
 }
 .DiscoFun {
+	cursor: pointer;
 	img:last-of-type {
+		display: none;
+	}
+	@media (max-width: $layout-sm) {
 		display: none;
 	}
 }
 .Page.billetter {
 	.Page-banner {
 		position: relative;
+		z-index: 2;
 		h1 {
 			position: absolute;
 			top: 0;
@@ -61,7 +66,7 @@
 		button {
 			position: absolute;
 			right: 2em;
-			bottom: 0;
+			top: 6em;
 			height: rem(32);
 			width: rem(25);
 		}
