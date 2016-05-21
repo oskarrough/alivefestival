@@ -1,5 +1,4 @@
 .Aside {
-	width: $aside-width;
 	display: flex;
 	flex-flow: column nowrap;
 	// position
@@ -10,6 +9,8 @@
 	z-index: 5;
 	// background-color: $yellow;
 	background-color: $blue;
+	width: 90%;
+	text-align: center;
 
 	&::after {
 		// background: url(images/border-aside.png) no-repeat top right;
@@ -33,12 +34,16 @@
 
 	// animation
 	transition: transform 350ms $easing;
+
+	@media (min-width: $layout-s) {
+		width: $aside-width;
+		text-align: left;
+	}
+
 	@media (max-width: $layout-m) {
 		transform: translate3d(-100%, 0, 0);
 		.show-aside & {
 			transform: translate3d(0, 0, 0);
-			width: 19rem;
-			text-align: center;
 		}
 	}
 }

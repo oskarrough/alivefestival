@@ -42,20 +42,19 @@
 			left: 0;
 			right: 0;
 			text-align: center;
-			padding-top: rem(35);
-			// font-size: 12vw;//rem(150);
+			padding-top: rem($space);
+			font-size: 3rem;
 			margin-bottom: 0;
-			text-shadow: 5px 5px 0 $sand;
+			color: $yellow;
+			text-shadow: 0.1em 0.1em 0 $blue;
 
 			@media (max-width: $layout-sm) {
-				left: 0;
-				right: 0;
 				margin: 0 auto;
 				text-align: center;
 				padding-top: rem(45);
-				font-size: 35px;
+				font-size: rem(35);
 			}
-			@media (min-width: $layout-m) {
+			@media (min-width: $layout-l) {
 				font-size: 6rem;
 			}
 		}

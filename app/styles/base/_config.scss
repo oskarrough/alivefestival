@@ -9,24 +9,31 @@ $silk: hsl(48, 70%, 95%);
 $gold: hsl(43, 92%, 62%);
 $orange: hsl(21, 100%, 45%);
 $green: hsl(91, 71%, 35%);
-$yellow: #FFCC33;
-$teal: hsl(206, 71%, 32%);
+$dark-green: hsl(154, 48%, 16%);
+$yellow: hsl(45, 100%, 60%);
+$teal: hsl(189, 71%, 32%);
 $red: hsl(0, 100%, 50%);
-$gray: #BCB4B4;
-$black: hsl(0, 0%, 5%);
-$white: hsl(0, 0%, 98%);
-$whitewhite: #FFFFFF;
+$nice-slated-red: hsl(7, 56%, 39%);
 
-$blue: hsl(221, 72%, 32%);
-$sand: hsl(53, 36%, 90%);
-$sand2: hsl(334, 10%, 92%);
+$whitewhite: hsl(0, 0%, 100%);
+$white: hsl(0, 0%, 98%);
+$gray: hsl(0, 6%, 72%);
+$grey: hsl(0, 0%, 62%);//hsl(0, 0%, 84%);
+$darkgrey: hsl(0, 0%, 30%);
+$black: hsl(0, 0%, 5%);
+
+// $blueold: hsl(221, 72%, 32%);
+$blue: hsl(214, 95%, 34%);
+// $sandold: hsl(53, 36%, 90%);
+// $sand: hsl(51, 40%, 90%);
+$sand: hsl(51, 31%, 92%);
+$sand-stone: hsl(334, 10%, 92%);
 
 // Color definitions
 $primary-color: $blue;
-$bg-color: $teal;
-$grey: hsl(0, 0%, 62%);//hsl(0, 0%, 84%);
-$darkgrey: hsl(0, 0%, 30%);
-$text-color: hsl(0, 0%, 100%);
+$bg-color: $sand;
+$text-color: $white;
+
 
 // Layout
 $space: 20px;
@@ -53,7 +60,8 @@ $susy: (
 // )
 
 // Good looking easings for animation
-$easing:  cubic-bezier(0.165, 0.840, 0.400, 1.000);
+// $easing:  cubic-bezier(0.165, 0.840, 0.400, 1.000);
+$easing:  cubic-bezier(0.4, 0.0, 0.2, 1);
 $easing2: cubic-bezier(0.300, 0.000, 0.000, 1.300);
 $easing3: cubic-bezier(0.860, 0.000, 0.070, 1.000);
 $easing4: cubic-bezier(0.250, 1.400, 0.180, 1.000); // try with 200ms
