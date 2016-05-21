@@ -2,6 +2,7 @@
 	display: flex;
 	flex-flow: column nowrap;
 }
+
 .Nav a {
 	@extend %font-bold;
 	font-size: $font-20;
@@ -9,17 +10,22 @@
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
 	transition: color 150ms, padding 250ms 100ms $easing;
+	@include negative-text;
+
 	@media (min-height: 800px) {
 		padding-top: 0.3em;
 		padding-bottom: 0.3em;
 	}
+
 	&.is-active {
 		padding-left: rem($space*2.75);
 		color: $yellow;
 	}
 }
+
 .Nav small {
 	margin-left: 0.6rem;
+
 	a {
 		@extend %font-regular;
 		font-size: 1rem;

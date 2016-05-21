@@ -11,7 +11,8 @@
 
 	// background-color: $gray;
 	// background-image: linear-gradient(to right, hsl(16, 6%, 79%) 70%, hsl(0, 6%, 72%));
-	background-color: $sand2;
+	background-color: $sand;
+	// background-color: $sand-stone;
 	// background-image: linear-gradient(to right, $sand 70%, darken($sand, 5%));
 	color: $black;
 
@@ -21,8 +22,7 @@
 		display: block;
 		width: 40px;
 		height: 100%;
-		// background: url(images/border-page.png) repeat-y top right;
-		background: url(images/border-page2.png) repeat-y top right;
+		background: url(images/border-page3.png) repeat-y top right;
 		position: absolute;
 		top: 0;
 		right: -40px;
