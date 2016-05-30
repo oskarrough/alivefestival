@@ -2,9 +2,10 @@ html {
 	@include negative-text;
 	min-height: 100%;
 	color: $text-color;
-	background-color: darken($bg-color, 10%);
-	background-color: darken($bg-color, 30%);
-	background-color: $dark-green;
+	// background-color: darken($bg-color, 10%);
+	// background-color: darken($bg-color, 30%);
+	// background-color: $dark-green;
+	background-color: $nice-slated-red;
 	background-repeat: no-repeat;
 	background-size: cover;
 	// background-image: url(images/bg-noise3.jpg);
