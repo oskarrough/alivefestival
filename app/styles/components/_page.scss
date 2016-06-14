@@ -30,6 +30,18 @@
 	}
 }
 
+.Page--clean {
+	max-width: none;
+
+	&::after {
+		display: none;
+	}
+
+	@media (min-width: $layout-sm) {
+		margin-right: initial;
+	}
+}
+
 .Page + .Page {
 	margin-top: rem($space*2);
 }

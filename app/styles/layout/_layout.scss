@@ -5,7 +5,10 @@ html {
 	// background-color: darken($bg-color, 10%);
 	// background-color: darken($bg-color, 30%);
 	// background-color: $dark-green;
-	background-color: $nice-slated-red;
+	// background-color: $nice-slated-red;
+	// background-color: $blue;
+	background-color: darken($blue, 10);
+	background-color: darken($teal, 10);
 	background-repeat: no-repeat;
 	background-size: cover;
 	// background-image: url(images/bg-noise3.jpg);
@@ -111,7 +114,11 @@ img.alignright {
 .u-darkBg {
 	@include negative-text;
 	background-color: hsla(0, 0%, 0%, 0.5);
-	background-color: $nice-slated-red;
+	background-color: $purple;
+	background-color: $silk;
+	background-color: $gold;
+	background-color: $yellow;
+	background-color: $teal;
 }
 
 .TeaserBox {

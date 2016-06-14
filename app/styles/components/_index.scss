@@ -14,9 +14,11 @@
 		display: none !important;
 	}
 }
+
 .Index {
 	position: relative;
 }
+
 .Index-title {
 	display: none;
 	@media (min-width: $layout-s) {
@@ -31,6 +33,7 @@
 	top: 2rem;
 	z-index: 5;
 }
+
 .Index-body {
 	@include h3;
 	position: fixed;
@@ -39,6 +42,7 @@
 	z-index: 5;
 	// max-width: 20rem;
 }
+
 .Index-gallery {
 	position: relative;
 	.flickity-viewport {
@@ -56,10 +60,16 @@
 	line-height: 1;
 	padding: 0.75em 0;
 	font-size: $font-20;
-	background: $sand;
-	color: $blue;
+	// background: $sand;
+	// color: $blue;
+	// a {
+	// 	color: $blue;
+	// }
+
+	background: $yellow;
+	color: $black;
 	a {
-		color: $blue;
+		color: $black;
 	}
 }
 
