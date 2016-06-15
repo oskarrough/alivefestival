@@ -16,7 +16,10 @@
 	<marquee class="Index-artists" behavior="" scrollamount="8" direction="alternate">
 		Lineup 2016 &rarr;
 		{{#each model.artists as |artist|}}
-			{{#link-to 'music.artist' artist}}{{artist.title}}{{/link-to}} <span class="Separator">0</span>
+			{{#link-to 'music.artist' artist}}
+				{{{artist.title}}}
+			{{/link-to}}
+			<span class="Separator">0</span>
 		{{/each}}
 	</marquee>
 
