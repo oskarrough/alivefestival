@@ -1,8 +1,6 @@
 /* jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var autoprefixer = require('autoprefixer');
-var atImport = require('postcss-import');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -20,16 +18,17 @@ module.exports = function(defaults) {
     styleProcessorOptions: {
       processors: [
         {
-          type: 'sass'
+          type: 'node-sass',
+          sourcemaps: true
         },
         {
           type: 'postcss',
           plugins: [
             {
-              module: atImport
+              module: require('postcss-import')
             },
             {
-              module: autoprefixer,
+              module: require('autoprefixer'),
               options: {
                 browsers: ['last 2 versions']
               }
