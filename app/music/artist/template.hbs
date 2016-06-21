@@ -6,6 +6,12 @@
 				alt="{{model.better_featured_image.alt_text}}">
 		</div>
 		<div class="Artist-body">
+			<p class="Artist-meta">
+				{{!-- <strong><time>{{moment-format model.acf.festival_date "dddd \d\e\n DD. MMMM, YYYY"}}</time></strong> --}}
+				<strong><time>{{moment-format model.acf.festival_date "dddd"}}</time></strong>
+				—
+				<strong>{{model.acf.scene}}</strong>
+			</p>
 			<h1 class="Title">{{{model.title}}}</h1>
 			<div class="Artist-content">{{{model.content}}}</div>
 		</div>

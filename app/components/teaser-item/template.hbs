@@ -5,7 +5,12 @@
 				alt="{{item.better_featured_image.alt_text}}"
 				src="{{item.better_featured_image.media_details.sizes.mini-double.source_url}}" />
 	</figure>
-	<h2 class="Teaser-title"><span>{{item.title}}</span></h2>
+	<h2 class="Teaser-title">
+		<span>{{item.title}}</span>
+		{{#if item.acf}}
+			<small><time>{{moment-format item.acf.festival_date "dddd"}}</time></small>
+		{{/if}}
+	</h2>
 </div>
 
 {{yield}}

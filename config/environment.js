@@ -17,6 +17,13 @@ module.exports = function(environment) {
       theme: 'minimal',
       color: 'white'
     },
+    moment: {
+      includeLocales: ['da'],
+      includeLocales: true,
+      // outputFormat: 'DD.MM.YYYY'
+      outputFormat: 'DD. MMMM, YYYY' // August 18, 2016
+      // outputFormat: 'DD/MM, YYYY' // August 18, 2016
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance

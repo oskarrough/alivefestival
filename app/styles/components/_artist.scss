@@ -16,3 +16,11 @@
 	margin-top: rem($space);
 	margin-bottom: rem($space);
 }
+
+.Artist-meta {
+	text-transform: uppercase;
+
+	time {
+		font-size: 1em;
+	}
+}
