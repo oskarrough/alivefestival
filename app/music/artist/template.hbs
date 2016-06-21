@@ -1,28 +1,19 @@
 {{#liquid-bind model class="BarAnimation" as |model|}}
-	<article class="Artist Manchet">
+	<article class="Artist">
 		<p class="BackLink">{{#link-to 'music.index'}}↖ al musik{{/link-to}}</p>
-
 		<div class="Artist-media">
 			<img src="{{model.better_featured_image.media_details.sizes.mini-double.source_url}}"
 				alt="{{model.better_featured_image.alt_text}}">
 		</div>
-
-		<div class="Bar-body">
-			<div class="Bar-text">
-				<h1 class="Bar-title">{{model.title}}</h1>
-				<h3 class="Bar-subtitle">Beskrivelse</h3>
-				<div class="Bar-excerpt">{{{model.content}}}</div>
-			</div>
-			{{!-- <div class="Bar-links">
-				<a class="Bar-meta Bar-meta--single Bar-meta--website" href="{{model.acf.url}}" target="_blank">
-					<i class="icon icon-website"></i>
-					Website
-				</a>
-				<a class="Bar-meta Bar-meta--single Bar-meta--map" href="http://maps.google.com/?q={{model.acf.location.address}}" target="_blank">
-					<i class="icon icon-map"></i>
-					Route
-				</a>
-			</div> --}}
+		<div class="Artist-body">
+			<p class="Artist-meta">
+				{{!-- <strong><time>{{moment-format model.acf.festival_date "dddd \d\e\n DD. MMMM, YYYY"}}</time></strong> --}}
+				<strong><time>{{moment-format model.acf.festival_date "dddd"}}</time></strong>
+				—
+				<strong>{{model.acf.scene}}</strong>
+			</p>
+			<h1 class="Title">{{{model.title}}}</h1>
+			<div class="Artist-content">{{{model.content}}}</div>
 		</div>
 	</article>
 {{/liquid-bind}}

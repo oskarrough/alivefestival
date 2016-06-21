@@ -24,7 +24,7 @@
 
 // Base
 @import 'base/fonts';
-@import 'base/base';
+@import 'base/global';
 @import 'base/icons';
 
 // Components
@@ -34,7 +34,7 @@
 @import 'components/buttons';
 @import 'components/container';
 @import 'components/frame';
-// @import 'components/loader';
+@import 'components/billetter';
 @import 'components/logo';
 
 @import 'components/aside';
@@ -51,6 +51,7 @@
 @import 'components/section-box';
 @import 'components/before-after';
 @import 'components/plant-layer';
+@import 'components/loader';
 // @import 'components/header-bar';
 
 @import 'layout/layout';

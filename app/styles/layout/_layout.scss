@@ -1,3 +1,26 @@
+html {
+	@include negative-text;
+	min-height: 100%;
+	color: $text-color;
+	// background-color: darken($bg-color, 10%);
+	// background-color: darken($bg-color, 30%);
+	// background-color: $dark-green;
+	// background-color: $nice-slated-red;
+	// background-color: $blue;
+	background-color: darken($blue, 10);
+	background-color: darken($teal, 10);
+	background-repeat: no-repeat;
+	background-size: cover;
+	// background-image: url(images/bg-noise3.jpg);
+	// background-image: url(images/moods/wildtexture.jpg);
+	// background-image: url(images/moods/masai-swirl.jpg);
+	// background-image: url(images/moods/bg-poster-crop.jpg);
+	// background-image: url(images/bg-music.jpg);
+	// background-image: url(images/bg-music2.jpg);
+	// background-image: url(images/moods/texture.jpg);
+	// background-size: cover;
+	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
+}
 body {
 	overflow: hidden;
 	// cursor: url('images/cursor-default.png'),auto;
@@ -13,43 +36,38 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: scroll; // avoid jumps
 	-webkit-overflow-scrolling: touch;
 	transition: transform 350ms $easing, margin 350ms $easing, padding 350ms $easing;
+
 	@media (min-width: $layout-m) {
-		// transform: translate3d($aside-width - 1rem, 0, 0);
 		padding-left: $aside-width - 1rem;
-	}
-	.show-aside & {
-		// transform: translate3d($aside-width - 1rem, 0, 0);
-		padding-left: $aside-width - 1rem;
+		.show-aside & {
+			padding-left: $aside-width;
+		}
 	}
 
-	// background-color: $bg-color;
-	// background-image: url('images/moods/bg-poster-crop.jpg');
-	// background-repeat: no-repeat;
-	// background-size: cover;
 
+	// Try to improve page transitions with liquid-fire.
 	> .liquid-container,
 	> .liquid-container > .liquid-child {
 		min-height: 100%;
 	}
 }
-.Section {
-	// position: absolute;
-	// // top: $header-bar-height;
-	// top: 0;
-	// left: $aside-width - 2rem;
-	// right: 0;
-	// bottom: 0;
+.App-main--white {
+	background-color: $whitewhite;
+}
+.Section {}
+.Manchet {
+	box-sizing: content-box;
+	max-width: $max-width-small;
+	padding-left: rem($space*3);
+	padding-right: rem($space*2);
+	padding-bottom: rem($space);
 }
 .Manchet,
 .Page-body {
 	padding-top: rem($space*3);
-}
-.Manchet {
-	max-width: $max-width;
-	padding: rem($space*5) rem($space*2) rem($space) rem($space*3);
 }
 
 .Artists {
@@ -91,4 +109,48 @@ img.alignright {
 
 .BeforeAfter-handle {
 	background-color: rgb(24, 11, 106);
+}
+
+.u-darkBg {
+	@include negative-text;
+	background-color: hsla(0, 0%, 0%, 0.5);
+	background-color: $purple;
+	background-color: $silk;
+	background-color: $gold;
+	background-color: $yellow;
+	background-color: $teal;
+}
+
+.TeaserBox {
+	text-align: center;
+	a {
+		font-size: $font-20;
+		@extend %font-bold;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		display: block;
+		padding: 0.7em 1em 0.95em;
+		line-height: 1;
+	}
+}
+.TeaserBox--alive {
+	background-color: #08092D;
+	background-image: url(images/moods/bluego.gif);
+	background-repeat: repeat;
+}
+
+.LatestNews {
+	padding: rem($space);
+	@media (min-width: $layout-m) {
+		padding: rem($space*2);
+	}
+	h3 {
+		margin-bottom: 1rem;
+	}
+}
+.LatestNews-title {
+	max-width: 30rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }

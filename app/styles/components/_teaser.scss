@@ -24,11 +24,9 @@ $masonry-gutter: 1.5rem;
 }
 
 .Teaser {
+	@include negative-text;
 	position: relative;
 
-	a {
-		transition: box-shadow 300ms $easing;
-	}
 	a:hover &,
 	a:active & {
 		box-shadow: 0px 0px 2rem 1rem rgba(255, 255, 255, 0.1);
@@ -41,10 +39,12 @@ $masonry-gutter: 1.5rem;
 		}
 	}
 }
+
 .Teaser-wrap {
 	text-decoration: none;
 	background-color: $blue;
 }
+
 .Teaser-media {
 	@include ratio(400,360);
 	margin-bottom: 0;
@@ -61,27 +61,43 @@ $masonry-gutter: 1.5rem;
 		transform: translate3d(0,0,0);
 	}
 }
+
 .Teaser-title {
 	@extend %font-bold;
 	font-size: rem(20);
+	background-color: $teal;
+	// background-color: #08092D;
+	background-color: $sand;
+	// background-image: url(images/moods/bluego.gif);
+	// color: $silk;
+	color: $black;
+
 	@media (min-width: $layout-sm) {
 		font-size: rem(24);
 	}
+
 	@media (min-width: $layout-ml) {
 		// font-size: rem(30);
 	}
-	margin-top: 1rem;
-	padding: 0.2em 0.4em 0.3em;
-	position: absolute;
-	left: 0;
-	bottom: 1rem;
-	z-index: 1;
+
+	padding: 0.5em 0.5em 0.5em;
+	// margin-top: 1rem;
+	// padding: 0.2em 0.4em 0.3em;
+	// position: absolute;
+	// left: 0;
+	// bottom: 1rem;
+	// z-index: 1;
 	// background-color: rgba($gray, 0.5);
-	background-color: $teal;
-	background-color: #08092D;
-	color: $silk;
-	// background-image: url(images/moods/bluego.gif);
+
+	time {
+		font-size: rem(12);
+	}
 }
+
+a:hover .Teaser .Teaser-title {
+	color: $black;
+}
+
 .Teaser-subtitle {
 	font-size: $font-14;
 	margin-bottom: rem(26);

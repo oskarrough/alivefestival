@@ -3,12 +3,12 @@
  */
 
 .Container {
-	max-width: rem(740);
+	max-width: $max-width-small;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: rem($space);
 	padding-right: rem($space);
 }
 .Container--large {
-	max-width: rem(1240);
+	max-width: $max-width;
 }

@@ -21,6 +21,27 @@ a.Button,
 		outline: none;
 	}
 }
+.Button--yellow {
+	background-image: none;
+	background-color: $yellow;
+	color: $white !important;
+	border: 3px solid $white;
+	box-shadow: 6px 6px 0 0 $yellow;
+}
+.Button--blue {
+	background-image: none;
+	background-color: $blue;
+	color: $white !important;
+	border: 3px solid $white;
+	box-shadow: 6px 6px 0 0 darken($blue,8%);
+}
+.Button--outline {
+	background-image: none;
+	background-color: $white;
+	color: $yellow !important;
+	border: 3px solid $yellow;
+	box-shadow: 6px 6px 0 0 $yellow;
+}
 button {
 	color: $black;
 }

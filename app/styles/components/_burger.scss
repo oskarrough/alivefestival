@@ -3,30 +3,63 @@
 	top: 0;
 	left: 0;
 	z-index: 6; // on top of .Aside
+
 	@media (min-width: $layout-m) {
 		display: none;
 	}
-	background-image: url(images/dots/dot7.svg);
-	background-position: 0.5rem 50%;
-	background-repeat: no-repeat;
+
 	background-color: transparent;
-	background-size: rem(25);
-	height: rem(50);
-	line-height: rem(50);
-	padding-left: rem(42);
+	// background-color: $white;
+	padding-right: rem($space);
 	border: 0;
+	// border: 5px solid;
 	text-transform: uppercase;
 	font-size: $font-14;
 	letter-spacing: 0.1em;
+
+	&:hover {
+		cursor: pointer;
+	}
 	&:focus,
 	&:active {
 		outline: none;
 	}
+
 	.show-aside & {
-		background-image: url(images/dots/dot6.svg);
+		// background-color: rgba($white, 0.8);
+		// background-image: url(images/dots/dot6.svg);
+	}
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: rem(42);
+		height: rem(50);
+		background-image: url(images/dots/dot7.svg);
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: rem(25);
+		position: relative;
+		z-index: 2;
+	}
+	&::after {
+		content: "";
+		display: block;
+		height: 1.8rem;
+		width: 86%;
+		background-color: #FFCC33;
+		position: absolute;
+		top: 0.5rem;
+		left: 0.4rem;
+		transform: rotate(-2deg);
 	}
 }
-
+.Burger-text {
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	top: rem(-18);
+}
 // .NavBtn {
 // 	padding-left: 0.5rem;
 // 	padding-right: 0.5rem;
