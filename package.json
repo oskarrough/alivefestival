@@ -49,6 +49,7 @@
     "grunticon-lib": "^1.0.6",
     "gulp": "^3.9.0",
     "loader.js": "^4.0.9",
+    "node-sass": "^3.8.0",
     "postcss-import": "^8.1.2"
   },
   "dependencies": {
