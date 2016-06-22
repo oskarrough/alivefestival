@@ -6,10 +6,17 @@
 
 .Artist-media {
 	margin-bottom: rem($space);
+
+	@media (min-width: $layout-ml) {
+		float: left;
+		margin-right: rem($space * 1.5);
+	}
 }
 
 .Artist-content {
-	max-width: $max-width-small;
+	margin-right: rem($space);
+	//max-width: $max-width-small;
+	font-size: $font-20; 
 }
 
 .Artist-content iframe {

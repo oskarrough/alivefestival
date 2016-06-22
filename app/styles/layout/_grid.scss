@@ -2,10 +2,11 @@
 	display: flex;
 	flex-flow: row wrap;
 }
+
 .Grid-item {
-	flex: rem(320);
+	//flex: rem(320);
 	margin-right: 1rem;
-	margin-bottom: 1rem;
+	//margin-bottom: 1rem;
 }
 
 // Make sure wrapper links are block
