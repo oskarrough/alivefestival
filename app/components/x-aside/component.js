@@ -3,6 +3,8 @@ import Ember from 'ember';
 const {Component, inject} = Ember;
 
 export default Component.extend({
+	tagName: 'aside',
+	classNames: ['Aside'],
 	layout: inject.service(),
 
 	click(event) {
@@ -12,30 +14,4 @@ export default Component.extend({
 			this.get('layout').perhapsCloseAside();
 		}
 	}
-	// currentBarIndex: computed('currentBar', function () {
-	// 	var currentBar = this.get('currentBar');
-	// 	var index = this.get('bars').indexOf(currentBar);
-
-	// 	return index;
-	// }),
-
-	// nextBar: computed('currentBarIndex', 'bars.[]', function () {
-	// 	var index = this.get('currentBarIndex');
-	// 	var bars = this.get('bars');
-
-	// 	// wrap around
-	// 	index = index === bars.length - 1 ? 0 : index + 1;
-
-	// 	return bars.objectAt(index);
-	// }),
-
-	// prevBar: computed('currentBarIndex', 'bars.[]', function () {
-	// 	var index = this.get('currentBarIndex');
-	// 	var bars = this.get('bars');
-
-	// 	// wrap around
-	// 	index = index === 0 ? bars.length - 1 : index - 1;
-
-	// 	return bars.objectAt(index);
-	// })
 });
