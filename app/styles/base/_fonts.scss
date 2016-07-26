@@ -87,6 +87,7 @@ $font-70: rem(60);
 		font-size: $font-70;
 	}
 }
+
 @mixin h2 {
 	@extend %font-bold;
 	font-size: $font-25;
@@ -96,9 +97,16 @@ $font-70: rem(60);
 		font-size: rem(26);
 	}
 }
+
 @mixin h3 {
 	// basically the same as a normal <p><strong combo
 	@extend %font-bold;
 	font-size: 1rem;
 	// text-transform: uppercase;
+}
+
+@mixin small-caps {
+	text-transform: uppercase;
+	font-size: rem(12);
+	letter-spacing: 0.1em;
 }
