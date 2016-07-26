@@ -33,7 +33,7 @@
 	}
 
 	// animation
-	transition: transform 350ms $easing;
+	transition: transform 250ms $ease-accelerate;
 
 	@media (min-width: $layout-s) {
 		width: $aside-width;
@@ -43,6 +43,8 @@
 	@media (max-width: $layout-m) {
 		transform: translate3d(-100%, 0, 0);
 		.show-aside & {
+			transition-timing-function: $ease-decelerate;
+			transition-duration: 300ms;
 			transform: translate3d(0, 0, 0);
 		}
 	}

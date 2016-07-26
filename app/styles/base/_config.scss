@@ -67,6 +67,15 @@ $easing3: cubic-bezier(0.860, 0.000, 0.070, 1.000);
 $easing4: cubic-bezier(0.250, 1.400, 0.180, 1.000); // try with 200ms
 $easing5: cubic-bezier(0.200, 0.300, 0.250, 0.900);
 
+$ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+// Deceleration curve, use this for elements entering the screen, on mobile 225ms
+$ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+// Acceleration curve, use this for elements leaving the screen, on mobile 195ms
+$ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+// The sharp curve is used by objects that may return to the screen at any time.
+// Combine with easing-out. On mobile 300ms
+$ease-sharp: cubic-bezier(0.4, 0, 0.6, 1);
+
 // Breakpoints
 $layout-s: 414px;
 $layout-sm: 600px;
@@ -75,3 +84,4 @@ $layout-mm: 970px;
 $layout-ml: 1024px;
 $layout-l: 1280px;
 $layout-xl: 1500px;
+
