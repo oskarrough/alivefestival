@@ -11,9 +11,9 @@
     "build": "ember build --environment=production",
     "start": "ember server",
     "test": "ember test",
-    "deploy-dev": "npm run build; mv dist/index.html dist/200.html; surge dist alive.surge.sh"
+    "deploy": "npm run build; mv dist/index.html dist/200.html; surge dist alive.surge.sh"
   },
-  "repository": "",
+  "repository": "https://gitlab.com/oskarrough/alivefestival",
   "engines": {
     "node": ">= 0.10.0"
   },
