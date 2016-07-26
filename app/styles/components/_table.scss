@@ -1,0 +1,40 @@
+.Table {
+	width: 100%;
+	border-collapse: collapse;
+
+	th {
+		text-align: left;
+		padding-bottom: 1rem;
+	}
+
+	th:first-child,
+	td:first-child h3 {
+		padding-left: 0.5rem;
+	}
+
+	td {
+		line-height: 2;
+	}
+
+	tbody tr:nth-child(even) {
+		background-color: rgba(black, 0.05);
+	}
+
+	td:first-child h3 {
+		margin-bottom: 0;
+	}
+
+	td:first-child a {
+		// @extend %font-medium;
+		text-decoration: none;
+	}
+
+	td:not(:first-child) time,
+	td:not(:first-child) span {
+		@include small-caps;
+	}
+
+	time {
+
+	}
+}
