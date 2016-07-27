@@ -1,54 +1,36 @@
-<aside id="Aside" class="Aside">
-	<div class="Aside-inner">
-		<h1 class="Logo">
-			{{#link-to 'application'}}
-				{{!--  --}}
-				{{!-- <span>Thy</span> <span>Alive</span> <span>Festival</span> --}}
-				{{!-- <img src="assets/images/logo-hest.png" alt="">
-				<img src="assets/images/icons/logo.svg" alt="Thy Alive Festival 11-13. august 2016"> --}}
-				<img src="assets/images/logo-2016-2.png" alt="">
-			{{/link-to}}
-		</h1>
-		<nav class="Nav">
-			{{link-to 'Musik' 'music'}}
-			{{link-to 'Sideprogram' 'adventure'}}
-			{{link-to 'Nyheder' 'news'}}
-			{{link-to 'Billetter' 'tickets'}}
-			{{link-to 'Frivillig' 'volunteer'}}
-			{{link-to 'Guide' 'guide'}}
-			{{link-to 'Om Alive' 'about'}}
-			<small>
-				{{link-to 'Partnere' 'partners'}}
-				{{link-to 'Historie' 'about.history'}}
-				{{link-to 'Kontakt' 'about.contact'}}
-			</small>
-		</nav>
-		<div class="Nav Nav--secondary">
-			{{!-- {{link-to 'English' 'english'}} --}}
-
-		</div>
-
-		<div class="Social">
-			<a href="https://facebook.com/alivefestival" target="_blank">
-				<img src="assets/images/icons/facebook.svg" alt="">
-			</a>
-			<a href="https://www.instagram.com/thyalive/" target="_blank">
-				<img src="assets/images/icons/instagram.svg" alt="">
-			</a>
-		</div>
-
-		{{yield}}
+<div class="Aside-inner">
+	<h1 class="Logo">
+		{{#link-to 'application'}}
+			<img src="assets/images/logos/logo-2016.png" alt="Thy Alive Festival">
+			<img class="Logo-horse" src="assets/images/logos/logo-hest-white.png" alt="Thy Alive Festival">
+		{{/link-to}}
+	</h1>
+	<nav class="Nav">
+		{{link-to 'Musik' 'music'}}
+		{{link-to 'Sideprogram' 'adventure'}}
+		{{link-to 'Nyheder' 'news'}}
+		{{link-to 'Billetter' 'tickets'}}
+		{{link-to 'Frivillig' 'volunteer'}}
+		{{link-to 'Guide' 'guide'}}
+		{{link-to 'Om Alive' 'about'}}
+		<small>
+			{{link-to 'Partnere' 'partners'}}
+			{{link-to 'Historie' 'about.history'}}
+			{{link-to 'Kontakt' 'about.contact'}}
+		</small>
+	</nav>
+	<div class="Nav Nav--secondary">
+		{{!-- {{link-to 'English' 'english'}} --}}
 	</div>
-</aside>
 
-{{!-- {{#link-to 'city.bar' prevBar class="NavWrap-arrowLeft" title="Previous bar"}}
-	<i class="icon-arrow-left"></i>
-{{/link-to}}
-{{#link-to 'city.bar' nextBar class="NavWrap-arrowRight" title="Next bar"}}
-	<i class="icon-arrow-right"></i>
-{{/link-to}}
-{{#link-to 'city' city.slug class="NavWrap-close"}}
-	<i class="icon-cross"></i>
-{{/link-to}} --}}
+	<div class="Social">
+		<a href="https://facebook.com/alivefestival" target="_blank">
+			<img src="assets/images/icons/facebook-white.svg" alt="">
+		</a>
+		<a href="https://www.instagram.com/thyalive/" target="_blank">
+			<img src="assets/images/icons/instagram-white.svg" alt="">
+		</a>
+	</div>
 
-
+	{{yield}}
+</div>

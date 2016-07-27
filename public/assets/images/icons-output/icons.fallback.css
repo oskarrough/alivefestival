@@ -8,9 +8,19 @@
 
 .icon-arrow-right { background-image: url('png/arrow-right.png'); background-repeat: no-repeat; }
 
+.icon-camping { background-image: url('png/camping.png'); background-repeat: no-repeat; }
+
 .icon-cross-hover { background-image: url('png/cross-hover.png'); background-repeat: no-repeat; }
 
 .icon-cross { background-image: url('png/cross.png'); background-repeat: no-repeat; }
+
+.icon-facebook-circle { background-image: url('png/facebook-circle.png'); background-repeat: no-repeat; }
+
+.icon-facebook { background-image: url('png/facebook.png'); background-repeat: no-repeat; }
+
+.icon-instagram-circle { background-image: url('png/instagram-circle.png'); background-repeat: no-repeat; }
+
+.icon-instagram { background-image: url('png/instagram.png'); background-repeat: no-repeat; }
 
 .icon-logo { background-image: url('png/logo.png'); background-repeat: no-repeat; }
 
@@ -25,6 +35,10 @@
 .icon-overview-hover { background-image: url('png/overview-hover.png'); background-repeat: no-repeat; }
 
 .icon-overview { background-image: url('png/overview.png'); background-repeat: no-repeat; }
+
+.icon-party-switch-off { background-image: url('png/party-switch-off.png'); background-repeat: no-repeat; }
+
+.icon-party-switch-on { background-image: url('png/party-switch-on.png'); background-repeat: no-repeat; }
 
 .icon-slide-arrow-left { background-image: url('png/slide-arrow-left.png'); background-repeat: no-repeat; }
 

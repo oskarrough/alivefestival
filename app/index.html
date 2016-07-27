@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Alive Festival</title>
     <meta name="description" content="Nøgen mand til hest — Alive er Thy, når det er bedst.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +9,8 @@
     {{content-for "head"}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/alive.css">
-    <script src="assets/alive-head.js"></script>
+    <link rel="stylesheet" href="assets/alivefestival.css">
+    <script src="assets/alivefestival-head.js"></script>
 
     {{content-for "head-footer"}}
   </head>
@@ -20,8 +19,16 @@
 
     <div id="App" class="App"></div>
 
+    <div class="LoadingScreen">
+      <!-- loading screen that will be removed by ember -->
+      <h1 class="Logo">
+        <img src="assets/images/logos/logo-2016.png" alt="Thy Alive Festival">
+        <img class="Logo-horse" src="assets/images/logos/logo-hest-white.png" alt="Thy Alive Festival">
+      </h1>
+    </div>
+
     <script src="assets/vendor.js"></script>
-    <script src="assets/alive.js"></script>
+    <script src="assets/alivefestival.js"></script>
 
     {{content-for "body-footer"}}
   </body>

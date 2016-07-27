@@ -13,52 +13,30 @@
 		{{/flickity-gallery}}
 	</div>
 
-	<marquee class="Index-artists" behavior="" scrollamount="8" direction="alternate">
+	<marquee class="Index-artists" behavior="" scrollamount="9" direction="alternate">
 		Lineup 2016 &rarr;
 		{{#each model.artists as |artist|}}
-			{{#link-to 'music.artist' artist}}{{artist.title}}{{/link-to}} <span class="Separator">0</span>
+			{{#link-to 'music.artist' artist}}
+				{{{artist.title}}}
+			{{/link-to}}
+			<span class="Separator">0</span>
 		{{/each}}
 	</marquee>
 
 	<div class="TeaserBox TeaserBox--alive">
 		{{link-to 'Køb billet' 'tickets'}}
 	</div>
-	<div class="LatestNews">
+
+	{{!-- <div class="LatestNews u-darkBg"> --}}
+	<div class="LatestNews Page Page--clean">
 		<h3>{{#link-to 'news'}}Seneste nyt fra Alive… &rarr;{{/link-to}}</h3>
 		{{news-list items=model.news grid=true}}
+		<br>
+		<h2 class="LatestNews-title">
+			{{#link-to  'adventure'}}
+				{{model.page.acf.eventyr_teaser_title}}
+			{{/link-to}}
+		</h2>
+		{{instagram-feed}}
 	</div>
-	<div class="Container Container--large">
-		<div class="LatestNews u-center">
-			<h2 class="LatestNews-title">{{model.page.acf.eventyr_teaser_title}}</h2>
-			<p>{{#link-to  'adventure'}}→ {{model.page.acf.eventyr_teaser_text}}{{/link-to}}</p>
-			{{#before-after}}
-				<img src="assets/images/eventyr/noerre-vorupoer.jpg" alt="">
-				<img src="assets/images/eventyr/thisted-oel.jpg" alt="">
-			{{/before-after}}
-			{{!-- {{#before-after}}
-				<img src="http://2016.alivefestival.dk/wp/wp-content/uploads/natur2.jpg" alt="">
-				<img src="http://2016.alivefestival.dk/wp/wp-content/uploads/volleyball.jpg" alt="">
-				<img src="http://2016.alivefestival.dk/wp/wp-content/uploads/natur1.jpg" alt="">
-			{{/before-after}} --}}
-			{{!-- <br> --}}
-			{{!-- {{#before-after}}
-				<img src="assets/images/eventyr/volley.jpg" alt="">
-				<img src="assets/images/eventyr/summer-camp.jpg" alt="">
-			{{/before-after}} --}}
-			{{!-- <div class="TeaserBox">
-				{{link-to 'Eventyr og alt det andet' 'adventure'}}
-			</div> --}}
-		</div>
-	</div>
-
-	{{!--
-	<div class="TeaserBox">
-		<a href="https://facebook.com/alivefestival/videos">Levende billeder fra Alive</a>
-	</div> --}}
-
-	{{!-- http://res.cloudinary.com/demo/video/upload/vc_auto/dog.mp4 --}}
-
-	{{!-- {{big-video src=model.acf.video srcwebm=model.acf.videowebm srcogg=model.acf.videoogg}}
-	<img src="assets/images/logo.svg" alt="World Class Guide"> --}}
-	{{!-- <div class="Index-body">{{{model.page.content}}}</div> --}}
 </div>

@@ -8,6 +8,10 @@ const {computed, on} = Ember;
 export default Ember.Service.extend({
 	showAside: false,
 
+	billetter: false,
+
+	simplify: false,
+
 	setInitialWidth: on('init', function () {
 		const xBrowserWidth = document.querySelector('body').getBoundingClientRect().width;
 		this.set('initialWidth', xBrowserWidth);

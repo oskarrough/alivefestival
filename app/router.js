@@ -25,6 +25,7 @@ Router.map(function () {
   this.route('partners', {path: 'partnere'});
   this.route('english');
   this.route('404', {path: '/*wildcard'});
+  this.route('program', {path: 'spilleplan'});
 });
 
 export default Router;

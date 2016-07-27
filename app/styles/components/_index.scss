@@ -14,9 +14,11 @@
 		display: none !important;
 	}
 }
+
 .Index {
 	position: relative;
 }
+
 .Index-title {
 	display: none;
 	@media (min-width: $layout-s) {
@@ -31,6 +33,7 @@
 	top: 2rem;
 	z-index: 5;
 }
+
 .Index-body {
 	@include h3;
 	position: fixed;
@@ -39,6 +42,7 @@
 	z-index: 5;
 	// max-width: 20rem;
 }
+
 .Index-gallery {
 	position: relative;
 	.flickity-viewport {
@@ -48,58 +52,30 @@
 		// }
 	}
 }
+
 .Index-artists {
 	@extend %font-bold;
+	@include negative-text;
 	display: block;
 	line-height: 1;
 	padding: 0.75em 0;
 	font-size: $font-20;
-	background: $teal;
-	color: $white;
+	// background: $sand;
+	// color: $blue;
+	// a {
+	// 	color: $blue;
+	// }
+
+	background: $yellow;
+	color: $black;
+	a {
+		color: $black;
+	}
 }
+
 .Index .GalleryCounter {
 	position: absolute;
 	right: rem($space);
 	bottom: rem($space);
 	opacity: 0.8;
-}
-.TeaserBox {
-	text-align: center;
-	a {
-		font-size: $font-20;
-		@extend %font-bold;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		display: block;
-		padding: 0.7em 1em 0.95em;
-		line-height: 1;
-	}
-
-	// + .TeaserBox {
-	// 	background-image: url(images/moods/bg-poster-crop.jpg);
-
-	// 	+ .TeaserBox {
-	// 		background-image: url(images/moods/texture.jpg);
-	// 		background-size: cover;
-	// 	}
-	// }
-}
-.TeaserBox--alive {
-	background-color: #08092D;
-	background-image: url(images/moods/bluego.gif);
-	background-repeat: repeat;
-}
-.LatestNews {
-	padding: rem($space);
-	@media (min-width: $layout-m) {
-		padding: rem($space*2);
-	}
-	h3 {
-		margin-bottom: 1rem;
-	}
-}
-.LatestNews-title {
-	max-width: 90%;
-	margin-left: auto;
-	margin-right: auto;
 }

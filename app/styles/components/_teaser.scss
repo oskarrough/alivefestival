@@ -9,6 +9,7 @@ $masonry-gutter: 1.5rem;
 	width: calc(100% - #{$masonry-gutter});
 	margin-right: $masonry-gutter;
 	margin-bottom: $masonry-gutter;
+	
 	@media (min-width: $layout-s) {
 		width: 48%;
 		width: calc(50% - #{$masonry-gutter});
@@ -24,11 +25,9 @@ $masonry-gutter: 1.5rem;
 }
 
 .Teaser {
+	@include negative-text;
 	position: relative;
 
-	a {
-		transition: box-shadow 300ms $easing;
-	}
 	a:hover &,
 	a:active & {
 		box-shadow: 0px 0px 2rem 1rem rgba(255, 255, 255, 0.1);
@@ -36,52 +35,67 @@ $masonry-gutter: 1.5rem;
 		.Teaser-subtitle {
 			color: $white;
 		}
+	
 		img {
 			filter: saturate(70%) brightness(120%);
 		}
 	}
 }
+
 .Teaser-wrap {
 	text-decoration: none;
 	background-color: $blue;
 }
+
 .Teaser-media {
-	@include ratio(400,360);
+	@include ratio(400, 360);
 	margin-bottom: 0;
 	overflow: hidden;
 
 	img {
 		@include ratio-inner;
 		border-radius: 3px;
-		transition: -webkit-filter 150ms $easing, transform 2000ms $easing;
-
+		
 		// without default values, the image will jump 1px in chrome on hover
 		filter: saturate(100%) brightness(1.01);
 		backface-visibility: hidden;
 		transform: translate3d(0,0,0);
+		transition: -webkit-filter 250ms;
 	}
 }
+
+// If we have object fit, make the images less tall
+.object-fit .Teaser-media {
+	@include ratio(400, 240);
+
+	img {
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
 .Teaser-title {
 	@extend %font-bold;
 	font-size: rem(20);
+	margin-bottom: 0;
+	padding: 0.5em 0.5em 0.5em;
+	background-color: $sand;
+	color: $black;
+
 	@media (min-width: $layout-sm) {
 		font-size: rem(24);
 	}
-	@media (min-width: $layout-ml) {
-		// font-size: rem(30);
+
+	time {
+		font-size: rem(12);
+		letter-spacing: 0.05em;
 	}
-	margin-top: 1rem;
-	padding: 0.2em 0.4em 0.3em;
-	position: absolute;
-	left: 0;
-	bottom: 1rem;
-	z-index: 1;
-	// background-color: rgba($gray, 0.5);
-	background-color: $teal;
-	background-color: #08092D;
-	color: $silk;
-	// background-image: url(images/moods/bluego.gif);
 }
+
+a:hover .Teaser .Teaser-title {
+	color: $black;
+}
+
 .Teaser-subtitle {
 	font-size: $font-14;
 	margin-bottom: rem(26);

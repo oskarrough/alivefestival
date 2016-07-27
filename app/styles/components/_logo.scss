@@ -1,15 +1,23 @@
 .Logo {
 	font-size: 1.4rem;
+	margin-top: 1rem;
 	margin-bottom: 1rem;
 	max-width: 200px;
+	text-align: center;
+
 	@media (max-width: $layout-m) {
 		margin-left: auto;
 		margin-right: auto;
 	}
+
 	a {
 		display: block;
-		padding: 3.5rem 0 0 1.8rem;
+		padding: 1.8rem 0 0 1.8rem;
 		color: $black;
+
+		@media (min-height: 769px) {
+			padding-top: 3.5rem;
+		}
 	}
 
 	// "Thy"
@@ -23,6 +31,13 @@
 	}
 	// "Festival"
 	span:last-child {
+		display: none;
+	}
+}
+
+.Logo-horse {
+	margin-top: 0.5rem;
+	@media (max-height: 767px) {
 		display: none;
 	}
 }

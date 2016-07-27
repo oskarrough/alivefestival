@@ -1,7 +1,7 @@
-{{#x-root}}
+{{#x-root as |toggleAside|}}
 	{{x-aside}}
 
-	<main class="App-main">
+	<main class="App-main {{if layout.simplify 'App-main--white'}}">
 		{{!-- don't move the outlet without changing liquid.scss --}}
 		{{liquid-outlet}}
 	</main>

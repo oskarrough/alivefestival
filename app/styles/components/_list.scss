@@ -1,23 +1,25 @@
 .List {
 	padding-left: 0;
 	list-style: none;
+
 	time {
 		display: block;
 		font-size: small;
 		margin-bottom: 0;
 		opacity: 0.5;
 	}
+
 	a.MediaBlock {
 		display: block;
 		text-decoration: none;
-		.Page & { color: $black; }
+
 		h3 {
 			@include h2;
-			.Page & { color: $white; }
 			margin-bottom: 0.5rem;
 			word-break: break-word;
 		}
 	}
+
 	.MediaBlock-media {
 		width: 40%;
 		max-width: 200px;
@@ -30,8 +32,7 @@
 .List--grid {
 	display: flex;
 	flex-flow: row wrap;
-	// justify-content: space-between;
-	// justify-content: center;
+
 	> li {
 		flex: rem(300);
 		margin-right: rem($space);
@@ -45,6 +46,7 @@
 	backface-visibility: hidden;
 	transform: translate3d(0,0,0);
 }
+
 .List a:hover img {
 	filter: saturate(70%) brightness(120%);
 }

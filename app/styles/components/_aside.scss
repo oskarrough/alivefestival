@@ -1,49 +1,55 @@
 .Aside {
-	// Animation.
-	transition: transform 350ms $easing;
-	@media (max-width: $layout-m) {
-		transform: translate3d(-100%, 0, 0);
-		.show-aside & {
-			transform: translate3d(0, 0, 0);
-			width: 19rem;
-			text-align: center;
-		}
-	}
-
+	display: flex;
+	flex-flow: column nowrap;
+	// position
 	position: fixed;
 	top: -5%;
 	left: -1rem;
 	height: 110%;
 	z-index: 5;
-	background-color: $yellow;
-	// transform: rotate(1deg);
-	// background-color: $logoblue;
-	// background-color: #B3B0AA;
-	// box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.50);
-	width: $aside-width;
-	display: flex;
-	flex-flow: column nowrap;
-	// text-align: center;
-	// justify-content: center;
-	// cursor: url(images/close.svg),pointer;
+	// background-color: $yellow;
+	background-color: $blue;
+	width: 90%;
+	text-align: center;
 
-	// Custom border.
+	&::after {
+		// background: url(images/border-aside.png) no-repeat top right;
+		background: url(images/border-aside2.png) no-repeat top right;
+	}
+
 	&::after {
 		content: '';
 		display: block;
 		position: absolute;
 		top: 0;
 		right: -68px;
+		height: 100%;
+		z-index: 1;
+		width: 100px;
+
 		@media (min-width: $layout-m) {
 			right: -58px;
 		}
-		height: 100%;
-		background: url(images/aside-border.png) no-repeat top right;
-		z-index: 1;
-		width: 100px;
-		// height: 2000px
+	}
+
+	// animation
+	transition: transform 250ms $ease-accelerate;
+
+	@media (min-width: $layout-s) {
+		width: $aside-width;
+		text-align: left;
+	}
+
+	@media (max-width: $layout-m) {
+		transform: translate3d(-100%, 0, 0);
+		.show-aside & {
+			transition-timing-function: $ease-decelerate;
+			transition-duration: 300ms;
+			transform: translate3d(0, 0, 0);
+		}
 	}
 }
+
 .Aside-inner {
 	// transform: rotate(-1deg);
 	// Above border.
@@ -51,5 +57,4 @@
 	z-index: 2;
 	height: 100%;
 	overflow-y: auto;
-
 }

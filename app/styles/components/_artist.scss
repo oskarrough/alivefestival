@@ -1,162 +1,33 @@
 .Artist {
 	padding-top: rem($space);
+	padding-left: rem($space*3);
 	margin-bottom: rem($space*2);
 }
+
 .Artist-media {
 	margin-bottom: rem($space);
+
+	@media (min-width: $layout-ml) {
+		float: left;
+		margin-right: rem($space * 1.5);
+	}
 }
-.Bar-body iframe {
+
+.Artist-content {
+	margin-right: rem($space);
+	//max-width: $max-width-small;
+	font-size: $font-20; 
+}
+
+.Artist-content iframe {
 	margin-top: rem($space);
 	margin-bottom: rem($space);
 }
-// /**
-//  * Artist
-//  **/
 
-// .Bar {
-// 	position: absolute;
-// 	top: $header-bar-height;
-// 	left: 0;
-// 	bottom: 0;
-// 	right: 0;
-// 	@media (max-width: $layout-mm) {
-// 		overflow: auto;
-// 	}
-// }
+.Artist-meta {
+	text-transform: uppercase;
 
-// /**
-//  * Body
-//  */
-
-// .Bar-body {
-// 	border-top: $border-width solid $white;
-// 	text-align: center;
-// 	@media (min-width: $layout-mm) {
-// 		text-align: left;
-// 		border-top: 0;
-// 		position: absolute;
-// 		right: 0;
-// 		height: 100%;
-// 		width: 32%;
-// 		border-left: $border-width solid $white;
-// 		overflow-y: auto;
-// 		overflow-x: hidden;
-// 		-webkit-overflow-scrolling: touch;
-// 	}
-// }
-
-// .Bar-text {
-// 	padding: rem($space) rem($space) 0;
-// 	z-index: 0;
-
-// 	padding: rem(30);
-
-// 	p {
-// 		max-width: 40rem;
-// 		margin-left: auto;
-// 		margin-right: auto;
-// 	}
-
-// 	@media (min-width: $layout-mm) {
-// 		padding-bottom: rem(72); // it's link with height of Bar-links
-// 		// left aligned
-// 		margin-left: 0;
-// 	}
-// }
-// .Bar-title {
-// 	font-size: $font-25;
-// 	margin: 0 0 rem(15);
-// 	// hide when title is shown in .HeaderBar
-// 	@media (min-width: $layout-m) {
-// 		display: none;
-// 	}
-// }
-// .Bar-subtitle {
-// 	font-size: $font-16;
-// }
-// .Bar-links {
-// 	z-index: 1;
-// 	border-top: $border-width solid $white;
-// 	background: $black;
-// 	padding-top: rem(22);
-
-// 	padding-left: rem(7); // optical icon alignment
-
-// 	padding-bottom: rem(26);
-
-// 	@media (min-width: $layout-mm) {
-// 		position: fixed;
-// 		right: 0;
-// 		left: 68%;
-// 		bottom: 0;
-// 		height: rem(72); // it's link with padding bottom of Bar-text
-// 		padding-top: rem(22);
-// 		border-left: $border-width solid $white;
-// 	}
-// }
-// .Bar-links a {
-// 	@extend %font-bold;
-// 	letter-spacing: 0.1em;
-// 	text-transform: uppercase;
-// 	font-size: rem(15);
-// 	margin-right: rem(6);
-// 	margin-left: rem(25);
-
-// 	&:hover i {
-// 		opacity: 0.6;
-// 	}
-// 	&:first-of-type {
-// 		margin-left: 0;
-// 		@media (min-width: $layout-mm) {
-// 		margin-left: rem(25);
-// 		}
-// 	}
-
-// 	@media (min-width: 1210px) {
-// 		font-size: $font-16;
-// 	}
-// 	i {
-// 		margin-right: rem(6);
-// 	}
-// 	.icon-map,
-// 	.icon-website {
-// 		background-size: contain;
-// 		vertical-align: middle;
-
-// 		.Bar-meta--map & {
-// 			font-style: 15px;
-// 		}
-// 	}
-// 	.icon-website {
-// 		width: rem(16);
-// 		height: rem(14);
-// 		top: -1px;
-// 	}
-// 	.icon-map {
-// 		width: rem(10);
-// 		height: rem(16);
-// 		top: -2px;
-// 	}
-// }
-
-// /**
-//  * Gallery
-//  */
-// .Bar-gallery {
-// 	position: relative;
-// 	overflow: hidden; // hide flickity overlap
-// 	height: 220px;
-// 	@media (min-width: $layout-s) {
-// 		height: 300px;
-// 	}
-// 	@media (min-width: $layout-m) {
-// 		height: 400px;
-// 	}
-// 	@media (min-width: $layout-mm) {
-// 		position: absolute;
-// 		left: 0;
-// 		bottom: 0;
-// 		width: 68%;
-// 		height: 100%
-// 	}
-// }
+	time {
+		font-size: 1em;
+	}
+}

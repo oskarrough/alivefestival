@@ -1,0 +1,51 @@
+<div class="Section">
+	<div class="Page">
+		<div class="Page-body">
+
+			<h1 class="Title">{{{model.page.title}}}</h1>
+			<div class="Page-content">
+				{{{model.page.content}}}
+			</div>
+
+			<table class="Table">
+				<thead>
+					<tr>
+						<th>Artist</th>
+						<th style="width: 5rem">Scene</th>
+						<th style="width: 7rem">Dag og tid</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{!-- {{#each model.artists as |artist|}} --}}
+					{{#each sortedArtists as |artist|}}
+						<tr>
+							<td>
+								<h3>
+									{{link-to artist.title 'music.artist' artist}}
+								</h3>
+							</td>
+							<td>
+								<span class="Muted">
+									{{artist.acf.scene}}
+								</span>
+							</td>
+							<td>
+								<time datetime="{{artist.acf.festival_date}}">
+									{{moment-format artist.acf.festival_date "dddd"}}
+									{{moment-format artist.acf.festival_date "HH:mm"}}
+									{{!-- {{moment-format artist.acf.festival_date "dddd, DD. MMM"}} --}}
+								</time>
+							</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+
+			<p>
+				&rarr; <a href="https://www.facebook.com/alivefestival/photos/a.405950851713.185159.67301461713/10153589296261714/?type=3&theater" target="_blank">Se årets plakat</a> (<a href="https://scontent-frt3-1.xx.fbcdn.net/t31.0-8/13724081_10153589296261714_6514596633557918244_o.jpg" target="_blank">download</a>)
+			</p>
+		</div>
+	</div>
+</div>
+
+{{outlet}}
