@@ -1,9 +1,4 @@
 import Ember from 'ember';
 
-const {Route} = Ember;
-
-export default Route.extend({
-	// model() {
-
-	// }
+export default Ember.Route.extend({
 });
