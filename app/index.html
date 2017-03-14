@@ -8,9 +8,9 @@
 
     {{content-for "head"}}
 
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/alivefestival.css">
-    <script src="assets/alivefestival-head.js"></script>
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/alivefestival.css">
+    <script src="{{rootURL}}assets/alivefestival-head.js"></script>
 
     {{content-for "head-footer"}}
   </head>
@@ -22,13 +22,13 @@
     <div class="LoadingScreen">
       <!-- loading screen that will be removed by ember -->
       <h1 class="Logo">
-        <img src="assets/images/logos/logo-2017.png" alt="Thy Alive Festival">
-        <img class="Logo-horse" src="assets/images/logos/logo-hest-white.png" alt="Thy Alive Festival">
+        <img src="{{rootURL}}assets/images/logos/logo-2017.png" alt="Thy Alive Festival">
+        <img class="Logo-horse" src="{{rootURL}}assets/images/logos/logo-hest-white.png" alt="Thy Alive Festival">
       </h1>
     </div>
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/alivefestival.js"></script>
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/alivefestival.js"></script>
 
     {{content-for "body-footer"}}
   </body>

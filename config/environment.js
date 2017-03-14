@@ -5,7 +5,7 @@ module.exports = function(environment) {
 		modulePrefix: 'alivefestival',
 		// podModulePrefix: 'alive/pods',
 		environment: environment,
-		baseURL: '/',
+		rootURL: '/',
 		locationType: 'auto',
 		EmberENV: {
 			FEATURES: {
@@ -13,7 +13,8 @@ module.exports = function(environment) {
 				// e.g. 'with-controller': true
 			},
 			EXTEND_PROTOTYPES: {
-				Date: false,
+				// Prevent Ember Data from overriding Date.parse.
+				Date: false
 			}
 		},
 		pace: {

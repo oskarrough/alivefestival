@@ -10,20 +10,20 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
-indent_style = tabs
+indent_style = tab
 
 [*.js]
-indent_style = tabs
+indent_style = tab
 
 [*.hbs]
 insert_final_newline = false
-indent_style = tabs
+indent_style = tab
 
 [*.css]
-indent_style = tabs
+indent_style = tab
 
 [*.html]
-indent_style = tabs
+indent_style = tab
 
 [*.{diff,md}]
 trim_trailing_whitespace = false
