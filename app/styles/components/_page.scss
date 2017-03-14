@@ -8,20 +8,29 @@
 		margin-right: 4rem;
 	}
 
-	background-color: $sand;
+	//background-color: $sand;
+	background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
 	color: $black;
 
-	// Custom border.
-	&::after {
-		content: '';
-		display: block;
-		width: 40px;
-		height: 100%;
-		background: url(images/border-page3.png) repeat-y top right;
-		position: absolute;
-		top: 0;
-		right: -40px;
-		z-index: 1;
+	// // Custom border.
+	// &::after {
+	// 	content: '';
+	// 	display: block;
+	// 	width: 40px;
+	// 	height: 100%;
+	// 	background: url(images/border-page3.png) repeat-y top right;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: -40px;
+	// 	z-index: 1;
+	// }
+}
+
+.Pages {
+	background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
+
+	.Page {
+		background-image: none;
 	}
 }
 
@@ -71,7 +80,7 @@
 
 .Page-body {
 	padding-left: rem($space*1.5);
-	padding-right: rem($space);
+	padding-right: rem($space*1.5);
 	padding-bottom: rem($space);
 	@media (min-width: $layout-m) {
 		padding-left: rem($space*3);

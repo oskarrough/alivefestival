@@ -7,9 +7,10 @@ html {
 	// background-color: $dark-green;
 	// background-color: $nice-slated-red;
 	// background-color: $blue;
-	background-color: darken($blue, 10);
-	background-color: darken($teal, 10);
+	//background-color: darken($blue, 10);
+	//background-color: darken($teal, 10);
 	background-repeat: no-repeat;
+	//background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
 	background-size: cover;
 	// background-image: url(images/bg-noise3.jpg);
 	// background-image: url(images/moods/wildtexture.jpg);
@@ -39,6 +40,10 @@ body {
 	overflow-y: scroll; // avoid jumps
 	-webkit-overflow-scrolling: touch;
 	transition: transform 350ms $easing, margin 350ms $easing, padding 350ms $easing;
+	
+	> div {
+		background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
+	}
 
 	@media (min-width: $layout-m) {
 		padding-left: $aside-width - 1rem;
