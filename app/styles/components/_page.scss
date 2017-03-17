@@ -2,13 +2,10 @@
 	position: relative;
 	max-width: $max-width;
 	min-height: 100vh;
-	margin-right: 2rem;
-
-	@media (min-width: $layout-sm) {
-		margin-right: 4rem;
-	}
-
 	color: $black;
+
+	// background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
+	// background-attachment: fixed;
 
 	// Custom border.
 	// &::after {
@@ -24,13 +21,11 @@
 	// }
 }
 
-.Pages {
-	background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
-
-	.Page {
-		background-image: none;
-	}
-}
+// .Pages {
+// 	.Page {
+// 		background-image: none;
+// 	}
+// }
 
 .Page--clean {
 	max-width: none;
@@ -80,6 +75,7 @@
 	padding-left: rem($space*1.5);
 	padding-right: rem($space*1.5);
 	padding-bottom: rem($space);
+
 	@media (min-width: $layout-m) {
 		padding-left: rem($space*3);
 	}
@@ -106,13 +102,15 @@
 }
 
 .Page-backgroundImage {
-	position: fixed;
-	z-index: -1;
-	top: 0;
-	right: 0;
-	min-width: 54%;
-	height: 100%;
-	object-fit: cover;
+	margin-left: 1rem;
+	max-height: 80vh;
+	// position: fixed;
+	// z-index: -1;
+	// top: 0;
+	// right: 0;
+	// min-width: 54%;
+	// height: 100%;
+	// object-fit: cover;
 }
 
 .Page-backgroundImage--full {

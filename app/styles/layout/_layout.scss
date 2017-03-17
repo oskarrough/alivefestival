@@ -21,7 +21,10 @@ html {
 	// background-image: url(images/moods/texture.jpg);
 	// background-size: cover;
 	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
+	background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
+	background-attachment: fixed;
 }
+
 body {
 	overflow: hidden;
 	// cursor: url('images/cursor-default.png'),auto;
@@ -40,10 +43,10 @@ body {
 	overflow-y: scroll; // avoid jumps
 	-webkit-overflow-scrolling: touch;
 	transition: transform 350ms $easing, margin 350ms $easing, padding 350ms $easing;
-	
-	> div {
-		background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
-	}
+
+	// > div {
+	// 	background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
+	// }
 
 	@media (min-width: $layout-m) {
 		padding-left: $aside-width - 1rem;

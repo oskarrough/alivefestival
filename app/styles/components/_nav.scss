@@ -10,16 +10,27 @@
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
 	transition: color 150ms, padding 250ms 100ms $easing;
-	@include negative-text;
+
+	&.is-active {
+		color: $yellow;
+	}
 
 	@media (min-height: 800px) {
 		padding-top: 0.3em;
 		padding-bottom: 0.3em;
 	}
 
-	&.is-active {
-		padding-left: rem($space*2.75);
-		color: $yellow;
+	@media (min-width: $layout-s) {
+		color: $blue;
+
+		&:hover {
+			color: $blue;
+		}
+
+		&.is-active {
+			padding-left: rem($space*2.75);
+			color: lighten($blue, 20%);
+		}
 	}
 }
 
@@ -36,6 +47,7 @@
 
 .Nav--secondary {
 	margin-top: rem($space);
+
 	a {
 		font-size: $font-16;
 	}
@@ -45,9 +57,11 @@
 .Social {
 	margin-top: rem($space*2);
 	padding-left: rem($space*2);
+
 	@media (min-width: $layout-m) {
 		text-align: left;
 	}
+
 	img {
 		width: rem(30);
 		height: rem(30);

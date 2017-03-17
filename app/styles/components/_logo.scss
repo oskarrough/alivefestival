@@ -24,8 +24,21 @@
 	}
 }
 
+.Logo-dark {
+	@media (max-width: $layout-s) {
+		display: none;
+	}
+}
+
+.Logo-white {
+	@media (min-width: $layout-s) {
+		display: none;
+	}
+}
+
 .Logo-date {
 	@include h3;
+	color: $blue;
 	font-size: 0.875rem;
 }
 
