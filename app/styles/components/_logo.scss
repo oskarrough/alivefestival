@@ -19,24 +19,16 @@
 			padding-top: 3.5rem;
 		}
 	}
+}
 
-	// "Thy"
-	span:first-child {
-		display: block;
-		font-family: Times, serif;
-	}
-	// "Alive"
-	span:nth-child(2) {
-
-	}
-	// "Festival"
-	span:last-child {
-		display: none;
-	}
+.Logo-date {
+	@include h3;
+	font-size: 0.875rem;
 }
 
 .Logo-horse {
 	margin-top: 0.5rem;
+
 	@media (max-height: 767px) {
 		display: none;
 	}
