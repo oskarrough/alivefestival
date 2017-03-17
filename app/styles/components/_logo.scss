@@ -2,7 +2,6 @@
 	font-size: 1.4rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	max-width: 200px;
 	text-align: center;
 
 	@media (max-width: $layout-m) {
@@ -18,6 +17,10 @@
 		@media (min-height: 769px) {
 			padding-top: 3.5rem;
 		}
+	}
+
+	img {
+		max-width: 100px;
 	}
 }
 
