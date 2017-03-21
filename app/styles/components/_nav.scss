@@ -12,7 +12,7 @@
 	transition: color 150ms, padding 250ms 100ms $easing;
 
 	&.is-active {
-		color: $yellow;
+		color: $lightblue;
 	}
 
 	@media (min-height: 800px) {
@@ -21,15 +21,8 @@
 	}
 
 	@media (min-width: $layout-s) {
-		// color: $blue;
-
-		// &:hover {
-		// 	color: $blue;
-		// }
-
 		&.is-active {
 			padding-left: rem($space*2.75);
-			// color: lighten($blue, 20%);
 		}
 	}
 }

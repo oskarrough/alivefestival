@@ -2,7 +2,7 @@
 	position: fixed;
 	top: -5%;
 	left: -1rem;
-	width: 90%;
+	width: 100%;
 	height: 110%;
 	z-index: 5;
 
@@ -25,19 +25,6 @@
 	@media (min-width: $layout-m) {
 		width: $aside-width;
 		text-align: left;
-	}
-}
-
-.App-main {
-	@media (max-width: $layout-m) {
-		transition: transform 250ms $ease-decelerate;
-		transform: translate3d(0, 0, 0);
-
-		.show-aside & {
-			transition-timing-function: $ease-accelerate;
-			transition-duration: 300ms;
-			transform: translate3d(100%, 0, 0);
-		}
 	}
 }
 

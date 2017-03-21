@@ -1,7 +1,3 @@
- /**
- * Base
- */
-
 html {
 	@extend %font-regular;
 	line-height: $base-line-height-unitless;
@@ -10,6 +6,7 @@ html {
 	// to use open-type features, bower install normalize-opentype
 	text-rendering: optimizeLegibility;
 	font-size: 15px;
+
 	@media (min-width: $layout-m) {
 		font-size: $base-font-size;
 	}
