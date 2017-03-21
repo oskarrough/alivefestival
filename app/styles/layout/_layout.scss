@@ -44,17 +44,9 @@ body {
 	-webkit-overflow-scrolling: touch;
 	transition: transform 350ms $easing, margin 350ms $easing, padding 350ms $easing;
 
-	// > div {
-	// 	background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
-	// }
-
 	@media (min-width: $layout-m) {
 		padding-left: $aside-width - 1rem;
-		.show-aside & {
-			padding-left: $aside-width;
-		}
 	}
-
 
 	// Try to improve page transitions with liquid-fire.
 	> .liquid-container,

@@ -8,15 +8,9 @@
 
 	display: flex;
 	flex-flow: column nowrap;
-	background-color: $blue;
+	// background-color: $blue;
 	text-align: center;
 	transition: transform 250ms $ease-accelerate;
-
-	@media (min-width: $layout-s) {
-		width: $aside-width;
-		background-color: transparent;
-		text-align: left;
-	}
 
 	@media (max-width: $layout-m) {
 		transform: translate3d(-100%, 0, 0);
@@ -25,6 +19,24 @@
 			transition-timing-function: $ease-decelerate;
 			transition-duration: 300ms;
 			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	@media (min-width: $layout-m) {
+		width: $aside-width;
+		text-align: left;
+	}
+}
+
+.App-main {
+	@media (max-width: $layout-m) {
+		transition: transform 250ms $ease-decelerate;
+		transform: translate3d(0, 0, 0);
+
+		.show-aside & {
+			transition-timing-function: $ease-accelerate;
+			transition-duration: 300ms;
+			transform: translate3d(100%, 0, 0);
 		}
 	}
 }

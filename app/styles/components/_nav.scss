@@ -21,15 +21,15 @@
 	}
 
 	@media (min-width: $layout-s) {
-		color: $blue;
+		// color: $blue;
 
-		&:hover {
-			color: $blue;
-		}
+		// &:hover {
+		// 	color: $blue;
+		// }
 
 		&.is-active {
 			padding-left: rem($space*2.75);
-			color: lighten($blue, 20%);
+			// color: lighten($blue, 20%);
 		}
 	}
 }

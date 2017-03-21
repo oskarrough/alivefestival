@@ -2,7 +2,6 @@
 	position: relative;
 	max-width: $max-width;
 	min-height: 100vh;
-	color: $black;
 
 	// background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
 	// background-attachment: fixed;
@@ -72,8 +71,8 @@
 }
 
 .Page-body {
-	padding-left: rem($space*1.5);
-	padding-right: rem($space*1.5);
+	padding-left: rem($space);
+	padding-right: rem($space);
 	padding-bottom: rem($space);
 
 	@media (min-width: $layout-m) {

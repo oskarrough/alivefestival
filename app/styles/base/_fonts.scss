@@ -80,10 +80,10 @@ $font-70: rem(60);
 	@media (min-width: $layout-s) {
 		font-size: $font-40;
 	}
-	@media (min-width: $layout-m) {
+	@media (min-width: $layout-l) {
 		font-size: $font-50;
 	}
-	@media (min-width: $layout-l) {
+	@media (min-width: $layout-xl) {
 		font-size: $font-70;
 	}
 }

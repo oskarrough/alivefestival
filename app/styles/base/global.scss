@@ -48,7 +48,6 @@ time {
 h1 {
 	@include h1;
 	margin-bottom: rem($space*2);
-	color: $silk;
 }
 h2 {
 	@include h2;
@@ -65,14 +64,14 @@ b {
 // Links
 a,
 a:visited {
-	color: $silk;
+	color: $blue;
 	text-decoration: none;
 	transition: color 150ms;
 
 	&:hover,
 	&:active,
 	&.is-active {
-		color: $white;
+		color: lighten($blue, 5%);
 	}
 }
 
