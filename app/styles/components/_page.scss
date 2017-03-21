@@ -47,6 +47,7 @@
 		margin-top: rem($space);
 		color: $black;
 	}
+
 	a.MediaBlock {
 		color: $black;
 		&:hover {
@@ -56,10 +57,12 @@
 			color: darken($teal, 10%);
 		}
 	}
+
 	a,
 	a.MediaBlock h3, {
 		color: $blue;
 		transition: color 150ms;
+
 		&:hover {
 			color: darken($blue, 10%);
 		}
@@ -92,7 +95,8 @@
 	font-size: $font-20;
 }
 
-.Page a:not(.Button) {
+.Page a:not(.Button),
+.Page a:not(.MediaBlock) {
 	text-decoration: underline;
 }
 

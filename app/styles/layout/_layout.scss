@@ -30,9 +30,11 @@ body {
 	// cursor: url('images/cursor-default.png'),auto;
 	// cursor: url('images/cursor-pointer.png'),pointer;
 }
+
 // .App {
 // 	overflow: hidden;
 // }
+
 .App-main {
 	position: fixed;
 	top: 0;
@@ -65,7 +67,6 @@ body {
 		min-height: 100%;
 	}
 }
-
 
 .App-main--white {
 	background-color: $whitewhite;
