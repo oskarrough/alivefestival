@@ -80,10 +80,10 @@ $font-70: rem(60);
 	@media (min-width: $layout-s) {
 		font-size: $font-40;
 	}
-	@media (min-width: $layout-m) {
+	@media (min-width: $layout-l) {
 		font-size: $font-50;
 	}
-	@media (min-width: $layout-l) {
+	@media (min-width: $layout-xl) {
 		font-size: $font-70;
 	}
 }
@@ -102,7 +102,6 @@ $font-70: rem(60);
 	// basically the same as a normal <p><strong combo
 	@extend %font-bold;
 	font-size: 1rem;
-	// text-transform: uppercase;
 }
 
 @mixin small-caps {

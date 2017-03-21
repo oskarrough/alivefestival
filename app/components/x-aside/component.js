@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const {Component, inject} = Ember;
+const {Component, get, inject} = Ember;
 
 export default Component.extend({
 	tagName: 'aside',
@@ -8,10 +8,12 @@ export default Component.extend({
 	layout: inject.service(),
 
 	click(event) {
+		const layout = get(this, 'layout');
+		const showAside = get(layout, 'showAside');
 		const clickedElementHasAnHref = event.target.href;
-		console.log(clickedElementHasAnHref);
-		if (clickedElementHasAnHref && this.get('layout.showAside')) {
-			this.get('layout').perhapsCloseAside();
+
+		if (clickedElementHasAnHref && showAside) {
+			layout.perhapsCloseAside();
 		}
 	}
 });

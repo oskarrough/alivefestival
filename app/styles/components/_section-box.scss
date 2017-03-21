@@ -41,7 +41,7 @@
 	display: inline-block;
 	position: relative;
 	top: -0.1em;
-	transition: transform 250ms $easing;
+	transition: transform 150ms $easing;
 }
 .SectionBox.is-open {
 	.SectionBox-arrow {

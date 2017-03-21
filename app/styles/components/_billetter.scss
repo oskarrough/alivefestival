@@ -3,11 +3,9 @@
  */
 
 .Page.billetter {
-	background: none;
-	width: 100%;
 	max-width: 100%;
-
 }
+
 .Page.billetter::after {
 	display: none;
 }
@@ -29,11 +27,14 @@
 		}
 	}
 }
+
 .DiscoFun {
 	cursor: pointer;
+
 	img:last-of-type {
 		display: none;
 	}
+
 	@media (max-width: $layout-sm) {
 		display: none;
 	}
@@ -79,10 +80,6 @@
 		text-align: center;
 		// padding-top: rem(100);
 		padding-right: rem($space*1.5);
-		// background-color: $white;//rgba(225, 240, 224, 0.8);
-		background-image: url(/assets/images/leaf-wave.svg);
-		background-repeat: no-repeat;
-		background-size: 103%;
 		// min-height: 15em;
 		padding-top: 1em;
 		margin-bottom: 2em;
@@ -94,14 +91,6 @@
 		h1 {
 			display: none;
 		}
-	}
-	.Page-backgroundImage {
-		background-position: 0px 0px;
-		opacity: 0.75;
-		width: 100%;
-		// height: 50vh;
-		background-color: #E1EFE0;//#E1F0E0;
-		background: url(/assets/images/square.gif);
 	}
 }
 

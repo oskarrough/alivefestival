@@ -26,4 +26,4 @@ You will need the following things properly installed on your computer.
 
 ### Deploying to dev (alive.surge.sh)
 
-* `npm run build; npm run deploy`
+* `npm run deploy`
