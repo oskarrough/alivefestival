@@ -2940,7 +2940,7 @@ ember-factory-for-polyfill@^1.1.0:
     ember-cli-babel "^5.1.7"
     ember-cli-version-checker "^1.2.0"
 
-ember-getowner-polyfill@^1.1.1:
+ember-getowner-polyfill@^1.1.1, ember-getowner-polyfill@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-1.2.2.tgz#cdab739e89cc8f25af0f78735422df1a61193e92"
   dependencies:
@@ -3005,6 +3005,13 @@ ember-router-generator@^1.0.0:
   resolved "https://registry.yarnpkg.com/ember-router-generator/-/ember-router-generator-1.2.3.tgz#8ed2ca86ff323363120fc14278191e9e8f1315ee"
   dependencies:
     recast "^0.11.3"
+
+ember-router-scroll@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ember-router-scroll/-/ember-router-scroll-0.1.1.tgz#c5a75d5072f32aa5aec278c4716e766fbe117761"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-getowner-polyfill "^1.2.2"
 
 ember-runtime-enumerable-includes-polyfill@^1.0.0:
   version "1.0.4"
