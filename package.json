@@ -55,9 +55,9 @@
     "ember-cli-google-analytics": "^1.5.0",
     "ember-cli-reset-scroll": "0.0.1",
     "flickity": "^1.1.2",
-    "imagesloaded": "^4.1.0",
+    "imagesloaded": "^4.1.2",
     "lazysizes": "^2.0.0",
-    "liquid-fire": "^0.27.1",
+    "liquid-fire": "^0.27.3",
     "moment": "^2.12.0",
     "moment-timezone": "^0.5.4",
     "suitcss-base": "^2.0.0"
