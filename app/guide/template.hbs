@@ -5,6 +5,9 @@
 		{{/if}}
 		<div class="Page-body">
 			<h1>{{model.title}}</h1>
+			<div class="Page-content">
+				{{{model.content}}}
+			</div>
 			{{#each model.acf.sections as |section|}}
 				{{section-box section=section}}
 			{{/each}}
