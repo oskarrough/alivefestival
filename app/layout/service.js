@@ -21,9 +21,7 @@ export default Ember.Service.extend({
 
 	// Only close if we're on a small screen.
 	perhapsCloseAside() {
-		console.log('perhapscloseaside');
 		if (this.get('smallScreen')) {
-			console.log('closing');
 			this.set('showAside', false);
 		}
 	}

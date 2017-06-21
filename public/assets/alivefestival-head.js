@@ -33,7 +33,6 @@ if (!window.HTMLPictureElement) {
 	window.picturefillCFG = window.picturefillCFG || [];
 	window.picturefillCFG.push(['algorithm', 'saveData']);
 	loadJS('https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js');
-	console.log('loaded');
 }
 
 
