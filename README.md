@@ -1,6 +1,6 @@
 # Alive Festival
 
-This is source for the official Thy Alive Festival website --> http://alivefestival.dk
+This is website for Thy Alive Festival → http://alivefestival.dk
 
 ## Prerequisites
 
@@ -23,7 +23,6 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
+## Deploying
 
-### Deploying to dev (alive.surge.sh)
-
-* `npm run deploy`
+Push the `2017` branch and it will automatically deploy via netlify.com.

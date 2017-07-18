@@ -59,7 +59,10 @@ module.exports = function(environment) {
 	if (environment === 'production') {
 		ENV.googleAnalytics = {
 			webPropertyId: 'UA-3906535-9'
-		};
+		}
+ 		ENV['ember-facebook-pixel'] = {
+			id: '457022011328378'
+		}
 	}
 
 	return ENV;
