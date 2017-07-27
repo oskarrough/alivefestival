@@ -36,6 +36,10 @@ module.exports = function(environment) {
 		}
 	};
 
+	ENV['ember-facebook-pixel'] = {
+		id: '457022011328378'
+	}
+
 	if (environment === 'development') {
 		// ENV.APP.LOG_RESOLVER = true;
 		// ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -59,9 +63,6 @@ module.exports = function(environment) {
 	if (environment === 'production') {
 		ENV.googleAnalytics = {
 			webPropertyId: 'UA-3906535-9'
-		}
- 		ENV['ember-facebook-pixel'] = {
-			id: '457022011328378'
 		}
 	}
 
