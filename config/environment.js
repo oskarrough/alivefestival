@@ -37,7 +37,7 @@ module.exports = function(environment) {
 	};
 
 	ENV['ember-facebook-pixel'] = {
-		id: '457022011328378'
+		id: '1140392809413359'
 	}
 
 	if (environment === 'development') {
