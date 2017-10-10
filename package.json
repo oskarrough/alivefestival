@@ -12,8 +12,7 @@
   "scripts": {
     "build": "ember build --environment=production",
     "start": "ember server",
-    "test": "ember test",
-    "deploy": "npm run build; mv dist/index.html dist/200.html; surge dist alive.surge.sh"
+    "test": "ember test"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
