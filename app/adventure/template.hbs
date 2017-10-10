@@ -1,8 +1,21 @@
 <div class="Section">
-	{{#page-item page=model}}
+	<div class="Page">
+		{{#if model.better_featured_image}}
+			<img src="{{model.better_featured_image.source_url}}" alt="{{model.title}}">
+		{{/if}}
+		<div class="Page-body">
+			<h1>{{model.title}}</h1>
+			<div class="Page-content">
+				{{{model.content}}}
+			</div>
+			{{#each model.acf.sections as |section|}}
+				{{section-box section=section}}
+			{{/each}}
+		</div>
+
 		<br><br>
 		{{#link-to 'memory' class="YoLink"}}{{/link-to}}
-	{{/page-item}}
+		</div>
 </div>
 
 {{outlet}}

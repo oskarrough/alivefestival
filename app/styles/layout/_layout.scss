@@ -7,9 +7,10 @@ html {
 	// background-color: $dark-green;
 	// background-color: $nice-slated-red;
 	// background-color: $blue;
-	background-color: darken($blue, 10);
-	background-color: darken($teal, 10);
+	//background-color: darken($blue, 10);
+	//background-color: darken($teal, 10);
 	background-repeat: no-repeat;
+	//background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
 	background-size: cover;
 	// background-image: url(images/bg-noise3.jpg);
 	// background-image: url(images/moods/wildtexture.jpg);
@@ -20,15 +21,20 @@ html {
 	// background-image: url(images/moods/texture.jpg);
 	// background-size: cover;
 	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
+	background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
+	background-attachment: fixed;
 }
+
 body {
 	overflow: hidden;
 	// cursor: url('images/cursor-default.png'),auto;
 	// cursor: url('images/cursor-pointer.png'),pointer;
 }
+
 // .App {
 // 	overflow: hidden;
 // }
+
 .App-main {
 	position: fixed;
 	top: 0;
@@ -38,15 +44,22 @@ body {
 	overflow-x: hidden;
 	overflow-y: scroll; // avoid jumps
 	-webkit-overflow-scrolling: touch;
-	transition: transform 350ms $easing, margin 350ms $easing, padding 350ms $easing;
 
-	@media (min-width: $layout-m) {
-		padding-left: $aside-width - 1rem;
+	@media (max-width: $layout-m) {
+		// Push it out of view to the left
+		transition: transform 250ms $ease-accelerate;
+		transform: translate3d(0, 0, 0);
+
 		.show-aside & {
-			padding-left: $aside-width;
+			transition-timing-function: $ease-decelerate;
+			transition-duration: 300ms;
+			transform: translate3d(100%, 0, 0);
 		}
 	}
 
+	@media (min-width: $layout-m) {
+		padding-left: $aside-width - 1rem;
+	}
 
 	// Try to improve page transitions with liquid-fire.
 	> .liquid-container,
@@ -54,10 +67,13 @@ body {
 		min-height: 100%;
 	}
 }
+
 .App-main--white {
 	background-color: $whitewhite;
 }
+
 .Section {}
+
 .Manchet {
 	box-sizing: content-box;
 	max-width: $max-width-small;
@@ -65,6 +81,7 @@ body {
 	padding-right: rem($space*2);
 	padding-bottom: rem($space);
 }
+
 .Manchet,
 .Page-body {
 	padding-top: rem($space*3);
@@ -80,9 +97,11 @@ body {
 		text-decoration: none;
 	}
 }
+
 .YoLink {
 	font-size: rem(100);
 	text-decoration: none !important;
+
 	.Page & {
 		text-decoration: none !important;
 	}
@@ -133,10 +152,19 @@ img.alignright {
 		line-height: 1;
 	}
 }
+
 .TeaserBox--alive {
 	background-color: #08092D;
 	background-image: url(images/moods/bluego.gif);
 	background-repeat: repeat;
+
+	a {
+		color: $silk;
+
+		&:hover {
+			color: $white;
+		}
+	}
 }
 
 .LatestNews {
@@ -148,6 +176,7 @@ img.alignright {
 		margin-bottom: 1rem;
 	}
 }
+
 .LatestNews-title {
 	max-width: 30rem;
 	margin-left: auto;

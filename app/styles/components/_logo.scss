@@ -2,7 +2,6 @@
 	font-size: 1.4rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	max-width: 200px;
 	text-align: center;
 
 	@media (max-width: $layout-m) {
@@ -20,24 +19,23 @@
 		}
 	}
 
-	// "Thy"
-	span:first-child {
-		display: block;
-		font-family: Times, serif;
+	img {
+		max-width: 100px;
 	}
-	// "Alive"
-	span:nth-child(2) {
+}
 
-	}
-	// "Festival"
-	span:last-child {
-		display: none;
-	}
+.Logo-date {
+	@include h3;
+	color: $blue;
+	font-size: 0.875rem;
 }
 
 .Logo-horse {
 	margin-top: 0.5rem;
+
 	@media (max-height: 767px) {
-		display: none;
+		.Aside & {
+			display: none;
+		}
 	}
 }

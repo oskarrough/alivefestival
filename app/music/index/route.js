@@ -7,7 +7,12 @@ export default Route.extend({
 		// /artists?filter[cat]=12 or /posts?filter[category_name]=jazz_funk
 		return Ember.RSVP.hash({
 			page: this.store.findRecord('page', 14),
-			artists: this.store.query('artist', {per_page: 99})
+			artists: this.store.query('artist', {
+				filter: {
+					category_name: '2017'
+				},
+				per_page: 99
+			})
 		});
 	}
 });

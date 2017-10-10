@@ -2,28 +2,29 @@
 	position: relative;
 	max-width: $max-width;
 	min-height: 100vh;
-	margin-right: 2rem;
 
-	@media (min-width: $layout-sm) {
-		margin-right: 4rem;
-	}
-
-	background-color: $sand;
-	color: $black;
+	// background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
+	// background-attachment: fixed;
 
 	// Custom border.
-	&::after {
-		content: '';
-		display: block;
-		width: 40px;
-		height: 100%;
-		background: url(images/border-page3.png) repeat-y top right;
-		position: absolute;
-		top: 0;
-		right: -40px;
-		z-index: 1;
-	}
+	// &::after {
+	// 	content: '';
+	// 	display: block;
+	// 	width: 40px;
+	// 	height: 100%;
+	// 	background: url(images/border-page-gradient.png) repeat-y top right;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: -40px;
+	// 	z-index: 1;
+	// }
 }
+
+// .Pages {
+// 	.Page {
+// 		background-image: none;
+// 	}
+// }
 
 .Page--clean {
 	max-width: none;
@@ -46,6 +47,7 @@
 		margin-top: rem($space);
 		color: $black;
 	}
+
 	a.MediaBlock {
 		color: $black;
 		&:hover {
@@ -55,10 +57,12 @@
 			color: darken($teal, 10%);
 		}
 	}
+
 	a,
 	a.MediaBlock h3, {
 		color: $blue;
 		transition: color 150ms;
+
 		&:hover {
 			color: darken($blue, 10%);
 		}
@@ -70,9 +74,10 @@
 }
 
 .Page-body {
-	padding-left: rem($space*1.5);
+	padding-left: rem($space);
 	padding-right: rem($space);
 	padding-bottom: rem($space);
+
 	@media (min-width: $layout-m) {
 		padding-left: rem($space*3);
 	}
@@ -90,22 +95,21 @@
 	font-size: $font-20;
 }
 
-.Page a:not(.Button) {
+.Page a:not(.Button),
+.Page a:not(.MediaBlock) {
 	text-decoration: underline;
 }
 
-.History {
-	margin-bottom: rem($space*4)
-}
-
 .Page-backgroundImage {
-	position: fixed;
-	z-index: -1;
-	top: 0;
-	right: 0;
-	min-width: 54%;
-	height: 100%;
-	object-fit: cover;
+	margin-left: 1rem;
+	max-height: 80vh;
+	// position: fixed;
+	// z-index: -1;
+	// top: 0;
+	// right: 0;
+	// min-width: 54%;
+	// height: 100%;
+	// object-fit: cover;
 }
 
 .Page-backgroundImage--full {

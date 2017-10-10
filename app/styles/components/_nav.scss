@@ -7,19 +7,28 @@
 	@extend %font-bold;
 	font-size: $font-20;
 	padding-left: rem($space*2.5);
-	padding-top: 0.25em;
-	padding-bottom: 0.25em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
 	transition: color 150ms, padding 250ms 100ms $easing;
-	@include negative-text;
+
+	&.is-active {
+		color: $lightblue;
+	}
+
+	// @media (min-height: 800px) {
+	// 	padding-top: 0.25em;
+	// 	padding-bottom: 0.25em;
+	// }
 
 	@media (min-height: 800px) {
 		padding-top: 0.3em;
 		padding-bottom: 0.3em;
 	}
 
-	&.is-active {
-		padding-left: rem($space*2.75);
-		color: $yellow;
+	@media (min-width: $layout-s) {
+		&.is-active {
+			padding-left: rem($space*2.75);
+		}
 	}
 }
 
@@ -36,6 +45,7 @@
 
 .Nav--secondary {
 	margin-top: rem($space);
+
 	a {
 		font-size: $font-16;
 	}
@@ -45,9 +55,11 @@
 .Social {
 	margin-top: rem($space*2);
 	padding-left: rem($space*2);
+
 	@media (min-width: $layout-m) {
 		text-align: left;
 	}
+
 	img {
 		width: rem(30);
 		height: rem(30);
