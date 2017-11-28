@@ -2,28 +2,6 @@
  * Teaser
  **/
 
-$masonry-gutter: 1.5rem;
-
-.masonry-item {
-	width: 100%;
-	width: calc(100% - #{$masonry-gutter});
-	margin-right: $masonry-gutter;
-	margin-bottom: $masonry-gutter;
-	
-	@media (min-width: $layout-s) {
-		width: 48%;
-		width: calc(50% - #{$masonry-gutter});
-	}
-	@media (min-width: $layout-m) {
-		width: 30%;
-		width: calc(33% - #{$masonry-gutter});
-	}
-	@media (min-width: $layout-xl) {
-		width: 20%;
-		width: calc(25% - #{$masonry-gutter});
-	}
-}
-
 .Teaser {
 	@include negative-text;
 	position: relative;
@@ -35,7 +13,7 @@ $masonry-gutter: 1.5rem;
 		.Teaser-subtitle {
 			color: $white;
 		}
-	
+
 		img {
 			filter: saturate(70%) brightness(120%);
 		}
@@ -55,7 +33,7 @@ $masonry-gutter: 1.5rem;
 	img {
 		@include ratio-inner;
 		border-radius: 3px;
-		
+
 		// without default values, the image will jump 1px in chrome on hover
 		filter: saturate(100%) brightness(1.01);
 		backface-visibility: hidden;

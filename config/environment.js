@@ -1,7 +1,7 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-	var ENV = {
+	const ENV = {
 		modulePrefix: 'alivefestival',
 		// podModulePrefix: 'alive/pods',
 		environment: environment,
@@ -18,23 +18,20 @@ module.exports = function(environment) {
 				Date: false
 			}
 		},
-		pace: {
-			theme: 'minimal',
-			color: 'white'
-		},
-		moment: {
-			includeLocales: ['da'],
-			includeLocales: true,
-			// outputFormat: 'DD.MM.YYYY'
-			outputFormat: 'DD. MMMM, YYYY' // August 18, 2016
-			// outputFormat: 'DD/MM, YYYY' // August 18, 2016
-		},
 
 		APP: {
 			// Here you can pass flags/options to your application instance
 			// when it is created
 		}
-	};
+	}
+
+	ENV['moment'] = {
+		includeLocales: ['da'],
+		includeLocales: true,
+		// outputFormat: 'DD.MM.YYYY'
+		outputFormat: 'DD. MMMM, YYYY' // August 18, 2016
+		// outputFormat: 'DD/MM, YYYY' // August 18, 2016
+	}
 
 	ENV['ember-facebook-pixel'] = {
 		id: '1140392809413359'
@@ -50,21 +47,21 @@ module.exports = function(environment) {
 
 	if (environment === 'test') {
 		// Testem prefers this...
-		ENV.baseURL = '/';
-		ENV.locationType = 'none';
+		ENV.locationType = 'none'
 
 		// keep test console output quieter
-		ENV.APP.LOG_ACTIVE_GENERATION = false;
-		ENV.APP.LOG_VIEW_LOOKUPS = false;
+		ENV.APP.LOG_ACTIVE_GENERATION = false
+		ENV.APP.LOG_VIEW_LOOKUPS = false
 
-		ENV.APP.rootElement = '#ember-testing';
+		ENV.APP.rootElement = '#ember-testing'
 	}
 
 	if (environment === 'production') {
+		// here you can enable a production-specific feature
 		ENV.googleAnalytics = {
 			webPropertyId: 'UA-3906535-9'
 		}
 	}
 
-	return ENV;
-};
+	return ENV
+}

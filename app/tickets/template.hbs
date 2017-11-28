@@ -4,9 +4,11 @@
 		<h2>Tre dage i august med musik og natur i Thy!</h2>
 		<br>
 		<div class="BilletterBody-content">
-			{{!--
-			<p><a class="BilletterBody-button Button Button--blue" target='_blank' href="{{model.acf.ticket_link}}">KØB!</a></p>
-			--}}
+
+			{{#if model.acf.ticket_link}}
+				<p><a class="BilletterBody-button Button Button--blue" target='_blank' href="{{model.acf.ticket_link}}">KØB!</a></p>
+			{{/if}}
+
 			<div class="Page-content">
 				{{{model.content}}}
 				<span class="icon-camping"></span>

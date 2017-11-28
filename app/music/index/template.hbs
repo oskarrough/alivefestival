@@ -10,22 +10,15 @@
 </div>
 
 <div class="Artists">
-	{{#masonry-grid items=model.artists as |item|}}
-		{{#link-to "music.artist" item}}
-			{{teaser-item item=item}}
-		{{/link-to}}
+	{{#masonry-grid}}
+		{{#each model.artists as |artist|}}
+			<div class="Masonry-item">
+				{{#link-to "music.artist" artist}}
+					{{teaser-item item=artist}}
+				{{/link-to}}
+			</div>
+		{{/each}}
 	{{/masonry-grid}}
-	{{!-- {{#liquid-bind model.artists class="CityIndexAnimation"}}
-		<div class="Grid">
-			{{#each model.artists as |artist|}}
-				<div class="Grid-item">
-					{{#link-to 'music.artist' artist}}
-						{{teaser-item item=artist}}
-					{{/link-to}}
-				</div>
-			{{/each}}
-		</div>
-	{{/liquid-bind}} --}}
 </div>
 
 {{!-- <div class="html"><iframe src="https://embed.spotify.com/?uri=https://play.spotify.com/user/1133931389/playlist/06qyZkEWCOU16E4URII5Qg" width="300" height="380" frameborder="0" allowtransparency="true"></iframe></div>
