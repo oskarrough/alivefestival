@@ -9,7 +9,7 @@ export default Route.extend({
 			page: this.store.findRecord('page', 14),
 			artists: this.store.query('artist', {
 				filter: {
-					category_name: '2017'
+					category_name: '2018'
 				},
 				per_page: 99
 			})
