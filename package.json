@@ -14,7 +14,7 @@
     "lint:js": "eslint ./*.js app config lib server tests",
     "start": "ember serve",
     "test": "ember test",
-    "prettier": "prettier --write app/**/*.js tests/**/*.js app/styles/**/*.{css,scss}"
+    "prettier": "prettier --write app/*.js app/**/*.js tests/**/*.js app/styles/**/*.{css,scss}"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",

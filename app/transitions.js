@@ -1,9 +1,9 @@
-export default function () {
+export default function() {
 	// Set velocity.js defaults
 	this.setDefault({
 		duration: 500,
-		easing: [0.860, 0.000, 0.070, 1.000]
-	});
+		easing: [0.86, 0.0, 0.07, 1.0]
+	})
 
 	// Between Music and News index/detail
 	this.transition(
@@ -11,7 +11,7 @@ export default function () {
 		this.toRoute(['news.post', 'music.artist']),
 		this.use('toLeft'),
 		this.reverse('toRight')
-	);
+	)
 
 	// Between pages
 	// this.transition(
