@@ -7,13 +7,15 @@
 // Set a max height when object-fit is supported
 .object-fit .Index-gallery {
 	min-height: 300px;
-	max-height: 75vh;
+	max-height: 60vh;
 	overflow: hidden;
+
 	.FlickityGallery .FlickityGallery-item {
 		height: 100%;
+
 		img {
-			max-height: 75vh;
 			height: 100%;
+			max-height: 60vh;
 			object-fit: cover;
 			object-position: center;
 		}
@@ -22,9 +24,11 @@
 
 .FlickityGallery {
 	@include ratio(16, 9);
+
 	@media (orientation: portrait) {
 		@include ratio(9, 16);
 	}
+
 	> * {
 		@include ratio-inner;
 	}
@@ -101,18 +105,17 @@
 	width: rem(35);
 	height: rem(35);
 	color: $white;
-	// position: absolute;
-	// left: $space;
-	// bottom: $space;
 
-	// @extend %font-bold;
 	span {
 		position: absolute;
 	}
+
+	// Current slide
 	span:first-child {
 		top: rem(-6);
 		left: 0;
 	}
+	// Line between
 	span:nth-child(2) {
 		top: rem(20);
 		left: rem(-8);
@@ -120,6 +123,7 @@
 		transform: rotate(135deg);
 		width: rem(45);
 	}
+	// Total slides
 	span:last-child {
 		bottom: rem(-6);
 		right: 0;
