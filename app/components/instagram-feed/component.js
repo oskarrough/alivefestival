@@ -1,8 +1,8 @@
-/* global loadJS */
 import Component from '@ember/component';
+import loadjs from 'npm:loadjs'
 
 export default Component.extend({
 	didInsertElement() {
-		loadJS('//lightwidget.com/widgets/lightwidget.js');
+		loadjs('//lightwidget.com/widgets/lightwidget.js');
 	}
 });

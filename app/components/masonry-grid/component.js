@@ -6,11 +6,13 @@ import imagesLoaded from 'npm:imagesloaded';
 
 export default Component.extend({
 	classNames: ['Masonry'],
-	items: null,
 
-	config: {
-		transitionDuration: '0.3s',
-		percentPosition: true
+	init() {
+		this._super(...arguments)
+		this.set('config', {
+			transitionDuration: '0.3s',
+			percentPosition: true
+		})
 	},
 
 	// runs every time the view updates (so also when a dom element is removed)
@@ -31,7 +33,6 @@ export default Component.extend({
 		this.set('instance', instance);
 		this.$().addClass('is-active');
 		// this.animateIn();
-		this.sendAction();
 	},
 
 	disableGrid() {
