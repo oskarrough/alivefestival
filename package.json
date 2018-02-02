@@ -63,7 +63,7 @@
     "suitcss-base": "^2.0.0"
   },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 6"
   },
   "private": true
 }
