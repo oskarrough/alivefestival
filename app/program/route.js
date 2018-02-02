@@ -1,5 +1,5 @@
-import { hash } from 'rsvp';
-import Route from '@ember/routing/route';
+import {hash} from 'rsvp'
+import Route from '@ember/routing/route'
 
 export default Route.extend({
 	model() {
@@ -11,6 +11,6 @@ export default Route.extend({
 				},
 				per_page: 99
 			})
-		});
+		})
 	}
-});
+})

@@ -1,3 +1,3 @@
-import PostModel from 'alivefestival/models/post';
+import PostModel from 'alivefestival/models/post'
 
-export default PostModel.extend();
+export default PostModel.extend()
