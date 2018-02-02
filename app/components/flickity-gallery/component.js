@@ -1,7 +1,9 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { debug } from '@ember/debug';
+import { observer } from '@ember/object';
+import { on } from '@ember/object/evented';
+import { run } from '@ember/runloop';
 import Flickity from 'npm:flickity';
-
-const {Component, debug, observer, on, run} = Ember;
 
 // @TODO http://flickity.metafizzy.co/api.html#adding-and-removing-cells
 

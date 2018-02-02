@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-const {Route} = Ember;
+import Route from '@ember/routing/route';
 
 export default Route.extend({
 	// AND => https://example.com/cms/wp-json/pages?filter[tag]=L1,L2,L3

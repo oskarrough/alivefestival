@@ -1,11 +1,10 @@
-import Ember from 'ember';
-
-const {Route} = Ember;
+import { hash } from 'rsvp';
+import Route from '@ember/routing/route';
 
 export default Route.extend({
 	model() {
 		// /artists?filter[cat]=12 or /posts?filter[category_name]=jazz_funk
-		return Ember.RSVP.hash({
+		return hash({
 			page: this.store.findRecord('page', 14),
 			artists: this.store.query('artist', {
 				filter: {

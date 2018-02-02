@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import LinkComponent from '@ember/routing/link-component';
 import Application from '@ember/application';
 import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
@@ -12,7 +12,7 @@ const App = Application.extend({
 });
 
 // Change the class Ember adds to active elements
-Ember.LinkComponent.reopen({
+LinkComponent.reopen({
 	activeClass: 'is-active'
 });
 

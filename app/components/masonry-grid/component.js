@@ -1,8 +1,10 @@
-import Ember from 'ember';
+import $ from 'jquery';
+import { later } from '@ember/runloop';
+import Component from '@ember/component';
 import Packery from 'npm:packery';
 import imagesLoaded from 'npm:imagesloaded';
 
-export default Ember.Component.extend({
+export default Component.extend({
 	classNames: ['Masonry'],
 	items: null,
 
@@ -15,7 +17,7 @@ export default Ember.Component.extend({
 	didRender() {
 		// Ember.debug('didRender');
 		this.disableGrid();
-		Ember.run.later(() => {
+		later(() => {
 			imagesLoaded(this.element, this.enableGrid.bind(this));
 		}, 100);
 	},
@@ -44,7 +46,7 @@ export default Ember.Component.extend({
 		const $cells = this.$().find('.Grid-cell');
 		$cells.each(function (index, cell) {
 			imagesLoaded(cell, function () {
-				Ember.$(cell).addClass('is-loaded');
+				$(cell).addClass('is-loaded');
 			});
 		});
 	}

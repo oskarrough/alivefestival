@@ -1,10 +1,11 @@
 /* global document */
-import Ember from 'ember';
+import { inject as service } from '@ember/service';
 
-const {Component, inject, run} = Ember;
+import Component from '@ember/component';
+import { run } from '@ember/runloop';
 
 export default Component.extend({
-	layout: inject.service(),
+	layout: service(),
 	classNameBindings: ['layout.showAside'],
 
 	actions: {

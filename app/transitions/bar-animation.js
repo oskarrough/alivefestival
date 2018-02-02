@@ -1,4 +1,4 @@
-import {stop, animate, Promise} from 'liquid-fire';
+import { stop, animate, Promise } from 'liquid-fire';
 
 // This is not in use. Keeping it for later.
 

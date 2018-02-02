@@ -1,10 +1,12 @@
 /* global document */
-import Ember from 'ember';
+import Service from '@ember/service';
+
+import { computed } from '@ember/object';
+import { on } from '@ember/object/evented';
 
 const BREAKPOINT = 740;
-const {computed, on} = Ember;
 
-export default Ember.Service.extend({
+export default Service.extend({
 	showAside: false,
 	billetter: false,
 	simplify: false,
