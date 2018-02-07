@@ -45,7 +45,7 @@
 	// without default values, the image will jump 1px in chrome on hover
 	filter: saturate(100%) brightness(1.01);
 	backface-visibility: hidden;
-	transform: translate3d(0,0,0);
+	transform: translate3d(0, 0, 0);
 }
 
 .List a:hover img {

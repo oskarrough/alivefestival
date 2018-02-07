@@ -1,11 +1,11 @@
-import Ember from 'ember';
-
-const {Component, get, inject} = Ember;
+import { inject as service } from '@ember/service';
+import Component from '@ember/component';
+import { get } from '@ember/object';
 
 export default Component.extend({
 	tagName: 'aside',
 	classNames: ['Aside'],
-	layout: inject.service(),
+	layout: service(),
 
 	click(event) {
 		const layout = get(this, 'layout');

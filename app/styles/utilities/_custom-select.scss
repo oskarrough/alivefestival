@@ -43,17 +43,15 @@
 	}
 }
 
-
 /**
  * YOU SHOULD BE ABLE TO IGNORE EVERYTHING BELOW THIS
  */
-
 
 // Container used for styling the custom select, the buttom class below adds the bg gradient, corners, etc.
 .CustomSelect {
 	position: relative;
 	display: inline-block;
- 	padding: 0;
+	padding: 0;
 }
 
 // This is the native select, we're making everything but the text invisible so we can see the button styles in the wrapper
@@ -89,9 +87,6 @@
 	font-weight: normal;
 }
 
-
-
-
 /* ------------------------------------  */
 /* START OF UGLY BROWSER-SPECIFIC HACKS */
 /* ----------------------------------  */
@@ -114,7 +109,6 @@ x:-o-prefocus,
 	}
 }
 
-
 /* FIREFOX won't let us hide the native select arrow, so we have to make it wider than needed and clip it via overflow on the parent container. The percentage width is a fallback since FF 4+ supports calc() so we can just add a fixed amount of extra width to push the native arrow out of view. We're applying this hack across all FF versions because all the previous hacks were too fragile and complex. You might want to consider not using this hack and using the native select arrow in FF. Note this makes the menus wider than the select button because they display at the specified width and aren't clipped. Targeting hack via http://browserhacks.com/#hack-758bff81c5c32351b02e10480b5ed48e */
 /* Show only the native arrow */
 @-moz-document url-prefix() {
@@ -133,7 +127,6 @@ x:-o-prefocus,
 	color: #fff;
 	text-shadow: 0 0 0 #000;
 }
-
 
 /* ------------------------------------  */
 /*  END OF UGLY BROWSER-SPECIFIC HACKS  */

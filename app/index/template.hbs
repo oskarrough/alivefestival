@@ -3,7 +3,11 @@
 
 	<div class="Index-gallery">
 		{{gallery-counter selected=gallerySelected total=galleryTotal}}
-		{{#flickity-gallery images=model.page.acf.gallery settle=(action 'updateGalleryCounter') as |image|}}
+		{{#flickity-gallery
+			images=model.page.acf.gallery
+			on-settle=(action 'updateGalleryCounter')
+			as |image|
+		}}
 			<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{image.alt}}" data-sizes="auto" data-srcset="
 				{{image.sizes.s}} 320w,
 				{{image.sizes.m}} 768w,
@@ -28,7 +32,6 @@
 		{{link-to 'Køb billet' 'tickets'}}
 	</div>
 
-	{{!-- <div class="LatestNews u-darkBg"> --}}
 	<div class="LatestNews Page Page--clean">
 		<h3>{{#link-to 'news'}}Seneste nyt fra Alive… &rarr;{{/link-to}}</h3>
 		{{news-list items=model.news grid=true}}

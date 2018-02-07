@@ -59,7 +59,7 @@
 	}
 
 	a,
-	a.MediaBlock h3, {
+	a.MediaBlock h3 {
 		color: $blue;
 		transition: color 150ms;
 
@@ -91,7 +91,9 @@
 .Page-body h1 + p,
 .Post-body > p:first-child {
 	@extend %font-bold;
-	strong { @extend %font-bold; }
+	strong {
+		@extend %font-bold;
+	}
 	font-size: $font-20;
 }
 

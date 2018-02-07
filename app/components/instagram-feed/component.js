@@ -1,8 +1,8 @@
-/* global loadJS */
-import Ember from 'ember';
+import Component from '@ember/component';
+import loadjs from 'npm:loadjs'
 
-export default Ember.Component.extend({
+export default Component.extend({
 	didInsertElement() {
-		loadJS('//lightwidget.com/widgets/lightwidget.js');
+		loadjs('//lightwidget.com/widgets/lightwidget.js');
 	}
 });

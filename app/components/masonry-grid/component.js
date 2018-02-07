@@ -1,21 +1,25 @@
-import Ember from 'ember';
+import $ from 'jquery';
+import { later } from '@ember/runloop';
+import Component from '@ember/component';
 import Packery from 'npm:packery';
 import imagesLoaded from 'npm:imagesloaded';
 
-export default Ember.Component.extend({
+export default Component.extend({
 	classNames: ['Masonry'],
-	items: null,
 
-	config: {
-		transitionDuration: '0.3s',
-		percentPosition: true
+	init() {
+		this._super(...arguments)
+		this.set('config', {
+			transitionDuration: '0.3s',
+			percentPosition: true
+		})
 	},
 
 	// runs every time the view updates (so also when a dom element is removed)
 	didRender() {
 		// Ember.debug('didRender');
 		this.disableGrid();
-		Ember.run.later(() => {
+		later(() => {
 			imagesLoaded(this.element, this.enableGrid.bind(this));
 		}, 100);
 	},
@@ -29,7 +33,6 @@ export default Ember.Component.extend({
 		this.set('instance', instance);
 		this.$().addClass('is-active');
 		// this.animateIn();
-		this.sendAction();
 	},
 
 	disableGrid() {
@@ -44,7 +47,7 @@ export default Ember.Component.extend({
 		const $cells = this.$().find('.Grid-cell');
 		$cells.each(function (index, cell) {
 			imagesLoaded(cell, function () {
-				Ember.$(cell).addClass('is-loaded');
+				$(cell).addClass('is-loaded');
 			});
 		});
 	}

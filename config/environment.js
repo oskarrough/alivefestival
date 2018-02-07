@@ -1,7 +1,7 @@
-/* jshint node: true */
+'use strict';
 
 module.exports = function(environment) {
-	const ENV = {
+  let ENV = {
 		modulePrefix: 'alivefestival',
 		// podModulePrefix: 'alive/pods',
 		environment: environment,

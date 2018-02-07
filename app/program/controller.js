@@ -1,6 +1,10 @@
-import Ember from 'ember';
+import {sort} from '@ember/object/computed'
+import Controller from '@ember/controller'
 
-export default Ember.Controller.extend({
-	sortDefinition: ['acf.festival_date'],
-	sortedArtists: Ember.computed.sort('model.artists', 'sortDefinition'),
-});
+export default Controller.extend({
+	init() {
+		this._super(...arguments)
+		this.set('sortDefinition', ['acf.festival_date'])
+	},
+	sortedArtists: sort('model.artists', 'sortDefinition')
+})

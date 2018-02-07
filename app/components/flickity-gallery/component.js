@@ -1,22 +1,31 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { debug } from '@ember/debug';
+import { observer } from '@ember/object';
+import { run } from '@ember/runloop';
 import Flickity from 'npm:flickity';
-
-const {Component, debug, observer, on, run} = Ember;
 
 // @TODO http://flickity.metafizzy.co/api.html#adding-and-removing-cells
 
 export default Component.extend({
 	classNames: ['FlickityGallery'],
-	flickityOptions: {
-		setGallerySize: false,
-		prevNextButtons: false,
-		pageDots: false,
-		wrapAround: true,
-		autoPlay: 3000,
-		pauseAutoPlayOnHover: false
+
+	init() {
+		this._super(...arguments)
+		this.set('flickityOptions', {
+			setGallerySize: false,
+			prevNextButtons: false,
+			pageDots: false,
+			wrapAround: true,
+			autoPlay: 3000,
+			pauseAutoPlayOnHover: false
+		})
 	},
 
-	enableFlickity: on('didInsertElement', function () {
+	didInsertElement() {
+		this.enableFlickity()
+	},
+
+	enableFlickity() {
 		const images = this.get('images');
 
 		if (!images) {
@@ -32,7 +41,7 @@ export default Component.extend({
 		flkty.on('cellSelect', () => {
 			this.updateCounter();
 		});
-	}),
+	},
 
 	// Whenever `images` change, we destroy and reinitialize flickity
 	imagesChanged: observer('images', function () {
@@ -45,8 +54,7 @@ export default Component.extend({
 
 	updateCounter() {
 		let flkty = this.get('flkty');
-
-		this.sendAction('settle', {
+		this.get('on-settle')({
 			selected: flkty.selectedIndex,
 			total: flkty.cells.length
 		});

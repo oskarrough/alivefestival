@@ -1,6 +1,6 @@
-import DS from 'ember-data';
+import DS from 'ember-data'
 
-const {attr} = DS;
+const {attr} = DS
 
 export default DS.Model.extend({
 	title: attr('string'),
@@ -14,4 +14,4 @@ export default DS.Model.extend({
 	categories: attr(),
 	tags: attr(),
 	acf: attr()
-});
+})

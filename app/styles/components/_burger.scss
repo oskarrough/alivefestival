@@ -31,7 +31,7 @@
 	}
 
 	&::before {
-		content: "";
+		content: '';
 		display: inline-block;
 		width: rem(42);
 		height: rem(50);
@@ -43,11 +43,11 @@
 		z-index: 2;
 	}
 	&::after {
-		content: "";
+		content: '';
 		display: block;
 		height: 1.8rem;
 		width: 86%;
-		background-color: #FFCC33;
+		background-color: #ffcc33;
 		position: absolute;
 		top: 0.5rem;
 		left: 0.4rem;

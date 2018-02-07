@@ -1,16 +1,15 @@
-import Ember from 'ember';
+import Controller from '@ember/controller'
+import {run} from '@ember/runloop'
 
-const {run} = Ember;
-
-export default Ember.Controller.extend({
+export default Controller.extend({
 	actions: {
 		updateGalleryCounter(data) {
-			run.schedule('afterRender', this, function () {
+			run.schedule('afterRender', this, function() {
 				this.setProperties({
 					gallerySelected: data.selected + 1,
 					galleryTotal: data.total
-				});
-			});
+				})
+			})
 		}
 	}
-});
+})

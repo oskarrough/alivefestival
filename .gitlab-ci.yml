@@ -1,8 +1,7 @@
-image: node:5.10
+image: node
 
 before_script:
   - npm config set spin false
-  - npm install -g bower
   - npm install -g ember-cli
   - npm install -g phantomjs-prebuilt
   - npm install

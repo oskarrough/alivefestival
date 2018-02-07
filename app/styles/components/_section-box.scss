@@ -27,13 +27,15 @@
 	height: 100%;
 	background-color: $nice-slated-red;
 	transition: transform 400ms $easing;
-	transition: opacity 150ms, -webkit-filter 300ms $easing, transform 300ms $easing;
+	transition: opacity 150ms, -webkit-filter 300ms $easing,
+		transform 300ms $easing;
 	border-radius: 3px;
 	filter: saturate(100%) brightness(90%);
 	object-fit: cover;
 
 	.SectionBox-title:hover & {
-		transition: opacity 150ms, -webkit-filter 300ms $easing, transform 1000ms $easing;
+		transition: opacity 150ms, -webkit-filter 300ms $easing,
+			transform 1000ms $easing;
 		// transform: scale(1.05);
 		// filter: brightness(80%);
 		filter: saturate(100%) brightness(110%);
