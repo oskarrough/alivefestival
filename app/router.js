@@ -16,7 +16,7 @@ Router.map(function() {
 	})
 	this.route('adventure', {path: 'dagsprogram'})
 	this.route('sideprogram')
-	this.route('guide')
+	this.route('practical', {path: 'praktisk'})
 	this.route('about', {path: 'om-alive'}, function() {
 		this.route('contact', {path: 'kontakt'})
 		this.route('history', {path: 'historie'})

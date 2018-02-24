@@ -1,3 +1,7 @@
 # https://www.netlify.com/docs/redirects/
 
-/*    /index.html   200
+# Serve all requests from index.html (the ember app)
+/*    	/index.html   200
+
+# Because we renamed the route…
+/guide	/praktisk
