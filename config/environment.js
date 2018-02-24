@@ -25,7 +25,7 @@ module.exports = function(environment) {
 
 	ENV['moment'] = {
 		includeLocales: ['da'],
-		includeLocales: true,
+		// includeLocales: true,
 		// outputFormat: 'DD.MM.YYYY'
 		outputFormat: 'DD. MMMM, YYYY' // August 18, 2016
 		// outputFormat: 'DD/MM, YYYY' // August 18, 2016
@@ -52,6 +52,7 @@ module.exports = function(environment) {
 		ENV.APP.LOG_VIEW_LOOKUPS = false
 
 		ENV.APP.rootElement = '#ember-testing'
+		ENV.APP.autoboot = false
 	}
 
 	if (environment === 'production') {
