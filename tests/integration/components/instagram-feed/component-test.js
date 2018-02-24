@@ -1,11 +1,13 @@
-import { moduleForComponent, test } from 'ember-qunit';
-import hbs from 'htmlbars-inline-precompile';
+import {module, test} from 'qunit'
+import {setupRenderingTest} from 'ember-qunit'
+import {render, findAll} from '@ember/test-helpers'
+import hbs from 'htmlbars-inline-precompile'
 
-moduleForComponent('instagram-feed', 'Integration | Component | instagram feed', {
-  integration: true
-});
+module('Integration | Component | instagram feed', function(hooks) {
+	setupRenderingTest(hooks)
 
-test('it renders', function(assert) {
-  this.render(hbs`{{instagram-feed}}`);
-  assert.equal(this.$('iframe').length, 1);
-});
+	test('it renders', async function(assert) {
+		await render(hbs`{{instagram-feed}}`)
+		assert.equal(findAll('iframe').length, 1)
+	})
+})

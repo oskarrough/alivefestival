@@ -8,7 +8,7 @@ const App = Application.extend({
 	rootElement: '#App',
 	modulePrefix: config.modulePrefix,
 	podModulePrefix: config.podModulePrefix,
-	Resolver,
+	Resolver
 })
 
 // Change the class Ember adds to active elements
