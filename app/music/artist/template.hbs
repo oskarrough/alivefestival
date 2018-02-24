@@ -7,9 +7,13 @@
 		</div>
 		<div class="Artist-body">
 			<p class="Artist-meta">
-				<strong><time>
+				{{#if model.acf.festival_date}}
+				<strong>
+					<time>
 					{{moment-format model.acf.festival_date "dddd D/MM/YY"}}
-				</time></strong>
+					</time>
+				</strong>
+				{{/if}}
 				{{!--
 				{{#if model.acf.scene}}
 				—
