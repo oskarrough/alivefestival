@@ -20,12 +20,6 @@
 	// }
 }
 
-// .Pages {
-// 	.Page {
-// 		background-image: none;
-// 	}
-// }
-
 .Page--clean {
 	max-width: none;
 
@@ -43,11 +37,6 @@
 }
 
 .Page {
-	h1 {
-		margin-top: rem($space);
-		color: $black;
-	}
-
 	a.MediaBlock {
 		color: $black;
 		&:hover {
