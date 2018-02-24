@@ -3,11 +3,9 @@
 module.exports = function(environment) {
   let ENV = {
 		modulePrefix: 'alivefestival',
-		// podModulePrefix: 'alive/pods',
-		environment: environment,
+		environment,
 		rootURL: '/',
-		locationType: 'router-scroll',
-		historySupportMiddleware: true,
+		locationType: 'auto',
 		EmberENV: {
 			FEATURES: {
 				// Here you can enable experimental features on an ember canary build

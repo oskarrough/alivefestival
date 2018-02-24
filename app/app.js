@@ -5,10 +5,10 @@ import loadInitializers from 'ember-load-initializers'
 import config from './config/environment'
 
 const App = Application.extend({
+	rootElement: '#App',
 	modulePrefix: config.modulePrefix,
 	podModulePrefix: config.podModulePrefix,
 	Resolver,
-	rootElement: '#App'
 })
 
 // Change the class Ember adds to active elements

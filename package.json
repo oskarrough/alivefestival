@@ -40,7 +40,6 @@
     "ember-load-initializers": "^1.0.0",
     "ember-moment": "^7.6.0",
     "ember-resolver": "^4.5.0",
-    "ember-router-scroll": "^0.5.0",
     "ember-source": "~2.18.0",
     "eslint-plugin-ember": "^5.0.0",
     "grunticon-lib": "^1.0.6",
