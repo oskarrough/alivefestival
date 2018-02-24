@@ -6527,6 +6527,10 @@ mktemp@~0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/mktemp/-/mktemp-0.4.0.tgz#6d0515611c8a8c84e484aa2000129b98e981ff0b"
 
+modern-normalize@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/modern-normalize/-/modern-normalize-0.4.0.tgz#1ccbc52861e1bce258144d28e890dc709b120ed2"
+
 module-deps@^4.0.8:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/module-deps/-/module-deps-4.1.1.tgz#23215833f1da13fd606ccb8087b44852dcb821fd"
@@ -6768,10 +6772,6 @@ normalize-path@^2.0.0, normalize-path@^2.0.1:
 normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
-
-normalize.css@^4.0.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-4.2.0.tgz#21d66cc557154d4379fd1e079ec7de58a379b099"
 
 npm-git-info@^1.0.0:
   version "1.0.3"
@@ -8509,12 +8509,6 @@ subarg@^1.0.0:
   resolved "https://registry.yarnpkg.com/subarg/-/subarg-1.0.0.tgz#f62cf17581e996b48fc965699f54c06ae268b8d2"
   dependencies:
     minimist "^1.1.0"
-
-suitcss-base@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/suitcss-base/-/suitcss-base-2.0.0.tgz#b5f24d88aea7e484a99e97c08a40616fc5f391df"
-  dependencies:
-    normalize.css "^4.0.0"
 
 sum-up@^1.0.1:
   version "1.0.3"

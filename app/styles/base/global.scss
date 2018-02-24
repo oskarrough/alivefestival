@@ -1,5 +1,4 @@
 html {
-	@extend %font-regular;
 	line-height: $base-line-height-unitless;
 
 	// Enable kerning and ligatures everywhere
@@ -16,6 +15,10 @@ html {
 	@media (min-width: $layout-xl) {
 		font-size: $base-font-size + 2;
 	}
+}
+
+body {
+	@extend %font-regular;
 }
 
 // Set a consistent margin between elements
