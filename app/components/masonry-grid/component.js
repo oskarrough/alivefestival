@@ -19,7 +19,9 @@ export default Component.extend({
 	didRender() {
 		// Ember.debug('didRender');
 		this.disableGrid();
+		if (!this.element) return
 		later(() => {
+			if (!this.element) return
 			imagesLoaded(this.element, this.enableGrid.bind(this));
 		}, 100);
 	},
