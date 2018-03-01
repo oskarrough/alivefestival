@@ -1,6 +1,7 @@
 'use strict'
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app')
+const {browsers} = require('./config/targets')
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -29,9 +30,7 @@ module.exports = function(defaults) {
             },
             {
               module: require('autoprefixer'),
-              options: {
-                browsers: ['last 2 versions']
-              }
+              options: {browsers}
             }
           ]
         }
