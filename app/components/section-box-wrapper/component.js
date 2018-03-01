@@ -1,4 +1,4 @@
-import Component from '@ember/component';
+import Component from '@ember/component'
 
 export default Component.extend({
 	openAll: false,
@@ -8,4 +8,4 @@ export default Component.extend({
 			this.toggleProperty('openAll')
 		}
 	}
-});
+})

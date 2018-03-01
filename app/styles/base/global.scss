@@ -47,7 +47,7 @@ time {
 
 h1 {
 	@include h1;
-	margin-bottom: rem($space*2);
+	margin-bottom: rem($space * 2);
 }
 h2 {
 	@include h2;

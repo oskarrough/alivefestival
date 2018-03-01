@@ -13,7 +13,7 @@
 
 	@media (min-width: $layout-s) {
 		&.is-active {
-			padding-left: rem($space*2.25);
+			padding-left: rem($space * 2.25);
 		}
 	}
 }
@@ -39,8 +39,8 @@
 
 // The social nav
 .Social {
-	margin-top: rem($space*2);
-	padding-left: rem($space*2);
+	margin-top: rem($space * 2);
+	padding-left: rem($space * 2);
 
 	@media (min-width: $layout-m) {
 		text-align: left;
@@ -49,8 +49,8 @@
 	img {
 		width: rem(30);
 		height: rem(30);
-    filter: #{"invert()"};
-    opacity: 0.8;
+		filter: #{'invert()'};
+		opacity: 0.8;
 	}
 
 	a:focus img,
