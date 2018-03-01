@@ -4,13 +4,20 @@
 	color: $silk;
 	padding: 0.4em 1em 0.4em;
 	box-shadow: 2px 2px 0 0 #bc2b15;
-	letter-spacing: 0.1em;
+	font-size: 14px;
+	// letter-spacing: 0.05em;
 	border-radius: 3px;
 	text-decoration: none;
+	@extend %font-bold;
 }
+
 a.Button,
 .Page a.Button {
 	color: $silk;
+
+	&:hover {
+		color: $white;
+	}
 }
 .NonBtn {
 	background-color: transparent;
@@ -45,75 +52,3 @@ a.Button,
 button {
 	color: $black;
 }
-// .Button {
-// 	// @extend %font-bold;
-// 	-webkit-appearance: none;
-// 	background: transparent;
-// 	box-sizing: border-box;
-// 	cursor: pointer;
-// 	display: inline-block;
-// 	//font: inherit;
-// 	line-height: normal;
-// 	margin: 0;
-// 	position: relative;
-// 	text-align: center;
-// 	text-decoration: none;
-// 	user-select: none;
-// 	white-space: normal;
-// 	outline: none;
-
-// 	// Button needs this directly on the element. Inheritance is not enough
-// 	// @include negative-text;
-
-// 	border: none;
-// 	color: $white;
-// 	font-size: $font-20;
-// 	padding: 0;//0.6em 1.2em 0.6em;
-// 	text-transform: uppercase;
-// 	letter-spacing: 0.1em;
-// 	transition: color 150ms;
-// }
-// a.Button {
-// 	color: $white;
-// }
-
-// /**
-//  * UI states
-//  */
-
-// .Button:hover,
-// .Button:focus,
-// .Button:active {
-// 	text-decoration: none;
-// 	border-color: $primary-color;
-// }
-
-// .Button.is-active  {
-// 	cursor: default;
-// }
-
-// .Button:disabled,
-// .Button.is-disabled {
-// 	cursor: default;
-// 	opacity: 0.75;
-// }
-
-// /**
-//  * Remove excess padding and border in Firefox 4+
-//  */
-
-// .Button::-moz-focus-inner {
-// 	border: 0;
-// 	padding: 0;
-// }
-
-// input[type="submit"] {
-// 	background-color: transparent;
-// 	border: 2px solid $primary-color;
-// 	color: $primary-color;
-// }
-// .Button--text {
-// 	border: 0;
-// 	text-transform: none;
-// 	font-size: $font-14;
-// }
