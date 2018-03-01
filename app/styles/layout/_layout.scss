@@ -2,38 +2,17 @@ html {
 	@include negative-text;
 	min-height: 100%;
 	color: $text-color;
-	// background-color: darken($bg-color, 10%);
-	// background-color: darken($bg-color, 30%);
-	// background-color: $dark-green;
-	// background-color: $nice-slated-red;
-	// background-color: $blue;
-	//background-color: darken($blue, 10);
-	//background-color: darken($teal, 10);
 	background-repeat: no-repeat;
-	//background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
 	background-size: cover;
-	// background-image: url(images/bg-noise3.jpg);
-	// background-image: url(images/moods/wildtexture.jpg);
-	// background-image: url(images/moods/masai-swirl.jpg);
-	// background-image: url(images/moods/bg-poster-crop.jpg);
-	// background-image: url(images/bg-music.jpg);
-	// background-image: url(images/bg-music2.jpg);
-	// background-image: url(images/moods/texture.jpg);
-	// background-size: cover;
-	// background-image: url(images/moods/wildtextures-african-inspired-orange-glossy-tiles-seamless-pattern.jpg);
-	background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
 	background-attachment: fixed;
+	background-color: $bg-color;
+	// background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
+	// background-image: linear-gradient(to bottom, #eee5e5 10%, hsl(0, 41%, 88%));
 }
 
 body {
 	overflow: hidden;
-	// cursor: url('images/cursor-default.png'),auto;
-	// cursor: url('images/cursor-pointer.png'),pointer;
 }
-
-// .App {
-// 	overflow: hidden;
-// }
 
 .App-main {
 	position: fixed;
