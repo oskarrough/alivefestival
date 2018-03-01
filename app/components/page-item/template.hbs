@@ -20,6 +20,11 @@
 			{{{page.content}}}
 		</div>
 	{{/unless}}
+	{{#if page.acf.sections}}
+		<div class="Page-content">
+			{{section-box-wrapper sections=page.acf.sections}}
+		</div>
+	{{/if}}
 	{{yield}}
 </div>
 

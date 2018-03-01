@@ -1,0 +1,9 @@
+<p class="tr">
+	<button class="NonBtn" {{action "openAll"}}>
+		{{if openAll "- sesame" "+ åbn"}}
+	</button>
+</p>
+
+{{#each sections as |section|}}
+	{{section-box section=section isOpen=openAll}}
+{{/each}}
