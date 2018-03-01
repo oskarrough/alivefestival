@@ -33,7 +33,9 @@
 	</div>
 
 	<div class="LatestNews Page Page--clean">
-		<h3>{{#link-to 'news'}}Seneste nyt fra Alive… &rarr;{{/link-to}}</h3>
+		<h3 class="tc">Seneste nyt fra Alive…
+			<small>{{#link-to 'news'}}se alle &rarr;{{/link-to}}</small>
+		</h3>
 		{{news-list items=model.news grid=true}}
 		<br>
 		<h2 class="LatestNews-title">
