@@ -146,19 +146,40 @@ img.alignright {
 }
 
 
-.InstaFeed {
+
+.Invert {
 	background: $black;
 	color: $silk;
 
-	figcaption {
-		font-size: small;
+	a {
 		color: $silk;
+		// text-decoration: underline;
+
+		&:hover {
+			color: $silk;
+		}
+	}
+}
+
+.InstaFeed {
+	// padding-bottom: rem($space);
+
+	figcaption {
+		color: $black;
+		font-size: small;
 		text-indent: 2em;
 		margin-left: 1em;
 		margin-right: 1em;
+		transition: color 200ms;
+	}
+
+	.touchevents & figcaption,
+	&:hover figcaption {
+		color: $silk;
 	}
 }
 
 .InstaFeed-items {
 	display: flex;
 }
+

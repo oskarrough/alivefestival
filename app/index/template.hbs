@@ -14,10 +14,12 @@
 	</div>
 
 	<marquee class="Index-artists" behavior="" scrollamount="9" direction="alternate">
-		{{#link-to "music"}}Musik på Alive 2018 &rarr;{{/link-to}} {{#each model.artists as |artist|}} {{#link-to 'music.artist'
-		artist}} {{{artist.title}}} {{/link-to}}
+	{{#link-to "music"}}Musik  på Alive 2018 &rarr;{{/link-to}}
+	{{#each model.artists as |artist|}}
+		{{#link-to 'music.artist' artist}} {{{artist.title}}} {{/link-to}}
 		<span class="Separator">0</span>
 		{{/each}}
+		og mange flere…
 	</marquee>
 
 	<div class="TeaserBox TeaserBox--alive mb2">
@@ -50,56 +52,58 @@
 		<hr>
 	</div> --}}
 
-	<div class="Container Container--large">
-		<div class="MediaBlock MediaBlock--yellow">
-			<div class="MediaBlock-media">
-				{{#link-to "music"}}
-				<img src="/assets/images/square.gif" width="100%" alt="">
-				{{/link-to}}
-			</div>
-			<div class="MediaBlock-body">
-				<br>
-				<br>
-				<h2>{{#link-to "music"}}Musik på Alive 2018 𝄞{{/link-to}}</h2>
-				<p>Peter Sommer &amp; Tiggerne, Blaue Blume, Warhaus
-					<small>(BE)</small> og Iris Gold + mange flere på vej…
-				</p>
-			</div>
-		</div>
-		<div class="MediaBlock MediaBlock--yellow MediaBlock--vertical mb2">
+	<div class="cContainer cContainer--large">
+		<!-- <div class="MediaBlock MediaBlock--yellow"> -->
+		<!-- 	<div class="MediaBlock-media"> -->
+		<!-- 		{{#link-to "music"}} -->
+		<!-- 		<img src="/assets/alive10.gif" alt=""> -->
+		<!-- 		{{/link-to}} -->
+		<!-- 	</div> -->
+		<!-- 	<div class="MediaBlock-body"> -->
+		<!-- 		<br> -->
+		<!-- 		<br> -->
+		<!-- 		<h2>{{#link-to "music"}}Musik på Alive 2018 𝄞{{/link-to}}</h2> -->
+		<!-- 		<p>Peter Sommer &amp; Tiggerne, Blaue Blume, Warhaus -->
+		<!-- 			<small>(BE)</small> og Iris Gold + mange flere på vej… -->
+		<!-- 		</p> -->
+		<!-- 	</div> -->
+		<!-- </div> -->
+		<div class="MediaBlock MediaBlock--yellow MediaBlock--vertical">
 			<div class="MediaBlock-media MediaBlock-media--right">
 				{{#link-to "adventure"}}
-				<img src="/assets/images/eventyr/summer-camp.jpg" alt="Nationalpark Thy">
+					<img src="/assets/images/eventyr/summer-camp.jpg" alt="Nationalpark Thy">
 				{{/link-to}}
 			</div>
-			<div class="MediaBlock-body tc">
+			<div class="MediaBlock-body tc Container center">
+				<br>
 				<h2>{{#link-to "adventure"}}Dagsprogram 🏄{{/link-to}}</h2>
 				<p>Vandretur, bryghusbesøg, surf, strand og meget mere starter dagen på Alive. {{model.page.acf.eventyr_teaser_title}}</p>
 			</div>
 		</div>
-		<div class="MediaBlock MediaBlock--red mb4">
+		<div class="MediaBlock MediaBlock--red">
 			<div class="MediaBlock-media">
-				<img src="/assets/alive10.gif" alt="">
+				<img src="/assets/images/square.gif" width="100%" alt="">
 			</div>
 			<div class="MediaBlock-body">
-				<br>
-				<br>
-				<p>Hvor kan jeg bo? Hvordan kommer man overhovedet til Thy?
-					<br> {{#link-to "practical"}}Praktisk information &rarr;{{/link-to}}</p>
+				<h2 class="mt2">{{#link-to "practical"}}Praktisk information &rarr;{{/link-to}}</h2>
+				<p class="mb2">Hvor kan jeg bo? Hvordan kommer man overhovedet til Thy?</p>
 
-				<p>Vi har altid brug for frivillige til at skabe Alive Festival. Tilmeldingen åbner den 22. april 2018. Vi håber, du vil
-					være med på holdet!
-					<br> {{#link-to "volunteer"}}Bli' frivillig &rarr;{{/link-to}}</p>
+				<h2>{{#link-to "volunteer"}}Bli' frivillig &rarr;{{/link-to}}</h2>
+					<p>Vi har altid brug for frivillige til at skabe Alive Festival. Tilmeldingen åbner den 22. april 2018. Vi håber, du vil være med på holdet!</p>
 			</div>
 		</div>
 	</div>
 
-	<p class="tc mt2">
-		Følg Alive Festival på
-		<a href="https://www.instagram.com/thyalive/" target="_blank">instagram.com/thyalive</a> og
-		<a href="https://facebook.com/alivefestival" target="_blank">facebook.com/alivefestival</a>
-	</p>
+	<div class="Invert">
+		{{instagram-feed class="InstaFeed"}}
 
-	{{instagram-feed class="InstaFeed"}} {{!--
+		<p class="tc mb0 pb2">
+			Følg Alive Festival på
+			<a href="https://www.instagram.com/thyalive/" target="_blank">instagram.com/thyalive</a> og
+			<a href="https://facebook.com/alivefestival" target="_blank">facebook.com/alivefestival</a>
+		</p>
+
+		{{!--
 	<iframe src="https://api.radio4000.com/embed?slug=alivefestival" width="100%" height="500" frameborder="0"></iframe> --}}
+	</div>
 </div>
