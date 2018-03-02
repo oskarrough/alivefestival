@@ -13,6 +13,7 @@
 		display: block;
 		padding: 1.8rem 0 0 1.8rem;
 		color: $black;
+		transition: padding 200ms;
 
 		@media (min-height: 769px) {
 			padding-top: 3.5rem;
