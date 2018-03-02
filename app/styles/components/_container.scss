@@ -13,3 +13,7 @@
 .Container--large {
 	max-width: $max-width;
 }
+
+.Container--full {
+	max-width: none;
+}

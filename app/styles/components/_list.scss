@@ -12,11 +12,13 @@
 	a.MediaBlock {
 		display: block;
 		text-decoration: none;
+		color: initial;
 
 		h3 {
 			@include h2;
 			margin-bottom: 0.5rem;
 			word-break: break-word;
+			color: $blue;
 		}
 	}
 

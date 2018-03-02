@@ -6,3 +6,29 @@
 .tr {
 	text-align: right;
 }
+
+.mb1 {
+	margin-bottom: rem($space);
+}
+
+.mb2 {
+	margin-bottom: rem($space * 2);
+}
+
+.mb3 {
+	margin-bottom: rem($space * 3);
+}
+
+
+.mb4 {
+	margin-bottom: rem($space * 4);
+}
+
+
+.mt1 {
+	margin-top: rem($space);
+}
+
+.mt2 {
+	margin-top: rem($space * 2);
+}

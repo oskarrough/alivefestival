@@ -45,13 +45,16 @@
 	line-height: 1;
 	padding: 0.75em 0;
 	font-size: $font-20;
+
 	// background: $sand;
 	// color: $blue;
 	// a {
 	// 	color: $blue;
 	// }
 
-	background: $yellow;
+	// background: $yellow;
+	background-image: linear-gradient(to bottom, $yellow, darken($yellow, 20%));
+	background-image: linear-gradient(to right, $yellow 85%, #755906);
 	color: $black;
 	a {
 		color: $black;

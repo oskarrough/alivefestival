@@ -12,6 +12,10 @@
 	float: left;
 	margin-right: rem($space);
 	width: 40%;
+
+	img {
+		vertical-align: middle;
+	}
 }
 .MediaBlock-body {
 	display: table-cell;
@@ -27,4 +31,45 @@
 
 a.MediaBlock {
 	text-decoration: none !important;
+}
+
+// .MediaBlock--yellow,
+// .MediaBlock--red {
+// }
+
+.MediaBlock--yellow {
+	background-color: $yellow;
+
+	a {
+		color: $black;
+	}
+
+	.MediaBlock-body {
+		padding-right: 2rem;
+	}
+}
+
+.MediaBlock--red {
+	background-color: $nice-slated-red;
+	color: $silk;
+
+	a {
+		color: $silk;
+		text-decoration: underline;
+		&:hover {
+			color: $whitewhite;
+		}
+	}
+}
+
+.MediaBlock--vertical {
+	.MediaBlock-media {
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+		width: auto;
+	}
+	.MediaBlock-body {
+		padding: rem($space);
+	}
 }
