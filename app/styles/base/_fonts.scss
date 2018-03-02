@@ -99,6 +99,7 @@ $font-70: rem(60);
 	font-size: $font-25;
 	line-height: 1.1;
 	text-transform: uppercase;
+
 	@media (min-width: $layout-m) {
 		font-size: rem(26);
 	}

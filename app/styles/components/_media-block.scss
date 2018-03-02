@@ -45,18 +45,28 @@ a.MediaBlock {
 	}
 }
 
-.MediaBlock--red {
-	background-color: $nice-slated-red;
-	color: $silk;
-
+.MediaBlock--red,
+.MediaBlock--blue {
 	a {
 		color: $silk;
 		&:hover {
 			color: $whitewhite;
 		}
 	}
+}
+
+.MediaBlock--red {
+	display: flex;
+	background-color: $nice-slated-red;
+	color: $silk;
+
+	.MediaBlock-media--right {
+		order: 2;
+		margin-right: 0;
+	}
 
 	.MediaBlock-body {
+		flex: 1;
 		padding: rem($space);
 	}
 }
@@ -73,4 +83,15 @@ a.MediaBlock {
 		padding: rem($space);
 		max-width: 34rem;
 	}
+}
+
+.MediaBlock-title {
+	@extend %font-black;
+	font-size: 3vw;
+}
+
+
+.MediaBlock--blue {
+	background-color: $blue;
+	color: $silk;
 }
