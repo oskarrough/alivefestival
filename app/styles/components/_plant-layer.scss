@@ -15,7 +15,7 @@
 	left: 0;
 	width: 776px;
 	height: 487px;
-	background-image: url('../assets/images/bg-topleft.png');
+	background-image: url('../assets/images/plants/topleft.png');
 	background-position: top left;
 }
 .PlantLayer--bottomLeft {
@@ -23,7 +23,7 @@
 	left: 0;
 	height: 210px;
 	width: 50px;
-	background-image: url('../assets/images/bg-bottomleft.png');
+	background-image: url('../assets/images/plants/bottomleft.png');
 	background-position: bottom left;
 
 	@media (min-width: $layout-sm) {
@@ -41,6 +41,6 @@
 	@media (min-width: $layout-sm) {
 		width: 200px;
 	}
-	background-image: url('../assets/images/bg-topright.png');
+	background-image: url('../assets/images/plants/topright.png');
 	background-position: top right;
 }
