@@ -62,9 +62,10 @@
 }
 
 .Page-body {
-	padding-left: rem($space * 2);
+	padding-top: rem($space * 3);
 	padding-right: rem($space);
 	padding-bottom: rem($space);
+	padding-left: rem($space * 2);
 
 	@media (min-width: $layout-m) {
 		padding-left: rem($space * 3);
@@ -75,7 +76,6 @@
 	height: auto !important;
 }
 
-.Manchet h1 + p,
 .Page-body h1 + p,
 .Post-body > p:first-child {
 	@extend %font-bold;

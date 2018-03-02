@@ -10,10 +10,8 @@ export default Route.extend({
 
 	activate() {
 		this.set('layout.billetter', true)
-		// this.set('layout.simplify', true);
 	},
 	deactivate() {
 		this.set('layout.billetter', false)
-		// this.set('layout.simplify', false);
 	}
 })

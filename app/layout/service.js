@@ -9,7 +9,6 @@ const BREAKPOINT = 740
 export default Service.extend({
 	showAside: false,
 	billetter: false,
-	simplify: false,
 
 	setInitialWidth: on('init', function() {
 		const xBrowserWidth = document.querySelector('body').getBoundingClientRect()

@@ -11,22 +11,14 @@ html {
 }
 
 body {
-	overflow: hidden;
+	overflow-y: scroll; // avoid jumps
 }
 
 .App-main {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow-x: hidden;
-	overflow-y: scroll; // avoid jumps
-	-webkit-overflow-scrolling: touch;
+	transition: transform 250ms $ease-accelerate, opacity 200ms;
 
 	@media (max-width: $layout-m) {
 		// Push it out of view to the left
-		transition: transform 250ms $ease-accelerate, opacity 200ms;
 		// transform: translate3d(10%, 0, 0);
 
 		.show-aside & {
@@ -46,23 +38,6 @@ body {
 	> .liquid-container > .liquid-child {
 		min-height: 100%;
 	}
-}
-
-.App-main--white {
-	background-color: $whitewhite;
-}
-
-.Manchet {
-	box-sizing: content-box;
-	max-width: $max-width-small;
-	padding-left: rem($space * 3);
-	padding-right: rem($space * 2);
-	padding-bottom: rem($space);
-}
-
-.Manchet,
-.Page-body {
-	padding-top: rem($space * 3);
 }
 
 .Artists {
@@ -102,20 +77,6 @@ img.alignright {
 	float: right;
 	margin-left: 1rem;
 	margin-bottom: 0.5rem;
-}
-
-.BeforeAfter-handle {
-	background-color: rgb(24, 11, 106);
-}
-
-.u-darkBg {
-	@include negative-text;
-	background-color: hsla(0, 0%, 0%, 0.5);
-	background-color: $purple;
-	background-color: $silk;
-	background-color: $gold;
-	background-color: $yellow;
-	background-color: $teal;
 }
 
 .TeaserBox {

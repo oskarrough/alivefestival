@@ -10,6 +10,7 @@
 	pointer-events: none;
 	user-select: none;
 }
+
 .PlantLayer--topLeft {
 	top: 0;
 	left: 0;
@@ -18,29 +19,32 @@
 	background-image: url('../assets/images/plants/topleft.png');
 	background-position: top left;
 }
+
 .PlantLayer--bottomLeft {
 	bottom: 0;
 	left: 0;
 	height: 210px;
-	width: 50px;
+	width: 40px;
 	background-image: url('../assets/images/plants/bottomleft.png');
 	background-position: bottom left;
 
-	@media (min-width: $layout-sm) {
+	@media (min-width: $layout-sm) and (min-height: 800px) {
 		width: 100px;
 	}
 	@media (min-width: $layout-sm) and (min-height: 900px) {
 		width: 200px;
 	}
 }
+
 .PlantLayer--topRight {
 	top: -1rem;
 	right: 0;
 	height: 215px;
 	width: 100px;
+	background-image: url('../assets/images/plants/topright.png');
+	background-position: top right;
+
 	@media (min-width: $layout-sm) {
 		width: 200px;
 	}
-	background-image: url('../assets/images/plants/topright.png');
-	background-position: top right;
 }
