@@ -1,16 +1,12 @@
-<div class="Container Container--large">
-	<iframe data-src="//lightwidget.com/widgets/c27d58f9460263cc58540036d10a01bcb827ea44.html"
-		id="lightwidget_c27d58f946"
-		name="lightwidget_c27d58f946"
-		scrolling="no"
-		allowtransparency="true"
-		class="lazyload lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;">
-	</iframe>
-
-	<p class="u-center">
-		<br>
-		Følg Alive Festival på <a href="https://www.instagram.com/thyalive/" target="_blank">instagram.com/thyalive</a> og <a href="https://facebook.com/alivefestival" target="_blank">facebook.com/alivefestival</a>
-	</p>
+<div class="InstaFeed-items">
+	{{#each images as |img|}}
+	<figure>
+		<a href="{{img.link}}" target="_blank" rel="noopener nofollow">
+			<img src="{{img.images.standard_resolution.url}}" alt="{{img.caption.text}}">
+			<figcaption>{{img.caption.text}}</figcaption>
+		</a>
+	</figure>
+	{{/each}}
 </div>
 
 {{yield}}
