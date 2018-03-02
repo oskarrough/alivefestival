@@ -4,7 +4,7 @@ export default Component.extend({
 	openAll: false,
 
 	actions: {
-		openAll() {
+		openAllSections() {
 			this.toggleProperty('openAll')
 		}
 	}
