@@ -1,14 +1,11 @@
 /*!
-ALIVE FESTIVAL
-by Oskar Rough
+	ALIVE FESTIVAL
+	by Oskar Rough
  */
 
-/**
- * Third party
- If is only *.css available rename it to *.scss
- */
-// @import 'node_modules/flickity/css/flickity';
+// Third party
 @import '../../node_modules/modern-normalize/modern-normalize.css';
+@import '../../node_modules/flickity/dist/flickity.css';
 
 @import 'base/mixins';
 @import 'base/config';
@@ -43,7 +40,6 @@ by Oskar Rough
 @import 'components/nav';
 @import 'components/teaser';
 @import 'components/page';
-@import 'components/flickity-gallery'; // dont edit this, it's imported
 @import 'components/gallery';
 @import 'components/letters';
 @import 'components/list';

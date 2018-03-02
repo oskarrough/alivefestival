@@ -2560,21 +2560,9 @@ des.js@^1.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
-desandro-classie@~1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/desandro-classie/-/desandro-classie-1.0.1.tgz#aad4d0ba98c81cd8e8bf51acff70f8d5f9e51893"
-
-desandro-get-style-property@^1, desandro-get-style-property@~1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/desandro-get-style-property/-/desandro-get-style-property-1.0.4.tgz#f5842c21ea34b63abcf69bef35aac956e1c57f79"
-
 desandro-matches-selector@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/desandro-matches-selector/-/desandro-matches-selector-2.0.2.tgz#717beed4dc13e7d8f3762f707a6d58a6774218e1"
-
-desandro-matches-selector@~1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/desandro-matches-selector/-/desandro-matches-selector-1.0.3.tgz#e1b33781c4dc654d06cd4fc56cee4471c2984d23"
 
 destroy@~1.0.4:
   version "1.0.4"
@@ -2629,12 +2617,6 @@ directory-encoder@^0.9.2:
     fs-extra "^1.0.0"
     handlebars "^4.0.6"
     img-stats "^0.5.2"
-
-doc-ready@~1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/doc-ready/-/doc-ready-1.0.4.tgz#37f5391969cff994303fdfef2e5d50357f8164d3"
-  dependencies:
-    eventie "^1"
 
 doctrine@^2.1.0:
   version "2.1.0"
@@ -3527,7 +3509,7 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
-ev-emitter@^1.0.0:
+ev-emitter@^1.0.0, ev-emitter@^1.0.1, ev-emitter@^1.0.2:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ev-emitter/-/ev-emitter-1.1.1.tgz#8f18b0ce5c76a5d18017f71c0a795c65b9138f2a"
 
@@ -3541,10 +3523,6 @@ event-emitter@~0.3.5:
 eventemitter3@1.x.x:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
-
-eventie@^1, eventie@~1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/eventie/-/eventie-1.0.6.tgz#d4ffc8b0c2b5e493c2aa1b22cbe918d3aee74437"
 
 events-to-array@^1.0.1:
   version "1.1.2"
@@ -3982,13 +3960,6 @@ fizzy-ui-utils@^2.0.0:
   dependencies:
     desandro-matches-selector "^2.0.0"
 
-fizzy-ui-utils@~1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fizzy-ui-utils/-/fizzy-ui-utils-1.0.1.tgz#aa4106641e753bc8a5cea010315b24898c93440c"
-  dependencies:
-    desandro-matches-selector "~1.0.2"
-    doc-ready "~1.0.3"
-
 flagged-respawn@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/flagged-respawn/-/flagged-respawn-1.0.0.tgz#4e79ae9b2eb38bf86b3bb56bf3e0a56aa5fcabd7"
@@ -4002,20 +3973,16 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-flickity@^1.1.2:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/flickity/-/flickity-1.2.1.tgz#17ed5f489e4aebd52b0d8dbdbf9ea757577416f7"
+flickity@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/flickity/-/flickity-2.0.11.tgz#cc31d6d3481972a4da3d8ae58ffa0f9c4c8cc0d0"
   dependencies:
-    desandro-classie "~1.0.1"
-    desandro-get-style-property "~1.0.4"
-    desandro-matches-selector "~1.0.2"
-    doc-ready "~1.0.3"
-    eventie "~1.0.6"
-    fizzy-ui-utils "~1.0.0"
-    get-size "~1.2.2"
-    tap-listener "~1.1.1"
-    unidragger "~1.1.5"
-    wolfy87-eventemitter "~4.2.11"
+    desandro-matches-selector "^2.0.0"
+    ev-emitter "^1.0.2"
+    fizzy-ui-utils "^2.0.0"
+    get-size "^2.0.0"
+    tap-listener "^2.0.0"
+    unidragger "^2.2.3"
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -4242,15 +4209,9 @@ get-proxy@^1.0.1:
   dependencies:
     rc "^1.1.2"
 
-get-size@^2.0.2:
+get-size@^2.0.0, get-size@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/get-size/-/get-size-2.0.2.tgz#555ea98ab8732e0c021e9e23e2219adcbe398e98"
-
-get-size@~1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/get-size/-/get-size-1.2.2.tgz#bfc3ef1d019e34508c994fa327d183c2875d62e6"
-  dependencies:
-    desandro-get-style-property "^1"
 
 get-stdin@^3.0.0:
   version "3.0.2"
@@ -8551,11 +8512,11 @@ table@^4.0.1:
     slice-ansi "1.0.0"
     string-width "^2.1.1"
 
-tap-listener@~1.1.1:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/tap-listener/-/tap-listener-1.1.2.tgz#340ed2c1885006eaeafb2bf6c1cabfc8546f38d7"
+tap-listener@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tap-listener/-/tap-listener-2.0.0.tgz#d2e11d0d8e7c92b26a56ae4f35538a248b44ad63"
   dependencies:
-    unipointer "~1.1.0"
+    unipointer "^2.1.0"
 
 tap-parser@^5.1.0:
   version "5.4.0"
@@ -8914,12 +8875,11 @@ underscore@>=1.8.3:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
-unidragger@~1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/unidragger/-/unidragger-1.1.5.tgz#4ceba6251481b03a7049f81ed8c84dfa2644c486"
+unidragger@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/unidragger/-/unidragger-2.2.3.tgz#a618801b9b629e1045e3d3793713e7add0a1e16b"
   dependencies:
-    eventie "~1.0.6"
-    unipointer "~1.1.0"
+    unipointer "^2.2.0"
 
 union-value@^1.0.0:
   version "1.0.0"
@@ -8930,12 +8890,11 @@ union-value@^1.0.0:
     is-extendable "^0.1.1"
     set-value "^0.4.3"
 
-unipointer@~1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/unipointer/-/unipointer-1.1.0.tgz#a7d7795bfe00dee835cddf37e9b13289dffd576d"
+unipointer@^2.1.0, unipointer@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/unipointer/-/unipointer-2.2.1.tgz#05f9adaac92c0e6e6ed41ce85adab26166b03ee6"
   dependencies:
-    eventie "~1.0.6"
-    wolfy87-eventemitter "~4.2.11"
+    ev-emitter "^1.0.1"
 
 unique-stream@^1.0.0:
   version "1.0.0"
@@ -9255,10 +9214,6 @@ wide-align@^1.1.0:
 window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
-
-wolfy87-eventemitter@~4.2.11:
-  version "4.2.11"
-  resolved "https://registry.yarnpkg.com/wolfy87-eventemitter/-/wolfy87-eventemitter-4.2.11.tgz#f2b42aab226deab6f5352f4b449bd071d609ab33"
 
 wordwrap@0.0.2:
   version "0.0.2"
