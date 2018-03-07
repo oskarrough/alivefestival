@@ -36,7 +36,7 @@
 }
 
 .Page {
-	a.MediaBlock {
+	a.Media {
 		color: $black;
 		&:hover {
 			color: $black;
@@ -47,7 +47,7 @@
 	}
 
 	a,
-	a.MediaBlock h3 {
+	a.Media h3 {
 		color: $blue;
 		transition: color 150ms;
 
@@ -86,7 +86,7 @@
 }
 
 .Page a:not(.Button),
-.Page a:not(.MediaBlock) {
+.Page a:not(.Media) {
 	text-decoration: underline;
 }
 

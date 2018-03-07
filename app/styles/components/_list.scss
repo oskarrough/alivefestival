@@ -9,36 +9,32 @@
 		opacity: 0.5;
 	}
 
-	a.MediaBlock {
-		display: block;
-		text-decoration: none;
-		color: initial;
-
-		h3 {
-			@include h2;
-			margin-bottom: 0.5rem;
-			word-break: break-word;
-			color: $blue;
-		}
+	h3 a {
+		// margin-bottom: 0.5rem;
+		// word-break: break-word;
+		color: $black;
 	}
 
-	.MediaBlock-media {
-		width: 40%;
+	.Media-figure {
 		max-width: 200px;
-
-		img {
-			width: 100%;
-		}
 	}
 }
 
+
+// The grid variant wraps and doesn't show body
 .List--grid {
 	display: flex;
 	flex-flow: row wrap;
 
 	> li {
-		flex: rem(300);
-		margin-right: rem($space);
+		@media (min-width: $layout-s) {
+			flex: rem(300);
+			margin-right: rem($space);
+		}
+	}
+
+	.Media-body small {
+		display: none;
 	}
 }
 
