@@ -1,11 +1,11 @@
 <div class="InstaFeed-items">
 	{{#each images as |img|}}
-	<figure>
-		<a href="{{img.link}}" target="_blank" rel="noopener nofollow">
-			<img src="{{img.images.standard_resolution.url}}" alt="{{img.caption.text}}">
-			<figcaption>{{img.caption.text}}</figcaption>
-		</a>
-	</figure>
+		<figure>
+			<a href="{{img.link}}" target="_blank" rel="noopener nofollow">
+				<img src="{{img.images.standard_resolution.url}}" alt="{{img.caption.text}}">
+				<figcaption>{{truncate-text img.caption.text limit="80"}}</figcaption>
+			</a>
+		</figure>
 	{{/each}}
 </div>
 
