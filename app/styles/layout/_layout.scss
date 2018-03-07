@@ -81,13 +81,14 @@ img.alignright {
 
 .TeaserBox {
 	text-align: center;
+
 	a {
 		font-size: $font-20;
 		@extend %font-bold;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		display: block;
-		padding: 0.7em 1em 0.95em;
+		padding: 0.5em 1em 0.5em;
 		line-height: 1;
 	}
 }

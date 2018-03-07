@@ -36,6 +36,14 @@
 	margin-top: rem($space * 2);
 }
 
+.pt1 {
+	padding-top: rem($space);
+}
+
+.pt2 {
+	padding-top: rem($space * 2);
+}
+
 .pb1 {
 	padding-bottom: rem($space);
 }
@@ -47,3 +55,4 @@
 .mb0 {
 	margin-bottom: 0;
 }
+

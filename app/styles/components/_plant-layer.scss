@@ -40,11 +40,11 @@
 	top: -1rem;
 	right: 0;
 	height: 215px;
-	width: 100px;
+	width: 80px;
 	background-image: url('../assets/images/plants/topright.png');
 	background-position: top right;
 
 	@media (min-width: $layout-sm) {
-		width: 200px;
+		width: 100px;
 	}
 }
