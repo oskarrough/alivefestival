@@ -33,7 +33,7 @@
 .Media--red,
 .Media--yellow {
 	justify-content: center;
-	 > .Media-figure {
+	> .Media-figure {
 		@media (max-width: $layout-s) {
 			width: 100%;
 		}
@@ -96,8 +96,8 @@
 	// text-transform: uppercase;
 	// font-size: $font-35;
 
-		font-size: 5vw;
-		line-height: 1.2;
+	font-size: 5vw;
+	line-height: 1.2;
 
 	@media (min-width: $layout-m) {
 		font-size: 3vw;
