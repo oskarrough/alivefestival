@@ -6218,6 +6218,10 @@ markdown-it@^8.3.0, markdown-it@^8.3.1:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
+marquee3000@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/marquee3000/-/marquee3000-1.0.9.tgz#0f54814dd81416e11e17cd165cdb949058d49eb3"
+
 match-media@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/match-media/-/match-media-0.2.0.tgz#ea4e09742e7253cc7d7e1599ba627e0fa29fbc50"
