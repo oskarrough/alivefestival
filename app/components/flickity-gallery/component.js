@@ -11,6 +11,7 @@ export default Component.extend({
 
 	init() {
 		this._super(...arguments)
+
 		this.set('flickityOptions', {
 			setGallerySize: false,
 			prevNextButtons: false,
@@ -54,6 +55,7 @@ export default Component.extend({
 
 	updateCounter() {
 		let flkty = this.get('flkty')
+		if (!this.get('on-settle')) return
 		this.get('on-settle')({
 			selected: flkty.selectedIndex,
 			total: flkty.cells.length
