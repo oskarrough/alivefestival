@@ -106,6 +106,17 @@ img.alignright {
 	}
 }
 
+.TeaserBox--fixed {
+	position: fixed;
+	top: -2rem;
+	right: -9rem;
+	transform: rotate(25deg);
+
+	a {
+		padding: 3em 7em 0.8em;
+	}
+}
+
 .Invert {
 	background: $black;
 	color: $silk;
@@ -118,26 +129,4 @@ img.alignright {
 			color: $silk;
 		}
 	}
-}
-
-.InstaFeed {
-	// padding-bottom: rem($space);
-
-	figcaption {
-		color: $black;
-		font-size: small;
-		text-indent: 2em;
-		margin-left: 1em;
-		margin-right: 1em;
-		transition: color 200ms;
-	}
-
-	.touchevents & figcaption,
-	&:hover figcaption {
-		color: $silk;
-	}
-}
-
-.InstaFeed-items {
-	display: flex;
 }
