@@ -18,11 +18,11 @@
 		{{/flickity-gallery}}
 	</div>
 
-	<div class="Container Container--large mt2 mb2">
-		<h3 class="tc">
-			Seneste nyt fra Alive…
-			<small>({{#link-to 'news'}}se alle &rarr;{{/link-to}})</small>
-		</h3>
+	<div class="TeaserBox TeaserBox--alive">
+		{{link-to 'Køb billet' 'tickets'}}
+	</div>
+
+	<div class="Container Container--large mt2 mb1">
 		{{news-list items=model.news grid=true}}
 	</div>
 
@@ -74,6 +74,10 @@
 			</small>
 		</div>
 	</div>
+</div>
+
+<div class="TeaserBox TeaserBox--alive">
+	{{link-to 'Køb billet' 'tickets'}}
 </div>
 
 	{{!-- <iframe src="https://api.radio4000.com/embed?slug=alivefestival" width="100%" height="500" frameborder="0"></iframe> --}}
