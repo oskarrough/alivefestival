@@ -2716,6 +2716,12 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+ember-app-scheduler@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/ember-app-scheduler/-/ember-app-scheduler-0.2.1.tgz#4af70ce7b4d5792a96eff46c0c2f4a737ec3ad63"
+  dependencies:
+    ember-cli-babel "^6.3.0"
+
 ember-browserify@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/ember-browserify/-/ember-browserify-1.2.1.tgz#d099aa7a9c423db95469ec1f099dd0d5619216ce"
@@ -3211,6 +3217,14 @@ ember-router-generator@^1.2.3:
   resolved "https://registry.yarnpkg.com/ember-router-generator/-/ember-router-generator-1.2.3.tgz#8ed2ca86ff323363120fc14278191e9e8f1315ee"
   dependencies:
     recast "^0.11.3"
+
+"ember-router-scroll@https://github.com/dollarshaveclub/ember-router-scroll":
+  version "0.5.0"
+  resolved "https://github.com/dollarshaveclub/ember-router-scroll#8d885440d6a6de71d6ccde830c8c6fdb30114a46"
+  dependencies:
+    ember-app-scheduler "^0.2.0"
+    ember-cli-babel "^6.6.0"
+    ember-getowner-polyfill "^2.0.1"
 
 ember-runtime-enumerable-includes-polyfill@^2.0.0:
   version "2.1.0"

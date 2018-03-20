@@ -1,11 +1,15 @@
 'use strict';
 
 module.exports = function(environment) {
-  let ENV = {
+	let ENV = {
 		modulePrefix: 'alivefestival',
 		environment,
 		rootURL: '/',
-		locationType: 'auto',
+
+		// Changed to support ember-router-scroll
+		locationType: 'router-scroll',
+		historySupportMiddleware: true,
+
 		EmberENV: {
 			FEATURES: {
 				// Here you can enable experimental features on an ember canary build
