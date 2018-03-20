@@ -31,7 +31,7 @@
 	transition: opacity 150ms, -webkit-filter 300ms $easing,
 		transform 300ms $easing;
 	border-radius: 3px;
-	filter: saturate(100%) brightness(90%);
+	filter: saturate(100%) brightness(80%);
 	object-fit: cover;
 
 	.SectionBox-title:hover & {
