@@ -5,7 +5,8 @@ export default Route.extend({
 	layout: service(),
 
 	model() {
-		return this.store.findRecord('page', 12)
+		// return this.store.findRecord('page', 12)
+		return this.store.findRecord('page', 1145)
 	},
 
 	activate() {
