@@ -35,28 +35,6 @@
 	margin-top: rem($space * 2);
 }
 
-.Page {
-	a.Media {
-		color: $black;
-		&:hover {
-			color: $black;
-		}
-		&:hover h3 {
-			color: darken($teal, 10%);
-		}
-	}
-
-	a,
-	a.Media h3 {
-		color: $blue;
-		transition: color 150ms;
-
-		&:hover {
-			color: darken($blue, 10%);
-		}
-	}
-}
-
 .Page-banner {
 	margin-bottom: 0;
 }
@@ -83,11 +61,6 @@
 		@extend %font-bold;
 	}
 	font-size: $font-20;
-}
-
-.Page a:not(.Button),
-.Page a:not(.Media) {
-	text-decoration: underline;
 }
 
 .Page-backgroundImage {

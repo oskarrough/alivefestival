@@ -1,24 +1,31 @@
 .Button {
+	@extend %font-bold;
 	display: inline-block;
-	background-image: linear-gradient(to bottom, #eb614c, #e84930);
-	color: $silk;
 	padding: 0.4em 1em 0.4em;
-	box-shadow: 2px 2px 0 0 #bc2b15;
 	font-size: 14px;
 	// letter-spacing: 0.05em;
 	border-radius: 3px;
 	text-decoration: none;
-	@extend %font-bold;
+	background-image: none;
+	background-color: $blue;
+	// color: $white !important;
+	color: $silk;
+	border: 3px solid $white;
+	box-shadow: 6px 6px 0 0 darken($blue, 8%);
+
+	&:hover {
+		color: $white;
+	}
 }
 
-a.Button,
-.Page a.Button {
+a.Button {
 	color: $silk;
 
 	&:hover {
 		color: $white;
 	}
 }
+
 .NonBtn {
 	background-color: transparent;
 	border: 0;
@@ -28,6 +35,7 @@ a.Button,
 		outline: none;
 	}
 }
+
 .Button--yellow {
 	background-image: none;
 	background-color: $yellow;
@@ -35,20 +43,4 @@ a.Button,
 	border: 3px solid $white;
 	box-shadow: 6px 6px 0 0 $yellow;
 }
-.Button--blue {
-	background-image: none;
-	background-color: $blue;
-	color: $white !important;
-	border: 3px solid $white;
-	box-shadow: 6px 6px 0 0 darken($blue, 8%);
-}
-.Button--outline {
-	background-image: none;
-	background-color: $white;
-	color: $yellow !important;
-	border: 3px solid $yellow;
-	box-shadow: 6px 6px 0 0 $yellow;
-}
-button {
-	color: $black;
-}
+

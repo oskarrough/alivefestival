@@ -49,19 +49,22 @@
 .BilletterBody {
 	background-color: $white;
 	max-width: $max-width;
-	padding: 3em 2em 1em;
+	padding: 3em 1em 1em;
 	margin: auto;
 	border: 3px solid $blue;
 	box-shadow: 4px 4px 0 0 $blue;
-	// text-align: center;
+
+	@media (min-width: 30em) {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
 }
 
-.BilletterBody-button {
-	font-size: $font-25;
-	animation: tinyShake 600ms 400ms infinite;
+.BilletterBody .Button {
+	font-size: $font-17;
 
 	&:hover {
 		transform: rotateZ(2deg);
-		animation-duration: 250ms;
+		animation: tinyShake 250ms infinite;
 	}
 }
