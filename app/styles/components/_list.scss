@@ -25,15 +25,19 @@
 	display: flex;
 	flex-flow: row wrap;
 
-	> li {
+	.Media-body small {
+		display: none;
+
 		@media (min-width: $layout-s) {
-			flex: rem(300);
-			margin-right: rem($space);
+			display: initial;
 		}
 	}
 
-	.Media-body small {
-		display: none;
+	@media (min-width: $layout-s) {
+		> li {
+			flex: rem(300);
+			margin-right: rem($space);
+		}
 	}
 }
 

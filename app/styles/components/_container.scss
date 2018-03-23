@@ -14,6 +14,10 @@
 	max-width: $max-width;
 }
 
+.Container--huge {
+	max-width: 65rem;
+}
+
 .Container--full {
 	max-width: none;
 }
