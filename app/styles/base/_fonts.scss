@@ -76,21 +76,17 @@ $font-70: rem(60);
 
 // Headers
 @mixin h1 {
-	// @extend %font-black;
 	@extend %font-black-rotalic;
 	line-height: 1.1;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
 	font-size: $font-35;
 
-	@media (min-width: $layout-s) {
+	@media (min-width: $layout-m) {
 		font-size: $font-40;
 	}
 	@media (min-width: $layout-l) {
 		font-size: $font-50;
-	}
-	@media (min-width: $layout-xl) {
-		font-size: $font-70;
 	}
 }
 
@@ -109,6 +105,7 @@ $font-70: rem(60);
 	// basically the same as a normal <p><strong combo
 	@extend %font-bold;
 	font-size: 1rem;
+	font-size: $font-20;
 }
 
 @mixin small-caps {

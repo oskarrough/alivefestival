@@ -9,9 +9,6 @@ html {
 	@media (min-width: $layout-m) {
 		font-size: $base-font-size;
 	}
-	@media (min-width: $layout-l) {
-		font-size: $base-font-size + 1;
-	}
 	@media (min-width: $layout-xl) {
 		font-size: $base-font-size + 2;
 	}
@@ -49,9 +46,11 @@ h1 {
 	@include h1;
 	margin-bottom: rem($space * 2);
 }
+
 h2 {
 	@include h2;
 }
+
 h3 {
 	@include h3;
 }
