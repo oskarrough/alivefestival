@@ -79,9 +79,10 @@ $font-70: rem(60);
 	// @extend %font-black;
 	@extend %font-black-rotalic;
 	line-height: 1.1;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.02em;
 	text-transform: uppercase;
 	font-size: $font-35;
+
 	@media (min-width: $layout-s) {
 		font-size: $font-40;
 	}
@@ -98,6 +99,7 @@ $font-70: rem(60);
 	font-size: $font-25;
 	line-height: 1.1;
 	text-transform: uppercase;
+
 	@media (min-width: $layout-m) {
 		font-size: rem(26);
 	}

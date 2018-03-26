@@ -2,23 +2,24 @@
 	position: relative;
 	z-index: 1;
 }
+
 .SectionBox-title {
 	position: relative;
 	// background-size: cover;
 	// background-repeat: no-repeat;
 	// background-position: 50% 50%;
-	padding: 1.2rem 1rem;
+	padding: 1rem;
 	margin-bottom: 1rem;
 	color: $white;
 	cursor: pointer;
 }
+
 .SectionBox-body {
 	display: none;
-	// transition: max-height 350ms $easing;
-	// max-height: 0;
-	// overflow: hidden;
-	margin-left: 1.8rem;
+	margin-left: rem($space);
+	margin-bottom: rem($space);
 }
+
 .SectionBox-bg {
 	position: absolute;
 	left: 0;
@@ -30,23 +31,21 @@
 	transition: opacity 150ms, -webkit-filter 300ms $easing,
 		transform 300ms $easing;
 	border-radius: 3px;
-	filter: saturate(100%) brightness(90%);
+	filter: saturate(100%) brightness(80%);
 	object-fit: cover;
 
 	.SectionBox-title:hover & {
 		transition: opacity 150ms, -webkit-filter 300ms $easing,
 			transform 1000ms $easing;
-		// transform: scale(1.05);
-		// filter: brightness(80%);
 		filter: saturate(100%) brightness(110%);
 	}
 }
+
 .SectionBox-arrow {
 	display: inline-block;
-	position: relative;
-	top: -0.1em;
 	transition: transform 150ms $easing;
 }
+
 .SectionBox.is-open {
 	.SectionBox-arrow {
 		transform: rotate(90deg);

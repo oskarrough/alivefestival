@@ -1,13 +1,15 @@
 'use strict';
 
 module.exports = function(environment) {
-  let ENV = {
+	let ENV = {
 		modulePrefix: 'alivefestival',
-		// podModulePrefix: 'alive/pods',
-		environment: environment,
+		environment,
 		rootURL: '/',
+
+		// Changed to support ember-router-scroll
 		locationType: 'router-scroll',
 		historySupportMiddleware: true,
+
 		EmberENV: {
 			FEATURES: {
 				// Here you can enable experimental features on an ember canary build
@@ -27,14 +29,10 @@ module.exports = function(environment) {
 
 	ENV['moment'] = {
 		includeLocales: ['da'],
-		includeLocales: true,
+		// includeLocales: true,
 		// outputFormat: 'DD.MM.YYYY'
 		outputFormat: 'DD. MMMM, YYYY' // August 18, 2016
 		// outputFormat: 'DD/MM, YYYY' // August 18, 2016
-	}
-
-	ENV['ember-facebook-pixel'] = {
-		id: '1140392809413359'
 	}
 
 	if (environment === 'development') {
@@ -54,12 +52,19 @@ module.exports = function(environment) {
 		ENV.APP.LOG_VIEW_LOOKUPS = false
 
 		ENV.APP.rootElement = '#ember-testing'
+		ENV.APP.autoboot = false
 	}
 
 	if (environment === 'production') {
 		// here you can enable a production-specific feature
 		ENV.googleAnalytics = {
 			webPropertyId: 'UA-3906535-9'
+		}
+
+		// ember-cli-fbq (facebook pixel) addon
+		ENV.fbq = {
+			enabled: true,
+			id: '1140392809413359'
 		}
 	}
 

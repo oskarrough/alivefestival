@@ -19,7 +19,7 @@ export default function() {
 	// 		'news',
 	// 		'music',
 	// 		'adventure',
-	// 		'guide',
+	// 		'practical',
 	// 		'about',
 	// 		'memory',
 	// 		'tickets',

@@ -1,16 +1,22 @@
 <ul class="List {{if grid 'List--grid'}}">
 	{{#each items as |post|}}
-		<li>
-			{{#link-to 'news.post' post class="MediaBlock"}}
-				<figure class="MediaBlock-media">
-					<img src="{{post.better_featured_image.media_details.sizes.mini.source_url}}" alt="{{post.better_featured_image.alt}}">
-				</figure>
-				<div class="MediaBlock-body">
-					<time>{{moment-from-now post.date interval=1000}}</time>
-					<h3>{{post.title}}</h3>
-					<small>{{{post.excerpt}}}</small>
-				</div>
-			{{/link-to}}
+		<li class="Media">
+
+			<figure class="Media-figure">
+				{{#link-to 'news.post' post class="Media"}}
+				<img src="{{post.better_featured_image.media_details.sizes.mini.source_url}}" alt="{{post.better_featured_image.alt}}"> {{/link-to}}
+			</figure>
+
+			<div class="Media-body">
+				<time>{{moment-format post.date}}</time>
+				<h3>
+					{{#link-to 'news.post' post class="Media"}}
+						{{post.title}}
+					{{/link-to}}
+				</h3>
+				<small>{{{post.excerpt}}}</small>
+			</div>
+
 		</li>
 	{{/each}}
 </ul>

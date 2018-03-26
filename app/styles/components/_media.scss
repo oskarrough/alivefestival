@@ -1,0 +1,108 @@
+/**
+ * Media block
+ */
+
+.Media {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.Media-figure {
+	width: 40%;
+
+	img {
+		vertical-align: bottom;
+	}
+}
+
+.Media-body {
+	flex: 1;
+	margin-left: rem($space);
+}
+
+.Media--center {
+	align-items: center;
+	text-align: center;
+}
+
+.Media--reverse > .Media-figure {
+	order: 1;
+}
+
+.Media--red,
+.Media--yellow {
+	justify-content: center;
+	> .Media-figure {
+		@media (max-width: $layout-s) {
+			width: 100%;
+		}
+	}
+	> .Media-body {
+		margin-top: rem($space * 2);
+		margin-left: rem($space);
+		margin-right: rem($space);
+		margin-bottom: rem($space);
+		max-width: 40em;
+	}
+}
+
+.Media--yellow,
+.Media--red,
+.Media--blue {
+	p a {
+		text-decoration: underline;
+	}
+}
+
+.Media--red,
+.Media--blue {
+	a {
+		color: $silk;
+	}
+	a:hover {
+		color: $whitewhite;
+	}
+}
+
+.Media--yellow {
+	background-color: $yellow;
+
+	a {
+		color: $black;
+
+		// &:hover {
+		// 	background-image: url(/assets/images/spray-flat.jpg);
+		// 	background-size: cover;
+		// 	background-repeat: no-repeat;
+		// }
+	}
+}
+
+.Media--red {
+	background-color: $nice-slated-red;
+	color: $silk;
+}
+
+.Media--blue {
+	background-color: $blue;
+	color: $silk;
+}
+
+.Media-title {
+	@extend %font-black;
+	// line-height: 1.1;
+	// letter-spacing: 0.02em;
+	// text-transform: uppercase;
+	// font-size: $font-35;
+
+	font-size: 5vw;
+	line-height: 1.2;
+
+	@media (min-width: $layout-m) {
+		font-size: 3vw;
+	}
+	// @media (min-width: $layout-xl) {
+	// 	font-size: $font-70;
+	// }
+}

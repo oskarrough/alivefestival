@@ -1,9 +1,9 @@
-import RouterScroll from 'ember-router-scroll'
 import EmberRouter from '@ember/routing/router'
+import RouterScroll from 'ember-router-scroll'
 import config from './config/environment'
 import googlePageview from './mixins/google-pageview'
 
-const Router = EmberRouter.extend(RouterScroll, googlePageview, {
+const Router = EmberRouter.extend(googlePageview, RouterScroll, {
 	location: config.locationType,
 	rootURL: config.rootURL
 })
@@ -17,7 +17,7 @@ Router.map(function() {
 	})
 	this.route('adventure', {path: 'dagsprogram'})
 	this.route('sideprogram')
-	this.route('guide')
+	this.route('practical', {path: 'praktisk'})
 	this.route('about', {path: 'om-alive'}, function() {
 		this.route('contact', {path: 'kontakt'})
 		this.route('history', {path: 'historie'})

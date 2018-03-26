@@ -1,8 +1,8 @@
 /* global document */
-import { inject as service } from '@ember/service';
+import {inject as service} from '@ember/service'
 
-import Component from '@ember/component';
-import { run } from '@ember/runloop';
+import Component from '@ember/component'
+import {run} from '@ember/runloop'
 
 export default Component.extend({
 	layout: service(),
@@ -10,20 +10,20 @@ export default Component.extend({
 
 	actions: {
 		toggleAside() {
-			this.toggleProperty('layout.showAside');
+			this.toggleProperty('layout.showAside')
 		}
 	},
 
 	didInsertElement() {
-		run.scheduleOnce('afterRender', () => this.removeLoadingScreen());
+		run.scheduleOnce('afterRender', () => this.removeLoadingScreen())
 	},
 
 	// Remove our dummy app with inline styles.
 	removeLoadingScreen() {
-		const dummy = document.querySelector('.LoadingScreen');
+		const dummy = document.querySelector('.LoadingScreen')
 		if (!dummy) {
-			return;
+			return
 		}
-		dummy.parentNode.removeChild(dummy);
+		dummy.parentNode.removeChild(dummy)
 	}
-});
+})

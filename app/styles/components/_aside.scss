@@ -2,17 +2,18 @@
 	position: fixed;
 	top: -5%;
 	left: -1rem;
-	width: 100%;
 	height: 110%;
 	z-index: 5;
-
 	display: flex;
 	flex-flow: column nowrap;
-	// background-color: $blue;
-	text-align: center;
+	width: $aside-width;
+
+	background-color: $blue;
+	background: $green;
 	transition: transform 250ms $ease-accelerate;
 
 	@media (max-width: $layout-m) {
+		// On mobile we reverse logic and hide it by default.
 		transform: translate3d(-100%, 0, 0);
 
 		.show-aside & {
@@ -21,29 +22,25 @@
 			transform: translate3d(0, 0, 0);
 		}
 	}
-
-	@media (min-width: $layout-m) {
-		width: $aside-width;
-		text-align: left;
-	}
 }
 
-// .Aside::after {
-// 	// background: url(images/border-aside.png) no-repeat top right;
-// 	background: url(images/border-aside2.png) no-repeat top right;
-// 	content: '';
-// 	display: block;
-// 	position: absolute;
-// 	top: 0;
-// 	right: -68px;
-// 	height: 100%;
-// 	z-index: 1;
-// 	width: 100px;
+.Aside::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -68px;
+	height: 100%;
+	z-index: 1;
+	width: 100px;
+	// background: url(images/border-blue.png) no-repeat top right;
+	background: url(images/border-green.png) no-repeat top right;
+	pointer-events: none;
 
-// 	@media (min-width: $layout-m) {
-// 		right: -58px;
-// 	}
-// }
+	@media (min-width: $layout-m) {
+		right: -58px;
+	}
+}
 
 .Aside-inner {
 	// Above border.
@@ -51,4 +48,17 @@
 	z-index: 2;
 	height: 100%;
 	overflow-y: auto;
+}
+
+.Nav a {
+	color: $silk;
+
+	&:hover {
+		color: white;
+	}
+
+	&.is-active {
+		color: $black;
+		background: $yellow;
+	}
 }

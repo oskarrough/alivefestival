@@ -6,29 +6,18 @@
 .Nav a {
 	@extend %font-bold;
 	font-size: $font-20;
-	padding-left: rem($space*2.5);
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
+	padding-left: rem($space * 2);
 	transition: color 150ms, padding 250ms 100ms $easing;
-
-	&.is-active {
-		color: $lightblue;
-	}
-
-	// @media (min-height: 800px) {
-	// 	padding-top: 0.25em;
-	// 	padding-bottom: 0.25em;
-	// }
-
-	@media (min-height: 800px) {
-		padding-top: 0.3em;
-		padding-bottom: 0.3em;
-	}
 
 	@media (min-width: $layout-s) {
 		&.is-active {
-			padding-left: rem($space*2.75);
+			padding-left: rem($space * 2.25);
 		}
+	}
+
+	@media (min-height: 769px) {
+		padding-top: 0.2em;
+		padding-bottom: 0.2em;
 	}
 }
 
@@ -53,8 +42,12 @@
 
 // The social nav
 .Social {
-	margin-top: rem($space*2);
-	padding-left: rem($space*2);
+	padding-left: rem($space * 2);
+	margin-top: 1rem;
+
+	@media (min-height: 769px) {
+		margin-top: rem($space * 2);
+	}
 
 	@media (min-width: $layout-m) {
 		text-align: left;
@@ -63,5 +56,12 @@
 	img {
 		width: rem(30);
 		height: rem(30);
+		filter: #{'invert()'};
+		opacity: 0.6;
+	}
+
+	a:focus img,
+	a:hover img {
+		opacity: 1;
 	}
 }

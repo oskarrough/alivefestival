@@ -1,13 +1,14 @@
-{{#page-item page=model hideContent=true}}
-	{{!-- desktop version --}}
-	<div class="BilletterBody">
-		<h2>Tre dage i august med musik og natur i Thy!</h2>
-		<br>
-		<div class="BilletterBody-content">
+{{#page-item page=model
+	showPartyButton=true
+	hideContent=true}}
 
+	<div class="BilletterBody">
+		<div class="BilletterBody-content">
+			{{!--
 			{{#if model.acf.ticket_link}}
 				<p><a class="BilletterBody-button Button Button--blue" target='_blank' href="{{model.acf.ticket_link}}">KØB!</a></p>
 			{{/if}}
+			--}}
 
 			<div class="Page-content">
 				{{{model.content}}}
@@ -15,6 +16,8 @@
 			</div>
 		</div>
 	</div>
+
 {{/page-item}}
 
 {{outlet}}
+

@@ -1,11 +1,13 @@
-import { moduleForComponent, test } from 'ember-qunit';
-import hbs from 'htmlbars-inline-precompile';
+import {module, test} from 'qunit'
+import {setupRenderingTest} from 'ember-qunit'
+import {render} from '@ember/test-helpers'
+import hbs from 'htmlbars-inline-precompile'
 
-moduleForComponent('letter-box', 'Integration | Component | letter box', {
-  integration: true
-});
+module('Integration | Component | letter box', function(hooks) {
+	setupRenderingTest(hooks)
 
-test('it renders', function(assert) {
-  this.render(hbs`{{letter-box}}`);
-  assert.equal(1, 1)
-});
+	test('it renders', async function(assert) {
+		await render(hbs`{{letter-box}}`)
+		assert.equal(1, 1)
+	})
+})

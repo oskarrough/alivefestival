@@ -1,5 +1,5 @@
-import { inject as service } from '@ember/service';
-import Component from '@ember/component';
+import {inject as service} from '@ember/service'
+import Component from '@ember/component'
 
 export default Component.extend({
 	layout: service(),
@@ -8,7 +8,7 @@ export default Component.extend({
 
 	actions: {
 		partyOn() {
-			this.toggleProperty('partyOn');
+			this.toggleProperty('partyOn')
 		}
 	}
-});
+})

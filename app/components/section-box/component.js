@@ -1,4 +1,4 @@
-import Component from '@ember/component';
+import Component from '@ember/component'
 
 export default Component.extend({
 	tagName: 'section',
@@ -8,7 +8,7 @@ export default Component.extend({
 
 	actions: {
 		toggleBody() {
-			this.toggleProperty('isOpen');
+			this.toggleProperty('isOpen')
 		}
 	}
-});
+})

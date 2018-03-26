@@ -22,21 +22,8 @@
 	}
 }
 
-.LoadingScreen {
-	display: flex;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 100;
-	//background-color: $blue;
-	background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
-
-	.Logo {
-		margin: auto;
-		animation: shake-base 1s infinite;
-	}
+.animate-shake {
+	animation: shake-base 2s infinite;
 }
 
 @keyframes shake-base {

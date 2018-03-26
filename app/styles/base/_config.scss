@@ -4,28 +4,26 @@ $base-font-size-unitless: 17;
 $base-line-height-unitless: (26/17);
 
 // Colors
-$purple: hsl(240, 26%, 25%);
-$silk: hsl(48, 70%, 95%);
-$gold: hsl(43, 92%, 62%);
-$orange: hsl(21, 100%, 45%);
-$green: hsl(91, 71%, 35%);
+$blue: hsl(214, 95%, 34%);
 $dark-green: hsl(154, 48%, 16%);
-$yellow: hsl(45, 100%, 60%);
-$teal: hsl(189, 71%, 32%);
+$gold: hsl(43, 92%, 62%);
+$green: hsl(149, 90%, 27%);
+$lightblue: #2581f5;
+$nice-slated-red: hsl(13, 59%, 53%);
+$orange: hsl(21, 100%, 45%);
+$purple: hsl(240, 26%, 25%);
 $red: hsl(0, 100%, 50%);
-$nice-slated-red: hsl(13, 59%, 53%); //hsl(7, 56%, 39%);
-
+$sand-stone: hsl(334, 10%, 92%);
+$sand: hsl(10, 21%, 92%);
+$silk: hsl(48, 70%, 95%);
+$teal: hsl(189, 71%, 32%);
+$yellow: hsl(45, 100%, 60%);
 $whitewhite: hsl(0, 0%, 100%);
 $white: hsl(0, 0%, 98%);
 $gray: hsl(0, 6%, 72%);
-$grey: hsl(0, 0%, 62%); //hsl(0, 0%, 84%);
+$grey: hsl(0, 0%, 62%);
 $darkgrey: hsl(0, 0%, 30%);
 $black: hsl(0, 0%, 5%);
-
-$blue: hsl(214, 95%, 34%);
-$lightblue: #2581f5;
-$sand: hsl(51, 31%, 92%);
-$sand-stone: hsl(334, 10%, 92%);
 
 // Color definitions
 $primary-color: $blue;

@@ -47,7 +47,7 @@ time {
 
 h1 {
 	@include h1;
-	margin-bottom: rem($space*2);
+	margin-bottom: rem($space * 2);
 }
 h2 {
 	@include h2;
@@ -82,7 +82,7 @@ time,
 
 hr {
 	height: 1px;
-	border: 1px dotted rgba(255, 255, 255, 0.3);
+	border: 3px dotted rgba(0, 0, 0, 0.3);
 	margin: 2rem 0;
 }
 
@@ -98,4 +98,8 @@ hr {
 iframe,
 img {
 	max-width: 100%;
+}
+
+.underline a {
+	text-decoration: underline;
 }
