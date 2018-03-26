@@ -7,9 +7,7 @@ export default Route.extend({
 			page: this.store.findRecord('page', 67),
 			news: this.store.query('post', {per_page: 2}),
 			artists: this.store.query('artist', {
-				filter: {
-					category_name: '2018'
-				},
+				categories: '7',
 				per_page: 99
 			})
 		})
