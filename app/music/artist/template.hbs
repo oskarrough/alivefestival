@@ -1,11 +1,11 @@
 {{#liquid-bind model class="BarAnimation" as |model|}}
 	<article class="Artist">
-		<p class="BackLink">{{#link-to 'music.index'}}↖ al musik{{/link-to}}</p>
 		<div class="Artist-media">
 			<img src="{{model.better_featured_image.media_details.sizes.mini-double.source_url}}"
 				alt="{{model.better_featured_image.alt_text}}">
 		</div>
-		<div class="Artist-body">
+		<div class="Artist-body Page-body">
+			<p class="BackLink">{{#link-to 'music.index'}}↖ al musik{{/link-to}}</p>
 			<p class="Artist-meta">
 				{{#if model.acf.festival_date}}
 				<strong>
