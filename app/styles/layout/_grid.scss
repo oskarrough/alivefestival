@@ -39,4 +39,15 @@ $masonry-gutter: 1.5rem;
 		width: 20%;
 		width: calc(25% - #{$masonry-gutter});
 	}
+
+	@include animation-delay(7);
+	transition: opacity 200ms ease-in-out;
+	opacity: 0;
+
+	// show them when they are loaded or if we dont have js
+	.Masonry.is-active &,
+	.no-js & {
+		opacity: 1;
+	}
 }
+
