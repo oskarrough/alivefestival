@@ -2837,6 +2837,12 @@ ember-cli-eslint@^4.2.1:
     rsvp "^4.6.1"
     walk-sync "^0.3.0"
 
+ember-cli-fbq@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-fbq/-/ember-cli-fbq-2.0.0.tgz#331d1304af4f8794411203f3114e5296d0b50ed2"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+
 ember-cli-get-component-path-option@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz#0d7b595559e2f9050abed804f1d8eff1b08bc771"

@@ -35,10 +35,6 @@ module.exports = function(environment) {
 		// outputFormat: 'DD/MM, YYYY' // August 18, 2016
 	}
 
-	ENV['ember-facebook-pixel'] = {
-		id: '1140392809413359'
-	}
-
 	if (environment === 'development') {
 		// ENV.APP.LOG_RESOLVER = true;
 		// ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -63,6 +59,12 @@ module.exports = function(environment) {
 		// here you can enable a production-specific feature
 		ENV.googleAnalytics = {
 			webPropertyId: 'UA-3906535-9'
+		}
+
+		// ember-cli-fbq (facebook pixel) addon
+		ENV.fbq = {
+			enabled: true,
+			id: '1140392809413359'
 		}
 	}
 
