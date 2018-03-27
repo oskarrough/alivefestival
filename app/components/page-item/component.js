@@ -6,7 +6,6 @@ export default Component.extend({
 	classNames: ['Page'],
 	classNameBindings: ['layout.billetter', 'partyOn'],
 
-
 	// page: alivefestival/models/page
 
 	actions: {

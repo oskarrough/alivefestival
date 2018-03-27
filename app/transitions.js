@@ -1,7 +1,7 @@
 export default function() {
 	// Set velocity.js defaults
 	this.setDefault({
-		duration: 150,
+		duration: 150
 		// easing: [0.86, 0.0, 0.07, 1.0]
 	})
 
