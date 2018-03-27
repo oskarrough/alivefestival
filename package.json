@@ -54,6 +54,7 @@
   "dependencies": {
     "ember-cli-google-analytics": "^1.5.0",
     "ember-router-scroll": "https://github.com/dollarshaveclub/ember-router-scroll",
+    "ember-wordpress": "^0.1.7",
     "flickity": "^2.0.11",
     "imagesloaded": "^4.1.4",
     "lazysizes": "^4.0.1",

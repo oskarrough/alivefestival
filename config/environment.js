@@ -27,6 +27,8 @@ module.exports = function(environment) {
 		}
 	}
 
+	ENV.wordpressHost = 'https://cms.alivefestival.dk'
+
 	ENV['moment'] = {
 		includeLocales: ['da'],
 		// includeLocales: true,

@@ -3134,6 +3134,13 @@ ember-fetch@^3.4.4:
     node-fetch "^2.0.0-alpha.9"
     whatwg-fetch "^2.0.3"
 
+ember-get-config@^0.2.1:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/ember-get-config/-/ember-get-config-0.2.4.tgz#118492a2a03d73e46004ed777928942021fe1ecd"
+  dependencies:
+    broccoli-file-creator "^1.1.1"
+    ember-cli-babel "^6.3.0"
+
 ember-getowner-polyfill@^2.0.1:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-2.2.0.tgz#38e7dccbcac69d5ec694000329ec0b2be651d2b2"
@@ -3264,6 +3271,13 @@ ember-weakmap@^3.0.0:
     browserslist "^2.2.2"
     debug "^3.1.0"
     ember-cli-babel "^6.3.0"
+
+ember-wordpress@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/ember-wordpress/-/ember-wordpress-0.1.7.tgz#c10da093b13d38f71937565f3fbc536104f50612"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-get-config "^0.2.1"
 
 encodeurl@~1.0.1:
   version "1.0.2"

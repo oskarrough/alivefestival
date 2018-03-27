@@ -1,3 +1,3 @@
-import PostModel from 'alivefestival/models/post'
+import PostModel from 'ember-wordpress/models/post'
 
 export default PostModel.extend()
