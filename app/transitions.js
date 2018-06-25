@@ -7,8 +7,8 @@ export default function() {
 
 	// Between Music and News index/detail
 	this.transition(
-		this.fromRoute(['news.index', 'music.index']),
-		this.toRoute(['news.post', 'music.artist']),
+		this.fromRoute(['news.index', 'program.index']),
+		this.toRoute(['news.post', 'program.artist']),
 		this.use('fade'),
 		this.reverse('fade')
 	)

@@ -29,7 +29,7 @@
 	<div class="Media Media--center Media--yellow">
 		<div class="Media-figure">
 			{{#flickity-gallery images=model.artists as |artist|}}
-				{{#link-to 'music.artist' artist}}
+				{{#link-to 'program.artist' artist}}
 					<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" data-srcset="{{artist.better_featured_image.media_details.sizes.mini.source_url}} 200w, {{artist.better_featured_image.media_details.sizes.mini-double.source_url}} 400w" alt="{{artist.title}}">
 				{{/link-to}}
 			{{/flickity-gallery}}

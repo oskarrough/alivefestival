@@ -1,0 +1,25 @@
+<p>Vis
+
+	{{#link-to "program" (query-params tag="all")}}
+		hele programmet
+	{{/link-to}}
+
+	<!-- <span class="Nav-divider">·</span> -->
+	<span class="Nav-divider">eller kun</span>
+
+	{{#link-to 'program' (query-params tag="event")}}
+		dagsprogrammet
+	{{/link-to}}.
+	{{!--
+	{{#each tags as |tag|}}
+		{{#link-to 'program' (query-params tag=tag.slug)}}
+			<span>
+				{{tag.name}}
+			</span>
+		{{/link-to}}
+	{{/each}}
+	--}}
+</p>
+
+{{yield}}
+

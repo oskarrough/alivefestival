@@ -1,0 +1,46 @@
+<div class="Section">
+	<div class="Page">
+		<div class="Page-body">
+
+			<h1 class="Title">{{{model.page.title}}}</h1>
+			<div class="Page-content">
+				{{{model.page.content}}}
+			</div>
+
+			<table class="Table">
+				<thead>
+					<tr>
+						<th>Artist</th>
+						<th style="width: 5rem">Scene</th>
+						<th style="width: 7rem">Dag og tid</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each sortedArtists as |artist|}}
+						<tr>
+							<td>
+								<h3>
+									{{link-to artist.title 'program.artist' artist}}
+								</h3>
+							</td>
+							<td>
+								<span class="Muted">
+									{{artist.acf.scene}}
+								</span>
+							</td>
+							<td>
+								<time datetime="{{artist.acf.festival_date}}">
+									{{moment-format artist.acf.festival_date "dddd"}}
+									{{moment-format artist.acf.festival_date "HH:mm"}}
+									{{!-- {{moment-format artist.acf.festival_date "dddd, DD. MMM"}} --}}
+								</time>
+							</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+{{outlet}}
