@@ -17,8 +17,6 @@ export default Controller.extend({
 		let tag = this.get('tag')
 		let artists = this.get('model.artists')
 
-		console.log(tag)
-
 		if (!tag || tag === 'all') {
 			return artists
 		}
