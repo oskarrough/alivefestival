@@ -1,15 +1,17 @@
 <div class="Page">
 	<div class="Page-body">
-	<h1 class="Title">{{model.page.title}}</h1>
-	{{{model.page.content}}}
+		<h1 class="Title">{{model.page.title}}</h1>
+		{{{model.page.content}}}
 	</div>
 </div>
 
+{{filter-menu tags=tags class="tc"}}
+
 <div class="Artists">
 	{{#masonry-grid}}
-		{{#each model.artists as |artist|}}
+		{{#each filteredArtists as |artist|}}
 			<div class="Masonry-item">
-				{{#link-to "music.artist" artist}}
+				{{#link-to "program.artist" artist}}
 					{{teaser-item item=artist}}
 				{{/link-to}}
 			</div>

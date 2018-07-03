@@ -1,26 +1,29 @@
 .Button {
 	@extend %font-bold;
 	display: inline-block;
-	padding: 0.4em 1em 0.4em;
+	padding: 0.4em 1em 0.5em;
 	font-size: 14px;
-	// letter-spacing: 0.05em;
+	letter-spacing: 0.03em;
 	border-radius: 3px;
 	text-decoration: none;
 	background-image: none;
 	background-color: $blue;
 	// color: $white !important;
 	color: $silk;
-	border: 3px solid $white;
-	box-shadow: 6px 6px 0 0 darken($blue, 8%);
+	// border: 2px solid rgba($white, 0.8);
+	// box-shadow: 5px 5px 0 0 darken($blue, 8%);
+	box-shadow: 3px 3px 0 0 #4e4e4e4a;
 
 	&:hover {
 		color: $white;
+		box-shadow: 3px 3px 0 0 $yellow;
 	}
 }
 
 a.Button {
 	color: $silk;
 
+	&.is-active,
 	&:hover {
 		color: $white;
 	}
@@ -37,9 +40,28 @@ a.Button {
 }
 
 .Button--yellow {
-	background-image: none;
 	background-color: $yellow;
-	color: $white !important;
-	border: 3px solid $white;
-	box-shadow: 6px 6px 0 0 $yellow;
+	color: $black !important;
+}
+
+.Button--red {
+	background-color: $nice-slated-red;
+	color: $silk;
+}
+
+.Button--black {
+	background: $black;
+	color: $silk;
+}
+
+.Button--green {
+	background: $green;
+	color: $silk;
+}
+
+.ButtonGroup .Button {
+	margin-bottom: 0.4em;
+	@media (min-width: $layout-s) {
+		font-size: 1em;
+	}
 }

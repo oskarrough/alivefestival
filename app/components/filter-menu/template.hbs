@@ -1,0 +1,28 @@
+{{#link-to "program" (query-params tag="all") class="Button Button--red"}}
+	Hele programmet
+{{/link-to}}
+
+<!-- <span class="Nav-divider">·</span> -->
+<!-- <span class="Nav-divider">eller kun</span> -->
+{{#link-to 'program' (query-params tag="music") class="Button Button--yellow"}}
+	Musikprogrammet
+	🎸 🎛️  🎶 💃
+{{/link-to}}
+
+{{#link-to 'program' (query-params tag="event") class="Button Button--green"}}
+	Dagsprogrammet
+	🌳 🚀 🌊 🐺
+{{/link-to}}
+
+{{!--
+{{#each tags as |tag|}}
+	{{#link-to 'program' (query-params tag=tag.slug)}}
+		<span>
+			{{tag.name}}
+		</span>
+	{{/link-to}}
+{{/each}}
+--}}
+
+{{yield}}
+
