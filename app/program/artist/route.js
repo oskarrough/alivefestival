@@ -6,11 +6,7 @@ export default Route.extend({
 
 	model(params) {
 		return this.store
-			.query('artist', {
-				filter: {
-					name: params.artist_slug
-				}
-			})
+			.query('artist', {slug: params.artist_slug})
 			.then(models => models.get('firstObject'))
 	},
 

@@ -21,6 +21,11 @@ export default Controller.extend({
 			return artists
 		}
 
+		// To get "music" artists we get those without any tags.
+		if (tag === 'music') {
+			return artists.filter(artist => !artist.get('tags.length'))
+		}
+
 		return artists.filter(artist => {
 			let tags = artist.get('tags')
 

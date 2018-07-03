@@ -1,15 +1,17 @@
-<p>Vis
-
-	{{#link-to "program" (query-params tag="all")}}
-		hele programmet
+<p>
+	{{#link-to "program" (query-params tag="all") class="Button"}}
+		Hele programmet
 	{{/link-to}}
 
 	<!-- <span class="Nav-divider">·</span> -->
-	<span class="Nav-divider">eller kun</span>
+	<!-- <span class="Nav-divider">eller kun</span> -->
+	{{#link-to 'program' (query-params tag="music") class="Button"}}
+		Musikprogram
+	{{/link-to}}
 
-	{{#link-to 'program' (query-params tag="event")}}
-		dagsprogrammet
-	{{/link-to}}.
+	{{#link-to 'program' (query-params tag="event") class="Button"}}
+		Dagsprogram
+	{{/link-to}}
 	{{!--
 	{{#each tags as |tag|}}
 		{{#link-to 'program' (query-params tag=tag.slug)}}
