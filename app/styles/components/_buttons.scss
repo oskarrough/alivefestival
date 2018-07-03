@@ -3,7 +3,7 @@
 	display: inline-block;
 	padding: 0.4em 1em 0.5em;
 	font-size: 14px;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.02em;
 	border-radius: 3px;
 	text-decoration: none;
 	background-image: none;
@@ -16,7 +16,7 @@
 
 	&:hover {
 		color: $white;
-		box-shadow: 3px 3px 0 0 $yellow;
+		box-shadow: 3px 3px 0 0 #4e4e4e8c;
 	}
 }
 
@@ -33,6 +33,7 @@ a.Button {
 	background-color: transparent;
 	border: 0;
 	padding: 0;
+
 	&:active,
 	&:focus {
 		outline: none;
@@ -60,8 +61,17 @@ a.Button {
 }
 
 .ButtonGroup .Button {
+	margin-right: 0.2em;
 	margin-bottom: 0.4em;
+
 	@media (min-width: $layout-s) {
 		font-size: 1em;
+	}
+
+	transition: all 150ms $easing;
+	transform-origin: center;
+
+	&.is-active {
+		box-shadow: 3px 3px black;
 	}
 }
