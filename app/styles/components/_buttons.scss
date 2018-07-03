@@ -54,6 +54,11 @@ a.Button {
 	color: $silk;
 }
 
+.Button--green {
+	background: $green;
+	color: $silk;
+}
+
 .ButtonGroup .Button {
 	margin-bottom: 0.4em;
 	@media (min-width: $layout-s) {
