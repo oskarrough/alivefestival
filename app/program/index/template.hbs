@@ -2,9 +2,10 @@
 	<div class="Page-body">
 		<h1 class="Title">{{model.page.title}}</h1>
 		{{{model.page.content}}}
-		{{filter-menu tags=tags}}
 	</div>
 </div>
+
+{{filter-menu tags=tags class="tc"}}
 
 <div class="Artists">
 	{{#masonry-grid}}
