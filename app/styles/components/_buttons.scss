@@ -75,3 +75,11 @@ a.Button {
 		box-shadow: 3px 3px black;
 	}
 }
+
+.FixedTicketButton {
+	position: fixed;
+	top: 0.6rem;
+	right: -0.5rem;
+	z-index: 1;
+	padding-right: 3rem;
+}

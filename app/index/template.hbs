@@ -18,10 +18,6 @@
 		{{/flickity-gallery}}
 	</div>
 
-	<div class="TeaserBox TeaserBox--alive">
-		{{link-to 'Køb billet' 'tickets'}}
-	</div>
-
 	<div class="Container Container--huge mt2 mb1">
 		{{news-list items=model.news grid=true}}
 	</div>
@@ -77,4 +73,7 @@
 	{{link-to 'Køb billet' 'tickets'}}
 </div>
 
-	{{!-- <iframe src="https://api.radio4000.com/embed?slug=alivefestival" width="100%" height="500" frameborder="0"></iframe> --}}
+{{#link-to 'tickets' class="Button FixedTicketButton"}}
+	&bull; &nbsp;&nbsp;KØB BILLET&nbsp;&nbsp; &bull;
+{{/link-to}}
+

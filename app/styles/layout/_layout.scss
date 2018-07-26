@@ -38,6 +38,9 @@ body {
 	> .liquid-container,
 	> .liquid-container > .liquid-child {
 		min-height: 100%;
+
+		// Disable transform because it breaks children with pos:fixed;
+		transform: none;
 	}
 }
 
