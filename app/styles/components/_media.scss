@@ -33,11 +33,13 @@
 .Media--red,
 .Media--yellow {
 	justify-content: center;
+
 	> .Media-figure {
 		@media (max-width: $layout-s) {
 			width: 100%;
 		}
 	}
+
 	> .Media-body {
 		margin-top: rem($space * 2);
 		margin-left: rem($space);
@@ -70,12 +72,6 @@
 
 	a {
 		color: $black;
-
-		// &:hover {
-		// 	background-image: url(/assets/images/spray-flat.jpg);
-		// 	background-size: cover;
-		// 	background-repeat: no-repeat;
-		// }
 	}
 }
 
@@ -91,18 +87,11 @@
 
 .Media-title {
 	@extend %font-black;
-	// line-height: 1.1;
-	// letter-spacing: 0.02em;
-	// text-transform: uppercase;
-	// font-size: $font-35;
-
 	font-size: 5vw;
 	line-height: 1.2;
 
 	@media (min-width: $layout-m) {
 		font-size: 3vw;
 	}
-	// @media (min-width: $layout-xl) {
-	// 	font-size: $font-70;
-	// }
 }
+

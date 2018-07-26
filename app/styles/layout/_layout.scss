@@ -15,6 +15,7 @@ body {
 }
 
 .App-main {
+	display: block;
 	transition: transform 250ms $ease-accelerate, opacity 200ms;
 
 	@media (max-width: $layout-m) {
