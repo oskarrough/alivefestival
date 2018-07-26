@@ -1,0 +1,30 @@
+.NewsletterForm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: rgba(black, 0.05);
+	padding: 1em;
+
+	h3 {
+		font-size: 1em;
+	}
+
+	h3,
+	input,
+	p {
+		margin-bottom: 0;
+	}
+
+	> * {
+		margin-right: 1rem;
+	}
+
+	> label {
+		margin-right: 0;
+	}
+
+	small a {
+		opacity: 0.8;
+	}
+}
