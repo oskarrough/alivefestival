@@ -15,16 +15,23 @@
 
 <div class="Page-body">
 	{{#if page.title}}<h1 class="Title">{{page.title}}</h1>{{/if}}
+
 	{{#unless hideContent}}
 		<div class="Page-content">
 			{{{page.content}}}
 		</div>
 	{{/unless}}
+
 	{{#if page.acf.sections}}
 		<div class="Page-content">
 			{{section-box-wrapper sections=page.acf.sections}}
 		</div>
 	{{/if}}
+
+	{{#if page.acf.extra_text}}
+		{{{page.acf.extra_text}}}
+	{{/if}}
+
 	{{yield}}
 </div>
 
