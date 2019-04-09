@@ -81,16 +81,15 @@
 	max-width: none;
 }
 
-.Page--gallery img {
+.Page--gallery img,{
+.Page--gallery img.alignnone {
 	width: 190px;
-	border: 1px solid;
-	min-height: 136px;
-	padding: 0.5em;
+	height: auto !important;
+	min-height: 120px;
 	object-fit: contain;
 	object-fit: scale-down;
 	object-position: center;
-	background: white;
-	max-width: 200px;
 	vertical-align: middle;
-	margin: 2px;
+	padding: 0.5em;
 }
+
