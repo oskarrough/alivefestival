@@ -23,4 +23,4 @@ You will need the following things properly installed on your computer.
 
 ## Deploying
 
-Push the `2018` branch and it will automatically deploy via netlify.com.
+Push the `2019` branch and it will automatically deploy via netlify.com.
