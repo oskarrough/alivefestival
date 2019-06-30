@@ -6,7 +6,7 @@ export default Route.extend({
 		return hash({
 			page: this.store.findRecord('page', 574), // the "spilleplan" page
 			artists: this.store.query('artist', {
-				categories: '7', // 2018
+				category: '7', // 2019
 				per_page: 99
 			})
 		})

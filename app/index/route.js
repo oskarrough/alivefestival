@@ -7,7 +7,7 @@ export default Route.extend({
 			page: this.store.findRecord('page', 67),
 			news: this.store.query('post', {per_page: 2}),
 			artists: this.store.query('artist', {
-				categories: '7',
+				category: '7',
 				per_page: 99
 			})
 		})
