@@ -1,33 +1,15 @@
-export default function () {
+export default function() {
 	// Set velocity.js defaults
 	this.setDefault({
-		duration: 500,
-		easing: [0.860, 0.000, 0.070, 1.000]
-	});
+		duration: 150
+		// easing: [0.86, 0.0, 0.07, 1.0]
+	})
 
-	// Between Music and News index/detail
+	// Add transitions between overview and detail pages for /program and /news
 	this.transition(
-		this.fromRoute(['news.index', 'music.index']),
-		this.toRoute(['news.post', 'music.artist']),
-		this.use('toLeft'),
-		this.reverse('toRight')
-	);
-
-	// Between pages
-	// this.transition(
-	// 	this.withinRoute([
-	// 		'news',
-	// 		'music',
-	// 		'adventure',
-	// 		'guide',
-	// 		'about',
-	// 		'memory',
-	// 		'tickets',
-	// 		'volunteer',
-	// 		'partners',
-	// 		'english',
-	// 		'404'
-	// 	]),
-	// 	this.use('fade', {duration: 250})
-	// );
+		this.fromRoute(['news.index', 'program.index']),
+		this.toRoute(['news.post', 'program.artist']),
+		this.use('fade'),
+		this.reverse('fade')
+	)
 }

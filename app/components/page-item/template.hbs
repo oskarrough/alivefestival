@@ -4,9 +4,8 @@
 	</figure>
 {{/if}}
 
-{{#if layout.billetter}}
+{{#if showPartyButton}}
 	<div class="Page-banner">
-		<h1>{{page.title}}</h1>
 		<button class="DiscoFun NonBtn" {{action 'partyOn'}}>
 			<img src="assets/images/icons/party-switch-off.svg" alt="">
 			<img src="assets/images/icons/party-switch-on.svg" alt="">
@@ -15,12 +14,24 @@
 {{/if}}
 
 <div class="Page-body">
+	{{#if page.title}}<h1 class="Title">{{page.title}}</h1>{{/if}}
+
 	{{#unless hideContent}}
-		{{#if page.title}}<h1 class="Title">{{page.title}}</h1>{{/if}}
 		<div class="Page-content">
 			{{{page.content}}}
 		</div>
 	{{/unless}}
+
+	{{#if page.acf.sections}}
+		<div class="Page-content">
+			{{section-box-wrapper sections=page.acf.sections}}
+		</div>
+	{{/if}}
+
+	{{#if page.acf.extra_text}}
+		{{{page.acf.extra_text}}}
+	{{/if}}
+
 	{{yield}}
 </div>
 

@@ -1,26 +1,20 @@
 /*!
 	ALIVE FESTIVAL
 	by Oskar Rough
-*/
-
-/**
- * Third party
- If is only *.css available rename it to *.scss
  */
-// @import 'node_modules/flickity/css/flickity';
-@import 'node_modules/normalize.css/normalize';
-@import 'node_modules/suitcss-base/lib/base';
+
+// Third party
+@import '../../node_modules/modern-normalize/modern-normalize.css';
+@import '../../node_modules/flickity/dist/flickity.css';
 
 @import 'base/mixins';
 @import 'base/config';
 
 // Utilities (abstract patterns to be reused in components)
-@import 'utilities/clearfix';
-@import 'utilities/negative-text';
 @import 'utilities/align';
+@import 'utilities/negative-text';
 @import 'utilities/ratio';
-// @import 'utilities/custom-select';
-// @import 'utilities/animation-delay';
+@import 'utilities/animation-delay';
 
 // Base
 @import 'base/fonts';
@@ -28,35 +22,31 @@
 @import 'base/icons';
 
 // Components
-@import 'components/media-block';
 @import 'components/animation';
-@import 'components/index';
+@import 'components/artist';
+@import 'components/aside';
+@import 'components/billetter';
+@import 'components/burger';
 @import 'components/buttons';
 @import 'components/container';
 @import 'components/frame';
-@import 'components/billetter';
-@import 'components/logo';
-@import 'components/table';
-@import 'components/aside';
-@import 'components/burger';
-@import 'components/menu';
-@import 'components/ratio';
-@import 'components/nav';
-@import 'components/teaser';
-@import 'components/page';
-@import 'components/flickity-gallery'; // dont edit this, it's imported
 @import 'components/gallery';
+@import 'components/index';
 @import 'components/letters';
 @import 'components/list';
-@import 'components/section-box';
-@import 'components/before-after';
-@import 'components/plant-layer';
 @import 'components/loader';
-// @import 'components/header-bar';
-
-@import 'layout/layout';
-@import 'components/artist';
+@import 'components/logo';
+@import 'components/media';
+@import 'components/menu';
+@import 'components/newsletter-form';
+@import 'components/nav';
+@import 'components/page';
+@import 'components/plant-layer';
+@import 'components/ratio';
+@import 'components/section-box';
+@import 'components/table';
+@import 'components/insta-feed';
+@import 'components/teaser';
 @import 'layout/grid';
-@import 'layout/scrollbar';
-
-// × ← ↑ → ↓ ↖ ↗ ↘ ↙ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ○ ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ 
+@import 'layout/layout';
+// // × ← ↑ → ↓ ↖ ↗ ↘ ↙ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ○ ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ 

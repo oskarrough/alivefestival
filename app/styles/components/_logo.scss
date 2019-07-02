@@ -1,6 +1,5 @@
 .Logo {
 	font-size: 1.4rem;
-	margin-top: 1rem;
 	margin-bottom: 1rem;
 	text-align: center;
 
@@ -11,8 +10,9 @@
 
 	a {
 		display: block;
-		padding: 1.8rem 0 0 1.8rem;
+		padding: 2rem 0 0 1.8rem;
 		color: $black;
+		transition: padding 200ms;
 
 		@media (min-height: 769px) {
 			padding-top: 3.5rem;
@@ -26,7 +26,8 @@
 
 .Logo-date {
 	@include h3;
-	color: $blue;
+	color: $white;
+	color: $silk;
 	font-size: 0.875rem;
 }
 

@@ -1,7 +1,10 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route'
 
-export default Ember.Route.extend({
+export default Route.extend({
+	beforeModel() {
+		return this.replaceWith('program')
+	},
 	model() {
-		return this.store.findRecord('page', 43);
+		return this.store.findRecord('page', 43)
 	}
-});
+})

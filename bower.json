@@ -1,9 +1,0 @@
-{
-  "name": "alivefestival",
-  "dependencies": {
-    "BigVideo": "bigvideo.js#^1.1.5",
-    "masonry": "^4.0.0",
-    "imagesloaded": "^4.1.0",
-    "pace": "^1.0.2"
-  }
-}

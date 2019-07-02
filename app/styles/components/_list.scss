@@ -9,34 +9,36 @@
 		opacity: 0.5;
 	}
 
-	a.MediaBlock {
-		display: block;
-		text-decoration: none;
-
-		h3 {
-			@include h2;
-			margin-bottom: 0.5rem;
-			word-break: break-word;
-		}
+	h3 a {
+		// margin-bottom: 0.5rem;
+		// word-break: break-word;
+		color: $black;
 	}
 
-	.MediaBlock-media {
-		width: 40%;
-		max-width: 200px;
-
-		img {
-			width: 100%;
-		}
+	.Media-figure {
+		overflow: hidden;
+		max-width: 150px;
 	}
 }
 
+// The grid variant wraps and doesn't show body
 .List--grid {
 	display: flex;
 	flex-flow: row wrap;
 
-	> li {
-		flex: rem(300);
-		margin-right: rem($space);
+	.Media-body small {
+		display: none;
+
+		@media (min-width: $layout-s) {
+			display: initial;
+		}
+	}
+
+	@media (min-width: $layout-s) {
+		> li {
+			flex: rem(300);
+			margin-right: rem($space);
+		}
 	}
 }
 
@@ -45,7 +47,7 @@
 	// without default values, the image will jump 1px in chrome on hover
 	filter: saturate(100%) brightness(1.01);
 	backface-visibility: hidden;
-	transform: translate3d(0,0,0);
+	transform: translate3d(0, 0, 0);
 }
 
 .List a:hover img {

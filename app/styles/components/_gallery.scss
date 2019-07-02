@@ -1,3 +1,27 @@
+// By default force 16:9 format.
+.FlickityGallery {
+	@include ratio(16, 9);
+
+	> * {
+		@include ratio-inner;
+	}
+}
+
+// But you can also make it adapt.
+.FlickityGallery--responsive {
+	@media (orientation: portrait) {
+		@include ratio(9, 16);
+	}
+}
+
+.FlickityGallery-item {
+	width: 100%;
+}
+
+.FlickityGallery-item img {
+	width: 100%;
+}
+
 // Scale to the right format.
 // Responsive images are adjusted to the same.
 .Index-gallery {
@@ -7,33 +31,57 @@
 // Set a max height when object-fit is supported
 .object-fit .Index-gallery {
 	min-height: 300px;
-	max-height: 75vh;
+	max-height: 60vh;
 	overflow: hidden;
-	.FlickityGallery .FlickityGallery-item {
+}
+
+.object-fit .FlickityGallery .FlickityGallery-item {
+	height: 100%;
+
+	img {
 		height: 100%;
-		img {
-			max-height: 75vh;
-			height: 100%;
-			object-fit: cover;
-			object-position: center;
-		}
+		max-height: 60vh;
+		object-fit: cover;
+		object-position: center;
 	}
 }
 
-.FlickityGallery {
-	@include ratio(16, 9);
-	@media (orientation: portrait) {
-		@include ratio(9, 16);
+// Shows a "1/5" counter
+.GalleryCounter {
+	display: none;
+
+	@media (min-width: $layout-sm) {
+		display: block;
 	}
-	> * {
-		@include ratio-inner;
+
+	user-select: none;
+	z-index: 1;
+	width: rem(35);
+	height: rem(35);
+	color: $white;
+
+	span {
+		position: absolute;
 	}
-}
-.FlickityGallery-item {
-	width: 100%;
-}
-.FlickityGallery-item img {
-	width: 100%;
+
+	// Current slide
+	span:first-child {
+		top: rem(-6);
+		left: 0;
+	}
+	// Line between
+	span:nth-child(2) {
+		top: rem(20);
+		left: rem(-8);
+		border-bottom: 2px solid rgba(white, 0.25);
+		transform: rotate(135deg);
+		width: rem(45);
+	}
+	// Total slides
+	span:last-child {
+		bottom: rem(-6);
+		right: 0;
+	}
 }
 
 // Dots
@@ -88,40 +136,3 @@
 // 		right: rem($space);
 // 	}
 // }
-
-// Shows a "1/5" counter
-.GalleryCounter {
-	display: none;
-	@media (min-width: $layout-sm) {
-		display: block;
-	}
-
-	user-select: none;
-	z-index: 1;
-	width: rem(35);
-	height: rem(35);
-	color: $white;
-	// position: absolute;
-	// left: $space;
-	// bottom: $space;
-
-	// @extend %font-bold;
-	span {
-	 position: absolute;
-	}
-	span:first-child {
-		top: rem(-6);
-		left: 0;
-	}
-	span:nth-child(2) {
-		top: rem(20);
-		left: rem(-8);
-		border-bottom: 2px solid rgba(white, 0.25);
-		transform: rotate(135deg);
-		width: rem(45);
-	}
-	span:last-child {
-		bottom: rem(-6);
-		right: 0;
-	}
-}

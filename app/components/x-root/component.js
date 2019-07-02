@@ -1,28 +1,29 @@
 /* global document */
-import Ember from 'ember';
+import {inject as service} from '@ember/service'
 
-const {Component, inject, run} = Ember;
+import Component from '@ember/component'
+import {run} from '@ember/runloop'
 
 export default Component.extend({
-	layout: inject.service(),
+	layout: service(),
 	classNameBindings: ['layout.showAside'],
 
 	actions: {
 		toggleAside() {
-			this.toggleProperty('layout.showAside');
+			this.toggleProperty('layout.showAside')
 		}
 	},
 
 	didInsertElement() {
-		run.scheduleOnce('afterRender', () => this.removeLoadingScreen());
+		run.scheduleOnce('afterRender', () => this.removeLoadingScreen())
 	},
 
 	// Remove our dummy app with inline styles.
 	removeLoadingScreen() {
-		const dummy = document.querySelector('.LoadingScreen');
+		const dummy = document.querySelector('.LoadingScreen')
 		if (!dummy) {
-			return;
+			return
 		}
-		dummy.parentNode.removeChild(dummy);
+		dummy.parentNode.removeChild(dummy)
 	}
-});
+})

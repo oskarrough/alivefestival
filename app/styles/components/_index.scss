@@ -1,26 +1,12 @@
-#big-video-wrap {
-	overflow: hidden;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	img {
-		object-fit: cover;
-		height: 100% !important;
-	}
-	.vjs-loading-spinner {
-		display: none !important;
-	}
-}
-
 .Index {
 	position: relative;
 }
 
 .Index-title {
-	display: none;
+	max-width: 5em;
+	text-align: right;
+	color: white;
+
 	@media (min-width: $layout-s) {
 		font-size: rem(20);
 	}
@@ -34,40 +20,21 @@
 	z-index: 5;
 }
 
-.Index-body {
-	@include h3;
-	position: fixed;
-	bottom: 40%;
-	left: $aside-width + 1rem;
-	z-index: 5;
-	// max-width: 20rem;
-}
-
 .Index-gallery {
 	position: relative;
-	.flickity-viewport {
-		// @include ratio(16,9);
-		// > img {
-		// 	@include ratio-inner;
-		// }
-	}
 }
 
 .Index-artists {
 	@extend %font-bold;
 	@include negative-text;
 	display: block;
-	line-height: 1;
 	padding: 0.75em 0;
-	font-size: $font-20;
-	// background: $sand;
-	// color: $blue;
-	// a {
-	// 	color: $blue;
-	// }
+	line-height: 1;
 
+	// background: $blue;
 	background: $yellow;
 	color: $black;
+
 	a {
 		color: $black;
 	}

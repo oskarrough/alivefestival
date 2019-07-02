@@ -1,4 +1,4 @@
- /**
+/**
  * Containers
  */
 
@@ -9,6 +9,15 @@
 	padding-left: rem($space);
 	padding-right: rem($space);
 }
+
 .Container--large {
 	max-width: $max-width;
+}
+
+.Container--huge {
+	max-width: 65rem;
+}
+
+.Container--full {
+	max-width: none;
 }

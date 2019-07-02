@@ -1,120 +1,85 @@
 .Button {
+	@extend %font-bold;
 	display: inline-block;
-	background-image: linear-gradient(to bottom,#eb614c,#e84930);
-	color: $silk;
-	padding: .4em 1em .4em;
-	box-shadow: 2px 2px 0 0 #bc2b15;
-	letter-spacing: .1em;
+	padding: 0.4em 1em 0.5em;
+	font-size: 14px;
+	letter-spacing: 0.02em;
 	border-radius: 3px;
 	text-decoration: none;
-}
-a.Button,
-.Page a.Button {
+	background-image: none;
+	background-color: $blue;
+	// color: $white !important;
 	color: $silk;
+	// border: 2px solid rgba($white, 0.8);
+	// box-shadow: 5px 5px 0 0 darken($blue, 8%);
+	box-shadow: 3px 3px 0 0 #4e4e4e4a;
+
+	&:hover {
+		color: $white;
+		box-shadow: 3px 3px 0 0 #4e4e4e8c;
+	}
 }
+
+a.Button {
+	color: $silk;
+
+	&.is-active,
+	&:hover {
+		color: $white;
+	}
+}
+
 .NonBtn {
 	background-color: transparent;
 	border: 0;
 	padding: 0;
+
 	&:active,
 	&:focus {
 		outline: none;
 	}
 }
+
 .Button--yellow {
-	background-image: none;
 	background-color: $yellow;
-	color: $white !important;
-	border: 3px solid $white;
-	box-shadow: 6px 6px 0 0 $yellow;
+	color: $black !important;
 }
-.Button--blue {
-	background-image: none;
-	background-color: $blue;
-	color: $white !important;
-	border: 3px solid $white;
-	box-shadow: 6px 6px 0 0 darken($blue,8%);
+
+.Button--red {
+	background-color: $nice-slated-red;
+	color: $silk;
 }
-.Button--outline {
-	background-image: none;
-	background-color: $white;
-	color: $yellow !important;
-	border: 3px solid $yellow;
-	box-shadow: 6px 6px 0 0 $yellow;
+
+.Button--black {
+	background: $black;
+	color: $silk;
 }
-button {
-	color: $black;
+
+.Button--green {
+	background: $green;
+	color: $silk;
 }
-// .Button {
-// 	// @extend %font-bold;
-// 	-webkit-appearance: none;
-// 	background: transparent;
-// 	box-sizing: border-box;
-// 	cursor: pointer;
-// 	display: inline-block;
-// 	//font: inherit;
-// 	line-height: normal;
-// 	margin: 0;
-// 	position: relative;
-// 	text-align: center;
-// 	text-decoration: none;
-// 	user-select: none;
-// 	white-space: normal;
-// 	outline: none;
 
-// 	// Button needs this directly on the element. Inheritance is not enough
-// 	// @include negative-text;
+.ButtonGroup .Button {
+	margin-right: 0.2em;
+	margin-bottom: 0.4em;
 
-// 	border: none;
-// 	color: $white;
-// 	font-size: $font-20;
-// 	padding: 0;//0.6em 1.2em 0.6em;
-// 	text-transform: uppercase;
-// 	letter-spacing: 0.1em;
-// 	transition: color 150ms;
-// }
-// a.Button {
-// 	color: $white;
-// }
+	@media (min-width: $layout-s) {
+		font-size: 1em;
+	}
 
-// /**
-//  * UI states
-//  */
+	transition: all 150ms $easing;
+	transform-origin: center;
 
-// .Button:hover,
-// .Button:focus,
-// .Button:active {
-// 	text-decoration: none;
-// 	border-color: $primary-color;
-// }
+	&.is-active {
+		box-shadow: 3px 3px black;
+	}
+}
 
-// .Button.is-active  {
-// 	cursor: default;
-// }
-
-// .Button:disabled,
-// .Button.is-disabled {
-// 	cursor: default;
-// 	opacity: 0.75;
-// }
-
-
-// /**
-//  * Remove excess padding and border in Firefox 4+
-//  */
-
-// .Button::-moz-focus-inner {
-// 	border: 0;
-// 	padding: 0;
-// }
-
-// input[type="submit"] {
-// 	background-color: transparent;
-// 	border: 2px solid $primary-color;
-// 	color: $primary-color;
-// }
-// .Button--text {
-// 	border: 0;
-// 	text-transform: none;
-// 	font-size: $font-14;
-// }
+.FixedTicketButton {
+	position: fixed;
+	top: 0.6rem;
+	right: -0.5rem;
+	z-index: 1;
+	padding-right: 3rem;
+}

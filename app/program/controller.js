@@ -1,6 +1,5 @@
-import Ember from 'ember';
+import Controller from '@ember/controller'
 
-export default Ember.Controller.extend({
-	sortDefinition: ['acf.festival_date'],
-	sortedArtists: Ember.computed.sort('model.artists', 'sortDefinition'),
-});
+export default Controller.extend({
+	// queryParams: ['tag']
+})

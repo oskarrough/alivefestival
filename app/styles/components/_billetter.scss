@@ -7,7 +7,7 @@
 	h1 {
 		animation: discoFun 3s;
 		animation-timing-function: linear;
-		animation-iteration-count:infinite;
+		animation-iteration-count: infinite;
 	}
 	.DiscoFun {
 		img:first-of-type {
@@ -40,43 +40,31 @@
 	}
 }
 
-.Page.billetter {
-	.Page-banner {
-		position: relative;
-		z-index: 2;
-	}
-
-	.Page-banner h1 {
-		text-align: center;
-		color: $yellow;
-		text-shadow: 0.1em 0.1em 0 $blue;
-	}
-
-	.Page-body {
-		text-align: center;
-		padding-right: rem($space*1.5);
-		padding-top: 1em;
-		margin-bottom: 2em;
-	}
+.Page.billetter .Title {
+	text-align: center;
+	color: $yellow;
+	text-shadow: 0.1em 0.1em 0 $blue;
 }
 
 .BilletterBody {
 	background-color: $white;
 	max-width: $max-width;
-	padding: 3em 2em 1em;
+	padding: 3em 1em 1em;
 	margin: auto;
 	border: 3px solid $blue;
 	box-shadow: 4px 4px 0 0 $blue;
-	margin-bottom: 0;
-}
 
-.BilletterBody-button {
-	font-size: $font-25;
-	animation: tinyShake 600ms 400ms infinite;
-
-	&:hover {
-		transform: rotateZ(2deg);
-		animation-duration: 300ms;
+	@media (min-width: 30em) {
+		padding-left: 2em;
+		padding-right: 2em;
 	}
 }
 
+.BilletterBody .Button {
+	font-size: $font-17;
+
+	&:hover {
+		transform: rotateZ(2deg);
+		animation: tinyShake 250ms infinite;
+	}
+}

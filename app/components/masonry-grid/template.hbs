@@ -1,0 +1,9 @@
+{{#if hasBlock}}
+	{{yield}}
+{{else}}
+	{{#each items as |item|}}
+		<div class="Masonry-item">
+			{{item}}
+		</div>
+	{{/each}}
+{{/if}}

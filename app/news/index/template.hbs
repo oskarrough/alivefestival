@@ -1,7 +1,12 @@
 <h1>{{model.page.title}}</h1>
+
 {{#if model.page.content}}
 	{{{model.page.content}}}
 {{/if}}
+
+{{newsletter-form}}
+
+<br><br>
 
 {{news-list items=model.posts}}
 

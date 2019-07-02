@@ -15,7 +15,7 @@
 
 /*
 img {
-	@include iterative-delay(10);
+	@include animation-delay(10);
 	transition: opacity 250ms ease-in-out;
 	opacity: 0;
 

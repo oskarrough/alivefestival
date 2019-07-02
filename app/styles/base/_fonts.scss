@@ -51,19 +51,24 @@ $font-70: rem(60);
 }
 
 %font-light {
-	font-family: 'GT Haptik', sans-serif; font-weight: 300;
+	font-family: 'GT Haptik', sans-serif;
+	font-weight: 300;
 }
 %font-regular {
-	font-family: 'GT Haptik', sans-serif; font-weight: 400;
+	font-family: 'GT Haptik', sans-serif;
+	font-weight: 400;
 }
 %font-medium {
-	font-family: 'GT Haptik', sans-serif; font-weight: 500;
+	font-family: 'GT Haptik', sans-serif;
+	font-weight: 500;
 }
 %font-bold {
-	font-family: 'GT Haptik', sans-serif; font-weight: 600;
+	font-family: 'GT Haptik', sans-serif;
+	font-weight: 600;
 }
 %font-black {
-	font-family: 'GT Haptik', sans-serif; font-weight: 700;
+	font-family: 'GT Haptik', sans-serif;
+	font-weight: 700;
 }
 %font-black-rotalic {
 	font-family: 'GT Haptik Rotalic', sans-serif;
@@ -71,20 +76,17 @@ $font-70: rem(60);
 
 // Headers
 @mixin h1 {
-	// @extend %font-black;
 	@extend %font-black-rotalic;
 	line-height: 1.1;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.02em;
 	text-transform: uppercase;
 	font-size: $font-35;
-	@media (min-width: $layout-s) {
+
+	@media (min-width: $layout-m) {
 		font-size: $font-40;
 	}
 	@media (min-width: $layout-l) {
 		font-size: $font-50;
-	}
-	@media (min-width: $layout-xl) {
-		font-size: $font-70;
 	}
 }
 
@@ -93,6 +95,7 @@ $font-70: rem(60);
 	font-size: $font-25;
 	line-height: 1.1;
 	text-transform: uppercase;
+
 	@media (min-width: $layout-m) {
 		font-size: rem(26);
 	}
@@ -102,6 +105,7 @@ $font-70: rem(60);
 	// basically the same as a normal <p><strong combo
 	@extend %font-bold;
 	font-size: 1rem;
+	font-size: $font-20;
 }
 
 @mixin small-caps {

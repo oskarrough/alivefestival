@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var critical = require('critical').stream;
-// var rsync = require('rsyncwrapper').rsync;
 
 // Extracts the necessary CSS to render the specified viewport,
 // inlines it in the header and loads the rest of the CSS async

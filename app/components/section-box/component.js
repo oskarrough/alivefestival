@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Component from '@ember/component'
 
-export default Ember.Component.extend({
+export default Component.extend({
 	tagName: 'section',
 	classNames: ['SectionBox'],
 	classNameBindings: ['isOpen'],
@@ -8,7 +8,7 @@ export default Ember.Component.extend({
 
 	actions: {
 		toggleBody() {
-			this.toggleProperty('isOpen');
+			this.toggleProperty('isOpen')
 		}
 	}
-});
+})
