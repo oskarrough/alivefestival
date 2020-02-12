@@ -1,18 +1,19 @@
 # Alive Festival
 
-This is website for Thy Alive Festival → https://www.alivefestival.dk
+This is the website for Thy Alive Festival → https://www.alivefestival.dk
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with yarn)
+* [Node.js](https://nodejs.org/)
+* [Yarn](https://classic.yarnpkg.com/en/docs/install)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
+* `git clone git@gitlab.com:oskarrough/alivefestival.git`
+* `cd alivefestival`
 * `yarn`
 
 ## Running / Development
@@ -23,4 +24,4 @@ You will need the following things properly installed on your computer.
 
 ## Deploying
 
-Push the `2019` branch and it will automatically deploy via netlify.com.
+Push the `2019` branch and it will automatically deploy to alivefestival.dk via netlify.com.
