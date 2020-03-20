@@ -1,21 +1,35 @@
 .Aside {
 	position: fixed;
 	top: -5%;
-	left: -1rem;
+	// left: -1rem;
 	height: 110%;
+	width: 100%;;
 	z-index: 5;
-	display: flex;
-	flex-flow: column nowrap;
-	width: $aside-width;
+	padding-left: 15px;
+	padding-right: 15px;
 
 	background-color: $blue;
-	background: $green;
+	background: rgb(255,255,255);
 	transition: transform 250ms $ease-accelerate;
 
 	@media (max-width: $layout-m) {
-		// On mobile we reverse logic and hide it by default.
-		transform: translate3d(-100%, 0, 0);
-
+		//menu swings out from right side on burger-click
+		transform: translate3d(100%, 0, 0);
+		padding-top: 10%;
+		height: 110%;
+		overflow-y: scroll;
+		.show-aside & {
+			transition-timing-function: $ease-decelerate;
+			transition-duration: 300ms;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	@media (min-width: $layout-m) {
+		right: 0;
+		width: 20%;
+		padding-top: 5px;
+		transform: translate3d(100%, 0, 0);
+		justify-items: space-around;
 		.show-aside & {
 			transition-timing-function: $ease-decelerate;
 			transition-duration: 300ms;
@@ -29,12 +43,12 @@
 	display: block;
 	position: absolute;
 	top: 0;
-	right: -68px;
-	height: 100%;
+	// right: -68px;
+	height: 110%;
 	z-index: 1;
-	width: 100px;
+	// width: 100px;
 	// background: url(images/border-blue.png) no-repeat top right;
-	background: url(images/border-green.png) no-repeat top right;
+	// background: url(images/border-green.png) no-repeat top right;
 	pointer-events: none;
 
 	@media (min-width: $layout-m) {
@@ -45,20 +59,25 @@
 .Aside-inner {
 	// Above border.
 	position: relative;
+	display: flex;
+	flex-flow: column;
+	// justify-content: space-between;
+
 	z-index: 2;
+	width: 100%;
 	height: 100%;
-	overflow-y: auto;
+	color: black;
+
 }
 
 .Nav a {
 	color: $silk;
-
 	&:hover {
-		color: white;
+		color:  rgb(132, 255, 169);
 	}
 
 	&.is-active {
-		color: $black;
-		background: $yellow;
+		color: white;
+		background: rgb(132, 255, 169);
 	}
 }

@@ -1,6 +1,19 @@
 <div class="Index">
 	<!-- <h1 class="Index-title">{{model.page.title}}</h1> -->
-
+	<div class="header"> 
+			<div class="HeaderLogo">
+			{{#link-to 'application'}}
+				<img width="100" class="Logo-light" src="/assets/images/logos/logo-2017-white.png" alt="Thy Alive Festival">
+			{{/link-to}}
+			{{!-- <p class="Logo-date">THY. 30/7- 1/8</p> --}}
+			</div>
+			<div>
+			{{#link-to 'tickets' class="Button FixedTicketButton"}}
+			KØB BILLET
+			{{/link-to}}
+			</div>
+			<div class="flexbox-placeholder"></div>
+	</div>
 	<div class="Index-gallery">
 		{{gallery-counter selected=gallerySelected total=galleryTotal}}
 
@@ -73,12 +86,10 @@
 	</div>
 </div>
 
-{{!--
+
 <div class="TeaserBox TeaserBox--alive">
 	{{link-to 'Køb billet' 'tickets'}}
 </div>
 
-{{#link-to 'tickets' class="Button FixedTicketButton"}}
-	&bull; &nbsp;&nbsp;KØB BILLET&nbsp;&nbsp; &bull;
-{{/link-to}}
---}}
+
+

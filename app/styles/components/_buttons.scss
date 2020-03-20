@@ -1,8 +1,9 @@
 .Button {
 	@extend %font-bold;
 	display: inline-block;
-	padding: 0.4em 1em 0.5em;
-	font-size: 14px;
+	padding: 0.1em 1em 0.1em;
+	font-size: 20px;
+	text-align: center;
 	letter-spacing: 0.02em;
 	border-radius: 3px;
 	text-decoration: none;
@@ -12,7 +13,7 @@
 	color: $silk;
 	// border: 2px solid rgba($white, 0.8);
 	// box-shadow: 5px 5px 0 0 darken($blue, 8%);
-	box-shadow: 3px 3px 0 0 #4e4e4e4a;
+	// box-shadow: 3px 3px 0 0 #4e4e4e4a;
 
 	&:hover {
 		color: $white;
@@ -77,9 +78,19 @@ a.Button {
 }
 
 .FixedTicketButton {
-	position: fixed;
-	top: 0.6rem;
-	right: -0.5rem;
-	z-index: 1;
-	padding-right: 3rem;
+	border-radius: 0px;
+	text-transform: uppercase;
+	// max-height: 50px;
+	align-self: center;
+	
+
+	//big size
+	@media (min-width: $layout-m) {
+		justify-content: center;
+		font-size: 3vw;
+	}
+	// top: 0.6rem;
+	// right: -0.5rem;
+	// z-index: 1;
+	// padding-right: 3rem;
 }

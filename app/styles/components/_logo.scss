@@ -1,16 +1,17 @@
 .Logo {
 	font-size: 1.4rem;
-	margin-bottom: 1rem;
-	text-align: center;
-
+	// margin: 1rem;
+	// text-align: center;
+	
 	@media (max-width: $layout-m) {
-		margin-left: auto;
-		margin-right: auto;
+		// margin-left: auto;
+		// margin-right: auto;
+		display: none;
 	}
-
+	
 	a {
 		display: block;
-		padding: 2rem 0 0 1.8rem;
+		// padding: 2rem 0 0 1.8rem;
 		color: $black;
 		transition: padding 200ms;
 
@@ -21,14 +22,16 @@
 
 	img {
 		max-width: 100px;
+		filter: #{'invert()'};
 	}
 }
 
 .Logo-date {
 	@include h3;
-	color: $white;
-	color: $silk;
-	font-size: 0.875rem;
+	color: blue;
+	// color: $silk;
+	font-size: 2vw;
+	text-transform: uppercase;
 }
 
 .Logo-horse {

@@ -1,5 +1,41 @@
 .Index {
 	position: relative;
+	.header{
+		position: absolute;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		top: 5px;
+		left: 10px; 
+		right: 10px;
+		z-index: 9;		
+	}
+}
+.HeaderLogo{
+	display: inline-block;
+	.Logo-light{
+		@media (max-width: $layout-m) {
+			height: rem(50);
+			width: auto;	
+		}
+		//big size
+		@media (min-width: $layout-m) {
+			height: 100px;
+			width: auto;
+		}
+	}
+}
+.flexbox-placeholder{
+	@media (max-width: $layout-m) {
+		height: rem(50);
+		width: rem(42);
+	}
+	//big size
+	@media (min-width: $layout-m) {
+		height: 100px;
+		width: 100px;
+	}
 }
 
 .Index-title {

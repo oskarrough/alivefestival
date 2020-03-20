@@ -1,20 +1,12 @@
 .Burger {
 	position: fixed;
 	top: 0;
-	left: 0;
+	right: 0;
 	z-index: 6; // on top of .Aside
-
-	@media (min-width: $layout-m) {
-		display: none;
-	}
-
 	background-color: transparent;
-	// background-color: $white;
-	padding-right: rem($space);
+	// padding-right: rem($space);
 	border: 0;
-	// border: 5px solid;
 	text-transform: uppercase;
-	font-size: $font-14;
 	letter-spacing: 0.1em;
 
 	&:hover {
@@ -25,41 +17,67 @@
 		outline: none;
 	}
 
+	//state of menu button after menu is toggled visible
 	.show-aside & {
-		// background-color: rgba($white, 0.8);
-		// background-image: url(images/dots/dot6.svg);
+		&::before {
+			content: '';
+			display: inline-block;
+			width: rem(42);
+			height: rem(50);
+			background-image: url(images/dots/closingX.svg);
+			background-position: 50%;
+			right: 5px;
+			background-repeat: no-repeat;
+			// background-size: rem(25);
+			position: absolute;
+			z-index: 2;
+		}
 	}
 
+	//usual state of menu button
 	&::before {
 		content: '';
 		display: inline-block;
-		width: rem(42);
-		height: rem(50);
-		background-image: url(images/dots/dot7.svg);
-		background-position: 50%;
+		//small size 
+		@media (max-width: $layout-m) {
+			background-image: url(images/dots/burgerMobileFirst.svg);
+			width: rem(42);
+			height: rem(50);
+		}
+		//big size
+		@media (min-width: $layout-m) {
+			background-image: url(images/dots/burger.svg);
+			width: 100px;
+			height: 100px;
+		}
+		// background-position: 50%;
+		right: 10px;
 		background-repeat: no-repeat;
-		background-size: rem(25);
-		position: relative;
 		z-index: 2;
 	}
-	&::after {
-		content: '';
-		display: block;
-		height: 1.8rem;
-		width: 86%;
-		background-color: #ffcc33;
-		position: absolute;
-		top: 0.5rem;
-		left: 0.4rem;
-		transform: rotate(-2deg);
-	}
+
+	// &::after {
+	// 	content: '';
+	// 	display: block;
+	// 	// height: 1.8rem;
+	// 	width: 86%;
+	// 	position: absolute;
+	// 	top: 0.5rem;
+	// 	left: 0.4rem;
+	// 	transform: rotate(-2deg);
+	// }
+
+
 }
-.Burger-text {
-	display: inline-block;
-	position: relative;
-	z-index: 2;
-	top: rem(-18);
-}
+// .Burger-text {
+// 	display: inline-block;
+// 	position: fixed;
+// 	z-index: 2;
+// 	top: 0;
+// 	font-size: 400px;
+// 	text-align: center;
+// 	color: black;
+// }
 // .NavBtn {
 // 	padding-left: 0.5rem;
 // 	padding-right: 0.5rem;
