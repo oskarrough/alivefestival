@@ -1,6 +1,16 @@
 .List {
-	padding-left: 0;
 	list-style: none;
+    padding-left: 0;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	
+	@media (max-width: $layout-m) {
+			overflow-x: scroll;
+	}
+	// @media (min-width: $layout-m) {
+	// 	flex-wrap: wrap;
+	// }
 
 	time {
 		display: block;
@@ -10,34 +20,36 @@
 	}
 
 	h3 a {
-		// margin-bottom: 0.5rem;
-		// word-break: break-word;
-		color: $black;
+		text-transform: uppercase;
+		color: $blue;
 	}
-
 	.Media-figure {
+		flex-grow: 1;
 		overflow: hidden;
-		max-width: 150px;
+		width: 100%;
+	
+		// max-width: 15vw;
 	}
 }
 
 // The grid variant wraps and doesn't show body
 .List--grid {
 	display: flex;
-	flex-flow: row wrap;
-
+	flex-direction: row;
+	
 	.Media-body small {
 		display: none;
-
 		@media (min-width: $layout-s) {
 			display: initial;
 		}
 	}
-
-	@media (min-width: $layout-s) {
+	@media (min-width: $layout-m) {
+	flex-wrap: wrap;
 		> li {
-			flex: rem(300);
-			margin-right: rem($space);
+			width: 33%;
+			padding: 10px;
+			// flex: rem(300);
+			// margin-right: rem($space);
 		}
 	}
 }
@@ -48,6 +60,17 @@
 	filter: saturate(100%) brightness(1.01);
 	backface-visibility: hidden;
 	transform: translate3d(0, 0, 0);
+	width: 100%;
+	@media (max-width: $layout-m) {
+	
+	}
+	//big size
+	@media (min-width: $layout-m) {
+	width: 33%;
+	height: 33%;
+	object-fit: cover;
+	}
+	
 }
 
 .List a:hover img {

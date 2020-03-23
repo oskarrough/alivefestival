@@ -76,11 +76,12 @@ $font-70: rem(60);
 
 // Headers
 @mixin h1 {
-	@extend %font-black-rotalic;
+	// @extend %font-black-rotalic;
 	line-height: 1.1;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
 	font-size: $font-35;
+	z-index: 9999999999999;
 
 	@media (min-width: $layout-m) {
 		font-size: $font-40;

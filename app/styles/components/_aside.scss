@@ -73,11 +73,11 @@
 .Nav a {
 	color: $silk;
 	&:hover {
-		color:  rgb(132, 255, 169);
+		color: $turquise;
 	}
 
 	&.is-active {
 		color: white;
-		background: rgb(132, 255, 169);
+		background: $turquise;
 	}
 }

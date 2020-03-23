@@ -4,6 +4,11 @@ $base-font-size-unitless: 17;
 $base-line-height-unitless: (26/17);
 
 // Colors
+//new colors
+$turquise:  rgb(132, 255, 169);
+$buttonblue: rgb(86, 134, 255);
+
+
 $blue: hsl(214, 95%, 34%);
 $dark-green: hsl(154, 48%, 16%);
 $gold: hsl(43, 92%, 62%);
@@ -27,11 +32,11 @@ $black: hsl(0, 0%, 5%);
 
 // Color definitions
 $primary-color: $blue;
-$bg-color: $sand;
+$bg-color:  hsl(0, 0%, 100%);
 $text-color: $black;
 
 // Layout
-$space: 20px;
+$space: 10px;
 $border-width: 2px;
 $header-bar-height: 84px; //93px;
 $aside-width: 11rem;

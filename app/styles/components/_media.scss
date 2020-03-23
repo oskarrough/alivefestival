@@ -1,25 +1,31 @@
 /**
  * Media block
  */
-
 .Media {
+	width: 100vw;
+	
 	display: flex;
-	align-items: flex-start;
-	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: space-between;
+	background: $turquise;
+	list-style: none;
+	padding: 5px;
+	flex-grow: 1;
 }
 
 .Media-figure {
-	width: 40%;
-
-	img {
+	width: 100%;
+	a img {
 		vertical-align: bottom;
+		// width: 100%;
+		object-fit: cover;
 	}
 }
-
 .Media-body {
-	flex: 1;
-	margin-left: rem($space);
-}
+	width: 100%;
+	padding: 5px;
+} 
+
 
 .Media--center {
 	align-items: center;

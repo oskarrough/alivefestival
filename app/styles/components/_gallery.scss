@@ -25,7 +25,15 @@
 // Scale to the right format.
 // Responsive images are adjusted to the same.
 .Index-gallery {
-	background-color: $darkgrey;
+	// background-color: $darkgrey;
+	h1{
+		color: white;
+		position: absolute;
+		bottom: 2px;
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+	}
 }
 
 // Set a max height when object-fit is supported

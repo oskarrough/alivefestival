@@ -15,7 +15,15 @@
 }
 
 .Container--huge {
-	max-width: 65rem;
+	max-width: 100%;
+	.coverpic{
+
+
+	//big size
+	@media (min-width: $layout-m) {
+	display: none;
+	}
+	}
 }
 
 .Container--full {

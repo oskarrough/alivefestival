@@ -14,9 +14,11 @@
 			</div>
 			<div class="flexbox-placeholder"></div>
 	</div>
+	
 	<div class="Index-gallery">
+		<h1>Velkommen til <br> Alive Festival</h1>
 		{{gallery-counter selected=gallerySelected total=galleryTotal}}
-
+		
 		{{#flickity-gallery
 			class="FlickityGallery--responsive"
 			images=model.page.acf.gallery
@@ -29,7 +31,14 @@
 				{{image.sizes.xl}} 1600w,
 				{{image.sizes.xxl}} 1920w" />
 		{{/flickity-gallery}}
+		
 	</div>
+
+	
+	<div class="Container Container--huge"> 
+		<img class="coverpic" src="/assets/images/coverpic.png" width= "100%" alt="kom med til den vilde vest">
+	</div>
+
 
 	<div class="Container Container--huge mt2 mb1">
 		{{news-list items=model.news grid=true}}
