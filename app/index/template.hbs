@@ -34,30 +34,54 @@
 		
 	</div>
 
-	
 	<div class="Container Container--huge"> 
 		<img class="coverpic" src="/assets/images/coverpic.png" width= "100%" alt="kom med til den vilde vest">
 	</div>
 
 
-	<div class="Container Container--huge mt2 mb1">
+	<div>
 		{{news-list items=model.news grid=true}}
 	</div>
+		
+	{{!-- <div>
+		{{artists-list items=model.artists}}
+	</div> --}}
+	<div class="Container">
+		{{item-ticker items=model.artists}}
+	</div>
 
-	<div class="Media Media--center Media--yellow">
+	<div class="Container Container--huge">
+		<div class="Media Media--center Media--white">
 		<div class="Media-figure">
-			{{#flickity-gallery images=model.artists as |artist|}}
+			{{!-- {{#flickity-gallery images=model.artists as |artist|}}
 				{{#link-to 'program.artist' artist}}
-					<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" data-srcset="{{artist.better_featured_image.media_details.sizes.mini.source_url}} 200w, {{artist.better_featured_image.media_details.sizes.mini-double.source_url}} 400w" alt="{{artist.title}}">
-				{{/link-to}}
-			{{/flickity-gallery}}
+					<h1>{{artist.title}}</h1>
+					<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" data-srcset="{{artist.better_featured_image.media_details.sizes.mini.source_url}} 200w, {{artist.better_featured_image.media_details.sizes.mini-double.source_url}} 400w" alt="{{artist.title}}"> --}}
+				{{!-- {{/link-to}} 
+			{{/flickity-gallery}} --}}
 		</div>
+
+		<div class="Media-figure">
+			<ul>
+				{{#each model.artists as |artist|}}
+				<li>
+					{{#link-to 'program.artist' artist}}
+						<h1>{{artist.title}}</h1>
+					{{/link-to}}
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		
 		<div class="Media-body">
 			<h3>{{#link-to "program"}}{{{model.page.acf.musik_teaser_title}}}{{/link-to}}</h3>
-			<p class="Media-title">{{{model.page.acf.musik_teaser_text}}}</p>
-			<p>{{#link-to "program"}}Se hele musikprogrammet &rarr;{{/link-to}}</p>
+			{{!-- <p class="Media-title">{{{model.page.acf.musik_teaser_text}}}</p>
+			<p>{{#link-to "program"}}Se hele musikprogrammet &rarr;{{/link-to}}</p> --}}
 		</div>
 	</div>
+	</div>
+	
+
 
 	<div class="Media Media--center Media--reverse Media--red">
 		<div class="Media-figure">

@@ -1,19 +1,18 @@
 <ul class="List {{if grid 'List--grid'}}">
 	{{#each items as |post|}}
-		<li class="Media Media-container">
+		<li class="Media">
 
 			<div class="Media-body NewsHeadline">
 				<time>{{moment-format post.date}}</time>
 				<h3>
-					{{#link-to 'news.post' post }}
+					{{#link-to 'program.artist' post }}
 						{{post.title}}
 					{{/link-to}}
 				</h3>
-				<small>{{{post.excerpt}}}</small>
 			</div>
 
 			<figure class="Media-figure">
-				{{#link-to 'news.post' post class="Media"}}
+				{{#link-to 'program.artist' post class="Media"}}
 				<img src="{{post.better_featured_image.media_details.sizes.mini.source_url}}" alt="{{post.better_featured_image.alt}}"> {{/link-to}}
 			</figure>
 
@@ -22,3 +21,8 @@
 </ul>
 
 {{yield}}
+
+
+
+
+

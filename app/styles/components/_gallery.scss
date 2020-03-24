@@ -1,7 +1,6 @@
 // By default force 16:9 format.
 .FlickityGallery {
 	@include ratio(16, 9);
-
 	> * {
 		@include ratio-inner;
 	}

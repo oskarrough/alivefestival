@@ -1,25 +1,49 @@
 /**
  * Media block
  */
+.Media-container{
+	padding: 10px;
+	background: $turquise;
+}
 .Media {
-	width: 100vw;
-	
 	display: flex;
 	flex-direction: column;
 	align-items: space-between;
-	background: $turquise;
+	
 	list-style: none;
-	padding: 5px;
-	flex-grow: 1;
+
+	//small size 
+	@media (max-width: $layout-m) {
+		width: 100vw;
+	
+	}
+	//big size
+	@media (min-width: $layout-m) {
+		width: 100%;
+	}
 }
 
 .Media-figure {
 	width: 100%;
 	a img {
 		vertical-align: bottom;
-		// width: 100%;
+		width: 100%;
 		object-fit: cover;
 	}
+	li{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	h1{
+		font-size: 10vw;
+	}
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
 }
 .Media-body {
 	width: 100%;
@@ -76,6 +100,12 @@
 .Media--yellow {
 	background-color: $yellow;
 
+	a {
+		color: $black;
+	}
+}
+.Media--white {
+	background-color: white;
 	a {
 		color: $black;
 	}
