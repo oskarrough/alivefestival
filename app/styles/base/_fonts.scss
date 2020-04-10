@@ -2,6 +2,9 @@
  * Fonts
  */
 
+
+ ///font notering: button small: $font-20, big $font-70
+ 
 $font-14: rem(14);
 $font-16: rem(16);
 $font-17: rem(17);
@@ -80,18 +83,24 @@ $font-70: rem(60);
 	line-height: 1.1;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
-	font-size: $font-35;
+	font-size: $font-70;
 	z-index: 9999999999999;
-
+	color: white;
 	@media (min-width: $layout-m) {
-		font-size: $font-40;
+		font-size: $font-70;
 	}
 	@media (min-width: $layout-l) {
-		font-size: $font-50;
-	}
+		font-size: $font-70;
+	}	
+	@media (min-width: $layout-m) {
+		font-size: $font-70*2;
+		width: 80%;
+		margin: rem($space * 10);	
+}
 }
 
 @mixin h2 {
+	color: white;
 	@extend %font-bold;
 	font-size: $font-25;
 	line-height: 1.1;

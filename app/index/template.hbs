@@ -1,89 +1,99 @@
 <div class="Index">
-	<!-- <h1 class="Index-title">{{model.page.title}}</h1> -->
+	{{!-- header containing ticket button, and logo with unadjustable date : need edit for 2021 --}}
 	<div class="header"> 
 			<div class="HeaderLogo">
 			{{#link-to 'application'}}
 				<img width="100" class="Logo-light" src="/assets/images/logos/logo-2017-white.png" alt="Thy Alive Festival">
 			{{/link-to}}
-			{{!-- <p class="Logo-date">THY. 30/7- 1/8</p> --}}
+			<p class="Logo-date">THY. 30/7- 1/8</p>
 			</div>
 			<div>
-			{{#link-to 'tickets' class="Button FixedTicketButton"}}
+			{{#link-to 'tickets' class="Button FixedTicketButton Yellow-Button"}}
 			KØB BILLET
 			{{/link-to}}
 			</div>
 			<div class="flexbox-placeholder"></div>
-	</div>
 	
+	
+	
+	
+	
+	</div>
+
+	{{!-- video top including two adjustable headlines 1) h1 as title of page, 2) h2 as paragraph text of page. Video is video tag in page cms construct --}}
 	<div class="Index-gallery">
-		<h1>Velkommen til <br> Alive Festival</h1>
-		{{gallery-counter selected=gallerySelected total=galleryTotal}}
-		
-		{{#flickity-gallery
-			class="FlickityGallery--responsive"
-			images=model.page.acf.gallery
-			on-settle=(action 'updateGalleryCounter') as |image|
-		}}
-			<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{image.alt}}" data-sizes="auto" data-srcset="
-				{{image.sizes.s}} 320w,
-				{{image.sizes.m}} 768w,
-				{{image.sizes.l}} 1024w,
-				{{image.sizes.xl}} 1600w,
-				{{image.sizes.xxl}} 1920w" />
-		{{/flickity-gallery}}
-		
+		<div class="headline">
+		<h1>{{model.page.title}}</h1>
+		<h2 class="date">juli 30- aug. 1 <br> i Thy</h2>
+		</div>
+		<video autoplay loop class="cover-video">
+  			<source src={{model.page.acf.video}} alt={{model.page.acf.video.alt}} type="video/mp4">
+  			Your browser does not support the video tag.
+		</video>
 	</div>
-
-	<div class="Container Container--huge"> 
-		<img class="coverpic" src="/assets/images/coverpic.png" width= "100%" alt="kom med til den vilde vest">
-	</div>
-
-
-	<div>
-		{{news-list items=model.news grid=true}}
-	</div>
-		
-	{{!-- <div>
-		{{artists-list items=model.artists}}
-	</div> --}}
-	<div class="Container">
+	<div > 
+		{{!-- /ticker is edited in _container.scss --}}
 		{{item-ticker items=model.artists}}
 	</div>
 
-	<div class="Container Container--huge">
-		<div class="Media Media--center Media--white">
-		<div class="Media-figure">
-			{{!-- {{#flickity-gallery images=model.artists as |artist|}}
-				{{#link-to 'program.artist' artist}}
-					<h1>{{artist.title}}</h1>
-					<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" data-srcset="{{artist.better_featured_image.media_details.sizes.mini.source_url}} 200w, {{artist.better_featured_image.media_details.sizes.mini-double.source_url}} 400w" alt="{{artist.title}}"> --}}
-				{{!-- {{/link-to}} 
-			{{/flickity-gallery}} --}}
-		</div>
-
-		<div class="Media-figure">
-			<ul>
-				{{#each model.artists as |artist|}}
-				<li>
-					{{#link-to 'program.artist' artist}}
-						<h1>{{artist.title}}</h1>
-					{{/link-to}}
-				</li>
-				{{/each}}
-			</ul>
-		</div>
-		
-		<div class="Media-body">
-			<h3>{{#link-to "program"}}{{{model.page.acf.musik_teaser_title}}}{{/link-to}}</h3>
-			{{!-- <p class="Media-title">{{{model.page.acf.musik_teaser_text}}}</p>
-			<p>{{#link-to "program"}}Se hele musikprogrammet &rarr;{{/link-to}}</p> --}}
-		</div>
-	</div>
+	<div class="coverpic"> 
+		{{image-element images=model.page.acf.gallery numberone=true}}
 	</div>
 	
 
+	<div class="coverpic"> 
+		{{image-element images=model.page.acf.gallery numbertwo=true}}
+	</div>
+	
+		
+	<div class="frontpage">
+		<div > 
+		{{item-ticker items=model.news}}
+		</div>
+		<div class="Container">
+			{{news-list items=model.news grid=true}}
+		</div>
+		
+		{{!-- <div>
+			{{artists-list items=model.artists}}
+		</div> --}}
+	
+	
+		<div class="Media--center Media--turquise">
+			<div class="Media-figure Artist-images">
+				{{#flickity-gallery images=model.artists as |artist|}}
+					{{#link-to 'program.artist' artist}}
+						<h1>{{artist.title}}</h1>
+						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" data-srcset="{{artist.better_featured_image.media_details.sizes.mini.source_url}} 200w, {{artist.better_featured_image.media_details.sizes.mini-double.source_url}} 400w" alt="{{artist.title}}"> --}}
+					{{/link-to}} 
+				{{/flickity-gallery}}
+			</div>
 
-	<div class="Media Media--center Media--reverse Media--red">
+			<div class="Media-figure Artist-titles">
+				<ul>
+					{{#each model.artists as |artist|}}
+					<li>
+						{{#link-to 'program.artist' artist}}
+							<h1>{{artist.title}}</h1>
+						{{/link-to}}
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+			
+			<div class="Media-body">
+				<div>
+				{{#link-to 'program' class="Button FixedTicketButton"}}
+				{{{model.page.acf.musik_teaser_title}}}
+				{{/link-to}}
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	{{!-- <div class="Media Media--center Media--reverse Media--red">
 		<div class="Media-figure">
 			{{#link-to 'program' (query-params tag="event")}}
 				<img src="/assets/images/moods/eventyr/summer-camp.jpg" alt="Nationalpark Thy">
@@ -98,16 +108,15 @@
 				{{/link-to}}
 			</p>
 		</div>
-	</div>
+	</div> --}}
 
-	<div class="Container Container--huge mt2 mb1">
+	{{!-- <div class="Container Container--huge mt2 mb1">
 		{{newsletter-form}}
-	</div>
+	</div> --}}
 
-	<div class="Container pt2 pb2">
+	{{!-- <div class="Container pt2 pb2">
 		{{{model.page.acf.extra_text}}}
-		{{!-- <img src="/assets/images/square.gif" width="100%" alt=""> --}}
-	</div>
+	</div> --}}
 
 	<div class="Invert">
 		{{instagram-feed class="InstaFeed"}}
@@ -125,4 +134,19 @@
 </div>
 
 
+{{!-- {{#flickity-gallery
+			class="FlickityGallery--responsive"
+			images=model.page.acf.gallery
+			on-settle=(action 'updateGalleryCounter') as |image|
+		}}
+			<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{image.alt}}" data-sizes="auto" data-srcset="
+				{{image.sizes.s}} 320w,
+				{{image.sizes.m}} 768w,
+				{{image.sizes.l}} 1024w,
+				{{image.sizes.xl}} 1600w,
+				{{image.sizes.xxl}} 1920w" />
+		{{/flickity-gallery}} --}}
 
+
+
+	

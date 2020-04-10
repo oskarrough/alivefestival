@@ -2,20 +2,25 @@
  * Media block
  */
 .Media-container{
+	list-style: none;
 	padding: 10px;
-	background: $turquise;
+	background: yellow;
+	max-width: 600px;
+	width: 50%;
+	@media (min-width: $layout-m) {
+		// margin: 20px;
+	}
 }
+
 .Media {
 	display: flex;
 	flex-direction: column;
-	align-items: space-between;
-	
+	justify-content: space-between;
 	list-style: none;
-
+	max-width: 600px;
 	//small size 
 	@media (max-width: $layout-m) {
 		width: 100vw;
-	
 	}
 	//big size
 	@media (min-width: $layout-m) {
@@ -25,7 +30,10 @@
 
 .Media-figure {
 	width: 100%;
+	height: auto;
+	overflow: hidden;
 	a img {
+		width: 100%;
 		vertical-align: bottom;
 		width: 100%;
 		object-fit: cover;
@@ -37,7 +45,11 @@
 	}
 	h1{
 		font-size: 10vw;
+		@media (min-width: $layout-m) {
+			font-size: 20px;	
+		}
 	}
+	
 	ul{
 		list-style: none;
 		padding: 0;
@@ -46,88 +58,129 @@
 
 }
 .Media-body {
+	align-self: center;
 	width: 100%;
-	padding: 5px;
+	h3{
+		max-width: 500px;
+	}
+
+	@media (min-width: $layout-m) {
+		h3{
+			font-size: 40px;
+		}
+	}
+	
 } 
+.Media-body small {
+	width: 100%;
+	display: none;
+	@media (min-width: $layout-s) {
+		display: initial;
+		p {
+			font-size: 20px;
+			max-width: 500px;
+		}
+		
+	}
+}
 
 
 .Media--center {
 	align-items: center;
 	text-align: center;
 }
-
-.Media--reverse > .Media-figure {
-	order: 1;
-}
-
-.Media--red,
-.Media--yellow {
-	justify-content: center;
-
-	> .Media-figure {
-		@media (max-width: $layout-s) {
-			width: 100%;
-		}
-	}
-
-	> .Media-body {
-		margin-top: rem($space * 2);
-		margin-left: rem($space);
-		margin-right: rem($space);
-		margin-bottom: rem($space);
-		max-width: 40em;
-	}
-}
-
-.Media--yellow,
-.Media--red,
-.Media--blue {
-	p a {
-		text-decoration: underline;
-	}
-}
-
-.Media--red,
-.Media--blue {
-	a {
-		color: $silk;
-	}
-	a:hover {
-		color: $whitewhite;
-	}
-}
-
-.Media--yellow {
-	background-color: $yellow;
-
-	a {
-		color: $black;
-	}
-}
-.Media--white {
-	background-color: white;
-	a {
-		color: $black;
-	}
-}
-
-.Media--red {
-	background-color: $nice-slated-red;
-	color: $silk;
-}
-
-.Media--blue {
-	background-color: $blue;
-	color: $silk;
-}
-
-.Media-title {
-	@extend %font-black;
-	font-size: 5vw;
-	line-height: 1.2;
-
+.Media--turquise {
+	background-color: $turquise;
+	width: 100%;
+	height: auto;
+	padding: 10px;
 	@media (min-width: $layout-m) {
-		font-size: 3vw;
+		width: 40%;
+		height: 100%;
+		margin: $boxmargin;
 	}
 }
+
+.Artist-images{
+	@media (max-width: $layout-m) {
+		display: none;
+	}
+}
+
+.Artist-titles{
+	@media (min-width: $layout-m) {
+		display: none;
+	}
+}
+
+
+// .Media--reverse > .Media-figure {
+// 	order: 1;
+// }
+
+// .Media--red,
+// .Media--yellow {
+// 	justify-content: center;
+
+// 	> .Media-figure {
+// 		@media (max-width: $layout-s) {
+// 			width: 100%;
+// 		}
+// 	}
+
+// 	> .Media-body {
+// 		margin-top: rem($space * 2);
+// 		margin-left: rem($space);
+// 		margin-right: rem($space);
+// 		margin-bottom: rem($space);
+// 		max-width: 40em;
+// 	}
+// }
+
+// .Media--yellow,
+// .Media--red,
+// .Media--blue {
+// 	p a {
+// 		text-decoration: underline;
+// 	}
+// }
+
+// .Media--red,
+// .Media--blue {
+// 	a {
+// 		color: $silk;
+// 	}
+// 	a:hover {
+// 		color: $whitewhite;
+// 	}
+// }
+
+// .Media--yellow {
+// 	background-color: $yellow;
+
+// 	a {
+// 		color: $black;
+// 	}
+// }
+
+
+// .Media--red {
+// 	background-color: $nice-slated-red;
+// 	color: $silk;
+// }
+
+// .Media--blue {
+// 	background-color: $blue;
+// 	color: $silk;
+// }
+
+// .Media-title {
+// 	@extend %font-black;
+// 	font-size: 5vw;
+// 	line-height: 1.2;
+
+// 	@media (min-width: $layout-m) {
+// 		font-size: 3vw;
+// 	}
+// }
 

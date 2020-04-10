@@ -4,11 +4,10 @@
 	right: 0;
 	z-index: 6; // on top of .Aside
 	background-color: transparent;
-	// padding-right: rem($space);
+	margin: rem($space);
 	border: 0;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-
 	&:hover {
 		cursor: pointer;
 	}
@@ -50,8 +49,6 @@
 			width: 100px;
 			height: 100px;
 		}
-		// background-position: 50%;
-		right: 10px;
 		background-repeat: no-repeat;
 		z-index: 2;
 	}

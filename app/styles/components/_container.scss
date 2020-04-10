@@ -2,13 +2,15 @@
  * Containers
  */
 
-.Container {
-	
-	align-self: center;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: rem($space);
-	padding-right: rem($space);
+.Container {	
+
+	@media (max-width: $layout-m) {
+		width: 100%;
+	}
+	@media (min-width: $layout-m) {
+		margin: $boxmargin;
+		width: auto;
+	}
 }
 
 .Container--large {
@@ -16,16 +18,11 @@
 }
 
 .Container--huge {
-	max-width: 100%;
-	padding: 0;
-	margin: 0;
-	.coverpic{
-
-
-	//big size
 	@media (min-width: $layout-m) {
-	display: none;
+		display: none;
 	}
+	@media (min-width: $layout-m) {
+		width: 50%;
 	}
 }
 
@@ -37,17 +34,20 @@
 	h1{
 		position: relative;
 		width: 100%;
+		color: black;
 		white-space: nowrap;
 		padding-right: 15px;
 		display: inline-block;
-
 	}
+	h1:hover{
+		color: $turquise;
+	}
+
 }
 #ticker-container{
+	padding: 10px;
 	width: 100%;
 	overflow: hidden;
-	border: 2px solid blue;
-
 }
 .moving-container{
 		position: relative;

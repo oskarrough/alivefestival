@@ -1,0 +1,26 @@
+<div class="image-element">
+    {{#if numberone}}
+	<img src={{images.1.sizes.xxl}}/>
+    {{log images.1.sizes.xxl}}
+	{{/if}}
+    {{#if numbertwo}}
+	<img src={{images.2.sizes.xxl}}/>
+	{{/if}}
+    {{#if numberthree}}
+	<img src={{images.3.sizes.xxl}}/>
+	{{/if}}
+    {{#if numberfour}}
+	<img src={{images.4.sizes.xxl}}/>
+	{{/if}}
+     {{#if numberfive}}
+	<img src={{images.5.sizes.xxl}}/>
+
+	{{/if}}
+     {{!-- {{#if finalimage}}
+	<img src={{images.(images.length-1).sizes.xxl}}/>
+	{{/if}}
+    --}}
+</div>
+
+
+{{yield}}

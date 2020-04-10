@@ -1,96 +1,79 @@
 .Button {
 	@extend %font-bold;
 	display: inline-block;
+	margin: 5px;
 	padding: 0.1em 1em 0.1em;
-	font-size: 20px;
+	font-size: $font-20;
+	justify-content: center;
+	@media (min-width: $layout-m) {
+		font-size: $font-70;
+	}
+	text-transform: uppercase;
+	align-self: center;
 	text-align: center;
 	letter-spacing: 0.02em;
-	border-radius: 3px;
+	border-radius: 0px;
 	text-decoration: none;
 	background-image: none;
-	background-color: $buttonblue;
-	// color: $white !important;
-	color: $silk;
-	// border: 2px solid rgba($white, 0.8);
-	// box-shadow: 5px 5px 0 0 darken($blue, 8%);
-	// box-shadow: 3px 3px 0 0 #4e4e4e4a;
-
-	&:hover {
-		color: $white;
-		box-shadow: 3px 3px 0 0 #4e4e4e8c;
-	}
+	color: $white;
+	white-space: nowrap;
 }
-
+.Yellow-Button{
+	background-color: none;
+	background-image: none;
+	border: 2px solid $yellow;
+}
 a.Button {
-	color: $silk;
-
 	&.is-active,
 	&:hover {
 		color: $white;
 	}
 }
 
-.NonBtn {
-	background-color: transparent;
-	border: 0;
-	padding: 0;
+// .NonBtn {
+// 	background-color: transparent;
+// 	border: 0;
+// 	padding: 0;
 
-	&:active,
-	&:focus {
-		outline: none;
-	}
-}
+// 	&:active,
+// 	&:focus {
+// 		outline: none;
+// 	}
+// }
 
-.Button--yellow {
-	background-color: $yellow;
-	color: $black !important;
-}
+// .Button--yellow {
+// 	background-color: $yellow;
+// 	color: $black !important;
+// }
 
-.Button--red {
-	background-color: $nice-slated-red;
-	color: $silk;
-}
+// .Button--red {
+// 	background-color: $nice-slated-red;
+// 	color: $silk;
+// }
 
-.Button--black {
-	background: $black;
-	color: $silk;
-}
+// .Button--black {
+// 	background: $black;
+// 	color: $silk;
+// }
 
-.Button--green {
-	background: $green;
-	color: $silk;
-}
+// .Button--green {
+// 	background: $green;
+// 	color: $silk;
+// }
 
-.ButtonGroup .Button {
-	margin-right: 0.2em;
-	margin-bottom: 0.4em;
+// .ButtonGroup .Button {
+// 	margin-right: 0.2em;
+// 	margin-bottom: 0.4em;
 
-	@media (min-width: $layout-s) {
-		font-size: 1em;
-	}
+// 	@media (min-width: $layout-s) {
+// 		font-size: 1em;
+// 	}
 
-	transition: all 150ms $easing;
-	transform-origin: center;
+// 	transition: all 150ms $easing;
+// 	transform-origin: center;
 
-	&.is-active {
-		box-shadow: 3px 3px black;
-	}
-}
+// 	&.is-active {
+// 		box-shadow: 3px 3px black;
+// 	}
+// }
 
-.FixedTicketButton {
-	border-radius: 0px;
-	text-transform: uppercase;
-	// max-height: 50px;
-	align-self: center;
-	
-
-	//big size
-	@media (min-width: $layout-m) {
-		justify-content: center;
-		font-size: 3vw;
-	}
-	// top: 0.6rem;
-	// right: -0.5rem;
-	// z-index: 1;
-	// padding-right: 3rem;
-}

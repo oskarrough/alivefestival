@@ -1,55 +1,37 @@
 .List {
 	list-style: none;
-    padding-left: 0;
+	margin-bottom: 30px;
+	padding-left: 0;
 	display: flex;
-	flex-direction: row;
-	width: 100%;
-	
 	@media (max-width: $layout-m) {
-			overflow-x: scroll;
+		flex-direction: row;
+		overflow-x: scroll;
 	}
-	// @media (min-width: $layout-m) {
-	// 	flex-wrap: wrap;
-	// }
-
 	time {
 		display: block;
 		font-size: small;
 		margin-bottom: 0;
 		opacity: 0.5;
 	}
-
 	h3 a {
 		text-transform: uppercase;
 		color: $blue;
-	}
-	.Media-figure {
-		flex-grow: 1;
-		overflow: hidden;
-		width: 100%;
-	
-		// max-width: 15vw;
 	}
 }
 
 // The grid variant wraps and doesn't show body
 .List--grid {
-	display: flex;
-	flex-direction: row;
-	
-	.Media-body small {
-		display: none;
-		@media (min-width: $layout-s) {
-			display: initial;
-		}
-	}
+	list-style: none;
+	padding-left: 0;
+	padding-top: 0;
+	margin: 0;
+	max-height: 1500px;
+	overflow-y: scroll;
 	@media (min-width: $layout-m) {
-	flex-wrap: wrap;
+	flex-direction: column;
 		> li {
-			width: 33%;
+			width: 100%;
 			padding: 10px;
-			// flex: rem(300);
-			// margin-right: rem($space);
 		}
 	}
 }
@@ -61,17 +43,7 @@
 	filter: saturate(100%) brightness(1.01);
 	backface-visibility: hidden;
 	transform: translate3d(0, 0, 0);
-	width: 100%;
-	@media (max-width: $layout-m) {
-	
-	}
-	//big size
-	@media (min-width: $layout-m) {
-	width: 33%;
-	height: 33%;
-	object-fit: cover;
-	}
-	
+	width: 100%;	
 }
 
 .List a:hover img {

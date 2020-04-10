@@ -18,30 +18,13 @@ export default Component.extend({
 
     moveHeadLines();
     
-    // function moveHeadLines() {
-    //     left--;
-    //             if (left <= -links[0].offsetWidth) {
-    //             ticker.append(links[0])
-    //             links[0].remove();
-    //             links = $('.ticker')
-    //             left += links[0].offsetWidth;
-    //             }
-    //         ticker.css("left", left + "px");
-    
-    //         animId = requestAnimationFrame(moveHeadLines);
-    // }
-        
-
     function moveHeadLines() {
         left--;
-        console.log("function is called");
         if (left <= -links[0].offsetWidth) {
           left += links[0].offsetWidth;
           links[0].remove();
           ticker.append(links[0])
-        
-        //   ticker.append(links[0])
-        //   ticker.appendChild(links[0]);
+
         }
         links = $('.ticker')
         ticker.css("left", left + "px");

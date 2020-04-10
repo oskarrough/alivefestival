@@ -122,6 +122,7 @@ function alivefestival_widgets_init() {
 }
 add_action( 'widgets_init', 'alivefestival_widgets_init' );
 
+
 /**
  * Enqueue scripts and styles.
  */
@@ -169,7 +170,7 @@ add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
 
 
-// function enable_more_buttons($buttons) {
+// function enable_more_s($buttons) {
 // 	// $buttons[] = 'fontselect';
 // 	// $buttons[] = 'fontsizeselect';
 // 	$buttons[] = 'styleselect';

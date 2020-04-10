@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-
+<?php get_sidebar( 'secondery-1' ); ?>
 	<div style="position: absolute; z-index: -1; visibility: hidden;">
 		<?php
 			// Start the loop.
@@ -23,6 +23,7 @@ get_header(); ?>
 			// End of the loop.
 			endwhile;
 			?>
+			
 	</div>
 
 <?php get_footer();

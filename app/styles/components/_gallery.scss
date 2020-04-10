@@ -23,22 +23,12 @@
 
 // Scale to the right format.
 // Responsive images are adjusted to the same.
-.Index-gallery {
-	// background-color: $darkgrey;
-	h1{
-		color: white;
-		position: absolute;
-		bottom: 2px;
-		width: 100%;
-		justify-content: center;
-		text-align: center;
-	}
-}
+
 
 // Set a max height when object-fit is supported
 .object-fit .Index-gallery {
 	min-height: 300px;
-	max-height: 60vh;
+	// max-height: 60vh;
 	overflow: hidden;
 }
 
@@ -126,11 +116,11 @@
 // 	}
 // }
 
-// // Buttons
-// .FlickityGallery:hover .flickity-prev-next-button {
+// // s
+// .FlickityGallery:hover .flickity-prev-next- {
 // 	opacity: 1;
 // }
-// .flickity-prev-next-button {
+// .flickity-prev-next- {
 // 	// C's optical alignment, yo
 // 	top: 47%;
 // 	opacity: 0;
