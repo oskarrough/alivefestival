@@ -1,16 +1,18 @@
 .Nav {
 	display: flex;
 	width: 100%;
-	// padding: 10px;
+	padding-top: $hugeContainerPadding;
+	@media (max-width: $layout-m) {
+		padding-top: $ContainerPadding;
+	}
 	flex-flow: column nowrap;
 }
 
 .Nav a {
 	@extend %font-bold;
-	color: blue;
+	color: $blue;
 	text-transform: uppercase;
 	font-size: 15vw;
-
 	//small size 
 	@media (max-width: $layout-m) {
 		//menu swings out from right side on burger-click
@@ -51,9 +53,8 @@
 
 // The social nav
 .Social {
-	position: relative;
-	bottom: -10%;
-
+	position: absolute;
+	bottom: 10%;
 	display: flex;
 	flex-direction: row;
 	justify-items: center;
@@ -61,7 +62,6 @@
 	align-content: center;
 	justify-content: space-between;
 	width: 100%;
-	
 	//small size 
 	@media (max-width: $layout-m) {
 		justify-content: space-around;
@@ -72,8 +72,6 @@
 	}
 	//big size
 	@media (min-width: $layout-m) {
-		position: relative;
-		bottom: -20%;
 		img {
 			width: 5vw;
 			height: 5vw;

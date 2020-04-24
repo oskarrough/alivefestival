@@ -3,9 +3,12 @@
 	.header{
 		margin: rem($space);
 		position: absolute;
-		display: flex;
+		display: inline-flex;
 		flex-direction: row;
 		justify-content: space-between;
+		@media (min-width: $layout-m) {
+			align-items: center;
+		}
 		align-items: flex-start;
 		top: 5px;
 		left: 10px; 
@@ -24,8 +27,8 @@
 			width: auto;	
 		}
 		@media (min-width: $layout-m) {
-			height: 100px;
-			width: auto;
+			// height: 100px;
+			min-width: 100px;
 		}
 	}
 	.Logo-date{
@@ -46,33 +49,35 @@
 }
 .Index-gallery {
 	position: relative;
-	background-color: $darkgrey;
+	// background-color: $darkgrey;
 	display: inline-block;
 	width: 100%;
+	height: 100%;
 	//small size 
 	@media (max-width: $layout-m) {
-		height: 600px;
-		border: 2px solid $turquise;
+		height: 100%;
 	}
 	.headline{
+		color: white;
 		display: flexbox;
 		flex-direction: column;
+		justify-content: flex-start;
 		position: absolute;
-		bottom: 10%;
+		top: $topPadding;
 		width: 80%;
 		margin: rem($space * 2);
-		white-space: pre-wrap;
 		justify-content: left;
+		margin-bottom: 10%;
+		h2{
+			width: 90%;
+		}
 	}
-	
-	
 }
 .cover-video{
-	//small size 
 	object-fit: cover;
 	width: 100%;
 	@media (max-width: $layout-m) {
-		min-height: 600px;
+		min-height: 90vh;
 	}
 	//big size
 	@media (min-width: $layout-m) {
@@ -83,57 +88,19 @@
 }
 .coverpic{
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	img{
-		height: 100vh;
+		max-height: 100vh;
+		max-width: 100%;
 		object-fit: cover;
 	}
-	
 }
 .frontpage{
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: flex-start;
 }
-// .Index-title {
-// 	max-width: 5em;
-// 	text-align: right;
-// 	color: white;
-
-// 	@media (min-width: $layout-s) {
-// 		font-size: rem(20);
-// 	}
-// 	@media (min-width: $layout-m) {
-// 		font-size: 2vw;
-// 	}
-// 	opacity: 0.8;
-// 	position: absolute;
-// 	right: 2rem;
-// 	top: 2rem;
-// 	z-index: 5;
-// }
 
 
-
-// .Index-artists {
-// 	@extend %font-bold;
-// 	@include negative-text;
-// 	display: block;
-// 	padding: 0.75em 0;
-// 	line-height: 1;
-
-// 	// background: $blue;
-// 	background: $yellow;
-// 	color: $black;
-
-// 	a {
-// 		color: $black;
-// 	}
-// }
-
-// .Index .GalleryCounter {
-// 	position: absolute;
-// 	right: rem($space);
-// 	bottom: rem($space);
-// 	opacity: 0.8;
-// }

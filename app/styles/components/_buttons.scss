@@ -2,33 +2,55 @@
 	@extend %font-bold;
 	display: inline-block;
 	margin: 5px;
-	padding: 0.1em 1em 0.1em;
+	padding: $buttonPadding;
 	font-size: $font-20;
 	justify-content: center;
 	@media (min-width: $layout-m) {
-		font-size: $font-70;
+		font-size: $font-20;
 	}
 	text-transform: uppercase;
 	align-self: center;
 	text-align: center;
-	letter-spacing: 0.02em;
+	letter-spacing: 0.03em;
+	height: rem(40);
 	border-radius: 0px;
 	text-decoration: none;
 	background-image: none;
-	color: $white;
+	background-color: none;
+	color: $whitewhite;
 	white-space: nowrap;
 }
+.button:focus{
+	outline: none;
+}
 .Yellow-Button{
-	background-color: none;
-	background-image: none;
 	border: 2px solid $yellow;
+	color: $whitewhite
 }
-a.Button {
-	&.is-active,
-	&:hover {
-		color: $white;
-	}
+.coral-Button{
+	border: 2px solid $coral;
+	color: $whitewhite
 }
+.purple-Button{
+	border: 1px solid $purple;
+	color: black;
+}
+.purple{
+	background-color: $purple;
+	color: $coral;
+	margin: 0;
+	border: none;
+
+}
+.black-Button{
+	border: 1px solid black;
+}
+// a.Button {
+// 	&.is-active,
+// 	&:hover {
+// 		color: $whitewhite
+// 	}
+// }
 
 // .NonBtn {
 // 	background-color: transparent;

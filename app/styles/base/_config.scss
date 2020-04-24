@@ -7,18 +7,31 @@ $base-line-height-unitless: (26/17);
 //new colors
 $turquise:  rgb(132, 255, 169);
 $buttonblue: rgb(86, 134, 255);
+$coral: #ff938b;
+$purple: #af00ff;
+$transparent: rgba(0,0,0,0);
+$blue: rgb(0, 8, 255);
 //new margin
-$boxmargin: 10px;
+$boxmargin: 0px;
+$tickermargin: 10px;
+$ContainerPadding: 18px;
+$LargeContainerPadding: 10vh;
+$hugeContainerPadding: 20vh;
+$topPadding: 40vh;
+$smallImageSize: 70vw;
+$bigImageSize: 100vh;
+$buttonPadding: 0.1em 1em 0.1em;
+$SponsorImageSize: 40vw;
 
 
-$blue: hsl(214, 95%, 34%);
+;
 $dark-green: hsl(154, 48%, 16%);
 $gold: hsl(43, 92%, 62%);
-$green: hsl(149, 90%, 27%);
+$green:#256b25;
 $lightblue: #2581f5;
 $nice-slated-red: hsl(13, 59%, 53%);
 $orange: hsl(21, 100%, 45%);
-$purple: hsl(240, 26%, 25%);
+// $purple: hsl(240, 26%, 25%);
 $red: hsl(0, 100%, 50%);
 $sand-stone: hsl(334, 10%, 92%);
 $sand: hsl(10, 21%, 92%);
@@ -34,7 +47,7 @@ $black: hsl(0, 0%, 5%);
 
 // Color definitions
 $primary-color: $blue;
-$bg-color:  hsl(0, 0%, 100%);
+$bg-color:  #f4e7d6;
 $text-color: $black;
 
 // Layout

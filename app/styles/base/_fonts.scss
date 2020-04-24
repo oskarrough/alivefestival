@@ -53,6 +53,13 @@ $font-70: rem(60);
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'brian-james';
+	src: url('fonts/brian-james/BrianJames.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 %font-light {
 	font-family: 'GT Haptik', sans-serif;
 	font-weight: 300;
@@ -77,6 +84,10 @@ $font-70: rem(60);
 	font-family: 'GT Haptik Rotalic', sans-serif;
 }
 
+%font-bold-brian-james{
+	font-family: 'brian-james', sans-serif;
+	font-weight: 600;
+}
 // Headers
 @mixin h1 {
 	// @extend %font-black-rotalic;
@@ -85,35 +96,32 @@ $font-70: rem(60);
 	text-transform: uppercase;
 	font-size: $font-70;
 	z-index: 9999999999999;
-	color: white;
+	
 	@media (min-width: $layout-m) {
 		font-size: $font-70;
 	}
 	@media (min-width: $layout-l) {
 		font-size: $font-70;
 	}	
-	@media (min-width: $layout-m) {
-		font-size: $font-70*2;
-		width: 80%;
-		margin: rem($space * 10);	
-}
 }
 
 @mixin h2 {
-	color: white;
-	@extend %font-bold;
+	
+	@extend %font-bold-brian-james;
 	font-size: $font-25;
-	line-height: 1.1;
-	text-transform: uppercase;
+	line-height: 1.3;
+	// text-transform: uppercase;
 
 	@media (min-width: $layout-m) {
 		font-size: rem(26);
 	}
 }
 
+
 @mixin h3 {
 	// basically the same as a normal <p><strong combo
 	@extend %font-bold;
+	line-height: 1;
 	font-size: 1rem;
 	font-size: $font-20;
 }

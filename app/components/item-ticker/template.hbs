@@ -1,13 +1,29 @@
 
 <div id="ticker-container">
 <div class="moving-container">
-	{{#each items as |artist|}}
-			<div class="ticker">
-					{{#link-to 'program.artist' artist}}
-						<h1 class="titles"> | {{artist.title}}</h1>
-					{{/link-to}}
+	{{#if no-urgent-news}}
+		{{#each items as |artist|}}
+			<div class="ticker">		
+				{{#link-to 'program.artist' artist}}
+					<h1 class="titles"> | {{artist.title}}</h1>
+				{{/link-to}}
 			</div>
-	{{/each}}
+		{{/each}}
+	{{else}}
+		
+		<div class="ticker">		
+					<h1 class="titles">{{items}}  | </h1>
+		</div>
+		<div class="ticker">		
+					<h1 class="titles">{{items}}  | </h1>
+		</div>
+		<div class="ticker">		
+					<h1 class="titles">{{items}}  | </h1>
+		</div>
+		<div class="ticker">		
+					<h1 class="titles">{{items}}  | </h1>
+		</div>
+	{{/if}}
 </div>
 </div>
 

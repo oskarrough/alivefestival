@@ -1,0 +1,38 @@
+
+
+{{!-- <button id="see-more-images">
+	<img src="/assets/images/logos/slide-arrow-right-yellow.png"/>
+</button> --}}
+
+<ul class="List {{if topBound 'List-TopBound'}}">
+		{{#each items as |post|}}
+		<li class="Media Media-container Media-activities">
+			<figure class="activities">
+				{{#link-to 'news.post' post class="Media activity-image"}}
+				{{#if post.better_featured_image.media_details.sizes.xl.source_url}}
+				<img src="{{post.better_featured_image.media_details.sizes.xl.source_url}}" alt="{{post.better_featured_image.alt}}"> 
+				{{else}}
+				<img src="{{post.better_featured_image.media_details.sizes.l.source_url}}" alt="{{post.better_featured_image.alt}}"> 
+				{{/if}}
+				{{/link-to}}
+			</figure>
+			<div class="Media-activities-headlines">
+				<h3>
+					{{#link-to 'news.post' post class="headlines"}}
+						{{post.title}}
+					{{/link-to}}
+				</h3>
+		    </div>
+
+			
+		</li>
+		{{/each}}
+</ul>
+
+
+
+	
+
+
+
+{{yield}}

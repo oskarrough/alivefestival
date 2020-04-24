@@ -1,0 +1,14 @@
+<div class="sponsors PaddedContainer">
+{{#each items as |image|}}
+        {{#if image.sizes.s}}
+            <img class="sponsor-image" src={{image.sizes.s}} />
+        {{else}}
+         {{#if image.sizes.m}}
+            <img class="spo nsor-image"src={{image.sizes.m}} />
+            {{else}}
+            <img class="sponsor-image" src={{image.sizes.l}} />
+            {{/if}}
+        {{/if}}
+{{/each}}
+</div>
+{{yield}}

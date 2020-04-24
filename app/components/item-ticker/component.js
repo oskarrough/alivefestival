@@ -10,20 +10,27 @@ export default Component.extend({
     let links = this.$('.ticker')
     var left = ticker.offset().left;
     var animId;
+
+   
     
     ticker.hover(function() {
-                cancelAnimationFrame(animId);
+        cancelAnimationFrame(animId);
      }, function(){
          moveHeadLines()});
 
     moveHeadLines();
-    
+   
+  
     function moveHeadLines() {
+  
         left--;
         if (left <= -links[0].offsetWidth) {
           left += links[0].offsetWidth;
-          links[0].remove();
-          ticker.append(links[0])
+      
+          
+          $('.moving-container')[0].appendChild(links[0])
+          // links[0].remove();
+          
 
         }
         links = $('.ticker')

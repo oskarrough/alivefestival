@@ -1,57 +1,49 @@
 /**
  * Media block
  */
+
+//  general media containers
 .Media-container{
 	list-style: none;
-	padding: 10px;
-	background: yellow;
-	max-width: 600px;
-	width: 50%;
-	@media (min-width: $layout-m) {
-		// margin: 20px;
-	}
 }
-
 .Media {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	list-style: none;
-	max-width: 600px;
+	padding: 0;
+	margin: 0;
 	//small size 
 	@media (max-width: $layout-m) {
 		width: 100vw;
 	}
 	//big size
 	@media (min-width: $layout-m) {
-		width: 100%;
+		width: 100vw;
 	}
 }
 
+// media-figure for news list
 .Media-figure {
 	width: 100%;
-	height: auto;
-	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
 	a img {
-		width: 100%;
+		min-height: $bigImageSize;
 		vertical-align: bottom;
 		width: 100%;
 		object-fit: cover;
 	}
 	li{
 		list-style: none;
+		list-style-type: none;
 		padding: 0;
 		margin: 0;
 	}
-	h1{
-		font-size: 10vw;
-		@media (min-width: $layout-m) {
-			font-size: 20px;	
-		}
-	}
-	
 	ul{
 		list-style: none;
+		list-style-type: none;
 		padding: 0;
 		margin: 0;
 	}
@@ -60,58 +52,248 @@
 .Media-body {
 	align-self: center;
 	width: 100%;
-	h3{
-		max-width: 500px;
-	}
-
-	@media (min-width: $layout-m) {
-		h3{
-			font-size: 40px;
-		}
-	}
-	
+	display: inline-block;
 } 
-.Media-body small {
-	width: 100%;
-	display: none;
-	@media (min-width: $layout-s) {
-		display: initial;
-		p {
-			font-size: 20px;
-			max-width: 500px;
-		}
-		
-	}
+
+
+
+.Media-forcedHeight{
+	padding-top: $hugeContainerPadding;
+	padding-bottom: $hugeContainerPadding;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
-
-
 .Media--center {
+	width: 100%;
 	align-items: center;
 	text-align: center;
 }
-.Media--turquise {
-	background-color: $turquise;
-	width: 100%;
+
+
+// color editions/ themes with color coding for background, a, link, h1-h3
+.Media--coral {
+	background-color: $coral;
+}
+.Media--purple {
+	background-color: $purple;
+	h2{
+		font-size: $font-50;
+		color: $coral;
+		margin: $ContainerPadding;
+	}
+}
+.Media--green{
+	background-color: $green;
+	h2{
+		font-size: $font-50;
+		color: $coral;
+	}
+}
+.Media--backgroundcolor{
+	background-color: $bg-color;
+	h2{
+		color: black;
+	}
+	.headline-big{
+		font-size: 8vh;
+		text-align: center;
+		padding: $ContainerPadding;
+	}
+	.headlines{
+		color: $purple;
+		font-size: $font-40;
+	}
+	.headline-small{
+		text-align: center;
+		padding: $ContainerPadding;
+	}
+	a{
+		color: black;
+	}
+	
+}
+.Media-TopFade{
 	height: auto;
-	padding: 10px;
-	@media (min-width: $layout-m) {
-		width: 40%;
-		height: 100%;
-		margin: $boxmargin;
-	}
-}
-
-.Artist-images{
+	margin-top: -150px;
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0))0%, to(rgba(0,0,0,1))20%);
+	mask-image: linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(0,0,0,1)10%);
 	@media (max-width: $layout-m) {
-		display: none;
+		min-height: 100vh;
+		margin-top: -100px;
+		-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0))0%, to(rgba(0,0,0,1))10%);
+		mask-image: linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(0,0,0,1)10%);
 	}
 }
+.Media-activities{
+	width: $bigImageSize;
+	margin: $ContainerPadding;
+	position: relative;
+	
+	.activities{
+		width: 100%;
+	}
+	.activity-image{
+		width: $smallImageSize;
+		max-width: 500px;
+		height: auto;
+		object-fit: contain;
+	}
+}
+.Media-activities-headlines{
+	margin-bottom: $LargeContainerPadding;
+	h2{
+		font-size: $font-20;
+		padding: 0;
+		margin: 0;
+	}
 
-.Artist-titles{
-	@media (min-width: $layout-m) {
-		display: none;
+}
+.news-ticker{
+	h1{
+		color: $coral;
+		margin-right: $tickermargin;
 	}
 }
+.image-element{
+	padding: $ContainerPadding;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	padding-bottom: $LargeContainerPadding;
+	img{
+		margin-top: $LargeContainerPadding;
+	}
+	.landscape{
+		// height: 40vh;
+		max-width: 100%;
+		object-fit: fill;
+	}
+	.portrait{
+		max-width: 80%;
+		height: 60vh;
+		object-fit: cover;
+	}
+}
+.Artist-titles{
+	height: 100vh;
+}
+.sponsors{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.sponsor-image{
+	width: 45%;
+	height: $SponsorImageSize;
+	object-fit: contain;
+	max-width: 500px;
+	
+}
+.artist-list{
+	h2{
+		font-size: $font-40;
+		color: $purple;
+		text-transform: uppercase;
+	}
+	
+}
+.coverImage{
+	height: 100vh;
+	width: 100%;
+	object-fit: cover;
+}
+.backgroundImage{
+	display: inline-block;
+	// position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+.front-page-inspirational{
+	.first{
+		color: black;
+		font-size: 38px;
+		
+	}
+	padding: $ContainerPadding;
+	position: absolute;
+	height: 100%;
+	top: 10vh;
+	.second{
+		margin-top: 30px;
+		color: black;
+		font-size: 20px;
+		font-weight: 700;
+		letter-spacing: 5px;
+		max-width: 90%;
+		text-decoration: underline;
+	}
+}
+.footer{
+	height: 300vh;
+	width: 100%;
+	position: relative;
+}
+.footer-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: $LargeContainerPadding;
+	a{
+		color: $green;
+		text-decoration: underline;
+	}
+	h3{
+		padding-top: $LargeContainerPadding;
+		font-size: 8vh;
+		color: $green;
+	}
+	.links{
+		text-decoration: none;
+	}
+	.Social{
+		// padding-top: $LargeContainerPadding;
+		color: green;
+	}
+}
+.footerImage{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -9999999;
+}
+// .Media-body small {
+// 	width: 100%;
+// 	display: none;
+// 	@media (min-width: $layout-s) {
+// 		display: initial;
+// 		p {
+// 			font-size: 20px;
+// 			max-width: 500px;
+// 		}
+		
+// 	}
+// }
+
+
+// .Artist-images{
+// 	@media (max-width: $layout-m) {
+// 		display: none;
+// 	}
+// }
+
+// .Artist-titles{
+// 	@media (min-width: $layout-m) {
+// 		display: none;
+// 	}
+// }
 
 
 // .Media--reverse > .Media-figure {

@@ -1,41 +1,24 @@
 .List {
 	list-style: none;
-	margin-bottom: 30px;
 	padding-left: 0;
+	padding: 0;
+	margin: 0;
 	display: flex;
-	@media (max-width: $layout-m) {
-		flex-direction: row;
-		overflow-x: scroll;
-	}
+	flex-direction: row;
+	overflow-x: scroll;
+	align-items: center;
 	time {
 		display: block;
 		font-size: small;
 		margin-bottom: 0;
 		opacity: 0.5;
 	}
-	h3 a {
-		text-transform: uppercase;
-		color: $blue;
-	}
 }
 
 // The grid variant wraps and doesn't show body
-.List--grid {
-	list-style: none;
-	padding-left: 0;
-	padding-top: 0;
-	margin: 0;
-	max-height: 1500px;
-	overflow-y: scroll;
-	@media (min-width: $layout-m) {
-	flex-direction: column;
-		> li {
-			width: 100%;
-			padding: 10px;
-		}
-	}
+.List-TopBound{
+	align-items: flex-start;
 }
-
 
 .List img {
 	transition: -webkit-filter 150ms $easing, transform 2000ms $easing;

@@ -5,148 +5,267 @@
 			{{#link-to 'application'}}
 				<img width="100" class="Logo-light" src="/assets/images/logos/logo-2017-white.png" alt="Thy Alive Festival">
 			{{/link-to}}
-			<p class="Logo-date">THY. 30/7- 1/8</p>
+			<p class="Logo-date">{{model.page.acf.abbreviated_festival-date}}</p>
 			</div>
 			<div>
-			{{#link-to 'tickets' class="Button FixedTicketButton Yellow-Button"}}
+			{{#link-to 'tickets' class="Button Yellow-Button"}}
 			KØB BILLET
 			{{/link-to}}
 			</div>
 			<div class="flexbox-placeholder"></div>
-	
-	
-	
-	
-	
 	</div>
 
 	{{!-- video top including two adjustable headlines 1) h1 as title of page, 2) h2 as paragraph text of page. Video is video tag in page cms construct --}}
 	<div class="Index-gallery">
 		<div class="headline">
 		<h1>{{model.page.title}}</h1>
-		<h2 class="date">juli 30- aug. 1 <br> i Thy</h2>
+		
+		<h2 class="date">{{model.page.acf.festival-date}}</h2>
 		</div>
 		<video autoplay loop class="cover-video">
   			<source src={{model.page.acf.video}} alt={{model.page.acf.video.alt}} type="video/mp4">
   			Your browser does not support the video tag.
 		</video>
 	</div>
-	<div > 
-		{{!-- /ticker is edited in _container.scss --}}
-		{{item-ticker items=model.artists}}
-	</div>
-
-	<div class="coverpic"> 
-		{{image-element images=model.page.acf.gallery numberone=true}}
-	</div>
 	
 
+
+	{{!-- cover image can be toggled and designed from cms	 --}}
+	{{#if model.page.acf.cover-image}}
+	<div class="Container Media--backgroundcolor Media-TopFade Container-Centering">
 	<div class="coverpic"> 
-		{{image-element images=model.page.acf.gallery numbertwo=true}}
+		<img src="{{model.page.acf.cover-image}}" alt="{{model.title}}"/>
 	</div>
+	</div>
+	{{/if}}
 	
-		
+	
 	<div class="frontpage">
-		<div > 
-		{{item-ticker items=model.news}}
-		</div>
-		<div class="Container">
+		<div class="Container Media--green">
+			<div  class="news-ticker"> 
+			{{#if model.page.acf.news-alert}}
+					{{item-ticker items=model.page.acf.news-alert}}
+			{{else}}
+				{{item-ticker items=model.news no-urgent-news=true}}
+			
+			{{/if}}
+			</div>
 			{{news-list items=model.news grid=true}}
 		</div>
-		
-		{{!-- <div>
-			{{artists-list items=model.artists}}
-		</div> --}}
 	
-	
-		<div class="Media--center Media--turquise">
-			<div class="Media-figure Artist-images">
-				{{#flickity-gallery images=model.artists as |artist|}}
-					{{#link-to 'program.artist' artist}}
-						<h1>{{artist.title}}</h1>
-						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" data-srcset="{{artist.better_featured_image.media_details.sizes.mini.source_url}} 200w, {{artist.better_featured_image.media_details.sizes.mini-double.source_url}} 400w" alt="{{artist.title}}"> --}}
-					{{/link-to}} 
-				{{/flickity-gallery}}
-			</div>
 
-			<div class="Media-figure Artist-titles">
-				<ul>
+		<div class="Container Media--backgroundcolor Container-Centering">
+			<div class="Container Container-Centering">
+				{{#if model.page.acf.quote_text}}
+				{{#if model.page.acf.quote_graphic}}
+					<img class="backgroundImage" src="{{model.page.acf.quote_graphic}}" alt="{{model.title}}"/>
+				{{/if}}
+				<div class="front-page-inspirational">
+					<h2 class="first">{{model.page.acf.quote_text}}</h2>
+					{{#if model.page.acf.quote_text_small}}
+					<h2 class="second">{{model.page.acf.quote_text_small}}</h2>
+				{{/if}}
+				</div>
+				{{/if}}
+			</div>		
+		</div>
+
+		<div class="Container Media--backgroundcolor Media"> 
+				{{image-element images=model.page.acf.gallery}}
+		</div>
+
+		
+		{{#if model.page.acf.cover-image2}}
+		<div class="coverpic"> 
+			<img class="coverImage" src="{{model.page.acf.cover-image2}}" alt="{{model.title}}"/>
+		</div>
+		{{/if}}
+	
+		<div class="Container Media--coral Container-Centering">
+			{{#if model.page.acf.artistList_graphic}}
+				<img class="backgroundImage artist-background" src="{{model.page.acf.artistList_graphic}}" alt="{{model.title}}"/>
+			{{/if}}
+			<div class="Media-figure Artist-titles front-page-inspirational Media--center">
 					{{#each model.artists as |artist|}}
-					<li>
+					<li class="artist-list">
 						{{#link-to 'program.artist' artist}}
-							<h1>{{artist.title}}</h1>
+							<h2>{{artist.title}}</h2>
 						{{/link-to}}
 					</li>
 					{{/each}}
-				</ul>
-			</div>
-			
-			<div class="Media-body">
-				<div>
-				{{#link-to 'program' class="Button FixedTicketButton"}}
-				{{{model.page.acf.musik_teaser_title}}}
-				{{/link-to}}
+				<div class="Media-body">
+					<div>
+					{{#link-to 'program' class="Button"}}
+					{{{model.page.acf.musik_teaser_title}}}
+					{{/link-to}}
 				</div>
 			</div>
+			</div>
 		</div>
+		<div class="Container Media--green Container-Centering PaddedContainer">
+			{{#if model.page.acf.music-links_tagline}}
+				<h2>{{model.page.acf.music-links_tagline}}</h2>		
+			{{else}}
+				<h2>Lyt til musikken</h2>			
+			{{/if}} 
+			<a href="https://open.spotify.com/playlist/1wdtoke69vpF5LTFvTCPol?si=EfhdF-FwQBG0hFBWzT_YsA" class="Button coral-Button"> 
+			FIND PLAYLISTEN PÅ SPOTIFY
+			</a>
+			<a href="INSERT LINK FOR APPLIE MUSIC" class="Button coral-Button"> 
+			FIND PLAYLISTEN PÅ APPLE MUSIK
+			</a>
+		</div>
+		
+		{{#if model.page.acf.cover-image3}}
+		<div class="coverpic"> 
+			<img class="coverImage" src="{{model.page.acf.cover-image3}}" alt="{{model.title}}"/>
+		</div>
+		{{/if}}
 
-	</div>
+		<div class="Container Media--purple Media-forcedHeight">
+			<h2> THY'SKE OPLEVELSER</h2>
+			{{actvities-list items=model.activites topBound=true }}
+			{{#link-to 'program' class="Button coral-Button"}}
+					SE PROGRAMMET
+			{{/link-to}}
+		
+		</div>
+			
+		{{#if model.page.acf.cover-image4}}
+		<div class="coverpic"> 
+			<img class="coverImage" src="{{model.page.acf.cover-image4}}" alt="{{model.title}}"/>
+		</div>
+		{{/if}}
 
-
-	{{!-- <div class="Media Media--center Media--reverse Media--red">
-		<div class="Media-figure">
-			{{#link-to 'program' (query-params tag="event")}}
-				<img src="/assets/images/moods/eventyr/summer-camp.jpg" alt="Nationalpark Thy">
+		<div class="Container Media--backgroundcolor Media Media-forcedHeight">
+			<h2 class="headline-big">{{model.page.acf.planlaegdintur-headline}}</h2>
+			<p class="headline-small">{{model.page.acf.planlaegdintur-paragraph}}</p>
+			{{actvities-list items=model.practical}} 
+			{{#link-to 'practical' class="Button purple-Button"}}
+					SE ALT DET PRAKTISKE
 			{{/link-to}}
 		</div>
-		<div class="Media-body">
-			<h3>{{#link-to "adventure"}}{{{model.page.acf.eventyr_teaser_title}}}{{/link-to}}</h3>
-			<p class="Media-title">{{{model.page.acf.eventyr_teaser_text}}}</p>
-			<p>
-				{{#link-to 'program' (query-params tag="event")}}
-					Se hele dagsprogrammet &rarr;
+			
+		{{#if model.page.acf.cover-image5}}
+		<div class="coverpic"> 
+			<img class="coverImage" src="{{model.page.acf.cover-image5}}" alt="{{model.title}}"/>
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.blivfrivillig-headline}}
+		<div class="Container Media--backgroundcolor Media Media-forcedHeight">
+			<h2 class="headline-big">{{model.page.acf.blivfrivillig-headline}}</h2>
+			{{#if model.page.acf.blivfrivillig-paragraph}}
+			<p class="headline-small">{{model.page.acf.blivfrivillig-paragraph}}</p>
+			{{/if}}
+			<div class="Container Media--backgroundcolor Media"> 
+				{{image-element images=model.page.acf.frivillig-gallery}}
+			</div>
+			{{#link-to 'practical' class="Button black-Button"}}
+					LÆS MERE
+			{{/link-to}}
+		</div>
+		{{/if}}
+		
+
+		{{#if model.page.acf.cover-image6}}
+		<div class="coverpic"> 
+			<img class="coverImage" src="{{model.page.acf.cover-image6}}" alt="{{model.title}}"/>
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.samarbejdspartner_headline}}
+		<div class="Container Media--backgroundcolor Media Media-forcedHeight">
+			<h2 class="headline-big">{{model.page.acf.samarbejdspartner_headline}}</h2>
+			{{#if model.page.acf.blivfrivillig-paragraph}}
+			<p class="headline-small">{{model.page.acf.samarbejdspartner_paragraph}}</p>
+			{{/if}}
+			<div class="Container Media--backgroundcolor Media"> 
+				{{image-element images=model.page.acf.samarbejdspartner_gallery}}
+			</div>
+			{{#link-to 'practical' class="Button black-Button"}}
+					BLIV SAMARBEJDSPARTNER
+			{{/link-to}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.cover-image7}}
+		<div class="coverpic"> 
+			<img class="coverImage" src="{{model.page.acf.cover-image7}}" alt="{{model.title}}"/>
+		</div>
+		{{/if}} 
+
+		{{#if model.page.acf.cover-image7}}
+		<div class="coverpic"> 
+			<img class="coverImage" src="{{model.page.acf.cover-image7}}" alt="{{model.title}}"/>
+		</div>
+		{{/if}}
+		
+		
+		<div class="Container Media--purple ">
+			<a href="https://www.instagram.com/thyalive/" target="_blank" title="Alive på Facebook">
+				<h2>#ALIVEFESTIVAL</h2>
+			</a>
+			{{instagram-feed class="InstaFeed"}}
+			<a href="https://facebook.com/alivefestival" target="_blank" title="Alive på Instagram">
+				<h2>facebook</h2>
+			</a>
+			{{#link-to 'news' }}
+					<h2>Nyheder</h2>	
+			{{/link-to}}
+			{{news-list items=model.news grid=true}}
+		</div>
+
+		{{#if model.page.acf.cover-image8}}
+		<div class="coverpic"> 
+			<img class="coverImage" src="{{model.page.acf.cover-image8}}" alt="{{model.title}}"/>
+		</div>
+		{{/if}}
+
+		<div class="Container Media--backgroundcolor Media Container-Centering PaddedContainer"> 
+				{{newsletter-form}}
+		</div>
+
+		<div class="Container Media--green Media Container-Centering PaddedContainer"> 
+				{{#link-to 'partners' }}
+					<h2>partnere</h2>
 				{{/link-to}}
-			</p>
+				{{{image-grid items=model.page.acf.partner_gallery}}}
 		</div>
-	</div> --}}
 
-	{{!-- <div class="Container Container--huge mt2 mb1">
-		{{newsletter-form}}
-	</div> --}}
-
-	{{!-- <div class="Container pt2 pb2">
-		{{{model.page.acf.extra_text}}}
-	</div> --}}
-
-	<div class="Invert">
-		{{instagram-feed class="InstaFeed"}}
-		<div class="tc mt2 pb1 underline">
-			<small>
-				 {{{model.page.acf.footer_text}}}
-			</small>
+		<div class="footer"> 
+		{{#if model.page.acf.footer_image}}
+			<img class="footerImage" src="{{model.page.acf.footer_image}}" alt="{{model.title}}"/>
+		{{/if}}
+		<div class="footer-content">
+				{{link-to 'Nyheder' 'news'}}
+				{{link-to 'Praktisk' 'practical'}}
+				{{link-to 'Partnere' 'partners'}}
+				{{link-to 'Historie' 'about.history'}}
+				{{link-to 'Kontakt' 'about.contact'}}
+				<h3>Følg med</h3>
+				<div>
+					<a class="links" href="https://open.spotify.com/playlist/1wdtoke69vpF5LTFvTCPol?si=EfhdF-FwQBG0hFBWzT_YsA" class="Button coral-Button"> 
+					SPOTIFY
+					</a>
+					<a class="links" href="INSERT LINK FOR APPLIE MUSIC" class="Button coral-Button"> 
+					APPLE MUSIC
+					</a>
+				</div>
+				<div class="Social">
+					<a href="https://facebook.com/alivefestival" target="_blank" title="Alive på Facebook">
+						<img width="300" class="lazyload" data-src="/assets/images/icons/facebook.svg" alt="">
+					</a>
+					<a href="https://www.instagram.com/thyalive/" target="_blank" title="Alive på Instagram">
+						<img width="300" class="lazyload" data-src="/assets/images/icons/instagram.svg" alt="">
+					</a>
+					<a href="https://open.spotify.com/user/1133931389/playlist/5mbdqkSLMYmZJ3n5EU85ZM" target="_blank" title="Alive på Spotify">
+						<img width="300" class="lazyload" data-src="/assets/images/icons/spotify.svg" alt="">
+					</a>
+				</div>
 		</div>
+		</div>
+	
 	</div>
 </div>
 
-
-<div class="TeaserBox TeaserBox--alive">
-	{{link-to 'Køb billet' 'tickets'}}
-</div>
-
-
-{{!-- {{#flickity-gallery
-			class="FlickityGallery--responsive"
-			images=model.page.acf.gallery
-			on-settle=(action 'updateGalleryCounter') as |image|
-		}}
-			<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{image.alt}}" data-sizes="auto" data-srcset="
-				{{image.sizes.s}} 320w,
-				{{image.sizes.m}} 768w,
-				{{image.sizes.l}} 1024w,
-				{{image.sizes.xl}} 1600w,
-				{{image.sizes.xxl}} 1920w" />
-		{{/flickity-gallery}} --}}
-
-
-
-	
