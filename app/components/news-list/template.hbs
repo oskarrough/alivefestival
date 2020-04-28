@@ -3,33 +3,18 @@
 		<li class="Media Media-container">
 			<figure class="Media-figure">
 				{{#link-to 'news.post' post class="Media"}}
-				<img src="{{post.better_featured_image.media_details.sizes.xl.source_url}}" alt="{{post.better_featured_image.alt}}"> {{/link-to}}
+				<img src="{{post.better_featured_image.media_details.sizes.l.source_url}}" alt="{{post.better_featured_image.alt}}"> {{/link-to}}
 			</figure>
+		
 		</li>
 		{{/each}}
+
+		
 </ul>
 
 {{yield}}
-{{!-- 
-			<div class="Media-body NewsHeadline">
-				<time>{{moment-format post.date}}</time>
-				<h3>
-					{{#link-to 'news.post' post }}
-						{{post.title}}
-					{{/link-to}}
-				</h3>
-				<small>{{{post.excerpt}}}</small>
-		</div> --}}
 
-		{{!-- {{#if event=true}}
-			<div class="Media-body NewsHeadline">
-				<time>{{moment-format post.date}}</time>
-				<h3>
-					{{#link-to 'news.post' post }}
-						{{post.title}}
-					{{/link-to}}
-				</h3>
-				<small>{{{post.excerpt}}}</small>
-			</div>
-			{{/if}} --}}
+
+
+
 			

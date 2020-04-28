@@ -18,6 +18,7 @@ $ContainerPadding: 18px;
 $LargeContainerPadding: 10vh;
 $hugeContainerPadding: 20vh;
 $topPadding: 40vh;
+$thumbnailImage: 300px;
 $smallImageSize: 70vw;
 $bigImageSize: 100vh;
 $buttonPadding: 0.1em 1em 0.1em;
@@ -55,7 +56,7 @@ $space: 10px;
 $border-width: 2px;
 $header-bar-height: 84px; //93px;
 $aside-width: 11rem;
-$max-width: 46rem;
+$max-width: 100vw;
 $max-width-small: 32rem;
 
 // Susy

@@ -6,6 +6,7 @@
 		padding-top: $ContainerPadding;
 	}
 	flex-flow: column nowrap;
+	overflow-y: scroll;
 }
 
 .Nav a {
@@ -53,7 +54,6 @@
 
 // The social nav
 .Social {
-	position: absolute;
 	bottom: 10%;
 	display: flex;
 	flex-direction: row;

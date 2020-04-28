@@ -63,14 +63,12 @@ b {
 // Links
 a,
 a:visited {
-	color: $whitewhite;
 	text-decoration: none;
 	transition: color 150ms;
-
 	&:hover,
 	&:active,
 	&.is-active {
-		color: lighten($blue, 5%);
+		color: lighten($coral, 5%);
 	}
 }
 

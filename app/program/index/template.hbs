@@ -1,13 +1,58 @@
 <div class="Page">
 	<div class="Page-body">
 		<h1 class="Title">{{model.page.title}}</h1>
+		{{#if model.page.acf.alerting_text}}
+			
+				<h2 class="Title">{{model.page.acf.alerting_text}}</h2>
+		
+			{{#if model.page.acf.alert_gallery}}
+			{{image-element images=model.page.acf.alert_gallery}}
+			{{/if}}
+			
+		{{/if}}
 		{{{model.page.content}}}
 	</div>
 </div>
 
-{{filter-menu tags=tags class="tc"}}
+{{#if model.page.acf.show_program}}		
+	{{filter-menu tags=tags class="tc"}}
+	<div class="Artists Page-body">
+	{{#if musiccategory}}
+				{{#if musiccategory}}
+			<div>
+			{{#link-to 'program' (query-params tag="jazz") class="Button coral-Button"}}
+				Jazz
+			{{/link-to}}
 
-<div class="Artists">
+			{{#link-to 'program' (query-params tag="RNB") class="Button coral-Button"}}
+				R'n'B
+			{{/link-to}}
+			{{#link-to 'program' (query-params tag="rock") class="Button coral-Button"}}
+				Rock
+			{{/link-to}}
+			{{#link-to 'program' (query-params tag="electronic") class="Button coral-Button"}}
+				Elektronisk
+			{{/link-to}}
+			{{#link-to 'program' (query-params tag="kunst") class="Button coral-Button"}}
+				Kunst
+			{{/link-to}}
+			{{#link-to 'program' (query-params tag="performance") class="Button coral-Button"}}
+				Performance
+			{{/link-to}}
+			{{#link-to 'program' (query-params tag="rap") class="Button coral-Button"}}
+				Rap
+			{{/link-to}}
+			{{#link-to 'program' (query-params tag="hiphop") class="Button coral-Button"}}
+				Hip Hop
+			{{/link-to}}
+			</div>
+			{{/if}}
+		<p>{{model.acf.music_text}}</p>
+	{{/if}}
+	{{#if eventcategory}}
+
+		<p>{{model.acf.event_text}}</p>
+	{{/if}}
 	{{#masonry-grid}}
 		{{#each filteredArtists as |artist|}}
 			<div class="Masonry-item">
@@ -17,8 +62,9 @@
 			</div>
 		{{/each}}
 	{{/masonry-grid}}
-</div>
+	</div>	
+	
+{{/if}}
 
-{{!-- <div class="html"><iframe src="https://embed.spotify.com/?uri=https://play.spotify.com/user/1133931389/playlist/06qyZkEWCOU16E4URII5Qg" width="300" height="380" frameborder="0" allowtransparency="true"></iframe></div>
 
-<div class="html"><iframe width="560" height="315" src="//www.youtube.com/embed/videoseries?list=PLo682vyue18ghgHMOEXVniKLfUx3sGwNx" frameborder="0" allowfullscreen></iframe></div> --}}
+

@@ -71,7 +71,9 @@
 		</div>
 
 		<div class="Container Media--backgroundcolor Media"> 
+			<div class="PaddedContainer">
 				{{image-element images=model.page.acf.gallery}}
+			</div>
 		</div>
 
 		
@@ -201,19 +203,22 @@
 		</div>
 		{{/if}}
 		
-		
-		<div class="Container Media--purple ">
-			<a href="https://www.instagram.com/thyalive/" target="_blank" title="Alive på Facebook">
+		<div class="Container Media--purple Media Media-forcedHeight">
+					 <a href="https://www.instagram.com/thyalive/" target="_blank" title="Alive på Facebook">
 				<h2>#ALIVEFESTIVAL</h2>
 			</a>
-			{{instagram-feed class="InstaFeed"}}
+			
+			{{!-- {{instagram-feed class="InstaFeed"}}
+			{{model.page.acf.instagram_widget}}
+			
+			
 			<a href="https://facebook.com/alivefestival" target="_blank" title="Alive på Instagram">
 				<h2>facebook</h2>
-			</a>
+			</a> --}}
 			{{#link-to 'news' }}
 					<h2>Nyheder</h2>	
 			{{/link-to}}
-			{{news-list items=model.news grid=true}}
+			{{actvities-list items=model.news}}
 		</div>
 
 		{{#if model.page.acf.cover-image8}}
@@ -222,8 +227,10 @@
 		</div>
 		{{/if}}
 
-		<div class="Container Media--backgroundcolor Media Container-Centering PaddedContainer"> 
+		<div class="Container Media--backgroundcolor Media Container-Centering Media-mediumHeight"> 
+				<div class="PaddedContainer">
 				{{newsletter-form}}
+				</div>
 		</div>
 
 		<div class="Container Media--green Media Container-Centering PaddedContainer"> 
@@ -252,7 +259,7 @@
 					APPLE MUSIC
 					</a>
 				</div>
-				<div class="Social">
+				<div class="SocialLinks">
 					<a href="https://facebook.com/alivefestival" target="_blank" title="Alive på Facebook">
 						<img width="300" class="lazyload" data-src="/assets/images/icons/facebook.svg" alt="">
 					</a>

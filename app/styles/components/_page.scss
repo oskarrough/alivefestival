@@ -41,9 +41,9 @@
 
 .Page-body {
 	padding-top: rem($space * 3);
-	padding-right: rem($space);
+	padding-right: rem($space*2);
 	padding-bottom: rem($space);
-	padding-left: rem($space * 2);
+	padding-left: rem($space*2);
 
 	@media (min-width: $layout-m) {
 		padding-left: rem($space * 3);
@@ -64,15 +64,16 @@
 }
 
 .Page-backgroundImage {
-	margin-left: 1rem;
-	max-height: 80vh;
-	// position: fixed;
-	// z-index: -1;
-	// top: 0;
-	// right: 0;
-	// min-width: 54%;
+	// margin-left: 1rem;
+	// max-height: 80vh;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	left: 0;
+	min-width: 100%;
 	// height: 100%;
-	// object-fit: cover;
+	object-fit: cover;
 }
 
 .Page-backgroundImage--full {

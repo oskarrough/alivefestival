@@ -5,14 +5,11 @@
 	padding: $buttonPadding;
 	font-size: $font-20;
 	justify-content: center;
-	@media (min-width: $layout-m) {
-		font-size: $font-20;
-	}
+	
 	text-transform: uppercase;
 	align-self: center;
 	text-align: center;
 	letter-spacing: 0.03em;
-	height: rem(40);
 	border-radius: 0px;
 	text-decoration: none;
 	background-image: none;
@@ -25,21 +22,27 @@
 }
 .Yellow-Button{
 	border: 2px solid $yellow;
-	color: $whitewhite
+	color: $whitewhite;
 }
 .coral-Button{
 	border: 2px solid $coral;
-	color: $whitewhite
+	color: $whitewhite;
+	font-size: $font-14;
+	color: $whitewhite;
 }
 .purple-Button{
 	border: 1px solid $purple;
 	color: black;
+}
+.coral{
+	background-color: $coral;
 }
 .purple{
 	background-color: $purple;
 	color: $coral;
 	margin: 0;
 	border: none;
+	height: rem(40);
 
 }
 .black-Button{

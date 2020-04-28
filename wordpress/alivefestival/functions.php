@@ -123,6 +123,7 @@ function alivefestival_widgets_init() {
 add_action( 'widgets_init', 'alivefestival_widgets_init' );
 
 
+
 /**
  * Enqueue scripts and styles.
  */

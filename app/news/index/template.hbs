@@ -4,13 +4,14 @@
 	{{{model.page.content}}}
 {{/if}}
 
+
+
+{{news-grid items=model.posts}}
+
+<div class="PaddedContainer">
 {{newsletter-form}}
+</div>
 
-<br><br>
-
-{{news-list items=model.posts}}
-
-<br><br>
 <p>Tjek <a href="http://facebook.com/alivefestival" target="_blank">Alive Festival på Facebook</a> for mere.</p>
 
 {{outlet}}

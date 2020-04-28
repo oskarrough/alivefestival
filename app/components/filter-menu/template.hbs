@@ -1,28 +1,20 @@
-{{#link-to "program" (query-params tag="all") class="Button Button--red"}}
+{{#link-to "program" (query-params tag="all") class="Button coral-Button coral"}}
 	Hele programmet
 {{/link-to}}
 
-<!-- <span class="Nav-divider">·</span> -->
-<!-- <span class="Nav-divider">eller kun</span> -->
-{{#link-to 'program' (query-params tag="music") class="Button Button--yellow"}}
+<div>
+{{#link-to 'program' (query-params tag="music") class="Button coral-Button coral"}}
 	Musikprogrammet
-	🎸 🎛️  🎶 💃
 {{/link-to}}
 
-{{#link-to 'program' (query-params tag="event") class="Button Button--green"}}
+{{#link-to 'program' (query-params tag="event") class="Button coral-Button coral"}}
 	Dagsprogrammet
-	🌳 🚀 🌊 🐺
 {{/link-to}}
+</div>
 
-{{!--
-{{#each tags as |tag|}}
-	{{#link-to 'program' (query-params tag=tag.slug)}}
-		<span>
-			{{tag.name}}
-		</span>
-	{{/link-to}}
-{{/each}}
---}}
+
+
+
 
 {{yield}}
 

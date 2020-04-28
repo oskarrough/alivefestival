@@ -103,4 +103,71 @@
 	justify-content: flex-start;
 }
 
+.footer{
+	height: 300vh;
+	width: 100%;
+	position: relative;
+}
+.footer-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: $LargeContainerPadding;
+	a{
+		color: $green;
+		text-decoration: underline;
+	}
+	h3{
+		padding-top: $LargeContainerPadding;
+		font-size: 8vh;
+		color: $green;
+	}
+	.links{
+		text-decoration: none;
+	}
+	.SocialLinks{
+		// padding-top: $LargeContainerPadding;
+		color: green;
+		display: flex;
+		flex-direction: row;
+		justify-items: center;
+		align-items: center;
+		align-content: center;
+		justify-content: space-between;
+		max-width: 10070vw;
+		//small size 
+		@media (max-width: $layout-m) {
+			justify-content: space-around;
+			img {
+				width: 15vw;
+				height: 15vw;
+			}
+		}
+		//big size
+		@media (min-width: $layout-m) {
+			img {
+				width: 5vw;
+				height: 5vw;
+			}
+		}
+		a:focus img,
+		a:hover img {
+			opacity: 1;
+			img {
+				width: 5vw;
+				height: 5vw;
+				opacity: 0.6;
+			}
+		}
+	}
+}
+.footerImage{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -9999999;
+}
 

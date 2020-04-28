@@ -1,7 +1,7 @@
 import Component from '@ember/component'
 import fetch from 'fetch'
 
-const token = '464217036.db1fb5e.a283d54bf7c44952bbba576bee4a8317'
+const token = 'IGQVJXYVpSN0lNS634hgdf83hjdj21Joal9QSkFveDdwX2xZAN0J0MWJxVV8wcG9kUl9pczBQRU9pVWxqR1ZAINUJyM05JMl9RZAU1FTWE4bm1CRFJ2WkE3aVRoRXdXZA1A3dDktRDRkRHZArUW44MC1hb1dR'
 
 export function fetchImages(token, count) {
 	const base = 'https://api.instagram.com/v1/users/self/'

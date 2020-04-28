@@ -8,7 +8,7 @@
 
 	a:hover &,
 	a:active & {
-		box-shadow: 0px 0px 2rem 1rem rgba(255, 255, 255, 0.1);
+		// box-shadow: 0px 0px 2rem 1rem rgba(255, 255, 255, 0.1);
 		.Teaser-title,
 		.Teaser-subtitle {
 			color: $white;
@@ -22,7 +22,7 @@
 
 .Teaser-wrap {
 	text-decoration: none;
-	background-color: $blue;
+	// background-color: $blue;
 }
 
 .Teaser-media {
@@ -57,8 +57,8 @@
 	font-size: rem(20);
 	margin-bottom: 0;
 	padding: 0.5em 0.5em 0.5em;
-	background-color: $sand;
-	color: $black;
+	background-color: $bg-color;
+	color: $purple;
 
 	@media (min-width: $layout-sm) {
 		font-size: rem(24);

@@ -1,12 +1,7 @@
 .Grid {
 	display: flex;
 	flex-flow: row wrap;
-}
-
-.Grid-item {
-	//flex: rem(320);
-	// margin-right: 1rem;
-	//margin-bottom: 1rem;
+	justify-content: space-between;
 }
 
 // Make sure wrapper links are block
@@ -23,21 +18,17 @@ $masonry-gutter: 1.5rem;
 
 .Masonry-item {
 	width: 100%;
-	width: calc(100% - #{$masonry-gutter});
-	margin-right: $masonry-gutter;
-	margin-bottom: $masonry-gutter;
-
-	@media (min-width: $layout-s) {
-		width: 48%;
-		width: calc(50% - #{$masonry-gutter});
-	}
 	@media (min-width: $layout-m) {
 		width: 30%;
 		width: calc(33% - #{$masonry-gutter});
+		margin-right: $masonry-gutter;
+		margin-bottom: $masonry-gutter;
 	}
 	@media (min-width: $layout-xl) {
 		width: 20%;
 		width: calc(25% - #{$masonry-gutter});
+		margin-right: $masonry-gutter;
+		margin-bottom: $masonry-gutter;
 	}
 
 	@include animation-delay(7);
