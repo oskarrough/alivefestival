@@ -1,89 +1,88 @@
+:root{
+	--color: inherit;
+}
 .Nav {
 	display: flex;
 	width: 100%;
-	padding-top: $hugeContainerPadding;
+	height: 100%;
+	padding-top: $ContainerPadding;
 	@media (max-width: $layout-m) {
 		padding-top: $ContainerPadding;
 	}
 	flex-flow: column nowrap;
 	overflow-y: scroll;
 }
-
 .Nav a {
 	@extend %font-bold;
-	color: $blue;
 	text-transform: uppercase;
-	font-size: 15vw;
+	text-decoration: none;
+	color: inherit;
 	//small size 
-	@media (max-width: $layout-m) {
-		//menu swings out from right side on burger-click
-		font-size: $font-50;
-		.show-aside & {
-			transition-timing-function: $ease-decelerate;
-			transition-duration: 300ms;
-			transform: translate3d(0, 0, 0);
-		}
+	@media (max-width: $layout-s) {
+		font-size: $menufont;
 	}
 	//big size
-	@media (min-width: $layout-m) {
-		font-size: 3vw;
-		transform: translate3d(100%, 0, 0);
-		.show-aside & {
-			transition-timing-function: $ease-decelerate;
-			transition-duration: 300ms;
-			transform: translate3d(0, 0, 0);
-		}
+	@media (min-width: $layout-s) {
+		font-size: $largermenufont;
+	}
+	&:hover {
+		-webkit-text-stroke: 1px $blue; 
+		color: $transparent;
+	}
+	&.is-active {
+		-webkit-text-stroke: 1px $blue;
+		color: $transparent;
+	}
+	.show-aside & {
+		transition-timing-function: $ease-decelerate;
+		transition-duration: 300ms;
+		transform: translate3d(0, 0, 0);
 	}
 }
 
+
 .Nav small {
-	// margin-left: 0.6rem;
 	display: flex;
 	flex-direction: column;
 	a {
 		@extend %font-regular;
-		font-size: 20px;
-		padding-top: 0;
-		padding-bottom: 0.1em;
+		text-decoration: none;
+		//small size 
+		@media (max-width: $layout-s) {
+			font-size: $submenufont;
+		}	
+		//big size
+		@media (min-width: $layout-s) {
+			font-size: $largersubmenufont;
+		}
 	}
-	@media (max-width: $layout-m) {
-		font-size: 40px;
-	}
+	
 	
 }
 
 // The social nav
 .Social {
-	bottom: 10%;
+	margin-top: $ContainerPadding;
+	float: bottom;
 	display: flex;
 	flex-direction: row;
-	justify-items: center;
-	align-items: center;
-	align-content: center;
-	justify-content: space-between;
 	width: 100%;
-	//small size 
-	@media (max-width: $layout-m) {
-		justify-content: space-around;
-		img {
-			width: 15vw;
-			height: 15vw;
-		}
-	}
-	//big size
-	@media (min-width: $layout-m) {
-		img {
-			width: 5vw;
-			height: 5vw;
-		}
+	a img{
+		width: 10vw;
+		height: 10vw;
+		min-width: $minimum-icon-height;
+		min-height: $minimum-icon-height;
+		max-width: $maximum-icon-height;
+		max-height: $maximum-icon-height;
+
 	}
 	a:focus img,
 	a:hover img {
 		opacity: 1;
 		img {
-			width: 5vw;
-			height: 5vw;
 			opacity: 0.6;
 		}
 	}
 }
+
+

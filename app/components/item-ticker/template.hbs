@@ -5,23 +5,23 @@
 		{{#each items as |artist|}}
 			<div class="ticker">		
 				{{#link-to 'program.artist' artist}}
-					<h1 class="titles"> | {{artist.title}}</h1>
+					|      {{artist.title}}
 				{{/link-to}}
 			</div>
 		{{/each}}
 	{{else}}
 		
 		<div class="ticker">		
-					<h1 class="titles">{{items}}  | </h1>
+				{{items}}  | 
 		</div>
 		<div class="ticker">		
-					<h1 class="titles">{{items}}  | </h1>
+				{{items}}  | 
 		</div>
 		<div class="ticker">		
-					<h1 class="titles">{{items}}  | </h1>
+				{{items}}  | 
 		</div>
 		<div class="ticker">		
-					<h1 class="titles">{{items}}  | </h1>
+				{{items}}  | 
 		</div>
 	{{/if}}
 </div>

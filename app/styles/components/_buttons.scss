@@ -1,53 +1,100 @@
+@-moz-keyframes arrowpointer { 50% { -moz-transform: rotate(-50deg); }  100% { -moz-transform: rotate(0deg); }}
+@-webkit-keyframes arrowpointer { 50% { -webkit-transform: rotate(-50deg); } 100% { -webkit-transform: rotate(0deg); }}
+@keyframes arrowpointer{ 50% { -webkit-transform: rotate(-50deg); transform:rotate(-50deg); } 100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); }}
+
+
+.button-container{
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	.arrow{
+		display: inline-block;
+		margin-right: -2%;
+		top:0;
+		z-index: 99;
+		width: rem(40);
+		height: auto;
+		transform-origin: right;
+		-webkit-animation:arrowpointer 4s linear infinite;
+		-moz-animation:arrowpointer 4s linear infinite;
+		animation:arrowpointer 4s linear infinite;
+		@media (max-width: $layout-s) {
+		display: none;
+		}
+	}
+	.Button{
+		display: inline-block;
+		top:0;
+	}
+}
 .Button {
-	@extend %font-bold;
 	display: inline-block;
-	margin: 5px;
-	padding: $buttonPadding;
-	font-size: $font-20;
+	padding: 0.1em 1em 0.1em;
 	justify-content: center;
-	
-	text-transform: uppercase;
 	align-self: center;
 	text-align: center;
-	letter-spacing: 0.03em;
-	border-radius: 0px;
 	text-decoration: none;
 	background-image: none;
-	background-color: none;
-	color: $whitewhite;
+	color: inherit;
 	white-space: nowrap;
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
 }
 .button:focus{
 	outline: none;
 }
-.Yellow-Button{
-	border: 2px solid $yellow;
-	color: $whitewhite;
+.greyButton{
+	background-color: #f4e7d6;
 }
-.coral-Button{
-	border: 2px solid $coral;
-	color: $whitewhite;
-	font-size: $font-14;
-	color: $whitewhite;
-}
-.purple-Button{
-	border: 1px solid $purple;
-	color: black;
-}
-.coral{
-	background-color: $coral;
-}
-.purple{
-	background-color: $purple;
-	color: $coral;
-	margin: 0;
-	border: none;
-	height: rem(40);
 
+.Link{
+	color: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: $padding;
+	font-family: 'GT Haptik', sans-serif;
+	text-transform: uppercase;
+	font-size: $font-14;
+	
 }
-.black-Button{
-	border: 1px solid black;
-}
+// .Yellow-Button{
+// 	border: 2px solid $yellow;
+// 	color: $whitewhite;
+// }
+// .coral-Button{
+// 	border: 2px solid $coral;
+// 	color: $whitewhite;
+// 	font-size: $font-14;
+// 	color: $whitewhite;
+// }
+// .button-blue-detail{
+// 	background-color: inherit;
+// 	border: 1px solid $blue;
+// 	color: $blue;
+// 	font-size: $font-14;
+// }
+// .purple-Button{
+// 	border: 1px solid $purple;
+// 	color: black;
+// }
+// .coral{
+// 	background-color: $coral;
+// }
+// .purple{
+// 	background-color: $purple;
+// 	color: $coral;
+// 	margin: 0;
+// 	border: none;
+// 	height: rem(40);
+
+// }
+// .black-Button{
+// 	border: 1px solid black;
+// }
 // a.Button {
 // 	&.is-active,
 // 	&:hover {

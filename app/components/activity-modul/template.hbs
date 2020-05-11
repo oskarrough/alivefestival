@@ -1,0 +1,31 @@
+<div style="background-image:linear-gradient({{escapeCSS design.acf.top_color}}, {{escapeCSS design.acf.bottom_color}}); color:{{escapeCSS design.acf.text_color}}" >
+    {{#if design.title}}
+    <h2> {{design.title}}</h2>
+    {{/if}}
+    <div class="flex-box-toggle">
+        {{#if design.acf.gallery}}
+        <ul class="titles">
+            {{#each design.acf.gallery as |image|}}
+                <li> <img class="gallery-image" src={{image.sizes.s}}/> </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+        <ul class="titles ">
+            {{#each activities as |activity|}}
+                <li class="artist-item">
+                    {{#link-to 'program.artist' activity}}
+                            <p>{{activity.title}} </p>
+                            <img class="gallery-image" src={{design.acf.kategori_graphic_elements.0.sizes.s}}/>
+                    {{/link-to}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div style="border: 1px {{escapeCSS model.page.acf.activities_list_text_color}} solid" class="Button">
+		{{#link-to 'program' class="small-caption button"}}
+			Se Programmet
+		{{/link-to}}
+	</div>
+</div>
+
+{{yield}}

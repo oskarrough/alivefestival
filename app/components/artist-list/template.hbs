@@ -1,0 +1,24 @@
+<div style="background-image:linear-gradient({{escapeCSS design.acf.top_color}}, {{escapeCSS design.acf.bottom_color}}); color:{{escapeCSS design.acf.text_color}}" >
+	{{#if design.acf.artistList_graphic}}
+		<img class="backgroundImage" src="{{design.acf.artistList_graphic}}" alt="{{model.title}}"/>
+	{{/if}} 
+	<div class="Container">
+			<ul class="artist-list" style="color:{{escapeCSS design.acf.artist_link_text_color}}">
+					{{#each artists as |artist|}}
+					<li class="artist-item">
+						{{#link-to 'program.artist' artist class='artist'}}
+							{{artist.title}}
+						{{/link-to}}
+						<img class="arrow" src="/assets/images/icons-output/png/artist-arrow.png"/>
+					</li>
+					{{/each}}
+					{{#link-to 'program' class="Button" }}
+						<p style="color:{{escapeCSS design.acf.artist_button_text_color}}">{{design.acf.music-links_tagline}}</p>
+					{{/link-to}}	
+		</ul>
+	</div>
+</div>
+
+{{yield}}
+
+

@@ -19,6 +19,9 @@ Router.map(function() {
     this.route('sideprogram')
     this.route('adventure', {path: 'dagsprogram'})
     this.route('schedule', {path: 'spilleplan'})
+    this.route('kort', {path: 'kort'})
+    this.route('presse', {path: 'presse'})
+    this.route('transport&overnatning', {path: 'transport&overnatning'})
 
     // News
     this.route('news', {path: 'nyheder'}, function() {

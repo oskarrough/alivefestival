@@ -1,8 +1,8 @@
 {{#x-root as |toggleAside|}}
-	{{x-aside}}
-
-	<main class="">
+	{{x-aside top_color=model.page.acf.top_color bottom_color=model.page.acf.bottom_color festival_is_on=model.page.acf.festival_is_on color=model.page.acf.text_color}}
+	<main class="App">
 		{{!-- don't move the outlet without changing liquid.scss --}}
 		{{liquid-outlet}}
 	</main>
 {{/x-root}}
+

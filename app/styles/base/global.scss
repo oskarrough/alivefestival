@@ -1,11 +1,9 @@
 html {
 	line-height: $base-line-height-unitless;
-
 	// Enable kerning and ligatures everywhere
 	// to use open-type features, bower install normalize-opentype
 	text-rendering: optimizeLegibility;
 	font-size: 15px;
-
 	@media (min-width: $layout-m) {
 		font-size: $base-font-size;
 	}
@@ -13,10 +11,10 @@ html {
 		font-size: $base-font-size + 2;
 	}
 }
-
 body {
 	@extend %font-regular;
 }
+
 
 // Set a consistent margin between elements
 h1,
@@ -41,62 +39,65 @@ figure,
 time {
 	margin: 0 0 rem($space);
 }
-
-h1 {
-	@include h1;
-	margin-bottom: rem($space * 2);
+a{
+	z-index: 999999999;
+}
+.small-caption{
+	@include date-text;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+}
+.buttontext{
+	@include buttontext
 }
 
-h2 {
-	@include h2;
-}
 
-h3 {
-	@include h3;
-}
+// h1 {
+// 	@include h1;
+// 	margin-bottom: rem($space * 2);
+// }
 
-strong,
-b {
-	@extend %font-bold;
-}
+// h2 {
+// 	@include h2;
+// }
 
-// Links
-a,
-a:visited {
-	text-decoration: none;
-	transition: color 150ms;
-	&:hover,
-	&:active,
-	&.is-active {
-		color: lighten($coral, 5%);
-	}
-}
+// h3 {
+// 	@include h3;
+// }
 
-time,
-.Muted {
-	font-size: $font-14;
-}
+// strong,
+// b {
+// 	@extend %font-bold;
+// }
 
-hr {
-	height: 1px;
-	border: 3px dotted rgba(0, 0, 0, 0.3);
-	margin: 2rem 0;
-}
 
-.Separator {
-	opacity: 0.5;
-	position: relative;
-	top: -0.1em;
-	font-size: $font-14;
-	margin-right: 0.5em;
-	margin-left: 0.5em;
-}
 
-iframe,
-img {
-	max-width: 100%;
-}
+// time,
+// .Muted {
+// 	font-size: $font-14;
+// }
 
-.underline a {
-	text-decoration: underline;
-}
+// hr {
+// 	height: 1px;
+// 	border: 3px dotted rgba(0, 0, 0, 0.3);
+// 	margin: 2rem 0;
+// }
+
+// .Separator {
+// 	opacity: 0.5;
+// 	position: relative;
+// 	top: -0.1em;
+// 	font-size: $font-14;
+// 	margin-right: 0.5em;
+// 	margin-left: 0.5em;
+// }
+
+// iframe,
+// img {
+// 	max-width: 100%;
+// }
+
+// .underline a {
+// 	text-decoration: underline;
+// }

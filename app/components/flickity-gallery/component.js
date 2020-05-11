@@ -28,7 +28,6 @@ export default Component.extend({
 
 	enableFlickity() {
 		const images = this.get('images')
-		console.log("image array passed to component", images);
 		
 		if (!images) {
 			return

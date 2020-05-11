@@ -1,173 +1,203 @@
 .Index {
 	position: relative;
-	.header{
-		margin: rem($space);
-		position: absolute;
-		display: inline-flex;
-		flex-direction: row;
-		justify-content: space-between;
-		@media (min-width: $layout-m) {
-			align-items: center;
-		}
-		align-items: flex-start;
-		top: 5px;
-		left: 10px; 
-		right: 10px;
-		z-index: 9;		
-	}
 }
-.HeaderLogo{
-	display: inline-block;
-	display: flex;
-	align-items: center;
-	white-space: nowrap;
-	.Logo-light{
-		@media (max-width: $layout-m) {
-			height: rem(50);
-			width: auto;	
-		}
-		@media (min-width: $layout-m) {
-			// height: 100px;
-			min-width: 100px;
-		}
-	}
-	.Logo-date{
-		color: $white;
-
-	}
-}
-.flexbox-placeholder{
-	@media (max-width: $layout-m) {
-		height: rem(50);
-		width: rem(42);
-	}
-	//big size
-	@media (min-width: $layout-m) {
-		height: 100px;
-		width: 100px;
-	}
-}
-.Index-gallery {
+.HeaderContainer{
 	position: relative;
-	// background-color: $darkgrey;
-	display: inline-block;
 	width: 100%;
-	height: 100%;
-	//small size 
-	@media (max-width: $layout-m) {
-		height: 100%;
-	}
-	.headline{
-		color: white;
-		display: flexbox;
-		flex-direction: column;
-		justify-content: flex-start;
-		position: absolute;
-		top: $topPadding;
-		width: 80%;
-		margin: rem($space * 2);
-		justify-content: left;
-		margin-bottom: 10%;
-		h2{
-			width: 90%;
-		}
-	}
+	top: 0;
 }
 .cover-video{
 	object-fit: cover;
 	width: 100%;
-	@media (max-width: $layout-m) {
-		min-height: 90vh;
-	}
-	//big size
+	min-height: 90vh;
+	z-index: 0;
 	@media (min-width: $layout-m) {
 		height: auto;
 		max-height: 1000px;
 	}
-
 }
-.coverpic{
+.coverImage{
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	img{
-		max-height: 100vh;
-		max-width: 100%;
+	object-fit: cover;
+	max-height: $coverimagesize;
+	@media (max-width: $layout-s) {
+		min-height: $MobileImageSize;
 		object-fit: cover;
 	}
 }
-.frontpage{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+.backgroundImage{
+	// object-position: 0px 0px;
+	object-fit: fill;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	max-height: 1000px;
+	@media (max-width: $layout-s) {
+		min-height: $MobileImageSizeLarge;
+	}
+}
+.header{
+	position: absolute;
+	display: inline-flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	top: $padding;
+	left: $padding;
+	padding-right: $calcBurger;
+	z-index: 9;		
 }
 
-.footer{
-	height: 300vh;
-	width: 100%;
-	position: relative;
+.HeaderLogo{
+	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	text-decoration: none;
+	.Logo-light{
+		width: rem(50);
+	}
 }
-.footer-content{
+
+.headline{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding-top: $topPadding;
+	margin-bottom: 10%;
+	z-index: 99999999;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-top: $LargeContainerPadding;
-	a{
-		color: $green;
-		text-decoration: underline;
+	@media (max-width: $layout-s) {
+			padding-left: 1vh;
+			padding-right: 1vh;
 	}
-	h3{
-		padding-top: $LargeContainerPadding;
-		font-size: 8vh;
-		color: $green;
-	}
-	.links{
-		text-decoration: none;
-	}
-	.SocialLinks{
-		// padding-top: $LargeContainerPadding;
-		color: green;
-		display: flex;
-		flex-direction: row;
-		justify-items: center;
-		align-items: center;
-		align-content: center;
-		justify-content: space-between;
-		max-width: 10070vw;
-		//small size 
-		@media (max-width: $layout-m) {
-			justify-content: space-around;
-			img {
-				width: 15vw;
-				height: 15vw;
-			}
-		}
-		//big size
-		@media (min-width: $layout-m) {
-			img {
-				width: 5vw;
-				height: 5vw;
-			}
-		}
-		a:focus img,
-		a:hover img {
-			opacity: 1;
-			img {
-				width: 5vw;
-				height: 5vw;
-				opacity: 0.6;
-			}
+	.topline{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+		.top-date{
+			margin: rem(23);
 		}
 	}
+
+	.bottomline{
+	text-align: right;
+		.bottom-date{
+			@media (max-width: $layout-s) {
+			text-align: right;	
+			}
+		}
+	@media (max-width: $layout-s) {
+		text-align: left;
+		padding-left: 10vw;
+		padding-right: 10vw;
+	}
+	}
+	.big-headline{
+	@include big-headline;
+			display: inline-block;
+			white-space: nowrap;
+			@media (max-width: $layout-s) {
+				font-size: rem(70);
+				line-height: rem(50);
+			}
+			@media (min-width: $layout-s) {
+				font-size: rem(100);
+				line-height: rem(90);
+			}
+	}
+	.subtitle{
+	@include  OptiBrian;
+	white-space: nowrap;
+	@media (max-width: $layout-s) {
+		font-size: rem(30);
+		line-height: rem(20);
+	}
+	@media (min-width: $layout-s) {
+		font-size: rem(45);
+		line-height: rem(40);
+		}
+	}
+	}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
-.footerImage{
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	z-index: -9999999;
-}
+
+// .footer{
+// 	height: 300vh;
+// 	width: 100%;
+// 	position: relative;
+// }
+// .footer-content{
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	align-items: center;
+// 	padding-top: $LargeContainerPadding;
+// 	a{
+// 		color: $green;
+// 		text-decoration: underline;
+// 	}
+// 	h3{
+// 		padding-top: $LargeContainerPadding;
+// 		font-size: 8vh;
+// 		color: $green;
+// 	}
+// 	.links{
+// 		text-decoration: none;
+// 	}
+// 	.SocialLinks{
+// 		// padding-top: $LargeContainerPadding;
+// 		color: green;
+// 		display: flex;
+// 		flex-direction: row;
+// 		justify-items: center;
+// 		align-items: center;
+// 		align-content: center;
+// 		justify-content: space-between;
+// 		max-width: 10070vw;
+// 		//small size 
+// 		@media (max-width: $layout-m) {
+// 			justify-content: space-around;
+// 			img {
+// 				width: 15vw;
+// 				height: 15vw;
+// 			}
+// 		}
+// 		//big size
+// 		@media (min-width: $layout-m) {
+// 			img {
+// 				width: 5vw;
+// 				height: 5vw;
+// 			}
+// 		}
+// 		a:focus img,
+// 		a:hover img {
+// 			opacity: 1;
+// 			img {
+// 				width: 5vw;
+// 				height: 5vw;
+// 				opacity: 0.6;
+// 			}
+// 		}
+// 	}
+// }
+// .footerImage{
+// 	position: absolute;
+// 	top: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	object-fit: cover;
+// 	z-index: -9999999;
+// }
 

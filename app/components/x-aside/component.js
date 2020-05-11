@@ -6,7 +6,6 @@ export default Component.extend({
 	tagName: 'aside',
 	classNames: ['Aside'],
 	layout: service(),
-
 	click(event) {
 		const layout = get(this, 'layout')
 		const showAside = get(layout, 'showAside')
@@ -14,6 +13,8 @@ export default Component.extend({
 
 		if (clickedElementHasAnHref && showAside) {
 			layout.perhapsCloseAside()
+			
 		}
 	}
+	
 })

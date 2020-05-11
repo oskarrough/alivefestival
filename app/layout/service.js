@@ -21,10 +21,9 @@ export default Service.extend({
 		return this.get('initialWidth') < BREAKPOINT
 	}),
 
-	// Only close if we're on a small screen.
+	//on all screenscreen.
 	perhapsCloseAside() {
-		if (this.get('smallScreen')) {
 			this.set('showAside', false)
-		}
+		
 	}
 })

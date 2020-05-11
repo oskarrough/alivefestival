@@ -10,25 +10,28 @@ html {
 	// background-image: linear-gradient(to bottom, #eee5e5 10%, hsl(0, 41%, 88%));
 }
 
-body {
-	overflow-y: scroll; // avoid jumps
-}
+// body {
+// 	overflow-y: scroll; // avoid jumps
+// }
+
+// .App{
+// 	height: 100%;
+// 	background: blue;
+// }
+
 
 .App-main {
 	display: block;
 	transition: transform 250ms $ease-accelerate, opacity 200ms;
-
-	@media (max-width: $layout-m) {
-		// Push it out of view to the left
-		// transform: translate3d(10%, 0, 0);
-
+	height: 100%;
+	// @media (max-width: $layout-m) {
 		.show-aside & {
 			opacity: 0.5;
 			transition-timing-function: $ease-decelerate, opacity 200ms;
 			transition-duration: 300ms;
 			// transform: translate3d(5%, 0, 0);
 		}
-	}
+	// }
 
 	@media (min-width: $layout-m) {
 		padding-left: $aside-width - 1rem;
@@ -44,9 +47,6 @@ body {
 	}
 }
 
-// .Artists {
-// 	margin-left: rem($space * 2);
-// }
 
 .BackLink {
 	margin-bottom: rem($space * 2);

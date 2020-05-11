@@ -1,13 +1,11 @@
 .Burger {
 	position: fixed;
-	top: 0;
+	top: $padding;
 	right: 0;
 	z-index: 6; // on top of .Aside
 	background-color: transparent;
-	margin: rem($space);
+	margin-right: rem($space);
 	border: 0;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
 	&:hover {
 		cursor: pointer;
 	}
@@ -23,11 +21,10 @@
 			display: inline-block;
 			width: rem(42);
 			height: rem(50);
+			right: 10px;
 			background-image: url(images/dots/closingX.svg);
 			background-position: 50%;
-			right: 5px;
 			background-repeat: no-repeat;
-			// background-size: rem(25);
 			position: absolute;
 			z-index: 2;
 		}
@@ -37,111 +34,10 @@
 	&::before {
 		content: '';
 		display: inline-block;
-		//small size 
-		@media (max-width: $layout-m) {
-			background-image: url(images/dots/burgerMobileFirst.svg);
-			width: rem(42);
-			height: rem(50);
-		}
-		//big size
-		@media (min-width: $layout-m) {
-			background-image: url(images/dots/burger.svg);
-			width: 100px;
-			height: 100px;
-		}
-		background-repeat: no-repeat;
+		background-image: url(images/dots/burgerMobileFirst.svg);
+		width: rem(30);
+		height: rem(30);
 		z-index: 2;
 	}
 
-	// &::after {
-	// 	content: '';
-	// 	display: block;
-	// 	// height: 1.8rem;
-	// 	width: 86%;
-	// 	position: absolute;
-	// 	top: 0.5rem;
-	// 	left: 0.4rem;
-	// 	transform: rotate(-2deg);
-	// }
-
-
 }
-// .Burger-text {
-// 	display: inline-block;
-// 	position: fixed;
-// 	z-index: 2;
-// 	top: 0;
-// 	font-size: 400px;
-// 	text-align: center;
-// 	color: black;
-// }
-// .NavBtn {
-// 	padding-left: 0.5rem;
-// 	padding-right: 0.5rem;
-// }
-// .NavBtn-label {
-// 	@extend %font-bold;
-// 	font-size: $font-14;
-// 	float: left;
-// 	padding-top: 1.4rem;
-// 	text-transform: uppercase;
-// 	letter-spacing: 0.1em;
-// 	color: $white;
-// 	@media (max-width: $layout-s) {
-// 		display: none;
-// 	}
-// }
-// .NavBtn-icon {
-// 	position: relative;
-// 	display: inline-block;
-// 	height: 23px;
-
-// 	// The three lines
-// 	span,
-// 	span:before,
-// 	span:after {
-// 		display: block;
-// 		width: $space;
-// 		height: 4px;
-// 		background-color: $white;
-// 		transition-property: margin, transform;
-// 		transition-duration: 200ms;
-// 		transition-delay: 200ms;
-// 	}
-// 	// first line
-// 	span {
-// 		margin: 0 auto;
-// 		position: relative;
-// 		top: 12px;
-// 	}
-// 	// top and bottom lines
-// 	span:before,
-// 	span:after {
-// 		position: absolute;
-// 		content: '';
-// 	}
-// 	// top line
-// 	span:before {
-// 		margin-top: -9px;
-// 	}
-// 	// bottom line
-// 	span:after {
-// 		margin-top: 9px;
-// 	}
-// }
-// // Active state: X instead of burger menu
-// .NavBtn.is-open .NavBtn-icon span {
-// 	transition-duration: 0s;
-// 	transition-delay: 200ms;
-// 	background-color: transparent;
-// 	&:before {
-// 		margin-top: 0;
-// 		transform: rotate(45deg);
-// 		transition-delay: 0, 200ms;
-// 	}
-// 	&:after {
-// 		margin-top: 0;
-// 		transform: rotate(-45deg);
-// 		transition-delay: 0, 200ms;
-// 	}
-// }

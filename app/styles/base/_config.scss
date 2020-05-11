@@ -1,8 +1,3 @@
-// Typography
-$base-font-size: 17px;
-$base-font-size-unitless: 17;
-$base-line-height-unitless: (26/17);
-
 // Colors
 //new colors
 $turquise:  rgb(132, 255, 169);
@@ -10,25 +5,73 @@ $buttonblue: rgb(86, 134, 255);
 $coral: #ff938b;
 $purple: #af00ff;
 $transparent: rgba(0,0,0,0);
-$blue: rgb(0, 8, 255);
+$blue: #2540FF;
+$green:#256b25;
+
+///images
+$MobileImageSize: 80vh;
+$MobileImageSizeLarge: 100vh;
+$coverimagesize: 60vh;
+
+$image-border: 10vh;
+
+
 //new margin
+$menufont: 10vw;
+$submenufont: 3vw;
+$largermenufont: 5vw;
+$largersubmenufont: 20px;
+$menupadding: 15px;
+
+$burger: 50px;
+$calcBurger: 90px;
+$artistlistfont: 10vw;
+$smallartistlistfont: 50px;
+
+$minimum-icon-height: 50px;
+$maximum-icon-height: 100px;
+
 $boxmargin: 0px;
+$imageborder: 30px;
+$doubleImageBorder: 60px;
 $tickermargin: 10px;
+
+$padding: 10px;
 $ContainerPadding: 18px;
 $LargeContainerPadding: 10vh;
 $hugeContainerPadding: 20vh;
-$topPadding: 40vh;
+$topPadding: 20vh;
+$listpadding: 30px;
+$listpaddinglarge: 60px;
+
 $thumbnailImage: 300px;
 $smallImageSize: 70vw;
 $bigImageSize: 100vh;
-$buttonPadding: 0.1em 1em 0.1em;
 $SponsorImageSize: 40vw;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Typography
+$base-font-size: 17px;
+$base-font-size-unitless: 17;
+$base-line-height-unitless: (26/17);
+
 
 
 ;
 $dark-green: hsl(154, 48%, 16%);
 $gold: hsl(43, 92%, 62%);
-$green:#256b25;
+
 $lightblue: #2581f5;
 $nice-slated-red: hsl(13, 59%, 53%);
 $orange: hsl(21, 100%, 45%);
@@ -93,7 +136,7 @@ $ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
 $ease-sharp: cubic-bezier(0.4, 0, 0.6, 1);
 
 // Breakpoints
-$layout-s: 414px;
+$layout-s: 550px;
 $layout-sm: 600px;
 $layout-m: 740px;
 $layout-mm: 970px;

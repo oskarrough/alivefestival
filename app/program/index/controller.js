@@ -40,7 +40,18 @@ export default Controller.extend({
 		
 		// To get "music" artists we get those without any tags.
 		if (tag === 'music') {
-			return artists.filter(artist => !artist.get('tags.length'))
+			// return artists.filter(artist => !artist.get('tags.length'))
+			return artists.filter(artist => {
+				let tags = artist.get('tags')
+	
+				if (!tags) return false
+	
+				return tags.any(t => {
+					let name = t.get('name')
+					if (t.id === '26') name = 'musik'
+					return name === tag
+				})
+			}) 
 			
 		} 
 		if (tag === "event"){

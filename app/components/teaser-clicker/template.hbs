@@ -1,0 +1,23 @@
+<div class="Container horizontal-Centering Padded" style="background-image:linear-gradient({{design.acf.top_color}}, {{design.acf.bottom_color}})" >
+			<h2 class="frontpage-headline" style="color:{{design.acf.headline_color}}">{{design.acf.headline}}</h2>		
+            {{#if design.acf.teaser_Subheadline}}
+            <p style="color:{{design.acf.subheadline_color}}">{{design.acf.teaser_Subheadline}}</p>	
+            {{/if}}	
+            {{#if design.acf.teaser_image}}
+            <img class="teaser-image" src={{design.acf.teaser_image}}/>	
+            {{/if}}	
+			
+			<a style="border: 1px {{design.acf.button_frame_color}} solid; color:{{design.acf.button_text_color}}" href="{{design.acf.url_1}}" class="Button Link"> 
+					{{design.acf.url_1_text}}
+			</a>
+		
+            {{#if design.acf.url_2}}
+				<a style="border: 1px {{design.acf.button_frame_color}} solid; color:{{design.acf.button_text_color}}" href="{{design.acf.url_2}}" class="Button Link"> 
+					{{design.acf.url_2_text}}
+			</a>
+            {{/if}}
+</div>
+
+
+
+{{yield}}
