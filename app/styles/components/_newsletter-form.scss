@@ -1,59 +1,58 @@
+.Newsletter{
+	background-color: $bg-color;
+}
 .NewsletterForm {
 	display: flex;
 	width: 100%;
-	flex-direction: column;
-
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	// padding: $ContainerPadding;
-	margin: 0;
-	.outlined-headline{
-		color: $transparent;
-		font-size: 7vh;
-		-webkit-text-stroke: 1px $blue; 
-		
+	.headlines{
+		width: 50%;
+		font-size: rem(25);
+		line-height: rem(30);
+		font-weight: medium;
+		@media (max-width: $layout-m) {
+			font-size: rem(40);
+			line-height: rem(40);
+			width: 100%;
+		}
+		@include boldGTHaptic;
+		.outlined-headline{
+			color: $transparent;
+			-webkit-text-stroke: 1px $blue; 
+		}
+		.regular-headline{
+			color: $blue;
+		}
 	}
-	.regular-headline{
-		color: $blue;
-		font-size: 7vh;
+	@media (max-width: $layout-m) {
+		flex-direction: column;
+		align-items: left;
+		justify-content: flex-start;
 	}
+	
+
 	.inputButton{
 		display: flex;
 		justify-content: space-between;
 		white-space: nowrap;
-		width: 100%;
+		width: 50%;
 		label{
 			height: 100%;
 			margin: 0;
 			flex-grow: 3;
 			padding: 0;
 			input{
-				font-size: $font-20;
+				font-size: rem(10);
 				height: rem(40);
 				width: 100%;
 				margin: 0;
 			}
 		}
+		@media (max-width: $layout-m) {
+			margin-top: $padding;
+			width: 100%;
+		}
 	}
-	// h3 {
-	// 	font-size: 1em;
-	// }
-
-	// h3,
-	// input,
-	// p {
-	// 	margin-bottom: 0;
-	// }
-
-	// > * {
-	// 	margin-right: 1rem;
-	// }
-
-	// > label {
-	// 	margin-right: 0;
-	// }
-
-	// small a {
-	// 	opacity: 0.8;
-	// }
 }

@@ -1,3 +1,14 @@
+.loadinganimation{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(white, $coral);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
 .Logo {
 	font-size: 1.4rem;
 	// margin: 1rem;
@@ -6,7 +17,7 @@
 	@media (max-width: $layout-m) {
 		// margin-left: auto;
 		// margin-right: auto;
-		display: none;
+		// display: none;
 	}
 	
 	a {
@@ -21,14 +32,13 @@
 	}
 
 	img {
-		max-width: 100px;
-		filter: #{'invert()'};
+		max-width: 400px;
+		// filter: #{'invert()'};
 	}
 }
 
 .Logo-date {
 	@include h3;
-	color: blue;
 	// color: $silk;
 	font-size: 2vw;
 	text-transform: uppercase;
@@ -36,7 +46,6 @@
 
 .Logo-horse {
 	margin-top: 0.5rem;
-
 	@media (max-height: 767px) {
 		.Aside & {
 			display: none;

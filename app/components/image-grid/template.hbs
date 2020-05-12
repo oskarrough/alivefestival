@@ -1,14 +1,19 @@
-<div class="sponsors PaddedContainer">
-{{#each items as |image|}}
-        {{#if image.sizes.s}}
-            <img class="sponsor-image" src={{image.sizes.s}} />
-        {{else}}
-         {{#if image.sizes.m}}
-            <img class="spo nsor-image"src={{image.sizes.m}} />
+<div class="fourPaddedContainer">
+    {{#link-to url}}
+        <h3 class="frontpage-headline-small" style="color:{{style}}">{{urltext}}</h3>
+    {{/link-to}}
+    <div class="image-grid">
+    {{#each items as |image|}}
+            {{#if image.sizes.s}}
+                <img class="image-grid-image" src={{image.sizes.s}} />
             {{else}}
-            <img class="sponsor-image" src={{image.sizes.l}} />
+            {{#if image.sizes.m}}
+                <img class="image-grid-image"src={{image.sizes.m}} />
+                {{else}}
+                <img class="image-grid-image" src={{image.sizes.l}} />
+                {{/if}}
             {{/if}}
-        {{/if}}
-{{/each}}
+    {{/each}}
+    </div>
 </div>
 {{yield}}

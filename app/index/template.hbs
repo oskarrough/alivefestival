@@ -39,7 +39,7 @@
 	</div>
 
 	{{#if model.page.acf.kategori_1}}
-	<div style="background-image:linear-gradient({{escapeCSS model.page.acf.cover_image_1_top_color}}, {{escapeCSS model.page.acf.cover_image_1_bottom_color}})" class="Container Media-TopFade categories PaddedContainer">
+	<div style="background-image:linear-gradient({{escapeCSS model.page.acf.cover_image_1_top_color}}, {{escapeCSS model.page.acf.cover_image_1_bottom_color}})" class="Container Media-TopFade categories">
 		<ul class="graphic-container" style="color:{{escapeCSS model.page.acf.kategories_text_color}}"> 
 			<li class="graphic-item">
 				<img src="{{model.page.acf.kategori_graphic_elements.0.sizes.s}}"/>		
@@ -114,13 +114,8 @@
 			<img class="coverImage" src="{{model.page.acf.cover-image6}}" alt="{{model.title}}"/>
 		{{/if}}
 
-		<div class="Container Media--backgroundcolor Media Media-forcedHeight">
-			<h2 class="headline-big">{{model.page.acf.planlaegdintur-headline}}</h2>
-			<p class="headline-small">{{model.page.acf.planlaegdintur-paragraph}}</p>
-			{{activities-list items=model.practical}} 
-			{{#link-to 'practical' class="Button purple-Button"}}
-					SE ALT DET PRAKTISKE
-			{{/link-to}}
+		<div class="Container Relative">
+			{{actvities-list items=model.practical design=model.practicalDesign}} 
 		</div>
 
 		{{#if model.page.acf.cover-image7}}
@@ -134,7 +129,6 @@
 		{{#if model.page.acf.cover-image8}}
 			<img class="coverImage" src="{{model.page.acf.cover-image8}}" alt="{{model.title}}"/>
 		{{/if}}
-		
 
 		<div class="Container Relative topPadded">
 			{{teaser-clicker design=model.samarbejdsteaser}}
@@ -144,32 +138,36 @@
 			<img class="coverImage" src="{{model.page.acf.cover-image9}}" alt="{{model.title}}"/>
 		{{/if}}
 
-
-	</div>
-	
-
+		<div class="Container Relative topPadded">
+				{{newsletter-form}}
+		</div>
 		
-
-
-
-
-
-
-			
-
-	
-
-
-
-	
-
-	
-
-
-
-
-
-
+		<div style="background-image:linear-gradient({{escapeCSS model.samarbejdsteaser.acf.featured_partners_top_color}}, {{escapeCSS model.samarbejdsteaser.acf.featured_partners_bottom_color}}); color:{{escapeCSS model.samarbejdsteaser.acf.featured_partners_text_color}}" >
+			{{image-grid items=model.samarbejdsteaser.acf.partner_gallery urltext=model.samarbejdsteaser.acf.featured_partners_headline style=model.samarbejdsteaser.acf.featured_partners_text_color url="partners"}} 
+		</div>
+	</div>
+	<div class="footer"> 
+		{{#if model.page.acf.footer_image}}
+			<img class="footerImage" src="{{model.page.acf.footer_image}}" alt="{{model.title}}"/>
+		{{/if}}
+		<div class="footer-content">
+				{{link-to 'Nyheder' 'news'}}
+				{{link-to 'Praktisk' 'practical'}}
+				{{link-to 'Partnere' 'partners'}}
+				{{link-to 'Historie' 'about.history'}}
+				{{link-to 'Kontakt' 'about.contact'}}
+				<h3>Følg med</h3>
+				<div>
+					<a class="links" href="https://open.spotify.com/playlist/1wdtoke69vpF5LTFvTCPol?si=EfhdF-FwQBG0hFBWzT_YsA" class="Button coral-Button"> 
+					SPOTIFY
+					</a>
+					<a class="links" href="INSERT LINK FOR APPLIE MUSIC" class="Button coral-Button"> 
+					APPLE MUSIC
+					</a>
+				</div>
+				{{social-links}}
+		</div>
+	</div>
 	
 </div>
 

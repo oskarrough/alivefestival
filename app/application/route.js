@@ -5,7 +5,6 @@ import {hash} from 'rsvp'
 export default Route.extend({
 	moment: service(),
 	model() {
-		// change catergory 11 to catergory 12 for practical info		
 		return hash({
 			locale: this.get('moment').changeLocale('da'),
 			page: this.store.findRecord('page', 2407),
@@ -13,8 +12,6 @@ export default Route.extend({
 		
 	
 	}
-	
-	
 })
 
 

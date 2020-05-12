@@ -17,14 +17,8 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	color: inherit;
-	//small size 
-	@media (max-width: $layout-s) {
-		font-size: $menufont;
-	}
-	//big size
-	@media (min-width: $layout-s) {
-		font-size: $largermenufont;
-	}
+	font-size: 30px;
+
 	&:hover {
 		-webkit-text-stroke: 1px $blue; 
 		color: $transparent;
@@ -60,29 +54,5 @@
 	
 }
 
-// The social nav
-.Social {
-	margin-top: $ContainerPadding;
-	float: bottom;
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	a img{
-		width: 10vw;
-		height: 10vw;
-		min-width: $minimum-icon-height;
-		min-height: $minimum-icon-height;
-		max-width: $maximum-icon-height;
-		max-height: $maximum-icon-height;
-
-	}
-	a:focus img,
-	a:hover img {
-		opacity: 1;
-		img {
-			opacity: 0.6;
-		}
-	}
-}
 
 

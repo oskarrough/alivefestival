@@ -1,4 +1,6 @@
 .List {
+	position: relative;
+	left: 0;
 	list-style: none;
 	padding-left: 0;
 	padding: 0;
@@ -7,6 +9,7 @@
 	flex-direction: row;
 	overflow-x: scroll;
 	align-items: center;
+	white-space: nowrap;
 	time {
 		display: block;
 		font-size: small;
@@ -14,12 +17,27 @@
 		opacity: 0.5;
 	}
 }
-
-// The grid variant wraps and doesn't show body
-.List-TopBound{
-	align-items: flex-start;
+.list-item{
+	width: 60vw;
+	margin-right: $padding;
+	display: inline-block;
+	max-width: 300px;
+	img{
+		width: $Listimagewidth;
+		height: $ListimageHeight;
+		object-fit: cover;
+	}
+	a{
+		@include boldGTHaptic;
+		text-decoration: none;
+		width: 100%;
+		p{
+			width: 100%;
+			overflow-wrap: break-word;
+		}
+	}
 }
-
+// The grid variant wraps and doesn't show body
 .List img {
 	transition: -webkit-filter 150ms $easing, transform 2000ms $easing;
 	// without default values, the image will jump 1px in chrome on hover

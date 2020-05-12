@@ -1,29 +1,38 @@
-<div style="background-image:linear-gradient({{escapeCSS design.acf.top_color}}, {{escapeCSS design.acf.bottom_color}}); color:{{escapeCSS design.acf.text_color}}" >
+<div class="Container Padded PaddedContainer fourPaddedContainer" style="background-image:linear-gradient({{escapeCSS design.acf.top_color}}, {{escapeCSS design.acf.bottom_color}}); color:{{escapeCSS design.acf.text_color}}" >
     {{#if design.title}}
-    <h2> {{design.title}}</h2>
+    <h2 class="frontpage-headline leftleaning forcedDoubleline long-word"> {{design.acf.headline}}</h2>
+    {{/if}}
+    {{#if design.content}}
+    <p class="frontpage-content leftleaning" style="color:{{design.acf.paragraph_text_color}}"> {{design.acf.paragraph}}</p>
     {{/if}}
     <div class="flex-box-toggle">
-        {{#if design.acf.gallery}}
-        <ul class="titles">
-            {{#each design.acf.gallery as |image|}}
-                <li> <img class="gallery-image" src={{image.sizes.s}}/> </li>
-            {{/each}}
-        </ul>
-        {{/if}}
-        <ul class="titles ">
-            {{#each activities as |activity|}}
-                <li class="artist-item">
-                    {{#link-to 'program.artist' activity}}
-                            <p>{{activity.title}} </p>
-                            <img class="gallery-image" src={{design.acf.kategori_graphic_elements.0.sizes.s}}/>
-                    {{/link-to}}
-                </li>
-            {{/each}}
-        </ul>
+        <div class="activity-table">
+             <ul class="icons">
+                {{#each design.acf.kategori_graphic_elements as |icon|}}
+                <img src={{icon.sizes.s}}/>
+                {{/each}}
+            </ul>
+            <ul class="titles">
+                {{#each activities as |activity|}}
+                    <li class="artist-item">
+                        {{#link-to 'program.artist' activity}}
+                                <p>{{activity.title}} </p>
+                        {{/link-to}}
+                    </li>
+                {{/each}}
+            </ul> 
+        </div>
+         {{#if design.acf.gallery}}
+
+        {{#each design.acf.gallery as |image|}}
+                <img class="gallery-image" src={{image.sizes.l}}/>
+        {{/each}}
+
+        {{/if}}           
     </div>
-    <div style="border: 1px {{escapeCSS model.page.acf.activities_list_text_color}} solid" class="Button">
+     <div style="border: 1px {{escapeCSS model.page.acf.button_frame_color}} solid" class="Button CenterSelf">
 		{{#link-to 'program' class="small-caption button"}}
-			Se Programmet
+			{{design.acf.button_text}}
 		{{/link-to}}
 	</div>
 </div>

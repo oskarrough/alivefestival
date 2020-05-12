@@ -18,6 +18,12 @@
 	font-weight: bold;
 }
 @font-face {
+	font-family: 'brian-james';
+	src: url('fonts/brian-james/BrianJames.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
 	font-family: 'GT Haptik Light';
 	src: url('fonts/gt-haptik/gt-haptik-light.woff') format('woff');
 	font-weight: 300;
@@ -40,7 +46,6 @@
 	src: url('fonts/gt-haptik/gt-haptik-bold.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
-
 }
 
 
@@ -66,7 +71,8 @@
 }
 
 @mixin OptiBrian{
-	font-family: 'OptiBrian';
+	font-family: 'brian-james';
+	letter-spacing: 0;
 	font-weight: 900;
 }
 @mixin OptiBrianItalic{
@@ -142,12 +148,7 @@ $font-70: rem(60);
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'brian-james';
-	src: url('fonts/brian-james/BrianJames.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
+
 
 %font-light {
 	font-family: 'GT Haptik', sans-serif;

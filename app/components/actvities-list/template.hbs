@@ -1,28 +1,40 @@
-<ul class="List {{if topBound 'List-TopBound'}}">
-		{{#each items as |post|}}
-		<li class="Media Media-container Media-activities">
-			<figure class="activities">
-				{{#link-to 'news.post' post class="Media activity-image"}}
-				{{#if post.better_featured_image.media_details.sizes.xl.source_url}}
-				<img src="{{post.better_featured_image.media_details.sizes.xl.source_url}}" alt="{{post.better_featured_image.alt}}"> 
-				{{else}}
-				<img src="{{post.better_featured_image.media_details.sizes.l.source_url}}" alt="{{post.better_featured_image.alt}}"> 
-				{{/if}}
-				{{/link-to}}
-			</figure>
-			<div class="Media-activities-headlines">
-				<h3>
-					{{#link-to 'news.post' post class="headlines"}}
-						{{post.title}}
+<div class="Container Padded PaddedContainer" style="background-image:linear-gradient({{escapeCSS design.acf.top_color}}, {{escapeCSS design.acf.bottom_color}})" >
+	{{#if design.title}}
+	<div class="Centering">
+    	<h2 class="frontpage-headline" style="color:{{escapeCSS design.acf.headline_color}}"> {{design.acf.headline}}</h2>
+	</div>
+    {{/if}}
+    {{#if design.content}}
+	<div class="Centering">
+   	 <p class="frontpage-content limitedWidth" style="color:{{design.acf.paragraph_text_color}}"> {{design.acf.paragraph}}</p>
+    </div>
+	{{/if}}
+	<div class="Padded">
+		<ul class="List">
+				{{#each items as |post|}}
+				<li class="list-item">
+					<figure class="item">
+					{{#link-to 'news.post' post class=""}}
+						{{#if post.better_featured_image.media_details.sizes.xl.source_url}}
+						<img src="{{post.better_featured_image.media_details.sizes.xl.source_url}}" alt="{{post.better_featured_image.alt}}"> 
+						{{else}}
+						<img src="{{post.better_featured_image.media_details.sizes.l.source_url}}" alt="{{post.better_featured_image.alt}}"> 
+						{{/if}}
 					{{/link-to}}
-				</h3>
-		    </div>
-
-			
-		</li>
-		{{/each}}
-</ul>
-
+					</figure>
+					{{#link-to 'news.post' post style="color:{{escapeCSS design.acf.text_color}}"}}
+						<p>{{post.title}}</p>
+					{{/link-to}}
+				</li>
+				{{/each}}
+		</ul>
+	</div>
+	<div style="border: 1px {{escapeCSS model.page.acf.button_frame_color}} solid" class="Button leftleaning">
+		{{#link-to 'practical' class="small-caption button"}}
+			{{design.acf.button_text}}
+		{{/link-to}}
+	</div>
+ </div>
 
 
 	

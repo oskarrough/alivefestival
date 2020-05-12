@@ -39,8 +39,10 @@ figure,
 time {
 	margin: 0 0 rem($space);
 }
+
 a{
 	z-index: 999999999;
+	text-decoration: none;
 }
 .small-caption{
 	@include date-text;

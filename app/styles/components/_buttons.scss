@@ -50,6 +50,7 @@
 	background-color: #f4e7d6;
 }
 
+
 .Link{
 	color: inherit;
 	display: flex;
@@ -58,9 +59,18 @@
 	margin-bottom: $padding;
 	font-family: 'GT Haptik', sans-serif;
 	text-transform: uppercase;
-	font-size: $font-14;
-	
+	font-size: $font-14;	
 }
+
+.purple{
+	background-color: $purple;
+	color: $coral;
+	margin: 0;
+	border: none;
+	height: rem(40);
+}
+
+
 // .Yellow-Button{
 // 	border: 2px solid $yellow;
 // 	color: $whitewhite;
@@ -84,14 +94,7 @@
 // .coral{
 // 	background-color: $coral;
 // }
-// .purple{
-// 	background-color: $purple;
-// 	color: $coral;
-// 	margin: 0;
-// 	border: none;
-// 	height: rem(40);
 
-// }
 // .black-Button{
 // 	border: 1px solid black;
 // }
