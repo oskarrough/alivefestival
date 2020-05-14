@@ -16,15 +16,25 @@ export default Controller.extend({
 		if (!tag || tag === 'all') {
 			return;
 		}
-		if(tag === "event"){
-			return false;
-		} else {
+		if(tag === "musik"){
 			return true;
 		}
 	}),
-	eventcategory: computed('tag', 'model.artists.@each.tags', function(){
+	naturcategory: computed('tag', 'model.artists.@each.tags', function(){
 		let tag = this.get('tag')
-		if(tag === "event"){
+		if(tag === "natur"){
+			return true;
+		}
+	}),
+	kulturcategory: computed('tag', 'model.artists.@each.tags', function(){
+		let tag = this.get('tag')
+		if(tag === "kultur"){
+			return true;
+		}
+	}),
+	samværcategory: computed('tag', 'model.artists.@each.tags', function(){
+		let tag = this.get('tag')
+		if(tag === "samvær"){
 			return true;
 		}
 	}),
@@ -40,10 +50,8 @@ export default Controller.extend({
 		
 		// To get "music" artists we get those without any tags.
 		if (tag === 'music') {
-			// return artists.filter(artist => !artist.get('tags.length'))
 			return artists.filter(artist => {
 				let tags = artist.get('tags')
-	
 				if (!tags) return false
 	
 				return tags.any(t => {
@@ -67,7 +75,7 @@ export default Controller.extend({
 				})
 			}) 
 		} 
-		if (tag === "jazz"){
+		if (tag === "kultur"){
 			return artists.filter(artist => {
 				let tags = artist.get('tags')
 	
@@ -75,12 +83,12 @@ export default Controller.extend({
 	
 				return tags.any(t => {
 					let name = t.get('name')
-					if (t.id === '13') name = 'jazz'
+					if (t.id === '27') name = 'kultur'
 					return name === tag
 				})
 			})
 		} 
-		if (tag === "rnb"){
+		if (tag === "natur"){
 			return artists.filter(artist => {
 				let tags = artist.get('tags')
 	
@@ -88,12 +96,12 @@ export default Controller.extend({
 	
 				return tags.any(t => {
 					let name = t.get('name')
-					if (t.id === '14') name = 'rnb'
+					if (t.id === '29') name = 'natur'
 					return name === tag
 				})
 			})
 		} 
-		if (tag === "rock"){
+		if (tag === "samvær"){
 			return artists.filter(artist => {
 				let tags = artist.get('tags')
 	
@@ -101,72 +109,7 @@ export default Controller.extend({
 	
 				return tags.any(t => {
 					let name = t.get('name')
-					if (t.id === '16') name = 'rock'
-					return name === tag
-				})
-			})
-		} 
-		if (tag === "elektronisk"){
-			return artists.filter(artist => {
-				let tags = artist.get('tags')
-	
-				if (!tags) return false
-	
-				return tags.any(t => {
-					let name = t.get('name')
-					if (t.id === '15') name = 'elektronisk'
-					return name === tag
-				})
-			})
-		} 
-		if (tag === "kunstoplevelse"){
-			return artists.filter(artist => {
-				let tags = artist.get('tags')
-	
-				if (!tags) return false
-	
-				return tags.any(t => {
-					let name = t.get('name')
-					if (t.id === '17') name = 'kunstoplevelse'
-					return name === tag
-				})
-			})
-		} 
-		if (tag === "performance"){
-			return artists.filter(artist => {
-				let tags = artist.get('tags')
-	
-				if (!tags) return false
-	
-				return tags.any(t => {
-					let name = t.get('name')
-					if (t.id === '18') name = 'performance'
-					return name === tag
-				})
-			})
-		} 
-		if (tag === "rap"){
-			return artists.filter(artist => {
-				let tags = artist.get('tags')
-	
-				if (!tags) return false
-	
-				return tags.any(t => {
-					let name = t.get('name')
-					if (t.id === '19') name = 'rap'
-					return name === tag
-				})
-			})
-		} 
-		if (tag === "hiphop"){
-			return artists.filter(artist => {
-				let tags = artist.get('tags')
-	
-				if (!tags) return false
-	
-				return tags.any(t => {
-					let name = t.get('name')
-					if (t.id === '20') name = 'hiphop'
+					if (t.id === '28') name = 'samvær'
 					return name === tag
 				})
 			})

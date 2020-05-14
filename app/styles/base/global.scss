@@ -40,18 +40,39 @@ time {
 	margin: 0 0 rem($space);
 }
 
-a{
+a,
+h1,
+h2,
+h3{
 	z-index: 999999999;
 	text-decoration: none;
 }
+
 .small-caption{
 	@include date-text;
-	margin: 0;
-	padding: 0;
-	line-height: 0;
 }
 .buttontext{
 	@include buttontext
+}
+iframe{
+	padding-bottom: $LargeContainerPadding;
+	padding-top: $LargeContainerPadding;
+	max-width: 100%;
+}
+img {
+	max-width: 100%;
+}
+
+.page-content{
+	@include regGTHaptic;
+	color: inherit;
+	font-size: 16px;
+	
+}
+.page-title{
+	@include OptiBrian;	
+	font-size: 50px;
+	color: inherit;
 }
 
 
@@ -95,10 +116,7 @@ a{
 // 	margin-left: 0.5em;
 // }
 
-// iframe,
-// img {
-// 	max-width: 100%;
-// }
+
 
 // .underline a {
 // 	text-decoration: underline;

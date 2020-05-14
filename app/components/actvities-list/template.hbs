@@ -10,24 +10,11 @@
     </div>
 	{{/if}}
 	<div class="Padded">
-		<ul class="List">
-				{{#each items as |post|}}
-				<li class="list-item">
-					<figure class="item">
-					{{#link-to 'news.post' post class=""}}
-						{{#if post.better_featured_image.media_details.sizes.xl.source_url}}
-						<img src="{{post.better_featured_image.media_details.sizes.xl.source_url}}" alt="{{post.better_featured_image.alt}}"> 
-						{{else}}
-						<img src="{{post.better_featured_image.media_details.sizes.l.source_url}}" alt="{{post.better_featured_image.alt}}"> 
-						{{/if}}
-					{{/link-to}}
-					</figure>
-					{{#link-to 'news.post' post style="color:{{escapeCSS design.acf.text_color}}"}}
-						<p>{{post.title}}</p>
-					{{/link-to}}
-				</li>
-				{{/each}}
-		</ul>
+		
+				{{news-list items=items textcolor=design.acf.text_color}}
+
+
+	
 	</div>
 	<div style="border: 1px {{escapeCSS model.page.acf.button_frame_color}} solid" class="Button leftleaning">
 		{{#link-to 'practical' class="small-caption button"}}

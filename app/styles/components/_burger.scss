@@ -2,7 +2,6 @@
 	position: fixed;
 	top: $padding;
 	right: 0;
-	z-index: 6; // on top of .Aside
 	background-color: transparent;
 	margin-right: rem($space);
 	border: 0;
@@ -26,7 +25,7 @@
 			background-position: 50%;
 			background-repeat: no-repeat;
 			position: absolute;
-			z-index: 2;
+			z-index: -11; // on top of .Aside
 		}
 	}
 
@@ -37,7 +36,7 @@
 		background-image: url(images/dots/burgerMobileFirst.svg);
 		width: rem(30);
 		height: rem(30);
-		z-index: 2;
+
 	}
 
 }

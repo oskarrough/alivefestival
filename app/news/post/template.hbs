@@ -2,13 +2,13 @@
 
 <article class="Post">
 	<h1>{{model.title}}</h1>
-	<time>{{moment-format model.date}}</time>
-	<div class="Post-body">
-		{{{model.content}}}
-	</div>
 	{{#if model.better_featured_image}}
 		<img src="{{model.better_featured_image.source_url}}" alt="{{model.title}}">
 	{{/if}}
+		<time>{{moment-format model.date}}</time>
+	<div class="Post-body">
+		{{{model.content}}}
+	</div>
 	<br><br>
 	<p class="BackLink">{{#link-to 'news.index'}}↖ alle nyheder{{/link-to}}</p>
 </article>

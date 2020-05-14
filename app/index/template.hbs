@@ -5,20 +5,6 @@
 				<source src={{model.page.acf.video}} alt={{model.page.acf.video.alt}} type="video/mp4">
 				Your browser does not support the video tag.
 		</video>
-		<div class="header"> 
-			{{#link-to 'application' class="HeaderLogo"}}
-					<img width="100" class="Logo-light" src="/assets/images/logos/logo-2017-white.png" alt="Thy Alive Festival">
-					<p class="small-caption">{{model.page.acf.abbreviated_festival-date}}</p>
-			{{/link-to}}	
-			<div class="button-container">
-				<img class="arrow"src="/assets/images/icons-output/png/arrow.png"/>
-				<div style="background-color:{{escapeCSS model.page.acf.top_color}}; color:{{escapeCSS model.page.acf.text_color}}; border: 1px {{escapeCSS model.page.acf.text_color}} solid" class="Button">
-						{{#link-to 'tickets' class=" buttontext"}}
-						Køb billet
-						{{/link-to}}
-				</div>
-			</div>
-		</div>
 		<div class="headline">
 				{{#if model.page.acf.headline_image}}
 					<img class="covermage" src={{model.page.acf.headline_image}}/>
@@ -145,29 +131,46 @@
 		<div style="background-image:linear-gradient({{escapeCSS model.samarbejdsteaser.acf.featured_partners_top_color}}, {{escapeCSS model.samarbejdsteaser.acf.featured_partners_bottom_color}}); color:{{escapeCSS model.samarbejdsteaser.acf.featured_partners_text_color}}" >
 			{{image-grid items=model.samarbejdsteaser.acf.partner_gallery urltext=model.samarbejdsteaser.acf.featured_partners_headline style=model.samarbejdsteaser.acf.featured_partners_text_color url="partners"}} 
 		</div>
+
+		<div class="PaddedContainer Container Relative instagram" style="background-image:linear-gradient({{escapeCSS model.page.acf.insta_news_top_color}}, {{escapeCSS model.page.acf.insta_news_bottom_color}}); color:{{escapeCSS model.page.acf.insta_news_headline_color}}" >
+			<a href={{model.page.acf.instagram_url}} target="_blank" title="Alive på instagram">
+				{{model.page.acf.title_for_instagram_list}}
+			</a>
+			{{instagram-feed token=model.page.acf.instagram_widget}}
+			{{#link-to 'news' }}
+				{{model.page.acf.title_for_news_list}}
+			{{/link-to}}
+			{{news-list items=model.news textcolor=model.page.acf.insta_news_text_color timecolor=model.page.acf.insta_news_headline_color time=1}}
+		</div>
 	</div>
+
+
 	<div class="footer"> 
 		{{#if model.page.acf.footer_image}}
 			<img class="footerImage" src="{{model.page.acf.footer_image}}" alt="{{model.title}}"/>
 		{{/if}}
-		<div class="footer-content">
+		<div class="footer-content" style="color:{{model.page.acf.footer_links_color}}">
 				{{link-to 'Nyheder' 'news'}}
 				{{link-to 'Praktisk' 'practical'}}
 				{{link-to 'Partnere' 'partners'}}
 				{{link-to 'Historie' 'about.history'}}
 				{{link-to 'Kontakt' 'about.contact'}}
-				<h3>Følg med</h3>
-				<div>
-					<a class="links" href="https://open.spotify.com/playlist/1wdtoke69vpF5LTFvTCPol?si=EfhdF-FwQBG0hFBWzT_YsA" class="Button coral-Button"> 
-					SPOTIFY
-					</a>
-					<a class="links" href="INSERT LINK FOR APPLIE MUSIC" class="Button coral-Button"> 
-					APPLE MUSIC
-					</a>
+				
+				<h3 style="color:{{model.page.acf.footer_headline_color}}">{{model.page.acf.footer_headline}}</h3>
+				<div class="footer-links">
+				<a style="border: 1px {{model.page.acf.footer_headline_color}} solid; color:{{model.page.acf.footer_links_color}}; background-color:{{model.page.acf.footer_button_color}}" href="{{model.MusikTeaserDesign.acf.url_1}}" class="Button"> 
+					{{model.MusikTeaserDesign.acf.secondary_text_for_url_1}}
+				</a>
+		
+				<a style="border: 1px {{model.page.acf.footer_headline_color}} solid; color:{{model.page.acf.footer_links_color}}; background-color:{{model.page.acf.footer_button_color}}" href="{{model.MusikTeaserDesign.acf.url_2}}" class="Button"> 
+					{{model.MusikTeaserDesign.acf.secondary_text_for_url_2}}
+				</a>
 				</div>
 				{{social-links}}
 		</div>
 	</div>
+	
+
 	
 </div>
 

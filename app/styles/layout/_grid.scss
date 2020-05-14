@@ -18,6 +18,7 @@ $masonry-gutter: 1.5rem;
 
 .Masonry-item {
 	width: 100%;
+	background: $transparent;
 	@media (min-width: $layout-m) {
 		width: 30%;
 		width: calc(33% - #{$masonry-gutter});

@@ -1,19 +1,35 @@
-{{#link-to "program" (query-params tag="all") class="Button coral-Button coral"}}
-	Hele programmet
-{{/link-to}}
-
-<div>
-{{#link-to 'program' (query-params tag="music") class="Button coral-Button coral"}}
-	Musikprogrammet
-{{/link-to}}
-
-{{#link-to 'program' (query-params tag="event") class="Button coral-Button coral"}}
-	Dagsprogrammet
-{{/link-to}}
+<div class="filters">
+{{#link-to 'program' (query-params tag="all") }}
+<div class="Button small-caption filter">
+	ALT
 </div>
+{{/link-to}}
 
+{{#link-to 'program' (query-params tag="musik") }}
+<div class="Button small-caption filter">
+	MUSIK
+</div>
+{{/link-to}}
 
+{{#link-to 'program' (query-params tag="natur") }}
+<div class="Button small-caption filter">
+	NATUR
+</div>
+{{/link-to}}
 
+{{#link-to 'program' (query-params tag="kultur") }}
+<div class="Button small-caption filter">
+	KULTUR
+</div>
+{{/link-to}}
+
+{{#link-to 'program' (query-params tag="samvær") }}
+<div class="Button small-caption filter">
+	SAMVÆR
+</div>
+{{/link-to}}
+
+</div>
 
 
 {{yield}}

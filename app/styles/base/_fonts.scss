@@ -32,7 +32,12 @@
 @font-face {
 	font-family: 'GT Haptik regular';
 	src: url('fonts/gt-haptik/gt-haptik-regular.woff') format('woff');
-	font-weight: 800;
+	
+}
+@font-face {
+	font-family: 'GT Haptik medium';
+	src: url('fonts/gt-haptik/gt-haptik-medium.woff') format('woff');
+	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
@@ -52,6 +57,8 @@
 @mixin big-headline {
 	font-family: 'GT Haptik regular';
 	letter-spacing: normal;
+	font-weight: 800;
+	font-style: normal;
 }
 
 @mixin date-text {
@@ -95,7 +102,16 @@
 	font-style: bold;
 	font-weight: 900;
 }
-
+@mixin mediumGTHaptic{
+	font-family: 'GT Haptik medium';
+	font-style: medium;
+	font-weight: medium;
+}
+@mixin regGTHaptic{
+	font-family: "GT Haptik Light";
+	letter-spacing: normal;
+	font-weight: 100;
+}
 
 
 
@@ -128,12 +144,7 @@ $font-70: rem(60);
 
 
 
-@font-face {
-	font-family: 'GT Haptik';
-	src: url('fonts/gt-haptik/gt-haptik-medium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-}
+
 
 @font-face {
 	font-family: 'GT Haptik';

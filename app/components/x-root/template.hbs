@@ -1,5 +1,19 @@
-<button class="Burger" data-target="" aria-expanded="true" {{action 'toggleAside'}}>
-			<span class="Burger-text"></span>
-</button>
-
+<div class="header"> 
+			{{#link-to 'application' class="HeaderLogo"}}
+					<img width="100" class="Logo-light" src="/assets/images/logos/logo-2017-white.png" alt="Thy Alive Festival">
+					<p class="small-caption">{{date}}</p>
+			{{/link-to}}
+			<div class="right-header">	
+			<div class="button-container">
+				<img class="arrow"src="/assets/images/icons-output/png/arrow.png"/>
+				<div style="background-color:{{escapeCSS bottonbackground}}; color:{{escapeCSS buttoncolor}}; border: 1px {{escapeCSS buttoncolor}} solid" class="Button">
+						{{#link-to 'tickets' class=" buttontext"}}
+						{{buttontext}}
+						{{/link-to}}
+				</div>
+			</div>
+			<button class="Burger" data-target="" aria-expanded="true" {{action 'toggleAside'}}>
+			</button>
+			</div>
+</div>
 {{yield}}

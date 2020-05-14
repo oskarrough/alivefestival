@@ -30,7 +30,7 @@
 }
 .Button {
 	display: inline-block;
-	padding: 0.1em 1em 0.1em;
+	padding: 0.2em 2em 0.2em;
 	justify-content: center;
 	align-self: center;
 	text-align: center;
@@ -38,6 +38,7 @@
 	background-image: none;
 	color: inherit;
 	white-space: nowrap;
+
 	a{
 		text-decoration: none;
 		color: inherit;
@@ -46,10 +47,9 @@
 .button:focus{
 	outline: none;
 }
-.greyButton{
-	background-color: #f4e7d6;
+.button-border{
+	margin: $padding;
 }
-
 
 .Link{
 	color: inherit;
@@ -70,85 +70,28 @@
 	height: rem(40);
 }
 
+.filters{
+	.filter{
+		border: 1px $blue solid;
+	}
+	.Button {
+		margin-right: 0.2em;
+		margin-bottom: 0.4em;
+		@media (min-width: $layout-s) {
+			font-size: 1em;
+		}
+	}
+	.is-active {
+		div{
+			background-color: $blue;
+		}
+		color: white;
+	}
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: left;
+}
 
-// .Yellow-Button{
-// 	border: 2px solid $yellow;
-// 	color: $whitewhite;
-// }
-// .coral-Button{
-// 	border: 2px solid $coral;
-// 	color: $whitewhite;
-// 	font-size: $font-14;
-// 	color: $whitewhite;
-// }
-// .button-blue-detail{
-// 	background-color: inherit;
-// 	border: 1px solid $blue;
-// 	color: $blue;
-// 	font-size: $font-14;
-// }
-// .purple-Button{
-// 	border: 1px solid $purple;
-// 	color: black;
-// }
-// .coral{
-// 	background-color: $coral;
-// }
 
-// .black-Button{
-// 	border: 1px solid black;
-// }
-// a.Button {
-// 	&.is-active,
-// 	&:hover {
-// 		color: $whitewhite
-// 	}
-// }
-
-// .NonBtn {
-// 	background-color: transparent;
-// 	border: 0;
-// 	padding: 0;
-
-// 	&:active,
-// 	&:focus {
-// 		outline: none;
-// 	}
-// }
-
-// .Button--yellow {
-// 	background-color: $yellow;
-// 	color: $black !important;
-// }
-
-// .Button--red {
-// 	background-color: $nice-slated-red;
-// 	color: $silk;
-// }
-
-// .Button--black {
-// 	background: $black;
-// 	color: $silk;
-// }
-
-// .Button--green {
-// 	background: $green;
-// 	color: $silk;
-// }
-
-// .ButtonGroup .Button {
-// 	margin-right: 0.2em;
-// 	margin-bottom: 0.4em;
-
-// 	@media (min-width: $layout-s) {
-// 		font-size: 1em;
-// 	}
-
-// 	transition: all 150ms $easing;
-// 	transform-origin: center;
-
-// 	&.is-active {
-// 		box-shadow: 3px 3px black;
-// 	}
-// }
 

@@ -10,15 +10,9 @@
 	overflow-x: scroll;
 	align-items: center;
 	white-space: nowrap;
-	time {
-		display: block;
-		font-size: small;
-		margin-bottom: 0;
-		opacity: 0.5;
-	}
+
 }
 .list-item{
-	width: 60vw;
 	margin-right: $padding;
 	display: inline-block;
 	max-width: 300px;
@@ -49,4 +43,51 @@
 
 .List a:hover img {
 	filter: saturate(70%) brightness(120%);
+}
+.news-feed-items{
+	height: 100%;
+	display: flex;
+	flex-direction:row;
+	overflow-x: scroll;
+	// align-items: center;
+	// white-space: nowrap;
+}
+.news-list-item{
+	width: $Listimagewidth;
+	min-width: 300px;
+	height: 100%;
+	margin-right: $padding;
+	@media (min-width: $layout-s) {
+		width: 30vw;
+	}
+	a {
+		width: 100%;
+		align-items: flex-start;
+		justify-content: left;
+		display: flex;
+		flex-direction: column;
+		img{
+				width: 100%;
+				min-width: 200px;
+				height: $ListimageHeight;
+				object-fit: cover;
+				margin-bottom:rem(12);
+		}
+		
+	}
+	time{
+		text-align: left;
+		font-size: rem(12);
+		@include OptiBrian;
+		margin-bottom:rem(12);
+	
+
+	}
+	figcaption{
+		width: 100%;
+		font-size: rem(28);
+		line-height: rem(28);
+		text-align: left;
+	}
+
 }

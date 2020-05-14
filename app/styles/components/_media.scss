@@ -233,7 +233,7 @@
 	text-align: left;
 }
 .forcedDoubleline{
-	@media (min-width: $layout-s) {
+	@media (min-width: $layout-m) {
 		max-width: 50%;
 	}
 }
@@ -299,6 +299,7 @@
 .Social-Links {
 	display: flex;
 	flex-direction: row;
+	padding-top: 40px;
 	// justify-content: center;
 	a img{
 		min-width: $minimum-icon-height;
@@ -320,6 +321,14 @@
 	}
 }
 
+.instagram{
+	a{
+		@include boldGTHaptic;
+		color: inherit;
+		text-align: center;
+		font-size: rem(40);
+	}
+}
 
 
 

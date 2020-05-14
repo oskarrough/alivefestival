@@ -1,12 +1,21 @@
 {{#liquid-bind model class="BarAnimation" as |model|}}
-	<article class="Artist">
-		<div class="Artist-media">
+
+<article class="Artist" style="background-image:linear-gradient({{escapeCSS model.acf.top_color}}, {{escapeCSS model.acf.bottom_color}})" >
+		<div class="Artist-body Page-body">
+			<h2 style="color:{{escapeCSS model.acf.headline_color}}" class="Teaser-title">
+				<span class="page-title">{{{model.title}}}</span>
+				{{#if model.acf.country}}
+				<span class="day">{{model.acf.country}}</span>
+				{{/if}}
+				{{#if model.acf.festival_date}}
+				<span class="day">{{moment-format model.acf.festival_date "dddd"}}</span>
+				{{/if}}
+			</h2>
+			<div class="Artist-media">
 			<img src="{{model.better_featured_image.media_details.sizes.mini-double.source_url}}"
 				alt="{{model.better_featured_image.alt_text}}">
-		</div>
-		<div class="Artist-body Page-body">
-			<p class="BackLink">{{#link-to 'program.index'}}↖ program{{/link-to}}</p>
-			<p class="Artist-meta">
+			</div>
+			<p class="Artist-meta" style="color:{{escapeCSS model.acf.headline_color}}">
 				{{#if model.acf.festival_date}}
 				<strong>
 					<time>
@@ -20,8 +29,15 @@
 				{{/if}}
 			
 			</p>
-			<h1 class="Title">{{{model.title}}}</h1>
-			<div class="Artist-content">{{{model.content}}}</div>
+			<div class="page-content">{{{model.content}}}</div>
+			<p class="BackLink">{{#link-to 'program.index'}}↖ program{{/link-to}}</p>
 		</div>
 	</article>
+	<div class="PaddedContainer Container Relative instagram" >
+			{{!-- <a href={{model.page.acf.instagram_url}} target="_blank" title="Alive på instagram">
+				{{model.page.acf.title_for_instagram_list}}
+			</a> --}}
+			{{!-- {{news-list items=model.moreActivities textcolor=model.page.acf.insta_news_text_color timecolor=model.page.acf.insta_news_headline_color}} --}}
+	</div>
+
 {{/liquid-bind}}

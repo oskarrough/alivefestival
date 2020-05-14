@@ -1,3 +1,7 @@
+
+
+
+
 .Page {
 	position: relative;
 	max-width: $max-width;
@@ -40,14 +44,21 @@
 }
 
 .Page-body {
-	padding-top: rem($space * 3);
-	padding-right: rem($space*2);
-	padding-bottom: rem($space);
-	padding-left: rem($space*2);
+	// padding-top: $hugeContainerPadding;
+	// padding-right: rem($space*2);
+	// padding-bottom: rem($space);
+	// padding-left: rem($space*2);
 
-	@media (min-width: $layout-m) {
-		padding-left: rem($space * 3);
-	}
+	padding: $ContainerPadding;
+	padding-top: $hugeContainerPadding;
+	padding-bottom: $LargeContainerPadding;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	// @media (min-width: $layout-m) {
+	// 	padding-left: $LargeContainerPadding;
+	// }
 }
 
 .Page-body img.alignnone {
@@ -55,13 +66,14 @@
 }
 
 .Page-body h1 + p,
-.Post-body > p:first-child {
-	@extend %font-bold;
-	strong {
-		@extend %font-bold;
-	}
-	font-size: $font-20;
+.Post-body > p:first-child {	
+	// @extend %font-bold;
+	// strong {
+	// 	@extend %font-bold;
+	// }
+	// font-size: $font-20;
 }
+
 
 .Page-backgroundImage {
 	// margin-left: 1rem;

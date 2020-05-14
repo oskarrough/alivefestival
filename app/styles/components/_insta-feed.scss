@@ -1,25 +1,26 @@
 .InstaFeed-items {
 	display: flex;
-
+	flex-direction: row;
+	overflow-x: scroll;
+	min-width: 100%;
+	@media (min-width: $layout-m) {
+		justify-content: center;
+	}
 	figure {
-		flex: 1;
+		img{
+			height: 200px;
+			width: 200px;
+			object-fit: cover;
+			margin: $padding;
+		}
 	}
 }
 
-.InstaFeed figcaption {
-	margin-left: 1.5em;
-	margin-right: 0.5em;
-	font-size: small;
-	color: $silk;
-}
+// .InstaFeed figcaption {
+// 	margin-left: 1.5em;
+// 	margin-right: 0.5em;
+// 	font-size: small;
+// 	color: $silk;
+// }
 
-// Only show two first items on smaller screens
-@media (max-width: $layout-m) {
-	.InstaFeed-items figure {
-		display: none;
-	}
-	.InstaFeed-items figure:nth-child(1),
-	.InstaFeed-items figure:nth-child(2) {
-		display: initial;
-	}
-}
+

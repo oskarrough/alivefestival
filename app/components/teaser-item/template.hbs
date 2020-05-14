@@ -11,12 +11,13 @@
 			"
 			alt="">
 	</figure>
-	<h2 class="Teaser-title">
+	<h2 style="color:{{escapeCSS color}}" class="Teaser-title">
 		<span>{{{item.title}}}</span>
 		{{#if item.acf.festival_date}}
-			<small><time>{{moment-format item.acf.festival_date "dddd"}}</time></small>
+			<span class="day">{{moment-format item.acf.festival_date "dddd"}}</span>
 		{{/if}}
 	</h2>
 </div>
+
 
 {{yield}}
