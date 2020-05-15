@@ -2,6 +2,7 @@
 	margin-bottom: rem($space);
 	img{
 		width: 100%;
+		max-width: 500px;
 		object-fit: contain;
 	}
 	@media (min-width: $layout-l) {

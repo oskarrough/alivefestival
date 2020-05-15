@@ -76,21 +76,17 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	@media (max-width: $layout-s) {
-			padding-left: 1vh;
-			padding-right: 1vh;
-	}
 	.topline{
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-end;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
 		.top-date{
 			margin: rem(23);
 		}
 	}
 
 	.bottomline{
-	text-align: right;
+		text-align: right;
 		.bottom-date{
 			@media (max-width: $layout-s) {
 			text-align: right;	
@@ -104,22 +100,22 @@
 	}
 	.big-headline{
 	@include big-headline;
-			display: inline-block;
-			white-space: nowrap;
-			@media (max-width: $layout-s) {
-				font-size: rem(70);
-				line-height: rem(50);
-			}
-			@media (min-width: $layout-s) {
-				font-size: rem(100);
-				line-height: rem(90);
-			}
+	display: inline-block;
+	white-space: nowrap;
+	@media (max-width: $layout-s) {
+		font-size: rem(55);
+		line-height: rem(50);
+	}
+	@media (min-width: $layout-s) {
+		font-size: rem(100);
+		line-height: rem(90);
+	}
 	}
 	.subtitle{
 	@include  OptiBrian;
 	white-space: nowrap;
 	@media (max-width: $layout-s) {
-		font-size: rem(30);
+		font-size: rem(25);
 		line-height: rem(20);
 	}
 	@media (min-width: $layout-s) {

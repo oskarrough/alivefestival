@@ -2,27 +2,10 @@
  * Teaser
  **/
 
-// .Teaser {
-// 	@include negative-text;
-// 	position: relative;
-
-// 	a:hover &,
-// 	a:active & {
-// 		// box-shadow: 0px 0px 2rem 1rem rgba(255, 255, 255, 0.1);
-// 		.Teaser-title,
-// 		.Teaser-subtitle {
-// 			color: $white;
-// 		}
-// 		img {
-// 			filter: saturate(70%) brightness(120%);
-// 		}
-// 	}
-// }
-
 .Teaser-wrap {
 	text-decoration: none;
 	padding-top: $padding;
-	padding-bottom: $LargeContainerPadding;
+	// padding-bottom: $LargeContainerPadding;
 }
 
 .Teaser-media {
@@ -56,8 +39,9 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: baseline;
-	max-width: 70%;
+	max-width: 90%;
 	padding-top: $padding;
+	padding-bottom: $ContainerPadding;
 	time {
 		font-size: rem(13);
 		letter-spacing: 0.05em;
@@ -79,3 +63,30 @@ a:hover .Teaser .Teaser-title {
 	font-size: $font-14;
 	margin-bottom: rem(26);
 }
+
+.practical-teaser{
+	width: 42vw;
+	height: 65vw;
+	max-width: $blogpagehalf;
+	max-height: 300px;
+	// width: 48%;
+	margin-bottom: $masonry-gutter;
+	img{
+		width: 100%;
+		height: 50%;
+		object-fit: cover;
+	}
+	.practical-Item{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding:0;
+	}
+}
+.practical-title{
+	@include boldGTHaptic;
+	padding: $relativepadding;
+	padding-top: $padding;
+}
+
+// 

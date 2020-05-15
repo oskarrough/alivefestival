@@ -14,24 +14,15 @@
 	margin-bottom: 0;
 }
 
-$masonry-gutter: 1.5rem;
+
+
 
 .Masonry-item {
 	width: 100%;
+	max-width: 400px;
 	background: $transparent;
-	@media (min-width: $layout-m) {
-		width: 30%;
-		width: calc(33% - #{$masonry-gutter});
-		margin-right: $masonry-gutter;
-		margin-bottom: $masonry-gutter;
-	}
-	@media (min-width: $layout-xl) {
-		width: 20%;
-		width: calc(25% - #{$masonry-gutter});
-		margin-right: $masonry-gutter;
-		margin-bottom: $masonry-gutter;
-	}
-
+	margin-right: $masonry-gutter;
+	margin-bottom: $masonry-gutter;
 	@include animation-delay(7);
 	transition: opacity 200ms ease-in-out;
 	opacity: 0;
@@ -41,4 +32,10 @@ $masonry-gutter: 1.5rem;
 	.no-js & {
 		opacity: 1;
 	}
+}
+.grid-practical{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }

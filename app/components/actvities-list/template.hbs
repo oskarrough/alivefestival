@@ -1,24 +1,20 @@
-<div class="Container Padded PaddedContainer" style="background-image:linear-gradient({{escapeCSS design.acf.top_color}}, {{escapeCSS design.acf.bottom_color}})" >
+<div class="Container Padded PaddedContainer" style="background-image:linear-gradient({{escapeCSS design.acf.teaser_top_color}}, {{escapeCSS design.acf.teaser_bottom_color}})" >
 	{{#if design.title}}
 	<div class="Centering">
     	<h2 class="frontpage-headline" style="color:{{escapeCSS design.acf.headline_color}}"> {{design.acf.headline}}</h2>
 	</div>
     {{/if}}
-    {{#if design.content}}
+    {{#if design.acf.teaser_Subheadline}}
 	<div class="Centering">
-   	 <p class="frontpage-content limitedWidth" style="color:{{design.acf.paragraph_text_color}}"> {{design.acf.paragraph}}</p>
+   	 <p class="frontpage-content limitedWidth" style="color:{{escapeCSS design.acf.subheadline_color}}"> {{design.acf.teaser_Subheadline}}</p>
     </div>
 	{{/if}}
 	<div class="Padded">
-		
 				{{news-list items=items textcolor=design.acf.text_color}}
-
-
-	
 	</div>
 	<div style="border: 1px {{escapeCSS model.page.acf.button_frame_color}} solid" class="Button leftleaning">
 		{{#link-to 'practical' class="small-caption button"}}
-			{{design.acf.button_text}}
+			{{design.acf.url_1_text}}
 		{{/link-to}}
 	</div>
  </div>

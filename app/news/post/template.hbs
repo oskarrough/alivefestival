@@ -1,14 +1,59 @@
-<p class="BackLink">{{#link-to 'news.index'}}↖ alle nyheder{{/link-to}}</p>
+<article class="Artist" style="background-image:linear-gradient({{escapeCSS model.acf.top_color}} 0%, {{escapeCSS model.acf.bottom_color}} 20%) " >		<div class="Artist-body Page-body blog">
+			<h2 style="color:{{escapeCSS model.acf.headline_color}}" class="Teaser-title">
+				<span class="page-title">{{{model.title}}}</span>
+				{{#if model.acf.country}}
+				<span class="day">{{model.acf.country}}</span>
+				{{/if}}
+				{{#if model.acf.festival_date}}
+				<span class="day">{{moment-format model.acf.festival_date "dddd"}}</span>
+				{{/if}}
+			</h2>
+			<div class="Artist-media">
+			<img src="{{model.better_featured_image.media_details.sizes.mini-double.source_url}}"
+				alt="{{model.better_featured_image.alt_text}}">
+			</div>
+			<p class="Artist-meta" style="color:{{escapeCSS model.acf.headline_color}}">
+				{{#if model.acf.festival_date}}
+				<strong>
+					<time>
+					{{moment-format model.acf.festival_date "dddd D/MM/YY"}}
+					</time>
+				</strong>
+				{{/if}}
+				
+				{{#if model.acf.scene}}
+				<strong>{{model.acf.scene}}</strong>
+				{{/if}}
+			
+			</p>
+			<div class="page-content">
+				{{{model.content}}}
+				<div class="horizontal-Centering ">
+						
+				{{#if model.acf.headline}}
+					<h2 class="frontpage-headline-small" style="color:{{escapeCSS model.acf.headline_color}}">{{{model.acf.headline}}}</h2>
+				{{/if}}
+				{{#if model.acf.spotify_embed}}
+					<div class="spotify-embed">{{{model.acf.spotify_embed}}}</div>
+				{{/if}}
 
-<article class="Post">
-	<h1>{{model.title}}</h1>
-	{{#if model.better_featured_image}}
-		<img src="{{model.better_featured_image.source_url}}" alt="{{model.title}}">
-	{{/if}}
-		<time>{{moment-format model.date}}</time>
-	<div class="Post-body">
-		{{{model.content}}}
-	</div>
-	<br><br>
-	<p class="BackLink">{{#link-to 'news.index'}}↖ alle nyheder{{/link-to}}</p>
-</article>
+				{{#if model.acf.url_1}}
+				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_1}}" class="Button button-border small-caption"> 
+					{{model.acf.url_1_text}}
+				</a>
+				{{/if}}
+		
+           		{{#if model.acf.url_2}}
+				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_2}}" class="Button button-border small-caption"> 
+					{{model.acf.url_2_text}}
+				</a>
+           		 {{/if}}
+				</div>
+			</div>
+
+
+			
+			<p class="BackLink">{{#link-to 'program.index'}}↖ program{{/link-to}}</p>
+
+		</div>
+	</article>

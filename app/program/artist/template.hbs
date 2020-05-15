@@ -1,7 +1,7 @@
 {{#liquid-bind model class="BarAnimation" as |model|}}
 
-<article class="Artist" style="background-image:linear-gradient({{escapeCSS model.acf.top_color}}, {{escapeCSS model.acf.bottom_color}})" >
-		<div class="Artist-body Page-body">
+<article class="Artist" style="background-image:linear-gradient({{escapeCSS model.acf.top_color}} 0%, {{escapeCSS model.acf.bottom_color}} 20%) " >
+		<div class="Artist-body Page-body blog">
 			<h2 style="color:{{escapeCSS model.acf.headline_color}}" class="Teaser-title">
 				<span class="page-title">{{{model.title}}}</span>
 				{{#if model.acf.country}}
@@ -29,15 +29,34 @@
 				{{/if}}
 			
 			</p>
-			<div class="page-content">{{{model.content}}}</div>
-			<p class="BackLink">{{#link-to 'program.index'}}↖ program{{/link-to}}</p>
+			<div class="page-content">
+				{{{model.content}}}
+				<div class="horizontal-Centering ">
+						
+				{{#if model.acf.headline}}
+					<h2 class="frontpage-headline-small" style="color:{{escapeCSS model.acf.headline_color}}">{{{model.acf.headline}}}</h2>
+				{{/if}}
+				{{#if model.acf.spotify_embed}}
+					<div class="spotify-embed">{{{model.acf.spotify_embed}}}</div>
+				{{/if}}
+
+				{{#if model.acf.url_1}}
+				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_1}}" class="Button button-border small-caption"> 
+					{{model.acf.url_1_text}}
+				</a>
+				{{/if}}
+		
+           		{{#if model.acf.url_2}}
+				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_2}}" class="Button button-border small-caption"> 
+					{{model.acf.url_2_text}}
+				</a>
+           		 {{/if}}
+				</div>
+			</div>
+			{{!-- <p class="BackLink">{{#link-to 'program.index'}}↖ program{{/link-to}}</p> --}}
+
 		</div>
 	</article>
-	<div class="PaddedContainer Container Relative instagram" >
-			{{!-- <a href={{model.page.acf.instagram_url}} target="_blank" title="Alive på instagram">
-				{{model.page.acf.title_for_instagram_list}}
-			</a> --}}
-			{{!-- {{news-list items=model.moreActivities textcolor=model.page.acf.insta_news_text_color timecolor=model.page.acf.insta_news_headline_color}} --}}
-	</div>
+	
 
 {{/liquid-bind}}

@@ -1,5 +1,5 @@
 .Newsletter{
-	background-color: $bg-color;
+	background-color: transparent;
 }
 .NewsletterForm {
 	display: flex;
@@ -7,6 +7,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	
 	.headlines{
 		width: 50%;
 		font-size: rem(25);
@@ -31,6 +32,11 @@
 		align-items: left;
 		justify-content: flex-start;
 	}
+	@media (min-width: $layout-m) {
+		padding-left: $hugeContainerPadding;
+		padding-right: $hugeContainerPadding;
+	}
+	
 	
 
 	.inputButton{

@@ -51,14 +51,16 @@
 
 	padding: $ContainerPadding;
 	padding-top: $hugeContainerPadding;
-	padding-bottom: $LargeContainerPadding;
+	padding-bottom: $hugeContainerPadding;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
 	// @media (min-width: $layout-m) {
 	// 	padding-left: $LargeContainerPadding;
 	// }
+}
+.blog{
+	max-width: $blogpage;
 }
 
 .Page-body img.alignnone {

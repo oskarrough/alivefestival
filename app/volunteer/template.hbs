@@ -1,5 +1,27 @@
-<div class="Section">
-	{{page-item page=model}}
+<div class="Page" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}} 0%, {{escapeCSS model.page.acf.bottom_color}} 20%) " >
+	<div class="Page-body blog" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
+		<h1 class="page-title" style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.title}}</h1>
+		<p class="page-content"> {{{model.page.content}}}	
+		
+		</p>
+		<div class="grid-practical">
+			{{#each model.page.acf.type as |type|}}
+				<div class="frivillig-type" style="border: 1px {{escapeCSS type.type_color}} solid; color: {{escapeCSS type.type_color}}">
+				{{#if type.type_image}}
+				<img src="{{type.type_image}}"/>
+				{{/if}}
+				{{type.type_navn}}<br>
+				{{{type.type_attributes}}}
+				</div>
+			{{/each}}
+		</div>
+		
+		<p class="page-content" style="color: {{escapeCSS model.page.acf.text_color}}">
+			<h2 style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.acf.extratext_headline}}</h2>
+			{{{model.page.acf.extra_text}}}</p>
+	</div>
+
 </div>
+
 
 {{outlet}}

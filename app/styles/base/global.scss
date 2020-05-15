@@ -47,7 +47,6 @@ h3{
 	z-index: 999999999;
 	text-decoration: none;
 }
-
 .small-caption{
 	@include date-text;
 }
@@ -55,9 +54,14 @@ h3{
 	@include buttontext
 }
 iframe{
-	padding-bottom: $LargeContainerPadding;
 	padding-top: $LargeContainerPadding;
+	padding-bottom: $LargeContainerPadding;
+	object-fit: contain;
+	object-position: 0px 0px;
 	max-width: 100%;
+}
+.spotify-embed{
+	padding: $padding;
 }
 img {
 	max-width: 100%;
@@ -67,11 +71,23 @@ img {
 	@include regGTHaptic;
 	color: inherit;
 	font-size: 16px;
+	padding-bottom: $ContainerPadding;
+	h1{
+		@include boldGTHaptic;
+	}
+	h2{
+		@include boldGTHaptic;
+		font-size: 18px;
+	}
+	p{
+		color: black;
+	}
 	
 }
 .page-title{
 	@include OptiBrian;	
-	font-size: 50px;
+	font-size: rem(50);
+	line-height: rem(50);
 	color: inherit;
 }
 

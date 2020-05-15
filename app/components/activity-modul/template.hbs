@@ -1,9 +1,9 @@
-<div class="Container Padded PaddedContainer fourPaddedContainer" style="background-image:linear-gradient({{escapeCSS design.acf.top_color}}, {{escapeCSS design.acf.bottom_color}}); color:{{escapeCSS design.acf.text_color}}" >
+<div class="Container Padded PaddedContainer fourPaddedContainer" style="background-image:linear-gradient({{escapeCSS design.acf.teaser_top_color}}, {{escapeCSS design.acf.teaser_bottom_color}}); color:{{escapeCSS design.acf.text_color}}" >
     {{#if design.title}}
     <h2 class="frontpage-headline leftleaning forcedDoubleline long-word"> {{design.acf.headline}}</h2>
     {{/if}}
-    {{#if design.content}}
-    <p class="frontpage-content leftleaning" style="color:{{design.acf.paragraph_text_color}}"> {{design.acf.paragraph}}</p>
+    {{#if design.acf.teaser_Subheadline}}
+    <p class="frontpage-content leftleaning" style="color:{{escapeCSS design.acf.subheadline_color}}"> {{design.acf.teaser_Subheadline}}</p>
     {{/if}}
     <div class="flex-box-toggle">
         <div class="activity-table">
@@ -32,7 +32,7 @@
     </div>
      <div style="border: 1px {{escapeCSS model.page.acf.button_frame_color}} solid" class="Button CenterSelf">
 		{{#link-to 'program' class="small-caption button"}}
-			{{design.acf.button_text}}
+			{{design.acf.url_1_text}}
 		{{/link-to}}
 	</div>
 </div>
