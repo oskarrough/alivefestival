@@ -1,3 +1,5 @@
+<div class="Page" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
+
 {{#if page.better_featured_image}}
 	<figure class="Page-banner">
 		<img src="{{page.better_featured_image.source_url}}" alt="{{page.title}}">
@@ -29,3 +31,4 @@
 {{#if page.acf.background_image.sizes.bg-portrait-xl}}
 	<img class="Page-backgroundImage" src="{{page.acf.background_image.sizes.bg-portrait-l}}" alt="">
 {{/if}}
+</div>

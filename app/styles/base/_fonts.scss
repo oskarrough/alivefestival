@@ -52,6 +52,12 @@
 	font-weight: 600;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'GT Haptik medium';
+	src: url('fonts/gt-haptik/gt-haptik-medium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
 
 @mixin big-headline {
@@ -65,7 +71,6 @@
 	font-family: 'DINAlternate-Bold';
 	color: #FFFFFF;
 	text-align: center;
-
 }
 
 @mixin buttontext {
@@ -151,12 +156,7 @@ $font-70: rem(60);
 	font-weight: 700;
 	font-style: normal;
 }
-@font-face {
-	font-family: 'GT Haptik Rotalic';
-	src: url('fonts/gt-haptik/gt-haptik-bold-rotalic.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
+
 
 
 

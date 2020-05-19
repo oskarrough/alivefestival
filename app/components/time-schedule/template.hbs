@@ -1,21 +1,10 @@
-<div class="grid">
-	{{day-menu tags=tags class="tc"}}
-		{{#each filteredArtists as |artist|}}
-					<div>
-					{{#if artist.acf.festival_date}}
-						<time datetime="{{artist.acf.festival_date}}">
-							{{moment-format artist.acf.festival_date "HH:mm"}}
-							{{moment-format artist.acf.festival_date_end "HH:mm"}}
-							{{moment-format artist.acf.festival_date "dddd"}}
-						</time>
-					{{/if}}
-						<span class="Muted">
-							{{artist.acf.scene}}
-						</span>
-					</div>
-	
-					{{#link-to "program.artist" artist}}
-							{{teaser-item item=artist color=model.page.acf.text_color}}
-					{{/link-to}}
+<div class="grid Padded">
+		{{#each sortedArtists as |artist|}}
+		{{#if artist.acf.festival_date}}
+			<div class="program-item">
+				{{program-item artist=artist}}
+			</div>
+		{{/if}}
 		{{/each}}
 </div>
+

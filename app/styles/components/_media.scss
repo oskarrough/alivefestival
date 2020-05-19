@@ -352,6 +352,42 @@
 	}
 	
 }
+.program-item{
+	position: relative;
+	width: 100%;
+	margin-bottom: $LargeContainerPadding;
+	.program-date{
+		margin-top: -14px;
+		position: absolute;
+		background-color: $blue;
+		padding: 0.3em 1em 0.3em;
+		z-index: 99;
+		time{
+			@include OptiBrian;
+			font-size: 14px;
+			color: #F4E7D6;
+
+		}
+	}
+	.program-info{
+		// z-index: 0;
+		width: 100%;
+		margin-left: $padding;
+		padding: $ContainerPadding;
+		// padding-top: $ContainerPadding2;
+		background-color: #F4E7D6;
+		h4{
+			font-family: 'GT Haptik medium';
+			color: black;
+			font-size: 18px;
+		}
+		p{
+			font-family: 'GT Haptik medium';
+			color: black;
+			font-size: 14px;
+		}
+	}
+}
 
 
 
