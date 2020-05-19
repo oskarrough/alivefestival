@@ -13,7 +13,7 @@
 	</figure>
 	<h2 style="color:{{escapeCSS color}}" class="Teaser-title">
 		
-		<span>{{truncate-text item.title limit="80"}}</span>
+		<span>{{{truncate-text item.title limit="80"}}}</span>
 		{{#if item.acf.festival_date}}
 			<span class="day">{{moment-format item.acf.festival_date "dddd"}}</span>
 		{{/if}}

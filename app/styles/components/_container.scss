@@ -11,10 +11,47 @@
 		width: 100%;
 	}
 }
+
 .Padded{
+	// padding: $BoxPadding;
 	padding-top: $LargeContainerPadding;
 	padding-bottom: $LargeContainerPadding;
+	@media (min-width: $layout-s) {
+		padding: $ContainerPaddingDesktop;
+	}
 }
+.SidePadded{
+	padding: $padding;
+	@media (min-width: $layout-s) {
+		padding-left: $ContainerPaddingDesktop;
+		padding-right: $ContainerPaddingDesktop;
+	}
+
+}
+.PaddedContainer{
+	padding: $ContainerPadding;
+	padding-top: $LargeContainerPadding;
+	padding-bottom: $LargeContainerPadding;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.fourPaddedContainer{
+	padding:$LargeContainerPadding;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media (max-width: $layout-s) {
+		padding-left: $ContainerPadding;
+		padding-right: $ContainerPadding;
+	}
+}
+.overflowRight{
+	padding-left: $ContainerPadding;
+}
+
+
+
 .topPadded{
 	padding-top: $LargeContainerPadding;
 }
@@ -35,24 +72,8 @@
 	width: 100%;
 	align-items: center;
 }
-.PaddedContainer{
-	padding: $ContainerPadding;
-	padding-top: $LargeContainerPadding;
-	padding-bottom: $LargeContainerPadding;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-.fourPaddedContainer{
-	padding:$LargeContainerPadding;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	@media (max-width: $layout-s) {
-		padding-left: $ContainerPadding;
-		padding-right: $ContainerPadding;
-	}
-}
+
+
 
 .limited-container{
 	height: 100vh;

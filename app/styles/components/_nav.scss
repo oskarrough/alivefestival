@@ -23,10 +23,10 @@
 		-webkit-text-stroke: 1px $blue; 
 		color: $transparent;
 	}
-	&.is-active {
-		-webkit-text-stroke: 1px $blue;
-		color: $transparent;
-	}
+	// &.is-active {
+	// 	-webkit-text-stroke: 1px $blue;
+	// 	color: $transparent;
+	// }
 	.show-aside & {
 		transition-timing-function: $ease-decelerate;
 		transition-duration: 300ms;

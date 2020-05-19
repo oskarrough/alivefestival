@@ -5,18 +5,17 @@
 	display: flex;
 	width: 100%;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	
 	.headlines{
-		width: 50%;
-		font-size: rem(25);
-		line-height: rem(30);
+		width: 40%;
+		font-size: 30px;
+		line-height: 35px;
 		font-weight: medium;
 		@media (max-width: $layout-m) {
-			font-size: rem(40);
-			line-height: rem(40);
 			width: 100%;
+			font-size: 30px;
+			line-height: 35px;
 		}
 		@include boldGTHaptic;
 		.outlined-headline{
@@ -32,18 +31,16 @@
 		align-items: left;
 		justify-content: flex-start;
 	}
-	@media (min-width: $layout-m) {
-		padding-left: $hugeContainerPadding;
-		padding-right: $hugeContainerPadding;
-	}
+	// @media (min-width: $layout-m) {
+	// 	padding-left: $hugeContainerPadding;
+	// 	padding-right: $hugeContainerPadding;
+	// }
 	
-	
-
 	.inputButton{
 		display: flex;
 		justify-content: space-between;
 		white-space: nowrap;
-		width: 50%;
+		width: 40%;
 		label{
 			height: 100%;
 			margin: 0;

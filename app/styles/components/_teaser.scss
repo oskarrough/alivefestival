@@ -65,11 +65,13 @@ a:hover .Teaser .Teaser-title {
 }
 
 .practical-teaser{
-	width: 42vw;
-	height: 65vw;
-	max-width: $blogpagehalf;
-	max-height: 300px;
-	// width: 48%;
+	width: 48%;
+	max-width: 160px;
+	object-fit: cover;
+	@media (min-width: $layout-s) {
+		width: 300px;
+		max-width: 300px;
+	}
 	margin-bottom: $masonry-gutter;
 	img{
 		width: 100%;

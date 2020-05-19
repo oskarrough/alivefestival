@@ -1,3 +1,15 @@
+///used config values;
+
+$coverimagesize: 100vh;
+$MobileImageSizeLarge: 100vh;
+$ContainerPadding: 18px ;
+$ContainerPaddingDesktop: 65px;
+$boxmargin: 0px;
+$padding: 10px;
+$BoxPadding: 10px;
+
+$LargeContainerPadding: 10vh;
+
 // Colors
 //new colors
 $turquise:  rgb(132, 255, 169);
@@ -10,8 +22,8 @@ $green:#256b25;
 
 ///images
 $MobileImageSize: 80vh;
-$MobileImageSizeLarge: 100vh;
-$coverimagesize: 60vh;
+
+
 $image-border: 10vh;
 $footer-image-height: 120vh;
 $Listimagewidth: 80vw;
@@ -38,15 +50,15 @@ $smallartistlistfont: 50px;
 $minimum-icon-height: 30px;
 $maximum-icon-height: 30px;
 
-$boxmargin: 0px;
+
 $imageborder: 30px;
 $doubleImageBorder: 60px;
 $tickermargin: 10px;
 
-$padding: 10px;
+
 $relativepadding: 2vh;
-$ContainerPadding: 18px;
-$LargeContainerPadding: 10vh;
+
+
 $hugeContainerPadding: 20vh;
 $topPadding: 20vh;
 $listpadding: 30px;

@@ -4,8 +4,8 @@
 		{{link-to 'Forside' 'index'}} 
 		{{#if festival_is_on}}
 		{{link-to 'Kort' 'kort'}}
-		{{link-to 'Spilleplan' 'schedule'}}
-		{{link-to 'Program' 'program' }}
+		{{link-to 'Program' 'schedule'}}
+		{{link-to 'Line-Up' 'program' }}
 		{{link-to 'Billetter' 'tickets'}}
 		{{link-to 'Praktisk' 'practical'}}
 		{{link-to 'Frivillig' 'volunteer'}}
@@ -18,7 +18,7 @@
 			{{link-to 'English' 'english'}}
 		</small>
 		{{else}}
-		{{link-to 'Program' 'program' }}
+		{{link-to 'Line-Up' 'program' }}
 		{{link-to 'Billetter' 'tickets'}}
 		{{link-to 'Transport & Overnatning' 'transport&overnatning'}}
 		{{link-to 'Frivillig' 'volunteer'}}
@@ -36,7 +36,7 @@
 	</nav>
 	{{social-links}}
 
-	<button class="Burger BurgerInAside" data-target="" aria-expanded="true">
+	<button class="BurgerInAside" data-target="" aria-expanded="true">
 	</button>
 	
 	{{yield}}

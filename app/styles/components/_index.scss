@@ -4,55 +4,22 @@
 .Index {
 	position: relative;
 }
-.HeaderContainer{
-	position: relative;
-	width: 100%;
-	top: 0;
-}
-.cover-video{
-	object-fit: cover;
-	width: 100%;
-	min-height: 90vh;
-	z-index: 0;
-	@media (min-width: $layout-m) {
-		height: auto;
-		max-height: 1000px;
-	}
-}
-.coverImage{
-	width: 100%;
-	object-fit: cover;
-	max-height: $coverimagesize;
-	@media (max-width: $layout-s) {
-		min-height: $MobileImageSize;
-		object-fit: cover;
-	}
-}
-.backgroundImage{
-	// object-position: 0px 0px;
-	object-fit: fill;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	z-index: 0;
-	max-height: 1000px;
-	@media (max-width: $layout-s) {
-		min-height: $MobileImageSizeLarge;
-	}
-}
 .header{
-	position: absolute;
+	position: fixed;
+	top:0;
 	display: inline-flex;
 	flex-direction: row;
-	width: 80%;
+	width: 100%;
 	justify-content: space-between;
-	align-items: center;
-	top: $padding;
-	left: $padding;
-	z-index: 9;		
+	align-items: flex-start;
+	padding: $padding;
+	z-index: 9;	
+	.right-header{
+		display: flex;
+		flex-direction: row;
+		white-space: nowrap;
+	}	
 }
-
 .HeaderLogo{
 	display: inline-block;
 	display: flex;
@@ -64,7 +31,6 @@
 		width: rem(50);
 	}
 }
-
 .headline{
 	position: absolute;
 	top: 0;
@@ -123,7 +89,50 @@
 		line-height: rem(40);
 		}
 	}
+}
+.cover-video{
+	object-fit: cover;
+	width: 100%;
+	min-height: $coverimagesize;
+	z-index: 0;
+	@media (min-width: $layout-m) {
+		height: auto;
+		max-height: 1000px;
 	}
+}
+.coverImage{
+	width: 100%;
+	object-fit: cover;
+	max-height: $coverimagesize;
+	@media (max-width: $layout-s) {
+		min-height: $MobileImageSize;
+		object-fit: cover;
+	}
+}
+.BG-ImageCover{
+	object-position: 0px 0px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	@media (max-width: $layout-s) {
+		min-height: $MobileImageSizeLarge;
+	}
+}
+.BG-ImageContain{
+	object-position: 0px 0px;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	@media (max-width: $layout-s) {
+		min-height: $MobileImageSizeLarge;
+	}
+}
 
 .column{
 	display: flex;
@@ -142,8 +151,8 @@
 	justify-content: center;
 	align-items: center;
 	padding-top: $LargeContainerPadding;
+	@include mediumGTHaptic;
 	a{
-		@include mediumGTHaptic;
 		color: inherit;
 		text-decoration: underline;
 		font-size: 16px;

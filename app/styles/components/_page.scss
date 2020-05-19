@@ -55,13 +55,37 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	// @media (min-width: $layout-m) {
-	// 	padding-left: $LargeContainerPadding;
-	// }
+	@media (min-width: $layout-m) {
+		padding-left: $ContainerPaddingDesktop;
+	}
+}
+.Page-top{
+	padding-left: $ContainerPadding;
+	padding-top: $hugeContainerPadding;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media (min-width: $layout-m) {
+		padding-left: $ContainerPaddingDesktop;
+		padding-right: $ContainerPaddingDesktop;
+	}
+}
+.Page-bottom{
+	padding: $ContainerPadding;
+	padding-bottom: $hugeContainerPadding;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media (min-width: $layout-m) {
+		padding-left: $ContainerPaddingDesktop;
+		padding-right: $ContainerPaddingDesktop;
+
+	}
 }
 .blog{
 	max-width: $blogpage;
 }
+
 
 .Page-body img.alignnone {
 	height: auto !important;

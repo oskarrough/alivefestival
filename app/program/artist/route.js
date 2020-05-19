@@ -9,15 +9,6 @@ export default Route.extend({
 		return this.store
 			.query('artist', {slug: params.artist_slug})
 			.then(models => models.get('firstObject'))
-		// return hash({
-		// 	design: this.store.findRecord('page', 2407),
-		// 	moreActivities: this.store.query('artist', {
-		// 		categories: 11,
-		// 		per_page: 5
-		// 	}),
-		// 	artist: this.store
-		// 	.query('artist', {slug: params.artist_slug}).then(models => models.get('firstObject'))
-		// })
 	},
 
 	serialize(model) {

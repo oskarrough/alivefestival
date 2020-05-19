@@ -49,6 +49,7 @@ h3{
 }
 .small-caption{
 	@include date-text;
+	font-size: 14px;
 }
 .buttontext{
 	@include buttontext
@@ -74,6 +75,8 @@ img {
 	padding-bottom: $ContainerPadding;
 	h1{
 		@include boldGTHaptic;
+		margin-top: $LargeContainerPadding;
+		font-size: 28px;
 	}
 	h2{
 		@include boldGTHaptic;

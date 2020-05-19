@@ -49,29 +49,34 @@
 	display: flex;
 	flex-direction:row;
 	overflow-x: scroll;
+	
 	// align-items: center;
 	// white-space: nowrap;
 }
 .news-list-item{
-	width: $Listimagewidth;
-	min-width: 300px;
+	width: 250px;
 	height: 100%;
-	margin-right: $padding;
 	@media (min-width: $layout-s) {
-		width: 30vw;
+		width: 300px;
 	}
+	margin-right: $padding;
 	a {
-		width: 100%;
+		width: 250px;
+		@media (min-width: $layout-s) {
+			width: 300px;
+		}
 		align-items: flex-start;
 		justify-content: left;
 		display: flex;
 		flex-direction: column;
 		img{
-				width: 100%;
-				min-width: 200px;
-				height: $ListimageHeight;
-				object-fit: cover;
-				margin-bottom:rem(12);
+			width: 100%;
+			height: 315px;
+			@media (min-width: $layout-s) {
+				height: 400px;
+			}
+			object-fit: cover;
+			margin-bottom:rem(12);
 		}
 		
 	}
@@ -84,6 +89,7 @@
 
 	}
 	figcaption{
+		@include boldGTHaptic;
 		width: 100%;
 		font-size: rem(28);
 		line-height: rem(28);
@@ -91,3 +97,48 @@
 	}
 
 }
+.arbejdsrolle-item{
+	width: 230px;
+	max-width: 230px;
+	height: 100%;
+	margin-right: $padding;
+	img{
+		width: 230px;
+		min-width: 230px;
+		height: 270px;
+		object-fit: cover;
+		margin-bottom:rem(12);
+	}
+	figcaption{
+		width: 100%;
+		text-align: left;
+		@include boldGTHaptic;
+		font-size: 18px;
+
+	}
+	p{
+		width: 100%;
+		@include regGTHaptic;
+		font-size: 16px;
+	}
+}
+
+
+.list-wrap{
+	display: flex;
+	flex-direction:row;
+	white-space: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	li{
+		overflow-x: scroll;
+		flex-grow: 100%;
+	}
+	img{
+
+		width: 50px;
+		object-fit: contain;
+	
+	}
+}
+

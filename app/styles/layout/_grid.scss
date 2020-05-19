@@ -15,8 +15,6 @@
 }
 
 
-
-
 .Masonry-item {
 	width: 100%;
 	max-width: 400px;
@@ -37,5 +35,14 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
+}
+.grid-horizontal{
+	display: flex;
+	max-width: 1000px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	overflow-x: scroll;
+	padding-right: $ContainerPadding;
 }

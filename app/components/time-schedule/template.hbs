@@ -1,33 +1,21 @@
-<table class="Table">
-	<thead>
-		<tr>
-			<th>Artist</th>
-			<th style="width: 5rem">Scene</th>
-			<th style="width: 7rem">Dag og tid</th>
-		</tr>
-	</thead>
-	<tbody>
-		{{#each sortedArtists as |artist|}}
-			<tr>
-				<td>
-					<h3>
-						{{link-to artist.title 'program.artist' artist}}
-					</h3>
-				</td>
-				<td>
-					<span class="Muted">
-						{{artist.acf.scene}}
-					</span>
-				</td>
-				<td>
+<div class="grid">
+	{{day-menu tags=tags class="tc"}}
+		{{#each filteredArtists as |artist|}}
+					<div>
 					{{#if artist.acf.festival_date}}
 						<time datetime="{{artist.acf.festival_date}}">
-							{{moment-format artist.acf.festival_date "dddd D/MM/YY"}}
-							{{moment-format artist.acf.festival_date "HH:mm"}}<br>
+							{{moment-format artist.acf.festival_date "HH:mm"}}
+							{{moment-format artist.acf.festival_date_end "HH:mm"}}
+							{{moment-format artist.acf.festival_date "dddd"}}
 						</time>
 					{{/if}}
-				</td>
-			</tr>
+						<span class="Muted">
+							{{artist.acf.scene}}
+						</span>
+					</div>
+	
+					{{#link-to "program.artist" artist}}
+							{{teaser-item item=artist color=model.page.acf.text_color}}
+					{{/link-to}}
 		{{/each}}
-	</tbody>
-</table>
+</div>

@@ -1,10 +1,13 @@
-<div class="Container Padded PaddedContainer fourPaddedContainer" style="background-image:linear-gradient({{escapeCSS design.acf.teaser_top_color}}, {{escapeCSS design.acf.teaser_bottom_color}}); color:{{escapeCSS design.acf.text_color}}" >
+<div class="Container fourPaddedContainer" style="background-image:linear-gradient({{escapeCSS design.acf.teaser_top_color}}, {{escapeCSS design.acf.teaser_bottom_color}}); color:{{escapeCSS design.acf.text_color}}" >
     {{#if design.title}}
-    <h2 class="frontpage-headline leftleaning forcedDoubleline long-word"> {{design.acf.headline}}</h2>
-    {{/if}}
-    {{#if design.acf.teaser_Subheadline}}
+    <h2 class="frontpage-headline leftleaning"> {{design.acf.headline}}</h2>
+     {{#if design.acf.teaser_Subheadline}}
     <p class="frontpage-content leftleaning" style="color:{{escapeCSS design.acf.subheadline_color}}"> {{design.acf.teaser_Subheadline}}</p>
     {{/if}}
+  
+    
+    {{/if}}
+   
     <div class="flex-box-toggle">
         <div class="activity-table">
              <ul class="icons">
@@ -16,7 +19,7 @@
                 {{#each activities as |activity|}}
                     <li class="artist-item">
                         {{#link-to 'program.artist' activity}}
-                                <p>{{activity.title}} </p>
+                                <p>{{{activity.title}}}</p>
                         {{/link-to}}
                     </li>
                 {{/each}}
@@ -30,7 +33,7 @@
 
         {{/if}}           
     </div>
-     <div style="border: 1px {{escapeCSS model.page.acf.button_frame_color}} solid" class="Button CenterSelf">
+     <div style="border: 1px {{escapeCSS model.page.acf.button_frame_color}} solid" class="Button button-border">
 		{{#link-to 'program' class="small-caption button"}}
 			{{design.acf.url_1_text}}
 		{{/link-to}}

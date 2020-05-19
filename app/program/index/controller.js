@@ -38,18 +38,17 @@ export default Controller.extend({
 			return true;
 		}
 	}),
-	// this either returns all or a filtered subset of artists
 	filteredArtists: computed('tag', 'model.artists.@each.tags', function() {
 		let tag = this.get('tag')
-		
 		let artists = this.get('model.artists')
-
 		if (!tag || tag === 'all') {
 			return artists
 		}
 		
 		// To get "music" artists we get those without any tags.
-		if (tag === 'music') {
+		if (tag === 'musik') {
+			console.log("clicked musik");
+			
 			return artists.filter(artist => {
 				let tags = artist.get('tags')
 				if (!tags) return false
