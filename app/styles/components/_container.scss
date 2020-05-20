@@ -55,6 +55,12 @@
 .topPadded{
 	padding-top: $LargeContainerPadding;
 }
+.topPaddedHigh{
+	padding-top:20vh;
+	@media (min-width: $layout-s) {
+		padding-top: 50vh;
+	}
+}
 .bottomPadded{
 	padding-top: $ContainerPadding;
 	padding-bottom: $LargeContainerPadding;

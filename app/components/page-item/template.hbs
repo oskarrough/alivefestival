@@ -1,4 +1,4 @@
-<div class="Page" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
+<div class="Page" style="background-image:linear-gradient({{escapeCSS page.acf.top_color}}, {{escapeCSS page.acf.bottom_color}})" >
 
 {{#if page.better_featured_image}}
 	<figure class="Page-banner">
@@ -6,20 +6,24 @@
 	</figure>
 {{/if}}
 
-<div class="Page-body">
-	{{#if page.title}}<h1 class="Title">{{page.title}}</h1>{{/if}}
+<div class="Artist-body Page-body blog">
+	{{#if page.title}}
+	<h2 style="color:{{escapeCSS page.acf.headline_color}}" class="Teaser-title">
+				<span class="page-title">{{{page.title}}}</span>
+	</h2>
+	{{/if}}
 
 	{{#unless hideContent}}
-		<div class="Page-content">
+		<div class="page-content" style="color:{{escapeCSS page.acf.paragraph_text_color}}">
 			{{{page.content}}}
 		</div>
 	{{/unless}}
 
-	{{#if page.acf.sections}}
-		<div class="Page-content">
+	{{!-- {{#if page.acf.sections}}
+		<div class="page-content">
 			{{section-box-wrapper sections=page.acf.sections}}
 		</div>
-	{{/if}}
+	{{/if}} --}}
 
 	{{#if page.acf.extra_text}}
 		{{{page.acf.extra_text}}}

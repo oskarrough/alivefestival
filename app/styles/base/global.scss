@@ -84,6 +84,10 @@ img {
 	}
 	p{
 		color: black;
+		img{
+			padding-top: $padding;
+			padding-bottom: $padding;
+		}
 	}
 	
 }
@@ -91,6 +95,12 @@ img {
 	@include OptiBrian;	
 	font-size: rem(50);
 	line-height: rem(50);
+	color: inherit;
+}
+.page-subtitle{
+	@include OptiBrian;	
+	font-size: 30px;
+	line-height: 33px;
 	color: inherit;
 }
 

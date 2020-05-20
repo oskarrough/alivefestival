@@ -1,27 +1,12 @@
 <div class="gallery">
-	{{#if images.0.sizes.l}}
-			<img class="landscape" src={{images.0.sizes.l}}/>	
-	{{/if}}
-	{{#if images.1.sizes.l}}
-			<img class="portrait" src={{images.1.sizes.l}}/>
-	{{/if}}
-	{{#if images.2.sizes.l}}
-			<img class="landscape" src={{images.2.sizes.l}}/>
-	{{/if}}
-	{{#if images.3.sizes.l}}
-			<img class="portrait" src={{images.3.sizes.l}}/>
-	{{/if}}
-	{{#if images.4.sizes.l}}
-			<img class="landscape" src={{images.4.sizes.l}}/>	
-	{{/if}}
-	{{#if images.5.sizes.l}}
-			<img class="portrait" src={{images.5.sizes.l}}/>	
-	{{/if}}
-	{{#if images.6.sizes.l}}
-			<img class="landscape" src={{images.6.sizes.l}}/>	
-	{{/if}}
-
-
+	{{#each images as |image|}}
+				<img class="lazyload coverImage" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{image.alt}}" data-sizes="auto" data-srcset="
+				{{image.sizes.s}} 320w,
+				{{image.sizes.m}} 768w,
+				{{image.sizes.l}} 1024w,
+				{{image.sizes.xl}} 1600w,
+				{{image.sizes.xxl}} 1920w" />
+	{{/each}}
 </div>
 
 {{yield}}

@@ -1,8 +1,12 @@
-<div class="grid Padded">
+<div class="Grid topPadded">
 		{{#each sortedArtists as |artist|}}
 		{{#if artist.acf.festival_date}}
 			<div class="program-item">
+				{{#if frontpage}}
+				{{program-item artist=artist frontpage=1}}
+				{{else}}
 				{{program-item artist=artist}}
+				{{/if}}
 			</div>
 		{{/if}}
 		{{/each}}

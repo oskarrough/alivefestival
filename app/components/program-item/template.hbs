@@ -1,3 +1,19 @@
+
+{{#if frontpage}}
+	<div class="">
+	<div class="program-date" style="background-color:{{escapeCSS artist.acf.program_color}}">
+		<time datetime="{{artist.acf.festival_date}}">
+				{{moment-format artist.acf.festival_date "HH:mm"}} -
+				{{moment-format artist.acf.festival_date_end "HH:mm"}}
+				· {{artist.acf.scene}}
+		</time>
+	</div>
+	<div class="program-info">
+	<img src="{{artist.better_featured_image.media_details.sizes.mini-double.source_url}}" alt="{{artist.better_featured_image.alt_text}}">
+	<h2 style="color:{{escapeCSS artist.acf.headline_color}}">{{artist.title}}</h2> 
+	</div>
+	</div>
+{{else}}
 <div class="program-date" style="background-color:{{escapeCSS artist.acf.program_color}}">
 		<time datetime="{{artist.acf.festival_date}}">
 				{{moment-format artist.acf.festival_date "HH:mm"}} -
@@ -5,18 +21,18 @@
 				· {{artist.acf.scene}}
 		</time>
 </div>
-<div class="program-info" style="border: 1px {{escapeCSS artist.acf.program_color}} solid">
+<div class="program-info white" style="border: 1px {{escapeCSS artist.acf.program_color}} solid">
 	{{#link-to "program.artist" artist}}
-		{{#if artist.acf.teaser_text_for_program}}
-			<p>{{artist.acf.teaser_text_for_program}}</p>
-        {{else}}
-        <h4>{{artist.title}}</h4> 
-		{{/if}}
-		{{#if artist.acf.easer_paragraph_text_for_program}}
-			<p>{{artist.acf.teaser_paragraph_text_for_program}}</p>
-		{{/if}}
+			{{#if artist.acf.teaser_text_for_program}}
+				<p>{{artist.acf.teaser_text_for_program}}</p>
+			{{else}}
+			<h4>{{artist.title}}</h4> 
+			{{/if}}
+			{{#if artist.acf.easer_paragraph_text_for_program}}
+				<p>{{artist.acf.teaser_paragraph_text_for_program}}</p>
+			{{/if}}
 	{{/link-to}}
 </div>
-
+{{/if}}
 
 {{yield}}
