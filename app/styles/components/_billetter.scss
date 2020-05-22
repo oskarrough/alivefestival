@@ -3,68 +3,48 @@
  */
 
 /* Banner */
-.Page.billetter.party-on {
-	h1 {
-		animation: discoFun 3s;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
+
+
+.ticket-type{
+	position: relative;
+	padding: $relativepadding;
+	padding-bottom: $ContainerPadding;
+	margin-bottom: $LargeContainerPadding;
+	color: $bg-color;
+	width: 100%;
+	@include boldGTHaptic;
+	.ticket-style{
+		@include OptiBrian;
+		font-size: 14px;
 	}
-	.DiscoFun {
-		img:first-of-type {
-			display: none;
+	.ticket-title{
+	
+		font-size: 30px;
+		line-height: 33px;
+		margin: 0;
+	}
+	p{
+		color: inherit;
+		
+	}
+	.ticket-price{
+		margin: 0;
+		margin-bottom: $ContainerPadding;
+		font-size: 40px;
+		line-height: 33px;
+	
+		small{
+			font-size: 20px;
 		}
-		img:last-of-type {
-			display: block;
-		}
 	}
-}
-
-.DiscoFun {
-	position: absolute;
-	right: 2em;
-	top: 6em;
-	height: rem(32);
-	width: rem(25);
-	cursor: pointer;
-
-	img {
-		transform: rotate(3deg);
+	.ticket-placeholder{
+		font-size: 14px;
 	}
-
-	img:last-of-type {
-		display: none;
-	}
-
-	@media (max-width: $layout-sm) {
-		display: none;
-	}
-}
-
-.Page.billetter .Title {
-	text-align: center;
-	color: $yellow;
-	text-shadow: 0.1em 0.1em 0 $blue;
-}
-
-.BilletterBody {
-	background-color: $white;
-	max-width: $max-width;
-	padding: 3em 1em 1em;
-	margin: auto;
-	border: 3px solid $blue;
-	box-shadow: 4px 4px 0 0 $blue;
-
-	@media (min-width: 30em) {
-		padding-left: 2em;
-		padding-right: 2em;
-	}
-}
-
-.BilletterBody .Button {
-	font-size: $font-17;
-
-	&:hover {
-		transform: rotateZ(2deg);
-		animation: tinyShake 250ms infinite;
+	.alert-image{
+		position: absolute;
+		width: 140px;
+		object-fit: contain;
+		top: -13%;
+		right: -5%;
 	}
 }

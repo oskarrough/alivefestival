@@ -39,19 +39,21 @@
 					<div class="spotify-embed">{{{model.acf.spotify_embed}}}</div>
 				{{/if}}
 
-				{{#if model.acf.url_1}}
-				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_1}}" class="Button button-border small-caption"> 
-					{{model.acf.url_1_text}}
-				</a>
-				{{/if}}
-		
-           		{{#if model.acf.url_2}}
-				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_2}}" class="Button button-border small-caption"> 
-					{{model.acf.url_2_text}}
-				</a>
-           		 {{/if}}
-				</div>
+				<div style="border: 1px {{escapeCSS model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_frame_color}}"class="Button button-border small-caption with-animation"> 		
+                    <a href="{{model.acf.url_1}}" style="color:{{escapeCSS model.acf.button_text_color}}">{{model.acf.url_1_text}}</a>
 			</div>
+		
+            {{#if model.acf.url_2}}
+			<div style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_frame_color}}" class="Button button-border small-caption with-animation"> 
+					<a href="{{model.acf.url_2}}" style="color:{{escapeCSS model.acf.button_text_color}}">{{model.acf.url_2_text}}</a>
+			</div>
+            {{/if}}
+			</div>
+
+			
+				</div>
+					
+			
 			{{!-- <p class="BackLink">{{#link-to 'program.index'}}↖ program{{/link-to}}</p> --}}
 
 		</div>

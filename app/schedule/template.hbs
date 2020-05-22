@@ -5,9 +5,13 @@
 	
 		<p class="page-content"> {{{model.page.content}}}
 		</p>
-
+		{{#if model.page.acf.festival_is_on}}
+	
+			{{#if model.page.acf.festival_is_on_images}}
+				{{image-element images=model.page.acf.festival_is_on_images}}
+			{{/if}}
 			
-        {{day-menu tags=tags class="tc"}}
+        	{{day-menu tags=tags class="tc"}}
 		
             {{#if onsdag}}
 			<span>ONSDAG</span>
@@ -31,8 +35,19 @@
 			{{/if}}
 		
 			{{time-schedule artists=filteredArtists}}
+
+
+			{{#if model.page.acf.festival_is_on_map}}
+			<h1 class="frontpage-headline-oblique topPadded"style="color:{{escapeCSS model.page.acf.text_color}}">KORT</h1>
+			<img class="map bottom-margin" src="{{model.page.acf.festival_is_on_map}}"/>
+			{{#link-to 'kort' }}
+					<div style="border: 1px {{escapeCSS model.page.acf.text_color}} solid; color: {{escapeCSS model.page.acf.text_color}}" class="Button small-caption with-animation">
+					SE STØRRE
+					</div>
+			{{/link-to}}
+			{{/if}}
 	
-			
+		{{/if}}
 </div>
 </div>
 
@@ -40,3 +55,5 @@
 
 
 {{outlet}}
+
+	

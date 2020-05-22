@@ -9,14 +9,16 @@
             <img class="teaser-image" src={{design.acf.teaser_image}}/>	
             {{/if}}	
 			
-			<a style="border: 1px {{design.acf.button_frame_color}} solid; color:{{design.acf.button_text_color}}" href="{{design.acf.url_1}}" class="Button button-border small-caption"> 
-					{{design.acf.url_1_text}}
-			</a>
+			<div style="border: 1px {{escapeCSS design.acf.button_frame_color}} solid; color:{{escapeCSS design.acf.button_frame_color}}"class="Button button-border small-caption with-animation"> 
+					
+                    <a href="{{design.acf.url_1}}" style="color:{{escapeCSS design.acf.button_text_color}}">{{design.acf.url_1_text}}</a>
+
+			</div>
 		
             {{#if design.acf.url_2}}
-			<a style="border: 1px {{design.acf.button_frame_color}} solid; color:{{design.acf.button_text_color}}" href="{{design.acf.url_2}}" class="Button button-border small-caption"> 
-					{{design.acf.url_2_text}}
-			</a>
+			<div style="border: 1px {{design.acf.button_frame_color}} solid; color:{{escapeCSS design.acf.button_frame_color}}" class="Button button-border small-caption with-animation"> 
+					<a href="{{design.acf.url_2}}" style="color:{{escapeCSS design.acf.button_text_color}}">{{design.acf.url_2_text}}</a>
+			</div>
             {{/if}}
 
 

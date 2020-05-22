@@ -46,30 +46,30 @@
 			{{/if}}
 		</div>
 	
-	{{#if model.page.acf.kategori_1}}
-		<div  class="Container categories topPadded">
-			<ul class="graphic-container" style="color:{{escapeCSS model.page.acf.kategories_text_color}}"> 
-				<li class="graphic-item">
-					<img src="{{model.page.acf.kategori_graphic_elements.0.sizes.s}}"/>		
-					<a href="{{model.page.acf.kategori_1}}" class="OptiBrianReg"> {{model.page.acf.kategori_1_title}}</a>				
-				</li>
-				<li class="graphic-item">
-						<a href="{{model.page.acf.kategori_2}}" class="OptiBrianItalic"> {{model.page.acf.kategori_2_title}}</a>	
-					<img src="{{model.page.acf.kategori_graphic_elements.1.sizes.s}}"/>		
-					
-				</li>
-				<li class="graphic-item">
-					<img src="{{model.page.acf.kategori_graphic_elements.2.sizes.s}}"/>		
-					<a href="{{model.page.acf.kategori_3}}" class="GTHaptic"> {{model.page.acf.kategori_3_title}}</a>
-									
-				</li>
-				<li class="graphic-item">
-					<a href="{{model.page.acf.kategori_4}}" class="GTHaptic"> {{model.page.acf.kategori_4_title}}</a>	
-					<img src="{{model.page.acf.kategori_graphic_elements.3.sizes.s}}"/>		
-				</li>
-			</ul>
-			</div>
-	{{/if}}
+		{{#if model.page.acf.kategori_1}}
+			<div  class="Container categories topPadded">
+				<ul class="graphic-container" style="color:{{escapeCSS model.page.acf.kategories_text_color}}"> 
+					<li class="graphic-item">
+						<img src="{{model.page.acf.kategori_graphic_elements.0.sizes.s}}"/>		
+						<a href="{{model.page.acf.kategori_1}}" class="OptiBrianReg"> {{model.page.acf.kategori_1_title}}</a>				
+					</li>
+					<li class="graphic-item">
+							<a href="{{model.page.acf.kategori_2}}" class="OptiBrianItalic"> {{model.page.acf.kategori_2_title}}</a>	
+						<img src="{{model.page.acf.kategori_graphic_elements.1.sizes.s}}"/>		
+						
+					</li>
+					<li class="graphic-item">
+						<img src="{{model.page.acf.kategori_graphic_elements.2.sizes.s}}"/>		
+						<a href="{{model.page.acf.kategori_3}}" class="GTHaptic"> {{model.page.acf.kategori_3_title}}</a>
+										
+					</li>
+					<li class="graphic-item">
+						<a href="{{model.page.acf.kategori_4}}" class="GTHaptic"> {{model.page.acf.kategori_4_title}}</a>	
+						<img src="{{model.page.acf.kategori_graphic_elements.3.sizes.s}}"/>		
+					</li>
+				</ul>
+				</div>
+		{{/if}}
 	</div>
 	{{#if model.page.acf.festival_is_on_images}}
 			{{image-element images=model.page.acf.festival_is_on_images}}

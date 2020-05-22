@@ -11,7 +11,7 @@
 					{{#if time}}
                     <time style="color:{{escapeCSS timecolor}}">{{moment-format post.date}}</time>
 					{{/if}}
-                    <figcaption style="color:{{escapeCSS textcolor}}">{{truncate-text post.title limit="80"}}</figcaption>
+                    <figcaption style="color:{{escapeCSS textcolor}}">{{{truncate-text post.title limit="80"}}}</figcaption>
 		    {{/link-to}}
 		</figure>	
 	{{/each}}

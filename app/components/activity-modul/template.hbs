@@ -33,11 +33,15 @@
 
         {{/if}}           
     </div>
-     <div style="border: 1px {{escapeCSS model.page.acf.button_frame_color}} solid" class="Button button-border">
-		{{#link-to 'program' class="small-caption button"}}
+   
+  
+	<div style="border: 1px {{design.acf.button_frame_color}} solid; color:{{escapeCSS design.acf.button_frame_color}}" class="Button button-border with-animation"> 
+    		{{#link-to 'program' class="small-caption button"}}
 			{{design.acf.url_1_text}}
-		{{/link-to}}
-	</div>
+		    {{/link-to}}
+            
+    </div>
+  
 </div>
 
 {{yield}}
