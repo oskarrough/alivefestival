@@ -8,7 +8,9 @@ export default Route.extend({
 		return hash({
 			page: this.store.findRecord('page', 574),
 			artists: this.store.query('artist', {
+
 				categories: ['10'],
+
 				per_page: 99
 			})
 		}).then(model => {

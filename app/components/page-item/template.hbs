@@ -19,6 +19,12 @@
 		</div>
 	{{/unless}}
 
+	{{#if showSections}}
+		<div class="Page-content">
+			{{section-box-wrapper sections=page.acf.sections}}
+		</div>
+	{{/if}}
+
 	{{#if page.acf.extra_text}}
 		{{{page.acf.extra_text}}}
 	{{/if}}

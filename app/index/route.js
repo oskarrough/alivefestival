@@ -14,6 +14,7 @@ export default Route.extend({
 				per_page: 8
 			}),
 			artists: this.store.query('artist', {
+
 				categories: 10,
 				per_page: 6
 			}),
@@ -32,6 +33,8 @@ export default Route.extend({
 			activitydesign: this.store.findRecord('page', 2562),
 			practicalDesign: this.store.findRecord('page', 2651)
 		
+
+
 		})
 		
 	
