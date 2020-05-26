@@ -16,3 +16,6 @@
 npm-debug.log*
 testem.log
 *.swp
+
+# Local Netlify folder
+.netlify

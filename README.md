@@ -24,4 +24,8 @@ You will need the following things properly installed on your computer.
 
 ## Deploying
 
-Push the `2019` branch and it will automatically deploy to alivefestival.dk via netlify.com.
+The `master` branch is automatically deployed to alivefestival.dk via netlify.com.
+
+## Questions?
+
+oskar@rough.dk
