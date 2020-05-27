@@ -39,9 +39,10 @@
 	background-image: none;
 	color: inherit;
 	white-space: nowrap;
-	a{
+	p{
 		text-decoration: none;
 		color: inherit;
+		margin:0;
 	}
 	min-width: 30%;
 }
@@ -55,6 +56,10 @@
 	margin: $padding;
 	font-size: 14px;
 	text-align: center;
+	
+	@media (min-width: $layout-s) {
+		min-width: 300px;
+	}	
 	@media (max-width: $layout-s) {
 		width: 80%;
 	}	

@@ -1,18 +1,21 @@
 .Aside {
 	position: fixed;
-	width: 100%;;
+	right: 0;
+	width: 100%;
 	z-index: 10;
 	transition: transform 250ms $ease-accelerate;
 	transform: translate3d(100%, 0, 0);
 	padding-top: 10%;
 	height: 100%;
 	min-height: 100vh;
-
 	overflow-y: scroll;
 	.show-aside & {
 		transition-timing-function: $ease-decelerate;
 		transition-duration: 400ms;
 		transform: translate3d(0, 0, 0);
+	}
+	@media (min-width: $layout-s) {
+		width: 33%;
 	}
 
 }
@@ -20,6 +23,7 @@
 .Aside-inner {
 	// Above border.
 	position: fixed;
+	padding-top: $LargeContainerPadding;
 	top: 0;
 	display: flex;
 	flex-flow: column;

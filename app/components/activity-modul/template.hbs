@@ -10,17 +10,10 @@
     
     <div class="flex-box-toggle">
         <div class="activity-table">
-             {{!-- <ul class="icons">
-                {{#each design.acf.kategori_graphic_elements as |icon|}}
-                <img src={{icon.sizes.s}}/>
-                {{/each}}
-                
-            </ul> --}}
             <ul class="titles">
                 {{#each activities as |activity  index|}}
                     <li class="artist-item">
                         {{#link-to 'program.artist' activity}}
-
                                 <img src={{get (get design.acf.kategori_graphic_elements index) 'sizes.s'}}/>
                                 <p>{{{activity.title}}}</p>
                         {{/link-to}}
@@ -36,13 +29,13 @@
 
         {{/if}}           
     </div>
-   
-	<div style="border: 1px {{design.acf.button_frame_color}} solid; color:{{escapeCSS design.acf.button_frame_color}}" class="Button button-border with-animation"> 
-    		{{#link-to 'program' class="small-caption button"}}
-			{{design.acf.url_1_text}}
-		    {{/link-to}}
-            
-    </div>
+    
+	{{#link-to 'program' class="Button button-border"}}
+    <div style="border: 1px {{escapeCSS design.acf.button_frame_color}} solid; color:{{escapeCSS design.acf.button_frame_color}}" class="Button button-border small-caption with-animation"> 
+            <p style="color{{escapeCSS design.acf.button_text_color}}"  class="small-caption">{{design.acf.url_1_text}}</p>
+     </div>
+    {{/link-to}}  
+  
   
 </div>
 

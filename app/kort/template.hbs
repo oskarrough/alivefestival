@@ -1,5 +1,10 @@
 <div class="Section">
-	{{page-item page=model}}
+<div class="Page-body" style="background-image:linear-gradient({{escapeCSS model.acf.top_color}}, {{escapeCSS model.acf.bottom_color}})" >
+
+{{#if model.acf.background_image.sizes.bg-portrait-xl}}
+	<img class="mapImage" src="{{model.acf.background_image.sizes.l}}" alt="">
+{{/if}}
+</div>
 </div>
 
 {{outlet}}

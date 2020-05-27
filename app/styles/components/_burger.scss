@@ -9,21 +9,19 @@
 		outline: none;
 	}
 
-	//state of menu button after menu is toggled visible
-	// .show-aside & {
-	// 	&::before {
-	// 		content: '';
-	// 		display: inline-block;
-	// 		width: rem(42);
-	// 		height: rem(50);
-	// 		right: 10px;
-	// 		background-image: url(images/dots/closingX.svg);
-	// 		background-position: 50%;
-	// 		background-repeat: no-repeat;
-	// 		position: absolute;
-	// 		z-index: -11; // on top of .Aside
-	// 	}
-	// }
+	// state of menu button after menu is toggled visible
+	.show-aside & {
+		&::before {
+			content: '';
+			display: inline-block;
+			width: rem(30);
+			height: rem(30);
+			right: 10px;
+			background-image: url(images/dots/closingX.svg);
+			background-position: 50%;
+			background-repeat: no-repeat;
+		}
+	}
 
 	//usual state of menu button
 	&::before {
@@ -35,28 +33,4 @@
 
 	}
 
-}
-.BurgerInAside{
-	position: fixed;
-	top: 0;
-	right: 0;
-	background-color: transparent;
-	border: 0;
-	&:hover {
-		cursor: pointer;
-	}
-	&:focus,
-	&:active {
-		outline: none;
-	}
-	&::before {
-		content: '';
-		display: inline-block;
-		background-image: url(images/dots/closingX.svg);
-		background-repeat: no-repeat;
-		width: rem(30);
-		height: rem(30);
-		margin: $padding;
-
-	}
 }

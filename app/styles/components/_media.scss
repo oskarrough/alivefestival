@@ -1,6 +1,4 @@
-/**
- * Media block
- */
+
 .Media-TopFade{
 	min-height: 100vh;
 	margin-top: -50vh;
@@ -120,22 +118,30 @@
 		color: inherit;
 		padding: 5%;
 		@include boldGTHaptic;
+	}
+	.artist{
+		display: flex;
+		flex-direction: row;
 		img{
 			display: none;
 		}
-		@media (min-width: $layout-s) {
-			&:hover {
-				img{
-					display: block;
-					margin-left: $padding;
-					height: 40px;
-					width: auto;
-					object-fit: contain;
-				}
+		&:hover {
+			color: $transparent;
+			-webkit-text-stroke: 2px $blue; 
+			@include obliqueGTHaptic;
+			img{
+				display: block;
+				margin-left: $padding;
+				height: 40px;
+				width: auto;
+				object-fit: contain;
 			}
 		}
-	}
-	.artist{
+		&.is-active {
+			@include obliqueGTHaptic;
+			-webkit-text-stroke: 2px $blue; 
+			color: $transparent;
+		}
 		text-decoration: none;
 		text-align: center;
 		font-size: rem(40);
@@ -145,19 +151,11 @@
 		color: inherit;
 		font-family: inherit;
 		text-transform: uppercase;
+
 		@media (max-width: $layout-s) {
 			font-size: rem(40);
 		}
-		&:hover {
-			color: $transparent;
-			-webkit-text-stroke: 2px $blue; 
-			@include obliqueGTHaptic;
-		}
-		&.is-active {
-			@include obliqueGTHaptic;
-			-webkit-text-stroke: 2px $blue; 
-			color: $transparent;
-		}
+		
 	}
 	p{
 		@include OptiBrian;
@@ -253,36 +251,32 @@
 .activity-table{
 	display: flex;
 	flex-direction: row;
-	height: 50vh;
+	// height: 50vh;
 	padding-bottom: $LargeContainerPadding;
-	ul{
-		width: auto;
-		list-style: none;
-		padding: $padding;
-		margin: 0;
-		display: flex;
-		
-		flex-direction: column;
-	}
-	.icons{
-		justify-content: space-between;
-		img{
-			width: 70px;
-			object-fit: contain;
-		}
-	}
 	.titles{
 		justify-content: space-between;
-		a{
-			color: inherit;
-			text-decoration: none;
-			font-size: 20px;
-			line-height: 23px;
+		list-style-type: none;
+		padding: 0;
+		color: inherit;
+		text-decoration: none;
+		font-size: 20px;
+		line-height: 23px;
+		.artist-item{
+			a{
+			margin-top: $ContainerPadding;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			img{
+				width: 50px;
+				object-fit: contain;
+			}
+			p{
+				margin-left:$ContainerPadding;
+				margin-bottom: 0;
+			}
+			}
 		}
-		p{
-			margin:0;
-		}
-		
 
 	}
 }
@@ -292,11 +286,11 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .image-grid-image{
 	width: 25%;
-	min-width: 120px;
+	min-width: 160px;
 	object-fit: contain;
 	
 }
@@ -423,4 +417,8 @@
 	}
 }
 
-
+.mapImage{
+	width: 100%;
+	max-height: 100vh;
+	object-fit: contain;
+}
