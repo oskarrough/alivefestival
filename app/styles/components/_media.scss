@@ -73,7 +73,10 @@
 			@include OptiBrianItalic
 		}
 		.GTHaptic{
-			@include big-headline
+			@include big-headline;
+		}
+		.longerText{
+			font-size: 9vw;
 		}
 	}
 }
@@ -290,7 +293,7 @@
 }
 .image-grid-image{
 	width: 25%;
-	min-width: 160px;
+	min-width: 120px;
 	object-fit: contain;
 	
 }

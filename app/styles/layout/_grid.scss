@@ -37,6 +37,10 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	@media (min-width: $layout-s) {
+		justify-content: flex-start;
+	}
+
 	align-items: flex-start;
 }
 .grid-horizontal{

@@ -1,14 +1,14 @@
 
 <div class="index" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
 	<div class="HeaderContainer">
-		<video autoplay loop class="cover-video">
+		<video autoplay loop class="cover-video lazyload">
 				<source src="https://res.cloudinary.com/demo/video/upload/q_auto,vc_vp9/vyuth6hpr1a63vkk5a54.webm" alt="Alive Festival <3 u"type="video/webm">
 				Your browser does not support the video tag.
 		</video>
 	
 		<div class="headline">
 				{{#if model.page.acf.headline_image}}
-					<img class="covermage" src={{model.page.acf.headline_image}}/>
+					<img class="covermage lazyload" src={{model.page.acf.headline_image}}/>
 				{{else}}
 					<div class="topline">
 						<h1 style="color:{{escapeCSS model.page.acf.headline_color}}" class="big-headline line1">{{model.page.acf.headline1}}</h1>
@@ -30,7 +30,7 @@
 		<div class="Container Relative graphic-container top-position fourPaddedContainer">
 			<h1 class="frontpage-headline-small"style="color:{{escapeCSS model.page.acf.text_color}}">Det sker lige nu</h1>
 			{{time-schedule artists=model.artists frontpage=1}}
-			{{#link-to 'schedule' }}
+			{{#link-to 'program' }}
 			<div style="border: 1px {{escapeCSS model.page.acf.text_color}} solid" class="Button small-caption">
 			SE HELE SPILLEPLANEN
 			</div>
@@ -50,22 +50,22 @@
 			<div  class="Container categories topPadded">
 				<ul class="graphic-container" style="color:{{escapeCSS model.page.acf.kategories_text_color}}"> 
 					<li class="graphic-item">
-						<img src="{{model.page.acf.kategori_graphic_elements.0.sizes.s}}"/>		
+						<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.0.sizes.s}}"/>		
 						<a href="{{model.page.acf.kategori_1}}" class="OptiBrianReg"> {{model.page.acf.kategori_1_title}}</a>				
 					</li>
 					<li class="graphic-item">
 							<a href="{{model.page.acf.kategori_2}}" class="OptiBrianItalic"> {{model.page.acf.kategori_2_title}}</a>	
-						<img src="{{model.page.acf.kategori_graphic_elements.1.sizes.s}}"/>		
+						<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.1.sizes.s}}"/>		
 						
 					</li>
 					<li class="graphic-item">
-						<img src="{{model.page.acf.kategori_graphic_elements.2.sizes.s}}"/>		
-						<a href="{{model.page.acf.kategori_3}}" class="GTHaptic"> {{model.page.acf.kategori_3_title}}</a>
+						<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.2.sizes.s}}"/>		
+						<a href="{{model.page.acf.kategori_3}}" class="GTHaptic longerText"> {{model.page.acf.kategori_3_title}}</a>
 										
 					</li>
 					<li class="graphic-item">
 						<a href="{{model.page.acf.kategori_4}}" class="GTHaptic"> {{model.page.acf.kategori_4_title}}</a>	
-						<img src="{{model.page.acf.kategori_graphic_elements.3.sizes.s}}"/>		
+						<img  class="lazyload" src="{{model.page.acf.kategori_graphic_elements.3.sizes.s}}"/>		
 					</li>
 				</ul>
 				</div>
@@ -79,22 +79,22 @@
 	<div style="background-image:linear-gradient({{escapeCSS model.page.acf.cover_image_1_top_color}}, {{escapeCSS model.page.acf.cover_image_1_bottom_color}})" class="Container Media-TopFade categories topPadded">
 		<ul class="graphic-container top-position" style="color:{{escapeCSS model.page.acf.kategories_text_color}}"> 
 			<li class="graphic-item">
-				<img src="{{model.page.acf.kategori_graphic_elements.0.sizes.s}}"/>		
+				<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.0.sizes.s}}"/>		
 				<a href="{{model.page.acf.kategori_1}}" class="OptiBrianReg"> {{model.page.acf.kategori_1_title}}</a>				
 			</li>
 			<li class="graphic-item">
 					<a href="{{model.page.acf.kategori_2}}" class="OptiBrianItalic"> {{model.page.acf.kategori_2_title}}</a>	
-				<img src="{{model.page.acf.kategori_graphic_elements.1.sizes.s}}"/>		
+				<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.1.sizes.s}}"/>		
 				
 			</li>
 			<li class="graphic-item">
-				<img src="{{model.page.acf.kategori_graphic_elements.2.sizes.s}}"/>		
-				<a href="{{model.page.acf.kategori_3}}" class="GTHaptic"> {{model.page.acf.kategori_3_title}}</a>
+				<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.2.sizes.s}}"/>		
+				<a href="{{model.page.acf.kategori_3}}" class="GTHaptic longerText"> {{model.page.acf.kategori_3_title}}</a>
 								
 			</li>
 			<li class="graphic-item">
 				<a href="{{model.page.acf.kategori_4}}" class="GTHaptic"> {{model.page.acf.kategori_4_title}}</a>	
-				<img src="{{model.page.acf.kategori_graphic_elements.3.sizes.s}}"/>		
+				<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.3.sizes.s}}"/>		
 			</li>
 		</ul>
 	</div>
@@ -117,7 +117,7 @@
 		{{/if}}
 
 		{{#if model.page.acf.cover-image2}}
-			<img class="coverImage" src="{{model.page.acf.cover-image2}}" alt="{{model.title}}"/>
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image2}}" alt="{{model.title}}"/>
 		{{/if}}
 	
 		<div class="Container Relative">
@@ -125,7 +125,7 @@
 		</div>
 	
 		{{#if model.page.acf.cover-image3}}
-			<img class="coverImage" src="{{model.page.acf.cover-image3}}" alt="{{model.title}}"/>
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image3}}" alt="{{model.title}}"/>
 		{{/if}}
 
 		<div class="Container Relative">
@@ -133,7 +133,7 @@
 		</div>
 
 		{{#if model.page.acf.cover-image4}}
-			<img class="coverImage" src="{{model.page.acf.cover-image4}}" alt="{{model.title}}"/>
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image4}}" alt="{{model.title}}"/>
 		{{/if}}
 
 		<div class="Container Relative">
@@ -141,7 +141,7 @@
 		</div>
 
 		{{#if model.page.acf.cover-image5}}
-			<img class="coverImage" src="{{model.page.acf.cover-image5}}" alt="{{model.title}}"/>
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image5}}" alt="{{model.title}}"/>
 		{{/if}}
 
 		<div class="Container Relative">
@@ -149,7 +149,7 @@
 		</div>
 
 		{{#if model.page.acf.cover-image6}}
-			<img class="coverImage" src="{{model.page.acf.cover-image6}}" alt="{{model.title}}"/>
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image6}}" alt="{{model.title}}"/>
 		{{/if}}
 
 		<div class="Container Relative">
@@ -157,7 +157,7 @@
 		</div>
 
 		{{#if model.page.acf.cover-image7}}
-			<img class="coverImage" src="{{model.page.acf.cover-image7}}" alt="{{model.title}}"/>
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image7}}" alt="{{model.title}}"/>
 		{{/if}}
 		
 		<div class="Container Relative">
@@ -165,7 +165,7 @@
 		</div>
 
 		{{#if model.page.acf.cover-image8}}
-			<img class="coverImage" src="{{model.page.acf.cover-image8}}" alt="{{model.title}}"/>
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image8}}" alt="{{model.title}}"/>
 		{{/if}}
 
 		<div class="Container Relative">
@@ -173,7 +173,7 @@
 		</div>
 
 		{{#if model.page.acf.cover-image9}}
-			<img class="coverImage" src="{{model.page.acf.cover-image9}}" alt="{{model.title}}"/>
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image9}}" alt="{{model.title}}"/>
 		{{/if}}
 
 		<div class="Container Relative fourPaddedContainer topPadded">
@@ -199,7 +199,7 @@
 
 	<div class="footer"> 
 		{{#if model.page.acf.footer_image}}
-			<img class="footerImage" src="{{model.page.acf.footer_image}}" alt="{{model.title}}"/>
+			<img class="footerImage lazyload" src="{{model.page.acf.footer_image}}" alt="{{model.title}}"/>
 		{{/if}}
 		<div class="footer-content" style="color:{{model.page.acf.footer_links_color}}">
 				{{link-to 'Nyheder' 'news'}}

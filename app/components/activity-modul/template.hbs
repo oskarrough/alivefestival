@@ -13,7 +13,7 @@
             <ul class="titles">
                 {{#each activities as |activity  index|}}
                     <li class="artist-item">
-                        {{#link-to 'program.artist' activity}}
+                        {{#link-to 'line-up.artist' activity}}
                                 <img src={{get (get design.acf.kategori_graphic_elements index) 'sizes.s'}}/>
                                 <p>{{{activity.title}}}</p>
                         {{/link-to}}
@@ -30,7 +30,7 @@
         {{/if}}           
     </div>
     
-	{{#link-to 'program' class="Button button-border"}}
+	{{#link-to 'line-up' class="Button button-border"}}
     <div style="border: 1px {{escapeCSS design.acf.button_frame_color}} solid; color:{{escapeCSS design.acf.button_frame_color}}" class="Button button-border small-caption with-animation"> 
             <p style="color{{escapeCSS design.acf.button_text_color}}"  class="small-caption">{{design.acf.url_1_text}}</p>
      </div>

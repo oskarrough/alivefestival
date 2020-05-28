@@ -71,6 +71,7 @@ a:hover .Teaser .Teaser-title {
 	@media (min-width: $layout-s) {
 		width: 300px;
 		max-width: 300px;
+		margin-right: $masonry-gutter;
 	}
 	margin-bottom: $masonry-gutter;
 	img{

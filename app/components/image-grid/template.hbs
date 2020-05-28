@@ -5,12 +5,12 @@
     <div class="image-grid">
     {{#each items as |image|}}
             {{#if image.sizes.s}}
-                <img class="image-grid-image" src={{image.sizes.s}} />
+                <img class="image-grid-image lazyload" src={{image.sizes.s}} />
             {{else}}
             {{#if image.sizes.m}}
-                <img class="image-grid-image"src={{image.sizes.m}} />
+                <img class="image-grid-image lazyload"src={{image.sizes.m}} />
                 {{else}}
-                <img class="image-grid-image" src={{image.sizes.l}} />
+                <img class="image-grid-image lazyload" src={{image.sizes.l}} />
                 {{/if}}
             {{/if}}
     {{/each}}

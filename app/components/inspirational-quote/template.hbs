@@ -1,6 +1,6 @@
 <div style="background-image:linear-gradient({{design.acf.top_color}}, {{design.acf.bottom_color}})">
 	{{#if design.acf.quote_graphic}}
-	<img class="BG-ImageContain" src="{{design.acf.quote_graphic}}"/>
+	<img class="BG-ImageContain lazyload" src="{{design.acf.quote_graphic}}"/>
 	{{/if}}
 	<div class="foreground-content fourPaddedContainer" style="color:{{design.acf.text_color}}">
 		<h2 class="first">{{design.acf.quote_text}}</h2>
@@ -8,7 +8,7 @@
 		<h2 class="second">{{design.acf.quote_text_small}}</h2>
 		{{/if}}
 		 {{#if design.acf.teaser_image}}
-         <img class="inspiration-image" src={{design.acf.teaser_image}} />
+         <img class="inspiration-image lazyload" src={{design.acf.teaser_image}} />
     	{{/if}}
 	</div>	 
 	
