@@ -392,8 +392,9 @@
 		// z-index: 0;
 		width: 100%;
 		margin-left: $padding;
-	
-		// padding-top: $ContainerPadding2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		h4{
 			font-family: 'GT Haptik medium';
 			color: black;
