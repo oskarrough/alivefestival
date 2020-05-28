@@ -120,57 +120,71 @@
 			<img class="coverImage lazyload" src="{{model.page.acf.cover-image2}}" alt="{{model.title}}"/>
 		{{/if}}
 	
+		{{#if model.page.acf.teaser_block.[0]}}
 		<div class="Container Relative">
 			{{inspirational-quote design=model.page.acf.teaser_block.[0]}}
 		</div>
-	
+		{{/if}}
+
 		{{#if model.page.acf.cover-image3}}
 			<img class="coverImage lazyload" src="{{model.page.acf.cover-image3}}" alt="{{model.title}}"/>
 		{{/if}}
 
+		{{#if model.page.acf.teaser_block.[1]}}
 		<div class="Container Relative">
 		{{artist-list artists=model.artists design=model.page.acf.teaser_block.[1]}}
 		</div>
+		{{/if}}
 
 		{{#if model.page.acf.cover-image4}}
 			<img class="coverImage lazyload" src="{{model.page.acf.cover-image4}}" alt="{{model.title}}"/>
 		{{/if}}
 
+		{{#if model.page.acf.teaser_clicker.[0]}}
 		<div class="Container Relative">
 			{{teaser-clicker design=model.page.acf.teaser_clicker.[0]}}
 		</div>
+		{{/if}}
 
 		{{#if model.page.acf.cover-image5}}
 			<img class="coverImage lazyload" src="{{model.page.acf.cover-image5}}" alt="{{model.title}}"/>
 		{{/if}}
 
+		{{#if model.page.acf.teaser_clicker.[1]}}
 		<div class="Container Relative">
-			{{activity-modul activities=model.activites design=model.page.acf.teaser_clicker.[4]}}
+			{{activity-modul activities=model.activites design=model.page.acf.teaser_clicker.[1]}}
 		</div>
+		{{/if}}
 
 		{{#if model.page.acf.cover-image6}}
 			<img class="coverImage lazyload" src="{{model.page.acf.cover-image6}}" alt="{{model.title}}"/>
 		{{/if}}
 
+		{{#if model.page.acf.teaser_clicker.[2]}}
 		<div class="Container Relative">
-			{{actvities-list items=model.practical design=model.page.acf.teaser_clicker.[3]}} 
+			{{actvities-list items=model.practical design=model.page.acf.teaser_clicker.[2]}} 
 		</div>
+		{{/if}}
 
 		{{#if model.page.acf.cover-image7}}
 			<img class="coverImage lazyload" src="{{model.page.acf.cover-image7}}" alt="{{model.title}}"/>
 		{{/if}}
-		
+
+		{{#if model.page.acf.teaser_clicker.[3]}}
 		<div class="Container Relative">
-			{{teaser-clicker design=model.page.acf.teaser_clicker.[1]}}
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[3]}}
 		</div>
+		{{/if}}
 
 		{{#if model.page.acf.cover-image8}}
 			<img class="coverImage lazyload" src="{{model.page.acf.cover-image8}}" alt="{{model.title}}"/>
 		{{/if}}
 
+		{{#if model.page.acf.teaser_clicker.[4]}}
 		<div class="Container Relative">
-			{{teaser-clicker design=model.page.acf.teaser_clicker.[2]}}
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[4]}}
 		</div>
+		{{/if}}
 
 		{{#if model.page.acf.cover-image9}}
 			<img class="coverImage lazyload" src="{{model.page.acf.cover-image9}}" alt="{{model.title}}"/>
@@ -180,9 +194,41 @@
 				{{newsletter-form}}
 		</div>
 		
-		<div style="background-image:linear-gradient({{escapeCSS model.samarbejdsteaser.acf.featured_partners_top_color}}, {{escapeCSS model.samarbejdsteaser.acf.featured_partners_bottom_color}}); color:{{escapeCSS model.samarbejdsteaser.acf.featured_partners_text_color}}" >
-			{{image-grid items=model.samarbejdsteaser.acf.partner_gallery urltext=model.samarbejdsteaser.acf.featured_partners_headline style=model.samarbejdsteaser.acf.featured_partners_text_color url="partners"}} 
+		{{#if model.page.acf.teaser_clicker.[5]}}
+		<div style="background-image:linear-gradient({{escapeCSS model.page.acf.teaser_clicker.[5].top_color}}, {{escapeCSS model.page.acf.teaser_clicker.[5].bottom_color}}); color:{{escapeCSS model.page.acf.teaser_clicker.[5].button_frame_color}}" >
+			{{image-grid items=model.page.acf.teaser_clicker.[5].icon_array urltext=model.page.acf.teaser_clicker.[5].headline url="partners"}} 
 		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[6]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[6]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[7]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[7]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[8]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[8]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[9]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[9]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[10]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[10]}}
+		</div>
+		{{/if}}
 
 		<div class="PaddedContainer Container Relative instagram" style="background-image:linear-gradient({{escapeCSS model.page.acf.insta_news_top_color}}, {{escapeCSS model.page.acf.insta_news_bottom_color}}); color:{{escapeCSS model.page.acf.insta_news_headline_color}}" >
 			<a href={{model.page.acf.instagram_url}} target="_blank" title="Alive på instagram">
@@ -197,6 +243,7 @@
 	</div>
 
 
+	{{#if model.page.acf.footer_headline}}
 	<div class="footer"> 
 		{{#if model.page.acf.footer_image}}
 			<img class="footerImage lazyload" src="{{model.page.acf.footer_image}}" alt="{{model.title}}"/>
@@ -221,6 +268,7 @@
 				{{social-links}}
 		</div>
 	</div>
+	{{/if}}
 	
 
 
