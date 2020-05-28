@@ -1,0 +1,34 @@
+<article class="Artist" style="background-image:linear-gradient({{escapeCSS model.acf.top_color}} 0%, {{escapeCSS model.acf.bottom_color}} 20%) " >		
+	<div class="Artist-body Page-body blog">
+			<h2 style="color:{{escapeCSS model.acf.headline_color}}" class="Teaser-title">
+				<span class="page-title">{{{model.title}}}</span>
+			</h2>		
+			<div class="Artist-media">
+			<img src="{{model.better_featured_image.media_details.sizes.mini-double.source_url}}"
+				alt="{{model.better_featured_image.alt_text}}">
+			</div>
+		
+			<div class="page-content">
+				{{{model.content}}}
+				<div class="horizontal-Centering ">
+						
+				{{#if model.acf.headline}}
+					<h2 class="frontpage-headline-small" style="color:{{escapeCSS model.acf.headline_color}}">{{{model.acf.headline}}}</h2>
+				{{/if}}
+				
+				{{#if model.acf.url_1}}
+				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_1}}" class="Button button-border small-caption"> 
+					{{model.acf.url_1_text}}
+				</a>
+				{{/if}}
+		
+           		{{#if model.acf.url_2}}
+				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_2}}" class="Button button-border small-caption"> 
+					{{model.acf.url_2_text}}
+				</a>
+           		 {{/if}}
+				</div>
+			</div>		
+
+		</div>
+	</article>

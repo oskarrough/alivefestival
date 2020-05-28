@@ -2,7 +2,7 @@
 <li class="news-feed-items Container Padded">
 	{{#each items as |post|}}
 	  <figure class="news-list-item">
-			{{#link-to 'practical' class=""}}
+			{{#link-to 'practical.post' post class=""}}
                   	{{#if post.better_featured_image.media_details.sizes.s.source_url}}
 						<img class="lazyload" src="{{post.better_featured_image.media_details.sizes.s.source_url}}" alt="{{post.better_featured_image.alt}}"> 
 					{{else}}

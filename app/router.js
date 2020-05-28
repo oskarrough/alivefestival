@@ -13,9 +13,9 @@ Router.map(function() {
   this.route('line-up', function() {
     this.route('artist', {path: ':artist_slug'})
   });
-  // this.route('music', {path: 'musik'}, function() {
-  //   this.route('artist', {path: ':artist_slug'})
-  // })
+  this.route('practical', {path: 'praktisk'}, function() {
+    this.route('post', {path: ':post_slug'})
+  });
 
   this.route('sideprogram')
   this.route('adventure', {path: 'dagsprogram'})
@@ -33,7 +33,7 @@ Router.map(function() {
   // Meta pages
   this.route('tickets', {path: 'billetter'})
   this.route('volunteer', {path: 'frivillig'})
-  this.route('practical', {path: 'praktisk'})
+  // this.route('practical', {path: 'praktisk'})
   this.route('about', {path: 'om-alive'}, function() {
       this.route('contact', {path: 'kontakt'})
       this.route('history', {path: 'historie'})
