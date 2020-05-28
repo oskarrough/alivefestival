@@ -21,7 +21,7 @@
 	}
 }
 .SidePadded{
-	padding: $padding;
+	padding: $ContainerPadding;
 	@media (min-width: $layout-s) {
 		padding-left: $ContainerPaddingDesktop;
 		padding-right: $ContainerPaddingDesktop;

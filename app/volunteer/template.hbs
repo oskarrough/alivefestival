@@ -4,6 +4,7 @@
 		<p class="page-content"> {{{model.page.content}}}	
 		</p>
 	</div>
+	{{#if model.page.acf.type}}
 	<div class="grid-practical SidePadded">
 			{{#each model.page.acf.type as |type|}}
 				<div class="frivillig-type" style="border: 1px {{escapeCSS type.type_color}} solid; color: {{escapeCSS type.type_color}}">
@@ -19,12 +20,16 @@
 				</div>
 			{{/each}}
 	</div>
+	{{/if}}
+	{{#if model.page.acf.middle_extra_text}}
 	<div class="Page SidePadded blog">
 		{{#if model.page.acf.middle_extra_text}}
 		<p class="page-content" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
 			{{{model.page.acf.middle_extra_text}}}</p>
 		{{/if}}
 	</div>
+	{{/if}}
+	{{#if model.page.acf.arbejdsroller}}
 	<div class="grid-horizontal SidePadded">
 			{{#each model.page.acf.arbejdsroller as |rolle|}}
 	  				<figure class="arbejdsrolle-item">
@@ -36,17 +41,18 @@
 					</figure>	
 			{{/each}}
 	</div>
-
+	{{/if}}
+	
+	{{#if model.page.acf.extra_text}}
 	<div class="Page-bottom blog">
-		{{#if model.page.acf.extra_text}}
 		<p class="page-content topPadded" style="color: {{escapeCSS model.page.acf.text_color}}">
 			<h2 style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.acf.extratext_headline}}</h2>
 			{{{model.page.acf.extra_text}}}</p>
-		{{/if}}
 	</div>
+	{{/if}}
+
 	
 
 </div>
-
 
 {{outlet}}
