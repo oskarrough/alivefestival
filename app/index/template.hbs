@@ -121,7 +121,7 @@
 		{{/if}}
 	
 		<div class="Container Relative">
-			{{inspirational-quote design=model.InspirationalQuoteDesign}}
+			{{inspirational-quote design=model.page.acf.teaser_block.[0]}}
 		</div>
 	
 		{{#if model.page.acf.cover-image3}}
@@ -137,7 +137,7 @@
 		{{/if}}
 
 		<div class="Container Relative">
-			{{teaser-clicker design=model.MusikTeaserDesign}}
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[0]}}
 		</div>
 
 		{{#if model.page.acf.cover-image5}}

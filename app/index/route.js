@@ -27,7 +27,6 @@ export default Route.extend({
 			samarbejdsteaser: this.store.findRecord('page', 302),
 			frivilligteaser: this.store.findRecord("page", 2598),
 			MusikTeaserDesign: this.store.findRecord("page", 2594),
-			InspirationalQuoteDesign: this.store.findRecord("page", 2587),
 			ArtistListDesign: this.store.findRecord('page', 2687),
 			activitydesign: this.store.findRecord('page', 2562),
 			practicalDesign: this.store.findRecord('page', 2651)
