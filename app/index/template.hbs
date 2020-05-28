@@ -129,7 +129,7 @@
 		{{/if}}
 
 		<div class="Container Relative">
-		{{artist-list artists=model.artists design=model.ArtistListDesign}}
+		{{artist-list artists=model.artists design=model.page.acf.teaser_block.[1]}}
 		</div>
 
 		{{#if model.page.acf.cover-image4}}
@@ -145,7 +145,7 @@
 		{{/if}}
 
 		<div class="Container Relative">
-			{{activity-modul activities=model.activites design=model.activitydesign}}
+			{{activity-modul activities=model.activites design=model.page.acf.teaser_clicker.[4]}}
 		</div>
 
 		{{#if model.page.acf.cover-image6}}
@@ -153,7 +153,7 @@
 		{{/if}}
 
 		<div class="Container Relative">
-			{{actvities-list items=model.practical design=model.practicalDesign}} 
+			{{actvities-list items=model.practical design=model.page.acf.teaser_clicker.[3]}} 
 		</div>
 
 		{{#if model.page.acf.cover-image7}}
@@ -161,7 +161,7 @@
 		{{/if}}
 		
 		<div class="Container Relative">
-			{{teaser-clicker design=model.frivilligteaser}}
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[1]}}
 		</div>
 
 		{{#if model.page.acf.cover-image8}}
@@ -169,7 +169,7 @@
 		{{/if}}
 
 		<div class="Container Relative">
-			{{teaser-clicker design=model.samarbejdsteaser}}
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[2]}}
 		</div>
 
 		{{#if model.page.acf.cover-image9}}

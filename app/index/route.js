@@ -23,14 +23,7 @@ export default Route.extend({
 			}),
 			practical: this.store.query('FAQ', {
 				per_page: 10
-			}),
-			samarbejdsteaser: this.store.findRecord('page', 302),
-			frivilligteaser: this.store.findRecord("page", 2598),
-			MusikTeaserDesign: this.store.findRecord("page", 2594),
-			ArtistListDesign: this.store.findRecord('page', 2687),
-			activitydesign: this.store.findRecord('page', 2562),
-			practicalDesign: this.store.findRecord('page', 2651)
-
+			})
 		})
 		
 	

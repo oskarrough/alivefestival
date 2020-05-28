@@ -1,25 +1,25 @@
-<div style="background-image:linear-gradient({{escapeCSS design.acf.teaser_top_color}}, {{escapeCSS design.acf.teaser_bottom_color}})" >
-	<div class="Container Padded PaddedContainer" style="background-image:linear-gradient({{escapeCSS design.acf.teaser_top_color}}, {{escapeCSS design.acf.teaser_bottom_color}})" >
-	{{#if design.title}}
+<div style="background-image:linear-gradient({{escapeCSS design.top_color}}, {{escapeCSS design.bottom_color}})" >
+	<div class="Container Padded PaddedContainer"  >
+	{{#if design.headline}}
 	<div class="Centering">
-    	<h2 class="frontpage-headline" style="color:{{escapeCSS design.acf.headline_color}}"> {{design.acf.headline}}</h2>
+    	<h2 class="frontpage-headline" style="color:{{escapeCSS design.headline_color}}"> {{design.headline}}</h2>
 	</div>
     {{/if}}
-    {{#if design.acf.teaser_Subheadline}}
+    {{#if design.teaser_Subheadline}}
 	<div class="Centering">
-   	 <p class="frontpage-content limitedWidth" style="color:{{escapeCSS design.acf.subheadline_color}}"> {{design.acf.teaser_Subheadline}}</p>
+   	 <p class="frontpage-content limitedWidth" style="color:{{escapeCSS design.subheadline_color}}"> {{design.teaser_Subheadline}}</p>
     </div>
 	{{/if}}
  	</div>
 	<div class="overflowRight">
-	{{faq-list items=items textcolor=design.acf.text_color}}
+	{{faq-list items=items textcolor=design.teaser_link_color}}
 	</div>
 	<div class="Container Padded PaddedContainer">
-		<div style="border: 1px {{escapeCSS model.page.acf.button_frame_color}} solid; color:{{escapeCSS model.page.acf.button_frame_color}}" class="Button with-animation">
-			{{#link-to 'practical' class="small-caption button"}}
-				{{design.acf.url_1_text}}
-			{{/link-to}}
+		{{#link-to 'practical' class="small-caption button"}}
+		<div style="border: 1px {{escapeCSS design.button_frame_color}} solid; color:{{escapeCSS design.button_frame_color}}" class="Button with-animation">
+				<p style="color:{{escapeCSS design.button_text_color}}"> {{design.url_1_text}}</p>
 		</div>
+		{{/link-to}}
 	</div>
 </div>
 
