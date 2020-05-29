@@ -7,23 +7,30 @@
 	{{#if model.page.acf.type}}
 	<div class="grid-practical SidePadded">
 			{{#each model.page.acf.type as |type|}}
+				{{#if type.url}}
+					<a href="{{type.url}}"target="_blank">
 				<div class="frivillig-type" style="border: 1px {{escapeCSS type.type_color}} solid; color: {{escapeCSS type.type_color}}">
 				{{#if type.type_image}}
-					{{#if type.url}}
-					<a href="{{type.url}}">
+				
 					<img src="{{type.type_image}}"/>
-					</a>
-					{{else}}
-					<img src="{{type.type_image}}"/>
-					{{/if}}
 				{{/if}}
-				<div class="frivillig-info" >
-				<h2>{{type.type_navn}}</h2>
-				<p>
-				{{{type.type_attributes}}}
-				</p>
+					<div class="frivillig-info" >
+						<h2>{{type.type_navn}}</h2>
+						<p>{{{type.type_attributes}}}</p>
+					</div>
 				</div>
+				</a>
+				{{else}}
+				<div class="frivillig-type" style="border: 1px {{escapeCSS type.type_color}} solid; color: {{escapeCSS type.type_color}}">
+				{{#if type.type_image}}
+					<img src="{{type.type_image}}"/>
+				{{/if}}
+					<div class="frivillig-info" >
+						<h2>{{type.type_navn}}</h2>
+						<p>{{{type.type_attributes}}}</p>
+					</div>
 				</div>
+				{{/if}}
 			{{/each}}
 	</div>
 	{{/if}}
@@ -37,20 +44,26 @@
 	{{/if}}
 	{{#if model.page.acf.arbejdsroller}}
 	<div class="grid-horizontal SidePadded">
-			{{#each model.page.acf.arbejdsroller as |rolle|}}
-	  				<figure class="arbejdsrolle-item">
-                  	{{#if rolle.arbejdsrolle_image}}
-					    {{#if rolle.url}}
-						<a href="{{rolle.url}}">
+		{{#each model.acf.arbejdsroller as |rolle|}}
+			 		{{#if rolle.url}}
+					<a href="{{rolle.url}}" target="_blank">
+	  					<figure class="arbejdsrolle-item">
+                  		{{#if rolle.arbejdsrolle_image}}
 							<img src="{{rolle.arbejdsrolle_image}}"> 
-						</a>
-						{{else}}
-						<img src="{{rolle.arbejdsrolle_image}}"> 
 						{{/if}}
-					{{/if}}
-                    <figcaption style="color:{{escapeCSS model.page.acf.text_color}}">{{truncate-text rolle.arbejdsrolle_titel limit="80"}}</figcaption>
-					 <p class="page-content" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">{{{rolle.arbejdsrolle_beskrivelse}}}</p>
+                    <figcaption style="color:{{escapeCSS model.acf.text_color}}">{{truncate-text rolle.arbejdsrolle_titel limit="80"}}</figcaption>
+					 	<p class="page-content" style="color:{{escapeCSS model.acf.paragraph_text_color}}">{{{rolle.arbejdsrolle_beskrivelse}}}</p>
 					</figure>	
+					</a>
+					{{else}}
+	  					<figure class="arbejdsrolle-item">
+                  		{{#if rolle.arbejdsrolle_image}}
+							<img src="{{rolle.arbejdsrolle_image}}"> 
+						{{/if}}
+                    <figcaption style="color:{{escapeCSS model.acf.text_color}}">{{truncate-text rolle.arbejdsrolle_titel limit="80"}}</figcaption>
+					 	<p class="page-content" style="color:{{escapeCSS model.acf.paragraph_text_color}}">{{{rolle.arbejdsrolle_beskrivelse}}}</p>
+					</figure>	
+					{{/if}}
 			{{/each}}
 	</div>
 	{{/if}}
