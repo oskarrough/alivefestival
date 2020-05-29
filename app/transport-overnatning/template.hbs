@@ -5,11 +5,17 @@
 		</p>
 	</div>
 	{{#if model.acf.type}}
-	<div class="grid-practical SidePadded">
-			{{#each model.acf.type as |type|}}
+<div class="grid-practical SidePadded">
+			{{#each model.page.acf.type as |type|}}
 				<div class="frivillig-type" style="border: 1px {{escapeCSS type.type_color}} solid; color: {{escapeCSS type.type_color}}">
 				{{#if type.type_image}}
-				<img src="{{type.type_image}}"/>
+					{{#if type.url}}
+					<a href="{{type.url}}">
+					<img src="{{type.type_image}}"/>
+					</a>
+					{{else}}
+					<img src="{{type.type_image}}"/>
+					{{/if}}
 				{{/if}}
 				<div class="frivillig-info" >
 				<h2>{{type.type_navn}}</h2>

@@ -1,12 +1,9 @@
 import {hash} from 'rsvp'
 import Route from '@ember/routing/route'
 
-
 export default Route.extend({
-	
-	
 	model() {
-		// change catergory 11 to catergory 12 for practical info (on 12 has no results yet)				
+		if (this.get('cached')) return this.get('cached')
 		return hash({
 			page: this.store.findRecord('page', 67),
 			news: this.store.query('post', {
@@ -23,9 +20,9 @@ export default Route.extend({
 			practical: this.store.query('FAQ', {
 				per_page: 10
 			})
+		}).then(model => {
+			this.set('cached', model)
+			return model
 		})
-		
-	
 	}
-	
 })
