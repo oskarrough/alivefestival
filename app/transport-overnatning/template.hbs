@@ -34,7 +34,13 @@
 			{{#each model.acf.arbejdsroller as |rolle|}}
 	  				<figure class="arbejdsrolle-item">
                   	{{#if rolle.arbejdsrolle_image}}
+					  	{{#if rolle.url}}
+						<a href="{{rolle.url}}">
+							<img src="{{rolle.arbejdsrolle_image}}"> 
+						</a>
+						{{else}}
 						<img src="{{rolle.arbejdsrolle_image}}"> 
+						{{/if}}
 					{{/if}}
                     <figcaption style="color:{{escapeCSS model.acf.text_color}}">{{truncate-text rolle.arbejdsrolle_titel limit="80"}}</figcaption>
 					 <p class="page-content" style="color:{{escapeCSS model.acf.paragraph_text_color}}">{{{rolle.arbejdsrolle_beskrivelse}}}</p>
