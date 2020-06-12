@@ -1,9 +1,8 @@
-<div class="SortingPage" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}} 0%, {{escapeCSS model.page.acf.bottom_color}} 20%) " >
+<div class="Page" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}} 0%, {{escapeCSS model.page.acf.bottom_color}} 20%) " >
 	
-	<div class="Page-top blog" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
-		
+	<div class="Page-body blog top-body" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
 		<h1 class="page-title" style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.title}}</h1>
-		
+
 		{{#if model.page.acf.alerting_text}}
 			<h2 class="page-title" style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.acf.alerting_text}}</h2>
 			
@@ -15,8 +14,9 @@
 
 		<p class="page-content"> {{{model.page.content}}}</p>
 		
-	</div>
-	<div class="grid-practical Page-bottom">
+
+	
+	<div class="grid-practical">
 			{{#each model.posts as |praktisk-artikel|}}
 				<div class="practical-teaser" style="border: 1px {{escapeCSS model.page.acf.text_color}} solid; color:{{escapeCSS model.acf.button_text_color}}"> 
 					{{#link-to "practical.post" praktisk-artikel}}
@@ -24,6 +24,7 @@
 					{{/link-to}}
 				</div>
 			{{/each}}
+	</div>
 	</div>
 </div>
 

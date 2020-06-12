@@ -1,5 +1,7 @@
-<div class="Section">
-	{{page-item page=model class="Page--gallery"}}
+<div style="background-image:linear-gradient({{escapeCSS model.acf.top_color}}, {{escapeCSS model.acf.bottom_color}})" >
+	<div class="top-body">
+		{{page-item page=model class="Page--gallery"}}
+	</div>
 </div>
 
 {{outlet}}

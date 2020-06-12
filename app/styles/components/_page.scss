@@ -3,10 +3,17 @@
 	position: relative;
 	max-width: $max-width;
 	width: 100%;
-	display: flex;
+
+	padding-left: $ContainerPadding;
+	padding-right: $ContainerPadding;
+	@media (min-width: $layout-sm) {
+		display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
+	}
 }
+
 .Page--clean {
 	max-width: none;
 
@@ -28,35 +35,34 @@
 .Page-bottom { 
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: left;
 	@media (max-width: $blogpage){
 		padding:$ContainerPadding;
 	}
 }
+.top-body{
+	padding-top: $hugeContainerPadding;
+}
 .Page-body {
 	min-height: 100vh;
-	padding-top: $hugeContainerPadding;
-	padding-bottom: $hugeContainerPadding;
 	@media (min-width: $layout-s){
 		margin-left:$ContainerPaddingDesktop;
 		margin-right:$ContainerPaddingDesktop;
 	}
-	
 }
-.Page-top{
-	padding-top: $hugeContainerPadding;
-}
+
 .Page-bottom{
 	padding-bottom: $hugeContainerPadding;
 }
 .blog{
 	max-width: $blogpage;
+	justify-content: left;
+	align-content: left;
 }
 .SortingPage{
-	// padding: $LargeContainerPadding;
-	// @media (max-width: $blogpage){
-	// 	padding:$padding;
-	// }
+	padding-top: $hugeContainerPadding;
+	padding-left: $ContainerPadding;
+	padding-right: $ContainerPadding;
 }
 
 
@@ -83,12 +89,26 @@
 	}
 	
 }
+.content-list{
+	position: relative;
+	max-width: 100%;
+}
+
 .page-title{
 	@include OptiBrian;	
-	font-size: rem(50);
-	line-height: rem(50);
+	font-size: 50px;
+	line-height: 55px;
 	color: inherit;
 	text-align: left;
+}
+.left-page-title{
+	position: relative;
+	@include OptiBrian;	
+	font-size: 50px;
+	line-height: 55px;
+	color: inherit;
+	text-align: left;
+	width: 100%;
 }
 .page-subtitle{
 	@include OptiBrian;	
