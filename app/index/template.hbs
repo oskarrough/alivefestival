@@ -197,7 +197,8 @@
 		
 		{{#if model.page.acf.teaser_clicker.[5]}}
 		<div style="background-image:linear-gradient({{escapeCSS model.page.acf.teaser_clicker.[5].top_color}}, {{escapeCSS model.page.acf.teaser_clicker.[5].bottom_color}}); color:{{escapeCSS model.page.acf.teaser_clicker.[5].button_frame_color}}" >
-			{{image-grid items=model.page.acf.teaser_clicker.[5].icon_array urltext=model.page.acf.teaser_clicker.[5].headline url="partners"}} 
+			{{image-grid items=model.page.acf.teaser_clicker.[5].icon_array urltext=model.page.acf.teaser_clicker.[5].headline}} 
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[5] withGrid=true}}
 		</div>
 		{{/if}}
 

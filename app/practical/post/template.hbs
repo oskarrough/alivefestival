@@ -18,6 +18,81 @@
 				{{#if model.acf.headline}}
 					<h2 class="frontpage-headline-small" style="color:{{escapeCSS model.acf.headline_color}}">{{{model.acf.headline}}}</h2>
 				{{/if}}
+
+				{{#if model.acf.type}}
+					<div class="grid-practical">
+						{{#each model.acf.type as |type|}}
+								{{#if type.url}}
+								<a href="{{type.url}}"target="_blank">
+								<div class="frivillig-type" style="border: 1px {{escapeCSS type.type_color}} solid; color: {{escapeCSS type.type_color}}">
+								{{#if type.type_image}}
+								
+									<img src="{{type.type_image}}"/>
+								{{/if}}
+									<div class="frivillig-info" >
+										<h2>{{type.type_navn}}</h2>
+										{{{type.type_attributes}}}
+									</div>
+								</div>
+								</a>
+								{{else}}
+								<div class="frivillig-type" style="border: 1px {{escapeCSS type.type_color}} solid; color: {{escapeCSS type.type_color}}">
+								{{#if type.type_image}}
+									<img src="{{type.type_image}}"/>
+								{{/if}}
+									<div class="frivillig-info" >
+										<h2>{{type.type_navn}}</h2>
+										{{{type.type_attributes}}}
+									</div>
+								</div>
+								{{/if}}
+						{{/each}}
+					</div>
+				{{/if}}
+
+				{{#if model.acf.middle_extra_text}}
+					<div class="Page blog">
+						{{#if model.acf.middle_extra_text}}
+						<p class="Page-body page-content" style="color:{{escapeCSS model.acf.paragraph_text_color}}">
+							{{{model.acf.middle_extra_text}}}</p>
+						{{/if}}
+					</div>
+				{{/if}}
+
+				{{#if model.acf.arbejdsroller}}
+				<div class="grid-horizontal">
+					{{#each model.acf.arbejdsroller as |rolle|}}
+								{{#if rolle.url}}
+								<h1>hej</h1>
+								<a href="{{rolle.url}}" target="_blank">
+									<figure class="arbejdsrolle-item">
+									{{#if rolle.arbejdsrolle_image}}
+										<img src="{{rolle.arbejdsrolle_image}}"> 
+									{{/if}}
+								<figcaption style="color:{{escapeCSS model.acf.text_color}}">{{truncate-text rolle.arbejdsrolle_titel limit="80"}}</figcaption>
+									<p class="page-content" style="color:{{escapeCSS model.acf.paragraph_text_color}}">{{{rolle.arbejdsrolle_beskrivelse}}}</p>
+								</figure>	
+								</a>
+								{{else}}
+									<figure class="arbejdsrolle-item">
+									{{#if rolle.arbejdsrolle_image}}
+										<img src="{{rolle.arbejdsrolle_image}}"> 
+									{{/if}}
+								<figcaption style="color:{{escapeCSS model.acf.text_color}}">{{truncate-text rolle.arbejdsrolle_titel limit="80"}}</figcaption>
+									<p class="page-content" style="color:{{escapeCSS model.acf.paragraph_text_color}}">{{{rolle.arbejdsrolle_beskrivelse}}}</p>
+								</figure>	
+								{{/if}}
+						{{/each}}
+				</div>
+				{{/if}}
+				
+				{{#if model.acf.extra_text}}
+				<div class="Page-bottom blog">
+					<p class="page-content topPadded" style="color: {{escapeCSS model.acf.text_color}}">
+						<h2 style="color:{{escapeCSS model.acf.headline_color}}">{{model.acf.extratext_headline}}</h2>
+						{{{model.acf.extra_text}}}</p>
+				</div>
+				{{/if}}
 				
 				{{#if model.acf.url_1}}
 				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_1}}" class="Button button-border small-caption"> 

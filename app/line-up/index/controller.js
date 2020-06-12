@@ -20,21 +20,16 @@ export default Controller.extend({
 			return true;
 		}
 	}),
-	naturcategory: computed('tag', 'model.artists.@each.tags', function(){
+
+	kunstcategory: computed('tag', 'model.artists.@each.tags', function(){
 		let tag = this.get('tag')
-		if(tag === "natur"){
+		if(tag === "kunst"){
 			return true;
 		}
 	}),
-	kulturcategory: computed('tag', 'model.artists.@each.tags', function(){
+	udflugtercategory: computed('tag', 'model.artists.@each.tags', function(){
 		let tag = this.get('tag')
-		if(tag === "kultur"){
-			return true;
-		}
-	}),
-	samværcategory: computed('tag', 'model.artists.@each.tags', function(){
-		let tag = this.get('tag')
-		if(tag === "samvær"){
+		if(tag === "udflugter"){
 			return true;
 		}
 	}),
@@ -61,7 +56,8 @@ export default Controller.extend({
 			}) 
 			
 		} 
-		if (tag === "event"){
+	
+		if (tag === "kunst"){
 			return artists.filter(artist => {
 				let tags = artist.get('tags')
 	
@@ -69,25 +65,13 @@ export default Controller.extend({
 	
 				return tags.any(t => {
 					let name = t.get('name')
-					if (t.id === '9') name = 'event'
-					return name === tag
-				})
-			}) 
-		} 
-		if (tag === "kultur"){
-			return artists.filter(artist => {
-				let tags = artist.get('tags')
-	
-				if (!tags) return false
-	
-				return tags.any(t => {
-					let name = t.get('name')
-					if (t.id === '27') name = 'kultur'
+					if (t.id === '27') name = 'kunst'
 					return name === tag
 				})
 			})
 		} 
-		if (tag === "natur"){
+
+		if (tag === "udflugter"){
 			return artists.filter(artist => {
 				let tags = artist.get('tags')
 	
@@ -95,20 +79,7 @@ export default Controller.extend({
 	
 				return tags.any(t => {
 					let name = t.get('name')
-					if (t.id === '29') name = 'natur'
-					return name === tag
-				})
-			})
-		} 
-		if (tag === "samvær"){
-			return artists.filter(artist => {
-				let tags = artist.get('tags')
-	
-				if (!tags) return false
-	
-				return tags.any(t => {
-					let name = t.get('name')
-					if (t.id === '28') name = 'samvær'
+					if (t.id === '29') name = 'udflugter'
 					return name === tag
 				})
 			})

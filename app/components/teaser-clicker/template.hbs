@@ -1,10 +1,15 @@
 <div class="Container horizontal-Centering Padded" style="background-image:linear-gradient({{design.top_color}}, {{design.bottom_color}})" >
-			<h2 class="frontpage-headline" style="color:{{design.headline_color}}">{{design.headline}}</h2>		
+			
+            {{#unless withGrid}}
+            <h2 class="frontpage-headline" style="color:{{design.headline_color}}">{{design.headline}}</h2>		
+             {{/unless}}
+
             {{#if design.teaser_Subheadline}}
                 <div class="Centering">
                 <p class="frontpage-content limitedWidth" style="color:{{escapeCSS design.subheadline_color}}"> {{design.teaser_Subheadline}}</p>
                 </div>
 	        {{/if}}
+
             {{#if design.teaser_image}}
             <img class="teaser-image lazyload" src={{design.teaser_image}}/>	
             {{/if}}	

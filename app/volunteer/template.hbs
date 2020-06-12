@@ -1,14 +1,14 @@
-<div class="Page" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}} 0%, {{escapeCSS model.page.acf.bottom_color}} 5%) " >
+<div class="SortingPage" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}} 0%, {{escapeCSS model.page.acf.bottom_color}} 5%) " >
 	<div class="Page-top blog" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
 		<h1 class="page-title" style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.title}}</h1>
 		<p class="page-content"> {{{model.page.content}}}	
 		</p>
 	</div>
 	{{#if model.page.acf.type}}
-	<div class="grid-practical SidePadded">
+	<div class="grid-practical grid-practical-no-page">
 			{{#each model.page.acf.type as |type|}}
 				{{#if type.url}}
-					<a href="{{type.url}}"target="_blank">
+				<a href="{{type.url}}"target="_blank">
 				<div class="frivillig-type" style="border: 1px {{escapeCSS type.type_color}} solid; color: {{escapeCSS type.type_color}}">
 				{{#if type.type_image}}
 				
@@ -16,7 +16,7 @@
 				{{/if}}
 					<div class="frivillig-info" >
 						<h2>{{type.type_navn}}</h2>
-						<p>{{{type.type_attributes}}}</p>
+						{{{type.type_attributes}}}
 					</div>
 				</div>
 				</a>
@@ -27,7 +27,7 @@
 				{{/if}}
 					<div class="frivillig-info" >
 						<h2>{{type.type_navn}}</h2>
-						<p>{{{type.type_attributes}}}</p>
+						{{{type.type_attributes}}}
 					</div>
 				</div>
 				{{/if}}
@@ -35,17 +35,18 @@
 	</div>
 	{{/if}}
 	{{#if model.page.acf.middle_extra_text}}
-	<div class="Page SidePadded blog">
+	<div class="Page blog">
 		{{#if model.page.acf.middle_extra_text}}
-		<p class="page-content" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
+		<p class="Page-body page-content" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
 			{{{model.page.acf.middle_extra_text}}}</p>
 		{{/if}}
 	</div>
 	{{/if}}
 	{{#if model.page.acf.arbejdsroller}}
-	<div class="grid-horizontal SidePadded">
-		{{#each model.acf.arbejdsroller as |rolle|}}
+	<div class="grid-horizontal">
+		{{#each model.page.acf.arbejdsroller as |rolle|}}
 			 		{{#if rolle.url}}
+					 <h1>hej</h1>
 					<a href="{{rolle.url}}" target="_blank">
 	  					<figure class="arbejdsrolle-item">
                   		{{#if rolle.arbejdsrolle_image}}

@@ -26,7 +26,7 @@
 }
 .Page-body,
 .Page-top,
-.Page-bottom{
+.Page-bottom { 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -50,10 +50,10 @@
 	max-width: $blogpage;
 }
 .SortingPage{
-	padding: $LargeContainerPadding;
-	@media (max-width: $blogpage){
-		padding:$padding;
-	}
+	// padding: $LargeContainerPadding;
+	// @media (max-width: $blogpage){
+	// 	padding:$padding;
+	// }
 }
 
 
@@ -85,7 +85,6 @@
 	font-size: rem(50);
 	line-height: rem(50);
 	color: inherit;
-	width: 100%;
 	text-align: left;
 }
 .page-subtitle{

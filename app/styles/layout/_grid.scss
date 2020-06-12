@@ -25,6 +25,9 @@
 	@include animation-delay(7);
 	transition: opacity 200ms ease-in-out;
 	opacity: 0;
+	height: 350px;
+	// align-self: top;
+	justify-content: baseline;
 
 	// show them when they are loaded or if we dont have js
 	.Masonry.is-active &,
@@ -37,11 +40,11 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	@media (min-width: $layout-s) {
-		justify-content: flex-start;
+}
+.grid-practical-no-page{
+		@media (max-width: $blogpage){
+		padding:$ContainerPadding;
 	}
-
-	align-items: flex-start;
 }
 .grid-horizontal{
 	display: flex;
@@ -51,4 +54,7 @@
 	justify-content: flex-start;
 	overflow-x: scroll;
 	padding-right: $ContainerPadding;
+	@media (max-width: $blogpage){
+		padding:$ContainerPadding;
+	}
 }

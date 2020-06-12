@@ -8,7 +8,6 @@
 			<h2 class="page-title" style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.acf.alerting_text}}</h2>
 		
 			{{#if model.page.acf.alert_gallery}}
-			
 			{{image-element images=model.page.acf.alert_gallery}}
 			{{/if}}
 			
@@ -22,16 +21,12 @@
 			<span>MUSIK</span>
 				<p class="page-content">{{model.page.acf.music_text}}</p>
 			{{/if}}
-			{{#if naturcategory}}
-			<span>NATUR</span>
-				<p class="page-content">{{model.page.acf.nature_text}}</p>
-			{{/if}}
-			{{#if kulturcategory}}
-			<span>KULTUR</span>
+			{{#if kunstcategory}}
+			<span>KUNST</span>
 				<p class="page-content">{{model.page.acf.kultur_text}}</p>
 			{{/if}}
-			{{#if samværcategory}}
-			<span>SAMVÆR</span>
+			{{#if udflugtercategory}}
+			<span>UDLFUGTER</span>
 				<p class="page-content">{{model.page.acf.samvær_text}}</p>
 			{{/if}}
 	

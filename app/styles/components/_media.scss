@@ -251,6 +251,7 @@
 		flex-direction: row;
 		.gallery-image{
 			margin-top: -100px;
+			width: 50%;
 		}
 	}
 }
@@ -361,12 +362,16 @@
 		@include boldGTHaptic;
 		font-size: 20px;	
 	}
-	p ul{
-		padding: 0;
+	p,a,li{
+		
 		@include OptiBrian;
-		list-style-type: none;
+		
 		font-size: 14px;
 		line-height: 25px;
+	}
+	ul{
+		list-style-type: none;
+		padding: 0;
 	}
 	
 }
