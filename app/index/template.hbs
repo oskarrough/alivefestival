@@ -2,7 +2,8 @@
 <div class="index" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
 	<div class="HeaderContainer">
 		<video autoplay loop class="cover-video lazyload">
-				<source src="https://res.cloudinary.com/demo/video/upload/q_auto,vc_vp9/vyuth6hpr1a63vkk5a54.webm" alt="Alive Festival <3 u"type="video/webm">
+			
+				<source src="{{model.page.acf.cover_video_url}}" alt="Alive Festival <3 u"type="video/webm">
 				Your browser does not support the video tag.
 		</video>
 	
@@ -108,9 +109,9 @@
 		<div class="container" style="background-color:{{escapeCSS model.page.acf.news_ticker_background_color}}">
 			<div  class="news-ticker" style="color:{{escapeCSS model.page.acf.news_ticker_text_color}}"> 
 				{{#if model.page.acf.news-alert}}
-					{{item-ticker items=model.page.acf.news-alert}}
+					{{item-ticker items=model.page.acf.news-alert url=model.page.acf.news_alert_url}}
 				{{else}}
-					{{item-ticker items=model.news no-urgent-news=true}}
+					{{item-ticker items=model.news no-urgent-news=true}} 
 				{{/if}}
 			</div>
 		</div>
@@ -243,36 +244,6 @@
 	</div>
 
 
-	{{#if model.page.acf.footer_headline}}
-	<div class="footer"> 
-		{{#if model.page.acf.footer_image}}
-			<img class="footerImage lazyload" src="{{model.page.acf.footer_image}}" alt="{{model.title}}"/>
-		{{/if}}
-		<div class="footer-content" style="color:{{model.page.acf.footer_links_color}}">
-				{{link-to 'Nyheder' 'news'}}
-				{{link-to 'Praktisk' 'practical'}}
-				{{link-to 'Partnere' 'partners'}}
-				{{link-to 'Historie' 'about.history'}}
-				{{link-to 'Kontakt' 'about.contact'}}
-				
-				<h3 style="color:{{model.page.acf.footer_headline_color}}">{{model.page.acf.footer_headline}}</h3>
-				<div class="footer-links">
-				<a style="border: 1px {{model.page.acf.footer_headline_color}} solid; color:{{model.page.acf.footer_links_color}}; background-color:{{model.page.acf.footer_button_color}}" href="{{model.page.acf.url_1}}" class="Button"> 
-					{{model.page.acf.text_for_url1}}
-				</a>
-		
-				<a style="border: 1px {{model.page.acf.footer_headline_color}} solid; color:{{model.page.acf.footer_links_color}}; background-color:{{model.page.acf.footer_button_color}}" href="{{model.page.acf.url_2}}" class="Button"> 
-					{{model.page.acf.text_for_url2}}
-				</a>
-				</div>
-				{{social-links}}
-		</div>
-	</div>
-	{{/if}}
-	
-
-
-	
 </div>
 
 

@@ -59,51 +59,16 @@ iframe{
 	padding-bottom: $LargeContainerPadding;
 	object-fit: contain;
 	object-position: 0px 0px;
-	max-width: 100%;
+	width: 100%;
 }
 .spotify-embed{
 	padding: $padding;
 }
 img {
-	max-width: 100%;
+	width: 100%;
 	object-fit: contain;
 }
 
-.page-content{
-	@include regGTHaptic;
-	color: inherit;
-	font-size: 16px;
-	padding-bottom: $ContainerPadding;
-	h1{
-		@include boldGTHaptic;
-		margin-top: $LargeContainerPadding;
-		font-size: 28px;
-	}
-	h2{
-		@include boldGTHaptic;
-		font-size: 18px;
-	}
-	p{
-		color: black;
-		img{
-			padding-top: $padding;
-			padding-bottom: $padding;
-		}
-	}
-	
-}
-.page-title{
-	@include OptiBrian;	
-	font-size: rem(50);
-	line-height: rem(50);
-	color: inherit;
-}
-.page-subtitle{
-	@include OptiBrian;	
-	font-size: 30px;
-	line-height: 33px;
-	color: inherit;
-}
 
 
 // h1 {

@@ -43,40 +43,40 @@ function artist_post_type() {
 
 add_action('init', 'artist_post_type');
 
-function memory_post_type() {
-	$labels = array(
-		'name'               => 'Memories',
-		'singular_name'      => 'Memory',
-		'add_new'            => 'Add New',
-		'add_new_item'       => 'Add New Memory',
-		'edit_item'          => 'Edit Memory',
-		'new_item'           => 'New Memory',
-		'all_items'          => 'All Memories',
-		'view_item'          => 'View Memory',
-		'search_items'       => 'Search Memories',
-		'not_found'          => 'No memorys found',
-		'not_found_in_trash' => 'No memorys found in the Trash',
-		'parent_item_colon'  => '',
-		'menu_name'          => 'Memories'
-	);
+// function memory_post_type() {
+// 	$labels = array(
+// 		'name'               => 'Memories',
+// 		'singular_name'      => 'Memory',
+// 		'add_new'            => 'Add New',
+// 		'add_new_item'       => 'Add New Memory',
+// 		'edit_item'          => 'Edit Memory',
+// 		'new_item'           => 'New Memory',
+// 		'all_items'          => 'All Memories',
+// 		'view_item'          => 'View Memory',
+// 		'search_items'       => 'Search Memories',
+// 		'not_found'          => 'No memorys found',
+// 		'not_found_in_trash' => 'No memorys found in the Trash',
+// 		'parent_item_colon'  => '',
+// 		'menu_name'          => 'Memories'
+// 	);
 
-	// The post type
-	$args = array(
-		'labels'        => $labels,
-		'description'   => 'Holds our memorys',
-		'public'        => true,
-		'menu_position' => 5,
-		'supports'      => array('title', 'editor', 'thumbnail'),
-		'has_archive'   => true,
-		// 'menu_icon' 	=> 'dashicons-palmtree',
-		'show_in_rest'	=> true,
-		'rest_base' => 'memories',
-	);
+// 	// The post type
+// 	$args = array(
+// 		'labels'        => $labels,
+// 		'description'   => 'Holds our memorys',
+// 		'public'        => true,
+// 		'menu_position' => 5,
+// 		'supports'      => array('title', 'editor', 'thumbnail'),
+// 		'has_archive'   => true,
+// 		// 'menu_icon' 	=> 'dashicons-palmtree',
+// 		'show_in_rest'	=> true,
+// 		'rest_base' => 'memories',
+// 	);
 
-	register_post_type('memory', $args);
-}
+// 	register_post_type('memory', $args);
+// }
 
-add_action('init', 'memory_post_type');
+// add_action('init', 'memory_post_type');
 
 // function director_post_type() {
 

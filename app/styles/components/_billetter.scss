@@ -3,7 +3,12 @@
  */
 
 /* Banner */
-
+.ticket-list{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 .ticket-type{
 	position: relative;
@@ -12,13 +17,16 @@
 	margin-bottom: $LargeContainerPadding;
 	color: $bg-color;
 	width: 100%;
+	max-width: 500px;
+	@media (min-width: $layout-s) {
+		width: 500px;
+	}
 	@include boldGTHaptic;
 	.ticket-style{
 		@include OptiBrian;
 		font-size: 14px;
 	}
 	.ticket-title{
-	
 		font-size: 30px;
 		line-height: 33px;
 		margin: 0;
@@ -44,7 +52,7 @@
 		position: absolute;
 		width: 140px;
 		object-fit: contain;
-		top: -13%;
+		top: -20%;
 		right: -5%;
 	}
 }

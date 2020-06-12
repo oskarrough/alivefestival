@@ -3,8 +3,8 @@
 	{{#each items as |post|}}
 	  <figure class="news-list-item">
 			{{#link-to 'practical.post' post class=""}}
-                  	{{#if post.better_featured_image.media_details.sizes.s.source_url}}
-						<img class="lazyload" src="{{post.better_featured_image.media_details.sizes.s.source_url}}" alt="{{post.better_featured_image.alt}}"> 
+                  	{{#if post.better_featured_image.media_details.sizes.l.source_url}}
+						<img class="lazyload" src="{{post.better_featured_image.media_details.sizes.l.source_url}}" alt="{{post.better_featured_image.alt}}"> 
 					{{else}}
 						<img class="lazyload" src="{{post.better_featured_image.source_url}}" alt="{{post.better_featured_image.alt}}"> 
 					{{/if}}

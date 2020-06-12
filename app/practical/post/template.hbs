@@ -1,8 +1,11 @@
-<article class="Artist" style="background-image:linear-gradient({{escapeCSS model.acf.top_color}} 0%, {{escapeCSS model.acf.bottom_color}} 20%) " >		
+<article class="Page Artist" style="background-image:linear-gradient({{escapeCSS model.acf.top_color}} 0%, {{escapeCSS model.acf.bottom_color}} 20%) " >		
 	<div class="Artist-body Page-body blog">
 			<h2 style="color:{{escapeCSS model.acf.headline_color}}" class="Teaser-title">
 				<span class="page-title">{{{model.title}}}</span>
 			</h2>		
+			{{#if model.acf.sub_headline}}
+				{{{model.acf.sub_headline}}}
+			{{/if}}
 			<div class="Artist-media">
 			<img src="{{model.better_featured_image.media_details.sizes.mini-double.source_url}}"
 				alt="{{model.better_featured_image.alt_text}}">

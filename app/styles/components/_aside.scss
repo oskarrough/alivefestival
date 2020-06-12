@@ -14,14 +14,9 @@
 		transition-duration: 400ms;
 		transform: translate3d(0, 0, 0);
 	}
-	@media (min-width: $layout-s) {
-		width: 33%;
-	}
-
 }
 
 .Aside-inner {
-	// Above border.
 	position: fixed;
 	padding-top: $LargeContainerPadding;
 	top: 0;

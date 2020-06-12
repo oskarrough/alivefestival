@@ -1,12 +1,13 @@
 
-
-
-
 .Page {
 	position: relative;
 	max-width: $max-width;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
-
 .Page--clean {
 	max-width: none;
 
@@ -22,52 +23,76 @@
 .Page + .Page {
 	margin-top: rem($space * 2);
 	
-
 }
-
-.Page-banner {
-	margin-bottom: 0;
+.Page-body,
+.Page-top,
+.Page-bottom{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media (max-width: $blogpage){
+		padding:$ContainerPadding;
+	}
 }
-
 .Page-body {
 	min-height: 100vh;
-	padding: $ContainerPadding;
 	padding-top: $hugeContainerPadding;
 	padding-bottom: $hugeContainerPadding;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	@media (min-width: $layout-m) {
-		padding-left: $ContainerPaddingDesktop;
-		padding-right: $ContainerPaddingDesktop;
-	}
+	
 }
 .Page-top{
-	padding-left: $ContainerPadding;
-	padding-right: $ContainerPadding;
 	padding-top: $hugeContainerPadding;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	@media (min-width: $layout-m) {
-		padding-left: $ContainerPaddingDesktop;
-		padding-right: $ContainerPaddingDesktop;
-	}
 }
 .Page-bottom{
-	padding: $ContainerPadding;
 	padding-bottom: $hugeContainerPadding;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	@media (min-width: $layout-m) {
-		padding-left: $ContainerPaddingDesktop;
-		padding-right: $ContainerPaddingDesktop;
-
-	}
 }
 .blog{
 	max-width: $blogpage;
+}
+.SortingPage{
+	padding: $LargeContainerPadding;
+	@media (max-width: $blogpage){
+		padding:$padding;
+	}
+}
+
+
+.page-content{
+	@include regGTHaptic;
+	color: inherit;
+	font-size: 18px;
+	padding-bottom: $ContainerPadding;
+	h1{
+		@include boldGTHaptic;
+		margin-top: $LargeContainerPadding;
+		font-size: 28px;
+	}
+	h2{
+		@include boldGTHaptic;
+		font-size: 18px;
+	}
+	p{
+		color: black;
+		img{
+			padding-top: $padding;
+			padding-bottom: $padding;
+		}
+	}
+	
+}
+.page-title{
+	@include OptiBrian;	
+	font-size: rem(50);
+	line-height: rem(50);
+	color: inherit;
+	width: 100%;
+	text-align: left;
+}
+.page-subtitle{
+	@include OptiBrian;	
+	font-size: 30px;
+	line-height: 33px;
+	color: inherit;
 }
 
 
@@ -75,25 +100,13 @@
 	height: auto !important;
 }
 
-.Page-body h1 + p,
-.Post-body > p:first-child {	
-	// @extend %font-bold;
-	// strong {
-	// 	@extend %font-bold;
-	// }
-	// font-size: $font-20;
-}
-
-
 .Page-backgroundImage {
-
 	position: fixed;
 	z-index: -1;
 	top: 0;
 	right: 0;
 	left: 0;
 	min-width: 100%;
-
 	object-fit: cover;
 }
 

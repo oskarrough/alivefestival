@@ -14,7 +14,7 @@
                 {{#each activities as |activity  index|}}
                     <li class="artist-item">
                         {{#link-to 'line-up.artist' activity}}
-                                <img src={{get (get design.icon_array index) 'sizes.s'}}/>
+                                <img class="lazyload" src={{get (get design.icon_array index) 'sizes.s'}}/>
                                 <p>{{{activity.title}}}</p>
                         {{/link-to}}
                     </li>

@@ -1,26 +1,36 @@
-<article style="background-image:linear-gradient({{escapeCSS model.acf.top_color}} 0%, {{escapeCSS model.acf.bottom_color}} 20%) " >
+<article class="Page" style="background-image:linear-gradient({{escapeCSS model.acf.top_color}} 0%, {{escapeCSS model.acf.bottom_color}} 20%) " >
+		
 		<div class="Page-body blog">
+
 			<h2 style="color:{{escapeCSS model.acf.headline_color}}" class="Teaser-title">
 				<span class="page-title">{{{model.title}}}</span>
 			</h2>
+
 			{{#if model.better_featured_image.media_details.sizes.mini-double.source_url}}
-			<img src="{{model.better_featured_image.media_details.sizes.mini-double.source_url}}"
-				alt="{{model.better_featured_image.alt_text}}">
+				<img src="{{model.better_featured_image.media_details.sizes.mini-double.source_url}}"
+					alt="{{model.better_featured_image.alt_text}}">
 			{{/if}}
+
 			<div class="page-content">
 				{{{model.content}}}
 			</div>
-				{{#each model.acf.ticket_type as |ticket|}}
-						{{ticket-type ticket=ticket}}
+				<div class="ticket-list">
+				{{#if model.acf.ticket_type}}	
+					{{#each model.acf.ticket_type as |ticket|}}
+							{{ticket-type ticket=ticket}}
 					{{/each}}
-					{{#if model.acf.ticket_type_extra}}
+				{{/if}}
+
+				{{#if model.acf.ticket_type_extra}}
 					<h1 class="page-subtitle">+ Tilkøb til min billet</h1>
 					{{#each model.acf.ticket_type_extra as |ticket|}}
 						{{ticket-type ticket=ticket}}
 					{{/each}}
-					{{/if}}
+				{{/if}}
+				</div>
 		</div>
-	</article>
+
+</article>
 
 
 {{outlet}}

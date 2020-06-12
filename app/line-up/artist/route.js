@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route'
-import {hash} from 'rsvp'
 
 export default Route.extend({
 	// AND => https://example.com/cms/wp-json/pages?filter[tag]=L1,L2,L3

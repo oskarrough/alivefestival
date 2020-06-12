@@ -10,7 +10,7 @@ export function fetchImages(token, count) {
 }
 
 export default Component.extend({
-	count: 3,
+	count: 8,
 	init() {
 		let token = this.get("token")
 		this._super()

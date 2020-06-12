@@ -11,7 +11,7 @@
 	flex-direction: row;
 	width: 100%;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
 	padding: $padding;
 	z-index: 11;	
 	.right-header{
@@ -27,6 +27,10 @@
 	justify-content: center;
 	white-space: nowrap;
 	text-decoration: none;
+	p{
+		padding: 0;
+		margin:0;
+	}
 	.Logo-light{
 		width: rem(50);
 	}
@@ -143,6 +147,7 @@
 .footer{
 	width: 100%;
 	position: relative;
+	bottom: 0;
 	height: $footer-image-height;
 }
 .footer-content{
@@ -183,5 +188,15 @@
 	height: 100%;
 	object-fit: cover;
 	
+}
+.footer-fade{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1))0%, to(rgba(0,0,0,0))60%);
+	mask-image: linear-gradient(to bottom, rgba(0,0,0,1)0%, rgba(0,0,0,0)60%);
+
 }
 

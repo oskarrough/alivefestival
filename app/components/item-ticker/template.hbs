@@ -2,81 +2,43 @@
 <div id="ticker-container">
 <div class="moving-container">
 	{{#if no-urgent-news}}
+		
 		{{#each items as |artist|}}
 			<div class="ticker">		
 				{{#link-to 'news.post' artist}}
-					     {{{artist.title}}}
+					     ·  {{{artist.title}}}
 				{{/link-to}}
 			</div>
 		{{/each}}
+	
+	
 	{{else}}
 		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
+			<a href="{{url}}"> · {{{items}}} </a>
 		</div>
 		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
+			<a href="{{url}}"> · {{{items}}} </a>
 		</div>
 		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
+			<a href="{{url}}"> · {{{items}}} </a>
 		</div>
 		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
+			<a href="{{url}}"> · {{{items}}} </a>
 		</div>
 		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
+			<a href="{{url}}"> · {{{items}}} </a>
 		</div>
 		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
+			<a href="{{url}}"> · {{{items}}} </a>
 		</div>
 		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
+			<a href="{{url}}"> · {{{items}}} </a>
 		</div>
 		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
-		</div>
-		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
-		</div>
-		
-		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
-		</div>
-		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
-		</div>
-		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
+			<a href="{{url}}"> · {{{items}}} </a>
 		</div>
 
-		<div class="ticker">
-			{{#link-to 'news' artist}}
-					{{{items}}}
-			{{/link-to}}		
-		</div>
+	
 		
 
 

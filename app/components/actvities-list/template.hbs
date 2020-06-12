@@ -1,24 +1,26 @@
 <div style="background-image:linear-gradient({{escapeCSS design.top_color}}, {{escapeCSS design.bottom_color}})" >
 	<div class="Container Padded PaddedContainer"  >
-	{{#if design.headline}}
-	<div class="Centering">
-    	<h2 class="frontpage-headline" style="color:{{escapeCSS design.headline_color}}"> {{design.headline}}</h2>
-	</div>
-    {{/if}}
-    {{#if design.teaser_Subheadline}}
-	<div class="Centering">
-   	 <p class="frontpage-content limitedWidth" style="color:{{escapeCSS design.subheadline_color}}"> {{design.teaser_Subheadline}}</p>
-    </div>
-	{{/if}}
+		{{#if design.headline}}
+			<div class="Centering">
+				<h2 class="frontpage-headline" style="color:{{escapeCSS design.headline_color}}"> {{design.headline}}</h2>
+			</div>
+		{{/if}}
+		{{#if design.teaser_Subheadline}}
+			<div class="Centering">
+				<p class="frontpage-content limitedWidth" style="color:{{escapeCSS design.subheadline_color}}"> {{design.teaser_Subheadline}}</p>
+			</div>
+		{{/if}}
  	</div>
+
 	<div class="overflowRight">
-	{{faq-list items=items textcolor=design.teaser_link_color}}
+		{{faq-list items=items textcolor=design.teaser_link_color}}
 	</div>
+
 	<div class="Container Padded PaddedContainer">
 		{{#link-to 'practical' class="small-caption button"}}
-		<div style="border: 1px {{escapeCSS design.button_frame_color}} solid; color:{{escapeCSS design.button_frame_color}}" class="Button with-animation">
+			<div style="border: 1px {{escapeCSS design.button_frame_color}} solid; color:{{escapeCSS design.button_frame_color}}" class="Button with-animation">
 				<p style="color:{{escapeCSS design.button_text_color}}"> {{design.url_1_text}}</p>
-		</div>
+			</div>
 		{{/link-to}}
 	</div>
 </div>
