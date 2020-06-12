@@ -26,6 +26,9 @@
 	transition: opacity 200ms ease-in-out;
 	opacity: 0;
 	height: 350px;
+	@media (max-width: $layout-m){
+		margin-bottom: $ContainerPadding;
+	}
 	// align-self: top;
 	justify-content: baseline;
 
