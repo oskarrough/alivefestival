@@ -1,2 +1,8 @@
-{{page-item page=model}}
+
+<div style="background-image:linear-gradient({{escapeCSS model.acf.top_color}}, {{escapeCSS model.acf.bottom_color}})" >
+	<div class="top-body">
+		{{page-item page=model}}
+	</div>
+</div>
+
 {{outlet}}
