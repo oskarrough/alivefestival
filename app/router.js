@@ -10,7 +10,7 @@ const Router = EmberRouter.extend(googlePageview, RouterScroll, {
 
 Router.map(function() {
   // Program, music etc.
-  this.route('line-up', function() {
+  this.route('program', function() {
     this.route('artist', {path: ':artist_slug'})
   });
 
@@ -18,12 +18,12 @@ Router.map(function() {
     this.route('post', {path: ':post_slug'})
   });
 
-  this.route('sideprogram')
-  this.route('adventure', {path: 'dagsprogram'})
-  this.route('program', {path: 'program'})
+  // this.route('sideprogram')
+  // this.route('adventure', {path: 'dagsprogram'})
+  this.route('schedule', {path: 'tidsplan'})
   this.route('kort', {path: 'kort'})
   this.route('presse', {path: 'presse'})
-  this.route('transport-overnatning', {path: 'transport-overnatning'})
+  // this.route('transport-overnatning', {path: 'transport-overnatning'})
 
 
   // News

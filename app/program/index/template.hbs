@@ -32,7 +32,7 @@
 			{{#masonry-grid}}
 				{{#each filteredArtists as |artist|}}
 					<div class="Masonry-item">
-						{{#link-to "line-up.artist" artist}}
+						{{#link-to "program.artist" artist}}
 							{{teaser-item item=artist color=model.page.acf.text_color}}
 						{{/link-to}}
 					</div>

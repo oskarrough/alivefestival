@@ -1,0 +1,59 @@
+<div class="Page" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
+
+<div class="Page-body blog top-body" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
+	<h1 class="page-title" style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.title}}</h1>
+	
+		<p class="page-content"> {{{model.page.content}}}
+		</p>
+		{{#if model.page.acf.festival_is_on}}
+	
+			{{#if model.page.acf.festival_is_on_images}}
+				{{image-element images=model.page.acf.festival_is_on_images}}
+			{{/if}}
+			
+        	{{day-menu tags=tags class="tc"}}
+		
+            {{#if onsdag}}
+			<span>ONSDAG</span>
+				<p class="page-content">{{model.page.acf.music_text}}</p>
+			{{/if}}
+			{{#if torsdag}}
+			<span>TORSDAG</span>
+				<p class="page-content">{{model.page.acf.nature_text}}</p>
+			{{/if}}
+			{{#if fredag}}
+			<span>FREDAG</span>
+				<p class="page-content">{{model.page.acf.kultur_text}}</p>
+			{{/if}}
+			{{#if lørdag}}
+			<span>LØRDAG</span>
+				<p class="page-content">{{model.page.acf.samvær_text}}</p>
+			{{/if}}
+            {{#if søndag}}
+			<span>SØNDAG</span>
+				<p class="page-content">{{model.page.acf.fredag_text}}</p>
+			{{/if}}
+		
+			{{time-schedule artists=filteredArtists}}
+
+
+			{{#if model.page.acf.festival_is_on_map}}
+			<h1 class="frontpage-headline-oblique topPadded"style="color:{{escapeCSS model.page.acf.text_color}}">KORT</h1>
+			<img class="map bottom-margin" src="{{model.page.acf.festival_is_on_map}}"/>
+			{{#link-to 'kort' }}
+					<div style="border: 1px {{escapeCSS model.page.acf.text_color}} solid; color: {{escapeCSS model.page.acf.text_color}}" class="Button small-caption with-animation">
+					SE STØRRE
+					</div>
+			{{/link-to}}
+			{{/if}}
+	
+		{{/if}}
+</div>
+</div>
+
+
+
+
+{{outlet}}
+
+	

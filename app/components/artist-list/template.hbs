@@ -6,13 +6,13 @@
 			<ul class="artist-list" style="color:{{escapeCSS design.teaser_link_color}}">
 					{{#each artists as |artist|}}
 					<li class="artist-item">
-						{{#link-to 'line-up.artist' artist class='artist'}}
+						{{#link-to 'program.artist' artist class='artist'}}
 							{{artist.title}}
 							<img class="arrow lazyload" src="/assets/images/icons-output/png/artist-arrow.png"/>
 						{{/link-to}}
 					</li>
 					{{/each}}
-					{{#link-to 'line-up' class="Button" }}
+					{{#link-to 'program' class="Button" }}
 						<p style="color:{{escapeCSS design.text_color}}">{{design.quote_text_small}}</p>
 					{{/link-to}}	
 		</ul>

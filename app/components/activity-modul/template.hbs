@@ -13,7 +13,7 @@
             <ul class="titles">
                 {{#each activities as |activity  index|}}
                     <li class="artist-item">
-                        {{#link-to 'line-up.artist' activity}}
+                        {{#link-to 'program.artist' activity}}
                                 <img class="lazyload" src={{get (get design.icon_array index) 'sizes.s'}}/>
                                 <p>{{{activity.title}}}</p>
                         {{/link-to}}
@@ -29,7 +29,7 @@
       
     </div>
     
-	{{#link-to 'line-up' class="Button button-border"}}
+	{{#link-to 'program' class="Button button-border"}}
     <div style="border: 1px {{escapeCSS design.button_frame_color}} solid; color:{{escapeCSS design.button_frame_color}}" class="Button button-border small-caption with-animation"> 
             <p style="color{{escapeCSS design.button_text_color}}"  class="small-caption">{{design.url_1_text}}</p>
      </div>
