@@ -5,7 +5,6 @@ export default Route.extend({
 	// OR => https://example.com/cms/wp-json/pages?filter[tag]=L1+L2+L3
 
 	model(params) {
-		console.log(params.artist_slug);
 		
 		return this.store
 			.query('artist', {slug: params.artist_slug})

@@ -42,7 +42,7 @@ export default Controller.extend({
 		
 		// To get "music" artists we get those without any tags.
 		if (tag === 'musik') {
-			console.log("clicked musik");
+	
 			
 			return artists.filter(artist => {
 				let tags = artist.get('tags')

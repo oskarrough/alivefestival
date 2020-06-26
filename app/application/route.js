@@ -15,9 +15,3 @@ export default Route.extend({
 })
 
 
-// beforeModel() {
-// 	console.log(this.store.findRecord('page', 67));
-	
-	
-// 	this.get('moment').changeLocale('da')
-// }

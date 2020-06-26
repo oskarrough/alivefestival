@@ -53,7 +53,6 @@ export default Controller.extend({
 	
 		// To get "music" artists we get those without any tags.
 		if (tag === 'onsdag') {
-			console.log("returning onsdag");
 			return artists.filter(artist => {
 				let tags = artist.get('tags')
 				if (!tags) return false
@@ -66,7 +65,6 @@ export default Controller.extend({
 			}) 
 		} 
 		if (tag === "torsdag"){
-			console.log("returningtorsdar");
 			return artists.filter(artist => {
 				let tags = artist.get('tags')
 	

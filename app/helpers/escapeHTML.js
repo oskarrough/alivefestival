@@ -2,7 +2,6 @@ import { helper } from '@ember/component/helper';
 import { htmlSafe, isHTMLSafe } from '@ember/string';
 
 function escapeHtml([stringToEscape]) {
-  console.log(stringToEscape);
   let htmlSafeString = htmlSafe(stringToEscape);  
   return htmlSafeString;
 }
