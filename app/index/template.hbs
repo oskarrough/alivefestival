@@ -29,21 +29,25 @@
 	{{#if model.page.acf.festival_is_on}}
 	<div style="background-image:linear-gradient({{escapeCSS model.page.acf.cover_image_1_top_color}}, {{escapeCSS model.page.acf.cover_image_1_bottom_color}})" class="Container Media-TopFade-Large categories topPadded">
 		<div class="Container Relative graphic-container top-position fourPaddedContainer">
-			<h1 class="frontpage-headline-small"style="color:{{escapeCSS model.page.acf.text_color}}">Det sker lige nu</h1>
+			<h1 class="frontpage-headline-small"style="color:{{escapeCSS model.page.acf.text_color}}">{{model.page.acf.headline_for_program_teaser}}</h1>
 			{{time-schedule artists=model.artists frontpage=1}}
+			{{#if model.page.acf.text_for_program_button}}
 			{{#link-to 'program' }}
-			<div style="border: 1px {{escapeCSS model.page.acf.text_color}} solid" class="Button small-caption">
-			SE HELE SPILLEPLANEN
+			<div style="border: 1px {{escapeCSS model.page.acf.text_color}} solid" class="Button small-caption with-animation">
+				{{model.page.acf.text_for_program_button}}
 			</div>
 			{{/link-to}}
+			{{/if}}
 			{{#if model.page.acf.festival_is_on_map}}
 			<h1 class="frontpage-headline-oblique topPadded"style="color:{{escapeCSS model.page.acf.text_color}}">KORT</h1>
 			<img class="map bottom-margin" src="{{model.page.acf.festival_is_on_map}}"/>
+			{{#if model.page.acf.text_for_map_button}}
 			{{#link-to 'kort' }}
-					<div style="border: 1px {{escapeCSS model.page.acf.text_color}} solid" class="Button small-caption">
-					SE STØRRE
+					<div style="border: 1px {{escapeCSS model.page.acf.text_color}} solid" class="Button small-caption with-animation">
+					{{model.page.acf.text_for_map_button}}
 					</div>
 			{{/link-to}}
+			{{/if}}
 			{{/if}}
 		</div>
 	
