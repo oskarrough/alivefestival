@@ -51,10 +51,10 @@
 				{{/if}}
 
 				{{#if model.acf.middle_extra_text}}
-		{{{model.acf.middle_extra_text}}}
+				{{{model.acf.middle_extra_text}}}
 				
 				{{/if}}
-
+				</div>
 				{{#if model.acf.arbejdsroller}}
 				<div class="grid-horizontal">
 					{{#each model.acf.arbejdsroller as |rolle|}}
@@ -82,14 +82,21 @@
 				{{/if}}
 				
 				{{#if model.acf.extra_text}}
-				<div class="Page-bottom blog">
+				<div class="horizontal-Centering ">
 					<p class="page-content topPadded" style="color: {{escapeCSS model.acf.text_color}}">
 						<h2 style="color:{{escapeCSS model.acf.headline_color}}">{{model.acf.extratext_headline}}</h2>
 						{{{model.acf.extra_text}}}</p>
 				</div>
 				{{/if}}
 				
-				{{#if model.acf.url_1}}
+			
+			</div>		
+
+		</div>
+	</article>
+
+
+			{{!-- {{#if model.acf.url_1}}
 				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_1}}" class="Button button-border small-caption"> 
 					{{model.acf.url_1_text}}
 				</a>
@@ -99,9 +106,4 @@
 				<a style="border: 1px {{model.acf.button_frame_color}} solid; color:{{escapeCSS model.acf.button_text_color}}" href="{{model.acf.url_2}}" class="Button button-border small-caption"> 
 					{{model.acf.url_2_text}}
 				</a>
-           		 {{/if}}
-				</div>
-			</div>		
-
-		</div>
-	</article>
+           		 {{/if}} --}}
