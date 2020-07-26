@@ -30,6 +30,12 @@
 	p{
 		padding: 0;
 		margin:0;
+		margin-right: 0.3em;
+	}
+	@media (max-width: $layout-s) {
+		.time{
+			display: none;
+		}
 	}
 	.Logo-light{
 		width: rem(50);

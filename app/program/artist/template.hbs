@@ -13,9 +13,13 @@
 				{{{model.acf.sub_headline}}}
 			{{/if}}
 
+			
+			{{#if model.acf.show_featured_image}}
 			<div class="Artist-media">
 				<img src="{{model.better_featured_image.source_url}}" alt="{{model.better_featured_image.alt_text}}">
 			</div>
+			{{/if}}
+		
 
 			<p class="Artist-meta" style="color:{{escapeCSS model.acf.headline_color}}">
 				{{#if model.acf.festival_date}}
