@@ -1,11 +1,47 @@
-{{#x-root as |toggleAside|}}
-	{{x-aside}}
-
-	<main class="App-main">
-		{{!-- don't move the outlet without changing liquid.scss --}}
+{{#x-root date=model.page.acf.abbreviated_date_and_place buttoncolor=model.page.acf.button_color buttontext=model.page.acf.button_text bottonbackground=model.page.acf.button_background_color as |toggleAside| }}
+	{{x-aside top_color=model.page.acf.top_color bottom_color=model.page.acf.bottom_color festival_is_on=model.page.acf.festival_is_on color=model.page.acf.text_color bigLinks=model.page.acf.big_menu_item smallLinks=model.page.acf.small_menu_item}}
+	<main class="App">
 		{{liquid-outlet}}
 	</main>
-
-	<div class="PlantLayer PlantLayer--topRight"></div>
-	<div class="PlantLayer PlantLayer--bottomLeft"></div>
 {{/x-root}}
+
+<div class="footer">
+
+		{{#if model.page.acf.footer_image}}
+			<img class="footerImage lazyload" src="{{model.page.acf.footer_image}}" alt="{{model.title}}"/>
+		{{/if}}
+	
+		<div class="footer-content" style="color:{{model.page.acf.footer_links_color}}">
+			{{#each model.page.acf.footer_links as |link|}}
+				<a href="{{link.url}}">{{link.text}}</a>
+			{{/each}}
+		
+			{{#if model.page.acf.footer_headline}}
+				<h3 style="color:{{model.page.acf.footer_headline_color}}">{{model.page.acf.footer_headline}}</h3>
+			{{/if}}
+			
+			<div class="footer-links">
+
+					{{#if model.page.acf.text_for_url1}}
+					<a style="border: 1px {{model.page.acf.footer_headline_color}} solid; color:{{model.page.acf.footer_links_color}}; background-color:{{model.page.acf.footer_button_color}}" href="{{model.page.acf.url_1}}" class="Button"> 
+						{{model.page.acf.text_for_url1}}
+					</a>
+					{{/if}}
+			
+					{{#if model.page.acf.text_for_url2}}
+					<a style="border: 1px {{model.page.acf.footer_headline_color}} solid; color:{{model.page.acf.footer_links_color}}; background-color:{{model.page.acf.footer_button_color}}" href="{{model.page.acf.url_2}}" class="Button"> 
+						{{model.page.acf.text_for_url2}}
+					</a>
+					{{/if}}
+
+			</div>
+
+			{{social-links}}
+
+		</div>
+
+		<div style="background-image:linear-gradient({{escapeCSS model.page.acf.footer_fade_top_color}} 0%, {{escapeCSS model.page.acf.footer_fade_bottom_color}} 40%) " class="footer-fade">
+		
+		</div>	
+
+</div>

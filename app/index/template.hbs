@@ -1,82 +1,255 @@
-<div class="Index">
-	<!-- <h1 class="Index-title">{{model.page.title}}</h1> -->
 
-	<div class="Index-gallery">
-		{{gallery-counter selected=gallerySelected total=galleryTotal}}
-
-		{{#flickity-gallery
-			class="FlickityGallery--responsive"
-			images=model.page.acf.gallery
-			on-settle=(action 'updateGalleryCounter') as |image|
-		}}
-			<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{image.alt}}" data-sizes="auto" data-srcset="
-				{{image.sizes.s}} 320w,
-				{{image.sizes.m}} 768w,
-				{{image.sizes.l}} 1024w,
-				{{image.sizes.xl}} 1600w,
-				{{image.sizes.xxl}} 1920w" />
-		{{/flickity-gallery}}
-	</div>
-
-	<div class="Container Container--huge mt2 mb1">
-		{{news-list items=model.news grid=true}}
-	</div>
-
-	<div class="Media Media--center Media--yellow">
-		<div class="Media-figure">
-			{{#flickity-gallery images=model.artists as |artist|}}
-				{{#link-to 'program.artist' artist}}
-					<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" data-srcset="{{artist.better_featured_image.media_details.sizes.mini.source_url}} 200w, {{artist.better_featured_image.media_details.sizes.mini-double.source_url}} 400w" alt="{{artist.title}}">
-				{{/link-to}}
-			{{/flickity-gallery}}
-		</div>
-		<div class="Media-body">
-			<h3>{{#link-to "program"}}{{{model.page.acf.musik_teaser_title}}}{{/link-to}}</h3>
-			<p class="Media-title">{{{model.page.acf.musik_teaser_text}}}</p>
-			<p>{{#link-to "program"}}Se hele musikprogrammet &rarr;{{/link-to}}</p>
+<div class="index" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
+	<div class="HeaderContainer">
+		<video autoplay loop class="cover-video lazyload">
+			
+				<source src="{{model.page.acf.cover_video_url}}" alt="Alive Festival <3 u"type="video/webm">
+				Your browser does not support the video tag.
+		</video>
+	
+		<div class="headline">
+				{{#if model.page.acf.headline_image}}
+					<img class="covermage lazyload" src={{model.page.acf.headline_image}}/>
+				{{else}}
+					<div class="topline">
+						<h1 style="color:{{escapeCSS model.page.acf.headline_color}}" class="big-headline line1">{{model.page.acf.headline1}}</h1>
+						<div class="top-date" style="color:{{escapeCSS model.page.acf.subtitle_color}}" >
+							<h2 class="subtitle">{{model.page.acf.festival-begin-date}}</h2>
+							<h2 class="subtitle">{{model.page.acf.festival-end-date}}</h2>
+						</div>
+					</div>
+					<div class="bottomline">
+						<h1 style="color:{{escapeCSS model.page.acf.headline_color}}" class="big-headline line2">{{model.page.acf.headline2}}</h1>
+						<h2 style="color:{{escapeCSS model.page.acf.subtitle_color}}" class="subtitle bottom-date">{{model.page.acf.festival_date_part_2}}</h2>
+					</div>
+				{{/if}}
 		</div>
 	</div>
-
-	<div class="Media Media--center Media--reverse Media--red">
-		<div class="Media-figure">
-			{{#link-to 'program' (query-params tag="event")}}
-				<img src="/assets/images/moods/eventyr/summer-camp.jpg" alt="Nationalpark Thy">
+	
+	{{#if model.page.acf.festival_is_on}}
+	<div style="background-image:linear-gradient({{escapeCSS model.page.acf.cover_image_1_top_color}}, {{escapeCSS model.page.acf.cover_image_1_bottom_color}})" class="Container Media-TopFade-Large categories topPadded">
+		<div class="Container Relative graphic-container top-position fourPaddedContainer">
+			<h1 class="frontpage-headline-small"style="color:{{escapeCSS model.page.acf.text_color}}">{{model.page.acf.headline_for_program_teaser}}</h1>
+			{{time-schedule artists=model.artists frontpage=1}}
+			{{#if model.page.acf.text_for_program_button}}
+			{{#link-to 'program' }}
+			<div style="border: 1px {{escapeCSS model.page.acf.text_color}} solid" class="Button small-caption with-animation">
+				{{model.page.acf.text_for_program_button}}
+			</div>
 			{{/link-to}}
+			{{/if}}
+			{{#if model.page.acf.festival_is_on_map}}
+			<h1 class="frontpage-headline-oblique topPadded"style="color:{{escapeCSS model.page.acf.text_color}}">KORT</h1>
+			<img class="map bottom-margin" src="{{model.page.acf.festival_is_on_map}}"/>
+			{{#if model.page.acf.text_for_map_button}}
+			{{#link-to 'kort' }}
+					<div style="border: 1px {{escapeCSS model.page.acf.text_color}} solid" class="Button small-caption with-animation">
+					{{model.page.acf.text_for_map_button}}
+					</div>
+			{{/link-to}}
+			{{/if}}
+			{{/if}}
 		</div>
-		<div class="Media-body">
-			<h3>{{#link-to "adventure"}}{{{model.page.acf.eventyr_teaser_title}}}{{/link-to}}</h3>
-			<p class="Media-title">{{{model.page.acf.eventyr_teaser_text}}}</p>
-			<p>
-				{{#link-to 'program' (query-params tag="event")}}
-					Se hele dagsprogrammet &rarr;
-				{{/link-to}}
-			</p>
+	
+		{{#if model.page.acf.kategori_1}}
+			<div  class="Container categories topPadded">
+				<ul class="graphic-container" style="color:{{escapeCSS model.page.acf.kategories_text_color}}"> 
+					<li class="graphic-item">
+						<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.0.sizes.s}}"/>		
+						<a href="{{model.page.acf.kategori_1}}" class="OptiBrianReg"> {{model.page.acf.kategori_1_title}}</a>				
+					</li>
+					<li class="graphic-item">
+							<a href="{{model.page.acf.kategori_2}}" class="OptiBrianItalic"> {{model.page.acf.kategori_2_title}}</a>	
+						<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.1.sizes.s}}"/>		
+						
+					</li>
+					<li class="graphic-item">
+						<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.2.sizes.s}}"/>		
+						<a href="{{model.page.acf.kategori_3}}" class="GTHaptic longerText"> {{model.page.acf.kategori_3_title}}</a>
+										
+					</li>
+					<li class="graphic-item">
+						<a href="{{model.page.acf.kategori_4}}" class="GTHaptic"> {{model.page.acf.kategori_4_title}}</a>	
+						<img  class="lazyload" src="{{model.page.acf.kategori_graphic_elements.3.sizes.s}}"/>		
+					</li>
+				</ul>
+				</div>
+		{{/if}}
+	</div>
+	{{#if model.page.acf.festival_is_on_images}}
+			{{image-element images=model.page.acf.festival_is_on_images}}
+	{{/if}}
+	{{else}}
+	{{#if model.page.acf.kategori_1}}
+	<div style="background-image:linear-gradient({{escapeCSS model.page.acf.cover_image_1_top_color}}, {{escapeCSS model.page.acf.cover_image_1_bottom_color}})" class="Container Media-TopFade categories topPadded">
+		<ul class="graphic-container top-position" style="color:{{escapeCSS model.page.acf.kategories_text_color}}"> 
+			<li class="graphic-item">
+				<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.0.sizes.s}}"/>		
+				<a href="{{model.page.acf.kategori_1}}" class="OptiBrianReg"> {{model.page.acf.kategori_1_title}}</a>				
+			</li>
+			<li class="graphic-item">
+					<a href="{{model.page.acf.kategori_2}}" class="OptiBrianItalic"> {{model.page.acf.kategori_2_title}}</a>	
+				<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.1.sizes.s}}"/>		
+				
+			</li>
+			<li class="graphic-item">
+				<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.2.sizes.s}}"/>		
+				<a href="{{model.page.acf.kategori_3}}" class="GTHaptic longerText"> {{model.page.acf.kategori_3_title}}</a>
+								
+			</li>
+			<li class="graphic-item">
+				<a href="{{model.page.acf.kategori_4}}" class="GTHaptic"> {{model.page.acf.kategori_4_title}}</a>	
+				<img class="lazyload" src="{{model.page.acf.kategori_graphic_elements.3.sizes.s}}"/>		
+			</li>
+		</ul>
+	</div>
+	{{/if}}
+	{{/if}}
+	
+
+
+	<div class="column">
+		{{#if model.page.acf.show_news}}
+		<div class="container" style="background-color:{{escapeCSS model.page.acf.news_ticker_background_color}}">
+			<div  class="news-ticker" style="color:{{escapeCSS model.page.acf.news_ticker_text_color}}"> 
+				{{#if model.page.acf.news-alert}}
+					{{item-ticker items=model.page.acf.news-alert url=model.page.acf.news_alert_url}}
+				{{else}}
+					{{item-ticker items=model.news no-urgent-news=true}} 
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.cover-image2}}
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image2}}" alt="{{model.title}}"/>
+		{{/if}}
+	
+		{{#if model.page.acf.teaser_block.[0]}}
+		<div class="Container Relative">
+			{{inspirational-quote design=model.page.acf.teaser_block.[0]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.cover-image3}}
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image3}}" alt="{{model.title}}"/>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_block.[1]}}
+		<div class="Container Relative">
+		{{artist-list artists=model.artists design=model.page.acf.teaser_block.[1]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.cover-image4}}
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image4}}" alt="{{model.title}}"/>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[0]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[0]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.cover-image5}}
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image5}}" alt="{{model.title}}"/>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[1]}}
+		<div class="Container Relative">
+			{{activity-modul activities=model.activites design=model.page.acf.teaser_clicker.[1]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.cover-image6}}
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image6}}" alt="{{model.title}}"/>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[2]}}
+		<div class="Container Relative">
+			{{actvities-list items=model.practical design=model.page.acf.teaser_clicker.[2]}} 
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.cover-image7}}
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image7}}" alt="{{model.title}}"/>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[3]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[3]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.cover-image8}}
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image8}}" alt="{{model.title}}"/>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[4]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[4]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.cover-image9}}
+			<img class="coverImage lazyload" src="{{model.page.acf.cover-image9}}" alt="{{model.title}}"/>
+		{{/if}}
+
+		<div class="Container Relative fourPaddedContainer topPadded">
+				{{newsletter-form}}
+		</div>
+		
+		{{#if model.page.acf.teaser_clicker.[5]}}
+		<div style="background-image:linear-gradient({{escapeCSS model.page.acf.teaser_clicker.[5].top_color}}, {{escapeCSS model.page.acf.teaser_clicker.[5].bottom_color}}); color:{{escapeCSS model.page.acf.teaser_clicker.[5].button_frame_color}}" >
+			{{image-grid items=model.page.acf.teaser_clicker.[5].icon_array urltext=model.page.acf.teaser_clicker.[5].headline}} 
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[5] withGrid=true}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[6]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[6]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[7]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[7]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[8]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[8]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[9]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[9]}}
+		</div>
+		{{/if}}
+
+		{{#if model.page.acf.teaser_clicker.[10]}}
+		<div class="Container Relative">
+			{{teaser-clicker design=model.page.acf.teaser_clicker.[10]}}
+		</div>
+		{{/if}}
+
+		<div class="PaddedContainer Container Relative instagram" style="background-image:linear-gradient({{escapeCSS model.page.acf.insta_news_top_color}}, {{escapeCSS model.page.acf.insta_news_bottom_color}}); color:{{escapeCSS model.page.acf.insta_news_headline_color}}" >
+			<a href={{model.page.acf.instagram_url}} target="_blank" title="Alive på instagram">
+				{{model.page.acf.title_for_instagram_list}}
+			</a>
+			{{instagram-feed token=model.page.acf.instagram_widget}}
+			{{#link-to 'news' }}
+				{{model.page.acf.title_for_news_list}}
+			{{/link-to}}
+			{{news-list items=model.news textcolor=model.page.acf.insta_news_text_color timecolor=model.page.acf.insta_news_headline_color time=1}}
 		</div>
 	</div>
 
-	<div class="Container Container--huge mt2 mb1">
-		{{newsletter-form}}
-	</div>
 
-	<div class="Container pt2 pb2">
-		{{{model.page.acf.extra_text}}}
-		{{!-- <img src="/assets/images/square.gif" width="100%" alt=""> --}}
-	</div>
-
-	<div class="Invert">
-		{{instagram-feed class="InstaFeed"}}
-		<div class="tc mt2 pb1 underline">
-			<small>
-				 {{{model.page.acf.footer_text}}}
-			</small>
-		</div>
-	</div>
 </div>
 
-<div class="TeaserBox TeaserBox--alive">
-	{{link-to 'Køb billet' 'tickets'}}
-</div>
 
-{{#link-to 'tickets' class="Button FixedTicketButton"}}
-	&bull; &nbsp;&nbsp;KØB BILLET&nbsp;&nbsp; &bull;
-{{/link-to}}
+

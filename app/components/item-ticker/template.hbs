@@ -1,0 +1,58 @@
+
+<div id="ticker-container">
+<div class="moving-container">
+	{{#if no-urgent-news}}
+		
+		{{#each items as |artist|}}
+			<div class="ticker">		
+				{{#link-to 'news.post' artist}}
+					     ·  {{{artist.title}}}
+				{{/link-to}}
+			</div>
+		{{/each}}
+	
+	
+	{{else}}
+		<div class="ticker">
+			<a href="{{url}}"> · {{{items}}} </a>
+		</div>
+		<div class="ticker">
+			<a href="{{url}}"> · {{{items}}} </a>
+		</div>
+		<div class="ticker">
+			<a href="{{url}}"> · {{{items}}} </a>
+		</div>
+		<div class="ticker">
+			<a href="{{url}}"> · {{{items}}} </a>
+		</div>
+		<div class="ticker">
+			<a href="{{url}}"> · {{{items}}} </a>
+		</div>
+		<div class="ticker">
+			<a href="{{url}}"> · {{{items}}} </a>
+		</div>
+		<div class="ticker">
+			<a href="{{url}}"> · {{{items}}} </a>
+		</div>
+		<div class="ticker">
+			<a href="{{url}}"> · {{{items}}} </a>
+		</div>
+
+	
+		
+
+
+
+	{{/if}}
+</div>
+</div>
+
+
+
+
+{{yield}}
+
+
+
+
+

@@ -1,48 +1,202 @@
+
+
+
 .Index {
 	position: relative;
 }
+.header{
+	position: fixed;
+	top:0;
+	display: inline-flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: $padding;
+	z-index: 11;	
+	.right-header{
+		display: flex;
+		flex-direction: row;
+		white-space: nowrap;
+	}	
+}
+.HeaderLogo{
+	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	text-decoration: none;
+	p{
+		padding: 0;
+		margin:0;
+	}
+	.Logo-light{
+		width: rem(50);
+	}
+}
+.headline{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding-top: $topPadding;
+	margin-bottom: 10%;
+	z-index: 99999999;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.topline{
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+		.top-date{
+			margin: rem(23);
+		}
+	}
 
-.Index-title {
-	max-width: 5em;
-	text-align: right;
-	color: white;
-
+	.bottomline{
+		text-align: right;
+		.bottom-date{
+			@media (max-width: $layout-s) {
+			text-align: right;	
+			}
+		}
+	@media (max-width: $layout-s) {
+		text-align: left;
+		padding-left: 10vw;
+		padding-right: 10vw;
+	}
+	}
+	.big-headline{
+	@include big-headline;
+	display: inline-block;
+	white-space: nowrap;
+	@media (max-width: $layout-s) {
+		font-size: rem(55);
+		line-height: rem(50);
+	}
 	@media (min-width: $layout-s) {
-		font-size: rem(20);
+		font-size: rem(100);
+		line-height: rem(90);
 	}
+	}
+	.subtitle{
+	@include  OptiBrian;
+	white-space: nowrap;
+	@media (max-width: $layout-s) {
+		font-size: rem(25);
+		line-height: rem(20);
+	}
+	@media (min-width: $layout-s) {
+		font-size: rem(45);
+		line-height: rem(40);
+		}
+	}
+}
+.cover-video{
+	object-fit: cover;
+	width: 100%;
+	min-height: $coverimagesize;
+	z-index: 0;
 	@media (min-width: $layout-m) {
-		font-size: 2vw;
+		height: auto;
+		max-height: 1000px;
 	}
-	opacity: 0.8;
+}
+.coverImage{
+	width: 100%;
+	object-fit: cover;
+	max-height: $coverimagesize;
+	@media (max-width: $layout-s) {
+		min-height: $MobileImageSize;
+		object-fit: cover;
+	}
+}
+.BG-ImageCover{
+	object-position: 0px 0px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	position: absolute;
-	right: 2rem;
-	top: 2rem;
-	z-index: 5;
+	top: 0;
+	z-index: 0;
+	@media (max-width: $layout-s) {
+		min-height: $MobileImageSizeLarge;
+	}
+}
+.BG-ImageContain{
+	object-position: 0px 0px;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	@media (max-width: $layout-s) {
+		min-height: $MobileImageSizeLarge;
+	}
 }
 
-.Index-gallery {
+.column{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer{
+	width: 100%;
 	position: relative;
+	bottom: 0;
+	height: $footer-image-height;
 }
+.footer-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: $LargeContainerPadding;
+	@include mediumGTHaptic;
+	a{
+		color: inherit;
+		text-decoration: underline;
+		font-size: 16px;
+		text-align: center;
+		line-height: 25px;
+	}
+	h3{
+		padding-top: $LargeContainerPadding;
+		font-size: 8vh;
+	}
+	.footer-links{
+		text-decoration: none;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		max-width: 400px;
+		justify-content: space-around;
+		a{
+			width: 45%;
+		}
 
-.Index-artists {
-	@extend %font-bold;
-	@include negative-text;
-	display: block;
-	padding: 0.75em 0;
-	line-height: 1;
-
-	// background: $blue;
-	background: $yellow;
-	color: $black;
-
-	a {
-		color: $black;
 	}
 }
-
-.Index .GalleryCounter {
+.footerImage{
 	position: absolute;
-	right: rem($space);
-	bottom: rem($space);
-	opacity: 0.8;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	
 }
+.footer-fade{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1))0%, to(rgba(0,0,0,0))60%);
+	mask-image: linear-gradient(to bottom, rgba(0,0,0,1)0%, rgba(0,0,0,0)60%);
+
+}
+

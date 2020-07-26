@@ -23,7 +23,7 @@ get_header(); ?>
 					<?php
 						get_search_form();
 
-						the_widget( 'WP_Widget_Recent_Posts' );
+						the_( 'WP_Widget_Recent_Posts' );
 
 						// Only show the widget if site has multiple categories.
 						if ( alivefestival_categorized_blog() ) :

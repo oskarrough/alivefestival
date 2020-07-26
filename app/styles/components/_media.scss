@@ -1,97 +1,445 @@
-/**
- * Media block
- */
 
-.Media {
+.Media-TopFade{
+	min-height: 100vh;
+	margin-top: -50vh;
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0))0%, to(rgba(0,0,0,1))33%);
+	mask-image: linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(0,0,0,1)33%);
 	display: flex;
-	align-items: flex-start;
-	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: $ContainerPadding;
 }
-
-.Media-figure {
-	width: 40%;
-
-	img {
-		vertical-align: bottom;
+.Media-TopFade-Large{
+	min-height: 100vh;
+	margin-top: -50vh;
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0))0%, to(rgba(0,0,0,1))10%);
+	mask-image: linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(0,0,0,1)10%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: $ContainerPadding;
+}
+.news-ticker{
+	a{
+		@include obliqueGTHaptic;
+		font-size: rem(32);
+		color: inherit;
+		margin-right: $tickermargin;
+		text-decoration: none;
+		text-transform: uppercase;
 	}
 }
-
-.Media-body {
-	flex: 1;
-	margin-left: rem($space);
+.top-position{
+	padding-top: 20vh;
+	@media (min-width: $layout-s) {
+		padding-top: 30vh;
+	}
 }
-
-.Media--center {
+.graphic-container{
+	padding-left: $padding;
+	padding-right: $padding;
+	padding-bottom: $LargeContainerPadding;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-	text-align: center;
-}
-
-.Media--reverse > .Media-figure {
-	order: 1;
-}
-
-.Media--red,
-.Media--yellow {
 	justify-content: center;
-
-	> .Media-figure {
-		@media (max-width: $layout-s) {
-			width: 100%;
+	.graphic-item{
+		list-style: none;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		img{
+			height: 100%;
+			width: auto;
+			display: inline-block;
+			padding: $padding;
+		}
+		a{
+			font-weight: 900;
+			text-decoration: none;
+			color: inherit;
+			font-size: 85px;
+			margin: -1%;
+			padding: 0;
+			@media (max-width: $layout-s) {
+				font-size: 56px;
+			}
+		}
+		.OptiBrianReg{
+			@include OptiBrian;
+		}
+		.OptiBrianItalic{
+			@include OptiBrianItalic
+		}
+		.GTHaptic{
+			@include big-headline;
+		}
+		.longerText{
+			font-size: 9vw;
+			@media (min-width: $layout-s) {
+				font-size: 85px;
+			}
 		}
 	}
-
-	> .Media-body {
-		margin-top: rem($space * 2);
-		margin-left: rem($space);
-		margin-right: rem($space);
-		margin-bottom: rem($space);
-		max-width: 40em;
-	}
 }
+.foreground-content{
+	position: relative;
+	top:0;
+	height: 100%;
+	.first{
+		@include  OptiBrian;
+		color: inherit;
+		max-width: 930px;
+		font-size: rem(40);
+		line-height: rem(45);
 
-.Media--yellow,
-.Media--red,
-.Media--blue {
-	p a {
+	}
+	.second{
+		@include lightGTHaptic;
+		margin-top: 30px;
 		text-decoration: underline;
+		color: inherit;
+		font-size: rem(18);
+		line-height: rem(20);	
+		max-width: 500px;
+	}
+}
+.artist-list{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	top:0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	padding: 0;
+	padding-top: $LargeContainerPadding;
+	.artist-item{
+		position: relative;
+		display: flex;
+		flex-direction: row;		
+		color: inherit;
+		padding: 5%;
+		@include boldGTHaptic;
+	}
+	.artist{
+		display: flex;
+		flex-direction: row;
+		img{
+			display: none;
+		}
+		&:hover {
+			color: $transparent;
+			-webkit-text-stroke: 2px $blue; 
+			@include obliqueGTHaptic;
+			img{
+				display: block;
+				margin-left: $padding;
+				height: 40px;
+				width: auto;
+				object-fit: contain;
+			}
+		}
+		&.is-active {
+			@include obliqueGTHaptic;
+			-webkit-text-stroke: 2px $blue; 
+			color: $transparent;
+		}
+		text-decoration: none;
+		text-align: center;
+		font-size: 48.75px;
+		line-height: 48px;
+		padding: 0;
+		margin: 0;
+		color: inherit;
+		font-family: inherit;
+		text-transform: uppercase;
+
+		@media (max-width: $layout-s) {
+			font-size: 30px;
+		}
+		
+	}
+	p{
+		@include OptiBrian;
+		text-decoration: underline;
+		padding: 10vh;
+	}
+}
+//images
+.teaser-image{
+	width: 100%;
+	margin-top: $image-border;
+	margin-bottom: $image-border;
+	@media (min-width: $layout-s) {
+		width: 80%;
+	}
+}
+.inspiration-image{
+	width: 100%;
+	margin-top: $image-border;
+	margin-bottom: $image-border;
+}
+
+.mobil-first-image{
+	@media (max-width: $layout-s) {
+		min-height: $MobileImageSize;
 	}
 }
 
-.Media--red,
-.Media--blue {
-	a {
-		color: $silk;
-	}
-	a:hover {
-		color: $whitewhite;
-	}
-}
-
-.Media--yellow {
-	background-color: $yellow;
-
-	a {
-		color: $black;
-	}
-}
-
-.Media--red {
-	background-color: $nice-slated-red;
-	color: $silk;
-}
-
-.Media--blue {
-	background-color: $blue;
-	color: $silk;
-}
-
-.Media-title {
-	@extend %font-black;
-	font-size: 5vw;
-	line-height: 1.2;
-
+.frontpage-headline{
+	@include OptiBrian;
+	text-align: center;
+	font-size: 48.75px;
+	line-height: 48px;
+	font-weight: 900;
+	width: 100%;
+	margin-bottom: $padding;
 	@media (min-width: $layout-m) {
-		font-size: 3vw;
+		font-size: 65px;
+		line-height: 72px;
+	}
+
+}
+.frontpage-headline-small{
+	@include OptiBrian;
+	text-align: center;
+	font-size: 34px;
+	line-height: rem(32);
+	padding: $padding;
+}
+.frontpage-headline-oblique{
+	@include obliqueGTHaptic;
+	font-size: 60px;
+}
+.frontpage-content{
+	color: inherit;
+	@include boldGTHaptic;
+	text-align: center;
+	margin-bottom: $ContainerPadding;
+}
+.limitedWidth{
+	width: 90%;
+	@media (min-width: $layout-m) {
+		width: 40%;
+	}
+}
+.long-word{
+	overflow-wrap: break-word;
+}
+.leftleaning{
+	text-align: left;
+	max-width: 50%;
+	@media (min-width: $layout-m) {
+		max-width: 50%;
+	}
+
+}
+
+
+.flex-box-toggle{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	@media (min-width: $layout-mm) {
+		flex-direction: row;
+		.gallery-image{
+			margin-top: -100px;
+			object-fit: contain;
+			width: 40%;
+		}
+	}
+}
+.activity-table{
+	display: flex;
+	flex-direction: row;
+	// height: 50vh;
+	padding-bottom: $LargeContainerPadding;
+	.titles{
+		justify-content: space-between;
+		list-style-type: none;
+		padding: 0;
+		color: inherit;
+		text-decoration: none;
+		font-size: 18.75px;
+		line-height: 23px;
+		.artist-item{
+			a{
+			margin-top: $ContainerPadding;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			img{
+				width: 50px;
+				object-fit: contain;
+			}
+			p{
+				margin-left:$ContainerPadding;
+				margin-bottom: 0;
+				&:hover {
+					color: $transparent;
+					-webkit-text-stroke: 1px $blue; 
+					@include obliqueGTHaptic;
+				}
+				&.is-active {
+					@include obliqueGTHaptic;
+					-webkit-text-stroke: 1px $blue; 
+					color: $transparent;
+				}
+			}
+			}
+		}
+
 	}
 }
 
+.image-grid{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.image-grid-image{
+	width: 25%;
+	min-width: 120px;
+	object-fit: contain;
+	
+}
+
+// The social nav
+.Social-Links {
+	display: flex;
+	flex-direction: row;
+	padding-top: 40px;
+	// justify-content: center;
+	a img{
+		min-width: $minimum-icon-height;
+		min-height: $minimum-icon-height;
+		max-width: $maximum-icon-height;
+		max-height: $maximum-icon-height;
+		
+	}
+	.middle{
+		margin-left: $padding;
+		margin-right: $padding;
+	}
+	a:focus img,
+	a:hover img {
+		opacity: 1;
+		img {
+			opacity: 0.6;
+		}
+	}
+}
+
+.instagram{
+	a{
+		@include boldGTHaptic;
+		color: inherit;
+		text-align: center;
+		font-size: rem(40);
+	}
+}
+.frivillig-type{
+	width: 100%;
+	@media (min-width: $layout-s) {
+		width: 300px;
+	}
+	margin-bottom: $masonry-gutter;
+	img{
+		width: 100%;
+		height: 50%;
+		object-fit: cover;
+	}
+	.practical-Item{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding:0;
+	}
+	
+}
+.frivillig-info{
+	padding: $padding;
+	padding-left: $ContainerPadding;
+	h2{
+		@include boldGTHaptic;
+		font-size: 20px;	
+	}
+	p,a,li{
+		
+		@include OptiBrian;
+		
+		font-size: 14px;
+		line-height: 25px;
+	}
+	ul{
+		list-style-type: none;
+		padding: 0;
+	}
+	
+}
+.program-item{
+	position: relative;
+	width: 100%;
+	max-width: 300px;
+	margin-bottom: $LargeContainerPadding;
+	.program-date{
+		margin-top: -14px;
+		position: absolute;
+		background-color: $blue;
+		padding: 0.3em 1em 0.3em;
+		z-index: 99;
+		time{
+			@include OptiBrian;
+			font-size: 14px;
+			color: #F4E7D6;
+
+		}
+	}
+	.program-info{
+		// z-index: 0;
+		width: 100%;
+		margin-left: $padding;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		h4{
+			font-family: 'GT Haptik medium';
+			color: black;
+			font-size: 18px;
+		}
+		h2{
+			@include boldGTHaptic;
+			font-size: 28px;
+			color: inherit;
+		}
+		p{
+			font-family: 'GT Haptik medium';
+			color: black;
+			font-size: 14px;
+		}
+		img{
+			width: 100%;
+			max-width: 300px;
+			padding-right: $padding;
+			object-fit: contain;
+			margin-right: $padding;
+		}
+	}
+	.white{
+		padding: $ContainerPadding;
+		padding-top: 30px;
+		background-color: #F4E7D6;
+	}
+}
+
+.mapImage{
+	width: 100%;
+	max-height: 100vh;
+	object-fit: contain;
+}

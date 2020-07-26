@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Alive Festival</title>
-    <meta name="description" content="Nøgen mand til hest — Alive er Thy, når det er bedst.">
+    <meta name="description" content="Alive Festival er Thy, når det er bedst.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
@@ -15,17 +15,18 @@
     {{content-for "head-footer"}}
   </head>
   <body>
-    {{content-for "body"}}
+    <!-- {{content-for "body"}} -->
 
     <div id="App" class="App"></div>
 
-		<aside class="LoadingScreen Aside"><div class="Aside-inner">
+		<aside class="LoadingScreen"><div class="loadinganimation">
 			<!-- loading screen that will be removed by ember -->
 			<h1 class="Logo animate-shake"><a><img src="{{rootURL}}assets/images/logos/logo-2017-white.png" alt="Thy Alive Festival"></a></h1>
 		</div></aside>
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/alivefestival.js"></script>
+
 
     {{content-for "body-footer"}}
 

@@ -1,22 +1,17 @@
+
 .Page {
 	position: relative;
 	max-width: $max-width;
+	width: 100%;
 
-	// min-height: 100vh;
-	// background-image: linear-gradient(to bottom, #faf6d1, #f6dfd9);
-	// background-attachment: fixed;
-	// Custom border.
-	// &::after {
-	// 	content: '';
-	// 	display: block;
-	// 	width: 40px;
-	// 	height: 100%;
-	// 	background: url(images/border-page-gradient.png) repeat-y top right;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	right: -40px;
-	// 	z-index: 1;
-	// }
+	padding-left: $ContainerPadding;
+	padding-right: $ContainerPadding;
+	@media (min-width: $layout-sm) {
+		display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	}
 }
 
 .Page--clean {
@@ -33,46 +28,108 @@
 
 .Page + .Page {
 	margin-top: rem($space * 2);
+	
 }
-
-.Page-banner {
-	margin-bottom: 0;
-}
-
-.Page-body {
-	padding-top: rem($space * 3);
-	padding-right: rem($space);
-	padding-bottom: rem($space);
-	padding-left: rem($space * 2);
-
-	@media (min-width: $layout-m) {
-		padding-left: rem($space * 3);
+.Page-body,
+.Page-top,
+.Page-bottom { 
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	@media (max-width: $blogpage){
+		padding:$ContainerPadding;
 	}
 }
+.top-body{
+	padding-top: $hugeContainerPadding;
+}
+.Page-body {
+	min-height: 100vh;
+	@media (min-width: $layout-s){
+		margin-left:$ContainerPaddingDesktop;
+		margin-right:$ContainerPaddingDesktop;
+	}
+}
+
+.Page-bottom{
+	padding-bottom: $hugeContainerPadding;
+}
+.blog{
+	max-width: $blogpage;
+	justify-content: left;
+	align-content: left;
+}
+.SortingPage{
+	padding-top: $hugeContainerPadding;
+	padding-left: $ContainerPadding;
+	padding-right: $ContainerPadding;
+}
+
+
+.page-content{
+	@include regGTHaptic;
+	color: inherit;
+	font-size: 18px;
+	padding-bottom: $ContainerPadding;
+	h1{
+		@include boldGTHaptic;
+		margin-top: $LargeContainerPadding;
+		font-size: 28px;
+	}
+	h2{
+		@include boldGTHaptic;
+		font-size: 18px;
+	}
+	p{
+		color: black;
+		img{
+			padding-top: $padding;
+			padding-bottom: $padding;
+		}
+	}
+	
+}
+.content-list{
+	position: relative;
+	max-width: 100%;
+}
+
+.page-title{
+	@include OptiBrian;	
+	font-size: 50px;
+	line-height: 55px;
+	color: inherit;
+	text-align: left;
+}
+.left-page-title{
+	position: relative;
+	@include OptiBrian;	
+	font-size: 50px;
+	line-height: 55px;
+	color: inherit;
+	text-align: left;
+	width: 100%;
+}
+.page-subtitle{
+	@include OptiBrian;	
+	font-size: 30px;
+	line-height: 33px;
+	color: inherit;
+}
+
 
 .Page-body img.alignnone {
 	height: auto !important;
 }
 
-.Page-body h1 + p,
-.Post-body > p:first-child {
-	@extend %font-bold;
-	strong {
-		@extend %font-bold;
-	}
-	font-size: $font-20;
-}
-
 .Page-backgroundImage {
-	margin-left: 1rem;
-	max-height: 80vh;
-	// position: fixed;
-	// z-index: -1;
-	// top: 0;
-	// right: 0;
-	// min-width: 54%;
-	// height: 100%;
-	// object-fit: cover;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	left: 0;
+	min-width: 100%;
+	object-fit: cover;
 }
 
 .Page-backgroundImage--full {

@@ -1,24 +1,25 @@
-<ul class="List {{if grid 'List--grid'}}">
+
+<li class="news-feed-items Container Padded">
 	{{#each items as |post|}}
-		<li class="Media">
-
-			<figure class="Media-figure">
-				{{#link-to 'news.post' post class="Media"}}
-				<img src="{{post.better_featured_image.media_details.sizes.mini.source_url}}" alt="{{post.better_featured_image.alt}}"> {{/link-to}}
-			</figure>
-
-			<div class="Media-body">
-				<time>{{moment-format post.date}}</time>
-				<h3>
-					{{#link-to 'news.post' post class="Media"}}
-						{{post.title}}
-					{{/link-to}}
-				</h3>
-				<small>{{{post.excerpt}}}</small>
-			</div>
-
-		</li>
+	  <figure class="news-list-item">
+			{{#link-to 'news.post' post class=""}}
+                  	{{#if post.better_featured_image.media_details.sizes.l.source_url}}
+						<img class="lazyload" src="{{post.better_featured_image.media_details.sizes.l.source_url}}" alt="{{post.better_featured_image.alt}}"> 
+					{{else}}
+						<img class="lazyload" src="{{post.better_featured_image.source_url}}" alt="{{post.better_featured_image.alt}}"> 
+					{{/if}}
+					{{#if time}}
+                    <time style="color:{{escapeCSS timecolor}}">{{moment-format post.date}}</time>
+					{{/if}}
+                    <figcaption style="color:{{escapeCSS textcolor}}">{{{truncate-text post.title limit="80"}}}</figcaption>
+		    {{/link-to}}
+		</figure>	
 	{{/each}}
-</ul>
+</li>
 
 {{yield}}
+
+
+
+
+			

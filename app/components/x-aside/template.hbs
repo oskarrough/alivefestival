@@ -1,40 +1,19 @@
-<div class="Aside-inner">
 
-	<h1 class="Logo">
-		{{#link-to 'application'}}
-			<img width="100" class="Logo-dark" src="/assets/images/logos/logo-2017-white.png" alt="Thy Alive Festival">
-			<p class="Logo-date">ALIVE FESTIVAL<br>30. JULI - 1. AUG 2020</p>
-		{{/link-to}}
-	</h1>
+<div style="background-image:linear-gradient({{top_color}}, {{bottom_color}})" class="Aside-inner">
+	
+	<nav style="color:{{color}}" class="Nav">
+		{{#each bigLinks as |link|}}
+			<a href="{{link.url}}">{{link.text}}</a>
+		{{/each}}
 
-	<nav class="Nav">
-		{{link-to 'Program' 'program'}}
-		{{link-to 'Spilleplan' 'schedule'}}
-		{{link-to 'Nyheder' 'news'}}
-		{{link-to 'Billetter' 'tickets'}}
-		{{link-to 'Frivillig' 'volunteer'}}
-		{{link-to 'Praktisk' 'practical'}}
-		{{link-to 'Om Alive' 'about'}}
 		<small>
-			{{link-to 'Partnere' 'partners'}}
-			{{link-to 'Mere om Thy' 'about-thy'}}
-			{{link-to 'Historie' 'about.history'}}
-			{{link-to 'Kontakt' 'about.contact'}}
-			{{link-to 'English' 'english'}}
+		{{#each smallLinks as |link|}}
+			<a href="{{link.url}}">{{link.text}}</a>
+		{{/each}}
 		</small>
-	</nav>
 
-	<div class="Social">
-		<a href="https://facebook.com/alivefestival" target="_blank" title="Alive på Facebook">
-			<img width="30" class="lazyload" data-src="/assets/images/icons/facebook.svg" alt="">
-		</a>
-		<a href="https://www.instagram.com/thyalive/" target="_blank" title="Alive på Instagram">
-			<img width="30" class="lazyload" data-src="/assets/images/icons/instagram.svg" alt="">
-		</a>
-		<a href="https://open.spotify.com/user/1133931389/playlist/5mbdqkSLMYmZJ3n5EU85ZM" target="_blank" title="Alive på Spotify">
-			<img width="30" class="lazyload" data-src="/assets/images/icons/spotify.svg" alt="">
-		</a>
-	</div>
+	</nav>
+	{{social-links}}
 
 	{{yield}}
 </div>

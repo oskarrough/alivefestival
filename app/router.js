@@ -13,12 +13,18 @@ Router.map(function() {
   this.route('program', function() {
     this.route('artist', {path: ':artist_slug'})
   });
-  // this.route('music', {path: 'musik'}, function() {
-  //   this.route('artist', {path: ':artist_slug'})
-  // })
-  this.route('sideprogram')
-  this.route('adventure', {path: 'dagsprogram'})
-  this.route('schedule', {path: 'spilleplan'})
+
+  this.route('practical', {path: 'praktisk'}, function() {
+    this.route('post', {path: ':post_slug'})
+  });
+
+  // this.route('sideprogram')
+  // this.route('adventure', {path: 'dagsprogram'})
+  this.route('schedule', {path: 'tidsplan'})
+  this.route('kort', {path: 'kort'})
+  this.route('presse', {path: 'presse'})
+  // this.route('transport-overnatning', {path: 'transport-overnatning'})
+
 
   // News
   this.route('news', {path: 'nyheder'}, function() {
@@ -28,7 +34,6 @@ Router.map(function() {
   // Meta pages
   this.route('tickets', {path: 'billetter'})
   this.route('volunteer', {path: 'frivillig'})
-  this.route('practical', {path: 'praktisk'})
   this.route('about', {path: 'om-alive'}, function() {
       this.route('contact', {path: 'kontakt'})
       this.route('history', {path: 'historie'})
@@ -36,10 +41,12 @@ Router.map(function() {
   this.route('partners', {path: 'partnere'})
   this.route('english')
   this.route('memory', {path: 'lykkehjulet'})
+
   this.route('about-thy', {path: 'thy'});
 
   // 404
   this.route('404', {path: '/*wildcard'})
+
 })
 
 export default Router

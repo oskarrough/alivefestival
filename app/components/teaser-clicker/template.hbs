@@ -1,0 +1,32 @@
+<div class="Container horizontal-Centering Padded" style="background-image:linear-gradient({{design.top_color}}, {{design.bottom_color}})" >
+			
+            {{#unless withGrid}}
+            <h2 class="frontpage-headline" style="color:{{design.headline_color}}">{{design.headline}}</h2>		
+             {{/unless}}
+
+            {{#if design.teaser_Subheadline}}
+                <div class="Centering">
+                <p class="frontpage-content limitedWidth" style="color:{{escapeCSS design.subheadline_color}}"> {{design.teaser_Subheadline}}</p>
+                </div>
+	        {{/if}}
+
+            {{#if design.teaser_image}}
+            <img class="teaser-image lazyload" src={{design.teaser_image}}/>	
+            {{/if}}	
+			
+            {{#if design.url_1}}
+			<a href="{{design.url_1}}" style="border: 1px {{escapeCSS design.button_frame_color}} solid; color:{{escapeCSS design.button_frame_color}}"class="Button button-border small-caption with-animation"> 
+                  <p style="color:{{escapeCSS design.button_text_color}}">{{design.url_1_text}}</p>
+            </a>
+             {{/if}}
+		
+            {{#if design.url_2}}
+			<a href="{{design.url_2}}"style="border: 1px {{design.button_frame_color}} solid; color:{{escapeCSS design.button_frame_color}}" class="Button button-border small-caption with-animation"> 
+					<p style="color:{{escapeCSS design.button_text_color}}">{{design.url_2_text}}</p>
+            </a>
+            {{/if}}
+</div>
+
+
+
+{{yield}}

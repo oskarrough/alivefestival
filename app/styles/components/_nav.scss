@@ -1,59 +1,53 @@
+:root{
+	--color: inherit;
+}
 .Nav {
 	display: flex;
+	width: 100%;
+	height: 100%;
+	padding-top: $ContainerPadding;
+	@media (max-width: $layout-m) {
+		padding-top: $ContainerPadding;
+	}
 	flex-flow: column nowrap;
+	overflow-y: scroll;
 }
-
 .Nav a {
 	@extend %font-bold;
-	font-size: $font-20;
-	padding-left: rem($space * 2);
-	transition: color 150ms, padding 250ms 100ms $easing;
-
-	@media (min-width: $layout-s) {
-		&.is-active {
-			padding-left: rem($space * 2.25);
-		}
+	text-transform: uppercase;
+	text-decoration: none;
+	color: inherit;
+	font-size: 30px;
+	&:hover {
+		-webkit-text-stroke: 1px $blue; 
+		color: $transparent;
 	}
-
-	@media (min-height: 769px) {
-		padding-top: 0.2em;
-		padding-bottom: 0.2em;
+	.show-aside & {
+		transition-timing-function: $ease-decelerate;
+		transition-duration: 300ms;
+		transform: translate3d(0, 0, 0);
 	}
 }
+
 
 .Nav small {
-	margin-left: 0.6rem;
-
+	display: flex;
+	flex-direction: column;
 	a {
 		@extend %font-regular;
-		font-size: 1rem;
-		padding-top: 0;
-		padding-bottom: 0.1em;
+		text-decoration: none;
+		//small size 
+		@media (max-width: $layout-s) {
+			font-size: $submenufont;
+		}	
+		//big size
+		@media (min-width: $layout-s) {
+			font-size: $largersubmenufont;
+		}
 	}
+	
+	
 }
 
-// The social nav
-.Social {
-	padding-left: rem($space * 2);
-	margin-top: 1rem;
 
-	@media (min-height: 769px) {
-		margin-top: rem($space * 2);
-	}
 
-	@media (min-width: $layout-m) {
-		text-align: left;
-	}
-
-	img {
-		width: rem(30);
-		height: rem(30);
-		filter: #{'invert()'};
-		opacity: 0.6;
-	}
-
-	a:focus img,
-	a:hover img {
-		opacity: 1;
-	}
-}

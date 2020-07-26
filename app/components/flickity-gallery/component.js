@@ -28,7 +28,7 @@ export default Component.extend({
 
 	enableFlickity() {
 		const images = this.get('images')
-
+		
 		if (!images) {
 			return
 		}

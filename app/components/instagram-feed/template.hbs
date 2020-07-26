@@ -1,9 +1,9 @@
-<div class="InstaFeed-items">
+<div class="InstaFeed-items Container Padded">
 	{{#each images as |img|}}
 		<figure>
 			<a href="{{img.link}}" target="_blank" rel="noopener nofollow">
-				<img src="{{img.images.standard_resolution.url}}" alt="{{img.caption.text}}">
-				<figcaption>{{truncate-text img.caption.text limit="80"}}</figcaption>
+				<img  class="lazyload" src="{{img.images.standard_resolution.url}}" alt="{{img.caption.text}}">
+				{{!-- <figcaption>{{truncate-text img.caption.text limit="80"}}</figcaption> --}}
 			</a>
 		</figure>
 	{{/each}}

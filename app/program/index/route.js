@@ -1,5 +1,6 @@
-import Route from '@ember/routing/route'
 import {hash} from 'rsvp'
+import Route from '@ember/routing/route'
+// import {hash} from './rsvp'
 
 export default Route.extend({
 	model() {
@@ -9,7 +10,7 @@ export default Route.extend({
 			page: this.store.findRecord('page', 1473),
 			eventPage: this.store.findRecord('page', 43),
 			artists: this.store.query('artist', {
-				categories: ['7', '8'],
+				categories: ['10'],
 				per_page: 99
 			})
 		}).then(model => {

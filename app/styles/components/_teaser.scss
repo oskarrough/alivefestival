@@ -2,38 +2,18 @@
  * Teaser
  **/
 
-.Teaser {
-	@include negative-text;
-	position: relative;
-
-	a:hover &,
-	a:active & {
-		box-shadow: 0px 0px 2rem 1rem rgba(255, 255, 255, 0.1);
-		.Teaser-title,
-		.Teaser-subtitle {
-			color: $white;
-		}
-
-		img {
-			filter: saturate(70%) brightness(120%);
-		}
-	}
-}
-
 .Teaser-wrap {
 	text-decoration: none;
-	background-color: $blue;
+	padding-top: $padding;
+	// padding-bottom: $LargeContainerPadding;
 }
 
 .Teaser-media {
 	@include ratio(400, 360);
 	margin-bottom: 0;
 	overflow: hidden;
-
 	img {
 		@include ratio-inner;
-		border-radius: 3px;
-
 		// without default values, the image will jump 1px in chrome on hover
 		filter: saturate(100%) brightness(1.01);
 		backface-visibility: hidden;
@@ -45,7 +25,6 @@
 // If we have object fit, make the images less tall
 .object-fit .Teaser-media {
 	@include ratio(400, 240);
-
 	img {
 		object-fit: cover;
 		object-position: center;
@@ -53,20 +32,27 @@
 }
 
 .Teaser-title {
-	@extend %font-bold;
-	font-size: rem(20);
+	@include boldGTHaptic;
+	font-size: rem(28);
 	margin-bottom: 0;
-	padding: 0.5em 0.5em 0.5em;
-	background-color: $sand;
-	color: $black;
-
-	@media (min-width: $layout-sm) {
-		font-size: rem(24);
-	}
-
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: baseline;
+	max-width: 90%;
+	padding-top: $padding;
+	padding-bottom: $ContainerPadding;
 	time {
-		font-size: rem(12);
+		font-size: rem(13);
 		letter-spacing: 0.05em;
+		padding-left: $padding;
+	}
+	.day{
+		@include OptiBrian;
+		font-size: rem(13);
+		white-space: nowrap;
+		letter-spacing: 0.05em;
+		padding-left: $padding;
 	}
 }
 
@@ -78,3 +64,33 @@ a:hover .Teaser .Teaser-title {
 	font-size: $font-14;
 	margin-bottom: rem(26);
 }
+
+.practical-teaser{
+	width: 48%;
+	max-width: 160px;
+	object-fit: cover;
+	@media (min-width: $layout-s) {
+		width: 300px;
+		max-width: 300px;
+		margin-right: $masonry-gutter;
+	}
+	margin-bottom: $masonry-gutter;
+	img{
+		width: 100%;
+		height: 50%;
+		object-fit: cover;
+	}
+	.practical-Item{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding:0;
+	}
+}
+.practical-title{
+	@include boldGTHaptic;
+	padding: $relativepadding;
+	padding-top: $padding;
+}
+
+// 

@@ -1,0 +1,41 @@
+<div class="Container fourPaddedContainer" style="background-image:linear-gradient({{escapeCSS design.top_color}}, {{escapeCSS design.bottom_color}}); color:{{escapeCSS design.text_color}}" >
+    {{#if design.headline}}
+    <h2 class="frontpage-headline leftleaning" style="color:{{escapeCSS design.headline_color}}"> {{design.headline}}</h2>
+     {{#if design.teaser_Subheadline}}
+    <p class="frontpage-content leftleaning" style="color:{{escapeCSS design.subheadline_color}}"> {{design.teaser_Subheadline}}</p>
+    {{/if}}
+  
+    
+    {{/if}}
+    
+    <div class="flex-box-toggle">
+        <div class="activity-table">
+            <ul class="titles">
+                {{#each activities as |activity  index|}}
+                    <li class="artist-item">
+                        {{#link-to 'program.artist' activity}}
+                                <img class="lazyload" src={{get (get design.icon_array index) 'sizes.s'}}/>
+                                <p>{{{activity.title}}}</p>
+                        {{/link-to}}
+                    </li>
+                {{/each}}
+            </ul> 
+        </div>
+       
+
+         {{#if design.teaser_image}}
+            <img class="gallery-image lazyload" src={{design.teaser_image}}/>	
+         {{/if}}	
+      
+    </div>
+    
+	{{#link-to 'program' class="Button button-border"}}
+    <div style="border: 1px {{escapeCSS design.button_frame_color}} solid; color:{{escapeCSS design.button_frame_color}}" class="Button button-border small-caption with-animation"> 
+            <p style="color{{escapeCSS design.button_text_color}}"  class="small-caption">{{design.url_1_text}}</p>
+     </div>
+    {{/link-to}}  
+  
+  
+</div>
+
+{{yield}}

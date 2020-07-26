@@ -1,7 +1,3 @@
 import Route from '@ember/routing/route'
 
-export default Route.extend({
-	model() {
-		return this.store.findRecord('page', 8)
-	}
-})
+export default Route.extend({})

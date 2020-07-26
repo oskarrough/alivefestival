@@ -1,42 +1,39 @@
-{{#if page.better_featured_image}}
-	<figure class="Page-banner">
-		<img src="{{page.better_featured_image.source_url}}" alt="{{page.title}}">
-	</figure>
-{{/if}}
+{{!-- <div style="background-image:linear-gradient({{escapeCSS page.acf.top_color}}, {{escapeCSS page.acf.bottom_color}})" > --}}
+	<div class="Page" >
+		{{#if page.better_featured_image}}
+			<figure class="Page-banner">
+				<img src="{{page.better_featured_image.source_url}}" alt="{{page.title}}">
+			</figure>
+		{{/if}}
 
-{{#if showPartyButton}}
-	<div class="Page-banner">
-		<button class="DiscoFun NonBtn" {{action 'partyOn'}}>
-			<img src="assets/images/icons/party-switch-off.svg" alt="">
-			<img src="assets/images/icons/party-switch-on.svg" alt="">
-		</button>
+		<div class="blog">
+			{{#if page.title}}
+			<h2 style="color:{{escapeCSS page.acf.headline_color}}" class="Teaser-title">
+						<span class="page-title">{{{page.title}}}</span>
+			</h2>
+			{{/if}}
+
+			{{#unless hideContent}}
+				<div class="page-content" style="color:{{escapeCSS page.acf.paragraph_text_color}}">
+					{{{page.content}}}
+				</div>
+			{{/unless}}
+
+			{{#if showSections}}
+				<div class="Page-content">
+					{{section-box-wrapper sections=page.acf.sections}}
+				</div>
+			{{/if}}
+
+			{{#if page.acf.extra_text}}
+				{{{page.acf.extra_text}}}
+			{{/if}}
+
+			{{yield}}
+		</div>
+
+		{{#if page.acf.background_image.sizes.bg-portrait-xl}}
+			<img class="Page-backgroundImage" src="{{page.acf.background_image.sizes.bg-portrait-l}}" alt="">
+		{{/if}}
 	</div>
-{{/if}}
-
-<div class="Page-body">
-	{{#if page.title}}<h1 class="Title">{{page.title}}</h1>{{/if}}
-
-	{{#unless hideContent}}
-		<div class="Page-content">
-			{{{page.content}}}
-		</div>
-	{{/unless}}
-
-	{{#if showSections}}
-		<div class="Page-content">
-			{{section-box-wrapper sections=page.acf.sections}}
-		</div>
-	{{/if}}
-
-	{{#if page.acf.extra_text}}
-		{{{page.acf.extra_text}}}
-	{{/if}}
-
-	{{yield}}
-</div>
-
-{{#if layout.billetter}}
-	<div class="Page-backgroundImage"></div>
-{{else if page.acf.background_image.sizes.bg-portrait-xl}}
-	<img class="Page-backgroundImage" src="{{page.acf.background_image.sizes.bg-portrait-l}}" alt="">
-{{/if}}
+{{!-- </div> --}}

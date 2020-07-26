@@ -1,0 +1,14 @@
+
+<div class="Media-forcedHeight">
+	{{#masonry-grid}}
+		{{#each items as |story|}}
+			<div class="Masonry-item">
+				{{#link-to "program.artist" story}}
+					{{teaser-item item=story}}
+				{{/link-to}}
+			</div>
+		{{/each}}
+	{{/masonry-grid}}
+</div>
+
+{{yield}}

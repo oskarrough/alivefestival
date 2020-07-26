@@ -1,55 +1,144 @@
 .List {
-	padding-left: 0;
+	position: relative;
+	left: 0;
 	list-style: none;
-
-	time {
-		display: block;
-		font-size: small;
-		margin-bottom: 0;
-		opacity: 0.5;
-	}
-
-	h3 a {
-		// margin-bottom: 0.5rem;
-		// word-break: break-word;
-		color: $black;
-	}
-
-	.Media-figure {
-		overflow: hidden;
-		max-width: 150px;
-	}
-}
-
-// The grid variant wraps and doesn't show body
-.List--grid {
+	padding-left: 0;
+	padding: 0;
+	margin: 0;
 	display: flex;
-	flex-flow: row wrap;
+	flex-direction: row;
+	overflow-x: scroll;
+	align-items: center;
+	white-space: nowrap;
 
-	.Media-body small {
-		display: none;
-
-		@media (min-width: $layout-s) {
-			display: initial;
-		}
+}
+.list-item{
+	margin-right: $padding;
+	display: inline-block;
+	max-width: 300px;
+	img{
+		width: $Listimagewidth;
+		height: $ListimageHeight;
+		object-fit: cover;
 	}
-
-	@media (min-width: $layout-s) {
-		> li {
-			flex: rem(300);
-			margin-right: rem($space);
+	a{
+		@include boldGTHaptic;
+		text-decoration: none;
+		width: 100%;
+		p{
+			width: 100%;
+			overflow-wrap: break-word;
 		}
 	}
 }
-
+// The grid variant wraps and doesn't show body
 .List img {
 	transition: -webkit-filter 150ms $easing, transform 2000ms $easing;
 	// without default values, the image will jump 1px in chrome on hover
 	filter: saturate(100%) brightness(1.01);
 	backface-visibility: hidden;
 	transform: translate3d(0, 0, 0);
+	width: 100%;	
 }
 
 .List a:hover img {
 	filter: saturate(70%) brightness(120%);
 }
+.news-feed-items{
+	height: 100%;
+	display: flex;
+	flex-direction:row;
+	overflow-x: scroll;
+	
+	// align-items: center;
+	// white-space: nowrap;
+}
+.news-list-item{
+	width: 250px;
+	height: 100%;
+	@media (min-width: $layout-s) {
+		width: 300px;
+	}
+	margin-right: $padding;
+	a {
+		width: 250px;
+		@media (min-width: $layout-s) {
+			width: 300px;
+		}
+		align-items: flex-start;
+		justify-content: left;
+		display: flex;
+		flex-direction: column;
+		img{
+			width: 100%;
+			height: 315px;
+			@media (min-width: $layout-s) {
+				height: 400px;
+			}
+			object-fit: cover;
+			margin-bottom:rem(12);
+		}
+		
+	}
+	time{
+		text-align: left;
+		font-size: rem(12);
+		@include OptiBrian;
+		margin-bottom:rem(12);
+	
+
+	}
+	figcaption{
+		@include boldGTHaptic;
+		width: 100%;
+		font-size: rem(28);
+		line-height: rem(28);
+		text-align: left;
+	}
+
+}
+.arbejdsrolle-item{
+	width: 230px;
+	max-width: 230px;
+	height: 100%;
+	margin-right: $padding;
+	img{
+		width: 230px;
+		min-width: 230px;
+		height: 270px;
+		object-fit: cover;
+		margin-bottom:rem(12);
+	}
+	figcaption{
+		width: 100%;
+		text-align: left;
+		@include boldGTHaptic;
+		font-size: 18px;
+
+	}
+	p{
+		width: 100%;
+		@include regGTHaptic;
+		font-size: 16px;
+	}
+}
+
+
+.list-wrap{
+	display: flex;
+	flex-direction:row;
+	white-space: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	li{
+		overflow-x: scroll;
+		flex-grow: 100%;
+	}
+	img{
+
+		width: 50px;
+		object-fit: contain;
+	
+	}
+}
+

@@ -1,0 +1,12 @@
+<div class="gallery">
+	{{#each images as |image|}}
+				<img class="lazyload coverImage" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{image.alt}}" data-sizes="auto" data-srcset="
+				{{image.sizes.s}} 320w,
+				{{image.sizes.m}} 768w,
+				{{image.sizes.l}} 1024w,
+				{{image.sizes.xl}} 1600w,
+				{{image.sizes.xxl}} 1920w" />
+	{{/each}}
+</div>
+
+{{yield}}

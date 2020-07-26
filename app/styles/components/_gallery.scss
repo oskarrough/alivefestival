@@ -1,7 +1,6 @@
 // By default force 16:9 format.
 .FlickityGallery {
 	@include ratio(16, 9);
-
 	> * {
 		@include ratio-inner;
 	}
@@ -24,14 +23,12 @@
 
 // Scale to the right format.
 // Responsive images are adjusted to the same.
-.Index-gallery {
-	background-color: $darkgrey;
-}
+
 
 // Set a max height when object-fit is supported
 .object-fit .Index-gallery {
 	min-height: 300px;
-	max-height: 60vh;
+	// max-height: 60vh;
 	overflow: hidden;
 }
 
@@ -119,11 +116,11 @@
 // 	}
 // }
 
-// // Buttons
-// .FlickityGallery:hover .flickity-prev-next-button {
+// // s
+// .FlickityGallery:hover .flickity-prev-next- {
 // 	opacity: 1;
 // }
-// .flickity-prev-next-button {
+// .flickity-prev-next- {
 // 	// C's optical alignment, yo
 // 	top: 47%;
 // 	opacity: 0;

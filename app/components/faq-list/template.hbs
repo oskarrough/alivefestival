@@ -1,0 +1,23 @@
+
+<li class="news-feed-items Container Padded">
+	{{#each items as |post|}}
+	  <figure class="news-list-item">
+			{{#link-to 'practical.post' post class=""}}
+                  	{{#if post.better_featured_image.media_details.sizes.l.source_url}}
+						<img class="lazyload" src="{{post.better_featured_image.media_details.sizes.l.source_url}}" alt="{{post.better_featured_image.alt}}"> 
+					{{else}}
+						<img class="lazyload" src="{{post.better_featured_image.source_url}}" alt="{{post.better_featured_image.alt}}"> 
+					{{/if}}
+					{{#if time}}
+                    <time style="color:{{escapeCSS timecolor}}">{{moment-format post.date}}</time>
+					{{/if}}
+                    <figcaption style="color:{{escapeCSS textcolor}}">{{{truncate-text post.title limit="80"}}}</figcaption>
+		    {{/link-to}}
+		</figure>	
+	{{/each}}
+</li>
+
+{{yield}}
+
+
+{{yield}}

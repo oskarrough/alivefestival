@@ -1,23 +1,117 @@
 /**
  * Containers
  */
-
-.Container {
-	max-width: $max-width-small;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: rem($space);
-	padding-right: rem($space);
+.Container {	
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	@media (min-width: $layout-m) {
+		padding: $boxmargin;
+	}
 }
 
-.Container--large {
-	max-width: $max-width;
+.Padded{
+	// padding: $BoxPadding;
+	padding-top: $LargeContainerPadding;
+	padding-bottom: $LargeContainerPadding;
+	@media (min-width: $layout-s) {
+		padding: $ContainerPaddingDesktop;
+	}
+}
+.SidePadded{
+	padding: $ContainerPadding;
+	@media (min-width: $layout-s) {
+		padding-left: $ContainerPaddingDesktop;
+		padding-right: $ContainerPaddingDesktop;
+	}
+
+}
+.PaddedContainer{
+	padding: $ContainerPadding;
+	padding-top: $LargeContainerPadding;
+	padding-bottom: $LargeContainerPadding;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.fourPaddedContainer{
+	padding:$LargeContainerPadding;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media (max-width: $layout-s) {
+		padding-left: $ContainerPadding;
+		padding-right: $ContainerPadding;
+	}
+}
+.overflowRight{
+	padding-left: $ContainerPadding;
 }
 
-.Container--huge {
-	max-width: 65rem;
+
+
+.topPadded{
+	padding-top: $LargeContainerPadding;
+}
+.topPaddedHigh{
+	padding-top:20vh;
+	@media (min-width: $layout-s) {
+		padding-top: 50vh;
+	}
+}
+.bottomPadded{
+	padding-top: $ContainerPadding;
+	padding-bottom: $LargeContainerPadding;
+}
+.Relative{
+	position: relative;
+}
+.Absolute{
+	position: absolute;
+	top:0;
+}
+.Centering{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
 }
 
-.Container--full {
-	max-width: none;
+
+
+.limited-container{
+	height: 100vh;
+	overflow: hidden;
 }
+.minimumheight-container{
+	min-height: 40vh;
+}
+
+
+
+
+
+
+
+
+.moving-container{
+	position: relative;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+}
+
+.horizontal-Centering{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+	
+	

@@ -1,10 +1,11 @@
-.Artist {
-}
-
 .Artist-media {
 	margin-bottom: rem($space);
-
-	@media (min-width: $layout-ml) {
+	img{
+		width: 100%;
+		// max-width: 500px;
+		object-fit: contain;
+	}
+	@media (min-width: $layout-l) {
 		float: left;
 		margin-right: rem($space * 1.5);
 	}

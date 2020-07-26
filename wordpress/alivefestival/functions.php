@@ -122,6 +122,10 @@ function alivefestival_widgets_init() {
 }
 add_action( 'widgets_init', 'alivefestival_widgets_init' );
 
+
+
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -167,9 +171,14 @@ function custom_excerpt_length( $length ) {
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
+add_filter('acf/format_value/type=textarea', 'do_shortcode');
 
 
-// function enable_more_buttons($buttons) {
+
+if ( get_field('FIELDNAME') ) {
+	echo do_shortcode( get_field('FIELDNAME') );
+}
+// function enable_more_s($buttons) {
 // 	// $buttons[] = 'fontselect';
 // 	// $buttons[] = 'fontsizeselect';
 // 	$buttons[] = 'styleselect';

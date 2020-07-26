@@ -1,85 +1,120 @@
+@-moz-keyframes arrowpointer { 50% { -moz-transform: rotate(-50deg); }  100% { -moz-transform: rotate(0deg); }}
+@-webkit-keyframes arrowpointer { 50% { -webkit-transform: rotate(-50deg); } 100% { -webkit-transform: rotate(0deg); }}
+@keyframes arrowpointer{ 50% { -webkit-transform: rotate(-50deg); transform:rotate(-50deg); } 100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); }}
+
+
+
+.button-container{
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	.arrow{
+		display: inline-block;
+		margin-right: -2%;
+		top:0;
+		z-index: 99;
+		width: rem(40);
+		height: auto;
+		transform-origin: right;
+		-webkit-animation:arrowpointer 4s linear infinite;
+		-moz-animation:arrowpointer 4s linear infinite;
+		animation:arrowpointer 4s linear infinite;
+		@media (max-width: $layout-s) {
+		display: none;
+		}
+	}
+	.Button{
+		display: inline-block;
+		top:0;
+	}
+}
 .Button {
-	@extend %font-bold;
 	display: inline-block;
-	padding: 0.4em 1em 0.5em;
-	font-size: 14px;
-	letter-spacing: 0.02em;
-	border-radius: 3px;
+	padding: 0.7em 2em 0.7em;
+	justify-content: center;
+	align-self: center;
+	text-align: center;
 	text-decoration: none;
 	background-image: none;
-	background-color: $blue;
-	// color: $white !important;
-	color: $silk;
-	// border: 2px solid rgba($white, 0.8);
-	// box-shadow: 5px 5px 0 0 darken($blue, 8%);
-	box-shadow: 3px 3px 0 0 #4e4e4e4a;
-
-	&:hover {
-		color: $white;
-		box-shadow: 3px 3px 0 0 #4e4e4e8c;
+	color: inherit;
+	white-space: nowrap;
+	p{
+		text-decoration: none;
+		color: inherit;
+		margin:0;
 	}
+	min-width: 30%;
 }
-
-a.Button {
-	color: $silk;
-
-	&.is-active,
-	&:hover {
-		color: $white;
-	}
+.bottom-margin{
+	margin-bottom: $LargeContainerPadding;
 }
-
-.NonBtn {
-	background-color: transparent;
-	border: 0;
-	padding: 0;
-
-	&:active,
-	&:focus {
-		outline: none;
-	}
+.button:focus{
+	outline: none;
 }
-
-.Button--yellow {
-	background-color: $yellow;
-	color: $black !important;
-}
-
-.Button--red {
-	background-color: $nice-slated-red;
-	color: $silk;
-}
-
-.Button--black {
-	background: $black;
-	color: $silk;
-}
-
-.Button--green {
-	background: $green;
-	color: $silk;
-}
-
-.ButtonGroup .Button {
-	margin-right: 0.2em;
-	margin-bottom: 0.4em;
-
+.button-border{
+	margin: $padding;
+	font-size: 14px;
+	text-align: center;
+	
 	@media (min-width: $layout-s) {
-		font-size: 1em;
-	}
+		min-width: 300px;
+	}	
+	@media (max-width: $layout-s) {
+		width: 80%;
+	}	
+}
 
-	transition: all 150ms $easing;
-	transform-origin: center;
+.Link{
+	color: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: $padding;
+	font-family: 'GT Haptik', sans-serif;
+	text-transform: uppercase;
+	font-size: 16px;
 
-	&.is-active {
-		box-shadow: 3px 3px black;
+}
+.with-animation{
+	
+	box-shadow: 0 0 0px 0;
+	transition: box-shadow 500ms;
+	&:hover{
+		box-shadow: 10px 10px 0px 0px;
 	}
 }
 
-.FixedTicketButton {
-	position: fixed;
-	top: 0.6rem;
-	right: -0.5rem;
-	z-index: 1;
-	padding-right: 3rem;
+.purple{
+	background-color: $purple;
+	color: $coral;
+	margin: 0;
+	border: none;
+	height: rem(40);
 }
+
+.filters{
+	.filter{
+		border: 1px $blue solid;
+	}
+	.Button {
+		margin-right: 0.2em;
+		margin-bottom: 0.4em;
+		@media (min-width: $layout-s) {
+			font-size: 1em;
+		}
+	}
+	.is-active {
+		div{
+			background-color: $blue;
+		}
+		color: white;
+	}
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: left;
+}
+
+
+

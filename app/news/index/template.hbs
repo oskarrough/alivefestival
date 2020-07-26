@@ -1,16 +1,29 @@
-<h1>{{model.page.title}}</h1>
 
-{{#if model.page.content}}
-	{{{model.page.content}}}
-{{/if}}
+<div class="SortingPage" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
+	<div class="Page-body" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
+	<h1 class="page-title" style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.title}}</h1>
+		
+	{{#if model.page.content}}
+	<p class="page-content" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">{{{model.page.content }}}</p>
+	{{/if}}
+	{{#masonry-grid}}
+				{{#each model.posts as |artist|}}
+					<div class="Masonry-item">
+						{{#link-to "news.post" artist}}
+							{{teaser-item item=artist color=model.page.acf.text_color}}
+						{{/link-to}}
+					</div>
+				{{/each}}
+	{{/masonry-grid}}
 
-{{newsletter-form}}
+<div class="Container topPadded">
+	{{newsletter-form}}
+	{{social-links}}
+</div>
+	</div>
 
-<br><br>
+</div>
 
-{{news-list items=model.posts}}
 
-<br><br>
-<p>Tjek <a href="http://facebook.com/alivefestival" target="_blank">Alive Festival på Facebook</a> for mere.</p>
 
 {{outlet}}

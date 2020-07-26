@@ -1,0 +1,21 @@
+
+
+<div class="ticket-type" style="background-color:{{escapeCSS ticket.ticket_type_background_color}}; border: 1px {{escapeCSS ticket.ticket_type_frame_color}} solid">
+        {{#if ticket.alert_image}}
+        <img class="alert-image"src="{{ticket.alert_image}}">
+        {{/if}}
+        <h2 class="ticket-style">{{ticket.ticket_type_type}}</h2>
+        <h1 class="ticket-title">{{ticket.ticket_type_title}}</h1>
+        <p class="ticket-description">{{ticket.ticket_type_description_text}}</p>
+        <h1 class="ticket-price">{{ticket.ticket_type_price}}<small>+gebyr</small></h1>
+        {{#if ticket.ticket_link}}
+            <a style="border: 1px {{escapeCSS ticket.ticket_type_frame_color}} solid" href="{{ticket.ticket_link}}" class="Button small-caption"> 
+                KØB BILLET
+            </a>
+        {{else}}
+         <p clasS="ticket-placeholder" style="color:{{escapeCSS ticket.ticket_type_frame_color}}">{{ticket.ticket_type_link_placeholder}}</p>
+        {{/if}}
+</div>
+
+{{yield}}
+

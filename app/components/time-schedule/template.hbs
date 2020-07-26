@@ -1,33 +1,14 @@
-<table class="Table">
-	<thead>
-		<tr>
-			<th>Artist</th>
-			<th style="width: 5rem">Scene</th>
-			<th style="width: 7rem">Dag og tid</th>
-		</tr>
-	</thead>
-	<tbody>
+<div class="Grid topPadded">
 		{{#each sortedArtists as |artist|}}
-			<tr>
-				<td>
-					<h3>
-						{{link-to artist.title 'program.artist' artist}}
-					</h3>
-				</td>
-				<td>
-					<span class="Muted">
-						{{artist.acf.scene}}
-					</span>
-				</td>
-				<td>
-					{{#if artist.acf.festival_date}}
-						<time datetime="{{artist.acf.festival_date}}">
-							{{moment-format artist.acf.festival_date "dddd D/MM/YY"}}
-							{{moment-format artist.acf.festival_date "HH:mm"}}<br>
-						</time>
-					{{/if}}
-				</td>
-			</tr>
+		{{#if artist.acf.festival_date}}
+			<div class="program-item">
+				{{#if frontpage}}
+				{{program-item artist=artist frontpage=1}}
+				{{else}}
+				{{program-item artist=artist}}
+				{{/if}}
+			</div>
+		{{/if}}
 		{{/each}}
-	</tbody>
-</table>
+</div>
+

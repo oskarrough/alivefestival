@@ -1,24 +1,50 @@
-<div class="Page">
-	<div class="Page-body">
-		<h1 class="Title">{{model.page.title}}</h1>
-		{{{model.page.content}}}
+
+<div class="SortingPage" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
+
+	<div class="Page-body" style="color:{{escapeCSS model.page.acf.paragraph_text_color}}">
+	<h1 class="page-title" style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.title}}</h1>
+		{{#if model.page.acf.alerting_text}}
+			
+			<h2 class="page-title" style="color:{{escapeCSS model.page.acf.headline_color}}">{{model.page.acf.alerting_text}}</h2>
+		
+			{{#if model.page.acf.alert_gallery}}
+			{{image-element images=model.page.acf.alert_gallery}}
+			{{/if}}
+			
+		{{/if}}
+		<p class="page-content"> {{{model.page.content}}}
+		</p>
+			{{filter-menu tags=tags class="tc"}}
+		
+			{{#if musiccategory}}
+			<span>MUSIK</span>
+				<p class="page-content">{{model.page.acf.music_text}}</p>
+			{{/if}}
+			{{#if kunstcategory}}
+			<span>KUNST</span>
+				<p class="page-content">{{model.page.acf.kultur_text}}</p>
+			{{/if}}
+			{{#if udflugtercategory}}
+			<span>UDLFUGTER</span>
+				<p class="page-content">{{model.page.acf.samvær_text}}</p>
+			{{/if}}
+	
+			{{#masonry-grid}}
+				{{#each filteredArtists as |artist|}}
+					<div class="Masonry-item">
+						{{#link-to "program.artist" artist}}
+							{{teaser-item item=artist color=model.page.acf.text_color}}
+						{{/link-to}}
+					</div>
+				{{/each}}
+			{{/masonry-grid}}
+	
+
 	</div>
+
 </div>
 
-{{filter-menu tags=tags class="tc"}}
 
-<div class="Artists">
-	{{#masonry-grid}}
-		{{#each filteredArtists as |artist|}}
-			<div class="Masonry-item">
-				{{#link-to "program.artist" artist}}
-					{{teaser-item item=artist}}
-				{{/link-to}}
-			</div>
-		{{/each}}
-	{{/masonry-grid}}
-</div>
 
-{{!-- <div class="html"><iframe src="https://embed.spotify.com/?uri=https://play.spotify.com/user/1133931389/playlist/06qyZkEWCOU16E4URII5Qg" width="300" height="380" frameborder="0" allowtransparency="true"></iframe></div>
 
-<div class="html"><iframe width="560" height="315" src="//www.youtube.com/embed/videoseries?list=PLo682vyue18ghgHMOEXVniKLfUx3sGwNx" frameborder="0" allowfullscreen></iframe></div> --}}
+

@@ -1,30 +1,61 @@
+.Newsletter{
+	background-color: transparent;
+}
 .NewsletterForm {
 	display: flex;
-	justify-content: center;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
-
-	background: rgba(black, 0.05);
-	padding: 1em;
-
-	h3 {
-		font-size: 1em;
+	.headlines{
+		width: 40%;
+		font-size: 30px;
+		line-height: 35px;
+		font-weight: medium;
+		@media (max-width: $layout-m) {
+			width: 100%;
+			font-size: 30px;
+			line-height: 35px;
+		}
+		@include boldGTHaptic;
+		.outlined-headline{
+			color: $transparent;
+			-webkit-text-stroke: 1px $blue; 
+		}
+		.regular-headline{
+			color: $blue;
+		}
 	}
-
-	h3,
-	input,
-	p {
-		margin-bottom: 0;
+	@media (max-width: $layout-m) {
+		flex-direction: column;
+		align-items: left;
+		justify-content: flex-start;
 	}
-
-	> * {
-		margin-right: 1rem;
-	}
-
-	> label {
-		margin-right: 0;
-	}
-
-	small a {
-		opacity: 0.8;
+	// @media (min-width: $layout-m) {
+	// 	padding-left: $hugeContainerPadding;
+	// 	padding-right: $hugeContainerPadding;
+	// }
+	
+	.inputButton{
+		display: flex;
+		justify-content: space-between;
+		white-space: nowrap;
+		width: 40%;
+		label{
+			height: 100%;
+			margin: 0;
+			flex-grow: 3;
+			padding: 0;
+			input{
+				font-size: rem(10);
+				height: rem(40);
+				width: 100%;
+				margin: 0;
+			}
+		}
+		@media (max-width: $layout-m) {
+			margin-top: $padding;
+			width: 100%;
+		}
 	}
 }
