@@ -10,11 +10,13 @@
 		<script> 
 			
 			let video = document.getElementById('vid');
-			console.log("where is the video", video)
             video.muted = true;
             video.autoplay= true;
             video.loop= true;
             video.play();
+			document.addEventListener("load", function(){
+            video.play()
+            }, true);
             
             function fallback(video)
                 {
@@ -28,7 +30,6 @@
             }, true);
             document.addEventListener("scroll", function(){
             video.play()
-            console.log(video)
             }, true);
             document.addEventListener("mousemove", function(){
             video.play()
