@@ -7,8 +7,12 @@
 				Your browser does not support the video tag.
 			
 		</video>
-		<script> document.getElementById('vid').play(); 
-			document.addEventListener("touchstart", getElementById('vid').play(), true) </script>
+		<script> 
+			let video = document.getElementById('vid');
+			video.muted = true;
+			video.autoplay= true;
+			video.play();
+			</script>
 	
 		<div class="headline">
 				{{#if model.page.acf.headline_image}}
