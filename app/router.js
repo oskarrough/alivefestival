@@ -20,6 +20,7 @@ Router.map(function() {
 
   // this.route('sideprogram')
   // this.route('adventure', {path: 'dagsprogram'})
+  
   this.route('schedule', {path: 'tidsplan'})
   this.route('kort', {path: 'kort'})
   this.route('presse', {path: 'presse'})

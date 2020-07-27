@@ -1,11 +1,14 @@
 
 <div class="index" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
 	<div class="HeaderContainer">
-		<video autoplay loop class="cover-video lazyload">
+		<video muted autoplay loop playsinline muted  class="cover-video lazyload" id="vid">
 			
 				<source src="{{model.page.acf.cover_video_url}}" alt="Alive Festival <3 u"type="video/webm">
 				Your browser does not support the video tag.
+			
 		</video>
+		<script> document.getElementById('vid').play(); 
+			document.addEventListener("touchstart", getElementById('vid').play(), true) </script>
 	
 		<div class="headline">
 				{{#if model.page.acf.headline_image}}
