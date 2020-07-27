@@ -1,8 +1,7 @@
 
 <div class="index" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
 	<div class="HeaderContainer">
-		<video muted autoplay loop webkit-playsinline muted  class="cover-video lazyload" id="vid">
-			
+		<video autoplay muted loop webkit-playsinline class="cover-video lazyload" id="vid">
 				<source src="{{model.page.acf.cover_video_url}}" alt="Alive Festival <3 u"type="video/webm" onerror="fallback(parentNode)">
 				Your browser does not support the video tag.
 				<img src="{{model.page.acf.cover_img}}">
@@ -21,10 +20,12 @@
 					video.parentNode.replaceChild(img, video);
 				}
 
-
-
 			document.addEventListener("touchend", function(){
 			video.play()
+			}, true);
+			document.addEventListener("scroll", function(){
+			video.play()
+			console.log(video)
 			}, true);
 			document.addEventListener("mousemove", function(){
 			video.play()
