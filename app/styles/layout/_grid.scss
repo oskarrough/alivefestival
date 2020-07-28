@@ -62,4 +62,24 @@
 		padding-top:$ContainerPadding;
 		padding-bottom:$ContainerPadding;
 	}
+
+}
+
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 0.1px;
+  }
+::-webkit-scrollbar-thumb:horizontal {
+	border-radius: 10px;
+	width: 0.1em;
+	background-color: rgba(255, 255, 255, .0);
+	box-shadow: 0 0 1px rgba(255, 255, 255, .0);
+}
+@media (min-width: $blogpage){
+
+	::-webkit-scrollbar-thumb:horizontal {
+
+		background-color: rgba(255, 255, 255, .5);
+		box-shadow: 0 0 1px rgba(255, 255, 255, .7);
+	}
 }
