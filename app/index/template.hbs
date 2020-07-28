@@ -1,11 +1,77 @@
 
 <div class="index" style="background-image:linear-gradient({{escapeCSS model.page.acf.top_color}}, {{escapeCSS model.page.acf.bottom_color}})" >
 	<div class="HeaderContainer">
-		<video autoplay loop class="cover-video lazyload">
-			
-				<source src="{{model.page.acf.cover_video_url}}" alt="Alive Festival <3 u"type="video/webm">
-				Your browser does not support the video tag.
+		<video autoplay muted loop webkit-playsinline playsinline class="cover-video lazyload" id="vid" style="background-image:url({{model.page.acf.cover_img}});background-size:cover;background-repeat:no-repeat;">
+				<source src="{{model.page.acf.cover_video_url}}" alt="Alive Festival <3 u"type="video/mp4" >
+				<source src="https://res.cloudinary.com/alivefestival/video/upload/v1595785033/Alive_hjemmeside_video_minus_lyd_aexrfx.webm" alt="Alive Festival <3 u"type="video/webm" >
+				Your browser does not support the video tag.	
 		</video>
+
+		<script> 
+			'use strict';
+
+			let video = document.getElementById('vid');
+			video.muted = true;
+            video.autoplay= true;
+            video.loop= true;
+			var promise = video.play();
+			
+			let options = {
+			rootMargin: '0px',
+			threshold: 1.0
+			}
+
+		
+			let callback = (entries, observer) => {
+			entries.forEach(entry => {
+				video.play();
+			});
+			};
+
+			let observer = new IntersectionObserver(callback, options);
+			let target = document.querySelector('#vid');
+		
+
+			// promise won’t be defined in browsers that don't support promisified play()
+			if (promise === undefined) {
+			console.log('Promisified video play() not supported');
+			} else {
+			promise.then(function() {
+				console.log('Video playback successfully initiated, returning a promise');
+			}).catch(function(error) {
+				observer.observe(target);
+				console.log('Error initiating video playback: ', error);
+			});
+			}
+
+			video.onloadedmetadata = function() {
+			var fileName = this.currentSrc.replace(/^.*[\\/]/, '');
+			document.querySelector('#vid').innerHTML = 'Playing video: ' + fileName;
+			};
+			
+         
+           
+		
+            
+          
+
+			document.addEventListener("load", function(){
+            video.play()
+            }, true);
+
+            document.addEventListener("touchend", function(){
+            video.play()
+            }, true);
+
+            document.addEventListener("scroll", function(){
+            video.play()
+            }, true);
+
+            document.addEventListener("mousemove", function(){
+            video.play()
+            }, true);
+
+		</script>
 	
 		<div class="headline">
 				{{#if model.page.acf.headline_image}}
