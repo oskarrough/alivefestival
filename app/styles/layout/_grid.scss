@@ -58,6 +58,8 @@
 	overflow-x: scroll;
 	overflow-y: hidden;
 	@media (max-width: $blogpage){
-		padding:$ContainerPadding;
+		padding-right:$ContainerPadding;
+		padding-top:$ContainerPadding;
+		padding-bottom:$ContainerPadding;
 	}
 }
