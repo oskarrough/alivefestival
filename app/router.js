@@ -23,7 +23,7 @@ Router.map(function() {
   
   this.route('schedule', {path: 'tidsplan'})
   this.route('kort', {path: 'kort'})
-  this.route('presse', {path: 'presse'})
+  this.route('presse', {path: 'kontakt'})
   // this.route('transport-overnatning', {path: 'transport-overnatning'})
 
 
