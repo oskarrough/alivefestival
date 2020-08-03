@@ -337,18 +337,7 @@
 }
 
 .instagram{
-	svg{
-		display: none;
-	}
-	.sbi_link{
-		display: none;
-	}
-	.sbi_info{
-		display: none;
-	}
-	.sbi-screeenreader{
-		display: none;
-	}
+
 	a{
 		@include boldGTHaptic;
 		color: inherit;

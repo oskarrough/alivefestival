@@ -37,7 +37,7 @@
 			console.log('Promisified video play() not supported');
 			} else {
 			promise.then(function() {
-				console.log('Video playback successfully initiated, returning a promise');
+
 			}).catch(function(error) {
 				observer.observe(target);
 				console.log('Error initiating video playback: ', error);
@@ -306,8 +306,9 @@
 			<a href={{model.page.acf.instagram_url}} target="_blank" title="Alive på instagram">
 				{{model.page.acf.title_for_instagram_list}}
 			</a>
-			{{instagram-feed token=model.page.acf.instagram_widget}}
-			<div class="instagram">{{{model.page.acf.instagram_widget}}}</div>
+			<div class='instagram'></div>
+			{{instagram-feed}}
+			{{!-- <div class="instagram">{{{model.page.acf.instagram_widget}}}</div> --}}
 			{{#link-to 'news' }}
 				{{model.page.acf.title_for_news_list}}
 			{{/link-to}}
