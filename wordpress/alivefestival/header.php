@@ -21,8 +21,7 @@ ga('create', 'UA-3906535-9', 'auto');
     <link rel="stylesheet" href="assets/vendor-a5a6e1ce878e8d52e79d5e9579723979.css" integrity="sha256-w8ss6h9fkJ4ncz0syk4R1/aRHe/eOnn8VSOwipyrYi0= sha512-xmgKhXv8IbmnnV9d3zvPELEUkxj+LK2W2tSMatR+YqePz3im9y7PDKXU7tV+WWbBA6lNaGjPjIjGyQBFbhl35g==" >
     <link rel="stylesheet" href="assets/alivefestival-daaab7628101b93651718894b077bfd4.css" integrity="sha256-s+WvReOrMNKZ724IH6DO+u19eYrdJx4sNlqN1N56Bd8= sha512-Km2aRMgX/DmBBGAkI2as+J/YbDItbPaogmHrhlZwa+qeGJFrQwiE1gjw+UUqxsclns7SDtJyOV7C1dWskd11Tg==" >
     <script src="assets/alivefestival-head-291bb36d04bf2d6498097ced22ee2a17.js" integrity="sha256-WxRSbEJudupVq2u8RYseUvUUddwFq82tUGKjHueIW20= sha512-Zjj/Y6dGFbf25Ty0I3EHDKeBKlZMQCbEgDtsrKq5mKmt3s9fZeBbmh4ZXQPzyIvMma+EL+1JalsmFd7NbGJ5uw==" ></script>
-
-
+    <?php wp_head(); ?>
   </head>
   <body>
 

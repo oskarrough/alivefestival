@@ -337,12 +337,25 @@
 }
 
 .instagram{
+	svg{
+		display: none;
+	}
+	.sbi_link{
+		display: none;
+	}
+	.sbi_info{
+		display: none;
+	}
+	.sbi-screeenreader{
+		display: none;
+	}
 	a{
 		@include boldGTHaptic;
 		color: inherit;
 		text-align: center;
 		font-size: rem(40);
 	}
+
 }
 .frivillig-type{
 	width: 100%;

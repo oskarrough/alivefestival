@@ -4,6 +4,15 @@ import fetch from 'fetch'
 export function fetchImages(token, count) {
 	const base = 'https://api.instagram.com/v1/users/self/'
 	const url = `${base}media/recent/?access_token=${token}&count=${count}`
+	// const base = 'https://graph.instagram.com/me/'
+	// const url = `${base}/media?fields=id,caption,media_url&access_token=${token}`
+	
+
+	
+
+
+	
+	
 	return fetch(url)
 		.then(res => res.json())
 		.then(data => data.data)
