@@ -52,7 +52,7 @@ export async function fetchImages() {
 	  	const { data: [ result ] } = await axios.get('https://jsonbox.io/box_8ca8c4d26a91449ba088');
 		let resulti = ({ data: [ result ] });
 
-		let { photos, _createdOn } = resulti.data;
+		let { photos, _createdOn } = resulti;
   
 		const createdOn   = new Date(_createdOn).getTime();
 		const currentTime = new Date().getTime();
@@ -124,7 +124,7 @@ export async function fetchImages() {
 	console.log('before checking jsonbox' , photos);
 	if (!localPhotos || photos.length === 0) photos = await checkJsonBox();
 	console.log('before asking instagram' , photos);
-	if (photos && photos.length === 0) photos = await getInstagramPhotos();
+	photos = await getInstagramPhotos();
 	console.log('done' , photos);
 	// Finally we call the render function.
 	
