@@ -8,7 +8,7 @@
 			<div class="button-container">
 				<img class="arrow"src="/assets/images/icons-output/png/arrow.png"/>
 				{{#link-to 'tickets' class=" buttontext"}}
-				<div style="background-color:{{escapeCSS bottonbackground}}; color:{{escapeCSS buttoncolor}}; border: 1px {{escapeCSS buttoncolor}} solid" class="Button">
+				<div style="background-color:{{escapeCSS bottonbackground}}; color:{{escapeCSS buttoncolor}}; border: 1px {{escapeCSS buttoncolor}} solid" class="Button" {{action 'untoggleAside'}}>
 						{{buttontext}}
 				</div>
 				{{/link-to}}

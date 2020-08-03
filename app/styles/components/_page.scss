@@ -67,6 +67,7 @@
 
 
 .page-content{
+
 	@include regGTHaptic;
 	color: inherit;
 	font-size: 18px;
@@ -86,6 +87,12 @@
 			padding-top: $padding;
 			padding-bottom: $padding;
 		}
+	}
+	p {
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
 	}
 	
 }

@@ -337,12 +337,14 @@
 }
 
 .instagram{
+
 	a{
 		@include boldGTHaptic;
 		color: inherit;
 		text-align: center;
 		font-size: rem(40);
 	}
+
 }
 .frivillig-type{
 	width: 100%;

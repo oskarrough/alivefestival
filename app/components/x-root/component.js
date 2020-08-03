@@ -11,6 +11,15 @@ export default Component.extend({
 	actions: {
 		toggleAside() {
 			this.toggleProperty('layout.showAside')
+		},
+		untoggleAside() {
+		
+			// console.log(this.el); -shows up undefined
+			let openMenu = document.getElementsByClassName("show-aside");
+			if(openMenu.length>0){
+				this.toggleProperty('layout.showAside')
+			}
+			
 		}
 	},
 

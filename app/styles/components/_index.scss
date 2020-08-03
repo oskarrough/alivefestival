@@ -158,6 +158,7 @@
 	height: $footer-image-height;
 }
 .footer-content{
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -165,6 +166,7 @@
 	padding-top: $LargeContainerPadding;
 	@include mediumGTHaptic;
 	a{
+		z-index: 5;
 		color: inherit;
 		text-decoration: underline;
 		font-size: 16px;
