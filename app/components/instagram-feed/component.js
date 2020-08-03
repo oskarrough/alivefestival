@@ -124,8 +124,9 @@ export async function fetchImages() {
 	console.log('before checking jsonbox' , photos);
 	if (!localPhotos || photos.length === 0) photos = await checkJsonBox();
 	console.log('before asking instagram' , photos);
-	photos = await getInstagramPhotos();
+	if (photos && photos.length === 0) photos = await getInstagramPhotos();
 	console.log('done' , photos);
+
 	// Finally we call the render function.
 	
 	// render(photos);
