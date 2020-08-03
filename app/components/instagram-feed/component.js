@@ -15,7 +15,7 @@ export async function fetchImages() {
 	
 	let photos;
   
-	const JSONBOX       = 'https://jsonbox.io/box_288471e7d8f6e0f9797e';
+	const JSONBOX       = 'https://jsonbox.io/box_8ca8c4d26a91449ba088';
 	const INSTAGRAM_API = 'https://graph.instagram.com';
 	const TOKEN         = 'IGQVJWTnVmVC1NUlY2N0xJaWVWSGVxbThHQk1uWW5kYVNPME1yQXdsX192UFpCbV9rSXlmaGZAwWkVISF9hdHlwalFBc1BfZAFJWZA2pGOGpZAdkdtOE1DQWZAVYVEzZA2t0TkJENmFBM05ucHV0Q0NsaVNyWAZDZD';
 	const REFRESH_TOKEN = `${INSTAGRAM_API}/refresh_access_token?grant_type=ig_refresh_token&access_token=${TOKEN}`;
@@ -49,7 +49,7 @@ export async function fetchImages() {
 	 * If JSON is empty, a new request to Instagram API should be made.
 	 */
 	const checkJsonBox = async () => {
-	  	const { data: [ result ] } = await axios.get('https://jsonbox.io/box_8ca8c4d26a91449ba088');
+	  	const { data: [ result ] } = await axios.get(JSONBOX);
 		let resulti = ({ data: [ result ] });
 
 		let { photos, _createdOn } = resulti;
