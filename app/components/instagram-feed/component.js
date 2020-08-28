@@ -121,13 +121,14 @@ export async function fetchImages() {
 	
 	// If the key does not exist, the remaining steps must be checked
 	// before making a new request to the Instagram API.
-	console.log('before checking local storage' , photos);
+
+	// console.log('before checking local storage' , photos);
 	if (localPhotos) photos = checkLocalStorage();
-	console.log('before checking jsonbox' , photos);
+	// console.log('before checking jsonbox' , photos);
 	if (!localPhotos || photos.length === 0) photos = await checkJsonBox();
-	console.log('before asking instagram' , photos);
+	// console.log('before asking instagram' , photos);
 	if (photos && photos.length === 0) photos = await getInstagramPhotos();
-	console.log('done' , photos);
+	// console.log('done' , photos);
 
 	// Finally we call the render function.
 	
