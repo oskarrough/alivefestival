@@ -51,9 +51,11 @@ export async function fetchImages() {
 	const checkJsonBox = async () => {
 	  	const { data: [ result ] } = await axios.get(JSONBOX);
 		let resulti = ({ data: [ result ] });
+		let photos= resulti.data[0].photos;
+		let _createdOn = resulti.data[0]._createdOn;
+		console.log("jsonbox results photos", resulti.data[0].photos);
+		console.log("jsonbox results _createdon", resulti.data[0]._createdOn);
 
-		let { photos, _createdOn } = resulti;
-  
 		const createdOn   = new Date(_createdOn).getTime();
 		const currentTime = new Date().getTime();
 		const timeCalc    = (currentTime - createdOn) / 36e5;
