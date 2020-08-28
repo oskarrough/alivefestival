@@ -58,7 +58,11 @@
 				
 				{{/if}}
 				</div>
+
 				{{#if model.acf.arbejdsroller}}
+				<div class="list-container">
+					<img class="left-arrow" src="/assets/images/icons/arrow_right.png">
+
 				<div class="grid-horizontal">
 					{{#each model.acf.arbejdsroller as |rolle|}}
 								{{#if rolle.url}}
@@ -81,6 +85,7 @@
 								</figure>	
 								{{/if}}
 						{{/each}}
+				</div>
 				</div>
 				{{/if}}
 				
