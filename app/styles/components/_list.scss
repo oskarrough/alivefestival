@@ -49,11 +49,10 @@
 	display: flex;
 	flex-direction:row;
 	overflow-x: scroll;
-	
-	// align-items: center;
-	// white-space: nowrap;
+	margin-right: 40px;
 }
 .news-list-item{
+	position: relative;
 	width: 250px;
 	height: 100%;
 	@media (min-width: $layout-s) {
