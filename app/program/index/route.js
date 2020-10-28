@@ -8,7 +8,7 @@ export default Route.extend({
 		// /artists?filter[cat]=12 or /posts?filter[category_name]=jazz_funk
 		return hash({
 			page: this.store.findRecord('page', 1473),
-			eventPage: this.store.findRecord('page', 43),
+			// eventPage: this.store.findRecord('page', 43),
 			artists: this.store.query('artist', {
 				categories: ['10'],
 				per_page: 99
